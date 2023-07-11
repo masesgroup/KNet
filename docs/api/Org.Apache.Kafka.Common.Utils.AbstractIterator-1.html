@@ -82,12 +82,9 @@
     <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
     <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
     <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<span class="xref">Java.Util.Iterator</span>&lt;T&gt;&gt;</div>
-    <div class="level4"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable</span>&lt;<span class="xref">Java.Util.Iterator</span>&lt;T&gt;&gt;</div>
-    <div class="level5"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable</span>&lt;<span class="xref">Java.Util.Iterator</span>&lt;T&gt;, T&gt;</div>
-    <div class="level6"><span class="xref">MASES.JNet.Specific.JNetAsyncEnumerable</span>&lt;<span class="xref">Java.Util.Iterator</span>&lt;T&gt;, T&gt;</div>
-    <div class="level7"><span class="xref">Java.Util.Iterator</span>&lt;T&gt;</div>
-    <div class="level8"><span class="xref">AbstractIterator&lt;T&gt;</span></div>
-      <div class="level9"><a class="xref" href="Org.Apache.Kafka.Common.Utils.FlattenedIterator-2.html">FlattenedIterator&lt;O, I&gt;</a></div>
+    <div class="level4"><span class="xref">Java.Util.Iterator</span>&lt;T&gt;</div>
+    <div class="level5"><span class="xref">AbstractIterator&lt;T&gt;</span></div>
+      <div class="level6"><a class="xref" href="Org.Apache.Kafka.Common.Utils.FlattenedIterator-2.html">FlattenedIterator&lt;O, I&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -97,34 +94,15 @@
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IEnumerableExtension</span></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;T&gt;</div>
     <div><span class="xref">Java.Util.IIterator</span>&lt;T&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <span class="xref">Java.Util.Iterator&lt;T&gt;.ToIEnumerator()</span>
+    </div>
+    <div>
       <span class="xref">Java.Util.Iterator&lt;T&gt;.ForEachRemaining&lt;Arg0objectSuperE&gt;(Java.Util.Function.Consumer&lt;Arg0objectSuperE&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.Specific.JNetAsyncEnumerable&lt;Java.Util.Iterator&lt;T&gt;, T&gt;.GetAsyncEnumerator(System.Threading.CancellationToken)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;Java.Util.Iterator&lt;T&gt;, T&gt;.GetEnumerator()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;Java.Util.Iterator&lt;T&gt;&gt;.GetEnumerator()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;Java.Util.Iterator&lt;T&gt;&gt;.MASES.JCOBridge.C2JBridge.IEnumerableExtension.UsePrefetch</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;Java.Util.Iterator&lt;T&gt;&gt;.MASES.JCOBridge.C2JBridge.IEnumerableExtension.UseThread</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;Java.Util.Iterator&lt;T&gt;&gt;.MASES.JCOBridge.C2JBridge.IEnumerableExtension.ConverterBridge</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Iterator&lt;T&gt;&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
@@ -404,7 +382,7 @@
   <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
   <h5 id="Org_Apache_Kafka_Common_Utils_AbstractIterator_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AbstractIterator&lt;T&gt; : Iterator&lt;T&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IEnumerableExtension, IEnumerable&lt;T&gt;, IEnumerable, IAsyncEnumerable&lt;T&gt;, IIterator&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class AbstractIterator&lt;T&gt; : Iterator&lt;T&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IIterator&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -821,18 +799,6 @@
   </div>
   <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IEnumerableExtension</span>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">System.Collections.Generic.IEnumerable&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">System.Collections.Generic.IAsyncEnumerable&lt;T&gt;</a>
   </div>
   <div>
       <span class="xref">Java.Util.IIterator&lt;E&gt;</span>
