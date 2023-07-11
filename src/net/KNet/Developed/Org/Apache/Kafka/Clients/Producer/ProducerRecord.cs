@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#org.apache.kafka.clients.producer.ProducerRecord(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
         /// </summary>
         public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
-            : this(topic, partition, new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), timestamp, key, value, headers)
+            : this(topic, partition, new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), key, value, headers)
         {
         }
         /// <summary>
