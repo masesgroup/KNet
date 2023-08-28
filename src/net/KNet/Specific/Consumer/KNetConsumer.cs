@@ -300,7 +300,6 @@ namespace MASES.KNet.Consumer
         bool threadRunning = false;
         long dequeing = 0;
         readonly System.Threading.Thread consumeThread = null;
-        readonly System.Threading.ManualResetEvent threadExited = null;
         readonly ConcurrentQueue<KNetConsumerRecords<K, V>> consumedRecords = null;
         readonly KNetConsumerCallback<K, V> consumerCallback = null;
         readonly IKNetDeserializer<K> _keyDeserializer;
@@ -328,7 +327,6 @@ namespace MASES.KNet.Consumer
             {
                 consumedRecords = new();
                 threadRunning = true;
-                threadExited = new(false);
                 consumeThread = new(ConsumeHandler);
                 consumeThread.Start();
             }
@@ -355,7 +353,6 @@ namespace MASES.KNet.Consumer
             {
                 consumedRecords = new();
                 threadRunning = true;
-                threadExited = new(false);
                 consumeThread = new(ConsumeHandler);
                 consumeThread.Start();
             }
@@ -382,12 +379,9 @@ namespace MASES.KNet.Consumer
         /// </summary>
         ~KNetConsumer()
         {
-            if (autoCreateSerDes)
-            {
-                _keyDeserializer?.Dispose();
-                _valueDeserializer?.Dispose();
-            }
+            this.Dispose();
         }
+
         /// <inheritdoc cref="IKNetConsumer{K, V}.Poll(long)"/>
         public new KNetConsumerRecords<K, V> Poll(long timeoutMs)
         {
@@ -420,8 +414,13 @@ namespace MASES.KNet.Consumer
                 {
                     System.Threading.Monitor.Pulse(consumedRecords);
                 }
-                while (IsCompleting) { threadExited.WaitOne(100); };
+                if (IsCompleting) { consumeThread?.Join(); };
                 actionCallback = null;
+            }
+            if (autoCreateSerDes)
+            {
+                _keyDeserializer?.Dispose();
+                _valueDeserializer?.Dispose();
             }
         }
         /// <inheritdoc cref="IKNetConsumer{K, V}.SetCallback(Action{KNetConsumerRecord{K, V}})"/>
@@ -462,7 +461,6 @@ namespace MASES.KNet.Consumer
                 }
             }
             catch { }
-            finally { threadExited.Set(); threadRunning = false; }
         }
         /// <inheritdoc cref="IKNetConsumer{K, V}.IsCompleting"/>
         public bool IsCompleting => !consumedRecords.IsEmpty || System.Threading.Interlocked.Read(ref dequeing) != 0;

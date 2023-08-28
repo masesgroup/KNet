@@ -240,29 +240,39 @@ namespace MASES.KNet
             if (key == null)
                 throw new ArgumentNullException(nameof(key));
 
-            JVMBridgeException exception = null;
-
-            DateTime pTimestamp = DateTime.MaxValue;
-            using (AutoResetEvent deliverySemaphore = new AutoResetEvent(false))
+            if (UpdateMode == UpdateModeTypes.OnDelivery)
             {
-                _producer.Produce(new KNetProducerRecord<TKey, TValue>(_stateName, key, null), (record, error) =>
+                JVMBridgeException exception = null;
+
+                DateTime pTimestamp = DateTime.MaxValue;
+                using (AutoResetEvent deliverySemaphore = new AutoResetEvent(false))
                 {
-                    try
+                    using (Callback cb = new Callback()
                     {
-                        if (deliverySemaphore.SafeWaitHandle.IsClosed)
-                            return;
+                        OnOnCompletion = (record, error) =>
+                        {
+                            try
+                            {
+                                if (deliverySemaphore.SafeWaitHandle.IsClosed)
+                                    return;
 
-                        exception = error;
-
-                        deliverySemaphore.Set();
+                                exception = error;
+                                deliverySemaphore.Set();
+                            }
+                            catch { }
+                        }
+                    })
+                    {
+                        _producer.Produce(new KNetProducerRecord<TKey, TValue>(_stateName, key, null), cb);
+                        deliverySemaphore.WaitOne();
+                        if (exception != null) throw exception;
                     }
-                    catch { }
-                });
-
-                deliverySemaphore.WaitOne();
+                }
             }
-
-            if (exception != null) throw exception;
+            else if (UpdateMode == UpdateModeTypes.OnConsume || UpdateMode == UpdateModeTypes.OnConsumeSync)
+            {
+                _producer.Produce(StateName, key, null, (Callback)null);
+            }
             _dictionary.TryRemove(key, out _);
         }
 
@@ -279,23 +289,27 @@ namespace MASES.KNet
                 DateTime pTimestamp = DateTime.MaxValue;
                 using (AutoResetEvent deliverySemaphore = new AutoResetEvent(false))
                 {
-                    _producer.Produce(StateName, key, value, (record, error) =>
+                    using (Callback cb = new Callback()
                     {
-                        try
+                        OnOnCompletion = (record, error) =>
                         {
-                            if (deliverySemaphore.SafeWaitHandle.IsClosed)
-                                return;
+                            try
+                            {
+                                if (deliverySemaphore.SafeWaitHandle.IsClosed)
+                                    return;
 
-                            exception = error;
-                            deliverySemaphore.Set();
+                                exception = error;
+                                deliverySemaphore.Set();
+                            }
+                            catch { }
                         }
-                        catch { }
-                    });
-
-                    deliverySemaphore.WaitOne();
+                    })
+                    {
+                        _producer.Produce(new KNetProducerRecord<TKey, TValue>(_stateName, key, value), cb);
+                        deliverySemaphore.WaitOne();
+                        if (exception != null) throw exception;
+                    }
                 }
-
-                if (exception != null) throw exception;
 
                 if (value == null)
                 {
@@ -663,6 +677,8 @@ namespace MASES.KNet
         /// </summary>
         public void Dispose()
         {
+            _consumerPollRun = false;
+
             _consumer?.Dispose();
 
             _producer?.Flush();

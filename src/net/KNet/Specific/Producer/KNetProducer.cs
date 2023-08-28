@@ -211,23 +211,43 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        void Produce(string topic, K key, V value, Callback cb = null);
+        Future<RecordMetadata> Produce(string topic, K key, V value, Callback cb = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        void Produce(string topic, int partition, K key, V value, Callback cb = null);
+        void ProduceAndWait(string topic, K key, V value, Callback cb = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        void Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null);
+        Future<RecordMetadata> Produce(string topic, int partition, K key, V value, Callback cb = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        void Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null);
+        void ProduceAndWait(string topic, int partition, K key, V value, Callback cb = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        void Produce(KNetProducerRecord<K, V> record, Callback cb = null);
+        Future<RecordMetadata> Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null);
+        /// <summary>
+        /// KNet version of <see cref="Producer{K, V}.Send(ProducerRecord{K, V}, Callback)"/>
+        /// </summary>
+        void ProduceAndWait(string topic, int partition, long timestamp, K key, V value, Callback cb = null);
+        /// <summary>
+        /// KNet version of <see cref="Producer{K, V}.Send(ProducerRecord{K, V}, Callback)"/>
+        /// </summary>
+        Future<RecordMetadata> Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null);
+        /// <summary>
+        /// KNet version of <see cref="Producer{K, V}.Send(ProducerRecord{K, V}, Callback)"/>
+        /// </summary>
+        void ProduceAndWait(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null);
+        /// <summary>
+        /// KNet version of <see cref="Producer{K, V}.Send(ProducerRecord{K, V}, Callback)"/>
+        /// </summary>
+        Future<RecordMetadata> Produce(KNetProducerRecord<K, V> record, Callback cb = null);
+        /// <summary>
+        /// KNet version of <see cref="Producer{K, V}.Send(ProducerRecord{K, V}, Callback)"/>
+        /// </summary>
+        void ProduceAndWait(KNetProducerRecord<K, V> record, Callback cb = null);
         /// <summary>
         /// KNet async version of <see cref="Producer{K, V}.Send(ProducerRecord{K, V}, Callback)"/>
         /// </summary>
@@ -425,48 +445,68 @@ namespace MASES.KNet.Producer
             }
         }
         /// <inheritdoc cref="IKNetProducer{K, V}.Produce(string, K, V, Callback)"/>
-        public void Produce(string topic, K key, V value, Callback cb = null)
+        public Future<RecordMetadata> Produce(string topic, K key, V value, Callback cb = null)
         {
-            Produce(new KNetProducerRecord<K, V>(topic, key, value), cb);
+            return Produce(new KNetProducerRecord<K, V>(topic, key, value), cb);
+        }
+        /// <inheritdoc cref="IKNetProducer{K, V}.ProduceAndWait(string, K, V, Callback)"/>
+        public void ProduceAndWait(string topic, K key, V value, Callback cb = null)
+        {
+            ProduceAndWait(new KNetProducerRecord<K, V>(topic, key, value), cb);
         }
         /// <inheritdoc cref="IKNetProducer{K, V}.Produce(string, int, K, V, Callback)"/>
-        public void Produce(string topic, int partition, K key, V value, Callback cb = null)
+        public Future<RecordMetadata> Produce(string topic, int partition, K key, V value, Callback cb = null)
         {
-            Produce(new KNetProducerRecord<K, V>(topic, partition, key, value), cb);
+            return Produce(new KNetProducerRecord<K, V>(topic, partition, key, value), cb);
         }
-        /// <inheritdoc cref="IKNetProducer{K, V}.Produce(string, int, long, K, V, Action{RecordMetadata, JVMBridgeException})"/>
-        public void Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null)
+        /// <inheritdoc cref="IKNetProducer{K, V}.ProduceAndWait(string, int, K, V, Callback)"/>
+        public void ProduceAndWait(string topic, int partition, K key, V value, Callback cb = null)
         {
-            Produce(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
+            ProduceAndWait(new KNetProducerRecord<K, V>(topic, partition, key, value), cb);
+        }
+        /// <inheritdoc cref="IKNetProducer{K, V}.Produce(string, int, long, K, V, Callback)"/>
+        public Future<RecordMetadata> Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null)
+        {
+            return Produce(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
+        }
+        /// <inheritdoc cref="IKNetProducer{K, V}.ProduceAndWait(string, int, long, K, V, Callback)"/>
+        public void ProduceAndWait(string topic, int partition, long timestamp, K key, V value, Callback cb = null)
+        {
+            ProduceAndWait(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
         }
         /// <inheritdoc cref="IKNetProducer{K, V}.Produce(string, int, DateTime, K, V, Callback)"/>
-        public void Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)
+        public Future<RecordMetadata> Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)
         {
-            Produce(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
+            return Produce(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
+        }
+        /// <inheritdoc cref="IKNetProducer{K, V}.ProduceAndWait(string, int, DateTime, K, V, Callback)"/>
+        public void ProduceAndWait(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)
+        {
+            ProduceAndWait(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
         }
         /// <inheritdoc cref="IKNetProducer{K, V}.Produce(KNetProducerRecord{K, V}, Callback)"/>
-        public void Produce(KNetProducerRecord<K, V> record, Callback cb = null)
+        public Future<RecordMetadata> Produce(KNetProducerRecord<K, V> record, Callback cb = null)
+        {
+            if (cb != null)
+            {
+                return this.Send(record, cb);
+            }
+            else
+            {
+                return this.Send(record);
+            }
+        }
+        /// <inheritdoc cref="IKNetProducer{K, V}.ProduceAndWait(KNetProducerRecord{K, V}, Callback)"/>
+        public void ProduceAndWait(KNetProducerRecord<K, V> record, Callback cb = null)
         {
             try
             {
-                Future<RecordMetadata> result;
-                if (cb != null)
-                {
-                    result = this.Send(record, cb);
-                }
-                else
-                {
-                    result = this.Send(record);
-                }
+                Future<RecordMetadata> result = this.Produce(record, cb);
                 result.Get();
             }
             catch (ExecutionException e)
             {
                 throw e.InnerException;
-            }
-            finally
-            {
-                cb?.Dispose();
             }
         }
         /// <inheritdoc cref="IKNetProducer{K, V}.Produce(string, K, V, Action{RecordMetadata, JVMBridgeException})"/>
