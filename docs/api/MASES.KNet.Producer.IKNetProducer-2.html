@@ -188,7 +188,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_Produce_MASES_KNet_Producer_KNetProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.Produce(MASES.KNet.Producer.KNetProducerRecord%7B%600%2C%601%7D%2COrg.Apache.Kafka.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L230">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L246">View Source</a>
   </span>
   <a id="MASES_KNet_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Producer.IKNetProducer`2.Produce*"></a>
   <h4 id="MASES_KNet_Producer_IKNetProducer_2_Produce_MASES_KNet_Producer_KNetProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.IKNetProducer`2.Produce(MASES.KNet.Producer.KNetProducerRecord{`0,`1},Org.Apache.Kafka.Clients.Producer.Callback)">Produce(KNetProducerRecord&lt;K, V&gt;, Callback)</h4>
@@ -197,7 +197,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Produce(KNetProducerRecord&lt;K, V&gt; record, Callback cb = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Future&lt;RecordMetadata&gt; Produce(KNetProducerRecord&lt;K, V&gt; record, Callback cb = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,6 +217,21 @@
       <tr>
         <td><a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></td>
         <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Concurrent.Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -273,7 +288,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Produce(string topic, K key, V value, Callback cb = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Future&lt;RecordMetadata&gt; Produce(string topic, K key, V value, Callback cb = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,6 +318,21 @@
       <tr>
         <td><a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></td>
         <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Concurrent.Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -360,7 +390,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_Produce_System_String_System_Int32__0__1_Org_Apache_Kafka_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.Produce(System.String%2CSystem.Int32%2C%600%2C%601%2COrg.Apache.Kafka.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L218">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L222">View Source</a>
   </span>
   <a id="MASES_KNet_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Producer.IKNetProducer`2.Produce*"></a>
   <h4 id="MASES_KNet_Producer_IKNetProducer_2_Produce_System_String_System_Int32__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.IKNetProducer`2.Produce(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">Produce(String, Int32, K, V, Callback)</h4>
@@ -369,7 +399,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Produce(string topic, int partition, K key, V value, Callback cb = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Future&lt;RecordMetadata&gt; Produce(string topic, int partition, K key, V value, Callback cb = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -404,6 +434,21 @@
       <tr>
         <td><a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></td>
         <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Concurrent.Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -466,7 +511,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.Produce(System.String%2CSystem.Int32%2CSystem.DateTime%2C%600%2C%601%2COrg.Apache.Kafka.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L226">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L238">View Source</a>
   </span>
   <a id="MASES_KNet_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Producer.IKNetProducer`2.Produce*"></a>
   <h4 id="MASES_KNet_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.IKNetProducer`2.Produce(System.String,System.Int32,System.DateTime,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">Produce(String, Int32, DateTime, K, V, Callback)</h4>
@@ -475,7 +520,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Future&lt;RecordMetadata&gt; Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -515,6 +560,21 @@
       <tr>
         <td><a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></td>
         <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Concurrent.Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -582,7 +642,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.Produce(System.String%2CSystem.Int32%2CSystem.Int64%2C%600%2C%601%2COrg.Apache.Kafka.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L222">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L230">View Source</a>
   </span>
   <a id="MASES_KNet_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Producer.IKNetProducer`2.Produce*"></a>
   <h4 id="MASES_KNet_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.IKNetProducer`2.Produce(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">Produce(String, Int32, Int64, K, V, Callback)</h4>
@@ -591,7 +651,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Future&lt;RecordMetadata&gt; Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -631,6 +691,21 @@
       <tr>
         <td><a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></td>
         <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Concurrent.Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -695,10 +770,265 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_MASES_KNet_Producer_KNetProducerRecord__0__1__System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.ProduceAsync(MASES.KNet.Producer.KNetProducerRecord%7B%600%2C%601%7D%2CSystem.Action%7BOrg.Apache.Kafka.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_MASES_KNet_Producer_KNetProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.ProduceAndWait(MASES.KNet.Producer.KNetProducerRecord%7B%600%2C%601%7D%2COrg.Apache.Kafka.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L250">View Source</a>
+  </span>
+  <a id="MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAndWait*"></a>
+  <h4 id="MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_MASES_KNet_Producer_KNetProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAndWait(MASES.KNet.Producer.KNetProducerRecord{`0,`1},Org.Apache.Kafka.Clients.Producer.Callback)">ProduceAndWait(KNetProducerRecord&lt;K, V&gt;, Callback)</h4>
+  <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ProduceAndWait(KNetProducerRecord&lt;K, V&gt; record, Callback cb = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</td>
+        <td><span class="parametername">record</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_System_String__0__1_Org_Apache_Kafka_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.ProduceAndWait(System.String%2C%600%2C%601%2COrg.Apache.Kafka.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L218">View Source</a>
+  </span>
+  <a id="MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAndWait*"></a>
+  <h4 id="MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_System_String__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAndWait(System.String,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">ProduceAndWait(String, K, V, Callback)</h4>
+  <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ProduceAndWait(string topic, K key, V value, Callback cb = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_System_String_System_Int32__0__1_Org_Apache_Kafka_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.ProduceAndWait(System.String%2CSystem.Int32%2C%600%2C%601%2COrg.Apache.Kafka.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L226">View Source</a>
+  </span>
+  <a id="MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAndWait*"></a>
+  <h4 id="MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_System_String_System_Int32__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAndWait(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">ProduceAndWait(String, Int32, K, V, Callback)</h4>
+  <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ProduceAndWait(string topic, int partition, K key, V value, Callback cb = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.ProduceAndWait(System.String%2CSystem.Int32%2CSystem.DateTime%2C%600%2C%601%2COrg.Apache.Kafka.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L242">View Source</a>
+  </span>
+  <a id="MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAndWait*"></a>
+  <h4 id="MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAndWait(System.String,System.Int32,System.DateTime,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">ProduceAndWait(String, Int32, DateTime, K, V, Callback)</h4>
+  <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ProduceAndWait(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">timestamp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.ProduceAndWait(System.String%2CSystem.Int32%2CSystem.Int64%2C%600%2C%601%2COrg.Apache.Kafka.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L234">View Source</a>
+  </span>
+  <a id="MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAndWait*"></a>
+  <h4 id="MASES_KNet_Producer_IKNetProducer_2_ProduceAndWait_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAndWait(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">ProduceAndWait(String, Int32, Int64, K, V, Callback)</h4>
+  <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ProduceAndWait(string topic, int partition, long timestamp, K key, V value, Callback cb = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">timestamp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_MASES_KNet_Producer_KNetProducerRecord__0__1__System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.ProduceAsync(MASES.KNet.Producer.KNetProducerRecord%7B%600%2C%601%7D%2CSystem.Action%7BOrg.Apache.Kafka.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L270">View Source</a>
   </span>
   <a id="MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAsync*"></a>
   <h4 id="MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_MASES_KNet_Producer_KNetProducerRecord__0__1__System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAsync(MASES.KNet.Producer.KNetProducerRecord{`0,`1},System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">ProduceAsync(KNetProducerRecord&lt;K, V&gt;, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
@@ -751,7 +1081,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_System_String__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.ProduceAsync(System.String%2C%600%2C%601%2CSystem.Action%7BOrg.Apache.Kafka.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L234">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L254">View Source</a>
   </span>
   <a id="MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAsync*"></a>
   <h4 id="MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_System_String__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAsync(System.String,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">ProduceAsync(String, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
@@ -814,7 +1144,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.ProduceAsync(System.String%2CSystem.Int32%2C%600%2C%601%2CSystem.Action%7BOrg.Apache.Kafka.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L238">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L258">View Source</a>
   </span>
   <a id="MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAsync*"></a>
   <h4 id="MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAsync(System.String,System.Int32,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">ProduceAsync(String, Int32, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
@@ -882,7 +1212,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32_System_DateTime__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.ProduceAsync(System.String%2CSystem.Int32%2CSystem.DateTime%2C%600%2C%601%2CSystem.Action%7BOrg.Apache.Kafka.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L246">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L266">View Source</a>
   </span>
   <a id="MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAsync*"></a>
   <h4 id="MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32_System_DateTime__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAsync(System.String,System.Int32,System.DateTime,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">ProduceAsync(String, Int32, DateTime, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
@@ -955,7 +1285,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32_System_Int64__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.IKNetProducer%602.ProduceAsync(System.String%2CSystem.Int32%2CSystem.Int64%2C%600%2C%601%2CSystem.Action%7BOrg.Apache.Kafka.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L242">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L262">View Source</a>
   </span>
   <a id="MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAsync*"></a>
   <h4 id="MASES_KNet_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32_System_Int64__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.IKNetProducer`2.ProduceAsync(System.String,System.Int32,System.Int64,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">ProduceAsync(String, Int32, Int64, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
