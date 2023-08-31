@@ -24,10 +24,19 @@ using System;
 namespace MASES.KNet.Serialization
 {
     /// <summary>
+    /// KNet common serializer/deserializer
+    /// </summary>
+    /// <typeparam name="T">The type to serialize/deserialize</typeparam>
+    public interface IKNetSerDes<T> : IKNetSerializer<T>, IKNetDeserializer<T>
+    {
+
+    }
+
+    /// <summary>
     /// Common serializer/deserializer
     /// </summary>
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
-    public class KNetSerDes<T> : IKNetSerializer<T>, IKNetDeserializer<T>
+    public class KNetSerDes<T> : IKNetSerDes<T>
     {
         readonly KNetSerialization.SerializationType _SerializationType = KNetSerialization.InternalSerDesType<T>();
         Serializer<byte[]> _KafkaSerializer = new ByteArraySerializer();

@@ -19,6 +19,7 @@
 using Java.Lang;
 using Java.Nio;
 using MASES.JCOBridge.C2JBridge;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
 using Org.Apache.Kafka.Common.Errors;
 using Org.Apache.Kafka.Common.Serialization;
 using Org.Apache.Kafka.Common.Utils;
@@ -150,7 +151,7 @@ namespace MASES.KNet.Serialization
             return data;
         }
 
-        static readonly Serializer<ByteBuffer> _ByteBufferSerializer = new ByteBufferSerializer();
+        static readonly ByteBufferSerializer _ByteBufferSerializer = new ByteBufferSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.ByteBuffer"/>
         /// </summary>
@@ -159,7 +160,7 @@ namespace MASES.KNet.Serialization
             return _ByteBufferSerializer.Serialize(topic, data);
         }
 
-        static readonly Serializer<Bytes> _BytesSerializer = new BytesSerializer();
+        static readonly BytesSerializer _BytesSerializer = new BytesSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Bytes"/>
         /// </summary>
@@ -168,7 +169,7 @@ namespace MASES.KNet.Serialization
             return _BytesSerializer.Serialize(topic, data);
         }
 
-        static readonly Serializer<double> _DoubleSerializer = new DoubleSerializer();
+        static readonly DoubleSerializer _DoubleSerializer = new DoubleSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Double"/>
         /// </summary>
@@ -177,7 +178,7 @@ namespace MASES.KNet.Serialization
             return _DoubleSerializer.Serialize(topic, data);
         }
 
-        static readonly Serializer<float> _FloatSerializer = new FloatSerializer();
+        static readonly FloatSerializer _FloatSerializer = new FloatSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Float"/>
         /// </summary>
@@ -186,7 +187,7 @@ namespace MASES.KNet.Serialization
             return _FloatSerializer.Serialize(topic, data);
         }
 
-        static readonly Serializer<int> _IntSerializer = new IntegerSerializer();
+        static readonly IntegerSerializer _IntSerializer = new IntegerSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Int"/>
         /// </summary>
@@ -208,7 +209,7 @@ namespace MASES.KNet.Serialization
             //return new byte[] { (byte)((int)(data >>> 56)), (byte)((int)(data >>> 48)), (byte)((int)(data >>> 40)), (byte)((int)(data >>> 32)), (byte)((int)(data >>> 24)), (byte)((int)(data >>> 16)), (byte)((int)(data >>> 8)), ((byte)data) };
         }
 
-        static readonly Serializer<short> _ShortSerializer = new ShortSerializer();
+        static readonly ShortSerializer _ShortSerializer = new ShortSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Short"/>
         /// </summary>
@@ -247,49 +248,49 @@ namespace MASES.KNet.Serialization
             return data;
         }
 
-        static readonly Deserializer<ByteBuffer> _ByteBufferDeserializer = new ByteBufferDeserializer();
+        static readonly ByteBufferDeserializer _ByteBufferDeserializer = new ByteBufferDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.ByteBuffer"/>
         /// </summary>
         public static ByteBuffer DeserializeByteBuffer(string topic, byte[] data)
         {
-            return _ByteBufferDeserializer.Deserialize(topic, data);
+            return JVMBridgeBase.Wraps<ByteBuffer>(_ByteBufferDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
-        static readonly Deserializer<Bytes> _BytesDeserializer = new BytesDeserializer();
+        static readonly BytesDeserializer _BytesDeserializer = new BytesDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Bytes"/>
         /// </summary>
         public static Bytes DeserializeBytes(string topic, byte[] data)
         {
-            return _BytesDeserializer.Deserialize(topic, data);
+            return JVMBridgeBase.Wraps< Bytes>(_BytesDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
-        static readonly Deserializer<double> _DoubleDeserializer = new DoubleDeserializer();
+        static readonly DoubleDeserializer _DoubleDeserializer = new DoubleDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Double"/>
         /// </summary>
         public static double DeserializeDouble(string topic, byte[] data)
         {
-            return _DoubleDeserializer.Deserialize(topic, data);
+            return (double)_DoubleDeserializer.Deserialize(topic, data);
         }
 
-        static readonly Deserializer<float> _FloatDeserializer = new FloatDeserializer();
+        static readonly FloatDeserializer _FloatDeserializer = new FloatDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Float"/>
         /// </summary>
         public static float DeserializeFloat(string topic, byte[] data)
         {
-            return _FloatDeserializer.Deserialize(topic, data);
+            return (float)_FloatDeserializer.Deserialize(topic, data);
         }
 
-        static readonly Deserializer<int> _IntDeserializer = new IntegerDeserializer();
+        static readonly IntegerDeserializer _IntDeserializer = new IntegerDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Int"/>
         /// </summary>
         public static int DeserializeInt(string topic, byte[] data)
         {
-            return _IntDeserializer.Deserialize(topic, data);
+            return (int)_IntDeserializer.Deserialize(topic, data);
 
             //if (data == null)
             //{
@@ -317,13 +318,13 @@ namespace MASES.KNet.Serialization
             //}
         }
 
-        static readonly Deserializer<long> _LongDeserializer = new LongDeserializer();
+        static readonly LongDeserializer _LongDeserializer = new LongDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Long"/>
         /// </summary>
         public static long DeserializeLong(string topic, byte[] data)
         {
-            return _LongDeserializer.Deserialize(topic, data);
+            return (long)_LongDeserializer.Deserialize(topic, data);
 
             //if (data == null)
             //{
@@ -351,13 +352,13 @@ namespace MASES.KNet.Serialization
             //}
         }
 
-        static readonly Deserializer<short> _ShortDeserializer = new ShortDeserializer();
+        static readonly ShortDeserializer _ShortDeserializer = new ShortDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Short"/>
         /// </summary>
         public static short DeserializeShort(string topic, byte[] data)
         {
-            return _ShortDeserializer.Deserialize(topic, data);
+            return (short)_ShortDeserializer.Deserialize(topic, data);
 
             //if (data == null)
             //{
