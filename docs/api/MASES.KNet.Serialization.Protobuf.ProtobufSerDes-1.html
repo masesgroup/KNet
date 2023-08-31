@@ -84,6 +84,7 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="MASES.KNet.Serialization.IKNetSerDes-1.html">IKNetSerDes</a>&lt;T&gt;</div>
     <div><a class="xref" href="MASES.KNet.Serialization.IKNetSerializer-1.html">IKNetSerializer</a>&lt;T&gt;</div>
     <div><a class="xref" href="MASES.KNet.Serialization.IKNetDeserializer-1.html">IKNetDeserializer</a>&lt;T&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
@@ -143,7 +144,7 @@
   <h6><strong>Assembly</strong>: MASES.KNet.Serialization.Protobuf.dll</h6>
   <h5 id="MASES_KNet_Serialization_Protobuf_ProtobufSerDes_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProtobufSerDes&lt;T&gt; : KNetSerDes&lt;T&gt;, IKNetSerializer&lt;T&gt;, IKNetDeserializer&lt;T&gt;, IDisposable where T : IMessage&lt;T&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProtobufSerDes&lt;T&gt; : KNetSerDes&lt;T&gt;, IKNetSerDes&lt;T&gt;, IKNetSerializer&lt;T&gt;, IKNetDeserializer&lt;T&gt;, IDisposable where T : IMessage&lt;T&gt;, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -326,6 +327,9 @@
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">MASES.KNet.Serialization.KNetSerDes&lt;T&gt;.SerializeWithHeaders(System.String, Org.Apache.Kafka.Common.Header.Headers, T)</span></div>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MASES.KNet.Serialization.IKNetSerDes-1.html">IKNetSerDes&lt;T&gt;</a>
+  </div>
   <div>
       <a class="xref" href="MASES.KNet.Serialization.IKNetSerializer-1.html">IKNetSerializer&lt;T&gt;</a>
   </div>

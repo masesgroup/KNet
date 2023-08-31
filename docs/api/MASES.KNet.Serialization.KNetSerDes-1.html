@@ -87,6 +87,7 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="MASES.KNet.Serialization.IKNetSerDes-1.html">IKNetSerDes</a>&lt;T&gt;</div>
     <div><a class="xref" href="MASES.KNet.Serialization.IKNetSerializer-1.html">IKNetSerializer</a>&lt;T&gt;</div>
     <div><a class="xref" href="MASES.KNet.Serialization.IKNetDeserializer-1.html">IKNetDeserializer</a>&lt;T&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
@@ -119,7 +120,7 @@
   <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
   <h5 id="MASES_KNet_Serialization_KNetSerDes_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KNetSerDes&lt;T&gt; : IKNetSerializer&lt;T&gt;, IKNetDeserializer&lt;T&gt;, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class KNetSerDes&lt;T&gt; : IKNetSerDes&lt;T&gt;, IKNetSerializer&lt;T&gt;, IKNetDeserializer&lt;T&gt;, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -144,7 +145,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_KafkaDeserializer.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.KafkaDeserializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L70">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L79">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_KafkaDeserializer_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.KafkaDeserializer*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_KafkaDeserializer" data-uid="MASES.KNet.Serialization.KNetSerDes`1.KafkaDeserializer">KafkaDeserializer</h4>
@@ -175,7 +176,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_KafkaSerializer.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.KafkaSerializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L68">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L77">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_KafkaSerializer_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.KafkaSerializer*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_KafkaSerializer" data-uid="MASES.KNet.Serialization.KNetSerDes`1.KafkaSerializer">KafkaSerializer</h4>
@@ -206,7 +207,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_OnDeserialize.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.OnDeserialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L46">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L55">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_OnDeserialize_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.OnDeserialize*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_OnDeserialize" data-uid="MASES.KNet.Serialization.KNetSerDes`1.OnDeserialize">OnDeserialize</h4>
@@ -237,7 +238,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_OnDeserializeWithHeaders.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.OnDeserializeWithHeaders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L50">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L59">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_OnDeserializeWithHeaders_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.OnDeserializeWithHeaders*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_OnDeserializeWithHeaders" data-uid="MASES.KNet.Serialization.KNetSerDes`1.OnDeserializeWithHeaders">OnDeserializeWithHeaders</h4>
@@ -268,7 +269,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_OnSerialize.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.OnSerialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L38">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L47">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_OnSerialize_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.OnSerialize*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_OnSerialize" data-uid="MASES.KNet.Serialization.KNetSerDes`1.OnSerialize">OnSerialize</h4>
@@ -299,7 +300,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_OnSerializeWithHeaders.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.OnSerializeWithHeaders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L42">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L51">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_OnSerializeWithHeaders_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.OnSerializeWithHeaders*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_OnSerializeWithHeaders" data-uid="MASES.KNet.Serialization.KNetSerDes`1.OnSerializeWithHeaders">OnSerializeWithHeaders</h4>
@@ -330,7 +331,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_UseHeaders.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.UseHeaders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L72">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L81">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_UseHeaders_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.UseHeaders*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_UseHeaders" data-uid="MASES.KNet.Serialization.KNetSerDes`1.UseHeaders">UseHeaders</h4>
@@ -363,7 +364,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_Deserialize_System_String_System_Byte___.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.Deserialize(System.String%2CSystem.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L108">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L117">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_Deserialize_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.Deserialize*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_Deserialize_System_String_System_Byte___" data-uid="MASES.KNet.Serialization.KNetSerDes`1.Deserialize(System.String,System.Byte[])">Deserialize(String, Byte[])</h4>
@@ -419,7 +420,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_DeserializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers_System_Byte___.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.DeserializeWithHeaders(System.String%2COrg.Apache.Kafka.Common.Header.Headers%2CSystem.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L131">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L140">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_DeserializeWithHeaders_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.DeserializeWithHeaders*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_DeserializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers_System_Byte___" data-uid="MASES.KNet.Serialization.KNetSerDes`1.DeserializeWithHeaders(System.String,Org.Apache.Kafka.Common.Header.Headers,System.Byte[])">DeserializeWithHeaders(String, Headers, Byte[])</h4>
@@ -481,7 +482,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_Dispose.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L59">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L68">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_Dispose_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.Dispose*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_Dispose" data-uid="MASES.KNet.Serialization.KNetSerDes`1.Dispose">Dispose()</h4>
@@ -496,7 +497,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_Finalize.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L54">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L63">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_Finalize_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.Finalize*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_Finalize" data-uid="MASES.KNet.Serialization.KNetSerDes`1.Finalize">Finalize()</h4>
@@ -512,7 +513,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_Serialize_System_String__0_.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.Serialize(System.String%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L74">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L83">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_Serialize_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.Serialize*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_Serialize_System_String__0_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.Serialize(System.String,`0)">Serialize(String, T)</h4>
@@ -568,7 +569,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1_SerializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers__0_.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601.SerializeWithHeaders(System.String%2COrg.Apache.Kafka.Common.Header.Headers%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L98">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L107">View Source</a>
   </span>
   <a id="MASES_KNet_Serialization_KNetSerDes_1_SerializeWithHeaders_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.SerializeWithHeaders*"></a>
   <h4 id="MASES_KNet_Serialization_KNetSerDes_1_SerializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers__0_" data-uid="MASES.KNet.Serialization.KNetSerDes`1.SerializeWithHeaders(System.String,Org.Apache.Kafka.Common.Header.Headers,`0)">SerializeWithHeaders(String, Headers, T)</h4>
@@ -627,6 +628,9 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
+      <a class="xref" href="MASES.KNet.Serialization.IKNetSerDes-1.html">IKNetSerDes&lt;T&gt;</a>
+  </div>
+  <div>
       <a class="xref" href="MASES.KNet.Serialization.IKNetSerializer-1.html">IKNetSerializer&lt;T&gt;</a>
   </div>
   <div>
@@ -646,7 +650,7 @@
                     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_KNetSerDes_1.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.KNetSerDes%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L30" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/KNetSerDes.cs/#L39" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

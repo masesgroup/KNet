@@ -1413,7 +1413,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Producer.KNetProducerRecord-2.html",
-          "hash": "bqXHRWVtFq7RlB34Q17ojbe/tf3mjqMAWn3nrIYTFmo="
+          "hash": "XYREylnY0DGj9tYIK0UBLQfGr91D9/zjOx1Is84rhZg="
         }
       },
       "is_incremental": false,
@@ -1473,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.Avro.AvroSerDes-1.html",
-          "hash": "J2hNeZUR0zh9OJ82Kj0dmy4ijsBcMlOoS/b/fzrIXy4="
+          "hash": "M0+i6o45CfH6YJAne7Py8+ZnT5oM1j6/GNz199mL2po="
         }
       },
       "is_incremental": false,
@@ -1505,6 +1505,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.IKNetSerDes-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.IKNetSerDes-1.html",
+          "hash": "k+48KsVjgOwrHwav0cPEP71RZhtg7bmlBV1ags0i2sw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Serialization.IKNetSerializer-1.yml",
       "output": {
         ".html": {
@@ -1521,7 +1533,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.Json.JsonSerDes-1.html",
-          "hash": "qmlYDleChWeHnyv95GQCVYUES2BHCMsbP0lDeiL7x2M="
+          "hash": "3EK5Oepkk6X4lrUSS/DYwSg8c7n1Uobt6Bxu4hjc8ME="
         }
       },
       "is_incremental": false,
@@ -1545,7 +1557,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.KNetSerDes-1.html",
-          "hash": "Yi47r3+D1BS+2NGOG5t5GnTBkxfN8zzwn7gxG4Nb+g8="
+          "hash": "K1CAu+PdXszILu8ie4pMZz0DxszobV1PYmaNNC73+tM="
         }
       },
       "is_incremental": false,
@@ -1557,7 +1569,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.KNetSerialization.SerializationType.html",
-          "hash": "iCCE2yA0uAtGrAk8fHLWjMv6ok9ul1H7w4Nadotz4a4="
+          "hash": "qvZPh6cALZ55Ms8NvqdLPJKSDLX1nQosDJ1iApCIeU8="
         }
       },
       "is_incremental": false,
@@ -1569,7 +1581,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.KNetSerialization.html",
-          "hash": "cN6d093N1MAsZJCJW4e5u5HSHOr2bf+o1+l4fuEHJuI="
+          "hash": "1zEVP/ssXfotPGNp2sujMTNcEEitNJ9Nj7e+qRGcz5Q="
         }
       },
       "is_incremental": false,
@@ -1581,7 +1593,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.MessagePack.MessagePackSerDes-1.html",
-          "hash": "++Cb+LMZF8T3j1mEK9/4VvwWp/HW7qDwn5U9fWLvJQQ="
+          "hash": "IOUanKjg/4H9Bvtu1L3vFGIOKepwHvieI375nbyO8E8="
         }
       },
       "is_incremental": false,
@@ -1605,7 +1617,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.Protobuf.ProtobufSerDes-1.html",
-          "hash": "HdHRoDnrzDjrOvZgD2emzzJjfRnsVkbCWYJj1WB0eS8="
+          "hash": "PHcqmv5sePZZYoOzfl8Fj1MH4l3naXdmh/M6AUqqEQU="
         }
       },
       "is_incremental": false,
@@ -1629,7 +1641,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.html",
-          "hash": "TkiGOtZgpV5zp2dAs1/a3VHng93ti856ysppzkouae8="
+          "hash": "6sH6rSnPkrObUU2uVMrsRrHQjefKSi/boqVuNwp9jmk="
         }
       },
       "is_incremental": false,
@@ -19761,7 +19773,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "kQbKdb1BEVjm0lOqtJpyYfqWR0LlS3OVtt3rnktGhbA="
+          "hash": "LDyp4Q3DvKg541+8FR3e6UnRMxXLeN3pQ8BgVHUtaag="
         }
       },
       "is_incremental": false,
@@ -20021,7 +20033,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1645,
+          "total_file_count": 1646,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
