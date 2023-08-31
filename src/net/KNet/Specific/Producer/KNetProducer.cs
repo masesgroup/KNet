@@ -126,15 +126,15 @@ namespace MASES.KNet.Producer
         /// <inheritdoc cref="ProducerRecord{K, V}.Topic"/>
         public string Topic { get; private set; }
         /// <inheritdoc cref="ProducerRecord{K, V}.Partition"/>
-        public int Partition { get; private set; }
+        public int? Partition { get; private set; }
         /// <inheritdoc cref="ProducerRecord{K, V}.Key"/>
         public K Key { get; private set; }
         /// <inheritdoc cref="ProducerRecord{K, V}.Value"/>
         public V Value { get; private set; }
         /// <inheritdoc cref="ProducerRecord{K, V}.Timestamp"/>
-        public long Timestamp { get; private set; }
+        public long? Timestamp { get; private set; }
         /// <inheritdoc cref="ProducerRecord{K, V}.DateTime"/>
-        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
+        public System.DateTime? DateTime => Timestamp.HasValue ? System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp.Value).DateTime : null;
         /// <inheritdoc cref="ProducerRecord{K, V}.Headers"/>
         public Headers Headers { get; private set; }
         /// <inheritdoc cref="object.ToString"/>
