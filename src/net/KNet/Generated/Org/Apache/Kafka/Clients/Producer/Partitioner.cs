@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 {
     #region IPartitioner
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.producer.Partitioner implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/Partitioner.html"/>
     /// </summary>
     public partial interface IPartitioner
     {
@@ -51,14 +51,6 @@ namespace Org.Apache.Kafka.Clients.Producer
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.Partitioner"/> to <see cref="Org.Apache.Kafka.Common.Configurable"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Configurable(Org.Apache.Kafka.Clients.Producer.Partitioner t) => t.Cast<Org.Apache.Kafka.Common.Configurable>();
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.Partitioner"/> to <see cref="Java.Io.Closeable"/>
-        /// </summary>
-        public static implicit operator Java.Io.Closeable(Org.Apache.Kafka.Clients.Producer.Partitioner t) => t.Cast<Java.Io.Closeable>();
 
         #endregion
 
@@ -72,6 +64,31 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
+        /// Handlers initializer for <see cref="Partitioner"/>
+        /// </summary>
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("partition", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(PartitionEventHandler)); OnPartition = Partition;
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ConfigureEventHandler)); OnConfigure = Configure;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/Partitioner.html#partition-java.lang.String-java.lang.Object-byte[]-java.lang.Object-byte[]-org.apache.kafka.common.Cluster-"/>
+        /// </summary>
+        public System.Func<string, object, byte[], object, byte[], Org.Apache.Kafka.Common.Cluster, int> OnPartition { get; set; }
+
+        void PartitionEventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        {
+            if (OnPartition != null)
+            {
+                var executionResult = OnPartition.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<object>(0), data.EventData.GetAt<byte[]>(1), data.EventData.GetAt<object>(2), data.EventData.GetAt<byte[]>(3), data.EventData.GetAt<Org.Apache.Kafka.Common.Cluster>(4));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/Partitioner.html#partition-java.lang.String-java.lang.Object-byte[]-java.lang.Object-byte[]-org.apache.kafka.common.Cluster-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -81,16 +98,46 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <param name="arg4"><see cref="byte"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Cluster"/></param>
         /// <returns><see cref="int"/></returns>
-        public int Partition(string arg0, object arg1, byte[] arg2, object arg3, byte[] arg4, Org.Apache.Kafka.Common.Cluster arg5)
+        public virtual int Partition(string arg0, object arg1, byte[] arg2, object arg3, byte[] arg4, Org.Apache.Kafka.Common.Cluster arg5)
         {
-            return IExecute<int>("partition", arg0, arg1, arg2, arg3, arg4, arg5);
+            return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/Partitioner.html#close--"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/Partitioner.html#close--"/>
         /// </summary>
-        public void Close()
+        public virtual void Close()
         {
-            IExecute("close");
+            
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// </summary>
+        public System.Action<Java.Util.Map<string, object>> OnConfigure { get; set; }
+
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        {
+            if (OnConfigure != null) OnConfigure.Invoke(data.EventData.TypedEventData);
+        }
+
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        public virtual void Configure(Java.Util.Map<string, object> arg0)
+        {
+            
         }
 
         #endregion

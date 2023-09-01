@@ -127,6 +127,8 @@
     "org.apache.kafka.clients.consumer.ConsumerInterceptor",
     "org.apache.kafka.clients.consumer.ConsumerPartitionAssignor",
     "org.apache.kafka.clients.producer.Callback",
+    "org.apache.kafka.clients.producer.Partitioner",
+    "org.apache.kafka.clients.producer.ProducerInterceptor",
     "org.apache.kafka.common.config.ConfigChangeCallback",
     "org.apache.kafka.common.metrics.MetricsReporter",
     "org.apache.kafka.common.serialization.Deserializer",
