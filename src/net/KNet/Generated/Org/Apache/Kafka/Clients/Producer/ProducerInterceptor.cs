@@ -33,14 +33,6 @@ namespace Org.Apache.Kafka.Clients.Producer
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor"/> to <see cref="Org.Apache.Kafka.Common.Configurable"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Configurable(Org.Apache.Kafka.Clients.Producer.ProducerInterceptor t) => t.Cast<Org.Apache.Kafka.Common.Configurable>();
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor"/> to <see cref="Java.Lang.AutoCloseable"/>
-        /// </summary>
-        public static implicit operator Java.Lang.AutoCloseable(Org.Apache.Kafka.Clients.Producer.ProducerInterceptor t) => t.Cast<Java.Lang.AutoCloseable>();
 
         #endregion
 
@@ -54,29 +46,96 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
+        /// Handlers initializer for <see cref="ProducerInterceptor"/>
+        /// </summary>
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("onSend", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.ProducerRecord>>>(OnSendEventHandler)); OnOnSend = OnSend;
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("onAcknowledgement", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>>(OnAcknowledgementEventHandler)); OnOnAcknowledgement = OnAcknowledgement;
+            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(ConfigureEventHandler)); OnConfigure = Configure;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
+        /// </summary>
+        public System.Func<Org.Apache.Kafka.Clients.Producer.ProducerRecord, Org.Apache.Kafka.Clients.Producer.ProducerRecord> OnOnSend { get; set; }
+
+        void OnSendEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.ProducerRecord>> data)
+        {
+            if (OnOnSend != null)
+            {
+                var executionResult = OnOnSend.Invoke(data.EventData.TypedEventData);
+                data.SetReturnValue(executionResult);
+            }
+        }
+
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></returns>
-        public Org.Apache.Kafka.Clients.Producer.ProducerRecord OnSend(Org.Apache.Kafka.Clients.Producer.ProducerRecord arg0)
+        public virtual Org.Apache.Kafka.Clients.Producer.ProducerRecord OnSend(Org.Apache.Kafka.Clients.Producer.ProducerRecord arg0)
         {
-            return IExecute<Org.Apache.Kafka.Clients.Producer.ProducerRecord>("onSend", arg0);
+            return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
         /// </summary>
-        public void Close()
+        public virtual void Close()
         {
-            IExecute("close");
+            
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnAcknowledgement { get; set; }
+
+        void OnAcknowledgementEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>> data)
+        {
+            if (OnOnAcknowledgement != null) OnOnAcknowledgement.Invoke(data.EventData.TypedEventData, JVMBridgeException.New(data.EventData.ExtraData.Get(0) as MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
-        public void OnAcknowledgement(Org.Apache.Kafka.Clients.Producer.RecordMetadata arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
+        public virtual void OnAcknowledgement(Org.Apache.Kafka.Clients.Producer.RecordMetadata arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
-            IExecute("onAcknowledgement", arg0, arg1);
+            
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// </summary>
+        public System.Action<Java.Util.Map> OnConfigure { get; set; }
+
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map>> data)
+        {
+            if (OnConfigure != null) OnConfigure.Invoke(data.EventData.TypedEventData);
+        }
+
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        public virtual void Configure(Java.Util.Map arg0)
+        {
+            
         }
 
         #endregion
@@ -91,7 +150,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region IProducerInterceptor<K, V>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.producer.ProducerInterceptor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html"/>
     /// </summary>
     public partial interface IProducerInterceptor<K, V>
     {
@@ -115,18 +174,6 @@ namespace Org.Apache.Kafka.Clients.Producer
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor{K, V}"/> to <see cref="Org.Apache.Kafka.Common.Configurable"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Configurable(Org.Apache.Kafka.Clients.Producer.ProducerInterceptor<K, V> t) => t.Cast<Org.Apache.Kafka.Common.Configurable>();
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor{K, V}"/> to <see cref="Java.Lang.AutoCloseable"/>
-        /// </summary>
-        public static implicit operator Java.Lang.AutoCloseable(Org.Apache.Kafka.Clients.Producer.ProducerInterceptor<K, V> t) => t.Cast<Java.Lang.AutoCloseable>();
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor{K, V}"/> to <see cref="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Clients.Producer.ProducerInterceptor(Org.Apache.Kafka.Clients.Producer.ProducerInterceptor<K, V> t) => t.Cast<Org.Apache.Kafka.Clients.Producer.ProducerInterceptor>();
 
         #endregion
 
@@ -140,29 +187,96 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
+        /// Handlers initializer for <see cref="ProducerInterceptor"/>
+        /// </summary>
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("onSend", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>>>>(OnSendEventHandler)); OnOnSend = OnSend;
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("onAcknowledgement", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>>(OnAcknowledgementEventHandler)); OnOnAcknowledgement = OnAcknowledgement;
+            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ConfigureEventHandler)); OnConfigure = Configure;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
+        /// </summary>
+        public System.Func<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>, Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>> OnOnSend { get; set; }
+
+        void OnSendEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>>> data)
+        {
+            if (OnOnSend != null)
+            {
+                var executionResult = OnOnSend.Invoke(data.EventData.TypedEventData);
+                data.SetReturnValue(executionResult);
+            }
+        }
+
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></returns>
-        public Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V> OnSend(Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V> arg0)
+        public virtual Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V> OnSend(Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V> arg0)
         {
-            return IExecute<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>>("onSend", arg0);
+            return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
         /// </summary>
-        public void Close()
+        public virtual void Close()
         {
-            IExecute("close");
+            
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnAcknowledgement { get; set; }
+
+        void OnAcknowledgementEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>> data)
+        {
+            if (OnOnAcknowledgement != null) OnOnAcknowledgement.Invoke(data.EventData.TypedEventData, JVMBridgeException.New(data.EventData.ExtraData.Get(0) as MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
-        public void OnAcknowledgement(Org.Apache.Kafka.Clients.Producer.RecordMetadata arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
+        public virtual void OnAcknowledgement(Org.Apache.Kafka.Clients.Producer.RecordMetadata arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
-            IExecute("onAcknowledgement", arg0, arg1);
+            
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// </summary>
+        public System.Action<Java.Util.Map<string, object>> OnConfigure { get; set; }
+
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        {
+            if (OnConfigure != null) OnConfigure.Invoke(data.EventData.TypedEventData);
+        }
+
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        public virtual void Configure(Java.Util.Map<string, object> arg0)
+        {
+            
         }
 
         #endregion

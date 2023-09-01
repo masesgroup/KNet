@@ -243,40 +243,19 @@ namespace Org.Apache.Kafka.Clients.Producer
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/Partitioner.html"/>
     /// </summary>
-    public partial class Partitioner : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Partitioner>
+    public partial class Partitioner : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Partitioner() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public Partitioner(params object[] args) : base(args) { }
-
-        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.Partitioner");
+        public Partitioner() { InitializeHandlers(); }
 
         /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
         /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.clients.producer.Partitioner";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.clients.producer.Partitioner";
 
+    
         // TODO: complete the class
 
     }
@@ -417,40 +396,19 @@ namespace Org.Apache.Kafka.Clients.Producer
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/ProducerInterceptor.html"/>
     /// </summary>
-    public partial class ProducerInterceptor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerInterceptor>
+    public partial class ProducerInterceptor : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ProducerInterceptor() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public ProducerInterceptor(params object[] args) : base(args) { }
-
-        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerInterceptor");
+        public ProducerInterceptor() { InitializeHandlers(); }
 
         /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
         /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.clients.producer.ProducerInterceptor";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.clients.producer.ProducerInterceptor";
 
+    
         // TODO: complete the class
 
     }
@@ -462,40 +420,19 @@ namespace Org.Apache.Kafka.Clients.Producer
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class ProducerInterceptor<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerInterceptor<K, V>>
+    public partial class ProducerInterceptor<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ProducerInterceptor() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public ProducerInterceptor(params object[] args) : base(args) { }
-
-        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerInterceptor");
+        public ProducerInterceptor() { InitializeHandlers(); }
 
         /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
         /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.clients.producer.ProducerInterceptor";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.clients.producer.ProducerInterceptor";
 
+    
         // TODO: complete the class
     
     }
@@ -636,7 +573,7 @@ namespace Org.Apache.Kafka.Clients.Producer
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/clients/producer/RoundRobinPartitioner.html"/>
     /// </summary>
-    public partial class RoundRobinPartitioner : Org.Apache.Kafka.Clients.Producer.Partitioner
+    public partial class RoundRobinPartitioner : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RoundRobinPartitioner>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
