@@ -1,11 +1,9 @@
 ## Generated classes
 
-This folder contains the Java classes generated using JNetReflector at current version of Apache Kafka.
-
 The command used to build the classes is the following:
 
 ```cmd
-MASES.JNetReflector.exe -TraceLevel 0 -OriginRootPath .\jars -DestinationRootPath .\src\net\KNet\Generated -ConfigurationFile .\src\net\KNet\Generated\configuration.json
+MASES.JNetReflector.exe -TraceLevel 0 -OriginRootPath .\jars -DestinationRootPath .\src\net\KNet\Generated -DestinationJavaListenerPath .\src\java\knet\src\main\java -ConfigurationFile .\src\configuration.json
 ```
 
 The configuration is:
@@ -17,62 +15,62 @@ The configuration is:
   "DisableInterfaceMethodGeneration": true,
   "CreateInterfaceInheritance": true,
   "JarList": [
-    "kafka_2.13-3.5.0.jar",
-    "kafka-clients-3.5.0.jar",
-    "kafka-streams-3.5.0.jar",
-    "kafka-tools-3.5.0.jar",
-    "connect-api-3.5.0.jar",
-    "connect-basic-auth-extension-3.5.0.jar",
-    "connect-json-3.5.0.jar",
-    "connect-mirror-3.5.0.jar",
-    "connect-mirror-client-3.5.0.jar",
-    "connect-runtime-3.5.0.jar",
-    "connect-transforms-3.5.0.jar"
+    "kafka_2.13-3.5.1.jar",
+    "kafka-clients-3.5.1.jar",
+    "kafka-streams-3.5.1.jar",
+    "kafka-tools-3.5.1.jar",
+    "connect-api-3.5.1.jar",
+    "connect-basic-auth-extension-3.5.1.jar",
+    "connect-json-3.5.1.jar",
+    "connect-mirror-3.5.1.jar",
+    "connect-mirror-client-3.5.1.jar",
+    "connect-runtime-3.5.1.jar",
+    "connect-transforms-3.5.1.jar"
   ],
   "OriginJavadocJARVersionAndUrls": [
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.5.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.5.1/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.1/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.1/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.1/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.5.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.5.1/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.5.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.5.1/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.5.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.5.1/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.5.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.5.1/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.5.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.5.1/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.5.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.5.1/"
     }
   ],
   "NamespacesToAvoid": [
@@ -140,6 +138,8 @@ The configuration is:
     "org.apache.kafka.clients.consumer.ConsumerInterceptor",
     "org.apache.kafka.clients.consumer.ConsumerPartitionAssignor",
     "org.apache.kafka.clients.producer.Callback",
+    "org.apache.kafka.clients.producer.Partitioner",
+    "org.apache.kafka.clients.producer.ProducerInterceptor",
     "org.apache.kafka.common.config.ConfigChangeCallback",
     "org.apache.kafka.common.metrics.MetricsReporter",
     "org.apache.kafka.common.serialization.Deserializer",
