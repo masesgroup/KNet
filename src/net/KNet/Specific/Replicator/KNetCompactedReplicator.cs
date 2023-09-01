@@ -18,7 +18,6 @@
 
 using Java.Time;
 using Java.Util;
-using Javax.Xml.Crypto;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Admin;
 using MASES.KNet.Common;
@@ -40,7 +39,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 
-namespace MASES.KNet
+namespace MASES.KNet.Replicator
 {
     #region AccessRightsType
     /// <summary>
