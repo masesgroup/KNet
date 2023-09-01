@@ -33,6 +33,10 @@ namespace Org.Apache.Kafka.Clients.Producer
         #endregion
 
         #region Class/Interface conversion operators
+        /// <summary>
+        /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.RoundRobinPartitioner"/> to <see cref="Org.Apache.Kafka.Clients.Producer.Partitioner"/>
+        /// </summary>
+        public static implicit operator Org.Apache.Kafka.Clients.Producer.Partitioner(Org.Apache.Kafka.Clients.Producer.RoundRobinPartitioner t) => t.Cast<Org.Apache.Kafka.Clients.Producer.Partitioner>();
 
         #endregion
 
