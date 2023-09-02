@@ -253,6 +253,10 @@ namespace MASES.KNet.Replicator
             object _lock = new object();
             public LocalDataStorage()
             {
+                Partition = -1;
+                HasOffset = HasValue = false;
+                Offset = -1;
+                Value = null;
             }
             public object Lock => _lock;
             public int Partition { get; set; }
