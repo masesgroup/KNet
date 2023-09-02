@@ -38,6 +38,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
+using static Javax.Swing.Text.Html.HTML;
 
 namespace MASES.KNet.Replicator
 {
@@ -294,7 +295,7 @@ namespace MASES.KNet.Replicator
                             {
                                 if (!data.HasValue)
                                 {
-                                    OnDemandRetrieve(_consumer, _topic, data);
+                                    OnDemandRetrieve(_consumer, _topic, localCurrent.Key, data);
                                 }
                                 _current = new KeyValuePair<TKey, TValue>(localCurrent.Key, localCurrent.Value.Value);
                             }
@@ -342,7 +343,7 @@ namespace MASES.KNet.Replicator
                 {
                     if (!data.HasValue)
                     {
-                        OnDemandRetrieve(_consumer, _topic, data);
+                        OnDemandRetrieve(_consumer, _topic, key, data);
                     }
                     value = data.Value;
                     return true;
@@ -356,7 +357,7 @@ namespace MASES.KNet.Replicator
                 {
                     if (!data.HasValue)
                     {
-                        OnDemandRetrieve(_consumer, _topic, data);
+                        OnDemandRetrieve(_consumer, _topic, item.Key, data);
                     }
                     if (data.HasValue && data.Value == item.Value) return true;
                 }
@@ -499,7 +500,7 @@ namespace MASES.KNet.Replicator
 
         #region Private methods
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        static void OnDemandRetrieve(IKNetConsumer<TKey, TValue> consumer, string topic, ILocalDataStorage data)
+        static void OnDemandRetrieve(IKNetConsumer<TKey, TValue> consumer, string topic, TKey key, ILocalDataStorage data)
         {
             if (!data.HasValue)
             {
@@ -510,6 +511,7 @@ namespace MASES.KNet.Replicator
                 if (results == null) throw new InvalidOperationException("Failed to get records from remote.");
                 foreach (var result in results)
                 {
+                    if (!Equals(result.Key, key)) continue;
                     if (data.Offset != result.Offset) throw new IndexOutOfRangeException($"Requested offset is {data.Offset} while received offset is {result.Offset}");
                     data.HasValue = true;
                     data.Value = result.Value;
@@ -814,8 +816,15 @@ namespace MASES.KNet.Replicator
                     _consumers[index].ConsumeAsync(100);
                     if (_assignmentWaiters[index].WaitOne(0))
                     {
-                        var lag = _consumers[index].CurrentLag(new TopicPartition(StateName, index));
-                        Interlocked.Exchange(ref _lastPartitionLags[index], lag.IsPresent() ? lag.AsLong : -1);
+                        try
+                        {
+                            var lag = _consumers[index].CurrentLag(new TopicPartition(StateName, index));
+                            Interlocked.Exchange(ref _lastPartitionLags[index], lag.IsPresent() ? lag.AsLong : -1);
+                        }
+                        catch (Java.Lang.IllegalStateException)
+                        {
+                            Interlocked.Exchange(ref _lastPartitionLags[index], -1);
+                        }
                     }
                 }
                 catch { }
@@ -938,7 +947,7 @@ namespace MASES.KNet.Replicator
             {
                 for (int i = 0; i < _partitions; i++)
                 {
-                    sync = Interlocked.Read(ref _lastPartitionLags[i]) == 0 && _consumers[i].IsEmpty;
+                    sync = _consumers[i].IsEmpty && (Interlocked.Read(ref _lastPartitionLags[i]) == 0 || Interlocked.Read(ref _lastPartitionLags[i]) == -1) ;
                 }
             }
         }
