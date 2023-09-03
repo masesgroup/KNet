@@ -72,9 +72,11 @@ namespace MASES.KNetTest
                 serverToUse = args[0];
             }
 
-            Test("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed);
+            TestValues("TestValues", 100, UpdateModeTypes.OnDelivery | UpdateModeTypes.Delayed);
 
             Test("TestOnDelivery", 100, UpdateModeTypes.OnDelivery | UpdateModeTypes.Delayed);
+
+            Test("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed);
 
             Console.CancelKeyPress += Console_CancelKeyPress;
             Console.WriteLine("Press Ctrl-C to exit");
@@ -85,6 +87,33 @@ namespace MASES.KNetTest
         private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
         {
             if (e.Cancel) resetEvent.Set();
+        }
+
+        private static void TestValues(string topicName, int length, UpdateModeTypes type)
+        {
+            using (var replicator = new KNetCompactedReplicator<int, TestType>()
+            {
+                Partitions = 5,
+                UpdateMode = type,
+                BootstrapServers = serverToUse,
+                StateName = topicName,
+                ValueSerDes = new JsonSerDes<TestType>(),
+            })
+            {
+                replicator.StartAndWait();
+
+                for (int i = 0; i < length; i++)
+                {
+                    replicator[i] = new TestType(i);
+                }
+
+                replicator.SyncWait();
+
+                foreach (var item in replicator.Values)
+                {
+                    Console.WriteLine($"Value: {item}");
+                }
+            }
         }
 
         private static void Test(string topicName, int length, UpdateModeTypes type)

@@ -333,9 +333,9 @@ namespace MASES.KNet.Replicator
             public System.Collections.Generic.ICollection<TValue> Values()
             {
                 System.Collections.Generic.List<TValue> values = new System.Collections.Generic.List<TValue>();
-                while (_enumerator.MoveNext())
+                while (this.MoveNext())
                 {
-                    values.Add(_enumerator.Current.Value.Value);
+                    values.Add(this.Current.Value);
                 }
                 return values;
             }
@@ -357,13 +357,9 @@ namespace MASES.KNet.Replicator
 
             public bool Contains(KeyValuePair<TKey, TValue> item)
             {
-                if (_dictionary.TryGetValue(item.Key, out var data))
+                if (this.TryGetValue(item.Key, out var data))
                 {
-                    if (!data.HasValue)
-                    {
-                        OnDemandRetrieve(_consumer, _topic, item.Key, data);
-                    }
-                    if (data.HasValue && data.Value == item.Value) return true;
+                    return data == item.Value;
                 }
                 return false;
             }
@@ -371,9 +367,9 @@ namespace MASES.KNet.Replicator
             public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
             {
                 var values = new System.Collections.Generic.List<KeyValuePair<TKey, TValue>>();
-                while (_enumerator.MoveNext())
+                while (this.MoveNext())
                 {
-                    values.Add(new KeyValuePair<TKey, TValue>(_enumerator.Current.Key, _enumerator.Current.Value.Value));
+                    values.Add(new KeyValuePair<TKey, TValue>(this.Current.Key, this.Current.Value));
                 }
 
                 Array.Copy(values.ToArray(), 0, array, arrayIndex, values.Count);
