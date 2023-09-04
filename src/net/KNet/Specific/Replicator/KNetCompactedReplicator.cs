@@ -483,21 +483,18 @@ namespace MASES.KNet.Replicator
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static void OnDemandRetrieve(IKNetConsumer<TKey, TValue> consumer, string topic, TKey key, ILocalDataStorage data)
         {
-            if (!data.HasValue)
+            var topicPartition = new TopicPartition(topic, data.Partition);
+            consumer.Assign(Collections.SingletonList(topicPartition));
+            consumer.Seek(topicPartition, data.Offset);
+            var results = consumer.Poll(TimeSpan.FromMinutes(1));
+            if (results == null) throw new InvalidOperationException("Failed to get records from remote.");
+            foreach (var result in results)
             {
-                var topicPartition = new TopicPartition(topic, data.Partition);
-                consumer.Assign(Collections.SingletonList(topicPartition));
-                consumer.Seek(topicPartition, data.Offset);
-                var results = consumer.Poll(TimeSpan.FromMinutes(1));
-                if (results == null) throw new InvalidOperationException("Failed to get records from remote.");
-                foreach (var result in results)
-                {
-                    if (!Equals(result.Key, key)) continue;
-                    if (data.Offset != result.Offset) throw new IndexOutOfRangeException($"Requested offset is {data.Offset} while received offset is {result.Offset}");
-                    data.HasValue = true;
-                    data.Value = result.Value;
-                    break;
-                }
+                if (!Equals(result.Key, key)) continue;
+                if (data.Offset != result.Offset) throw new IndexOutOfRangeException($"Requested offset is {data.Offset} while received offset is {result.Offset}");
+                data.HasValue = true;
+                data.Value = result.Value;
+                break;
             }
         }
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
