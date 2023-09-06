@@ -1129,6 +1129,8 @@ namespace MASES.KNet.Replicator
                 }
             }
 
+            _onTheFlyConsumer?.Dispose();
+
             _producer?.Flush();
             _producer?.Dispose();
 

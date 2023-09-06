@@ -404,9 +404,11 @@ namespace MASES.KNet.Consumer
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public override void Dispose()
         {
-            base.Dispose();
-            IExecute("setCallback", null);
-            consumerCallback?.Dispose();
+            if (consumerCallback != null)
+            {
+                IExecute("setCallback", null);
+                consumerCallback?.Dispose();
+            }
             threadRunning = false;
             if (consumedRecords != null)
             {
@@ -422,6 +424,7 @@ namespace MASES.KNet.Consumer
                 _keyDeserializer?.Dispose();
                 _valueDeserializer?.Dispose();
             }
+            base.Dispose();
         }
         /// <inheritdoc cref="IKNetConsumer{K, V}.SetCallback(Action{KNetConsumerRecord{K, V}})"/>
         public void SetCallback(Action<KNetConsumerRecord<K, V>> cb)
@@ -451,7 +454,7 @@ namespace MASES.KNet.Consumer
                             System.Threading.Interlocked.Decrement(ref dequeing);
                         }
                     }
-                    else
+                    else if (threadRunning)
                     {
                         lock (consumedRecords)
                         {
