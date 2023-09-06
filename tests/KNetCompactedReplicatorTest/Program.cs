@@ -30,6 +30,7 @@ using Org.Apache.Kafka.Clients.Admin;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
 using System;
+using System.Diagnostics;
 using System.Threading;
 
 namespace MASES.KNetTest
@@ -71,13 +72,18 @@ namespace MASES.KNetTest
             {
                 serverToUse = args[0];
             }
-
-            TestValues("TestValues", 100, UpdateModeTypes.OnDelivery | UpdateModeTypes.Delayed);
-
+            var sw = Stopwatch.StartNew();
+            TestValues("TestValues", 100, UpdateModeTypes.OnDelivery);
+            sw.Stop();
+            Console.WriteLine($"End TestValues in {sw.Elapsed}");
+            sw = Stopwatch.StartNew();
             Test("TestOnDelivery", 100, UpdateModeTypes.OnDelivery | UpdateModeTypes.Delayed);
-
+            sw.Stop();
+            Console.WriteLine($"End TestOnDelivery in {sw.Elapsed}");
+            sw = Stopwatch.StartNew();
             Test("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed);
-
+            sw.Stop();
+            Console.WriteLine($"End TestOnConsume in {sw.Elapsed}");
             Console.CancelKeyPress += Console_CancelKeyPress;
             Console.WriteLine("Press Ctrl-C to exit");
             resetEvent.WaitOne();
