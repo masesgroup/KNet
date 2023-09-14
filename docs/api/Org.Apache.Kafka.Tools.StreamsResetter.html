@@ -768,6 +768,162 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Tools_StreamsResetter_ResetApplication_System_String_System_String_System_String___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Tools.StreamsResetter.ResetApplication(System.String%2CSystem.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Tools/StreamsResetter.cs/#L35">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Tools_StreamsResetter_ResetApplication_" data-uid="Org.Apache.Kafka.Tools.StreamsResetter.ResetApplication*"></a>
+  <h4 id="Org_Apache_Kafka_Tools_StreamsResetter_ResetApplication_System_String_System_String_System_String___" data-uid="Org.Apache.Kafka.Tools.StreamsResetter.ResetApplication(System.String,System.String,System.String[])">ResetApplication(String, String, String[])</h4>
+  <div class="markdown level1 summary"><p>Resets an <code data-dev-comment-type="paramref" class="paramref">applicationId</code> of Apache Kafka Streams</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ResetApplication(string bootstrapserver, string applicationId, params string[] inputTopics)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bootstrapserver</span></td>
+        <td><p>The bootstrap server of the Apache Kafka cluster</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>The application id to be resetted</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">inputTopics</span></td>
+        <td><p>Input topics to be resetted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><span class="xref">true</span> if everything goes well, otherwise <span class="xref">false</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Either <code data-dev-comment-type="paramref" class="paramref">applicationId</code> or <code data-dev-comment-type="paramref" class="paramref">bootstrapserver</code> are <span class="xref">null</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Tools_StreamsResetter_ResetApplicationForced_System_String_System_String_System_String___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Tools.StreamsResetter.ResetApplicationForced(System.String%2CSystem.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Tools/StreamsResetter.cs/#L48">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Tools_StreamsResetter_ResetApplicationForced_" data-uid="Org.Apache.Kafka.Tools.StreamsResetter.ResetApplicationForced*"></a>
+  <h4 id="Org_Apache_Kafka_Tools_StreamsResetter_ResetApplicationForced_System_String_System_String_System_String___" data-uid="Org.Apache.Kafka.Tools.StreamsResetter.ResetApplicationForced(System.String,System.String,System.String[])">ResetApplicationForced(String, String, String[])</h4>
+  <div class="markdown level1 summary"><p>Resets an <code data-dev-comment-type="paramref" class="paramref">applicationId</code> of Apache Kafka Streams and forces deletion of active members from the group</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ResetApplicationForced(string bootstrapserver, string applicationId, params string[] inputTopics)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bootstrapserver</span></td>
+        <td><p>The bootstrap server of the Apache Kafka cluster</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>The application id to be resetted</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">inputTopics</span></td>
+        <td><p>Input topics to be resetted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><span class="xref">true</span> if everything goes well, otherwise <span class="xref">false</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Either <code data-dev-comment-type="paramref" class="paramref">applicationId</code> or <code data-dev-comment-type="paramref" class="paramref">bootstrapserver</code> are <span class="xref">null</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Tools_StreamsResetter_ResetOffsetsFromResetPlan_Org_Apache_Kafka_Clients_Consumer_Consumer_System_Byte___System_Byte____Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Tools.StreamsResetter.ResetOffsetsFromResetPlan(Org.Apache.Kafka.Clients.Consumer.Consumer%7BSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%7D%2CJava.Util.Set%7BOrg.Apache.Kafka.Common.TopicPartition%7D%2CJava.Util.Map%7BOrg.Apache.Kafka.Common.TopicPartition%2CJava.Lang.Long%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
