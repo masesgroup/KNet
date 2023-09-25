@@ -16,19 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Util;
-using MASES.KNet.Admin;
-using MASES.KNet.Common;
-using MASES.KNet.Consumer;
-using MASES.KNet.Extensions;
-using MASES.KNet.Producer;
 using MASES.KNet.Replicator;
-using MASES.KNet.Serialization;
 using MASES.KNet.Serialization.Json;
 using MASES.KNet.TestCommon;
-using Org.Apache.Kafka.Clients.Admin;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Clients.Producer;
 using System;
 using System.Diagnostics;
 using System.Threading;
