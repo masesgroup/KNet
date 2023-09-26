@@ -158,6 +158,10 @@ namespace MASES.KNet.Replicator
         /// </summary>
         int Partitions { get; }
         /// <summary>
+        /// Get or set the number of <see cref="KNetConsumer{K, V}"/> instances to be used, null to allocate <see cref="KNetConsumer{K, V}"/> based on <see cref="Partitions"/>
+        /// </summary>
+        int? ConsumerInstances { get; }
+        /// <summary>
         /// Get or set replication factor to use when topic is created for the first time, otherwise reports the replication factor of the topic
         /// </summary>
         short ReplicationFactor { get; }
@@ -228,7 +232,7 @@ namespace MASES.KNet.Replicator
 
     #endregion
 
-    #region IKNetCompactedReplicator<TKey, TValue>
+    #region KNetCompactedReplicator<TKey, TValue>
     /// <summary>
     /// Provides a reliable dictionary, persisted in a COMPACTED Kafka topic and shared among applications
     /// </summary>
@@ -397,13 +401,50 @@ namespace MASES.KNet.Replicator
 
         #endregion
 
+        #region KNetCompactedConsumerRebalanceListener
+
+        class KNetCompactedConsumerRebalanceListener : ConsumerRebalanceListener
+        {
+            int _consumerIndex;
+            public KNetCompactedConsumerRebalanceListener(int consumerIndex)
+                : base()
+            {
+                _consumerIndex = consumerIndex;
+            }
+
+            public int ConsumerIndex => _consumerIndex;
+
+            public new System.Action<KNetCompactedConsumerRebalanceListener, Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>> OnOnPartitionsAssigned { get; set; }
+
+            public override void OnPartitionsAssigned(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
+            {
+                OnOnPartitionsAssigned?.Invoke(this, arg0);
+            }
+
+            public new System.Action<KNetCompactedConsumerRebalanceListener, Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>> OnOnPartitionsRevoked { get; set; }
+
+            public override void OnPartitionsRevoked(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
+            {
+                OnOnPartitionsRevoked?.Invoke(this, arg0);
+            }
+
+            public new System.Action<KNetCompactedConsumerRebalanceListener, Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>> OnOnPartitionsLost { get; set; }
+
+            public override void OnPartitionsLost(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
+            {
+                OnOnPartitionsLost?.Invoke(this, arg0);
+            }
+        }
+
+        #endregion
+
         #region Private members
 
         private bool _consumerPollRun = false;
         private Thread[] _consumerPollThreads = null;
         private IAdmin _admin = null;
         private ConcurrentDictionary<TKey, ILocalDataStorage> _dictionary = new ConcurrentDictionary<TKey, ILocalDataStorage>();
-        private ConsumerRebalanceListener _consumerListener = null;
+        private KNetCompactedConsumerRebalanceListener[] _consumerListeners = null;
         private KNetConsumer<TKey, TValue>[] _consumers = null;
         private KNetConsumer<TKey, TValue> _onTheFlyConsumer = null;
         private KNetProducer<TKey, TValue> _producer = null;
@@ -411,6 +452,7 @@ namespace MASES.KNet.Replicator
         private string _stateName = string.Empty;
         private string _groupId = Guid.NewGuid().ToString();
         private int _partitions = 1;
+        private int? _consumerInstances = null;
         private short _replicationFactor = 1;
         private TopicConfigBuilder _topicConfig = null;
         private ConsumerConfigBuilder _consumerConfig = null;
@@ -419,6 +461,7 @@ namespace MASES.KNet.Replicator
         private AccessRightsType _accessrights = AccessRightsType.ReadWrite;
         private UpdateModeTypes _updateMode = UpdateModeTypes.OnDelivery;
         private Tuple<TKey, ManualResetEvent> _OnConsumeSyncWaiter = null;
+        private System.Collections.Generic.Dictionary<int, System.Collections.Generic.IList<int>> _consumerAssociatedPartition = new();
         private ManualResetEvent[] _assignmentWaiters;
         private long[] _lastPartitionLags = null;
 
@@ -471,6 +514,9 @@ namespace MASES.KNet.Replicator
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.Partitions"/>
         public int Partitions { get { return _partitions; } set { CheckStarted(); _partitions = value; } }
 
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ConsumerInstances"/>
+        public int? ConsumerInstances { get { return _consumerInstances.HasValue ? _consumerInstances.Value : _partitions; } set { CheckStarted(); _consumerInstances = value; } }
+
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ReplicationFactor"/>
         public short ReplicationFactor { get { return _replicationFactor; } set { CheckStarted(); _replicationFactor = value; } }
 
@@ -503,6 +549,11 @@ namespace MASES.KNet.Replicator
         void CheckStarted()
         {
             if (_started) throw new InvalidOperationException("Cannot be changed after Start");
+        }
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        int ConsumersToAllocate()
+        {
+            return ConsumerInstances.HasValue ? ConsumerInstances.Value : Partitions;
         }
 
         bool UpdateModeOnDelivery => (UpdateMode & UpdateModeTypes.OnDelivery) == UpdateModeTypes.OnDelivery;
@@ -556,26 +607,41 @@ namespace MASES.KNet.Replicator
             }
         }
 
-        private void OnTopicPartitionsAssigned(Collection<TopicPartition> topicPartitions)
+        private void OnTopicPartitionsAssigned(KNetCompactedConsumerRebalanceListener listener, Collection<TopicPartition> topicPartitions)
         {
             foreach (var topicPartition in topicPartitions)
             {
-                _assignmentWaiters[topicPartition.Partition()].Set();
+                var partition = topicPartition.Partition();
+                lock (_consumerAssociatedPartition)
+                {
+                    _consumerAssociatedPartition[listener.ConsumerIndex].Add(partition);
+                }
+                _assignmentWaiters[partition].Set();
             }
         }
 
-        private void OnTopicPartitionsRevoked(Collection<TopicPartition> topicPartitions)
+        private void OnTopicPartitionsRevoked(KNetCompactedConsumerRebalanceListener listener, Collection<TopicPartition> topicPartitions)
         {
             foreach (var topicPartition in topicPartitions)
             {
+                var partition = topicPartition.Partition();
+                lock (_consumerAssociatedPartition)
+                {
+                    _consumerAssociatedPartition[listener.ConsumerIndex].Remove(partition);
+                }
                 _assignmentWaiters[topicPartition.Partition()].Reset();
             }
         }
 
-        private void OnTopicPartitionsLost(Collection<TopicPartition> topicPartitions)
+        private void OnTopicPartitionsLost(KNetCompactedConsumerRebalanceListener listener, Collection<TopicPartition> topicPartitions)
         {
             foreach (var topicPartition in topicPartitions)
             {
+                var partition = topicPartition.Partition();
+                lock (_consumerAssociatedPartition)
+                {
+                    _consumerAssociatedPartition[listener.ConsumerIndex].Remove(partition);
+                }
                 _assignmentWaiters[topicPartition.Partition()].Reset();
             }
         }
@@ -690,23 +756,29 @@ namespace MASES.KNet.Replicator
 
             if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external deserializer, set ValueSerDes.");
 
-            _assignmentWaiters = new ManualResetEvent[_partitions];
-            _lastPartitionLags = new long[_partitions];
-            _consumers = new KNetConsumer<TKey, TValue>[_partitions];
+            _assignmentWaiters = new ManualResetEvent[Partitions];
+            _lastPartitionLags = new long[Partitions];
+            _consumers = new KNetConsumer<TKey, TValue>[ConsumersToAllocate()];
+            _consumerListeners = new KNetCompactedConsumerRebalanceListener[ConsumersToAllocate()];
 
-            for (int i = 0; i < _partitions; i++)
+            for (int i = 0; i < Partitions; i++)
             {
-                _assignmentWaiters[i] = new ManualResetEvent(false);
                 _lastPartitionLags[i] = -1;
+                _assignmentWaiters[i] = new ManualResetEvent(false);
+            }
+
+            for (int i = 0; i < ConsumersToAllocate(); i++)
+            {
+                _consumerAssociatedPartition.Add(i, new System.Collections.Generic.List<int>());
                 _consumers[i] = new KNetConsumer<TKey, TValue>(ConsumerConfig, KeySerDes, ValueSerDes);
                 _consumers[i].SetCallback(OnMessage);
+                _consumerListeners[i] = new KNetCompactedConsumerRebalanceListener(i)
+                {
+                    OnOnPartitionsRevoked = OnTopicPartitionsRevoked,
+                    OnOnPartitionsAssigned = OnTopicPartitionsAssigned,
+                    OnOnPartitionsLost = OnTopicPartitionsLost
+                };
             }
-            _consumerListener = new ConsumerRebalanceListener()
-            {
-                OnOnPartitionsRevoked = OnTopicPartitionsRevoked,
-                OnOnPartitionsAssigned = OnTopicPartitionsAssigned,
-                OnOnPartitionsLost = OnTopicPartitionsLost
-            };
         }
 
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -748,28 +820,31 @@ namespace MASES.KNet.Replicator
         void ConsumerPollHandler(object o)
         {
             int index = (int)o;
-            _consumers[index].Subscribe(Collections.Singleton(StateName), _consumerListener);
+            _consumers[index].Subscribe(Collections.Singleton(StateName), _consumerListeners[index]);
             while (_consumerPollRun)
             {
                 try
                 {
                     _consumers[index].ConsumeAsync(100);
-                    bool execute = false;
-                    lock (_assignmentWaiters[index])
+                    lock (_consumerAssociatedPartition)
                     {
-                        if (_assignmentWaiters[index].SafeWaitHandle.IsClosed) continue;
-                        else execute = _assignmentWaiters[index].WaitOne(0);
-                    }
-                    if (execute)
-                    {
-                        try
+                        foreach (var partitionIndex in _consumerAssociatedPartition[index])
                         {
-                            var lag = _consumers[index].CurrentLag(new TopicPartition(StateName, index));
-                            Interlocked.Exchange(ref _lastPartitionLags[index], lag.IsPresent() ? lag.AsLong : -1);
-                        }
-                        catch (Java.Lang.IllegalStateException)
-                        {
-                            Interlocked.Exchange(ref _lastPartitionLags[index], -1);
+                            bool execute = false;
+                            if (_assignmentWaiters[partitionIndex].SafeWaitHandle.IsClosed) continue;
+                            else execute = _assignmentWaiters[partitionIndex].WaitOne(0);
+                            if (execute)
+                            {
+                                try
+                                {
+                                    var lag = _consumers[index].CurrentLag(new TopicPartition(StateName, partitionIndex));
+                                    Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], lag.IsPresent() ? lag.AsLong : -1);
+                                }
+                                catch (Java.Lang.IllegalStateException)
+                                {
+                                    Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], -1);
+                                }
+                            }
                         }
                     }
                 }
@@ -785,6 +860,8 @@ namespace MASES.KNet.Replicator
         {
             if (string.IsNullOrWhiteSpace(BootstrapServers)) throw new InvalidOperationException("BootstrapServers must be set before start.");
             if (string.IsNullOrWhiteSpace(StateName)) throw new InvalidOperationException("StateName must be set before start.");
+
+            if (ConsumerInstances > Partitions) throw new InvalidOperationException("ConsumerInstances cannot be high than Partitions");
 
             Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
             _admin = KafkaAdminClient.Create(props);
@@ -839,8 +916,8 @@ namespace MASES.KNet.Replicator
             if (_consumers != null)
             {
                 _consumerPollRun = true;
-                _consumerPollThreads = new Thread[_partitions];
-                for (int i = 0; i < _partitions; i++)
+                _consumerPollThreads = new Thread[ConsumersToAllocate()];
+                for (int i = 0; i < ConsumersToAllocate(); i++)
                 {
                     _consumerPollThreads[i] = new Thread(ConsumerPollHandler);
                     _consumerPollThreads[i].Start(i);
@@ -874,9 +951,14 @@ namespace MASES.KNet.Replicator
             bool sync = false;
             while (!sync && watcher.ElapsedMilliseconds < (uint)timeout)
             {
-                for (int i = 0; i < _partitions; i++)
+                for (int i = 0; i < ConsumersToAllocate(); i++)
                 {
-                    sync = _consumers[i].IsEmpty && (Interlocked.Read(ref _lastPartitionLags[i]) == 0 || Interlocked.Read(ref _lastPartitionLags[i]) == -1);
+                    bool lagInSync = true;
+                    foreach (var partitionIndex in _consumerAssociatedPartition[i])
+                    {
+                        lagInSync &= Interlocked.Read(ref _lastPartitionLags[partitionIndex]) == 0 || Interlocked.Read(ref _lastPartitionLags[partitionIndex]) == -1;
+                    }
+                    sync = _consumers[i].IsEmpty && lagInSync;
                 }
             }
         }
