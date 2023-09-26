@@ -15,6 +15,7 @@ The project is organized in this folder structure:
 * **docs** (website)
 * **src**
 	* **config**: contains the configuration files copied from the oficial Apache Kafka delivery
+	* **documentation**: contains the configuration files to generate API documentation and web-site
 	* **java**
 		* **knet**: contains the JVM side implementation of some classes managed from .NET side; it is structured as a complete Maven project
 	* **net**

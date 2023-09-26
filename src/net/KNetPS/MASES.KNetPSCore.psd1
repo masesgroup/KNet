@@ -25,7 +25,7 @@ CompanyName = 'MASES s.r.l.'
 Copyright = 'Copyright ©  MASES s.r.l. 2023'
 
 # Description of the functionality provided by this module
-Description = 'PowerShell command line interface of the Apache Kafka .NET suite. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).'
+Description = 'PowerShell command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).'
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '7.0.0'

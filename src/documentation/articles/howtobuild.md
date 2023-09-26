@@ -1,4 +1,4 @@
-# KNet How to build from scratch
+# KNet: How to build from scratch
 
 If the user clones the repo, the following steps shall be done to use the project. The full steps can be found within the repo, under the **.github\workflows** folder.
 
