@@ -63,15 +63,19 @@ namespace MASES.KNetTest
                 serverToUse = args[0];
             }
             var sw = Stopwatch.StartNew();
-            TestValues("TestValues", 100, UpdateModeTypes.OnDelivery);
+            TestValues("TestValues", 100, UpdateModeTypes.OnDelivery, 5);
             sw.Stop();
             Console.WriteLine($"End TestValues in {sw.Elapsed}");
             sw = Stopwatch.StartNew();
-            Test("TestOnDelivery", 100, UpdateModeTypes.OnDelivery | UpdateModeTypes.Delayed);
+            Test("TestOnDelivery", 100, UpdateModeTypes.OnDelivery | UpdateModeTypes.Delayed, 5);
             sw.Stop();
             Console.WriteLine($"End TestOnDelivery in {sw.Elapsed}");
             sw = Stopwatch.StartNew();
-            Test("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed);
+            Test("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5);
+            sw.Stop();
+            Console.WriteLine($"End TestOnConsume in {sw.Elapsed}");
+            sw = Stopwatch.StartNew();
+            Test("TestOnConsumeLessConsumers", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5, 2);
             sw.Stop();
             Console.WriteLine($"End TestOnConsume in {sw.Elapsed}");
             Console.CancelKeyPress += Console_CancelKeyPress;
@@ -85,11 +89,12 @@ namespace MASES.KNetTest
             if (e.Cancel) resetEvent.Set();
         }
 
-        private static void TestValues(string topicName, int length, UpdateModeTypes type)
+        private static void TestValues(string topicName, int length, UpdateModeTypes type, int partitions, int? consumers = null)
         {
             using (var replicator = new KNetCompactedReplicator<int, TestType>()
             {
-                Partitions = 5,
+                Partitions = partitions,
+                ConsumerInstances = consumers,
                 UpdateMode = type,
                 BootstrapServers = serverToUse,
                 StateName = topicName,
@@ -112,11 +117,12 @@ namespace MASES.KNetTest
             }
         }
 
-        private static void Test(string topicName, int length, UpdateModeTypes type)
+        private static void Test(string topicName, int length, UpdateModeTypes type, int partitions, int? consumers = null)
         {
             using (var replicator = new KNetCompactedReplicator<int, TestType>()
             {
-                Partitions = 5,
+                Partitions = partitions,
+                ConsumerInstances = consumers,
                 UpdateMode = type,
                 BootstrapServers = serverToUse,
                 StateName = topicName,
