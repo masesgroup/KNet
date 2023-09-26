@@ -58,6 +58,16 @@ namespace MASES.KNet
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 
         System.Collections.Generic.Dictionary<string, object> _options = new();
+
+        /// <summary>
+        /// Verify if the <paramref name="propertyName"/> was previously set
+        /// </summary>
+        /// <param name="propertyName">The property name to be verified</param>
+        /// <returns><see langword="true"/> if property exists, otherwise <see langword="false"/></returns>
+        public bool ExistProperty(string propertyName)
+        {
+            return _options.ContainsKey(propertyName);
+        }
         /// <summary>
         /// Reads the <paramref name="propertyName"/> set
         /// </summary>

@@ -16,7 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
 using Org.Apache.Kafka.Common.Header;
 using Org.Apache.Kafka.Clients.Producer;
@@ -28,122 +27,6 @@ using System;
 
 namespace MASES.KNet.Producer
 {
-    /// <summary>
-    /// KNet extension of <see cref="ProducerRecord{K, V}"/>
-    /// </summary>
-    public class KNetProducerRecord<K, V>
-    {
-        /// <summary>
-        /// Initialize a new <see cref="KNetProducerRecord{K, V}"/>
-        /// </summary>
-        public KNetProducerRecord()
-        {
-        }
-        /// <summary>
-        /// Initialize a new <see cref="KNetProducerRecord{K, V}"/>
-        /// </summary>
-        public KNetProducerRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)
-        {
-            Topic = topic;
-            Partition = partition;
-            Timestamp = timestamp;
-            Key = key;
-            Value = value;
-            Headers = headers;
-        }
-        /// <summary>
-        /// Initialize a new <see cref="KNetProducerRecord{K, V}"/>
-        /// </summary>
-        public KNetProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
-        {
-            Topic = topic;
-            Partition = partition;
-            Timestamp = new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds();
-            Key = key;
-            Value = value;
-            Headers = headers;
-        }
-        /// <summary>
-        /// Initialize a new <see cref="KNetProducerRecord{K, V}"/>
-        /// </summary>
-        public KNetProducerRecord(string topic, int partition, long timestamp, K key, V value)
-        {
-            Topic = topic;
-            Partition = partition;
-            Timestamp = timestamp;
-            Key = key;
-            Value = value;
-        }
-        /// <summary>
-        /// Initialize a new <see cref="KNetProducerRecord{K, V}"/>
-        /// </summary>
-        public KNetProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value)
-        {
-            Topic = topic;
-            Partition = partition;
-            Timestamp = new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds();
-            Key = key;
-            Value = value;
-        }
-        /// <summary>
-        /// Initialize a new <see cref="KNetProducerRecord{K, V}"/>
-        /// </summary>
-        public KNetProducerRecord(string topic, int partition, K key, V value, Headers headers)
-        {
-            Topic = topic;
-            Partition = partition;
-            Key = key;
-            Value = value;
-            Headers = headers;
-        }
-        /// <summary>
-        /// Initialize a new <see cref="KNetProducerRecord{K, V}"/>
-        /// </summary>
-        public KNetProducerRecord(string topic, int partition, K key, V value)
-        {
-            Topic = topic;
-            Partition = partition;
-            Key = key;
-            Value = value;
-        }
-        /// <summary>
-        /// Initialize a new <see cref="KNetProducerRecord{K, V}"/>
-        /// </summary>
-        public KNetProducerRecord(string topic, K key, V value)
-        {
-            Topic = topic;
-            Key = key;
-            Value = value;
-        }
-        /// <summary>
-        /// Initialize a new <see cref="KNetProducerRecord{K, V}"/>
-        /// </summary>
-        public KNetProducerRecord(string topic, V value)
-        {
-            Topic = topic;
-            Value = value;
-        }
-        /// <inheritdoc cref="ProducerRecord{K, V}.Topic"/>
-        public string Topic { get; private set; }
-        /// <inheritdoc cref="ProducerRecord{K, V}.Partition"/>
-        public int? Partition { get; private set; }
-        /// <inheritdoc cref="ProducerRecord{K, V}.Key"/>
-        public K Key { get; private set; }
-        /// <inheritdoc cref="ProducerRecord{K, V}.Value"/>
-        public V Value { get; private set; }
-        /// <inheritdoc cref="ProducerRecord{K, V}.Timestamp"/>
-        public long? Timestamp { get; private set; }
-        /// <inheritdoc cref="ProducerRecord{K, V}.DateTime"/>
-        public System.DateTime? DateTime => Timestamp.HasValue ? System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp.Value).DateTime : null;
-        /// <inheritdoc cref="ProducerRecord{K, V}.Headers"/>
-        public Headers Headers { get; private set; }
-        /// <inheritdoc cref="object.ToString"/>
-        public override string ToString()
-        {
-            return $"Topic: {Topic} - Partition {Partition} - Key {Key} - Value {Value}";
-        }
-    }
-
     /// <summary>
     /// Extends <see cref="IProducer{K, V}"/> adding less intrusive methods which performs better in high throughput applications
     /// </summary>

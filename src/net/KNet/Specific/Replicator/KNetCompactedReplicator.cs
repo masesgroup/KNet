@@ -16,7 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Time;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Admin;
@@ -29,7 +28,6 @@ using Org.Apache.Kafka.Clients.Admin;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common;
-using Org.Apache.Kafka.Common.Config;
 using Org.Apache.Kafka.Common.Errors;
 using System;
 using System.Collections;
@@ -38,7 +36,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
-using static Javax.Swing.Text.Html.HTML;
 
 namespace MASES.KNet.Replicator
 {
