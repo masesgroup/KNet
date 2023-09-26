@@ -4,8 +4,8 @@
 		<OutputPath>..\..\..\bin\</OutputPath>
 		<AssemblyName>MASES.KNet.Serialization.Json</AssemblyName>
 		<RootNamespace>MASES.KNet.Serialization.Json</RootNamespace>
-		<Title>KNet Json Serialization - The Apache Kafka .NET suite.</Title>
-		<Description>Json Serializer/Deserializer of the Apache Kafka .NET suite. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
+		<Title>KNet Json Serialization - .NET suite for Apache Kafka</Title>
+		<Description>Json Serializer/Deserializer of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
 		<Product>KNet</Product>
 		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNet.Serialization.Json</PackageId>
