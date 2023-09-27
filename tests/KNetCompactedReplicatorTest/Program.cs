@@ -16,20 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Util;
-using MASES.KNet.Admin;
-using MASES.KNet.Common;
-using MASES.KNet.Consumer;
-using MASES.KNet.Extensions;
-using MASES.KNet.Producer;
 using MASES.KNet.Replicator;
-using MASES.KNet.Serialization;
 using MASES.KNet.Serialization.Json;
 using MASES.KNet.TestCommon;
-using Org.Apache.Kafka.Clients.Admin;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Clients.Producer;
 using System;
+using System.Diagnostics;
 using System.Threading;
 
 namespace MASES.KNetTest
@@ -71,13 +62,22 @@ namespace MASES.KNetTest
             {
                 serverToUse = args[0];
             }
-
-            TestValues("TestValues", 100, UpdateModeTypes.OnDelivery | UpdateModeTypes.Delayed);
-
-            Test("TestOnDelivery", 100, UpdateModeTypes.OnDelivery | UpdateModeTypes.Delayed);
-
-            Test("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed);
-
+            var sw = Stopwatch.StartNew();
+            TestValues("TestValues", 100, UpdateModeTypes.OnDelivery, 5);
+            sw.Stop();
+            Console.WriteLine($"End TestValues in {sw.Elapsed}");
+            sw = Stopwatch.StartNew();
+            Test("TestOnDelivery", 100, UpdateModeTypes.OnDelivery | UpdateModeTypes.Delayed, 5);
+            sw.Stop();
+            Console.WriteLine($"End TestOnDelivery in {sw.Elapsed}");
+            sw = Stopwatch.StartNew();
+            Test("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5);
+            sw.Stop();
+            Console.WriteLine($"End TestOnConsume in {sw.Elapsed}");
+            sw = Stopwatch.StartNew();
+            Test("TestOnConsumeLessConsumers", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5, 2);
+            sw.Stop();
+            Console.WriteLine($"End TestOnConsume in {sw.Elapsed}");
             Console.CancelKeyPress += Console_CancelKeyPress;
             Console.WriteLine("Press Ctrl-C to exit");
             resetEvent.WaitOne();
@@ -89,11 +89,12 @@ namespace MASES.KNetTest
             if (e.Cancel) resetEvent.Set();
         }
 
-        private static void TestValues(string topicName, int length, UpdateModeTypes type)
+        private static void TestValues(string topicName, int length, UpdateModeTypes type, int partitions, int? consumers = null)
         {
             using (var replicator = new KNetCompactedReplicator<int, TestType>()
             {
-                Partitions = 5,
+                Partitions = partitions,
+                ConsumerInstances = consumers,
                 UpdateMode = type,
                 BootstrapServers = serverToUse,
                 StateName = topicName,
@@ -116,11 +117,12 @@ namespace MASES.KNetTest
             }
         }
 
-        private static void Test(string topicName, int length, UpdateModeTypes type)
+        private static void Test(string topicName, int length, UpdateModeTypes type, int partitions, int? consumers = null)
         {
             using (var replicator = new KNetCompactedReplicator<int, TestType>()
             {
-                Partitions = 5,
+                Partitions = partitions,
+                ConsumerInstances = consumers,
                 UpdateMode = type,
                 BootstrapServers = serverToUse,
                 StateName = topicName,

@@ -17,7 +17,6 @@
 */
 
 using Java.Util;
-using MASES.KNet;
 using Org.Apache.Kafka.Clients.Admin;
 using Org.Apache.Kafka.Common.Config;
 using MASES.KNet.TestCommon;

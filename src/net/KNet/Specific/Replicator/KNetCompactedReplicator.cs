@@ -16,7 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Time;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Admin;
@@ -29,7 +28,6 @@ using Org.Apache.Kafka.Clients.Admin;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common;
-using Org.Apache.Kafka.Common.Config;
 using Org.Apache.Kafka.Common.Errors;
 using System;
 using System.Collections;
@@ -38,7 +36,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
-using static Javax.Swing.Text.Html.HTML;
 
 namespace MASES.KNet.Replicator
 {
@@ -105,29 +102,30 @@ namespace MASES.KNet.Replicator
         #region Events
 
         /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated by consuming data from the others <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated by consuming data from the others <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        event Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteUpdate;
+        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteUpdate;
 
         /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is removed by consuming data from the others <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is removed by consuming data from the others <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        event Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteRemove;
+        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteRemove;
 
         /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated on this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated on this <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        event Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalUpdate;
+        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalUpdate;
 
         /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is removed from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is removed from this <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        event Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalRemove;
+        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalRemove;
 
         /// <summary>
-        /// If <see cref="UpdateMode"/> contains the <see cref="UpdateModeTypes.Delayed"/> it is called to request if the [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] shall be stored in the <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// It is called to request if the [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] can be stored in the <see cref="IKNetCompactedReplicator{TKey, TValue}"/> instance.
         /// </summary>
-        event Func<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>, bool> OnDelayedStore;
+        /// <remarks>The second parameter reports the current value that depends on values set to <see cref="UpdateMode"/> and if it contains the <see cref="UpdateModeTypes.Delayed"/></remarks>
+        Func<IKNetCompactedReplicator<TKey, TValue>, bool, KeyValuePair<TKey, TValue>, bool> OnDelayedStore { get; }
 
         #endregion
 
@@ -156,6 +154,10 @@ namespace MASES.KNet.Replicator
         /// Get or set partitions to use when topic is created for the first time, otherwise reports the partiions of the topic
         /// </summary>
         int Partitions { get; }
+        /// <summary>
+        /// Get or set the number of <see cref="KNetConsumer{K, V}"/> instances to be used, null to allocate <see cref="KNetConsumer{K, V}"/> based on <see cref="Partitions"/>
+        /// </summary>
+        int? ConsumerInstances { get; }
         /// <summary>
         /// Get or set replication factor to use when topic is created for the first time, otherwise reports the replication factor of the topic
         /// </summary>
@@ -227,7 +229,7 @@ namespace MASES.KNet.Replicator
 
     #endregion
 
-    #region IKNetCompactedReplicator<TKey, TValue>
+    #region KNetCompactedReplicator<TKey, TValue>
     /// <summary>
     /// Provides a reliable dictionary, persisted in a COMPACTED Kafka topic and shared among applications
     /// </summary>
@@ -374,135 +376,9 @@ namespace MASES.KNet.Replicator
 
                 Array.Copy(values.ToArray(), 0, array, arrayIndex, values.Count);
             }
-        }
 
-        #endregion
-
-        #region Private members
-
-        private bool _consumerPollRun = false;
-        private Thread[] _consumerPollThreads = null;
-        private IAdmin _admin = null;
-        private ConcurrentDictionary<TKey, ILocalDataStorage> _dictionary = new ConcurrentDictionary<TKey, ILocalDataStorage>();
-        private ConsumerRebalanceListener _consumerListener = null;
-        private KNetConsumer<TKey, TValue>[] _consumers = null;
-        private KNetConsumer<TKey, TValue> _onTheFlyConsumer = null;
-        private KNetProducer<TKey, TValue> _producer = null;
-        private string _bootstrapServers = null;
-        private string _stateName = string.Empty;
-        private string _groupId = Guid.NewGuid().ToString();
-        private int _partitions = 1;
-        private short _replicationFactor = 1;
-        private TopicConfigBuilder _topicConfig = null;
-        private ConsumerConfigBuilder _consumerConfig = null;
-        private ProducerConfigBuilder _producerConfig = null;
-        private AccessRightsType _accessrights = AccessRightsType.ReadWrite;
-        private UpdateModeTypes _updateMode = UpdateModeTypes.OnDelivery;
-        private Tuple<TKey, ManualResetEvent> _OnConsumeSyncWaiter = null;
-        private ManualResetEvent[] _assignmentWaiters;
-        private long[] _lastPartitionLags = null;
-
-        private KNetSerDes<TKey> _keySerDes = null;
-        private KNetSerDes<TValue> _valueSerDes = null;
-
-        private bool _started = false;
-
-        #endregion
-
-        #region Events
-
-        /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated by consuming data from the others <see cref="KNetCompactedReplicator{TKey, TValue}"/>
-        /// </summary>
-        public event Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteUpdate;
-
-        /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is removed by consuming data from the others <see cref="KNetCompactedReplicator{TKey, TValue}"/>
-        /// </summary>
-        public event Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteRemove;
-
-        /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated on this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
-        /// </summary>
-        public event Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalUpdate;
-
-        /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is removed from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
-        /// </summary>
-        public event Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalRemove;
-
-        /// <summary>
-        /// If <see cref="UpdateMode"/> contains the <see cref="UpdateModeTypes.Delayed"/> it is called to request if the [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] shall be stored in the <see cref="KNetCompactedReplicator{TKey, TValue}"/>
-        /// </summary>
-        public event Func<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>, bool> OnDelayedStore;
-
-        #endregion
-
-        #region Public Properties
-        /// <summary>
-        /// Get or set <see cref="AccessRightsType"/>
-        /// </summary>
-        public AccessRightsType AccessRights { get { return _accessrights; } set { CheckStarted(); _accessrights = value; } }
-        /// <summary>
-        /// Get or set <see cref="UpdateModeTypes"/>
-        /// </summary>
-        public UpdateModeTypes UpdateMode { get { return _updateMode; } set { CheckStarted(); _updateMode = value; } }
-        /// <summary>
-        /// Get or set bootstrap servers
-        /// </summary>
-        public string BootstrapServers { get { return _bootstrapServers; } set { CheckStarted(); _bootstrapServers = value; } }
-        /// <summary>
-        /// Get or set topic name
-        /// </summary>
-        public string StateName { get { return _stateName; } set { CheckStarted(); _stateName = value; } }
-        /// <summary>
-        /// Get or set the group id, if not set a value is generated
-        /// </summary>
-        public string GroupId { get { return _groupId; } set { CheckStarted(); _groupId = value; } }
-        /// <summary>
-        /// Get or set partitions to use when topic is created for the first time, otherwise reports the partiions of the topic
-        /// </summary>
-        public int Partitions { get { return _partitions; } set { CheckStarted(); _partitions = value; } }
-        /// <summary>
-        /// Get or set replication factor to use when topic is created for the first time, otherwise reports the replication factor of the topic
-        /// </summary>
-        public short ReplicationFactor { get { return _replicationFactor; } set { CheckStarted(); _replicationFactor = value; } }
-        /// <summary>
-        /// Get or set <see cref="TopicConfigBuilder"/> to use when topic is created for the first time
-        /// </summary>
-        public TopicConfigBuilder TopicConfig { get { return _topicConfig; } set { CheckStarted(); _topicConfig = value; } }
-        /// <summary>
-        /// Get or set <see cref="ConsumerConfigBuilder"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>
-        /// </summary>
-        public ConsumerConfigBuilder ConsumerConfig { get { return _consumerConfig; } set { CheckStarted(); _consumerConfig = value; } }
-        /// <summary>
-        /// Get or set <see cref="ProducerConfigBuilder"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>
-        /// </summary>
-        public ProducerConfigBuilder ProducerConfig { get { return _producerConfig; } set { CheckStarted(); _producerConfig = value; } }
-        /// <summary>
-        /// Get or set <see cref="KNetSerDes{TKey}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TKey"/>
-        /// </summary>
-        public KNetSerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
-        /// <summary>
-        /// Get or set <see cref="KNetSerDes{TValue}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TValue"/>
-        /// </summary>
-        public KNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
-        /// <summary>
-        /// <see langword="true"/> if the instance was started
-        /// </summary>
-        public bool IsStarted => _started;
-        /// <summary>
-        /// <see langword="true"/> if the instance was started
-        /// </summary>
-        public bool IsAssigned => _assignmentWaiters.All((o) => o.WaitOne(0));
-
-        #endregion
-
-        #region Private methods
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        static void OnDemandRetrieve(IKNetConsumer<TKey, TValue> consumer, string topic, TKey key, ILocalDataStorage data)
-        {
-            if (!data.HasValue)
+            [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+            static void OnDemandRetrieve(IKNetConsumer<TKey, TValue> consumer, string topic, TKey key, ILocalDataStorage data)
             {
                 var topicPartition = new TopicPartition(topic, data.Partition);
                 consumer.Assign(Collections.SingletonList(topicPartition));
@@ -519,10 +395,162 @@ namespace MASES.KNet.Replicator
                 }
             }
         }
+
+        #endregion
+
+        #region KNetCompactedConsumerRebalanceListener
+
+        class KNetCompactedConsumerRebalanceListener : ConsumerRebalanceListener
+        {
+            int _consumerIndex;
+            public KNetCompactedConsumerRebalanceListener(int consumerIndex)
+                : base()
+            {
+                _consumerIndex = consumerIndex;
+            }
+
+            public int ConsumerIndex => _consumerIndex;
+
+            public new System.Action<KNetCompactedConsumerRebalanceListener, Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>> OnOnPartitionsAssigned { get; set; }
+
+            public override void OnPartitionsAssigned(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
+            {
+                OnOnPartitionsAssigned?.Invoke(this, arg0);
+            }
+
+            public new System.Action<KNetCompactedConsumerRebalanceListener, Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>> OnOnPartitionsRevoked { get; set; }
+
+            public override void OnPartitionsRevoked(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
+            {
+                OnOnPartitionsRevoked?.Invoke(this, arg0);
+            }
+
+            public new System.Action<KNetCompactedConsumerRebalanceListener, Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>> OnOnPartitionsLost { get; set; }
+
+            public override void OnPartitionsLost(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
+            {
+                OnOnPartitionsLost?.Invoke(this, arg0);
+            }
+        }
+
+        #endregion
+
+        #region Private members
+
+        private bool _consumerPollRun = false;
+        private Thread[] _consumerPollThreads = null;
+        private IAdmin _admin = null;
+        private ConcurrentDictionary<TKey, ILocalDataStorage> _dictionary = new ConcurrentDictionary<TKey, ILocalDataStorage>();
+        private KNetCompactedConsumerRebalanceListener[] _consumerListeners = null;
+        private KNetConsumer<TKey, TValue>[] _consumers = null;
+        private KNetConsumer<TKey, TValue> _onTheFlyConsumer = null;
+        private KNetProducer<TKey, TValue> _producer = null;
+        private string _bootstrapServers = null;
+        private string _stateName = string.Empty;
+        private string _groupId = Guid.NewGuid().ToString();
+        private int _partitions = 1;
+        private int? _consumerInstances = null;
+        private short _replicationFactor = 1;
+        private TopicConfigBuilder _topicConfig = null;
+        private ConsumerConfigBuilder _consumerConfig = null;
+        private ProducerConfigBuilder _producerConfig = null;
+        private Func<IKNetCompactedReplicator<TKey, TValue>, bool, KeyValuePair<TKey, TValue>, bool> _onDelayedStore = null;
+        private AccessRightsType _accessrights = AccessRightsType.ReadWrite;
+        private UpdateModeTypes _updateMode = UpdateModeTypes.OnDelivery;
+        private Tuple<TKey, ManualResetEvent> _OnConsumeSyncWaiter = null;
+        private System.Collections.Generic.Dictionary<int, System.Collections.Generic.IList<int>> _consumerAssociatedPartition = new();
+        private ManualResetEvent[] _assignmentWaiters;
+        private long[] _lastPartitionLags = null;
+
+        private KNetSerDes<TKey> _keySerDes = null;
+        private KNetSerDes<TValue> _valueSerDes = null;
+
+        private bool _started = false;
+
+        #endregion
+
+        #region Events
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnRemoteUpdate"/>
+        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteUpdate;
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnRemoteRemove"/>
+        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteRemove;
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnLocalUpdate"/>
+        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalUpdate;
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnLocalRemove"/>
+        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalRemove;
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnDelayedStore"/>
+        public Func<IKNetCompactedReplicator<TKey, TValue>, bool, KeyValuePair<TKey, TValue>, bool> OnDelayedStore
+        {
+            get { return _onDelayedStore; }
+            set { CheckStarted(); _onDelayedStore = value; }
+        }
+
+        #endregion
+
+        #region Public Properties
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.AccessRights"/>
+        public AccessRightsType AccessRights { get { return _accessrights; } set { CheckStarted(); _accessrights = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.UpdateMode"/>
+        public UpdateModeTypes UpdateMode { get { return _updateMode; } set { CheckStarted(); _updateMode = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.BootstrapServers"/>
+        public string BootstrapServers { get { return _bootstrapServers; } set { CheckStarted(); _bootstrapServers = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.StateName"/>
+        public string StateName { get { return _stateName; } set { CheckStarted(); _stateName = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.GroupId"/>
+        public string GroupId { get { return _groupId; } set { CheckStarted(); _groupId = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.Partitions"/>
+        public int Partitions { get { return _partitions; } set { CheckStarted(); _partitions = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ConsumerInstances"/>
+        public int? ConsumerInstances { get { return _consumerInstances.HasValue ? _consumerInstances.Value : _partitions; } set { CheckStarted(); _consumerInstances = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ReplicationFactor"/>
+        public short ReplicationFactor { get { return _replicationFactor; } set { CheckStarted(); _replicationFactor = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.TopicConfig"/>
+        public TopicConfigBuilder TopicConfig { get { return _topicConfig; } set { CheckStarted(); _topicConfig = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ConsumerConfig"/>
+        public ConsumerConfigBuilder ConsumerConfig { get { return _consumerConfig; } set { CheckStarted(); _consumerConfig = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ProducerConfig"/>
+        public ProducerConfigBuilder ProducerConfig { get { return _producerConfig; } set { CheckStarted(); _producerConfig = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.KeySerDes"/>
+        public KNetSerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ValueSerDes"/>
+        public KNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsStarted"/>
+        public bool IsStarted => _started;
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsAssigned"/>
+        public bool IsAssigned => _assignmentWaiters.All((o) => o.WaitOne(0));
+
+        #endregion
+
+        #region Private methods
+
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         void CheckStarted()
         {
             if (_started) throw new InvalidOperationException("Cannot be changed after Start");
+        }
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        int ConsumersToAllocate()
+        {
+            return ConsumerInstances.HasValue ? ConsumerInstances.Value : Partitions;
         }
 
         bool UpdateModeOnDelivery => (UpdateMode & UpdateModeTypes.OnDelivery) == UpdateModeTypes.OnDelivery;
@@ -553,10 +581,10 @@ namespace MASES.KNet.Replicator
                     data.Partition = record.Partition;
                     data.HasOffset = true;
                     data.Offset = record.Offset;
-                    bool storeValue = true;
-                    if (UpdateModeDelayed)
+                    bool storeValue = UpdateModeDelayed ? false : true;
+                    if (OnDelayedStore != null)
                     {
-                        storeValue = (OnDelayedStore != null) ? OnDelayedStore.Invoke(this, new KeyValuePair<TKey, TValue>(record.Key, record.Value)) : false;
+                        storeValue = OnDelayedStore.Invoke(this, storeValue, new KeyValuePair<TKey, TValue>(record.Key, record.Value));
                     }
                     if (storeValue)
                     {
@@ -576,70 +604,45 @@ namespace MASES.KNet.Replicator
             }
         }
 
-        private void OnTopicPartitionsAssigned(Collection<TopicPartition> topicPartitions)
+        private void OnTopicPartitionsAssigned(KNetCompactedConsumerRebalanceListener listener, Collection<TopicPartition> topicPartitions)
         {
             foreach (var topicPartition in topicPartitions)
             {
-                _assignmentWaiters[topicPartition.Partition()].Set();
-            }
-        }
-
-        private void OnTopicPartitionsRevoked(Collection<TopicPartition> topicPartitions)
-        {
-            foreach (var topicPartition in topicPartitions)
-            {
-                _assignmentWaiters[topicPartition.Partition()].Reset();
-            }
-        }
-
-        private void OnTopicPartitionsLost(Collection<TopicPartition> topicPartitions)
-        {
-            foreach (var topicPartition in topicPartitions)
-            {
-                _assignmentWaiters[topicPartition.Partition()].Reset();
-            }
-        }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        private void RemoveRecord(TKey key)
-        {
-            ValidateAccessRights(AccessRightsType.Write);
-
-            if (key == null)
-                throw new ArgumentNullException(nameof(key));
-
-            if (UpdateModeOnDelivery)
-            {
-                JVMBridgeException exception = null;
-                DateTime pTimestamp = DateTime.MaxValue;
-                using (AutoResetEvent deliverySemaphore = new AutoResetEvent(false))
+                var partition = topicPartition.Partition();
+                lock (_consumerAssociatedPartition)
                 {
-                    using (Callback cb = new Callback()
-                    {
-                        OnOnCompletion = (record, error) =>
-                        {
-                            try
-                            {
-                                if (deliverySemaphore.SafeWaitHandle.IsClosed)
-                                    return;
-                                exception = error;
-                                deliverySemaphore.Set();
-                            }
-                            catch { }
-                        }
-                    })
-                    {
-                        _producer.Produce(new KNetProducerRecord<TKey, TValue>(_stateName, key, null), cb);
-                        deliverySemaphore.WaitOne();
-                        if (exception != null) throw exception;
-                    }
+                    _consumerAssociatedPartition[listener.ConsumerIndex].Add(partition);
                 }
+                _assignmentWaiters[partition].Set();
             }
-            else if (UpdateModeOnConsume || UpdateModeOnConsumeSync)
-            {
-                _producer.Produce(StateName, key, null, (Callback)null);
-            }
-            _dictionary.TryRemove(key, out _);
         }
+
+        private void OnTopicPartitionsRevoked(KNetCompactedConsumerRebalanceListener listener, Collection<TopicPartition> topicPartitions)
+        {
+            foreach (var topicPartition in topicPartitions)
+            {
+                var partition = topicPartition.Partition();
+                lock (_consumerAssociatedPartition)
+                {
+                    _consumerAssociatedPartition[listener.ConsumerIndex].Remove(partition);
+                }
+                _assignmentWaiters[topicPartition.Partition()].Reset();
+            }
+        }
+
+        private void OnTopicPartitionsLost(KNetCompactedConsumerRebalanceListener listener, Collection<TopicPartition> topicPartitions)
+        {
+            foreach (var topicPartition in topicPartitions)
+            {
+                var partition = topicPartition.Partition();
+                lock (_consumerAssociatedPartition)
+                {
+                    _consumerAssociatedPartition[listener.ConsumerIndex].Remove(partition);
+                }
+                _assignmentWaiters[topicPartition.Partition()].Reset();
+            }
+        }
+
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private void AddOrUpdate(TKey key, TValue value)
         {
@@ -695,10 +698,10 @@ namespace MASES.KNet.Replicator
                         data.Partition = metadata.Partition();
                         data.HasOffset = metadata.HasOffset();
                         data.Offset = metadata.Offset();
-                        bool storeValue = true;
-                        if (UpdateModeDelayed)
+                        bool storeValue = UpdateModeDelayed ? false : true;
+                        if (OnDelayedStore != null)
                         {
-                            storeValue = (OnDelayedStore != null) ? OnDelayedStore.Invoke(this, new KeyValuePair<TKey, TValue>(key, value)) : false;
+                            storeValue = OnDelayedStore.Invoke(this, storeValue, new KeyValuePair<TKey, TValue>(key, value));
                         }
                         if (storeValue)
                         {
@@ -750,23 +753,29 @@ namespace MASES.KNet.Replicator
 
             if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external deserializer, set ValueSerDes.");
 
-            _assignmentWaiters = new ManualResetEvent[_partitions];
-            _lastPartitionLags = new long[_partitions];
-            _consumers = new KNetConsumer<TKey, TValue>[_partitions];
+            _assignmentWaiters = new ManualResetEvent[Partitions];
+            _lastPartitionLags = new long[Partitions];
+            _consumers = new KNetConsumer<TKey, TValue>[ConsumersToAllocate()];
+            _consumerListeners = new KNetCompactedConsumerRebalanceListener[ConsumersToAllocate()];
 
-            for (int i = 0; i < _partitions; i++)
+            for (int i = 0; i < Partitions; i++)
             {
-                _assignmentWaiters[i] = new ManualResetEvent(false);
                 _lastPartitionLags[i] = -1;
+                _assignmentWaiters[i] = new ManualResetEvent(false);
+            }
+
+            for (int i = 0; i < ConsumersToAllocate(); i++)
+            {
+                _consumerAssociatedPartition.Add(i, new System.Collections.Generic.List<int>());
                 _consumers[i] = new KNetConsumer<TKey, TValue>(ConsumerConfig, KeySerDes, ValueSerDes);
                 _consumers[i].SetCallback(OnMessage);
+                _consumerListeners[i] = new KNetCompactedConsumerRebalanceListener(i)
+                {
+                    OnOnPartitionsRevoked = OnTopicPartitionsRevoked,
+                    OnOnPartitionsAssigned = OnTopicPartitionsAssigned,
+                    OnOnPartitionsLost = OnTopicPartitionsLost
+                };
             }
-            _consumerListener = new ConsumerRebalanceListener()
-            {
-                OnOnPartitionsRevoked = OnTopicPartitionsRevoked,
-                OnOnPartitionsAssigned = OnTopicPartitionsAssigned,
-                OnOnPartitionsLost = OnTopicPartitionsLost
-            };
         }
 
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -808,22 +817,31 @@ namespace MASES.KNet.Replicator
         void ConsumerPollHandler(object o)
         {
             int index = (int)o;
-            _consumers[index].Subscribe(Collections.Singleton(StateName), _consumerListener);
+            _consumers[index].Subscribe(Collections.Singleton(StateName), _consumerListeners[index]);
             while (_consumerPollRun)
             {
                 try
                 {
                     _consumers[index].ConsumeAsync(100);
-                    if (_assignmentWaiters[index].WaitOne(0))
+                    lock (_consumerAssociatedPartition)
                     {
-                        try
+                        foreach (var partitionIndex in _consumerAssociatedPartition[index])
                         {
-                            var lag = _consumers[index].CurrentLag(new TopicPartition(StateName, index));
-                            Interlocked.Exchange(ref _lastPartitionLags[index], lag.IsPresent() ? lag.AsLong : -1);
-                        }
-                        catch (Java.Lang.IllegalStateException)
-                        {
-                            Interlocked.Exchange(ref _lastPartitionLags[index], -1);
+                            bool execute = false;
+                            if (_assignmentWaiters[partitionIndex].SafeWaitHandle.IsClosed) continue;
+                            else execute = _assignmentWaiters[partitionIndex].WaitOne(0);
+                            if (execute)
+                            {
+                                try
+                                {
+                                    var lag = _consumers[index].CurrentLag(new TopicPartition(StateName, partitionIndex));
+                                    Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], lag.IsPresent() ? lag.AsLong : -1);
+                                }
+                                catch (Java.Lang.IllegalStateException)
+                                {
+                                    Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], -1);
+                                }
+                            }
                         }
                     }
                 }
@@ -834,14 +852,13 @@ namespace MASES.KNet.Replicator
         #endregion
 
         #region Public methods
-        /// <summary>
-        /// Start this <see cref="KNetCompactedReplicator{TKey, TValue}"/>: create the <see cref="StateName"/> topic if not available, allocates Producer and Consumer, sets serializer/deserializer
-        /// </summary>
-        /// <exception cref="InvalidOperationException">Some errors occurred</exception>
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.Start"/>
         public void Start()
         {
             if (string.IsNullOrWhiteSpace(BootstrapServers)) throw new InvalidOperationException("BootstrapServers must be set before start.");
             if (string.IsNullOrWhiteSpace(StateName)) throw new InvalidOperationException("StateName must be set before start.");
+
+            if (ConsumerInstances > Partitions) throw new InvalidOperationException("ConsumerInstances cannot be high than Partitions");
 
             Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
             _admin = KafkaAdminClient.Create(props);
@@ -896,8 +913,8 @@ namespace MASES.KNet.Replicator
             if (_consumers != null)
             {
                 _consumerPollRun = true;
-                _consumerPollThreads = new Thread[_partitions];
-                for (int i = 0; i < _partitions; i++)
+                _consumerPollThreads = new Thread[ConsumersToAllocate()];
+                for (int i = 0; i < ConsumersToAllocate(); i++)
                 {
                     _consumerPollThreads[i] = new Thread(ConsumerPollHandler);
                     _consumerPollThreads[i].Start(i);
@@ -907,12 +924,7 @@ namespace MASES.KNet.Replicator
             _started = true;
         }
 
-
-        /// <summary>
-        /// Start this <see cref="KNetCompactedReplicator{TKey, TValue}"/>: create the <see cref="StateName"/> topic if not available, allocates Producer and Consumers, sets serializer/deserializer
-        /// Then waits its synchronization with <see cref="StateName"/> topic which stores dictionary data
-        /// </summary>
-        /// <exception cref="InvalidOperationException">Some errors occurred or the provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.StartAndWait(int)"/>
         public void StartAndWait(int timeout = Timeout.Infinite)
         {
             ValidateAccessRights(AccessRightsType.Read);
@@ -921,23 +933,14 @@ namespace MASES.KNet.Replicator
             SyncWait(timeout);
         }
 
-        /// <summary>
-        /// Waits for all paritions assignment of the <see cref="StateName"/> topic which stores dictionary data
-        /// </summary>
-        /// <param name="timeout">The number of milliseconds to wait, or <see cref="Timeout.Infinite"/> to wait indefinitely</param>
-        /// <returns><see langword="true"/> if the current instance receives a signal within the given <paramref name="timeout"/>; otherwise, <see langword="false"/></returns>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.WaitForStateAssignment(int)"/>
         public bool WaitForStateAssignment(int timeout = Timeout.Infinite)
         {
             ValidateAccessRights(AccessRightsType.Read);
             return WaitHandle.WaitAll(_assignmentWaiters, timeout);
         }
-        /// <summary>
-        /// Waits that <see cref="KNetCompactedReplicator{TKey, TValue}"/> is synchronized to the <see cref="StateName"/> topic which stores dictionary data
-        /// </summary>
-        /// <param name="timeout">The number of milliseconds to wait, or <see cref="Timeout.Infinite"/> to wait indefinitely</param>
-        /// <returns><see langword="true"/> if the current instance synchronize within the given <paramref name="timeout"/>; otherwise, <see langword="false"/></returns>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.SyncWait(int)"/>
         public void SyncWait(int timeout = Timeout.Infinite)
         {
             ValidateAccessRights(AccessRightsType.Read);
@@ -945,16 +948,19 @@ namespace MASES.KNet.Replicator
             bool sync = false;
             while (!sync && watcher.ElapsedMilliseconds < (uint)timeout)
             {
-                for (int i = 0; i < _partitions; i++)
+                for (int i = 0; i < ConsumersToAllocate(); i++)
                 {
-                    sync = _consumers[i].IsEmpty && (Interlocked.Read(ref _lastPartitionLags[i]) == 0 || Interlocked.Read(ref _lastPartitionLags[i]) == -1) ;
+                    bool lagInSync = true;
+                    foreach (var partitionIndex in _consumerAssociatedPartition[i])
+                    {
+                        lagInSync &= Interlocked.Read(ref _lastPartitionLags[partitionIndex]) == 0 || Interlocked.Read(ref _lastPartitionLags[partitionIndex]) == -1;
+                    }
+                    sync = _consumers[i].IsEmpty && lagInSync;
                 }
             }
         }
 
-        /// <summary>
-        /// Waits until all outstanding produce requests and delivery report callbacks are completed
-        /// </summary>
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.Flush"/>
         public void Flush()
         {
             ValidateAccessRights(AccessRightsType.Write);
@@ -1202,6 +1208,8 @@ namespace MASES.KNet.Replicator
                 }
             }
 
+            _onTheFlyConsumer?.Dispose();
+
             _producer?.Flush();
             _producer?.Dispose();
 
@@ -1209,7 +1217,10 @@ namespace MASES.KNet.Replicator
             {
                 foreach (var item in _assignmentWaiters)
                 {
-                    item?.Close();
+                    lock (item)
+                    {
+                        item?.Close();
+                    }
                 }
             }
         }

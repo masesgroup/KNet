@@ -26,7 +26,6 @@ using MASES.KNet.TestCommon;
 using Org.Apache.Kafka.Clients.Admin;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
-using Org.Apache.Kafka.Common.Config;
 using Org.Apache.Kafka.Common.Serialization;
 using System;
 using System.Text;
