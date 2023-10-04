@@ -247,13 +247,23 @@ namespace MASES.KNet.Producer
         public Future<RecordMetadata> Send(KNetProducerRecord<K, V> record)
         {
             ProducerRecord<byte[], byte[]> kRecord = ToProducerRecord(record, _keySerializer, _valueSerializer);
-            return Send(kRecord);
+            try
+            {
+                GC.SuppressFinalize(kRecord);
+                return Send(kRecord);
+            }
+            finally { GC.ReRegisterForFinalize(kRecord); }
         }
         /// <inheritdoc cref="IKNetProducer{K, V}.Send(KNetProducerRecord{K, V}, Callback)"/>
         public Future<RecordMetadata> Send(KNetProducerRecord<K, V> record, Callback callback)
         {
             ProducerRecord<byte[], byte[]> kRecord = ToProducerRecord(record, _keySerializer, _valueSerializer);
-            return Send(kRecord, callback);
+            try
+            {
+                GC.SuppressFinalize(kRecord);
+                return Send(kRecord, callback);
+            }
+            finally { GC.ReRegisterForFinalize(kRecord); }
         }
         /// <inheritdoc cref="IKNetProducer{K, V}.Send(string, int, long, K, V, Headers)"/>
         public void Send(string topic, int partition, long timestamp, K key, V value, Headers headers)
