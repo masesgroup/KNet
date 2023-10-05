@@ -272,7 +272,12 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static double DeserializeDouble(string topic, byte[] data)
         {
-            return JVMBridgeBase.Wraps<Java.Lang.Double>(_DoubleDeserializer.Deserialize(topic, data) as IJavaObject);
+            var result = _DoubleDeserializer.Deserialize(topic, data);
+            if (result is IJavaObject ijo)
+            {
+                return JVMBridgeBase.Wraps<Java.Lang.Double>(ijo);
+            }
+            return (double)result;
         }
 
         static readonly FloatDeserializer _FloatDeserializer = new FloatDeserializer();
@@ -281,7 +286,12 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static float DeserializeFloat(string topic, byte[] data)
         {
-            return JVMBridgeBase.Wraps<Java.Lang.Float>(_FloatDeserializer.Deserialize(topic, data) as IJavaObject);
+            var result = _FloatDeserializer.Deserialize(topic, data);
+            if (result is IJavaObject ijo)
+            {
+                return JVMBridgeBase.Wraps<Java.Lang.Float>(ijo);
+            }
+            return (float)result;
         }
 
         static readonly IntegerDeserializer _IntDeserializer = new IntegerDeserializer();
@@ -290,7 +300,12 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static int DeserializeInt(string topic, byte[] data)
         {
-            return JVMBridgeBase.Wraps<Java.Lang.Integer>(_IntDeserializer.Deserialize(topic, data) as IJavaObject);
+            var result = _IntDeserializer.Deserialize(topic, data);
+            if (result is IJavaObject ijo)
+            {
+                return JVMBridgeBase.Wraps<Java.Lang.Integer>(ijo);
+            }
+            return (int)result;
 
             //if (data == null)
             //{
@@ -324,7 +339,12 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static long DeserializeLong(string topic, byte[] data)
         {
-            return JVMBridgeBase.Wraps<Java.Lang.Long>(_LongDeserializer.Deserialize(topic, data) as IJavaObject);
+            var result = _LongDeserializer.Deserialize(topic, data);
+            if (result is IJavaObject ijo)
+            {
+                return JVMBridgeBase.Wraps<Java.Lang.Long>(ijo);
+            }
+            return (long)result;
 
             //if (data == null)
             //{
@@ -358,7 +378,12 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static short DeserializeShort(string topic, byte[] data)
         {
-            return JVMBridgeBase.Wraps<Java.Lang.Short>(_ShortDeserializer.Deserialize(topic, data) as IJavaObject);
+            var result = _ShortDeserializer.Deserialize(topic, data);
+            if (result is IJavaObject ijo)
+            {
+                return JVMBridgeBase.Wraps<Java.Lang.Short>(ijo);
+            }
+            return (short)result;
 
             //if (data == null)
             //{
