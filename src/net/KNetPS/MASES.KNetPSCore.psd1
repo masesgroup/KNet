@@ -10,7 +10,7 @@
 ModuleToProcess = 'MASES.KNetPS.dll'
 
 # Version number of this module.
-ModuleVersion = '2.1.0'
+ModuleVersion = '2.1.1'
 
 # ID used to uniquely identify this module
 GUID = 'F7C13891-7BC6-4025-ACF5-04509852F87D'
