@@ -203,8 +203,10 @@ namespace MASES.KNet.Replicator
         /// Start this <see cref="KNetCompactedReplicator{TKey, TValue}"/>: create the <see cref="StateName"/> topic if not available, allocates Producer and Consumers, sets serializer/deserializer
         /// Then waits its synchronization with <see cref="StateName"/> topic which stores dictionary data
         /// </summary>
+        /// <param name="timeout">The number of milliseconds to wait, or <see cref="Timeout.Infinite"/> to wait indefinitely</param>
+        /// <returns><see langword="true"/> if the current instance synchronize within the given <paramref name="timeout"/>; otherwise, <see langword="false"/></returns>
         /// <exception cref="InvalidOperationException">Some errors occurred or the provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        void StartAndWait(int timeout = Timeout.Infinite);
+        bool StartAndWait(int timeout = Timeout.Infinite);
         /// <summary>
         /// Waits for all paritions assignment of the <see cref="StateName"/> topic which stores dictionary data
         /// </summary>
@@ -218,7 +220,7 @@ namespace MASES.KNet.Replicator
         /// <param name="timeout">The number of milliseconds to wait, or <see cref="Timeout.Infinite"/> to wait indefinitely</param>
         /// <returns><see langword="true"/> if the current instance synchronize within the given <paramref name="timeout"/>; otherwise, <see langword="false"/></returns>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        void SyncWait(int timeout = Timeout.Infinite);
+        bool SyncWait(int timeout = Timeout.Infinite);
         /// <summary>
         /// Waits until all outstanding produce requests and delivery report callbacks are completed
         /// </summary>
@@ -733,9 +735,10 @@ namespace MASES.KNet.Replicator
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         void BuildConsumers()
         {
-            _consumerConfig ??= ConsumerConfigBuilder.Create().WithEnableAutoCommit(true)
-                                                  .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
-                                                  .WithAllowAutoCreateTopics(false);
+            _consumerConfig ??= ConsumerConfigBuilder.Create()
+                                                     .WithEnableAutoCommit(true)
+                                                     .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
+                                                     .WithAllowAutoCreateTopics(false);
 
             ConsumerConfig.BootstrapServers = BootstrapServers;
             ConsumerConfig.GroupId = GroupId;
@@ -760,7 +763,7 @@ namespace MASES.KNet.Replicator
 
             for (int i = 0; i < Partitions; i++)
             {
-                _lastPartitionLags[i] = -1;
+                _lastPartitionLags[i] = -2;
                 _assignmentWaiters[i] = new ManualResetEvent(false);
             }
 
@@ -925,12 +928,12 @@ namespace MASES.KNet.Replicator
         }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.StartAndWait(int)"/>
-        public void StartAndWait(int timeout = Timeout.Infinite)
+        public bool StartAndWait(int timeout = Timeout.Infinite)
         {
             ValidateAccessRights(AccessRightsType.Read);
             Start();
             WaitForStateAssignment(timeout);
-            SyncWait(timeout);
+            return SyncWait(timeout);
         }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.WaitForStateAssignment(int)"/>
@@ -941,23 +944,27 @@ namespace MASES.KNet.Replicator
         }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.SyncWait(int)"/>
-        public void SyncWait(int timeout = Timeout.Infinite)
+        public bool SyncWait(int timeout = Timeout.Infinite)
         {
             ValidateAccessRights(AccessRightsType.Read);
             Stopwatch watcher = Stopwatch.StartNew();
             bool sync = false;
             while (!sync && watcher.ElapsedMilliseconds < (uint)timeout)
             {
+                bool[] syncs = new bool[ConsumersToAllocate()];
                 for (int i = 0; i < ConsumersToAllocate(); i++)
                 {
                     bool lagInSync = true;
                     foreach (var partitionIndex in _consumerAssociatedPartition[i])
                     {
-                        lagInSync &= Interlocked.Read(ref _lastPartitionLags[partitionIndex]) == 0 || Interlocked.Read(ref _lastPartitionLags[partitionIndex]) == -1;
+                        var partitionLag = Interlocked.Read(ref _lastPartitionLags[partitionIndex]);
+                        lagInSync &= partitionLag == 0 || partitionLag == -1;
                     }
-                    sync = _consumers[i].IsEmpty && lagInSync;
+                    syncs[i] = _consumers[i].IsEmpty && lagInSync;
                 }
+                sync = syncs.All(x => x == true);
             }
+            return sync;
         }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.Flush"/>

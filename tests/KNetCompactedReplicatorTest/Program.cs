@@ -75,6 +75,10 @@ namespace MASES.KNetTest
             sw.Stop();
             Console.WriteLine($"End TestOnConsume in {sw.Elapsed}");
             sw = Stopwatch.StartNew();
+            TestOnlyRead("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5);
+            sw.Stop();
+            Console.WriteLine($"End TestOnlyRead for TestOnConsume in {sw.Elapsed}");
+            sw = Stopwatch.StartNew();
             Test("TestOnConsumeLessConsumers", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5, 2);
             sw.Stop();
             Console.WriteLine($"End TestOnConsume in {sw.Elapsed}");
@@ -137,6 +141,27 @@ namespace MASES.KNetTest
                 }
 
                 replicator.SyncWait();
+
+                foreach (var item in replicator)
+                {
+                    Console.WriteLine($"Key: {item.Key} - Value: {item.Value}");
+                }
+            }
+        }
+
+        private static void TestOnlyRead(string topicName, int length, UpdateModeTypes type, int partitions, int? consumers = null)
+        {
+            using (var replicator = new KNetCompactedReplicator<int, TestType>()
+            {
+                Partitions = partitions,
+                ConsumerInstances = consumers,
+                UpdateMode = type,
+                BootstrapServers = serverToUse,
+                StateName = topicName,
+                ValueSerDes = new JsonSerDes<TestType>(),
+            })
+            {
+                replicator.StartAndWait();
 
                 foreach (var item in replicator)
                 {
