@@ -34,6 +34,11 @@ namespace MASES.KNet.Serialization.Protobuf
         /// The extension uses <see cref="Headers"/>
         /// </summary>
         public override bool UseHeaders => true;
+        /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
+        public override byte[] Serialize(string topic, T data)
+        {
+            return SerializeWithHeaders(topic, null, data);
+        }
         /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
         public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
@@ -43,9 +48,15 @@ namespace MASES.KNet.Serialization.Protobuf
                 return stream.ToArray();
             }
         }
+        /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
+        public override T Deserialize(string topic, byte[] data)
+        {
+            return DeserializeWithHeaders(topic, null, data);
+        }
         /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
         public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
         {
+            if (data == null) return default;
             return _parser.ParseFrom(data);
         }
     }
