@@ -200,8 +200,11 @@
     "org.apache.kafka.streams.processor.api.ProcessorSupplier",
     "org.apache.kafka.tools.ClientCompatibilityTest$ClientCompatibilityTestDeserializer",
     "org.apache.kafka.tools.ConsumerPerformance$ConsumerPerfRebListener",
+    "org.apache.kafka.tools.ThroughputThrottler",
     "org.apache.kafka.tools.VerifiableConsumer$RecordData",
     "org.apache.kafka.tools.VerifiableConsumer$RecordsConsumed",
+    "org.apache.kafka.tools.reassign.LogDirMoveState",
+    "org.apache.kafka.tools.reassign.PartitionReassignmentState",
     "org.apache.zookeeper.ZooKeeperMainWithTlsSupportForKafka",
     "org.apache.zookeeper.server.quorum.QuorumPeerMain"
   ]

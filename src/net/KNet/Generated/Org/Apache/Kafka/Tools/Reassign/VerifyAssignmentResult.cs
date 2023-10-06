@@ -29,25 +29,6 @@ namespace Org.Apache.Kafka.Tools.Reassign
     public partial class VerifyAssignmentResult
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#org.apache.kafka.tools.reassign.VerifyAssignmentResult(java.util.Map,boolean,java.util.Map,boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg1"><see cref="bool"/></param>
-        /// <param name="arg2"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg3"><see cref="bool"/></param>
-        public VerifyAssignmentResult(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Tools.Reassign.PartitionReassignmentState> arg0, bool arg1, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Org.Apache.Kafka.Tools.Reassign.LogDirMoveState> arg2, bool arg3)
-            : base(arg0, arg1, arg2, arg3)
-        {
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#org.apache.kafka.tools.reassign.VerifyAssignmentResult(java.util.Map)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public VerifyAssignmentResult(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Tools.Reassign.PartitionReassignmentState> arg0)
-            : base(arg0)
-        {
-        }
 
         #endregion
 

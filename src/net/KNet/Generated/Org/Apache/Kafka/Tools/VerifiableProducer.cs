@@ -101,14 +101,6 @@ namespace Org.Apache.Kafka.Tools
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/VerifiableProducer.html#run-org.apache.kafka.tools.ThroughputThrottler-"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.ThroughputThrottler"/></param>
-        public void Run(Org.Apache.Kafka.Tools.ThroughputThrottler arg0)
-        {
-            IExecute("run", arg0);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/VerifiableProducer.html#send-java.lang.String-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
