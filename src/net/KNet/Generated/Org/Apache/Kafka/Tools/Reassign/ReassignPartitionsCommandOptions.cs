@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.1/org/apache/kafka/tools/reassign/ReassignPartitionsCommandOptions.html#org.apache.kafka.tools.reassign.ReassignPartitionsCommandOptions(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommandOptions.html#org.apache.kafka.tools.reassign.ReassignPartitionsCommandOptions(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public ReassignPartitionsCommandOptions(string[] arg0)

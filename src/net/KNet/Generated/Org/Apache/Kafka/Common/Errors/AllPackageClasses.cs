@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region ApiException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/ApiException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/ApiException.html"/>
     /// </summary>
     public partial class ApiException : Org.Apache.Kafka.Common.KafkaException
     {
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region AuthenticationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/AuthenticationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/AuthenticationException.html"/>
     /// </summary>
     public partial class AuthenticationException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -59,7 +59,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region AuthorizationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/AuthorizationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/AuthorizationException.html"/>
     /// </summary>
     public partial class AuthorizationException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region AuthorizerNotReadyException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/AuthorizerNotReadyException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/AuthorizerNotReadyException.html"/>
     /// </summary>
     public partial class AuthorizerNotReadyException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region BrokerIdNotRegisteredException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/BrokerIdNotRegisteredException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/BrokerIdNotRegisteredException.html"/>
     /// </summary>
     public partial class BrokerIdNotRegisteredException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region BrokerNotAvailableException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/BrokerNotAvailableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/BrokerNotAvailableException.html"/>
     /// </summary>
     public partial class BrokerNotAvailableException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region ClusterAuthorizationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/ClusterAuthorizationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/ClusterAuthorizationException.html"/>
     /// </summary>
     public partial class ClusterAuthorizationException : Org.Apache.Kafka.Common.Errors.AuthorizationException
     {
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region ConcurrentTransactionsException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/ConcurrentTransactionsException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/ConcurrentTransactionsException.html"/>
     /// </summary>
     public partial class ConcurrentTransactionsException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region ControllerMovedException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/ControllerMovedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/ControllerMovedException.html"/>
     /// </summary>
     public partial class ControllerMovedException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region CoordinatorLoadInProgressException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/CoordinatorLoadInProgressException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/CoordinatorLoadInProgressException.html"/>
     /// </summary>
     public partial class CoordinatorLoadInProgressException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region CoordinatorNotAvailableException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/CoordinatorNotAvailableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/CoordinatorNotAvailableException.html"/>
     /// </summary>
     public partial class CoordinatorNotAvailableException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -203,7 +203,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region CorruptRecordException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/CorruptRecordException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/CorruptRecordException.html"/>
     /// </summary>
     public partial class CorruptRecordException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -219,7 +219,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region DelegationTokenAuthorizationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/DelegationTokenAuthorizationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/DelegationTokenAuthorizationException.html"/>
     /// </summary>
     public partial class DelegationTokenAuthorizationException : Org.Apache.Kafka.Common.Errors.AuthorizationException
     {
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region DelegationTokenDisabledException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/DelegationTokenDisabledException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/DelegationTokenDisabledException.html"/>
     /// </summary>
     public partial class DelegationTokenDisabledException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region DelegationTokenExpiredException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/DelegationTokenExpiredException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/DelegationTokenExpiredException.html"/>
     /// </summary>
     public partial class DelegationTokenExpiredException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -267,7 +267,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region DelegationTokenNotFoundException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/DelegationTokenNotFoundException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/DelegationTokenNotFoundException.html"/>
     /// </summary>
     public partial class DelegationTokenNotFoundException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region DelegationTokenOwnerMismatchException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/DelegationTokenOwnerMismatchException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/DelegationTokenOwnerMismatchException.html"/>
     /// </summary>
     public partial class DelegationTokenOwnerMismatchException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region DisconnectException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/DisconnectException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/DisconnectException.html"/>
     /// </summary>
     public partial class DisconnectException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -315,7 +315,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region DuplicateBrokerRegistrationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/DuplicateBrokerRegistrationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/DuplicateBrokerRegistrationException.html"/>
     /// </summary>
     public partial class DuplicateBrokerRegistrationException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region DuplicateResourceException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/DuplicateResourceException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/DuplicateResourceException.html"/>
     /// </summary>
     public partial class DuplicateResourceException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -347,7 +347,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region DuplicateSequenceException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/DuplicateSequenceException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/DuplicateSequenceException.html"/>
     /// </summary>
     public partial class DuplicateSequenceException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -363,7 +363,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region ElectionNotNeededException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/ElectionNotNeededException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/ElectionNotNeededException.html"/>
     /// </summary>
     public partial class ElectionNotNeededException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -379,7 +379,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region EligibleLeadersNotAvailableException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/EligibleLeadersNotAvailableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/EligibleLeadersNotAvailableException.html"/>
     /// </summary>
     public partial class EligibleLeadersNotAvailableException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -395,7 +395,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region FeatureUpdateFailedException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/FeatureUpdateFailedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/FeatureUpdateFailedException.html"/>
     /// </summary>
     public partial class FeatureUpdateFailedException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -411,7 +411,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region FencedInstanceIdException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/FencedInstanceIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/FencedInstanceIdException.html"/>
     /// </summary>
     public partial class FencedInstanceIdException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -427,7 +427,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region FencedLeaderEpochException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/FencedLeaderEpochException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/FencedLeaderEpochException.html"/>
     /// </summary>
     public partial class FencedLeaderEpochException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -443,7 +443,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region FencedMemberEpochException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/FencedMemberEpochException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/FencedMemberEpochException.html"/>
     /// </summary>
     public partial class FencedMemberEpochException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -459,7 +459,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region FetchSessionIdNotFoundException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/FetchSessionIdNotFoundException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/FetchSessionIdNotFoundException.html"/>
     /// </summary>
     public partial class FetchSessionIdNotFoundException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -475,7 +475,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region FetchSessionTopicIdException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/FetchSessionTopicIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/FetchSessionTopicIdException.html"/>
     /// </summary>
     public partial class FetchSessionTopicIdException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -491,7 +491,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region GroupAuthorizationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/GroupAuthorizationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/GroupAuthorizationException.html"/>
     /// </summary>
     public partial class GroupAuthorizationException : Org.Apache.Kafka.Common.Errors.AuthorizationException
     {
@@ -507,7 +507,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region GroupIdNotFoundException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/GroupIdNotFoundException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/GroupIdNotFoundException.html"/>
     /// </summary>
     public partial class GroupIdNotFoundException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -523,7 +523,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region GroupMaxSizeReachedException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/GroupMaxSizeReachedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/GroupMaxSizeReachedException.html"/>
     /// </summary>
     public partial class GroupMaxSizeReachedException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -539,7 +539,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region GroupNotEmptyException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/GroupNotEmptyException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/GroupNotEmptyException.html"/>
     /// </summary>
     public partial class GroupNotEmptyException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -555,7 +555,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region GroupSubscribedToTopicException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/GroupSubscribedToTopicException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/GroupSubscribedToTopicException.html"/>
     /// </summary>
     public partial class GroupSubscribedToTopicException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -571,7 +571,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region IllegalGenerationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/IllegalGenerationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/IllegalGenerationException.html"/>
     /// </summary>
     public partial class IllegalGenerationException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -587,7 +587,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region IllegalSaslStateException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/IllegalSaslStateException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/IllegalSaslStateException.html"/>
     /// </summary>
     public partial class IllegalSaslStateException : Org.Apache.Kafka.Common.Errors.AuthenticationException
     {
@@ -603,7 +603,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InconsistentClusterIdException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InconsistentClusterIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InconsistentClusterIdException.html"/>
     /// </summary>
     public partial class InconsistentClusterIdException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -619,7 +619,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InconsistentGroupProtocolException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InconsistentGroupProtocolException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InconsistentGroupProtocolException.html"/>
     /// </summary>
     public partial class InconsistentGroupProtocolException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -635,7 +635,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InconsistentTopicIdException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InconsistentTopicIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InconsistentTopicIdException.html"/>
     /// </summary>
     public partial class InconsistentTopicIdException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -651,7 +651,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InconsistentVoterSetException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InconsistentVoterSetException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InconsistentVoterSetException.html"/>
     /// </summary>
     public partial class InconsistentVoterSetException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -667,7 +667,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region IneligibleReplicaException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/IneligibleReplicaException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/IneligibleReplicaException.html"/>
     /// </summary>
     public partial class IneligibleReplicaException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -683,7 +683,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InterruptException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InterruptException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InterruptException.html"/>
     /// </summary>
     public partial class InterruptException : Org.Apache.Kafka.Common.KafkaException
     {
@@ -699,7 +699,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidCommitOffsetSizeException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidCommitOffsetSizeException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidCommitOffsetSizeException.html"/>
     /// </summary>
     public partial class InvalidCommitOffsetSizeException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -715,7 +715,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidConfigurationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidConfigurationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidConfigurationException.html"/>
     /// </summary>
     public partial class InvalidConfigurationException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -731,7 +731,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidFetchSessionEpochException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidFetchSessionEpochException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidFetchSessionEpochException.html"/>
     /// </summary>
     public partial class InvalidFetchSessionEpochException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -747,7 +747,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidFetchSizeException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidFetchSizeException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidFetchSizeException.html"/>
     /// </summary>
     public partial class InvalidFetchSizeException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -763,7 +763,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidGroupIdException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidGroupIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidGroupIdException.html"/>
     /// </summary>
     public partial class InvalidGroupIdException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -779,7 +779,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidMetadataException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidMetadataException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidMetadataException.html"/>
     /// </summary>
     public partial class InvalidMetadataException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -795,7 +795,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidOffsetException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidOffsetException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidOffsetException.html"/>
     /// </summary>
     public partial class InvalidOffsetException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -811,7 +811,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidPartitionsException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidPartitionsException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidPartitionsException.html"/>
     /// </summary>
     public partial class InvalidPartitionsException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -827,7 +827,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidPidMappingException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidPidMappingException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidPidMappingException.html"/>
     /// </summary>
     public partial class InvalidPidMappingException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -843,7 +843,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidPrincipalTypeException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidPrincipalTypeException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidPrincipalTypeException.html"/>
     /// </summary>
     public partial class InvalidPrincipalTypeException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -859,7 +859,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidProducerEpochException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidProducerEpochException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidProducerEpochException.html"/>
     /// </summary>
     public partial class InvalidProducerEpochException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -875,7 +875,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidReplicaAssignmentException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidReplicaAssignmentException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidReplicaAssignmentException.html"/>
     /// </summary>
     public partial class InvalidReplicaAssignmentException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -891,7 +891,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidReplicationFactorException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidReplicationFactorException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidReplicationFactorException.html"/>
     /// </summary>
     public partial class InvalidReplicationFactorException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -907,7 +907,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidRequestException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidRequestException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidRequestException.html"/>
     /// </summary>
     public partial class InvalidRequestException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -923,7 +923,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidRequiredAcksException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidRequiredAcksException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidRequiredAcksException.html"/>
     /// </summary>
     public partial class InvalidRequiredAcksException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -939,7 +939,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidSessionTimeoutException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidSessionTimeoutException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidSessionTimeoutException.html"/>
     /// </summary>
     public partial class InvalidSessionTimeoutException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -955,7 +955,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidTimestampException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidTimestampException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidTimestampException.html"/>
     /// </summary>
     public partial class InvalidTimestampException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -971,7 +971,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidTopicException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidTopicException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidTopicException.html"/>
     /// </summary>
     public partial class InvalidTopicException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -987,7 +987,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidTxnStateException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidTxnStateException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidTxnStateException.html"/>
     /// </summary>
     public partial class InvalidTxnStateException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1003,7 +1003,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidTxnTimeoutException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidTxnTimeoutException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidTxnTimeoutException.html"/>
     /// </summary>
     public partial class InvalidTxnTimeoutException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1019,7 +1019,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region InvalidUpdateVersionException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/InvalidUpdateVersionException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/InvalidUpdateVersionException.html"/>
     /// </summary>
     public partial class InvalidUpdateVersionException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1035,7 +1035,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region KafkaStorageException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/KafkaStorageException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/KafkaStorageException.html"/>
     /// </summary>
     public partial class KafkaStorageException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -1051,7 +1051,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region LeaderNotAvailableException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/LeaderNotAvailableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/LeaderNotAvailableException.html"/>
     /// </summary>
     public partial class LeaderNotAvailableException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -1067,7 +1067,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region ListenerNotFoundException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/ListenerNotFoundException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/ListenerNotFoundException.html"/>
     /// </summary>
     public partial class ListenerNotFoundException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -1083,7 +1083,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region LogDirNotFoundException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/LogDirNotFoundException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/LogDirNotFoundException.html"/>
     /// </summary>
     public partial class LogDirNotFoundException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1099,7 +1099,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region MemberIdRequiredException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/MemberIdRequiredException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/MemberIdRequiredException.html"/>
     /// </summary>
     public partial class MemberIdRequiredException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1115,7 +1115,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region NetworkException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/NetworkException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/NetworkException.html"/>
     /// </summary>
     public partial class NetworkException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -1131,7 +1131,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region NewLeaderElectedException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/NewLeaderElectedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/NewLeaderElectedException.html"/>
     /// </summary>
     public partial class NewLeaderElectedException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1147,7 +1147,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region NoReassignmentInProgressException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/NoReassignmentInProgressException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/NoReassignmentInProgressException.html"/>
     /// </summary>
     public partial class NoReassignmentInProgressException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1163,7 +1163,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region NotControllerException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/NotControllerException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/NotControllerException.html"/>
     /// </summary>
     public partial class NotControllerException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -1179,7 +1179,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region NotCoordinatorException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/NotCoordinatorException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/NotCoordinatorException.html"/>
     /// </summary>
     public partial class NotCoordinatorException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -1195,7 +1195,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region NotEnoughReplicasAfterAppendException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/NotEnoughReplicasAfterAppendException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/NotEnoughReplicasAfterAppendException.html"/>
     /// </summary>
     public partial class NotEnoughReplicasAfterAppendException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -1211,7 +1211,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region NotEnoughReplicasException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/NotEnoughReplicasException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/NotEnoughReplicasException.html"/>
     /// </summary>
     public partial class NotEnoughReplicasException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -1227,7 +1227,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region NotLeaderOrFollowerException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/NotLeaderOrFollowerException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/NotLeaderOrFollowerException.html"/>
     /// </summary>
     public partial class NotLeaderOrFollowerException : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NotLeaderOrFollowerException>
     {
@@ -1243,7 +1243,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region OffsetMetadataTooLarge
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/OffsetMetadataTooLarge.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/OffsetMetadataTooLarge.html"/>
     /// </summary>
     public partial class OffsetMetadataTooLarge : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1259,7 +1259,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region OffsetMovedToTieredStorageException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/OffsetMovedToTieredStorageException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/OffsetMovedToTieredStorageException.html"/>
     /// </summary>
     public partial class OffsetMovedToTieredStorageException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1275,7 +1275,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region OffsetNotAvailableException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/OffsetNotAvailableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/OffsetNotAvailableException.html"/>
     /// </summary>
     public partial class OffsetNotAvailableException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -1291,7 +1291,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region OffsetOutOfRangeException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/OffsetOutOfRangeException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/OffsetOutOfRangeException.html"/>
     /// </summary>
     public partial class OffsetOutOfRangeException : Org.Apache.Kafka.Common.Errors.InvalidOffsetException
     {
@@ -1307,7 +1307,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region OperationNotAttemptedException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/OperationNotAttemptedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/OperationNotAttemptedException.html"/>
     /// </summary>
     public partial class OperationNotAttemptedException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1323,7 +1323,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region OutOfOrderSequenceException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/OutOfOrderSequenceException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/OutOfOrderSequenceException.html"/>
     /// </summary>
     public partial class OutOfOrderSequenceException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1339,7 +1339,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region PolicyViolationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/PolicyViolationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/PolicyViolationException.html"/>
     /// </summary>
     public partial class PolicyViolationException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1355,7 +1355,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region PositionOutOfRangeException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/PositionOutOfRangeException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/PositionOutOfRangeException.html"/>
     /// </summary>
     public partial class PositionOutOfRangeException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1371,7 +1371,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region PreferredLeaderNotAvailableException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/PreferredLeaderNotAvailableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/PreferredLeaderNotAvailableException.html"/>
     /// </summary>
     public partial class PreferredLeaderNotAvailableException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -1387,7 +1387,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region PrincipalDeserializationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/PrincipalDeserializationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/PrincipalDeserializationException.html"/>
     /// </summary>
     public partial class PrincipalDeserializationException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1403,7 +1403,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region ProducerFencedException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/ProducerFencedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/ProducerFencedException.html"/>
     /// </summary>
     public partial class ProducerFencedException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1419,7 +1419,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region ReassignmentInProgressException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/ReassignmentInProgressException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/ReassignmentInProgressException.html"/>
     /// </summary>
     public partial class ReassignmentInProgressException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1435,7 +1435,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region RebalanceInProgressException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/RebalanceInProgressException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/RebalanceInProgressException.html"/>
     /// </summary>
     public partial class RebalanceInProgressException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1451,7 +1451,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region RecordBatchTooLargeException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/RecordBatchTooLargeException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/RecordBatchTooLargeException.html"/>
     /// </summary>
     public partial class RecordBatchTooLargeException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1467,7 +1467,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region RecordDeserializationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/RecordDeserializationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/RecordDeserializationException.html"/>
     /// </summary>
     public partial class RecordDeserializationException : Org.Apache.Kafka.Common.Errors.SerializationException
     {
@@ -1483,7 +1483,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region RecordTooLargeException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/RecordTooLargeException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/RecordTooLargeException.html"/>
     /// </summary>
     public partial class RecordTooLargeException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1499,7 +1499,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region ReplicaNotAvailableException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/ReplicaNotAvailableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/ReplicaNotAvailableException.html"/>
     /// </summary>
     public partial class ReplicaNotAvailableException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -1515,7 +1515,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region ResourceNotFoundException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/ResourceNotFoundException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/ResourceNotFoundException.html"/>
     /// </summary>
     public partial class ResourceNotFoundException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1531,7 +1531,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region RetriableException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/RetriableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/RetriableException.html"/>
     /// </summary>
     public partial class RetriableException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1547,7 +1547,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region SaslAuthenticationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/SaslAuthenticationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/SaslAuthenticationException.html"/>
     /// </summary>
     public partial class SaslAuthenticationException : Org.Apache.Kafka.Common.Errors.AuthenticationException
     {
@@ -1563,7 +1563,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region SecurityDisabledException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/SecurityDisabledException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/SecurityDisabledException.html"/>
     /// </summary>
     public partial class SecurityDisabledException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1579,7 +1579,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region SerializationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/SerializationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/SerializationException.html"/>
     /// </summary>
     public partial class SerializationException : Org.Apache.Kafka.Common.KafkaException
     {
@@ -1595,7 +1595,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region SnapshotNotFoundException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/SnapshotNotFoundException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/SnapshotNotFoundException.html"/>
     /// </summary>
     public partial class SnapshotNotFoundException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1611,7 +1611,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region SslAuthenticationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/SslAuthenticationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/SslAuthenticationException.html"/>
     /// </summary>
     public partial class SslAuthenticationException : Org.Apache.Kafka.Common.Errors.AuthenticationException
     {
@@ -1627,7 +1627,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region StaleBrokerEpochException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/StaleBrokerEpochException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/StaleBrokerEpochException.html"/>
     /// </summary>
     public partial class StaleBrokerEpochException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1643,7 +1643,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region StaleMemberEpochException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/StaleMemberEpochException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/StaleMemberEpochException.html"/>
     /// </summary>
     public partial class StaleMemberEpochException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1659,7 +1659,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region ThrottlingQuotaExceededException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/ThrottlingQuotaExceededException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/ThrottlingQuotaExceededException.html"/>
     /// </summary>
     public partial class ThrottlingQuotaExceededException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -1675,7 +1675,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region TimeoutException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/TimeoutException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/TimeoutException.html"/>
     /// </summary>
     public partial class TimeoutException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -1691,7 +1691,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region TopicAuthorizationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/TopicAuthorizationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/TopicAuthorizationException.html"/>
     /// </summary>
     public partial class TopicAuthorizationException : Org.Apache.Kafka.Common.Errors.AuthorizationException
     {
@@ -1707,7 +1707,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region TopicDeletionDisabledException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/TopicDeletionDisabledException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/TopicDeletionDisabledException.html"/>
     /// </summary>
     public partial class TopicDeletionDisabledException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1723,7 +1723,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region TopicExistsException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/TopicExistsException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/TopicExistsException.html"/>
     /// </summary>
     public partial class TopicExistsException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1739,7 +1739,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region TransactionAbortedException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/TransactionAbortedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/TransactionAbortedException.html"/>
     /// </summary>
     public partial class TransactionAbortedException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1755,7 +1755,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region TransactionalIdAuthorizationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/TransactionalIdAuthorizationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/TransactionalIdAuthorizationException.html"/>
     /// </summary>
     public partial class TransactionalIdAuthorizationException : Org.Apache.Kafka.Common.Errors.AuthorizationException
     {
@@ -1771,7 +1771,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region TransactionalIdNotFoundException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/TransactionalIdNotFoundException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/TransactionalIdNotFoundException.html"/>
     /// </summary>
     public partial class TransactionalIdNotFoundException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1787,7 +1787,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region TransactionCoordinatorFencedException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/TransactionCoordinatorFencedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/TransactionCoordinatorFencedException.html"/>
     /// </summary>
     public partial class TransactionCoordinatorFencedException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1803,7 +1803,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnacceptableCredentialException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnacceptableCredentialException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnacceptableCredentialException.html"/>
     /// </summary>
     public partial class UnacceptableCredentialException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1819,7 +1819,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnknownLeaderEpochException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnknownLeaderEpochException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnknownLeaderEpochException.html"/>
     /// </summary>
     public partial class UnknownLeaderEpochException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -1835,7 +1835,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnknownMemberIdException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnknownMemberIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnknownMemberIdException.html"/>
     /// </summary>
     public partial class UnknownMemberIdException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1851,7 +1851,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnknownProducerIdException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnknownProducerIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnknownProducerIdException.html"/>
     /// </summary>
     public partial class UnknownProducerIdException : Org.Apache.Kafka.Common.Errors.OutOfOrderSequenceException
     {
@@ -1867,7 +1867,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnknownServerException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnknownServerException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnknownServerException.html"/>
     /// </summary>
     public partial class UnknownServerException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1883,7 +1883,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnknownTopicIdException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnknownTopicIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnknownTopicIdException.html"/>
     /// </summary>
     public partial class UnknownTopicIdException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -1899,7 +1899,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnknownTopicOrPartitionException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnknownTopicOrPartitionException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnknownTopicOrPartitionException.html"/>
     /// </summary>
     public partial class UnknownTopicOrPartitionException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -1915,7 +1915,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnreleasedInstanceIdException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnreleasedInstanceIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnreleasedInstanceIdException.html"/>
     /// </summary>
     public partial class UnreleasedInstanceIdException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1931,7 +1931,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnstableOffsetCommitException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnstableOffsetCommitException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnstableOffsetCommitException.html"/>
     /// </summary>
     public partial class UnstableOffsetCommitException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -1947,7 +1947,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnsupportedAssignorException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnsupportedAssignorException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnsupportedAssignorException.html"/>
     /// </summary>
     public partial class UnsupportedAssignorException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1963,7 +1963,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnsupportedByAuthenticationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnsupportedByAuthenticationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnsupportedByAuthenticationException.html"/>
     /// </summary>
     public partial class UnsupportedByAuthenticationException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1979,7 +1979,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnsupportedCompressionTypeException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnsupportedCompressionTypeException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnsupportedCompressionTypeException.html"/>
     /// </summary>
     public partial class UnsupportedCompressionTypeException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -1995,7 +1995,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnsupportedForMessageFormatException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnsupportedForMessageFormatException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnsupportedForMessageFormatException.html"/>
     /// </summary>
     public partial class UnsupportedForMessageFormatException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -2011,7 +2011,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnsupportedSaslMechanismException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnsupportedSaslMechanismException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnsupportedSaslMechanismException.html"/>
     /// </summary>
     public partial class UnsupportedSaslMechanismException : Org.Apache.Kafka.Common.Errors.AuthenticationException
     {
@@ -2027,7 +2027,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region UnsupportedVersionException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/UnsupportedVersionException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/UnsupportedVersionException.html"/>
     /// </summary>
     public partial class UnsupportedVersionException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -2043,7 +2043,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
     #region WakeupException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.1/org/apache/kafka/common/errors/WakeupException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/errors/WakeupException.html"/>
     /// </summary>
     public partial class WakeupException : Org.Apache.Kafka.Common.KafkaException
     {

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#org.apache.kafka.tools.reassign.VerifyAssignmentResult(java.util.Map,boolean,java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#org.apache.kafka.tools.reassign.VerifyAssignmentResult(java.util.Map,boolean,java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -41,7 +41,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#org.apache.kafka.tools.reassign.VerifyAssignmentResult(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#org.apache.kafka.tools.reassign.VerifyAssignmentResult(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public VerifyAssignmentResult(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Tools.Reassign.PartitionReassignmentState> arg0)
@@ -57,19 +57,19 @@ namespace Org.Apache.Kafka.Tools.Reassign
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#movesOngoing"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#movesOngoing"/>
         /// </summary>
         public bool movesOngoing { get { return IGetField<bool>("movesOngoing"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#partsOngoing"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#partsOngoing"/>
         /// </summary>
         public bool partsOngoing { get { return IGetField<bool>("partsOngoing"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#partStates"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#partStates"/>
         /// </summary>
         public Java.Util.Map partStates { get { return IGetField<Java.Util.Map>("partStates"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#moveStates"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#moveStates"/>
         /// </summary>
         public Java.Util.Map moveStates { get { return IGetField<Java.Util.Map>("moveStates"); } }
 

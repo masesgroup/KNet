@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.1/org/apache/kafka/tools/DeleteRecordsCommand.html#execute-java.lang.String[]-java.io.PrintStream-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/DeleteRecordsCommand.html#execute-java.lang.String[]-java.io.PrintStream-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>
@@ -52,7 +52,7 @@ namespace Org.Apache.Kafka.Tools
             SExecute(LocalBridgeClazz, "execute", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.1/org/apache/kafka/tools/DeleteRecordsCommand.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/org/apache/kafka/tools/DeleteRecordsCommand.html#main-java.lang.String[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <exception cref="Java.Lang.Exception"/>
