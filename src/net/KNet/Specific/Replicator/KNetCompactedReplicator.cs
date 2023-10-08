@@ -175,13 +175,13 @@ namespace MASES.KNet.Replicator
         /// </summary>
         ProducerConfigBuilder ProducerConfig { get; }
         /// <summary>
-        /// Get or set <see cref="KNetSerDes{TKey}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TKey"/>
+        /// Get or set an instance of <see cref="IKNetSerDes{TKey}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TKey"/>
         /// </summary>
-        KNetSerDes<TKey> KeySerDes { get; }
+        IKNetSerDes<TKey> KeySerDes { get; }
         /// <summary>
-        /// Get or set <see cref="KNetSerDes{TValue}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TValue"/>
+        /// Get or set an instance of <see cref="IKNetSerDes{TValue}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TValue"/>
         /// </summary>
-        KNetSerDes<TValue> ValueSerDes { get; }
+        IKNetSerDes<TValue> ValueSerDes { get; }
         /// <summary>
         /// <see langword="true"/> if the instance was started
         /// </summary>
@@ -464,8 +464,8 @@ namespace MASES.KNet.Replicator
         private ManualResetEvent[] _assignmentWaiters;
         private long[] _lastPartitionLags = null;
 
-        private KNetSerDes<TKey> _keySerDes = null;
-        private KNetSerDes<TValue> _valueSerDes = null;
+        private IKNetSerDes<TKey> _keySerDes = null;
+        private IKNetSerDes<TValue> _valueSerDes = null;
 
         private bool _started = false;
 
@@ -529,10 +529,10 @@ namespace MASES.KNet.Replicator
         public ProducerConfigBuilder ProducerConfig { get { return _producerConfig; } set { CheckStarted(); _producerConfig = value; } }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.KeySerDes"/>
-        public KNetSerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
+        public IKNetSerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ValueSerDes"/>
-        public KNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
+        public IKNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsStarted"/>
         public bool IsStarted => _started;
