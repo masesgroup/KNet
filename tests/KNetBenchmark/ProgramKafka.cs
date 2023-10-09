@@ -265,11 +265,12 @@ namespace MASES.KNet.Benchmark
                 };
 
                 var consumer = KafkaConsumer();
+                Java.Time.Duration duration = TimeSpan.FromMinutes(1);
+                var topics = Collections.Singleton(topicName);
                 try
                 {
-                    Java.Time.Duration duration = TimeSpan.FromMinutes(1);
                     int counter = 0;
-                    consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
+                    consumer.Subscribe(topics, rebalanceListener);
                     while (true)
                     {
                         var records = consumer.Poll(duration);
@@ -318,6 +319,8 @@ namespace MASES.KNet.Benchmark
                 {
                     if (!SharedObjects) consumer.Dispose();
                     rebalanceListener?.Dispose();
+                    duration?.Dispose();
+                    topics?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -337,6 +340,8 @@ namespace MASES.KNet.Benchmark
 
                 System.Threading.Thread thread = new System.Threading.Thread(() =>
                 {
+                    Java.Time.Duration duration = TimeSpan.FromSeconds(1);
+                    var topics = Collections.Singleton(topicName);
                     ConsumerRebalanceListener rebalanceListener = null;
                     try
                     {
@@ -353,8 +358,7 @@ namespace MASES.KNet.Benchmark
                             }
                         };
 
-                        consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
-                        Java.Time.Duration duration = TimeSpan.FromSeconds(1);
+                        consumer.Subscribe(topics, rebalanceListener);     
                         int counter = 0;
                         while (true)
                         {
@@ -402,6 +406,8 @@ namespace MASES.KNet.Benchmark
                             consumer.Dispose();
                         }
                         startEvent.Set();
+                        duration?.Dispose();
+                        topics?.Dispose();
                     }
                 });
                 thread.Start();

@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Time;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Admin;
@@ -175,13 +176,13 @@ namespace MASES.KNet.Replicator
         /// </summary>
         ProducerConfigBuilder ProducerConfig { get; }
         /// <summary>
-        /// Get or set <see cref="KNetSerDes{TKey}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TKey"/>
+        /// Get or set an instance of <see cref="IKNetSerDes{TKey}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TKey"/>
         /// </summary>
-        KNetSerDes<TKey> KeySerDes { get; }
+        IKNetSerDes<TKey> KeySerDes { get; }
         /// <summary>
-        /// Get or set <see cref="KNetSerDes{TValue}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TValue"/>
+        /// Get or set an instance of <see cref="IKNetSerDes{TValue}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TValue"/>
         /// </summary>
-        KNetSerDes<TValue> ValueSerDes { get; }
+        IKNetSerDes<TValue> ValueSerDes { get; }
         /// <summary>
         /// <see langword="true"/> if the instance was started
         /// </summary>
@@ -383,17 +384,28 @@ namespace MASES.KNet.Replicator
             static void OnDemandRetrieve(IKNetConsumer<TKey, TValue> consumer, string topic, TKey key, ILocalDataStorage data)
             {
                 var topicPartition = new TopicPartition(topic, data.Partition);
-                consumer.Assign(Collections.SingletonList(topicPartition));
-                consumer.Seek(topicPartition, data.Offset);
-                var results = consumer.Poll(TimeSpan.FromMinutes(1));
-                if (results == null) throw new InvalidOperationException("Failed to get records from remote.");
-                foreach (var result in results)
+                var topics = Collections.SingletonList(topicPartition);
+                Duration duration = TimeSpan.FromMinutes(1);
+                try
                 {
-                    if (!Equals(result.Key, key)) continue;
-                    if (data.Offset != result.Offset) throw new IndexOutOfRangeException($"Requested offset is {data.Offset} while received offset is {result.Offset}");
-                    data.HasValue = true;
-                    data.Value = result.Value;
-                    break;
+                    consumer.Assign(topics);
+                    consumer.Seek(topicPartition, data.Offset);
+                    var results = consumer.Poll(duration);
+                    if (results == null) throw new InvalidOperationException("Failed to get records from remote.");
+                    foreach (var result in results)
+                    {
+                        if (!Equals(result.Key, key)) continue;
+                        if (data.Offset != result.Offset) throw new IndexOutOfRangeException($"Requested offset is {data.Offset} while received offset is {result.Offset}");
+                        data.HasValue = true;
+                        data.Value = result.Value;
+                        break;
+                    }
+                }
+                finally
+                {
+                    topicPartition?.Dispose();
+                    topics?.Dispose();
+                    duration?.Dispose();
                 }
             }
         }
@@ -464,8 +476,8 @@ namespace MASES.KNet.Replicator
         private ManualResetEvent[] _assignmentWaiters;
         private long[] _lastPartitionLags = null;
 
-        private KNetSerDes<TKey> _keySerDes = null;
-        private KNetSerDes<TValue> _valueSerDes = null;
+        private IKNetSerDes<TKey> _keySerDes = null;
+        private IKNetSerDes<TValue> _valueSerDes = null;
 
         private bool _started = false;
 
@@ -529,10 +541,10 @@ namespace MASES.KNet.Replicator
         public ProducerConfigBuilder ProducerConfig { get { return _producerConfig; } set { CheckStarted(); _producerConfig = value; } }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.KeySerDes"/>
-        public KNetSerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
+        public IKNetSerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ValueSerDes"/>
-        public KNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
+        public IKNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsStarted"/>
         public bool IsStarted => _started;
@@ -820,35 +832,45 @@ namespace MASES.KNet.Replicator
         void ConsumerPollHandler(object o)
         {
             int index = (int)o;
-            _consumers[index].Subscribe(Collections.Singleton(StateName), _consumerListeners[index]);
-            while (_consumerPollRun)
+            var topics = Collections.Singleton(StateName);
+            try
             {
-                try
+                _consumers[index].Subscribe(topics, _consumerListeners[index]);
+                while (_consumerPollRun)
                 {
-                    _consumers[index].ConsumeAsync(100);
-                    lock (_consumerAssociatedPartition)
+                    try
                     {
-                        foreach (var partitionIndex in _consumerAssociatedPartition[index])
+                        _consumers[index].ConsumeAsync(100);
+                        lock (_consumerAssociatedPartition)
                         {
-                            bool execute = false;
-                            if (_assignmentWaiters[partitionIndex].SafeWaitHandle.IsClosed) continue;
-                            else execute = _assignmentWaiters[partitionIndex].WaitOne(0);
-                            if (execute)
+                            foreach (var partitionIndex in _consumerAssociatedPartition[index])
                             {
-                                try
+                                bool execute = false;
+                                if (_assignmentWaiters[partitionIndex].SafeWaitHandle.IsClosed) continue;
+                                else execute = _assignmentWaiters[partitionIndex].WaitOne(0);
+                                if (execute)
                                 {
-                                    var lag = _consumers[index].CurrentLag(new TopicPartition(StateName, partitionIndex));
-                                    Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], lag.IsPresent() ? lag.AsLong : -1);
-                                }
-                                catch (Java.Lang.IllegalStateException)
-                                {
-                                    Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], -1);
+                                    try
+                                    {
+                                        var lag = _consumers[index].CurrentLag(new TopicPartition(StateName, partitionIndex));
+                                        Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], lag.IsPresent() ? lag.AsLong : -1);
+                                    }
+                                    catch (Java.Lang.IllegalStateException)
+                                    {
+                                        Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], -1);
+                                    }
                                 }
                             }
                         }
                     }
+                    catch { }
                 }
-                catch { }
+            }
+            catch { }
+            finally
+            {
+                _consumers[index].Unsubscribe();
+                topics?.Dispose();
             }
         }
 
@@ -882,10 +904,11 @@ namespace MASES.KNet.Replicator
                 }
                 catch (TopicExistsException)
                 {
+                    var topics = Collections.Singleton(StateName);
                     // recover partitions of the topic
                     try
                     {
-                        var result = _admin.DescribeTopics(Collections.Singleton(StateName));
+                        var result = _admin.DescribeTopics(topics);
                         if (result != null)
                         {
                             var map = result.AllTopicNames().Get();
@@ -899,6 +922,10 @@ namespace MASES.KNet.Replicator
                     catch
                     {
 
+                    }
+                    finally
+                    {
+                        topics?.Dispose();
                     }
                 }
             }

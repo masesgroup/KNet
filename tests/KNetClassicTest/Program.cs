@@ -82,13 +82,15 @@ namespace MASES.KNetClassicTest
 
         static void CreateTopic()
         {
+            NewTopic topic = null;
+            Set<NewTopic> coll = null;
             try
             {
                 string topicName = topicToUse;
                 int partitions = 1;
                 short replicationFactor = 1;
 
-                var topic = new NewTopic(topicName, partitions, replicationFactor);
+                topic = new NewTopic(topicName, partitions, replicationFactor);
 
                 /**** Direct mode ******
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
@@ -99,7 +101,7 @@ namespace MASES.KNetClassicTest
                                                                  .WithMinCleanableDirtyRatio(0.01)
                                                                  .WithSegmentMs(100));
 
-                var coll = Collections.Singleton(topic);
+                coll = Collections.Singleton(topic);
 
                 /**** Direct mode ******
                 Properties props = new Properties();
@@ -131,6 +133,11 @@ namespace MASES.KNetClassicTest
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                coll?.Dispose();
+                topic?.Dispose();
             }
         }
 
@@ -290,12 +297,13 @@ namespace MASES.KNetClassicTest
                         }
                     };
                 }
+                var topics = Collections.Singleton(topicToUse);
                 try
                 {
                     using (consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
                     {
-                        if (useCallback) consumer.Subscribe(Collections.Singleton(topicToUse), rebalanceListener);
-                        else consumer.Subscribe(Collections.Singleton(topicToUse));
+                        if (useCallback) consumer.Subscribe(topics, rebalanceListener);
+                        else consumer.Subscribe(topics);
 
                         while (!resetEvent.WaitOne(0))
                         {
@@ -314,6 +322,7 @@ namespace MASES.KNetClassicTest
                         keyDeserializer.Dispose();
                         valueDeserializer.Dispose();
                     }
+                    topics?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)

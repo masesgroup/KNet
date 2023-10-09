@@ -266,12 +266,13 @@ namespace MASES.KNetTest
                         }
                     };
                 }
+                var topics = Collections.Singleton(topicToUse);
                 try
                 {
                     using (consumer = new KNetConsumer<string, TestType>(props, keyDeserializer, valueDeserializer))
                     {
-                        if (useCallback) consumer.Subscribe(Collections.Singleton(topicToUse), rebalanceListener);
-                        else consumer.Subscribe(Collections.Singleton(topicToUse));
+                        if (useCallback) consumer.Subscribe(topics, rebalanceListener);
+                        else consumer.Subscribe(topics);
 
                         while (!resetEvent.WaitOne(0))
                         {
@@ -287,6 +288,7 @@ namespace MASES.KNetTest
                 {
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
+                    topics?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
