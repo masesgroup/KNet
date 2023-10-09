@@ -234,10 +234,11 @@ namespace MASES.KNet.Benchmark
                 };
 
                 var consumer = KNetConsumer();
+                var topics = Collections.Singleton(topicName);
                 try
                 {
                     int counter = 0;
-                    consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
+                    consumer.Subscribe(topics, rebalanceListener);
                     consumer.SetCallback((message) =>
                     {
                         if (CheckOnConsume)
@@ -268,6 +269,7 @@ namespace MASES.KNet.Benchmark
                 {
                     if (!SharedObjects) consumer.Dispose();
                     rebalanceListener?.Dispose();
+                    topics?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -296,10 +298,11 @@ namespace MASES.KNet.Benchmark
 
                 var consumer = KNetConsumer();
                 var producer = KNetProducer();
+                var topics = Collections.Singleton(topicName);
                 try
                 {
                     int counter = 0;
-                    consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
+                    consumer.Subscribe(topics, rebalanceListener);
                     while (true)
                     {
                         var records = consumer.Poll(TimeSpan.FromMinutes(1));
@@ -331,6 +334,7 @@ namespace MASES.KNet.Benchmark
                         consumer.Dispose();
                         producer.Dispose();
                     }
+                    topics?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -351,6 +355,7 @@ namespace MASES.KNet.Benchmark
                 System.Threading.Thread thread = new System.Threading.Thread(() =>
                 {
                     ConsumerRebalanceListener rebalanceListener = null;
+                    var topics = Collections.Singleton(topicName);
                     try
                     {
                         rebalanceListener = new()
@@ -365,7 +370,7 @@ namespace MASES.KNet.Benchmark
                                 startEvent.Set();
                             }
                         };
-                        consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
+                        consumer.Subscribe(topics, rebalanceListener);
                         Java.Time.Duration duration = TimeSpan.FromSeconds(1);
                         int counter = 0;
                         while (true)
@@ -399,6 +404,7 @@ namespace MASES.KNet.Benchmark
                             consumer.Dispose();
                         }
                         startEvent.Set();
+                        topics?.Dispose();
                     }
                 });
 

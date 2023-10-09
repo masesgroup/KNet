@@ -292,7 +292,12 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static async Task<DescribeTopicsResult> DescribeTopicAsync(this IAdmin admin, string topicName)
         {
-            return await Execute(admin.DescribeTopics, Collections.Singleton(topicName));
+            var topics = Collections.Singleton(topicName);
+            try
+            {
+                return await Execute(admin.DescribeTopics, topics);
+            }
+            finally { topics?.Dispose(); }
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.DescribeTopics(Collection{string}, DescribeTopicsOptions)"/>

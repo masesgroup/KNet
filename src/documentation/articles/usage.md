@@ -263,7 +263,8 @@ namespace MASES.KNetTemplate.KNetConsumer
 
             using (var consumer = new KafkaConsumer<string, string>(props))
             {
-                consumer.Subscribe(Collections.singleton(topicToUse));
+                var topics = Collections.Singleton(topicToUse);
+                consumer.Subscribe(topics);
                 while (!resetEvent.WaitOne(0))
                 {
                     var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
@@ -272,6 +273,7 @@ namespace MASES.KNetTemplate.KNetConsumer
                         Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
                     }
                 }
+                topics?.Dispose(); // needed to avoid Java.Lang.NullPointerException in some conditions where .NET GC retires topics too early
             }
         }
 
