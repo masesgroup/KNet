@@ -267,11 +267,18 @@ namespace MASES.KNet.Consumer
             Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
             if (consumedRecords == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to true.");
             if (!threadRunning) throw new InvalidOperationException("Dispatching thread is not running.");
-            var results = this.Poll(duration);
-            consumedRecords.Enqueue(results);
-            lock (consumedRecords)
+            try
             {
-                System.Threading.Monitor.Pulse(consumedRecords);
+                var results = this.Poll(duration);
+                consumedRecords.Enqueue(results);
+                lock (consumedRecords)
+                {
+                    System.Threading.Monitor.Pulse(consumedRecords);
+                }
+            }
+            finally
+            {
+                duration?.Dispose();
             }
         }
         /// <inheritdoc cref="IKNetConsumer{K, V}.Consume(long, Action{KNetConsumerRecord{K, V}})"/>
