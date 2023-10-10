@@ -453,7 +453,7 @@ namespace MASES.KNet.Replicator
 
         private bool _consumerPollRun = false;
         private Thread[] _consumerPollThreads = null;
-        private IAdmin _admin = null;
+        private ManualResetEvent[] _consumerPollThreadWaiter = null;
         private ConcurrentDictionary<TKey, ILocalDataStorage> _dictionary = new ConcurrentDictionary<TKey, ILocalDataStorage>();
         private KNetCompactedConsumerRebalanceListener[] _consumerListeners = null;
         private KNetConsumer<TKey, TValue>[] _consumers = null;
@@ -474,6 +474,7 @@ namespace MASES.KNet.Replicator
         private Tuple<TKey, ManualResetEvent> _OnConsumeSyncWaiter = null;
         private System.Collections.Generic.Dictionary<int, System.Collections.Generic.IList<int>> _consumerAssociatedPartition = new();
         private ManualResetEvent[] _assignmentWaiters;
+        private bool[] _assignmentWaitersStatus;
         private long[] _lastPartitionLags = null;
 
         private IKNetSerDes<TKey> _keySerDes = null;
@@ -629,6 +630,7 @@ namespace MASES.KNet.Replicator
                 }
                 if (!_assignmentWaiters[partition].SafeWaitHandle.IsClosed)
                 {
+                    lock (_assignmentWaitersStatus) { _assignmentWaitersStatus[partition] = true; }
                     _assignmentWaiters[partition].Set();
                 }
             }
@@ -645,6 +647,7 @@ namespace MASES.KNet.Replicator
                 }
                 if (!_assignmentWaiters[partition].SafeWaitHandle.IsClosed)
                 {
+                    lock (_assignmentWaitersStatus) { _assignmentWaitersStatus[partition] = false; }
                     _assignmentWaiters[partition].Reset();
                 }
             }
@@ -661,6 +664,7 @@ namespace MASES.KNet.Replicator
                 }
                 if (!_assignmentWaiters[partition].SafeWaitHandle.IsClosed)
                 {
+                    lock (_assignmentWaitersStatus) { _assignmentWaitersStatus[partition] = false; }
                     _assignmentWaiters[partition].Reset();
                 }
             }
@@ -785,6 +789,7 @@ namespace MASES.KNet.Replicator
             if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external deserializer, set ValueSerDes.");
 
             _assignmentWaiters = new ManualResetEvent[Partitions];
+            _assignmentWaitersStatus = new bool[Partitions];
             _lastPartitionLags = new long[Partitions];
             _consumers = new KNetConsumer<TKey, TValue>[ConsumersToAllocate()];
             _consumerListeners = new KNetCompactedConsumerRebalanceListener[ConsumersToAllocate()];
@@ -793,6 +798,7 @@ namespace MASES.KNet.Replicator
             {
                 _lastPartitionLags[i] = -2;
                 _assignmentWaiters[i] = new ManualResetEvent(false);
+                _assignmentWaitersStatus[i] = false;
             }
 
             for (int i = 0; i < ConsumersToAllocate(); i++)
@@ -852,6 +858,8 @@ namespace MASES.KNet.Replicator
             try
             {
                 _consumers[index].Subscribe(topics, _consumerListeners[index]);
+                _consumers[index].GroupMetadata();
+                _consumerPollThreadWaiter[index].Set();
                 while (_consumerPollRun)
                 {
                     try
@@ -863,7 +871,7 @@ namespace MASES.KNet.Replicator
                             {
                                 bool execute = false;
                                 if (_assignmentWaiters[partitionIndex].SafeWaitHandle.IsClosed) continue;
-                                else execute = _assignmentWaiters[partitionIndex].WaitOne(0);
+                                else execute = _assignmentWaitersStatus[partitionIndex];
                                 if (execute)
                                 {
                                     try
@@ -901,8 +909,8 @@ namespace MASES.KNet.Replicator
 
             if (ConsumerInstances > Partitions) throw new InvalidOperationException("ConsumerInstances cannot be high than Partitions");
 
-            Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
-            _admin = KafkaAdminClient.Create(props);
+            using Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
+            using var admin = KafkaAdminClient.Create(props);
 
             if (AccessRights.HasFlag(AccessRightsType.Write))
             {
@@ -916,7 +924,7 @@ namespace MASES.KNet.Replicator
                 topic = topic.Configs(TopicConfig);
                 try
                 {
-                    _admin.CreateTopic(topic);
+                    admin.CreateTopic(topic);
                 }
                 catch (TopicExistsException)
                 {
@@ -924,7 +932,7 @@ namespace MASES.KNet.Replicator
                     // recover partitions of the topic
                     try
                     {
-                        var result = _admin.DescribeTopics(topics);
+                        var result = admin.DescribeTopics(topics);
                         if (result != null)
                         {
                             var map = result.AllTopicNames().Get();
@@ -935,15 +943,10 @@ namespace MASES.KNet.Replicator
                             }
                         }
                     }
-                    catch
-                    {
-
-                    }
-                    finally
-                    {
-                        topics?.Dispose();
-                    }
+                    catch { }
+                    finally { topics?.Dispose(); }
                 }
+                finally { topic?.Dispose(); }
             }
 
             if (AccessRights.HasFlag(AccessRightsType.Read))
@@ -960,10 +963,21 @@ namespace MASES.KNet.Replicator
             {
                 _consumerPollRun = true;
                 _consumerPollThreads = new Thread[ConsumersToAllocate()];
+                _consumerPollThreadWaiter = new ManualResetEvent[ConsumersToAllocate()];
                 for (int i = 0; i < ConsumersToAllocate(); i++)
                 {
+                    _consumerPollThreadWaiter[i] = new ManualResetEvent(false);
                     _consumerPollThreads[i] = new Thread(ConsumerPollHandler);
                     _consumerPollThreads[i].Start(i);
+                }
+                if (WaitHandle.WaitAll(_consumerPollThreadWaiter))
+                {
+                    for (int i = 0; i < _consumerPollThreadWaiter.Length; i++)
+                    {
+                        _consumerPollThreadWaiter[i].Dispose();
+                        _consumerPollThreadWaiter[i] = null;
+                    }
+                    _consumerPollThreadWaiter = null;
                 }
             }
 
@@ -984,7 +998,17 @@ namespace MASES.KNet.Replicator
         {
             ValidateAccessRights(AccessRightsType.Read);
             ValidateStarted();
-            return WaitHandle.WaitAll(_assignmentWaiters, timeout);
+            bool status = false;
+            do
+            {
+                if (WaitHandle.WaitAll(_assignmentWaiters, timeout))
+                {
+                    status = _assignmentWaitersStatus.All((o) => o == true);
+                }
+                else break;
+            }
+            while (!status);
+            return status;
         }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.SyncWait(int)"/>
