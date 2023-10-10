@@ -627,7 +627,10 @@ namespace MASES.KNet.Replicator
                 {
                     _consumerAssociatedPartition[listener.ConsumerIndex].Add(partition);
                 }
-                _assignmentWaiters[partition].Set();
+                if (!_assignmentWaiters[partition].SafeWaitHandle.IsClosed)
+                {
+                    _assignmentWaiters[partition].Set();
+                }
             }
         }
 
@@ -640,7 +643,10 @@ namespace MASES.KNet.Replicator
                 {
                     _consumerAssociatedPartition[listener.ConsumerIndex].Remove(partition);
                 }
-                _assignmentWaiters[topicPartition.Partition()].Reset();
+                if (!_assignmentWaiters[partition].SafeWaitHandle.IsClosed)
+                {
+                    _assignmentWaiters[partition].Reset();
+                }
             }
         }
 
@@ -653,7 +659,10 @@ namespace MASES.KNet.Replicator
                 {
                     _consumerAssociatedPartition[listener.ConsumerIndex].Remove(partition);
                 }
-                _assignmentWaiters[topicPartition.Partition()].Reset();
+                if (!_assignmentWaiters[partition].SafeWaitHandle.IsClosed)
+                {
+                    _assignmentWaiters[partition].Reset();
+                }
             }
         }
 
@@ -661,6 +670,7 @@ namespace MASES.KNet.Replicator
         private void AddOrUpdate(TKey key, TValue value)
         {
             ValidateAccessRights(AccessRightsType.Write);
+            ValidateStarted();
 
             if (key == null)
                 throw new ArgumentNullException(nameof(key));
@@ -742,6 +752,12 @@ namespace MASES.KNet.Replicator
         {
             if (!_accessrights.HasFlag(rights))
                 throw new InvalidOperationException($"{rights} access flag not set");
+        }
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        private void ValidateStarted()
+        {
+            if (!IsStarted)
+                throw new InvalidOperationException("The instance was not started");
         }
 
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -967,6 +983,7 @@ namespace MASES.KNet.Replicator
         public bool WaitForStateAssignment(int timeout = Timeout.Infinite)
         {
             ValidateAccessRights(AccessRightsType.Read);
+            ValidateStarted();
             return WaitHandle.WaitAll(_assignmentWaiters, timeout);
         }
 
@@ -974,6 +991,7 @@ namespace MASES.KNet.Replicator
         public bool SyncWait(int timeout = Timeout.Infinite)
         {
             ValidateAccessRights(AccessRightsType.Read);
+            ValidateStarted();
             Stopwatch watcher = Stopwatch.StartNew();
             bool sync = false;
             while (!sync && watcher.ElapsedMilliseconds < (uint)timeout)
@@ -998,6 +1016,7 @@ namespace MASES.KNet.Replicator
         public void Flush()
         {
             ValidateAccessRights(AccessRightsType.Write);
+            ValidateStarted();
             _producer?.Flush();
         }
 
@@ -1019,6 +1038,7 @@ namespace MASES.KNet.Replicator
             get
             {
                 ValidateAccessRights(AccessRightsType.Read);
+                ValidateStarted();
                 BuildOnTheFlyConsumer();
                 if (!new LocalDataStorageEnumerator(_dictionary, _onTheFlyConsumer, StateName).TryGetValue(key, out var data))
                 {
@@ -1039,6 +1059,7 @@ namespace MASES.KNet.Replicator
             get
             {
                 ValidateAccessRights(AccessRightsType.Read);
+                ValidateStarted();
                 return _dictionary.Keys;
             }
         }
@@ -1053,6 +1074,7 @@ namespace MASES.KNet.Replicator
             get
             {
                 ValidateAccessRights(AccessRightsType.Read);
+                ValidateStarted();
                 BuildOnTheFlyConsumer();
                 return new LocalDataStorageEnumerator(_dictionary, _onTheFlyConsumer, StateName).Values();
             }
@@ -1068,6 +1090,7 @@ namespace MASES.KNet.Replicator
             get
             {
                 ValidateAccessRights(AccessRightsType.Read);
+                ValidateStarted();
                 return _dictionary.Count;
             }
         }
@@ -1110,6 +1133,7 @@ namespace MASES.KNet.Replicator
         public void Clear()
         {
             ValidateAccessRights(AccessRightsType.Write);
+            ValidateStarted();
             _dictionary.Clear();
         }
 
@@ -1123,6 +1147,7 @@ namespace MASES.KNet.Replicator
         public bool Contains(KeyValuePair<TKey, TValue> item)
         {
             ValidateAccessRights(AccessRightsType.Read);
+            ValidateStarted();
             BuildOnTheFlyConsumer();
             return new LocalDataStorageEnumerator(_dictionary, _onTheFlyConsumer, StateName).Contains(item);
         }
@@ -1137,6 +1162,7 @@ namespace MASES.KNet.Replicator
         public bool ContainsKey(TKey key)
         {
             ValidateAccessRights(AccessRightsType.Read);
+            ValidateStarted();
             return _dictionary.ContainsKey(key);
         }
 
@@ -1155,6 +1181,7 @@ namespace MASES.KNet.Replicator
         public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
         {
             ValidateAccessRights(AccessRightsType.Read);
+            ValidateStarted();
             BuildOnTheFlyConsumer();
             new LocalDataStorageEnumerator(_dictionary, _onTheFlyConsumer, StateName).CopyTo(array, arrayIndex);
         }
@@ -1167,6 +1194,7 @@ namespace MASES.KNet.Replicator
         public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
         {
             ValidateAccessRights(AccessRightsType.Read);
+            ValidateStarted();
             BuildOnTheFlyConsumer();
             return new LocalDataStorageEnumerator(_dictionary, _onTheFlyConsumer, StateName);
         }
@@ -1211,6 +1239,7 @@ namespace MASES.KNet.Replicator
         public bool TryGetValue(TKey key, out TValue value)
         {
             ValidateAccessRights(AccessRightsType.Read);
+            ValidateStarted();
             BuildOnTheFlyConsumer();
             return new LocalDataStorageEnumerator(_dictionary, _onTheFlyConsumer, StateName).TryGetValue(key, out value);
         }
@@ -1219,6 +1248,7 @@ namespace MASES.KNet.Replicator
         IEnumerator IEnumerable.GetEnumerator()
         {
             ValidateAccessRights(AccessRightsType.Read);
+            ValidateStarted();
             BuildOnTheFlyConsumer();
             return new LocalDataStorageEnumerator(_dictionary, _onTheFlyConsumer, StateName);
         }
@@ -1233,6 +1263,11 @@ namespace MASES.KNet.Replicator
         public void Dispose()
         {
             _consumerPollRun = false;
+
+            foreach (var consumerPollThread in _consumerPollThreads)
+            {
+                consumerPollThread.Join();
+            }
 
             if (_consumers != null)
             {
@@ -1257,6 +1292,8 @@ namespace MASES.KNet.Replicator
                     }
                 }
             }
+
+            _started = false;
         }
 
         #endregion
