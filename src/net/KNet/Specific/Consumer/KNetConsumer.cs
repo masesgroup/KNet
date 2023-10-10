@@ -43,7 +43,7 @@ namespace MASES.KNet.Consumer
         /// </summary>
         bool IsCompleting { get; }
         /// <summary>
-        /// <see langword="true"/> if the <see cref="IKNetConsumer{K, V}"/> instance has an empty setnof items in async operation
+        /// <see langword="true"/> if the <see cref="IKNetConsumer{K, V}"/> instance has an empty set of items in async operation
         /// </summary>
         bool IsEmpty { get; }
         /// <summary>
@@ -71,7 +71,8 @@ namespace MASES.KNet.Consumer
         /// KNet async extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
         /// <param name="timeoutMs">Timeout in milliseconds</param>
-        void ConsumeAsync(long timeoutMs);
+        /// <returns><see langword="true"/> if something was enqued for Async operations</returns>
+        bool ConsumeAsync(long timeoutMs);
         /// <summary>
         /// KNet sync extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
@@ -86,12 +87,12 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="V">The value type</typeparam>
     public class KNetConsumer<K, V> : KafkaConsumer<byte[], byte[]>, IKNetConsumer<K, V>
     {
-        readonly bool autoCreateSerDes = false;
-        bool threadRunning = false;
-        long dequeing = 0;
-        readonly System.Threading.Thread consumeThread = null;
-        readonly ConcurrentQueue<KNetConsumerRecords<K, V>> consumedRecords = null;
-        readonly KNetConsumerCallback<K, V> consumerCallback = null;
+        readonly bool _autoCreateSerDes = false;
+        bool _threadRunning = false;
+        long _dequeing = 0;
+        readonly System.Threading.Thread _consumeThread = null;
+        readonly ConcurrentQueue<KNetConsumerRecords<K, V>> _consumedRecords = null;
+        readonly KNetConsumerCallback<K, V> _consumerCallback = null;
         readonly IKNetDeserializer<K> _keyDeserializer;
         readonly IKNetDeserializer<V> _valueDeserializer;
         /// <summary>
@@ -106,19 +107,19 @@ namespace MASES.KNet.Consumer
         public KNetConsumer(Properties props, bool useJVMCallback = false)
             : this(props, new KNetSerDes<K>(), new KNetSerDes<V>(), useJVMCallback)
         {
-            autoCreateSerDes = true;
+            _autoCreateSerDes = true;
 
             if (useJVMCallback)
             {
-                consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage, _keyDeserializer, _valueDeserializer);
-                IExecute("setCallback", consumerCallback);
+                _consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage, _keyDeserializer, _valueDeserializer);
+                IExecute("setCallback", _consumerCallback);
             }
             else
             {
-                consumedRecords = new();
-                threadRunning = true;
-                consumeThread = new(ConsumeHandler);
-                consumeThread.Start();
+                _consumedRecords = new();
+                _threadRunning = true;
+                _consumeThread = new(ConsumeHandler);
+                _consumeThread.Start();
             }
         }
         /// <summary>
@@ -136,15 +137,15 @@ namespace MASES.KNet.Consumer
 
             if (useJVMCallback)
             {
-                consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage, _keyDeserializer, _valueDeserializer);
-                IExecute("setCallback", consumerCallback);
+                _consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage, _keyDeserializer, _valueDeserializer);
+                IExecute("setCallback", _consumerCallback);
             }
             else
             {
-                consumedRecords = new();
-                threadRunning = true;
-                consumeThread = new(ConsumeHandler);
-                consumeThread.Start();
+                _consumedRecords = new();
+                _threadRunning = true;
+                _consumeThread = new(ConsumeHandler);
+                _consumeThread.Start();
             }
         }
 
@@ -194,22 +195,22 @@ namespace MASES.KNet.Consumer
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public override void Dispose()
         {
-            if (consumerCallback != null)
+            if (_consumerCallback != null)
             {
                 IExecute("setCallback", null);
-                consumerCallback?.Dispose();
+                _consumerCallback?.Dispose();
             }
-            threadRunning = false;
-            if (consumedRecords != null)
+            _threadRunning = false;
+            if (_consumedRecords != null)
             {
-                lock (consumedRecords)
+                lock (_consumedRecords)
                 {
-                    System.Threading.Monitor.Pulse(consumedRecords);
+                    System.Threading.Monitor.Pulse(_consumedRecords);
                 }
-                if (IsCompleting) { consumeThread?.Join(); };
+                if (IsCompleting) { _consumeThread?.Join(); };
                 actionCallback = null;
             }
-            if (autoCreateSerDes)
+            if (_autoCreateSerDes)
             {
                 _keyDeserializer?.Dispose();
                 _valueDeserializer?.Dispose();
@@ -226,11 +227,11 @@ namespace MASES.KNet.Consumer
         {
             try
             {
-                while (threadRunning)
+                while (_threadRunning)
                 {
-                    if (consumedRecords.TryDequeue(out KNetConsumerRecords<K, V> records))
+                    if (_consumedRecords.TryDequeue(out KNetConsumerRecords<K, V> records))
                     {
-                        System.Threading.Interlocked.Increment(ref dequeing);
+                        System.Threading.Interlocked.Increment(ref _dequeing);
                         try
                         {
                             foreach (var item in records)
@@ -241,14 +242,14 @@ namespace MASES.KNet.Consumer
                         catch { }
                         finally
                         {
-                            System.Threading.Interlocked.Decrement(ref dequeing);
+                            System.Threading.Interlocked.Decrement(ref _dequeing);
                         }
                     }
-                    else if (threadRunning)
+                    else if (_threadRunning)
                     {
-                        lock (consumedRecords)
+                        lock (_consumedRecords)
                         {
-                            System.Threading.Monitor.Wait(consumedRecords);
+                            System.Threading.Monitor.Wait(_consumedRecords);
                         }
                     }
                 }
@@ -256,25 +257,30 @@ namespace MASES.KNet.Consumer
             catch { }
         }
         /// <inheritdoc cref="IKNetConsumer{K, V}.IsCompleting"/>
-        public bool IsCompleting => !consumedRecords.IsEmpty || System.Threading.Interlocked.Read(ref dequeing) != 0;
+        public bool IsCompleting => !_consumedRecords.IsEmpty || System.Threading.Interlocked.Read(ref _dequeing) != 0;
         /// <inheritdoc cref="IKNetConsumer{K, V}.IsEmpty"/>
-        public bool IsEmpty => consumedRecords.IsEmpty;
+        public bool IsEmpty => _consumedRecords.IsEmpty;
         /// <inheritdoc cref="IKNetConsumer{K, V}.WaitingMessages"/>
-        public int WaitingMessages => consumedRecords.Count;
+        public int WaitingMessages => _consumedRecords.Count;
         /// <inheritdoc cref="IKNetConsumer{K, V}.ConsumeAsync(long)"/>
-        public void ConsumeAsync(long timeoutMs)
+        public bool ConsumeAsync(long timeoutMs)
         {
             Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
-            if (consumedRecords == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to true.");
-            if (!threadRunning) throw new InvalidOperationException("Dispatching thread is not running.");
+            if (_consumedRecords == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to true.");
+            if (!_threadRunning) throw new InvalidOperationException("Dispatching thread is not running.");
             try
             {
                 var results = this.Poll(duration);
-                consumedRecords.Enqueue(results);
-                lock (consumedRecords)
+                bool isEmpty = results.IsEmpty;
+                if (!isEmpty)
                 {
-                    System.Threading.Monitor.Pulse(consumedRecords);
+                    _consumedRecords.Enqueue(results);
+                    lock (_consumedRecords)
+                    {
+                        System.Threading.Monitor.Pulse(_consumedRecords);
+                    }
                 }
+                return !isEmpty;
             }
             finally
             {
@@ -285,7 +291,7 @@ namespace MASES.KNet.Consumer
         public void Consume(long timeoutMs, Action<KNetConsumerRecord<K, V>> callback)
         {
             Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
-            if (consumerCallback == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to false.");
+            if (_consumerCallback == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to false.");
             try
             {
                 actionCallback = callback;
