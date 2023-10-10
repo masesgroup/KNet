@@ -47,6 +47,8 @@ namespace MASES.KNet.Consumer
         }
         /// <inheritdoc cref="ConsumerRecord{K, V}.Topic"/>
         public string Topic => _record.Topic();
+        /// <inheritdoc cref="ConsumerRecord{K, V}.LeaderEpoch"/>
+        public int? LeaderEpoch { get { var epoch = _record.LeaderEpoch(); return epoch.IsEmpty() ? null : epoch.Get(); } }
         /// <inheritdoc cref="ConsumerRecord{K, V}.Partition"/>
         public int Partition => _record.Partition();
         /// <inheritdoc cref="ConsumerRecord{K, V}.Headers"/>

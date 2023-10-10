@@ -164,6 +164,10 @@ namespace MASES.KNet.Replicator
         /// </summary>
         short ReplicationFactor { get; }
         /// <summary>
+        /// Get or set the poll timeout to be used for <see cref="IKNetConsumer{K, V}.ConsumeAsync(long)"/>
+        /// </summary>
+        long ConsumePollTimeout { get; }
+        /// <summary>
         /// Get or set <see cref="TopicConfigBuilder"/> to use when topic is created for the first time
         /// </summary>
         TopicConfigBuilder TopicConfig { get; }
@@ -241,6 +245,10 @@ namespace MASES.KNet.Replicator
     public class KNetCompactedReplicator<TKey, TValue> : IKNetCompactedReplicator<TKey, TValue>
         where TValue : class
     {
+        const long InitialLagState = -2;
+        const long NotPresentLagState = -1;
+        const long InvalidLagState = -3;
+
         #region Local storage data
 
         interface ILocalDataStorage
@@ -453,7 +461,7 @@ namespace MASES.KNet.Replicator
 
         private bool _consumerPollRun = false;
         private Thread[] _consumerPollThreads = null;
-        private IAdmin _admin = null;
+        private ManualResetEvent[] _consumerPollThreadWaiter = null;
         private ConcurrentDictionary<TKey, ILocalDataStorage> _dictionary = new ConcurrentDictionary<TKey, ILocalDataStorage>();
         private KNetCompactedConsumerRebalanceListener[] _consumerListeners = null;
         private KNetConsumer<TKey, TValue>[] _consumers = null;
@@ -465,6 +473,7 @@ namespace MASES.KNet.Replicator
         private int _partitions = 1;
         private int? _consumerInstances = null;
         private short _replicationFactor = 1;
+        private long _consumePollTimeout = 10;
         private TopicConfigBuilder _topicConfig = null;
         private ConsumerConfigBuilder _consumerConfig = null;
         private ProducerConfigBuilder _producerConfig = null;
@@ -474,6 +483,7 @@ namespace MASES.KNet.Replicator
         private Tuple<TKey, ManualResetEvent> _OnConsumeSyncWaiter = null;
         private System.Collections.Generic.Dictionary<int, System.Collections.Generic.IList<int>> _consumerAssociatedPartition = new();
         private ManualResetEvent[] _assignmentWaiters;
+        private bool[] _assignmentWaitersStatus;
         private long[] _lastPartitionLags = null;
 
         private IKNetSerDes<TKey> _keySerDes = null;
@@ -530,6 +540,9 @@ namespace MASES.KNet.Replicator
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ReplicationFactor"/>
         public short ReplicationFactor { get { return _replicationFactor; } set { CheckStarted(); _replicationFactor = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ConsumePollTimeout"/>
+        public long ConsumePollTimeout { get { return _consumePollTimeout; } set { CheckStarted(); _consumePollTimeout = value; } }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.TopicConfig"/>
         public TopicConfigBuilder TopicConfig { get { return _topicConfig; } set { CheckStarted(); _topicConfig = value; } }
@@ -629,6 +642,7 @@ namespace MASES.KNet.Replicator
                 }
                 if (!_assignmentWaiters[partition].SafeWaitHandle.IsClosed)
                 {
+                    lock (_assignmentWaitersStatus) { _assignmentWaitersStatus[partition] = true; }
                     _assignmentWaiters[partition].Set();
                 }
             }
@@ -645,6 +659,7 @@ namespace MASES.KNet.Replicator
                 }
                 if (!_assignmentWaiters[partition].SafeWaitHandle.IsClosed)
                 {
+                    lock (_assignmentWaitersStatus) { _assignmentWaitersStatus[partition] = false; }
                     _assignmentWaiters[partition].Reset();
                 }
             }
@@ -661,6 +676,7 @@ namespace MASES.KNet.Replicator
                 }
                 if (!_assignmentWaiters[partition].SafeWaitHandle.IsClosed)
                 {
+                    lock (_assignmentWaitersStatus) { _assignmentWaitersStatus[partition] = false; }
                     _assignmentWaiters[partition].Reset();
                 }
             }
@@ -769,7 +785,10 @@ namespace MASES.KNet.Replicator
                                                      .WithAllowAutoCreateTopics(false);
 
             ConsumerConfig.BootstrapServers = BootstrapServers;
-            ConsumerConfig.GroupId = GroupId;
+            if (!ConsumerConfig.ExistProperty(Org.Apache.Kafka.Clients.CommonClientConfigs.GROUP_ID_CONFIG))
+            {
+                ConsumerConfig.GroupId = GroupId;
+            }
             if (ConsumerConfig.CanApplyBasicDeserializer<TKey>() && KeySerDes == null)
             {
                 KeySerDes = new KNetSerDes<TKey>();
@@ -785,14 +804,16 @@ namespace MASES.KNet.Replicator
             if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external deserializer, set ValueSerDes.");
 
             _assignmentWaiters = new ManualResetEvent[Partitions];
+            _assignmentWaitersStatus = new bool[Partitions];
             _lastPartitionLags = new long[Partitions];
             _consumers = new KNetConsumer<TKey, TValue>[ConsumersToAllocate()];
             _consumerListeners = new KNetCompactedConsumerRebalanceListener[ConsumersToAllocate()];
 
             for (int i = 0; i < Partitions; i++)
             {
-                _lastPartitionLags[i] = -2;
+                _lastPartitionLags[i] = InitialLagState;
                 _assignmentWaiters[i] = new ManualResetEvent(false);
+                _assignmentWaitersStatus[i] = false;
             }
 
             for (int i = 0; i < ConsumersToAllocate(); i++)
@@ -847,38 +868,42 @@ namespace MASES.KNet.Replicator
 
         void ConsumerPollHandler(object o)
         {
+            bool firstExecution = false;
             int index = (int)o;
             var topics = Collections.Singleton(StateName);
             try
             {
                 _consumers[index].Subscribe(topics, _consumerListeners[index]);
+                _consumerPollThreadWaiter[index].Set();
                 while (_consumerPollRun)
                 {
                     try
                     {
-                        _consumers[index].ConsumeAsync(100);
+                        _consumers[index].ConsumeAsync(ConsumePollTimeout);
+                        if (!firstExecution) { _consumers[index].GroupMetadata(); firstExecution = true; }
                         lock (_consumerAssociatedPartition)
                         {
                             foreach (var partitionIndex in _consumerAssociatedPartition[index])
                             {
                                 bool execute = false;
                                 if (_assignmentWaiters[partitionIndex].SafeWaitHandle.IsClosed) continue;
-                                else execute = _assignmentWaiters[partitionIndex].WaitOne(0);
+                                else execute = _assignmentWaitersStatus[partitionIndex];
                                 if (execute)
                                 {
                                     try
                                     {
                                         var lag = _consumers[index].CurrentLag(new TopicPartition(StateName, partitionIndex));
-                                        Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], lag.IsPresent() ? lag.AsLong : -1);
+                                        Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], lag.IsPresent() ? lag.AsLong : NotPresentLagState);
                                     }
                                     catch (Java.Lang.IllegalStateException)
                                     {
-                                        Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], -1);
+                                        Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], InvalidLagState);
                                     }
                                 }
                             }
                         }
                     }
+                    catch (WakeupException) { return; }
                     catch { }
                 }
             }
@@ -901,8 +926,8 @@ namespace MASES.KNet.Replicator
 
             if (ConsumerInstances > Partitions) throw new InvalidOperationException("ConsumerInstances cannot be high than Partitions");
 
-            Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
-            _admin = KafkaAdminClient.Create(props);
+            using Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
+            using var admin = KafkaAdminClient.Create(props);
 
             if (AccessRights.HasFlag(AccessRightsType.Write))
             {
@@ -916,7 +941,7 @@ namespace MASES.KNet.Replicator
                 topic = topic.Configs(TopicConfig);
                 try
                 {
-                    _admin.CreateTopic(topic);
+                    admin.CreateTopic(topic);
                 }
                 catch (TopicExistsException)
                 {
@@ -924,7 +949,7 @@ namespace MASES.KNet.Replicator
                     // recover partitions of the topic
                     try
                     {
-                        var result = _admin.DescribeTopics(topics);
+                        var result = admin.DescribeTopics(topics);
                         if (result != null)
                         {
                             var map = result.AllTopicNames().Get();
@@ -935,15 +960,10 @@ namespace MASES.KNet.Replicator
                             }
                         }
                     }
-                    catch
-                    {
-
-                    }
-                    finally
-                    {
-                        topics?.Dispose();
-                    }
+                    catch { }
+                    finally { topics?.Dispose(); }
                 }
+                finally { topic?.Dispose(); }
             }
 
             if (AccessRights.HasFlag(AccessRightsType.Read))
@@ -960,10 +980,21 @@ namespace MASES.KNet.Replicator
             {
                 _consumerPollRun = true;
                 _consumerPollThreads = new Thread[ConsumersToAllocate()];
+                _consumerPollThreadWaiter = new ManualResetEvent[ConsumersToAllocate()];
                 for (int i = 0; i < ConsumersToAllocate(); i++)
                 {
+                    _consumerPollThreadWaiter[i] = new ManualResetEvent(false);
                     _consumerPollThreads[i] = new Thread(ConsumerPollHandler);
                     _consumerPollThreads[i].Start(i);
+                }
+                if (WaitHandle.WaitAll(_consumerPollThreadWaiter))
+                {
+                    for (int i = 0; i < _consumerPollThreadWaiter.Length; i++)
+                    {
+                        _consumerPollThreadWaiter[i].Dispose();
+                        _consumerPollThreadWaiter[i] = null;
+                    }
+                    _consumerPollThreadWaiter = null;
                 }
             }
 
@@ -984,7 +1015,17 @@ namespace MASES.KNet.Replicator
         {
             ValidateAccessRights(AccessRightsType.Read);
             ValidateStarted();
-            return WaitHandle.WaitAll(_assignmentWaiters, timeout);
+            bool status = false;
+            do
+            {
+                if (WaitHandle.WaitAll(_assignmentWaiters, timeout))
+                {
+                    status = _assignmentWaitersStatus.All((o) => o == true);
+                }
+                else break;
+            }
+            while (!status);
+            return status;
         }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.SyncWait(int)"/>
@@ -1003,9 +1044,9 @@ namespace MASES.KNet.Replicator
                     foreach (var partitionIndex in _consumerAssociatedPartition[i])
                     {
                         var partitionLag = Interlocked.Read(ref _lastPartitionLags[partitionIndex]);
-                        lagInSync &= partitionLag == 0 || partitionLag == -1;
+                        lagInSync &= partitionLag == 0; // || partitionLag == NotPresentLagState;
                     }
-                    syncs[i] = _consumers[i].IsEmpty && lagInSync;
+                    syncs[i] = _consumers[i].IsEmpty && !_consumers[i].IsCompleting && lagInSync;
                 }
                 sync = syncs.All(x => x == true);
             }
@@ -1294,6 +1335,21 @@ namespace MASES.KNet.Replicator
             }
 
             _started = false;
+        }
+
+        #endregion
+
+        #region Object methods
+        /// <inheritdoc cref="object.ToString"/>
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new();
+            for (int i = 0; i < _lastPartitionLags.Length; i++)
+            {
+                stringBuilder.AppendFormat("P{0}: {1} ", i, Interlocked.Read(ref _lastPartitionLags[i]));
+            }
+
+            return $"StateName: {StateName} - Current elements: {Count} - Consumers: {ConsumersToAllocate()} - Partitions: {Partitions} - Lags: {stringBuilder.ToString()}";
         }
 
         #endregion
