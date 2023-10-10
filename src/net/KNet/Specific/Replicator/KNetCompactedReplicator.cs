@@ -773,7 +773,10 @@ namespace MASES.KNet.Replicator
                                                      .WithAllowAutoCreateTopics(false);
 
             ConsumerConfig.BootstrapServers = BootstrapServers;
-            ConsumerConfig.GroupId = GroupId;
+            if (!ConsumerConfig.ExistProperty(Org.Apache.Kafka.Clients.CommonClientConfigs.GROUP_ID_CONFIG))
+            {
+                ConsumerConfig.GroupId = GroupId;
+            }
             if (ConsumerConfig.CanApplyBasicDeserializer<TKey>() && KeySerDes == null)
             {
                 KeySerDes = new KNetSerDes<TKey>();
