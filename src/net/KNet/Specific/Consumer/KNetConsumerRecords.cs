@@ -45,6 +45,14 @@ namespace MASES.KNet.Consumer
             _keyDeserializer = keyDeserializer;
             _valueDeserializer = valueDeserializer;
         }
+        /// <summary>
+        /// <see langword="true"/> if the <see cref="KNetConsumerRecords{K, V}"/> is empty
+        /// </summary>
+        public bool IsEmpty => _records.IsEmpty();
+        /// <summary>
+        /// The number of elements in <see cref="KNetConsumerRecords{K, V}"/>
+        /// </summary>
+        public int Count => _records.Count();
 
         IEnumerator<KNetConsumerRecord<K, V>> IEnumerable<KNetConsumerRecord<K, V>>.GetEnumerator()
         {
