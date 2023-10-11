@@ -13,14 +13,24 @@
     href: https://masesgroup.github.io/sinapse/
   - name: JCOBridge
     href: https://masesgroup.github.io/JCOBridge/
+  - name: JNet
+    href: https://masesgroup.github.io/JNet/
+  - name: KNet
+    href: https://masesgroup.github.io/KNet/
+  - name: KEFCore
+    href: https://masesgroup.github.io/KEFCore/
+  - name: KNetOPC
+    href: https://masesgroup.github.io/KNetOPC/
   - name: JCOReflector
     href: https://masesgroup.github.io/JCOReflector/
-  - name: DDMChat
-    href: https://masesgroup.github.io/DDMChat/
+  - name: NuReflector
+    href: https://masesgroup.github.io/NuReflector/
+  - name: DataDistributionManager
+    href: https://masesgroup.github.io/DataDistributionManager/
+  - name: CLIParser
+    href: https://masesgroup.github.io/CLIParser/
   - name: JCO SWT Bridge
     href: https://masesgroup.github.io/JCOSWTBridge/
-  - name: JCOBridge Examples
-    href: https://masesgroup.github.io/JCOBridge-Examples   
 - name: External links
   dropdown: true
   items:
