@@ -41,7 +41,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <classpathfile>${basedir}/classpathfile.classpath</classpathfile>
         <kafkaVersion>3.6.0</kafkaVersion>
-        <knetVersion>2.1.2.0</knetVersion>
+        <knetVersion>2.1.3.0</knetVersion>
         <jcobridgeVersion>2.5.8</jcobridgeVersion>
     </properties>
     <distributionManagement>
