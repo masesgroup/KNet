@@ -46,7 +46,7 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 ## Summary
 
 * [Roadmap](articles/roadmap.md)
-* [Actual state](articles/actualstate.md)
+* [Current state](articles/currentstate.md)
 * [Performance](articles/performance.md)
 * [Connect SDK](articles/connectSDK.md)
 * [KNet usage](articles/usage.md)
