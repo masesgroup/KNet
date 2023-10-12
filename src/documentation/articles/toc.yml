@@ -2,8 +2,8 @@
   href: intro.md
 - name: KNet Roadmap
   href: roadmap.md
-- name: KNet Actual state
-  href: actualstate.md
+- name: KNet current state
+  href: currentstate.md
 - name: KNet Performance
   href: performance.md
 - name: KNet APIs extendibility
