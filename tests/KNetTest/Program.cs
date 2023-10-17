@@ -180,7 +180,7 @@ namespace MASES.KNetTest
                                                         .ToProperties();
 
                 KNetSerDes<string> keySerializer = new KNetSerDes<string>();
-                JsonSerDes<TestType> valueSerializer = new JsonSerDes<TestType>();
+                JsonSerDes.Value<TestType> valueSerializer = new JsonSerDes.Value<TestType>();
                 try
                 {
                     using (var producer = new KNetProducer<string, TestType>(props, keySerializer, valueSerializer))
@@ -248,7 +248,7 @@ namespace MASES.KNetTest
                                                         .ToProperties();
 
                 KNetSerDes<string> keyDeserializer = new KNetSerDes<string>();
-                KNetSerDes<TestType> valueDeserializer = new JsonSerDes<TestType>();
+                KNetSerDes<TestType> valueDeserializer = new JsonSerDes.Value<TestType>();
                 ConsumerRebalanceListener rebalanceListener = null;
                 KNetConsumer<string, TestType> consumer = null;
 
