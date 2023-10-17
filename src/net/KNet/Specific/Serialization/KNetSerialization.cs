@@ -24,6 +24,7 @@ using Org.Apache.Kafka.Common.Errors;
 using Org.Apache.Kafka.Common.Serialization;
 using Org.Apache.Kafka.Common.Utils;
 using System;
+using System.Reflection;
 using System.Text;
 
 namespace MASES.KNet.Serialization
@@ -33,6 +34,32 @@ namespace MASES.KNet.Serialization
     /// </summary>
     public static class KNetSerialization
     {
+        /// <summary>
+        /// Identity the type of the key used
+        /// </summary>
+        public const string KeyTypeIdentifier = "key-type";
+        /// <summary>
+        /// Identity the serializer for the key
+        /// </summary>
+        public const string KeySerializerIdentifier = "key-serializer-type";
+        /// <summary>
+        /// Identity the type of the value used
+        /// </summary>
+        public const string ValueTypeIdentifier = "value-type";
+        /// <summary>
+        /// Identity the serializer for the ValueContainer
+        /// </summary>
+        public const string ValueSerializerIdentifier = "value-serializer-type";
+        /// <summary>
+        /// Returns the typename with the assembly qualification to help reload better the types
+        /// </summary>
+        /// <param name="type">The <see cref="Type"/> to be converted</param>
+        /// <returns>A string with <see cref="Type.FullName"/> along with <see cref="Assembly.FullName"/></returns>
+        public static string ToAssemblyQualified(this Type type)
+        {
+            return $"{type.FullName}, {type.Assembly.GetName().Name}";
+        }
+
         /// <summary>
         /// Serializer types
         /// </summary>

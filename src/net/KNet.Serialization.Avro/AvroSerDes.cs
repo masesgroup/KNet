@@ -17,39 +17,126 @@
 */
 
 using Org.Apache.Kafka.Common.Header;
+using System.Text;
 
 namespace MASES.KNet.Serialization.Avro
 {
     /// <summary>
-    /// Avro extension of <see cref="KNetSerDes{T}"/>, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+    /// Base class to define extensions of <see cref="KNetSerDes{T}"/> for Avro, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class AvroSerDes<T> : KNetSerDes<T>
+    public static class AvroSerDes
     {
         /// <summary>
-        /// The extension uses <see cref="Headers"/>
+        /// Avro extension of <see cref="KNetSerDes{T}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
-        public override bool UseHeaders => true;
-        /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
-        public override byte[] Serialize(string topic, T data)
+        /// <typeparam name="T"></typeparam>
+        public class Key<T> : KNetSerDes<T>
         {
-            return SerializeWithHeaders(topic, null, data);
+            readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(Key<>).ToAssemblyQualified());
+            readonly byte[] keyTypeName = null;
+            readonly IKNetSerDes<T> _defaultSerDes = default!;
+            /// <inheritdoc/>
+            public override bool UseHeaders => true;
+            /// <summary>
+            /// Default initializer
+            /// </summary>
+            public Key()
+            {
+                if (KNetSerialization.IsInternalManaged<T>())
+                {
+                    _defaultSerDes = new KNetSerDes<T>();
+                    keyTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
+                }
+                else
+                {
+                    keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
+                }
+            }
+            /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
+            public override byte[] Serialize(string topic, T data)
+            {
+                return SerializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
+            public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
+            {
+                headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
+                headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
+
+                if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
+
+                throw new System.NotImplementedException();
+            }
+            /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
+            public override T Deserialize(string topic, byte[] data)
+            {
+                return DeserializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
+            public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
+            {
+                if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
+                if (data == null) return default;
+
+                throw new System.NotImplementedException();
+            }
         }
-        /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
-        public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
+
+        /// <summary>
+        /// Avro extension of <see cref="KNetSerDes{T}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public class Value<T> : KNetSerDes<T>
         {
-            throw new System.NotImplementedException();
-        }
-        /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
-        public override T Deserialize(string topic, byte[] data)
-        {
-            return DeserializeWithHeaders(topic, null, data);
-        }
-        /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
-        public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
-        {
-            if (data == null) return default;
-            throw new System.NotImplementedException();
+            readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(Value<>).ToAssemblyQualified());
+            readonly byte[] valueTypeName = null!;
+            readonly IKNetSerDes<T> _defaultSerDes = default!;
+            /// <inheritdoc/>
+            public override bool UseHeaders => true;
+            /// <summary>
+            /// Default initializer
+            /// </summary>
+            public Value()
+            {
+                if (KNetSerialization.IsInternalManaged<T>())
+                {
+                    _defaultSerDes = new KNetSerDes<T>();
+                    valueTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
+                }
+                else
+                {
+                    valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
+                }
+            }
+            /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
+            public override byte[] Serialize(string topic, T data)
+            {
+                return SerializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
+            public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
+            {
+                headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
+                headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
+
+                if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
+
+                throw new System.NotImplementedException();
+            }
+            /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
+            public override T Deserialize(string topic, byte[] data)
+            {
+                return DeserializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
+            public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
+            {
+                if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
+
+                if (data == null) return default;
+
+                throw new System.NotImplementedException();
+            }
         }
     }
 }
