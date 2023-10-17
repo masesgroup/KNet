@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using global::Avro;
 using global::Avro.IO;
 using global::Avro.Specific;
 using Org.Apache.Kafka.Common.Header;
@@ -39,16 +40,16 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Key extension of <see cref="KNetSerDes{T}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Binary<T> : KNetSerDes<T> where T : class, new()
+            public class Binary<T> : KNetSerDes<T> where T : new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
-                /// Use this property to set the <see cref="global::Avro.Schema"/> of <typeparamref name="T"/>
+                /// Use this property to get the <see cref="global::Avro.Schema"/> of <typeparamref name="T"/>
                 /// </summary>
                 public global::Avro.Schema Schema
                 {
                     get { return _schema; }
-                    set
+                    private set
                     {
                         _schema = value;
                         SpecificWriter = new SpecificDefaultWriter(_schema); 
@@ -76,6 +77,15 @@ namespace MASES.KNet.Serialization.Avro
                     }
                     else
                     {
+                        var t = new T();
+                        if (t is global::Avro.Specific.ISpecificRecord tRecord)
+                        {
+                            Schema = tRecord.Schema;
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException($"Cannot manage {typeof(T).ToAssemblyQualified()} because it does not implement {typeof(global::Avro.Specific.ISpecificRecord).FullName}");
+                        }
                         keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                     }
                 }
@@ -123,16 +133,16 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Key extension of <see cref="KNetSerDes{T}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Json<T> : KNetSerDes<T> where T : class, new()
+            public class Json<T> : KNetSerDes<T> where T : new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
-                /// Use this property to set the <see cref="global::Avro.Schema"/> of <typeparamref name="T"/>
+                /// Use this property to get the <see cref="global::Avro.Schema"/> of <typeparamref name="T"/>
                 /// </summary>
                 public global::Avro.Schema Schema
                 {
                     get { return _schema; }
-                    set
+                    private set
                     {
                         _schema = value;
                         SpecificWriter = new SpecificDefaultWriter(_schema);
@@ -160,6 +170,15 @@ namespace MASES.KNet.Serialization.Avro
                     }
                     else
                     {
+                        var t = new T();
+                        if (t is global::Avro.Specific.ISpecificRecord tRecord)
+                        {
+                            Schema = tRecord.Schema;
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException($"Cannot manage {typeof(T).ToAssemblyQualified()} because it does not implement {typeof(global::Avro.Specific.ISpecificRecord).FullName}");
+                        }
                         keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                     }
                 }
@@ -214,16 +233,16 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Value extension of <see cref="KNetSerDes{T}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Binary<T> : KNetSerDes<T> where T : class, new()
+            public class Binary<T> : KNetSerDes<T> where T : new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
-                /// Use this property to set the <see cref="global::Avro.Schema"/> of <typeparamref name="T"/>
+                /// Use this property to get the <see cref="global::Avro.Schema"/> of <typeparamref name="T"/>
                 /// </summary>
                 public global::Avro.Schema Schema
                 {
                     get { return _schema; }
-                    set
+                    private set
                     {
                         _schema = value;
                         SpecificWriter = new SpecificDefaultWriter(_schema);
@@ -251,6 +270,15 @@ namespace MASES.KNet.Serialization.Avro
                     }
                     else
                     {
+                        var t = new T();
+                        if (t is global::Avro.Specific.ISpecificRecord tRecord)
+                        {
+                            Schema = tRecord.Schema;
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException($"Cannot manage {typeof(T).ToAssemblyQualified()} because it does not implement {typeof(global::Avro.Specific.ISpecificRecord).FullName}");
+                        }
                         valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                     }
                 }
@@ -299,16 +327,16 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Value extension of <see cref="KNetSerDes{T}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Json<T> : KNetSerDes<T> where T : class, new()
+            public class Json<T> : KNetSerDes<T> where T : new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
-                /// Use this property to set the <see cref="global::Avro.Schema"/> of <typeparamref name="T"/>
+                /// Use this property to get the <see cref="global::Avro.Schema"/> of <typeparamref name="T"/>
                 /// </summary>
                 public global::Avro.Schema Schema
                 {
                     get { return _schema; }
-                    set
+                    private set
                     {
                         _schema = value;
                         SpecificWriter = new SpecificDefaultWriter(_schema);
@@ -336,6 +364,15 @@ namespace MASES.KNet.Serialization.Avro
                     }
                     else
                     {
+                        var t = new T();
+                        if (t is global::Avro.Specific.ISpecificRecord tRecord)
+                        {
+                            Schema = tRecord.Schema;
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException($"Cannot manage {typeof(T).ToAssemblyQualified()} because it does not implement {typeof(global::Avro.Specific.ISpecificRecord).FullName}");
+                        }
                         valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                     }
                 }

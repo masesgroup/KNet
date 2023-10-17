@@ -17,7 +17,7 @@
 */
 
 using Org.Apache.Kafka.Common.Header;
-using MessagePack;
+using global::MessagePack;
 using System.IO;
 using System.Text;
 
@@ -37,6 +37,10 @@ namespace MASES.KNet.Serialization.MessagePack
             readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(Key<>).ToAssemblyQualified());
             readonly byte[] keyTypeName = null;
             readonly IKNetSerDes<T> _defaultSerDes = default!;
+            /// <summary>
+            /// Get or set the <see cref="global::MessagePack.MessagePackSerializerOptions"/> to be used, default is <see langword="null"/>
+            /// </summary>
+            public MessagePackSerializerOptions MessagePackSerializerOptions { get; set; } = null;
             /// <inheritdoc/>
             public override bool UseHeaders => true;
             /// <summary>
@@ -67,7 +71,7 @@ namespace MASES.KNet.Serialization.MessagePack
 
                 if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
 
-                return MessagePackSerializer.Serialize(data);
+                return MessagePackSerializer.Serialize(data, MessagePackSerializerOptions);
             }
             /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
             public override T Deserialize(string topic, byte[] data)
@@ -81,7 +85,7 @@ namespace MASES.KNet.Serialization.MessagePack
                 if (data == null) return default;
                 using (MemoryStream stream = new MemoryStream(data))
                 {
-                    return MessagePackSerializer.Deserialize<T>(stream);
+                    return MessagePackSerializer.Deserialize<T>(stream, MessagePackSerializerOptions);
                 }
             }
         }
@@ -95,6 +99,10 @@ namespace MASES.KNet.Serialization.MessagePack
             readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(Value<>).ToAssemblyQualified());
             readonly byte[] valueTypeName = null!;
             readonly IKNetSerDes<T> _defaultSerDes = default!;
+            /// <summary>
+            /// Get or set the <see cref="global::MessagePack.MessagePackSerializerOptions"/> to be used, default is <see langword="null"/>
+            /// </summary>
+            public MessagePackSerializerOptions MessagePackSerializerOptions { get; set; } = null;
             /// <inheritdoc/>
             public override bool UseHeaders => true;
             /// <summary>
@@ -125,7 +133,7 @@ namespace MASES.KNet.Serialization.MessagePack
 
                 if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
 
-                return MessagePackSerializer.Serialize(data);
+                return MessagePackSerializer.Serialize(data, MessagePackSerializerOptions);
             }
             /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
             public override T Deserialize(string topic, byte[] data)
@@ -140,7 +148,7 @@ namespace MASES.KNet.Serialization.MessagePack
                 if (data == null) return default;
                 using (MemoryStream stream = new MemoryStream(data))
                 {
-                    return MessagePackSerializer.Deserialize<T>(stream);
+                    return MessagePackSerializer.Deserialize<T>(stream, MessagePackSerializerOptions);
                 }
             }
         }
