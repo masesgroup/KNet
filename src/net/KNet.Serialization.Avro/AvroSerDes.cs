@@ -32,6 +32,44 @@ namespace MASES.KNet.Serialization.Avro
     public static class AvroSerDes
     {
         /// <summary>
+        /// Compiler support to build C# files from Avro schema files
+        /// </summary>
+        public static class CompilerSupport
+        {
+            /// <summary>
+            /// Builds schema files into <paramref name="outputFolder"/> from schema strings in <paramref name="schemas"/>
+            /// </summary>
+            /// <param name="outputFolder">The output folder</param>
+            /// <param name="schemas">The Avro schemas</param>
+            public static void BuildSchemaClasses(string outputFolder, params string[] schemas)
+            {
+                var codegen = new CodeGen();
+                foreach (var schema in schemas)
+                {
+                    codegen.AddSchema(schema);
+                }
+                codegen.GenerateCode();
+                codegen.WriteTypes(outputFolder, true);
+            }
+            /// <summary>
+            /// Builds schema files into <paramref name="outputFolder"/> from schema files in <paramref name="schemaFiles"/>
+            /// </summary>
+            /// <param name="outputFolder">The output folder</param>
+            /// <param name="schemaFiles">The Avro schema files</param>
+            public static void BuildSchemaClassesFromFiles(string outputFolder, params string[] schemaFiles)
+            {
+                var codegen = new CodeGen();
+                foreach (var schemaFile in schemaFiles)
+                {
+                    var schema = File.ReadAllText(schemaFile);
+                    codegen.AddSchema(schema);
+                }
+                codegen.GenerateCode();
+                codegen.WriteTypes(outputFolder, true);
+            }
+        }
+
+        /// <summary>
         /// Base class to define Key extensions of <see cref="KNetSerDes{T}"/>, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         public static class Key
@@ -40,7 +78,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Key extension of <see cref="KNetSerDes{T}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Binary<T> : KNetSerDes<T> where T : new()
+            public class Binary<T> : KNetSerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -52,7 +90,7 @@ namespace MASES.KNet.Serialization.Avro
                     private set
                     {
                         _schema = value;
-                        SpecificWriter = new SpecificDefaultWriter(_schema); 
+                        SpecificWriter = new SpecificDefaultWriter(_schema);
                         SpecificReader = new SpecificDefaultReader(_schema, _schema);
                     }
                 }
@@ -61,8 +99,7 @@ namespace MASES.KNet.Serialization.Avro
                 SpecificDefaultReader SpecificReader = null;
 
                 readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(Binary<>).ToAssemblyQualified());
-                readonly byte[] keyTypeName = null;
-                readonly IKNetSerDes<T> _defaultSerDes = default!;
+                readonly byte[] keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                 /// <inheritdoc/>
                 public override bool UseHeaders => true;
                 /// <summary>
@@ -70,24 +107,8 @@ namespace MASES.KNet.Serialization.Avro
                 /// </summary>
                 public Binary()
                 {
-                    if (KNetSerialization.IsInternalManaged<T>())
-                    {
-                        _defaultSerDes = new KNetSerDes<T>();
-                        keyTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
-                    }
-                    else
-                    {
-                        var t = new T();
-                        if (t is global::Avro.Specific.ISpecificRecord tRecord)
-                        {
-                            Schema = tRecord.Schema;
-                        }
-                        else
-                        {
-                            throw new InvalidOperationException($"Cannot manage {typeof(T).ToAssemblyQualified()} because it does not implement {typeof(global::Avro.Specific.ISpecificRecord).FullName}");
-                        }
-                        keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
-                    }
+                    var tRecord = new T();
+                    Schema = tRecord.Schema;
                 }
                 /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
                 public override byte[] Serialize(string topic, T data)
@@ -99,10 +120,6 @@ namespace MASES.KNet.Serialization.Avro
                 {
                     headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
                     headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
-
-                    if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
-
-                    if (SpecificWriter == null) throw new InvalidOperationException("Set property Schema before use this serializer");
 
                     using MemoryStream memStream = new();
                     BinaryEncoder encoder = new(memStream);
@@ -117,10 +134,7 @@ namespace MASES.KNet.Serialization.Avro
                 /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
                 public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
-                    if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
                     if (data == null) return default;
-
-                    if (SpecificReader == null) throw new InvalidOperationException("Set property Schema before use this serializer");
 
                     using MemoryStream memStream = new(data);
                     BinaryDecoder decoder = new(memStream);
@@ -133,7 +147,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Key extension of <see cref="KNetSerDes{T}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Json<T> : KNetSerDes<T> where T : new()
+            public class Json<T> : KNetSerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -154,8 +168,7 @@ namespace MASES.KNet.Serialization.Avro
                 SpecificDefaultReader SpecificReader = null;
 
                 readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(Json<>).ToAssemblyQualified());
-                readonly byte[] keyTypeName = null;
-                readonly IKNetSerDes<T> _defaultSerDes = default!;
+                readonly byte[] keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                 /// <inheritdoc/>
                 public override bool UseHeaders => true;
                 /// <summary>
@@ -163,24 +176,8 @@ namespace MASES.KNet.Serialization.Avro
                 /// </summary>
                 public Json()
                 {
-                    if (KNetSerialization.IsInternalManaged<T>())
-                    {
-                        _defaultSerDes = new KNetSerDes<T>();
-                        keyTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
-                    }
-                    else
-                    {
-                        var t = new T();
-                        if (t is global::Avro.Specific.ISpecificRecord tRecord)
-                        {
-                            Schema = tRecord.Schema;
-                        }
-                        else
-                        {
-                            throw new InvalidOperationException($"Cannot manage {typeof(T).ToAssemblyQualified()} because it does not implement {typeof(global::Avro.Specific.ISpecificRecord).FullName}");
-                        }
-                        keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
-                    }
+                    var tRecord = new T();
+                    Schema = tRecord.Schema;
                 }
                 /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
                 public override byte[] Serialize(string topic, T data)
@@ -192,10 +189,6 @@ namespace MASES.KNet.Serialization.Avro
                 {
                     headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
                     headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
-
-                    if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
-
-                    if (SpecificWriter == null) throw new InvalidOperationException("Set property Schema before use this serializer");
 
                     using MemoryStream memStream = new();
                     JsonEncoder encoder = new(Schema, memStream);
@@ -210,10 +203,7 @@ namespace MASES.KNet.Serialization.Avro
                 /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
                 public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
-                    if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
                     if (data == null) return default;
-
-                    if (SpecificReader == null) throw new InvalidOperationException("Set property Schema before use this serializer");
 
                     using MemoryStream memStream = new(data);
                     JsonDecoder decoder = new(Schema, memStream);
@@ -233,7 +223,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Value extension of <see cref="KNetSerDes{T}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Binary<T> : KNetSerDes<T> where T : new()
+            public class Binary<T> : KNetSerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -254,8 +244,7 @@ namespace MASES.KNet.Serialization.Avro
                 SpecificDefaultReader SpecificReader = null;
 
                 readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(Binary<>).ToAssemblyQualified());
-                readonly byte[] valueTypeName = null!;
-                readonly IKNetSerDes<T> _defaultSerDes = default!;
+                readonly byte[] valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                 /// <inheritdoc/>
                 public override bool UseHeaders => true;
                 /// <summary>
@@ -263,24 +252,8 @@ namespace MASES.KNet.Serialization.Avro
                 /// </summary>
                 public Binary()
                 {
-                    if (KNetSerialization.IsInternalManaged<T>())
-                    {
-                        _defaultSerDes = new KNetSerDes<T>();
-                        valueTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
-                    }
-                    else
-                    {
-                        var t = new T();
-                        if (t is global::Avro.Specific.ISpecificRecord tRecord)
-                        {
-                            Schema = tRecord.Schema;
-                        }
-                        else
-                        {
-                            throw new InvalidOperationException($"Cannot manage {typeof(T).ToAssemblyQualified()} because it does not implement {typeof(global::Avro.Specific.ISpecificRecord).FullName}");
-                        }
-                        valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
-                    }
+                    var tRecord = new T();
+                    Schema = tRecord.Schema;
                 }
                 /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
                 public override byte[] Serialize(string topic, T data)
@@ -292,10 +265,6 @@ namespace MASES.KNet.Serialization.Avro
                 {
                     headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
                     headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
-
-                    if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
-
-                    if (SpecificWriter == null) throw new InvalidOperationException("Set property Schema before use this serializer");
 
                     using MemoryStream memStream = new();
                     BinaryEncoder encoder = new(memStream);
@@ -310,11 +279,7 @@ namespace MASES.KNet.Serialization.Avro
                 /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
                 public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
-                    if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
-
                     if (data == null) return default;
-
-                    if (SpecificReader == null) throw new InvalidOperationException("Set property Schema before use this serializer");
 
                     using MemoryStream memStream = new(data);
                     BinaryDecoder decoder = new(memStream);
@@ -327,7 +292,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Value extension of <see cref="KNetSerDes{T}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Json<T> : KNetSerDes<T> where T : new()
+            public class Json<T> : KNetSerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -348,8 +313,7 @@ namespace MASES.KNet.Serialization.Avro
                 SpecificDefaultReader SpecificReader = null;
 
                 readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(Json<>).ToAssemblyQualified());
-                readonly byte[] valueTypeName = null!;
-                readonly IKNetSerDes<T> _defaultSerDes = default!;
+                readonly byte[] valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                 /// <inheritdoc/>
                 public override bool UseHeaders => true;
                 /// <summary>
@@ -357,24 +321,8 @@ namespace MASES.KNet.Serialization.Avro
                 /// </summary>
                 public Json()
                 {
-                    if (KNetSerialization.IsInternalManaged<T>())
-                    {
-                        _defaultSerDes = new KNetSerDes<T>();
-                        valueTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
-                    }
-                    else
-                    {
-                        var t = new T();
-                        if (t is global::Avro.Specific.ISpecificRecord tRecord)
-                        {
-                            Schema = tRecord.Schema;
-                        }
-                        else
-                        {
-                            throw new InvalidOperationException($"Cannot manage {typeof(T).ToAssemblyQualified()} because it does not implement {typeof(global::Avro.Specific.ISpecificRecord).FullName}");
-                        }
-                        valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
-                    }
+                    var tRecord = new T();
+                    Schema = tRecord.Schema;
                 }
                 /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
                 public override byte[] Serialize(string topic, T data)
@@ -386,10 +334,6 @@ namespace MASES.KNet.Serialization.Avro
                 {
                     headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
                     headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
-
-                    if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
-
-                    if (SpecificWriter == null) throw new InvalidOperationException("Set property Schema before use this serializer");
 
                     using MemoryStream memStream = new();
                     JsonEncoder encoder = new(Schema, memStream);
@@ -404,11 +348,7 @@ namespace MASES.KNet.Serialization.Avro
                 /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
                 public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
-                    if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
-
                     if (data == null) return default;
-
-                    if (SpecificReader == null) throw new InvalidOperationException("Set property Schema before use this serializer");
 
                     using MemoryStream memStream = new(data);
                     JsonDecoder decoder = new(Schema, memStream);

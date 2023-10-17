@@ -20,6 +20,7 @@ using Org.Apache.Kafka.Common.Header;
 using global::MessagePack;
 using System.IO;
 using System.Text;
+using System;
 
 namespace MASES.KNet.Serialization.MessagePack
 {
@@ -35,8 +36,7 @@ namespace MASES.KNet.Serialization.MessagePack
         public class Key<T> : KNetSerDes<T>
         {
             readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(Key<>).ToAssemblyQualified());
-            readonly byte[] keyTypeName = null;
-            readonly IKNetSerDes<T> _defaultSerDes = default!;
+            readonly byte[] keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
             /// <summary>
             /// Get or set the <see cref="global::MessagePack.MessagePackSerializerOptions"/> to be used, default is <see langword="null"/>
             /// </summary>
@@ -50,12 +50,7 @@ namespace MASES.KNet.Serialization.MessagePack
             {
                 if (KNetSerialization.IsInternalManaged<T>())
                 {
-                    _defaultSerDes = new KNetSerDes<T>();
-                    keyTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
-                }
-                else
-                {
-                    keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
+                    throw new InvalidOperationException($"{typeof(T).Name} is a type managed from basic serializer, do not use {typeof(Key<T>).FullName}");
                 }
             }
             /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
@@ -69,8 +64,6 @@ namespace MASES.KNet.Serialization.MessagePack
                 headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
                 headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
 
-                if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
-
                 return MessagePackSerializer.Serialize(data, MessagePackSerializerOptions);
             }
             /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
@@ -81,7 +74,6 @@ namespace MASES.KNet.Serialization.MessagePack
             /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
             public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
             {
-                if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
                 if (data == null) return default;
                 using (MemoryStream stream = new MemoryStream(data))
                 {
@@ -97,8 +89,7 @@ namespace MASES.KNet.Serialization.MessagePack
         public class Value<T> : KNetSerDes<T>
         {
             readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(Value<>).ToAssemblyQualified());
-            readonly byte[] valueTypeName = null!;
-            readonly IKNetSerDes<T> _defaultSerDes = default!;
+            readonly byte[] valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
             /// <summary>
             /// Get or set the <see cref="global::MessagePack.MessagePackSerializerOptions"/> to be used, default is <see langword="null"/>
             /// </summary>
@@ -112,12 +103,7 @@ namespace MASES.KNet.Serialization.MessagePack
             {
                 if (KNetSerialization.IsInternalManaged<T>())
                 {
-                    _defaultSerDes = new KNetSerDes<T>();
-                    valueTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
-                }
-                else
-                {
-                    valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
+                    throw new InvalidOperationException($"{typeof(T).Name} is a type managed from basic serializer, do not use {typeof(Key<T>).FullName}");
                 }
             }
             /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
@@ -131,8 +117,6 @@ namespace MASES.KNet.Serialization.MessagePack
                 headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
                 headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
 
-                if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
-
                 return MessagePackSerializer.Serialize(data, MessagePackSerializerOptions);
             }
             /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
@@ -143,8 +127,6 @@ namespace MASES.KNet.Serialization.MessagePack
             /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
             public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
             {
-                if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
-
                 if (data == null) return default;
                 using (MemoryStream stream = new MemoryStream(data))
                 {

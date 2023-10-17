@@ -62,22 +62,24 @@ Some kind of serializers extension have specific needs will be listed below.
 ### Avro serializer
 
 The Avro serializer is based on [Apache.Avro](https://www.nuget.org/packages/Apache.Avro) package. The types managed are:
-- simple types are managed using standard Apache Kafka serializer
 - Avro types managed using the Avro library are Avro **record**s which:
   - Shall have a parameterless constructor
   - Shall conform to [ISpecificRecord](https://avro.apache.org/docs/1.11.1/api/csharp/html/interfaceAvro_1_1Specific_1_1ISpecificRecord.html)
 
+**NOTE**: simple types (the one that have an Apche Kafka default serializer) are not managed and will be refused
+
 ### MessagePack serializer
 
 The MessagePack serializer is based on [MessagePack](https://www.nuget.org/packages/MessagePack) package. The types managed are:
-- simple types are managed using standard Apache Kafka serializer
 - MessagePack types managed using the MessagePack library shall be MessagePack types.
+
+**NOTE**: simple types (the one that have an Apche Kafka default serializer) are not managed and will be refused
 
 ### Protobuf serializer
 
 The Protobuf serializer is based on [Google.Protobuf](https://www.nuget.org/packages/Google.Protobuf) package. The types managed are:
-- simple types are managed using standard Apache Kafka serializer
 - Protobuf types managed using the Protobuf library shall be messages types which:
   - Shall have a parameterless constructor
   - Shall conform to [`IMessage<T>`](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.IMessage-1)
 
+**NOTE**: simple types (the one that have an Apche Kafka default serializer) are not managed and will be refused
