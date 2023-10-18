@@ -136,19 +136,6 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_DSL_STORE_CONFIG"/>
-        /// </summary>
-        public string DefaultDSLStore { get { return GetProperty<string>(StreamsConfig.DEFAULT_DSL_STORE_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_DSL_STORE_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_DSL_STORE_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithDefaultDSLStore(string defaultDSLStore)
-        {
-            var clone = Clone();
-            clone.DefaultDSLStore = defaultDSLStore;
-            return clone;
-        }
-        /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG"/>
         /// </summary>
         [System.Obsolete("To be checked")]
@@ -218,6 +205,71 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="StreamsConfig.PROCESSING_GUARANTEE_CONFIG"/>: use <see cref="StreamsConfig.AT_LEAST_ONCE"/> or <see cref="StreamsConfig.EXACTLY_ONCE_V2"/>
+        /// </summary>
+        public string ProcessingGuarantee { get { return GetProperty<string>(StreamsConfig.PROCESSING_GUARANTEE_CONFIG); } set { SetProperty(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.PROCESSING_GUARANTEE_CONFIG"/>: use <see cref="StreamsConfig.AT_LEAST_ONCE"/> or <see cref="StreamsConfig.EXACTLY_ONCE_V2"/>
+        /// </summary>
+        public StreamsConfigBuilder WithProcessingGuarantee(string processingGuarantee)
+        {
+            var clone = Clone();
+            clone.ProcessingGuarantee = processingGuarantee;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG"/>
+        /// </summary>
+        public int RackAwareAssignmentNonOverlapCost { get { return GetProperty<int>(StreamsConfig.RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG); } set { SetProperty(StreamsConfig.RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithRackAwareAssignmentNonOverlapCost(int rackAwareAssignmentNonOverlapCost)
+        {
+            var clone = Clone();
+            clone.RackAwareAssignmentNonOverlapCost = rackAwareAssignmentNonOverlapCost;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIG"/>: use <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_STRATEGY_NONE"/> or <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_STRATEGY_MIN_TRAFFIC"/>
+        /// </summary>
+        public string RackAwareAssignmentStrategy { get { return GetProperty<string>(StreamsConfig.RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIG); } set { SetProperty(StreamsConfig.RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG"/>: use <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_STRATEGY_NONE"/> or <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_STRATEGY_MIN_TRAFFIC"/>
+        /// </summary>
+        public StreamsConfigBuilder WithRackAwareAssignmentStrategy(string rackAwareAssignmentStrategy)
+        {
+            var clone = Clone();
+            clone.RackAwareAssignmentStrategy = rackAwareAssignmentStrategy;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_TAGS_CONFIG"/>
+        /// </summary>
+        public Java.Util.List<string> RackAwareAssignmentTags { get { return GetProperty<Java.Util.List<string>>(StreamsConfig.RACK_AWARE_ASSIGNMENT_TAGS_CONFIG); } set { SetProperty(StreamsConfig.RACK_AWARE_ASSIGNMENT_TAGS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_TAGS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithRackAwareAssignmentTags(Java.Util.List<string> rackAwareAssignmentTags)
+        {
+            var clone = Clone();
+            clone.RackAwareAssignmentTags = rackAwareAssignmentTags;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIG"/>
+        /// </summary>
+        public int RackAwareAssignmentTrafficCost { get { return GetProperty<int>(StreamsConfig.RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIG); } set { SetProperty(StreamsConfig.RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithRackAwareAssignmentTrafficCost(int rackAwareAssignmentTrafficCost)
+        {
+            var clone = Clone();
+            clone.RackAwareAssignmentTrafficCost = rackAwareAssignmentTrafficCost;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="StreamsConfig.REPLICATION_FACTOR_CONFIG"/>
         /// </summary>
         public int ReplicationFactor { get { return GetProperty<int>(StreamsConfig.REPLICATION_FACTOR_CONFIG); } set { SetProperty(StreamsConfig.REPLICATION_FACTOR_CONFIG, value); } }
@@ -244,11 +296,11 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.TOPOLOGY_OPTIMIZATION_CONFIG"/>
+        /// Manages <see cref="StreamsConfig.TOPOLOGY_OPTIMIZATION_CONFIG"/>: use <see cref="StreamsConfig.OPTIMIZE"/> or <see cref="StreamsConfig.NO_OPTIMIZATION"/>
         /// </summary>
         public bool TopologyOptimization { get { return GetProperty<string>(StreamsConfig.TOPOLOGY_OPTIMIZATION_CONFIG) == StreamsConfig.OPTIMIZE; } set { SetProperty(StreamsConfig.TOPOLOGY_OPTIMIZATION_CONFIG, value ? StreamsConfig.OPTIMIZE : StreamsConfig.NO_OPTIMIZATION); } }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.TOPOLOGY_OPTIMIZATION_CONFIG"/>
+        /// Manages <see cref="StreamsConfig.TOPOLOGY_OPTIMIZATION_CONFIG"/>: use <see cref="StreamsConfig.OPTIMIZE"/> or <see cref="StreamsConfig.NO_OPTIMIZATION"/>
         /// </summary>
         public StreamsConfigBuilder WithTopologyOptimization(bool topologyOptimization)
         {
@@ -319,6 +371,32 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.RepartitionPurgeIntervalMs = repartitionPurgeIntervalMs;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_DSL_STORE_CONFIG"/>: use <see cref="StreamsConfig.ROCKS_DB"/> or <see cref="StreamsConfig.IN_MEMORY"/>
+        /// </summary>
+        public string DefaultDSLStore { get { return GetProperty<string>(StreamsConfig.DEFAULT_DSL_STORE_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_DSL_STORE_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_DSL_STORE_CONFIG"/>: use <see cref="StreamsConfig.ROCKS_DB"/> or <see cref="StreamsConfig.IN_MEMORY"/>
+        /// </summary>
+        public StreamsConfigBuilder WithDefaultDSLStore(string defaultDSLStore)
+        {
+            var clone = Clone();
+            clone.DefaultDSLStore = defaultDSLStore;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.POLL_MS_CONFIG"/>
+        /// </summary>
+        public long PollMs { get { return GetProperty<long>(StreamsConfig.POLL_MS_CONFIG); } set { SetProperty(StreamsConfig.POLL_MS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.POLL_MS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithPollMs(long pollMs)
+        {
+            var clone = Clone();
+            clone.PollMs = pollMs;
             return clone;
         }
         /// <summary>
