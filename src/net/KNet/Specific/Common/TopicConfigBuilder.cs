@@ -449,16 +449,29 @@ namespace MASES.KNet.Common
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="TopicConfig.MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIG"/>
+        /// Manages <see cref="TopicConfig.MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"/>
         /// </summary>
-        public int MessageTimestampDifferenceMaxMs { get { return GetProperty<int>(TopicConfig.MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIG); } set { SetProperty(TopicConfig.MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIG, value); } }
+        public int MessageTimestampAfterMaxMs { get { return GetProperty<int>(TopicConfig.MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG); } set { SetProperty(TopicConfig.MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG, value); } }
         /// <summary>
-        /// Manages <see cref="TopicConfig.MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIG"/>
+        /// Manages <see cref="TopicConfig.MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithMessageTimestampDifferenceMaxMs(int messageTimestampDifferenceMaxMs)
+        public TopicConfigBuilder WithMessageTimestampAfterMaxMs(int messageTimestampAfterMaxMs)
         {
             var clone = Clone();
-            clone.MessageTimestampDifferenceMaxMs = messageTimestampDifferenceMaxMs;
+            clone.MessageTimestampAfterMaxMs = messageTimestampAfterMaxMs;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="TopicConfig.MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG"/>
+        /// </summary>
+        public int MessageTimestampBeforeMaxMs { get { return GetProperty<int>(TopicConfig.MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG); } set { SetProperty(TopicConfig.MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="TopicConfig.MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG"/>
+        /// </summary>
+        public TopicConfigBuilder WithMessageTimestampBeforeMaxMs(int messageTimestampBeforeMaxMs)
+        {
+            var clone = Clone();
+            clone.MessageTimestampBeforeMaxMs = messageTimestampBeforeMaxMs;
             return clone;
         }
         /// <summary>
