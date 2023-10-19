@@ -195,7 +195,16 @@ namespace MASES.KNet.Replicator
         /// <see langword="true"/> if the instance was started
         /// </summary>
         bool IsAssigned { get; }
-
+        /// <summary>
+        /// Reports a snapshot of current lags (the value) associated to each partition (the key). 
+        /// </summary>
+        /// <remarks>It is only a snapshot when the property is read and cannot reflect real conditions</remarks>
+        IReadOnlyDictionary<int, long> CurrentPartitionLags { get; }
+        /// <summary>
+        /// Reports a snapshot of current sync state the value (<see langword="true"/> means it is in sync) associated to each consumer (the key). 
+        /// </summary>
+        /// <remarks>It is only a snapshot when the property is read and cannot reflect real conditions</remarks>
+        IReadOnlyDictionary<int, bool> CurrentConsumersSyncState { get; }
         #endregion
 
         #region Public methods
@@ -230,7 +239,18 @@ namespace MASES.KNet.Replicator
         /// Waits until all outstanding produce requests and delivery report callbacks are completed
         /// </summary>
         void Flush();
-
+        /// <summary>
+        /// Reports the <see cref="KNetProducer{TKey, TValue}"/> metrics. <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--"/>
+        /// </summary>
+        /// <typeparam name="TMetric">Extends <see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
+        /// <returns>A <see cref="Java.Util.Map"/> of <see cref="Org.Apache.Kafka.Common.MetricName"/> and <typeparamref name="TMetric"/></returns>
+        Java.Util.Map<Org.Apache.Kafka.Common.MetricName, TMetric> ProducerMetrics<TMetric>() where TMetric : Org.Apache.Kafka.Common.Metric;
+        /// <summary>
+        /// Reports the <see cref="KNetConsumer{TKey, TValue}"/> metrics. <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--"/>
+        /// </summary>
+        /// <typeparam name="TMetric">Extends <see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
+        /// <returns>An <see cref="IReadOnlyDictionary{T, V}"/> where the key is the current allocated <see cref="KNetConsumer{TKey, TValue}"/> and value is a <see cref="Java.Util.Map"/> of <see cref="Org.Apache.Kafka.Common.MetricName"/> and <typeparamref name="TMetric"/></returns>
+        IReadOnlyDictionary<int, Java.Util.Map<Org.Apache.Kafka.Common.MetricName, TMetric>> ConsumerMetrics<TMetric>() where TMetric : Org.Apache.Kafka.Common.Metric;
         #endregion
     }
 
@@ -464,9 +484,9 @@ namespace MASES.KNet.Replicator
         private ManualResetEvent[] _consumerPollThreadWaiter = null;
         private ConcurrentDictionary<TKey, ILocalDataStorage> _dictionary = new ConcurrentDictionary<TKey, ILocalDataStorage>();
         private KNetCompactedConsumerRebalanceListener[] _consumerListeners = null;
-        private KNetConsumer<TKey, TValue>[] _consumers = null;
-        private KNetConsumer<TKey, TValue> _onTheFlyConsumer = null;
-        private KNetProducer<TKey, TValue> _producer = null;
+        private IKNetConsumer<TKey, TValue>[] _consumers = null;
+        private IKNetConsumer<TKey, TValue> _onTheFlyConsumer = null;
+        private IKNetProducer<TKey, TValue> _producer = null;
         private string _bootstrapServers = null;
         private string _stateName = string.Empty;
         private string _groupId = Guid.NewGuid().ToString();
@@ -564,6 +584,36 @@ namespace MASES.KNet.Replicator
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsAssigned"/>
         public bool IsAssigned => _assignmentWaiters.All((o) => o.WaitOne(0));
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.CurrentPartitionLags"/>
+        public IReadOnlyDictionary<int, long> CurrentPartitionLags
+        {
+            get
+            {
+                ValidateStarted();
+                var dict = new System.Collections.Generic.Dictionary<int, long>();
+                for (int i = 0; i < _lastPartitionLags.Length; i++)
+                {
+                    dict.Add(i, Interlocked.Read(ref _lastPartitionLags[i]));
+                }
+                return dict;
+            }
+        }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.CurrentConsumersSyncState"/>
+        public IReadOnlyDictionary<int, bool> CurrentConsumersSyncState
+        {
+            get
+            {
+                ValidateStarted();
+                var dict = new System.Collections.Generic.Dictionary<int, bool>();
+                for (int i = 0; i < ConsumersToAllocate(); i++)
+                {
+                    dict.Add(i, CheckConsumerSyncState(i));
+                }
+                return dict;
+            }
+        }
 
         #endregion
 
@@ -914,6 +964,17 @@ namespace MASES.KNet.Replicator
                 topics?.Dispose();
             }
         }
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        bool CheckConsumerSyncState(int index)
+        {
+            bool lagInSync = true;
+            foreach (var partitionIndex in _consumerAssociatedPartition[index])
+            {
+                var partitionLag = Interlocked.Read(ref _lastPartitionLags[partitionIndex]);
+                lagInSync &= partitionLag == 0;
+            }
+            return _consumers[index].IsEmpty && !_consumers[index].IsCompleting && lagInSync;
+        }
 
         #endregion
 
@@ -1040,13 +1101,7 @@ namespace MASES.KNet.Replicator
                 bool[] syncs = new bool[ConsumersToAllocate()];
                 for (int i = 0; i < ConsumersToAllocate(); i++)
                 {
-                    bool lagInSync = true;
-                    foreach (var partitionIndex in _consumerAssociatedPartition[i])
-                    {
-                        var partitionLag = Interlocked.Read(ref _lastPartitionLags[partitionIndex]);
-                        lagInSync &= partitionLag == 0; // || partitionLag == NotPresentLagState;
-                    }
-                    syncs[i] = _consumers[i].IsEmpty && !_consumers[i].IsCompleting && lagInSync;
+                    syncs[i] = CheckConsumerSyncState(i);
                 }
                 sync = syncs.All(x => x == true);
             }
@@ -1059,6 +1114,26 @@ namespace MASES.KNet.Replicator
             ValidateAccessRights(AccessRightsType.Write);
             ValidateStarted();
             _producer?.Flush();
+        }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ProducerMetrics{TMetric}"/>
+        public Java.Util.Map<Org.Apache.Kafka.Common.MetricName, TMetric> ProducerMetrics<TMetric>() where TMetric : Org.Apache.Kafka.Common.Metric
+        {
+            ValidateStarted();
+            return _producer.Metrics<TMetric>();
+        }
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ConsumerMetrics{TMetric}"/>
+        public IReadOnlyDictionary<int, Java.Util.Map<Org.Apache.Kafka.Common.MetricName, TMetric>> ConsumerMetrics<TMetric>() where TMetric : Org.Apache.Kafka.Common.Metric
+        {
+            ValidateStarted();
+            var dict = new System.Collections.Generic.Dictionary<int, Java.Util.Map<Org.Apache.Kafka.Common.MetricName, TMetric>>();
+
+            for (int i = 0; i < ConsumersToAllocate(); i++)
+            {
+                dict.Add(i, _consumers[i].Metrics<TMetric>());
+            }
+
+            return dict;
         }
 
         #endregion
