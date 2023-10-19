@@ -1,0 +1,786 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RaftClient.Listener
+   | KNet website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RaftClient.Listener
+   | KNet website ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener">
+  
+  
+  <h1 id="Org_Apache_Kafka_Raft_RaftClient_Listener" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener" class="text-break">Class RaftClient.Listener
+  </h1>
+  <div class="markdown level0 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html</a></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.Dynamic.DynamicObject</span></div>
+    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
+    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener</span>&gt;</div>
+    <div class="level4"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener</span></div>
+    <div class="level5"><span class="xref">RaftClient.Listener</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Dynamic.IDynamicMetaObjectProvider</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.AddEventHandler(System.String, System.EventHandler)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.AddEventHandler&lt;TDataClass&gt;(System.String, System.EventHandler&lt;MASES.JCOBridge.C2JBridge.CLRListenerEventArgs&lt;TDataClass&gt;&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.AutoInit</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.IsBridgeStatic</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.IsBridgeCloseable</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.IsBridgeListener</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SGetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SGetField(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SGetField&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SGetField&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SGetFieldArray&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SGetFieldArray&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SSetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SSetField(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SSetField&lt;TValue&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SSetField&lt;TValue&gt;(System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.IsAssignableFrom(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.IsAssignableFrom(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.New(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.Execute&lt;T&gt;(T[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.BridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.BridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf&lt;TClass&gt;(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf(System.String, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Notify()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.NotifyAll()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField&lt;TValue&gt;(System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynBridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeInterface</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeAbstract</span>
+    </div>
+    <div>
+      <span class="xref">System.Dynamic.DynamicObject.TryGetMember(System.Dynamic.GetMemberBinder, System.Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
+    </div>
+    <div>
+      <span class="xref">System.Dynamic.DynamicObject.TryDeleteMember(System.Dynamic.DeleteMemberBinder)</span>
+    </div>
+    <div>
+      <span class="xref">System.Dynamic.DynamicObject.TryInvokeMember(System.Dynamic.InvokeMemberBinder, System.Object[], System.Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
+    </div>
+    <div>
+      <span class="xref">System.Dynamic.DynamicObject.TryCreateInstance(System.Dynamic.CreateInstanceBinder, System.Object[], System.Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
+    </div>
+    <div>
+      <span class="xref">System.Dynamic.DynamicObject.TryGetIndex(System.Dynamic.GetIndexBinder, System.Object[], System.Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <span class="xref">System.Dynamic.DynamicObject.TryDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Dynamic.DynamicObject.GetDynamicMemberNames()</span>
+    </div>
+    <div>
+      <span class="xref">System.Dynamic.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Org.Apache.Kafka.Raft.html">Org.Apache.Kafka.Raft</a></h6>
+  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
+  <h5 id="Org_Apache_Kafka_Raft_RaftClient_Listener_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Listener : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1155">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Raft_RaftClient_Listener__ctor_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Raft_RaftClient_Listener__ctor" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.#ctor">Listener()</h4>
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Listener()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1160">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Raft_RaftClient_Listener_BridgeClassName_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.BridgeClassName*"></a>
+  <h4 id="Org_Apache_Kafka_Raft_RaftClient_Listener_BridgeClassName" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.BridgeClassName">BridgeClassName</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.BridgeClassName</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener_OnBeginShutdown.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener.OnBeginShutdown%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftClient.cs/#L246">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnBeginShutdown_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.OnBeginShutdown*"></a>
+  <h4 id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnBeginShutdown" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.OnBeginShutdown">OnBeginShutdown</h4>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action OnBeginShutdown { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnBeginShutdown_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Apache.Kafka.Raft.RaftClient.Listener.html#Org_Apache_Kafka_Raft_RaftClient_Listener_OnBeginShutdown">OnBeginShutdown</a> has a value it takes precedence over corresponding class method</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleCommit.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener.OnHandleCommit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftClient.cs/#L204">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleCommit_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.OnHandleCommit*"></a>
+  <h4 id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleCommit" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.OnHandleCommit">OnHandleCommit</h4>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit-org.apache.kafka.raft.BatchReader-">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit-org.apache.kafka.raft.BatchReader-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;BatchReader&gt; OnHandleCommit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Raft.BatchReader.html">BatchReader</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleCommit_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Apache.Kafka.Raft.RaftClient.Listener.html#Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleCommit">OnHandleCommit</a> has a value it takes precedence over corresponding class method</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleLeaderChange.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener.OnHandleLeaderChange%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftClient.cs/#L266">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleLeaderChange_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.OnHandleLeaderChange*"></a>
+  <h4 id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleLeaderChange" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.OnHandleLeaderChange">OnHandleLeaderChange</h4>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange-org.apache.kafka.raft.LeaderAndEpoch-">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange-org.apache.kafka.raft.LeaderAndEpoch-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;LeaderAndEpoch&gt; OnHandleLeaderChange { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Raft.LeaderAndEpoch.html">LeaderAndEpoch</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleLeaderChange_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Apache.Kafka.Raft.RaftClient.Listener.html#Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleLeaderChange">OnHandleLeaderChange</a> has a value it takes precedence over corresponding class method</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleLoadSnapshot.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener.OnHandleLoadSnapshot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftClient.cs/#L225">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleLoadSnapshot_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.OnHandleLoadSnapshot*"></a>
+  <h4 id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleLoadSnapshot" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.OnHandleLoadSnapshot">OnHandleLoadSnapshot</h4>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot-org.apache.kafka.snapshot.SnapshotReader-">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot-org.apache.kafka.snapshot.SnapshotReader-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;SnapshotReader&gt; OnHandleLoadSnapshot { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Snapshot.SnapshotReader.html">SnapshotReader</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleLoadSnapshot_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Apache.Kafka.Raft.RaftClient.Listener.html#Org_Apache_Kafka_Raft_RaftClient_Listener_OnHandleLoadSnapshot">OnHandleLoadSnapshot</a> has a value it takes precedence over corresponding class method</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener_BeginShutdown.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener.BeginShutdown%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftClient.cs/#L257">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Raft_RaftClient_Listener_BeginShutdown_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.BeginShutdown*"></a>
+  <h4 id="Org_Apache_Kafka_Raft_RaftClient_Listener_BeginShutdown" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.BeginShutdown">BeginShutdown()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void BeginShutdown()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener_HandleCommit_Org_Apache_Kafka_Raft_BatchReader_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener.HandleCommit(Org.Apache.Kafka.Raft.BatchReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftClient.cs/#L216">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Raft_RaftClient_Listener_HandleCommit_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.HandleCommit*"></a>
+  <h4 id="Org_Apache_Kafka_Raft_RaftClient_Listener_HandleCommit_Org_Apache_Kafka_Raft_BatchReader_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.HandleCommit(Org.Apache.Kafka.Raft.BatchReader)">HandleCommit(BatchReader)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit-org.apache.kafka.raft.BatchReader-">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit-org.apache.kafka.raft.BatchReader-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void HandleCommit(BatchReader arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Raft.BatchReader.html">BatchReader</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Raft.BatchReader.html">BatchReader</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener_HandleLeaderChange_Org_Apache_Kafka_Raft_LeaderAndEpoch_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener.HandleLeaderChange(Org.Apache.Kafka.Raft.LeaderAndEpoch)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftClient.cs/#L278">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Raft_RaftClient_Listener_HandleLeaderChange_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.HandleLeaderChange*"></a>
+  <h4 id="Org_Apache_Kafka_Raft_RaftClient_Listener_HandleLeaderChange_Org_Apache_Kafka_Raft_LeaderAndEpoch_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.HandleLeaderChange(Org.Apache.Kafka.Raft.LeaderAndEpoch)">HandleLeaderChange(LeaderAndEpoch)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange-org.apache.kafka.raft.LeaderAndEpoch-">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange-org.apache.kafka.raft.LeaderAndEpoch-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void HandleLeaderChange(LeaderAndEpoch arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Raft.LeaderAndEpoch.html">LeaderAndEpoch</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Raft.LeaderAndEpoch.html">LeaderAndEpoch</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener_HandleLoadSnapshot_Org_Apache_Kafka_Snapshot_SnapshotReader_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener.HandleLoadSnapshot(Org.Apache.Kafka.Snapshot.SnapshotReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftClient.cs/#L237">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Raft_RaftClient_Listener_HandleLoadSnapshot_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.HandleLoadSnapshot*"></a>
+  <h4 id="Org_Apache_Kafka_Raft_RaftClient_Listener_HandleLoadSnapshot_Org_Apache_Kafka_Snapshot_SnapshotReader_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.HandleLoadSnapshot(Org.Apache.Kafka.Snapshot.SnapshotReader)">HandleLoadSnapshot(SnapshotReader)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot-org.apache.kafka.snapshot.SnapshotReader-">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot-org.apache.kafka.snapshot.SnapshotReader-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void HandleLoadSnapshot(SnapshotReader arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Snapshot.SnapshotReader.html">SnapshotReader</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Snapshot.SnapshotReader.html">SnapshotReader</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener_InitializeHandlers.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener.InitializeHandlers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftClient.cs/#L191">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Raft_RaftClient_Listener_InitializeHandlers_" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.InitializeHandlers*"></a>
+  <h4 id="Org_Apache_Kafka_Raft_RaftClient_Listener_InitializeHandlers" data-uid="Org.Apache.Kafka.Raft.RaftClient.Listener.InitializeHandlers">InitializeHandlers()</h4>
+  <div class="markdown level1 summary"><p>Handlers initializer for <a class="xref" href="Org.Apache.Kafka.Raft.RaftClient.Listener.html">RaftClient.Listener</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeHandlers()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Dynamic.IDynamicMetaObjectProvider</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Raft_RaftClient_Listener.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Raft.RaftClient.Listener%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftClient.cs/#L169" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
