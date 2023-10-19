@@ -19,7 +19,7 @@ KNet is a comprehensive .NET suite for [Apache Kafka](https://kafka.apache.org/)
 <em>
 <p>
 KNet is a suite for Apache Kafka, curated by MASES Group, can be supported by the open-source community.
-Its primary scope is to supports other, public or internal, MASES Group projects: Open-source community can use and support this project, moreover there is a dedicated community subscription plan.
+Its primary scope is to support other, public or internal, MASES Group projects: Open-source community can use and support this project, moreover there is a dedicated community subscription plan.
 </p>
 <p>
 The release cycle depends from Apache Kafka release, critical discovered issues and/or enhancement requested from this or other projects.
