@@ -10,6 +10,7 @@
     "kafka-clients-3.6.0.jar",
     "kafka-streams-3.6.0.jar",
     "kafka-tools-3.6.0.jar",
+    "kafka-raft-3.6.0.jar",
     "connect-api-3.6.0.jar",
     "connect-basic-auth-extension-3.6.0.jar",
     "connect-json-3.6.0.jar",
@@ -34,6 +35,10 @@
     {
       "Version": 8,
       "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.0/"
+    },
+    {
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.0/"
     },
     {
       "Version": 8,
@@ -113,6 +118,7 @@
     "org.apache.kafka.connect.runtime",
     "org.apache.kafka.connect.storage",
     "org.apache.kafka.connect.tools",
+	"org.apache.kafka.raft.internals",
     "org.apache.kafka.server",
     "org.apache.kafka.streams.internals",
     "org.apache.kafka.streams.processor.internals",
