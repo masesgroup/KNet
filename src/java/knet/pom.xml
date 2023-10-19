@@ -255,6 +255,11 @@
             <artifactId>kafka_2.13</artifactId>
             <version>${kafkaVersion}</version>
         </dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-raft</artifactId>
+			<version>${kafkaVersion}</version>
+		</dependency>
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>connect-runtime</artifactId>

@@ -8,6 +8,21 @@ KNet is a comprehensive .NET suite for [Apache Kafka](https://kafka.apache.org/)
 |:---:	|:---:	|:---:	|:---:	|:---:	|
 |[![KNet nuget](https://img.shields.io/nuget/v/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) | [![KNetCLI nuget](https://img.shields.io/nuget/v/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) | [![KNet.Templates nuget](https://img.shields.io/nuget/v/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates)| [![KNetPS](https://img.shields.io/powershellgallery/v/MASES.KNetPS.svg?style=flat-square&label=MASES.KNetPS)](https://www.powershellgallery.com/packages/MASES.KNetPS/)| [![KNetConnect nuget](https://img.shields.io/nuget/v/MASES.KNetConnect)](https://www.nuget.org/packages/MASES.KNetConnect) [![downloads](https://img.shields.io/nuget/dt/MASES.KNetConnect)](https://www.nuget.org/packages/MASES.KNetConnect) |
 
+### Disclaimer
+
+<em>
+<p>
+KNet is a suite for Apache Kafka, curated by MASES Group, can be supported by the open-source community.
+Its primary scope is to supports other, public or internal, MASES Group projects: Open-source community can use and support this project, moreover there is a dedicated community subscription plan.
+</p>
+<p>
+The release cycle depends from Apache Kafka release, critical discovered issues and/or enhancement requested from this or other projects.
+</p>
+<p>
+Looking for the help of Apache Kafka experts? MASES Group can help you design, build, deploy, and manage Apache Kafka clusters and streaming applications.
+</p>
+</em>
+
 ---
 
 ## Scope of the project
