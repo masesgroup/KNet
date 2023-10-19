@@ -121,6 +121,36 @@
 <pre><code class="lang-c#">KNetSerDes&lt;TestType&gt; serdes = new JsonSerDes&lt;TestType&gt;();
 </code></pre>
 <p>A single <code>JsonSerDes</code> can be used in serialization and deserialization, and produce Json serialized data.</p>
+<h2 id="specific-cases">Specific cases</h2>
+<p>Some kind of serializers extension have specific needs will be listed below.</p>
+<h3 id="avro-serializer">Avro serializer</h3>
+<p>The Avro serializer is based on <a href="https://www.nuget.org/packages/Apache.Avro">Apache.Avro</a> package. The types managed are:</p>
+<ul>
+<li>Avro types managed using the Avro library are Avro <strong>record</strong>s which:
+<ul>
+<li>Shall have a parameterless constructor</li>
+<li>Shall conform to <a href="https://avro.apache.org/docs/1.11.1/api/csharp/html/interfaceAvro_1_1Specific_1_1ISpecificRecord.html">ISpecificRecord</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>NOTE</strong>: simple types (the one that have an Apche Kafka default serializer) are not managed and will be refused</p>
+<h3 id="messagepack-serializer">MessagePack serializer</h3>
+<p>The MessagePack serializer is based on <a href="https://www.nuget.org/packages/MessagePack">MessagePack</a> package. The types managed are:</p>
+<ul>
+<li>MessagePack types managed using the MessagePack library shall be MessagePack types.</li>
+</ul>
+<p><strong>NOTE</strong>: simple types (the one that have an Apche Kafka default serializer) are not managed and will be refused</p>
+<h3 id="protobuf-serializer">Protobuf serializer</h3>
+<p>The Protobuf serializer is based on <a href="https://www.nuget.org/packages/Google.Protobuf">Google.Protobuf</a> package. The types managed are:</p>
+<ul>
+<li>Protobuf types managed using the Protobuf library shall be messages types which:
+<ul>
+<li>Shall have a parameterless constructor</li>
+<li>Shall conform to <a href="https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.IMessage-1"><code>IMessage&lt;T&gt;</code></a></li>
+</ul>
+</li>
+</ul>
+<p><strong>NOTE</strong>: simple types (the one that have an Apche Kafka default serializer) are not managed and will be refused</p>
 </article>
           </div>
           
