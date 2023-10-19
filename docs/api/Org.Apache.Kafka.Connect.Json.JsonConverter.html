@@ -78,7 +78,7 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">System.Dynamic.DynamicObject</span></div>
     <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
     <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Json.JsonConverter.html">JsonConverter</a>&gt;</div>
@@ -92,6 +92,7 @@
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
+    <div><a class="xref" href="Org.Apache.Kafka.Connect.Components.IVersioned.html">IVersioned</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -315,7 +316,7 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeListener</span>
     </div>
     <div>
-      <span class="xref">System.Dynamic.DynamicObject.TryGetMember(System.Dynamic.GetMemberBinder, System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
@@ -342,7 +343,7 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
     </div>
     <div>
-      <span class="xref">System.Dynamic.DynamicObject.TryGetIndex(System.Dynamic.GetIndexBinder, System.Object[], System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
@@ -351,7 +352,7 @@
       <span class="xref">System.Dynamic.DynamicObject.TryDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Object[])</span>
     </div>
     <div>
-      <span class="xref">System.Dynamic.DynamicObject.GetDynamicMemberNames()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
     </div>
     <div>
       <span class="xref">System.Dynamic.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)</span>
@@ -373,7 +374,7 @@
   <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
   <h5 id="Org_Apache_Kafka_Connect_Json_JsonConverter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class JsonConverter : JVMBridgeBase&lt;JsonConverter&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class JsonConverter : JVMBridgeBase&lt;JsonConverter&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IVersioned</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -420,7 +421,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
         <td><span class="parametername">args</span></td>
         <td></td>
       </tr>
@@ -600,7 +601,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Json_JsonConverter_Close.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Json.JsonConverter.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L104">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L117">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Json_JsonConverter_Close_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.Close*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Json_JsonConverter_Close" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.Close">Close()</h4>
@@ -616,7 +617,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Json_JsonConverter_Config.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Json.JsonConverter.Config%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L76">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L89">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Json_JsonConverter_Config_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.Config*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Json_JsonConverter_Config" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.Config">Config()</h4>
@@ -648,7 +649,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Json_JsonConverter_Configure_Java_Util_Map_System_String_System_Object__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Json.JsonConverter.Configure(Java.Util.Map%7BSystem.String%2CSystem.Object%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L121">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L134">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Json_JsonConverter_Configure_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.Configure*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Json_JsonConverter_Configure_Java_Util_Map_System_String_System_Object__" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.Configure(Java.Util.Map{System.String,System.Object})">Configure(Map&lt;String, Object&gt;)</h4>
@@ -670,7 +671,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">Java.Util.Map</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
         <td><span class="parametername">arg0</span></td>
         <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.map">Map</a></p>
 </td>
@@ -682,7 +683,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Json_JsonConverter_Configure_Java_Util_Map_System_String_System_Object__System_Boolean_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Json.JsonConverter.Configure(Java.Util.Map%7BSystem.String%2CSystem.Object%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L113">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L126">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Json_JsonConverter_Configure_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.Configure*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Json_JsonConverter_Configure_Java_Util_Map_System_String_System_Object__System_Boolean_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.Configure(Java.Util.Map{System.String,System.Object},System.Boolean)">Configure(Map&lt;String, Object&gt;, Boolean)</h4>
@@ -704,7 +705,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">Java.Util.Map</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
         <td><span class="parametername">arg0</span></td>
         <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.map">Map</a></p>
 </td>
@@ -722,7 +723,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Json_JsonConverter_FromConnectData_System_String_Org_Apache_Kafka_Connect_Data_Schema_System_Object_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Json.JsonConverter.FromConnectData(System.String%2COrg.Apache.Kafka.Connect.Data.Schema%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L55">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L59">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Json_JsonConverter_FromConnectData_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.FromConnectData*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Json_JsonConverter_FromConnectData_System_String_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.FromConnectData(System.String,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">FromConnectData(String, Schema, Object)</h4>
@@ -756,9 +757,9 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">System.Object</span></p>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></p>
 </td>
       </tr>
     </tbody>
@@ -784,7 +785,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Json_JsonConverter_FromConnectHeader_System_String_System_String_Org_Apache_Kafka_Connect_Data_Schema_System_Object_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Json.JsonConverter.FromConnectHeader(System.String%2CSystem.String%2COrg.Apache.Kafka.Connect.Data.Schema%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L67">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L71">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Json_JsonConverter_FromConnectHeader_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.FromConnectHeader*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Json_JsonConverter_FromConnectHeader_System_String_System_String_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.FromConnectHeader(System.String,System.String,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">FromConnectHeader(String, String, Schema, Object)</h4>
@@ -824,9 +825,9 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><span class="parametername">arg3</span></td>
-        <td><p><span class="xref">System.Object</span></p>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></p>
 </td>
       </tr>
     </tbody>
@@ -852,7 +853,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Json_JsonConverter_ToConnectData_System_String_System_Byte___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Json.JsonConverter.ToConnectData(System.String%2CSystem.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L86">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L99">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Json_JsonConverter_ToConnectData_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.ToConnectData*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Json_JsonConverter_ToConnectData_System_String_System_Byte___" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.ToConnectData(System.String,System.Byte[])">ToConnectData(String, Byte[])</h4>
@@ -908,7 +909,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Json_JsonConverter_ToConnectHeader_System_String_System_String_System_Byte___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Json.JsonConverter.ToConnectHeader(System.String%2CSystem.String%2CSystem.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L97">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L110">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Json_JsonConverter_ToConnectHeader_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.ToConnectHeader*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Json_JsonConverter_ToConnectHeader_System_String_System_String_System_Byte___" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.ToConnectHeader(System.String,System.String,System.Byte[])">ToConnectHeader(String, String, Byte[])</h4>
@@ -965,6 +966,88 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Json_JsonConverter_Version.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Json.JsonConverter.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L80">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Connect_Json_JsonConverter_Version_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.Version*"></a>
+  <h4 id="Org_Apache_Kafka_Connect_Json_JsonConverter_Version" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.Version">Version()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.0/org/apache/kafka/connect/json/JsonConverter.html#version--">https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.0/org/apache/kafka/connect/json/JsonConverter.html#version--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Version()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p><span class="xref">System.String</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Json_JsonConverter_op_Implicit_Org_Apache_Kafka_Connect_Json_JsonConverter__Org_Apache_Kafka_Connect_Components_Versioned.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Json.JsonConverter.op_Implicit(Org.Apache.Kafka.Connect.Json.JsonConverter)~Org.Apache.Kafka.Connect.Components.Versioned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Json/JsonConverter.cs/#L39">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Connect_Json_JsonConverter_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.op_Implicit*"></a>
+  <h4 id="Org_Apache_Kafka_Connect_Json_JsonConverter_op_Implicit_Org_Apache_Kafka_Connect_Json_JsonConverter__Org_Apache_Kafka_Connect_Components_Versioned" data-uid="Org.Apache.Kafka.Connect.Json.JsonConverter.op_Implicit(Org.Apache.Kafka.Connect.Json.JsonConverter)~Org.Apache.Kafka.Connect.Components.Versioned">Implicit(JsonConverter to Versioned)</h4>
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Json.JsonConverter.html">JsonConverter</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Versioned(JsonConverter t)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Connect.Json.JsonConverter.html">JsonConverter</a></td>
+        <td><span class="parametername">t</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">System.Dynamic.IDynamicMetaObjectProvider</span>
@@ -983,6 +1066,9 @@
   </div>
   <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
+  <div>
+      <a class="xref" href="Org.Apache.Kafka.Connect.Components.IVersioned.html">IVersioned</a>
   </div>
 </article>
           </div>
