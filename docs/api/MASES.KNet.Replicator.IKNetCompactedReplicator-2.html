@@ -115,7 +115,7 @@
       <span class="xref">System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;.Remove(System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;)</span>
     </div>
     <div>
-      <span class="xref">System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;.Count</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.count#system-collections-generic-icollection-1-count">ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Count</a>
     </div>
     <div>
       <span class="xref">System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;.IsReadOnly</span>
@@ -216,7 +216,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -316,6 +316,74 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_IKNetCompactedReplicator_2_CurrentConsumersSyncState.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.IKNetCompactedReplicator%602.CurrentConsumersSyncState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L207">View Source</a>
+  </span>
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_CurrentConsumersSyncState_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.CurrentConsumersSyncState*"></a>
+  <h4 id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_CurrentConsumersSyncState" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.CurrentConsumersSyncState">CurrentConsumersSyncState</h4>
+  <div class="markdown level1 summary"><p>Reports a snapshot of current sync state the value (<span class="xref">true</span> means it is in sync) associated to each consumer (the key).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyDictionary&lt;int, bool&gt; CurrentConsumersSyncState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_CurrentConsumersSyncState_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>It is only a snapshot when the property is read and cannot reflect real conditions</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_IKNetCompactedReplicator_2_CurrentPartitionLags.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.IKNetCompactedReplicator%602.CurrentPartitionLags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L202">View Source</a>
+  </span>
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_CurrentPartitionLags_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.CurrentPartitionLags*"></a>
+  <h4 id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_CurrentPartitionLags" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.CurrentPartitionLags">CurrentPartitionLags</h4>
+  <div class="markdown level1 summary"><p>Reports a snapshot of current lags (the value) associated to each partition (the key).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyDictionary&lt;int, long&gt; CurrentPartitionLags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>, <span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_CurrentPartitionLags_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>It is only a snapshot when the property is read and cannot reflect real conditions</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_IKNetCompactedReplicator_2_GroupId.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.IKNetCompactedReplicator%602.GroupId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -340,7 +408,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -591,7 +659,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -693,10 +761,59 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_IKNetCompactedReplicator_2_ConsumerMetrics__1.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.IKNetCompactedReplicator%602.ConsumerMetrics%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L253">View Source</a>
+  </span>
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_ConsumerMetrics_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.ConsumerMetrics*"></a>
+  <h4 id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_ConsumerMetrics__1" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.ConsumerMetrics``1">ConsumerMetrics&lt;TMetric&gt;()</h4>
+  <div class="markdown level1 summary"><p>Reports the <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-2.html">KNetConsumer&lt;K, V&gt;</a> metrics. <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyDictionary&lt;int, Map&lt;MetricName, TMetric&gt;&gt; ConsumerMetrics&lt;TMetric&gt;()
+    where TMetric : Metric</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>, <span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, TMetric&gt;&gt;</td>
+        <td><p>An <span class="xref">System.Collections.Generic.IReadOnlyDictionary&lt;TKey, TValue&gt;</span> where the key is the current allocated <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-2.html">KNetConsumer&lt;K, V&gt;</a> and value is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.map">Map</a> of <a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a> and <code data-dev-comment-type="typeparamref" class="typeparamref">TMetric</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMetric</span></td>
+        <td><p>Extends <a class="xref" href="Org.Apache.Kafka.Common.Metric.html">Metric</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_IKNetCompactedReplicator_2_Flush.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.IKNetCompactedReplicator%602.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L232">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L241">View Source</a>
   </span>
   <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_Flush_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.Flush*"></a>
   <h4 id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_Flush" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.Flush">Flush()</h4>
@@ -709,10 +826,59 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_IKNetCompactedReplicator_2_ProducerMetrics__1.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.IKNetCompactedReplicator%602.ProducerMetrics%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L247">View Source</a>
+  </span>
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_ProducerMetrics_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.ProducerMetrics*"></a>
+  <h4 id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_ProducerMetrics__1" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.ProducerMetrics``1">ProducerMetrics&lt;TMetric&gt;()</h4>
+  <div class="markdown level1 summary"><p>Reports the <a class="xref" href="MASES.KNet.Producer.KNetProducer-2.html">KNetProducer&lt;K, V&gt;</a> metrics. <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Map&lt;MetricName, TMetric&gt; ProducerMetrics&lt;TMetric&gt;()
+    where TMetric : Metric</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, TMetric&gt;</td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.map">Map</a> of <a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a> and <code data-dev-comment-type="typeparamref" class="typeparamref">TMetric</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMetric</span></td>
+        <td><p>Extends <a class="xref" href="Org.Apache.Kafka.Common.Metric.html">Metric</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_IKNetCompactedReplicator_2_Start.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.IKNetCompactedReplicator%602.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L206">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L215">View Source</a>
   </span>
   <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_Start_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.Start*"></a>
   <h4 id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_Start" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.Start">Start()</h4>
@@ -733,7 +899,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
         <td><p>Some errors occurred</p>
 </td>
       </tr>
@@ -744,7 +910,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_IKNetCompactedReplicator_2_StartAndWait_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.IKNetCompactedReplicator%602.StartAndWait(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L214">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L223">View Source</a>
   </span>
   <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_StartAndWait_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.StartAndWait*"></a>
   <h4 id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_StartAndWait_System_Int32_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.StartAndWait(System.Int32)">StartAndWait(Int32)</h4>
@@ -800,7 +966,7 @@ Then waits its synchronization with <a class="xref" href="MASES.KNet.Replicator.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
         <td><p>Some errors occurred or the provided <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html#MASES_KNet_Replicator_IKNetCompactedReplicator_2_AccessRights">AccessRights</a> do not include the <a class="xref" href="MASES.KNet.Replicator.AccessRightsType.html#MASES_KNet_Replicator_AccessRightsType_Read">Read</a> flag</p>
 </td>
       </tr>
@@ -811,7 +977,7 @@ Then waits its synchronization with <a class="xref" href="MASES.KNet.Replicator.
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_IKNetCompactedReplicator_2_SyncWait_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.IKNetCompactedReplicator%602.SyncWait(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L228">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L237">View Source</a>
   </span>
   <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_SyncWait_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.SyncWait*"></a>
   <h4 id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_SyncWait_System_Int32_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.SyncWait(System.Int32)">SyncWait(Int32)</h4>
@@ -866,7 +1032,7 @@ Then waits its synchronization with <a class="xref" href="MASES.KNet.Replicator.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
         <td><p>The provided <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html#MASES_KNet_Replicator_IKNetCompactedReplicator_2_AccessRights">AccessRights</a> do not include the <a class="xref" href="MASES.KNet.Replicator.AccessRightsType.html#MASES_KNet_Replicator_AccessRightsType_Read">Read</a> flag</p>
 </td>
       </tr>
@@ -877,7 +1043,7 @@ Then waits its synchronization with <a class="xref" href="MASES.KNet.Replicator.
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_IKNetCompactedReplicator_2_WaitForStateAssignment_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.IKNetCompactedReplicator%602.WaitForStateAssignment(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L221">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L230">View Source</a>
   </span>
   <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_WaitForStateAssignment_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.WaitForStateAssignment*"></a>
   <h4 id="MASES_KNet_Replicator_IKNetCompactedReplicator_2_WaitForStateAssignment_System_Int32_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`2.WaitForStateAssignment(System.Int32)">WaitForStateAssignment(Int32)</h4>
@@ -932,7 +1098,7 @@ Then waits its synchronization with <a class="xref" href="MASES.KNet.Replicator.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
         <td><p>The provided <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html#MASES_KNet_Replicator_IKNetCompactedReplicator_2_AccessRights">AccessRights</a> do not include the <a class="xref" href="MASES.KNet.Replicator.AccessRightsType.html#MASES_KNet_Replicator_AccessRightsType_Read">Read</a> flag</p>
 </td>
       </tr>
