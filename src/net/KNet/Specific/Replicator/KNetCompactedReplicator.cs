@@ -103,6 +103,11 @@ namespace MASES.KNet.Replicator
         #region Events
 
         /// <summary>
+        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is added by consuming data from the others <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
+        /// </summary>
+        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteAdd;
+
+        /// <summary>
         /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated by consuming data from the others <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
         event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteUpdate;
@@ -111,6 +116,11 @@ namespace MASES.KNet.Replicator
         /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is removed by consuming data from the others <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
         event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteRemove;
+
+        /// <summary>
+        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is added on this <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
+        /// </summary>
+        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalAdd;
 
         /// <summary>
         /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated on this <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
@@ -515,11 +525,17 @@ namespace MASES.KNet.Replicator
 
         #region Events
 
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnRemoteAdd"/>
+        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteAdd;
+
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnRemoteUpdate"/>
         public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteUpdate;
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnRemoteRemove"/>
         public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteRemove;
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnLocalAdd"/>
+        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalAdd;
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnLocalUpdate"/>
         public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalUpdate;
@@ -647,9 +663,11 @@ namespace MASES.KNet.Replicator
             }
             else
             {
+                bool containsKey = true;
                 ILocalDataStorage data;
                 if (!_dictionary.TryGetValue(record.Key, out data))
                 {
+                    containsKey = false;
                     data = new LocalDataStorage();
                     _dictionary[record.Key] = data;
                 }
@@ -669,7 +687,14 @@ namespace MASES.KNet.Replicator
                         data.Value = record.Value;
                     }
                 }
-                OnRemoteUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(record.Key, record.Value));
+                if (containsKey)
+                {
+                    OnRemoteUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(record.Key, record.Value));
+                }
+                else
+                {
+                    OnRemoteAdd?.Invoke(this, new KeyValuePair<TKey, TValue>(record.Key, record.Value));
+                }
             }
 
             if (_OnConsumeSyncWaiter != null)
@@ -777,9 +802,11 @@ namespace MASES.KNet.Replicator
                 }
                 else
                 {
+                    bool containsKey = true;
                     ILocalDataStorage data;
                     if (!_dictionary.TryGetValue(key, out data))
                     {
+                        containsKey = false;
                         data = new LocalDataStorage();
                         _dictionary[key] = data;
                     }
@@ -799,7 +826,14 @@ namespace MASES.KNet.Replicator
                             data.Value = value;
                         }
                     }
-                    OnLocalUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(key, value));
+                    if (containsKey)
+                    {
+                        OnLocalUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(key, value));
+                    }
+                    else
+                    {
+                        OnLocalAdd?.Invoke(this, new KeyValuePair<TKey, TValue>(key, value));
+                    }
                 }
             }
             else if (UpdateModeOnConsume || UpdateModeOnConsumeSync)
