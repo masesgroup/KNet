@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetBenchmark", "KNetBenchm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetTopicCopyBenchmark", "KNetTopicCopyBenchmark\KNetTopicCopyBenchmark.csproj", "{C6A11273-A560-4BB1-9234-961D30824DAB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Benchmarks", "Benchmarks", "{14753FBA-8F9B-48A1-9983-7DC37CB32914}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Benchmarks", "Test Benchmarks", "{14753FBA-8F9B-48A1-9983-7DC37CB32914}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A77F1B9E-5576-46F0-BE58-C85FA9FA3A58}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test General", "Test General", "{A77F1B9E-5576-46F0-BE58-C85FA9FA3A58}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Connect", "Connect", "{6421F571-315C-47BB-A9F9-4542759E968E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Connect", "Test Connect", "{6421F571-315C-47BB-A9F9-4542759E968E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetConnectTest", "KNetConnectTest\KNetConnectTest.csproj", "{7F3A2CE5-ADEE-426F-BE99-D899D87EFF2F}"
 EndProject
@@ -43,6 +43,18 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetCompactedReplicatorTest", "KNetCompactedReplicatorTest\KNetCompactedReplicatorTest.csproj", "{245DDDD6-022A-4C2F-8769-FBB6CFDEC585}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.MessagePack", "..\src\net\KNet.Serialization.MessagePack\KNet.Serialization.MessagePack.csproj", "{D39E1D83-C3FC-4482-83F5-DDE89B53BEA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{68128D24-3F72-4A25-A876-509F12F38E73}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConnectSink", "..\src\net\templates\templates\knetConnectSink\knetConnectSink.csproj", "{FC459C7B-5111-4FF7-A93A-5A02B48AA3B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConnectSource", "..\src\net\templates\templates\knetConnectSource\knetConnectSource.csproj", "{5A3184EF-56BC-4AEA-95C4-8595FC5B1992}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConsumerApp", "..\src\net\templates\templates\knetConsumerApp\knetConsumerApp.csproj", "{A40B1EE0-7407-47CB-B0FB-EE65A955A559}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetPipeStreamApp", "..\src\net\templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj", "{363CC373-CF04-4204-A44A-C96AB1B1085E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetProducerApp", "..\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj", "{8E8EB519-70A3-487A-BB71-096988CCA6A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +122,26 @@ Global
 		{D39E1D83-C3FC-4482-83F5-DDE89B53BEA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D39E1D83-C3FC-4482-83F5-DDE89B53BEA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D39E1D83-C3FC-4482-83F5-DDE89B53BEA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC459C7B-5111-4FF7-A93A-5A02B48AA3B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC459C7B-5111-4FF7-A93A-5A02B48AA3B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC459C7B-5111-4FF7-A93A-5A02B48AA3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC459C7B-5111-4FF7-A93A-5A02B48AA3B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A3184EF-56BC-4AEA-95C4-8595FC5B1992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A3184EF-56BC-4AEA-95C4-8595FC5B1992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A3184EF-56BC-4AEA-95C4-8595FC5B1992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A3184EF-56BC-4AEA-95C4-8595FC5B1992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A40B1EE0-7407-47CB-B0FB-EE65A955A559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A40B1EE0-7407-47CB-B0FB-EE65A955A559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A40B1EE0-7407-47CB-B0FB-EE65A955A559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A40B1EE0-7407-47CB-B0FB-EE65A955A559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{363CC373-CF04-4204-A44A-C96AB1B1085E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{363CC373-CF04-4204-A44A-C96AB1B1085E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{363CC373-CF04-4204-A44A-C96AB1B1085E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{363CC373-CF04-4204-A44A-C96AB1B1085E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E8EB519-70A3-487A-BB71-096988CCA6A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E8EB519-70A3-487A-BB71-096988CCA6A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E8EB519-70A3-487A-BB71-096988CCA6A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E8EB519-70A3-487A-BB71-096988CCA6A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +162,11 @@ Global
 		{F915A488-956C-4B31-89FC-EB5DBC4AC73E} = {A77F1B9E-5576-46F0-BE58-C85FA9FA3A58}
 		{245DDDD6-022A-4C2F-8769-FBB6CFDEC585} = {A77F1B9E-5576-46F0-BE58-C85FA9FA3A58}
 		{D39E1D83-C3FC-4482-83F5-DDE89B53BEA8} = {345DA483-99E7-4FA0-A5D5-5EE62E49E668}
+		{FC459C7B-5111-4FF7-A93A-5A02B48AA3B7} = {68128D24-3F72-4A25-A876-509F12F38E73}
+		{5A3184EF-56BC-4AEA-95C4-8595FC5B1992} = {68128D24-3F72-4A25-A876-509F12F38E73}
+		{A40B1EE0-7407-47CB-B0FB-EE65A955A559} = {68128D24-3F72-4A25-A876-509F12F38E73}
+		{363CC373-CF04-4204-A44A-C96AB1B1085E} = {68128D24-3F72-4A25-A876-509F12F38E73}
+		{8E8EB519-70A3-487A-BB71-096988CCA6A9} = {68128D24-3F72-4A25-A876-509F12F38E73}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A7C16DC-1BAA-44BC-AA1C-D40B7B61878E}

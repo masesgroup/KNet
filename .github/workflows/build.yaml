@@ -131,8 +131,8 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
-      - name: Pre compile templates
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030" src\net\KNetTemplates.sln
+      - name: Pre compile tests
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030" tests\KNetTest.sln
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030" src\net\KNet\KNet.csproj

@@ -7,11 +7,11 @@
 	<ItemGroup Condition="'$(TargetFramework)' == 'net462'">
 		<Reference Include="Microsoft.CSharp" />
 	</ItemGroup>
-	<ItemGroup Condition="Exists('..\..\..\KNet\KNet.csproj')">
+	<ItemGroup Condition="Exists('$(ProjectDir)..\..\..\KNet\KNet.csproj')">
 		<!--Within GitHub repo: used for test purpose-->
-		<ProjectReference Include="..\..\..\KNet\KNet.csproj" />
+		<ProjectReference Include="$(ProjectDir)..\..\..\KNet\KNet.csproj" />
 	</ItemGroup>
-	<ItemGroup Condition="!Exists('..\..\..\KNet\KNet.csproj')">
+	<ItemGroup Condition="!Exists('$(ProjectDir)..\..\..\KNet\KNet.csproj')">
 		<!--Outside GitHub repo-->
 		<PackageReference Include="MASES.KNet" Version="2.2.0" IncludeAssets="All" PrivateAssets="None" />
 	</ItemGroup>
