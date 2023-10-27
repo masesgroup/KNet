@@ -6,10 +6,10 @@
 version: 2
 updates:
   - package-ecosystem: "nuget" # See documentation for possible values
-    directory: "/src/net/knet" # Location of package manifests
+    directory: "/src/net" # Location of package manifests
     schedule:
       interval: "weekly"
   - package-ecosystem: maven
-    directory: "/src/java"
+    directory: "/src/java/knet"
     schedule:
       interval: "weekly"
