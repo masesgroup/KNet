@@ -9,7 +9,13 @@ updates:
     directory: "/src/net" # Location of package manifests
     schedule:
       interval: "weekly"
+      
   - package-ecosystem: maven
     directory: "/src/java/knet"
     schedule:
       interval: "weekly"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: weekly
