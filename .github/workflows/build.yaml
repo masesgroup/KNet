@@ -222,6 +222,9 @@ jobs:
           commit-message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           title: Changes by GitHub action
           body: Automated changes by GitHub action
+          reviewers: masesdevelopers
+          assignees: masesdevelopers
+          labels: documentation, enhancement 
 
      #
      # - name: Commit changes
