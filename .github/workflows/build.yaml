@@ -212,7 +212,6 @@ jobs:
         if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
         uses: peter-evans/create-pull-request@v5
         with:
-          committer: 41898282+github-actions[bot]@users.noreply.github.com
           branch-suffix: short-commit-hash
           add-paths: docs/*.*
           title: Changes by GitHub action
