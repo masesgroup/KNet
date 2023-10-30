@@ -214,7 +214,7 @@ jobs:
         with:
           committer: 41898282+github-actions[bot]@users.noreply.github.com
           branch-suffix: short-commit-hash
-          path: '.\docs\*.*'
+          add-paths: docs/*.*
           title: Changes by GitHub action
           body: Automated changes by GitHub action
 
