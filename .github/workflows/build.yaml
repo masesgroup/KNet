@@ -193,6 +193,11 @@ jobs:
           Publish-Module -Path .\MASES.KNetPS -Repository Local_Nuget_Feed -NuGetApiKey 'ABC123'
         shell: pwsh
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: KNet
+          path: .\bin\*nupkg
+
       - name: Clear documentation folder 
         run: Remove-Item .\docs\* -Recurse -Force -Exclude _config.yml
 
@@ -203,33 +208,28 @@ jobs:
           cd src\documentation
           docfx
 
-#       - name: Build Docker Image
-#         run: docker build -t mases.knetcli -f Dockerfile.windows .
-#
-#       - name: Save Docker Image
-#         run: docker save -o container.windows.zip mases.knetcli
-# 
-#       - uses: actions/upload-artifact@v2
-#         with:
-#           name: container.windows.zip
-#           path: .\container.windows.zip
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: KNet
-          path: .\bin\*nupkg
-
       - name: Extract commit SHA
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
 
-      - name: Commit changes
+      - name: Request a PR to commit changes
         if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
-        uses: EndBug/add-and-commit@v9
+        uses: peter-evans/create-pull-request@v5
         with:
-          author_name: github-actions
-          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\docs\*.*'
-          message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          branch-suffix: short-commit-hash
+          add-paths: docs/*.*
+          commit-message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          title: Changes by GitHub action
+          body: Automated changes by GitHub action
+
+     #
+     # - name: Commit changes
+     #   if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
+     #   uses: EndBug/add-and-commit@v9
+     #   with:
+     #     author_name: github-actions
+     #     author_email: 41898282+github-actions[bot]@users.noreply.github.com
+     #     add: '.\docs\*.*'
+     #     message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
  
