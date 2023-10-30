@@ -208,19 +208,21 @@ jobs:
           cd src\documentation
           docfx
 
+      - name: Extract commit SHA
+        run: |
+          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+        shell: bash
+
       - name: Request a PR to commit changes
         if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
         uses: peter-evans/create-pull-request@v5
         with:
           branch-suffix: short-commit-hash
           add-paths: docs/*.*
+          commit-message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           title: Changes by GitHub action
           body: Automated changes by GitHub action
 
-     # - name: Extract commit SHA
-     #   run: |
-     #     echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
-     #   shell: bash
      #
      # - name: Commit changes
      #   if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
