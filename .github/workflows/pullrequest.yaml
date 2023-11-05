@@ -166,8 +166,9 @@ jobs:
       # - name: Clear documentation folder 
       #   run: Remove-Item .\docs\* -Recurse -Force -Exclude _config.yml
       # 
+      # - run: dotnet tool update -g docfx
+      #
       # - name: Build documentation
       #   run: |
-      #     choco install docfx
       #     cd src\documentation
       #     docfx

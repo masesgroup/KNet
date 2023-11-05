@@ -201,10 +201,11 @@ jobs:
       - name: Clear documentation folder 
         run: Remove-Item .\docs\* -Recurse -Force -Exclude _config.yml
 
+      - run: dotnet tool update -g docfx
+
       - name: Build documentation
         if: ${{ github.repository_owner == 'masesgroup'}} #if outside main repo do not build docs, it will be checked during pullrequest or build on main branch
         run: |
-          choco install docfx
           cd src\documentation
           docfx
 
