@@ -1,1853 +1,1664 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Cluster
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Cluster
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class Cluster
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Cluster
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Common.Cluster">
-  
-  
-  <h1 id="Org_Apache_Kafka_Common_Cluster" data-uid="Org.Apache.Kafka.Common.Cluster" class="text-break">Class Cluster
-  </h1>
-  <div class="markdown level0 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html</a></p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
-    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a>&gt;</div>
-    <div class="level4"><span class="xref">Cluster</span></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecuteArray&lt;T&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SGetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SGetField(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SGetField&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SGetField&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SGetFieldArray&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SGetFieldArray&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SSetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SSetField(System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SSetField&lt;TValue&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.SSetField&lt;TValue&gt;(System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.IsAssignableFrom(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.IsAssignableFrom(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.IsAssignableFrom&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.New(System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.Execute&lt;T&gt;(T[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.DynBridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.BridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynBridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Cluster&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.BridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf&lt;TClass&gt;(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf(System.String, System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Notify()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.NotifyAll()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64, System.Int32)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField(System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField&lt;TValue&gt;(System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynBridgeInstance</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeInstance</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeListener</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember#system-dynamic-dynamicobject-trydeletemember(system-dynamic-deletememberbinder)">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember#system-dynamic-dynamicobject-tryinvokemember(system-dynamic-invokememberbinder-system-object()-system-object@)">DynamicObject.TryInvokeMember(InvokeMemberBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance#system-dynamic-dynamicobject-trycreateinstance(system-dynamic-createinstancebinder-system-object()-system-object@)">DynamicObject.TryCreateInstance(CreateInstanceBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <span class="xref">System.Dynamic.DynamicObject.TryDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Object[])</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
-    </div>
-    <div>
-      <span class="xref">System.Dynamic.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Org.Apache.Kafka.Common.html">Org.Apache.Kafka.Common</a></h6>
-  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
-  <h5 id="Org_Apache_Kafka_Common_Cluster_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Cluster : JVMBridgeBase&lt;Cluster&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L37">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster__ctor" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor">Cluster()</h4>
-  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster__ctor_System_Object___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L41">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor(System.Object[])">Cluster(Object[])</h4>
-  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(params object[] args)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.%23ctor(System.String%2CJava.Util.Collection%7BOrg.Apache.Kafka.Common.Node%7D%2CJava.Util.Collection%7BOrg.Apache.Kafka.Common.PartitionInfo%7D%2CJava.Util.Set%7BSystem.String%7D%2CJava.Util.Set%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L82">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor(System.String,Java.Util.Collection{Org.Apache.Kafka.Common.Node},Java.Util.Collection{Org.Apache.Kafka.Common.PartitionInfo},Java.Util.Set{System.String},Java.Util.Set{System.String})">Cluster(String, Collection&lt;Node&gt;, Collection&lt;PartitionInfo&gt;, Set&lt;String&gt;, Set&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(string arg0, Collection&lt;Node&gt; arg1, Collection&lt;PartitionInfo&gt; arg2, Set&lt;string&gt; arg3, Set&lt;string&gt; arg4)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">Java.Util.Collection</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">Java.Util.Collection</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">arg3</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">arg4</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__Java_Util_Set_System_String__Org_Apache_Kafka_Common_Node_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.%23ctor(System.String%2CJava.Util.Collection%7BOrg.Apache.Kafka.Common.Node%7D%2CJava.Util.Collection%7BOrg.Apache.Kafka.Common.PartitionInfo%7D%2CJava.Util.Set%7BSystem.String%7D%2CJava.Util.Set%7BSystem.String%7D%2CJava.Util.Set%7BSystem.String%7D%2COrg.Apache.Kafka.Common.Node)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L57">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__Java_Util_Set_System_String__Org_Apache_Kafka_Common_Node_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor(System.String,Java.Util.Collection{Org.Apache.Kafka.Common.Node},Java.Util.Collection{Org.Apache.Kafka.Common.PartitionInfo},Java.Util.Set{System.String},Java.Util.Set{System.String},Java.Util.Set{System.String},Org.Apache.Kafka.Common.Node)">Cluster(String, Collection&lt;Node&gt;, Collection&lt;PartitionInfo&gt;, Set&lt;String&gt;, Set&lt;String&gt;, Set&lt;String&gt;, Node)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(string arg0, Collection&lt;Node&gt; arg1, Collection&lt;PartitionInfo&gt; arg2, Set&lt;string&gt; arg3, Set&lt;string&gt; arg4, Set&lt;string&gt; arg5, Node arg6)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">Java.Util.Collection</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">Java.Util.Collection</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">arg3</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">arg4</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">arg5</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></td>
-        <td><span class="parametername">arg6</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__Java_Util_Set_System_String__Org_Apache_Kafka_Common_Node_Java_Util_Map_System_String_Org_Apache_Kafka_Common_Uuid__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.%23ctor(System.String%2CJava.Util.Collection%7BOrg.Apache.Kafka.Common.Node%7D%2CJava.Util.Collection%7BOrg.Apache.Kafka.Common.PartitionInfo%7D%2CJava.Util.Set%7BSystem.String%7D%2CJava.Util.Set%7BSystem.String%7D%2CJava.Util.Set%7BSystem.String%7D%2COrg.Apache.Kafka.Common.Node%2CJava.Util.Map%7BSystem.String%2COrg.Apache.Kafka.Common.Uuid%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L43">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__Java_Util_Set_System_String__Org_Apache_Kafka_Common_Node_Java_Util_Map_System_String_Org_Apache_Kafka_Common_Uuid__" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor(System.String,Java.Util.Collection{Org.Apache.Kafka.Common.Node},Java.Util.Collection{Org.Apache.Kafka.Common.PartitionInfo},Java.Util.Set{System.String},Java.Util.Set{System.String},Java.Util.Set{System.String},Org.Apache.Kafka.Common.Node,Java.Util.Map{System.String,Org.Apache.Kafka.Common.Uuid})">Cluster(String, Collection&lt;Node&gt;, Collection&lt;PartitionInfo&gt;, Set&lt;String&gt;, Set&lt;String&gt;, Set&lt;String&gt;, Node, Map&lt;String, Uuid&gt;)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node,java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node,java.util.Map)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(string arg0, Collection&lt;Node&gt; arg1, Collection&lt;PartitionInfo&gt; arg2, Set&lt;string&gt; arg3, Set&lt;string&gt; arg4, Set&lt;string&gt; arg5, Node arg6, Map&lt;string, Uuid&gt; arg7)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">Java.Util.Collection</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">Java.Util.Collection</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">arg3</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">arg4</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">arg5</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></td>
-        <td><span class="parametername">arg6</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a>&gt;</td>
-        <td><span class="parametername">arg7</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.map">Map</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__Org_Apache_Kafka_Common_Node_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.%23ctor(System.String%2CJava.Util.Collection%7BOrg.Apache.Kafka.Common.Node%7D%2CJava.Util.Collection%7BOrg.Apache.Kafka.Common.PartitionInfo%7D%2CJava.Util.Set%7BSystem.String%7D%2CJava.Util.Set%7BSystem.String%7D%2COrg.Apache.Kafka.Common.Node)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L70">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__Org_Apache_Kafka_Common_Node_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor(System.String,Java.Util.Collection{Org.Apache.Kafka.Common.Node},Java.Util.Collection{Org.Apache.Kafka.Common.PartitionInfo},Java.Util.Set{System.String},Java.Util.Set{System.String},Org.Apache.Kafka.Common.Node)">Cluster(String, Collection&lt;Node&gt;, Collection&lt;PartitionInfo&gt;, Set&lt;String&gt;, Set&lt;String&gt;, Node)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,org.apache.kafka.common.Node)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,org.apache.kafka.common.Node)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(string arg0, Collection&lt;Node&gt; arg1, Collection&lt;PartitionInfo&gt; arg2, Set&lt;string&gt; arg3, Set&lt;string&gt; arg4, Node arg5)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">Java.Util.Collection</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">Java.Util.Collection</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">arg3</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">arg4</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></td>
-        <td><span class="parametername">arg5</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L48">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_BridgeClassName_" data-uid="Org.Apache.Kafka.Common.Cluster.BridgeClassName*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Cluster.BridgeClassName">BridgeClassName</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeClassName</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_IsBridgeAbstract.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.IsBridgeAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L52">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeAbstract*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeAbstract">IsBridgeAbstract</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeAbstract</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_IsBridgeCloseable.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.IsBridgeCloseable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L56">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeCloseable*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeCloseable">IsBridgeCloseable</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeCloseable</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_IsBridgeInterface.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.IsBridgeInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L60">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeInterface*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeInterface">IsBridgeInterface</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeInterface</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_IsBridgeStatic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.IsBridgeStatic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L64">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeStatic*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeStatic">IsBridgeStatic</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeStatic</span></div>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_AvailablePartitionsForTopic_System_String_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.AvailablePartitionsForTopic(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L170">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_AvailablePartitionsForTopic_" data-uid="Org.Apache.Kafka.Common.Cluster.AvailablePartitionsForTopic*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_AvailablePartitionsForTopic_System_String_" data-uid="Org.Apache.Kafka.Common.Cluster.AvailablePartitionsForTopic(System.String)">AvailablePartitionsForTopic(String)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#availablePartitionsForTopic-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#availablePartitionsForTopic-java.lang.String-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;PartitionInfo&gt; AvailablePartitionsForTopic(string arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</td>
-        <td><p><span class="xref">Java.Util.List</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_Bootstrap_Java_Util_List_Java_Net_InetSocketAddress__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.Bootstrap(Java.Util.List%7BJava.Net.InetSocketAddress%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L103">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_Bootstrap_" data-uid="Org.Apache.Kafka.Common.Cluster.Bootstrap*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_Bootstrap_Java_Util_List_Java_Net_InetSocketAddress__" data-uid="Org.Apache.Kafka.Common.Cluster.Bootstrap(Java.Util.List{Java.Net.InetSocketAddress})">Bootstrap(List&lt;InetSocketAddress&gt;)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#bootstrap-java.util.List-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#bootstrap-java.util.List-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Cluster Bootstrap(List&lt;InetSocketAddress&gt; arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.List</span>&lt;<span class="xref">Java.Net.InetSocketAddress</span>&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><span class="xref">Java.Util.List</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_ClusterResource.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.ClusterResource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L252">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_ClusterResource_" data-uid="Org.Apache.Kafka.Common.Cluster.ClusterResource*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_ClusterResource" data-uid="Org.Apache.Kafka.Common.Cluster.ClusterResource">ClusterResource()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#clusterResource--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#clusterResource--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClusterResource ClusterResource()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.ClusterResource.html">ClusterResource</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.ClusterResource.html">ClusterResource</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_Controller.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.Controller%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L261">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_Controller_" data-uid="Org.Apache.Kafka.Common.Cluster.Controller*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_Controller" data-uid="Org.Apache.Kafka.Common.Cluster.Controller">Controller()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#controller--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#controller--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Node Controller()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_Empty.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.Empty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L112">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_Empty_" data-uid="Org.Apache.Kafka.Common.Cluster.Empty*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_Empty" data-uid="Org.Apache.Kafka.Common.Cluster.Empty">Empty()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#empty--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#empty--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Cluster Empty()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_InternalTopics.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.InternalTopics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L207">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_InternalTopics_" data-uid="Org.Apache.Kafka.Common.Cluster.InternalTopics*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_InternalTopics" data-uid="Org.Apache.Kafka.Common.Cluster.InternalTopics">InternalTopics()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#internalTopics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#internalTopics--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Set&lt;string&gt; InternalTopics()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_InvalidTopics.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.InvalidTopics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L216">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_InvalidTopics_" data-uid="Org.Apache.Kafka.Common.Cluster.InvalidTopics*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_InvalidTopics" data-uid="Org.Apache.Kafka.Common.Cluster.InvalidTopics">InvalidTopics()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#invalidTopics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#invalidTopics--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Set&lt;string&gt; InvalidTopics()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_IsBootstrapConfigured.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.IsBootstrapConfigured%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L125">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_IsBootstrapConfigured_" data-uid="Org.Apache.Kafka.Common.Cluster.IsBootstrapConfigured*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_IsBootstrapConfigured" data-uid="Org.Apache.Kafka.Common.Cluster.IsBootstrapConfigured">IsBootstrapConfigured()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#isBootstrapConfigured--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#isBootstrapConfigured--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsBootstrapConfigured()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_LeaderFor_Org_Apache_Kafka_Common_TopicPartition_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.LeaderFor(Org.Apache.Kafka.Common.TopicPartition)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L270">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_LeaderFor_" data-uid="Org.Apache.Kafka.Common.Cluster.LeaderFor*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_LeaderFor_Org_Apache_Kafka_Common_TopicPartition_" data-uid="Org.Apache.Kafka.Common.Cluster.LeaderFor(Org.Apache.Kafka.Common.TopicPartition)">LeaderFor(TopicPartition)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#leaderFor-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#leaderFor-org.apache.kafka.common.TopicPartition-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Node LeaderFor(TopicPartition arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_NodeById_System_Int32_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.NodeById(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L279">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_NodeById_" data-uid="Org.Apache.Kafka.Common.Cluster.NodeById*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_NodeById_System_Int32_" data-uid="Org.Apache.Kafka.Common.Cluster.NodeById(System.Int32)">NodeById(Int32)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodeById-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodeById-int-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Node NodeById(int arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_NodeIfOnline_Org_Apache_Kafka_Common_TopicPartition_System_Int32_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.NodeIfOnline(Org.Apache.Kafka.Common.TopicPartition%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L198">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_NodeIfOnline_" data-uid="Org.Apache.Kafka.Common.Cluster.NodeIfOnline*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_NodeIfOnline_Org_Apache_Kafka_Common_TopicPartition_System_Int32_" data-uid="Org.Apache.Kafka.Common.Cluster.NodeIfOnline(Org.Apache.Kafka.Common.TopicPartition,System.Int32)">NodeIfOnline(TopicPartition, Int32)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodeIfOnline-org.apache.kafka.common.TopicPartition-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodeIfOnline-org.apache.kafka.common.TopicPartition-int-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;Node&gt; NodeIfOnline(TopicPartition arg0, int arg1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Optional</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</td>
-        <td><p><span class="xref">Java.Util.Optional</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_Nodes.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.Nodes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L161">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_Nodes_" data-uid="Org.Apache.Kafka.Common.Cluster.Nodes*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_Nodes" data-uid="Org.Apache.Kafka.Common.Cluster.Nodes">Nodes()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodes--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodes--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;Node&gt; Nodes()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</td>
-        <td><p><span class="xref">Java.Util.List</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_Partition_Org_Apache_Kafka_Common_TopicPartition_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.Partition(Org.Apache.Kafka.Common.TopicPartition)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L288">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_Partition_" data-uid="Org.Apache.Kafka.Common.Cluster.Partition*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_Partition_Org_Apache_Kafka_Common_TopicPartition_" data-uid="Org.Apache.Kafka.Common.Cluster.Partition(Org.Apache.Kafka.Common.TopicPartition)">Partition(TopicPartition)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partition-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partition-org.apache.kafka.common.TopicPartition-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PartitionInfo Partition(TopicPartition arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_PartitionCountForTopic_System_String_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.PartitionCountForTopic(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L134">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_PartitionCountForTopic_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionCountForTopic*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_PartitionCountForTopic_System_String_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionCountForTopic(System.String)">PartitionCountForTopic(String)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionCountForTopic-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionCountForTopic-java.lang.String-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Integer PartitionCountForTopic(string arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Lang.Integer</span></td>
-        <td><p><span class="xref">Java.Lang.Integer</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_PartitionsForNode_System_Int32_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.PartitionsForNode(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L179">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_PartitionsForNode_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionsForNode*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_PartitionsForNode_System_Int32_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionsForNode(System.Int32)">PartitionsForNode(Int32)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionsForNode-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionsForNode-int-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;PartitionInfo&gt; PartitionsForNode(int arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</td>
-        <td><p><span class="xref">Java.Util.List</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_PartitionsForTopic_System_String_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.PartitionsForTopic(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L188">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_PartitionsForTopic_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionsForTopic*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_PartitionsForTopic_System_String_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionsForTopic(System.String)">PartitionsForTopic(String)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionsForTopic-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionsForTopic-java.lang.String-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;PartitionInfo&gt; PartitionsForTopic(string arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</td>
-        <td><p><span class="xref">Java.Util.List</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_TopicId_System_String_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.TopicId(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L297">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_TopicId_" data-uid="Org.Apache.Kafka.Common.Cluster.TopicId*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_TopicId_System_String_" data-uid="Org.Apache.Kafka.Common.Cluster.TopicId(System.String)">TopicId(String)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicId-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicId-java.lang.String-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Uuid TopicId(string arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_TopicIds.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.TopicIds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L152">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_TopicIds_" data-uid="Org.Apache.Kafka.Common.Cluster.TopicIds*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_TopicIds" data-uid="Org.Apache.Kafka.Common.Cluster.TopicIds">TopicIds()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicIds--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicIds--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Collection&lt;Uuid&gt; TopicIds()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a>&gt;</td>
-        <td><p><span class="xref">Java.Util.Collection</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_TopicName_Org_Apache_Kafka_Common_Uuid_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.TopicName(Org.Apache.Kafka.Common.Uuid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L143">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_TopicName_" data-uid="Org.Apache.Kafka.Common.Cluster.TopicName*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_TopicName_Org_Apache_Kafka_Common_Uuid_" data-uid="Org.Apache.Kafka.Common.Cluster.TopicName(Org.Apache.Kafka.Common.Uuid)">TopicName(Uuid)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicName-org.apache.kafka.common.Uuid-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicName-org.apache.kafka.common.Uuid-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string TopicName(Uuid arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_Topics.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.Topics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L225">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_Topics_" data-uid="Org.Apache.Kafka.Common.Cluster.Topics*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_Topics" data-uid="Org.Apache.Kafka.Common.Cluster.Topics">Topics()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topics--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Set&lt;string&gt; Topics()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_UnauthorizedTopics.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.UnauthorizedTopics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L234">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_UnauthorizedTopics_" data-uid="Org.Apache.Kafka.Common.Cluster.UnauthorizedTopics*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_UnauthorizedTopics" data-uid="Org.Apache.Kafka.Common.Cluster.UnauthorizedTopics">UnauthorizedTopics()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#unauthorizedTopics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#unauthorizedTopics--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Set&lt;string&gt; UnauthorizedTopics()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster_WithPartitions_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Common_PartitionInfo__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster.WithPartitions(Java.Util.Map%7BOrg.Apache.Kafka.Common.TopicPartition%2COrg.Apache.Kafka.Common.PartitionInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L243">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Cluster_WithPartitions_" data-uid="Org.Apache.Kafka.Common.Cluster.WithPartitions*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Cluster_WithPartitions_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Common_PartitionInfo__" data-uid="Org.Apache.Kafka.Common.Cluster.WithPartitions(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Common.PartitionInfo})">WithPartitions(Map&lt;TopicPartition, PartitionInfo&gt;)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#withPartitions-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#withPartitions-java.util.Map-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster WithPartitions(Map&lt;TopicPartition, PartitionInfo&gt; arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.map">Map</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
-  </div>
-</article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Cluster.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Cluster%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Cluster.cs/#L29" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-      </footer>
+
+        <article data-uid="Org.Apache.Kafka.Common.Cluster">
+
+
+
+  <h1 id="Org_Apache_Kafka_Common_Cluster" data-uid="Org.Apache.Kafka.Common.Cluster" class="text-break">
+    Class Cluster
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Apache.html">Apache</a>.<a class="xref" href="Org.Apache.Kafka.html">Kafka</a>.<a class="xref" href="Org.Apache.Kafka.Common.html">Common</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Cluster : JVMBridgeBase&lt;Cluster&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><span class="xref">JVMBridgeBase</span></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a>&gt;</div>
+      <div><span class="xref">Cluster</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
+      <div><span class="xref">IJVMBridgeBase</span></div>
+      <div><span class="xref">IJVMBridgeDefinition</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Cluster&gt;.SExecute(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Cluster&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Cluster&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Cluster&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Cluster&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Cluster&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SGetField(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SSetField(IJavaType, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SSetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Cluster&gt;.IsAssignableFrom(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Cluster&gt;.IsAssignableFrom(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Cluster&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;Cluster&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Cluster&gt;.Execute&lt;T&gt;(params T[])</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Cluster&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Cluster&gt;.BridgeClazz</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ToString()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Notify()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wait()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster__ctor" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor">
+  Cluster()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\AllPackageClasses.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cluster()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor(System.Object[])">
+  Cluster(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\AllPackageClasses.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cluster(params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor(System.String,Java.Util.Collection{Org.Apache.Kafka.Common.Node},Java.Util.Collection{Org.Apache.Kafka.Common.PartitionInfo},Java.Util.Set{System.String},Java.Util.Set{System.String})">
+  Cluster(string, Collection&lt;Node&gt;, Collection&lt;PartitionInfo&gt;, Set&lt;string&gt;, Set&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cluster(string arg0, Collection&lt;Node&gt; arg1, Collection&lt;PartitionInfo&gt; arg2, Set&lt;string&gt; arg3, Set&lt;string&gt; arg4)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Collection</span></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Collection</span></p>
+</dd>
+    <dt><code>arg3</code> <span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+    <dt><code>arg4</code> <span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__Java_Util_Set_System_String__Org_Apache_Kafka_Common_Node_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor(System.String,Java.Util.Collection{Org.Apache.Kafka.Common.Node},Java.Util.Collection{Org.Apache.Kafka.Common.PartitionInfo},Java.Util.Set{System.String},Java.Util.Set{System.String},Java.Util.Set{System.String},Org.Apache.Kafka.Common.Node)">
+  Cluster(string, Collection&lt;Node&gt;, Collection&lt;PartitionInfo&gt;, Set&lt;string&gt;, Set&lt;string&gt;, Set&lt;string&gt;, Node)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cluster(string arg0, Collection&lt;Node&gt; arg1, Collection&lt;PartitionInfo&gt; arg2, Set&lt;string&gt; arg3, Set&lt;string&gt; arg4, Set&lt;string&gt; arg5, Node arg6)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Collection</span></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Collection</span></p>
+</dd>
+    <dt><code>arg3</code> <span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+    <dt><code>arg4</code> <span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+    <dt><code>arg5</code> <span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+    <dt><code>arg6</code> <a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__Java_Util_Set_System_String__Org_Apache_Kafka_Common_Node_Java_Util_Map_System_String_Org_Apache_Kafka_Common_Uuid__" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor(System.String,Java.Util.Collection{Org.Apache.Kafka.Common.Node},Java.Util.Collection{Org.Apache.Kafka.Common.PartitionInfo},Java.Util.Set{System.String},Java.Util.Set{System.String},Java.Util.Set{System.String},Org.Apache.Kafka.Common.Node,Java.Util.Map{System.String,Org.Apache.Kafka.Common.Uuid})">
+  Cluster(string, Collection&lt;Node&gt;, Collection&lt;PartitionInfo&gt;, Set&lt;string&gt;, Set&lt;string&gt;, Set&lt;string&gt;, Node, Map&lt;string, Uuid&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node,java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node,java.util.Map)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cluster(string arg0, Collection&lt;Node&gt; arg1, Collection&lt;PartitionInfo&gt; arg2, Set&lt;string&gt; arg3, Set&lt;string&gt; arg4, Set&lt;string&gt; arg5, Node arg6, Map&lt;string, Uuid&gt; arg7)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Collection</span></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Collection</span></p>
+</dd>
+    <dt><code>arg3</code> <span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+    <dt><code>arg4</code> <span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+    <dt><code>arg5</code> <span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+    <dt><code>arg6</code> <a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
+</dd>
+    <dt><code>arg7</code> <span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Map</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster__ctor_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster__ctor_System_String_Java_Util_Collection_Org_Apache_Kafka_Common_Node__Java_Util_Collection_Org_Apache_Kafka_Common_PartitionInfo__Java_Util_Set_System_String__Java_Util_Set_System_String__Org_Apache_Kafka_Common_Node_" data-uid="Org.Apache.Kafka.Common.Cluster.#ctor(System.String,Java.Util.Collection{Org.Apache.Kafka.Common.Node},Java.Util.Collection{Org.Apache.Kafka.Common.PartitionInfo},Java.Util.Set{System.String},Java.Util.Set{System.String},Org.Apache.Kafka.Common.Node)">
+  Cluster(string, Collection&lt;Node&gt;, Collection&lt;PartitionInfo&gt;, Set&lt;string&gt;, Set&lt;string&gt;, Node)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,org.apache.kafka.common.Node)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,org.apache.kafka.common.Node)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cluster(string arg0, Collection&lt;Node&gt; arg1, Collection&lt;PartitionInfo&gt; arg2, Set&lt;string&gt; arg3, Set&lt;string&gt; arg4, Node arg5)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Collection</span></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Collection</span></p>
+</dd>
+    <dt><code>arg3</code> <span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+    <dt><code>arg4</code> <span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+    <dt><code>arg5</code> <a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_BridgeClassName_" data-uid="Org.Apache.Kafka.Common.Cluster.BridgeClassName*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Cluster.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\AllPackageClasses.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeAbstract*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\AllPackageClasses.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeCloseable*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\AllPackageClasses.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeInterface*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\AllPackageClasses.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeStatic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Cluster.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\AllPackageClasses.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_AvailablePartitionsForTopic_" data-uid="Org.Apache.Kafka.Common.Cluster.AvailablePartitionsForTopic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_AvailablePartitionsForTopic_System_String_" data-uid="Org.Apache.Kafka.Common.Cluster.AvailablePartitionsForTopic(System.String)">
+  AvailablePartitionsForTopic(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#availablePartitionsForTopic-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#availablePartitionsForTopic-java.lang.String-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;PartitionInfo&gt; AvailablePartitionsForTopic(string arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.List</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_Bootstrap_" data-uid="Org.Apache.Kafka.Common.Cluster.Bootstrap*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_Bootstrap_Java_Util_List_Java_Net_InetSocketAddress__" data-uid="Org.Apache.Kafka.Common.Cluster.Bootstrap(Java.Util.List{Java.Net.InetSocketAddress})">
+  Bootstrap(List&lt;InetSocketAddress&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#bootstrap-java.util.List-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#bootstrap-java.util.List-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Cluster Bootstrap(List&lt;InetSocketAddress&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">List</span>&lt;<span class="xref">InetSocketAddress</span>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.List</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_ClusterResource_" data-uid="Org.Apache.Kafka.Common.Cluster.ClusterResource*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_ClusterResource" data-uid="Org.Apache.Kafka.Common.Cluster.ClusterResource">
+  ClusterResource()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#clusterResource--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#clusterResource--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClusterResource ClusterResource()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.ClusterResource.html">ClusterResource</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.ClusterResource.html">ClusterResource</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_Controller_" data-uid="Org.Apache.Kafka.Common.Cluster.Controller*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_Controller" data-uid="Org.Apache.Kafka.Common.Cluster.Controller">
+  Controller()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#controller--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#controller--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node Controller()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_Empty_" data-uid="Org.Apache.Kafka.Common.Cluster.Empty*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_Empty" data-uid="Org.Apache.Kafka.Common.Cluster.Empty">
+  Empty()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#empty--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#empty--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Cluster Empty()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_InternalTopics_" data-uid="Org.Apache.Kafka.Common.Cluster.InternalTopics*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_InternalTopics" data-uid="Org.Apache.Kafka.Common.Cluster.InternalTopics">
+  InternalTopics()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#internalTopics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#internalTopics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Set&lt;string&gt; InternalTopics()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_InvalidTopics_" data-uid="Org.Apache.Kafka.Common.Cluster.InvalidTopics*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_InvalidTopics" data-uid="Org.Apache.Kafka.Common.Cluster.InvalidTopics">
+  InvalidTopics()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#invalidTopics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#invalidTopics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Set&lt;string&gt; InvalidTopics()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_IsBootstrapConfigured_" data-uid="Org.Apache.Kafka.Common.Cluster.IsBootstrapConfigured*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_IsBootstrapConfigured" data-uid="Org.Apache.Kafka.Common.Cluster.IsBootstrapConfigured">
+  IsBootstrapConfigured()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#isBootstrapConfigured--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#isBootstrapConfigured--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBootstrapConfigured()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_LeaderFor_" data-uid="Org.Apache.Kafka.Common.Cluster.LeaderFor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_LeaderFor_Org_Apache_Kafka_Common_TopicPartition_" data-uid="Org.Apache.Kafka.Common.Cluster.LeaderFor(Org.Apache.Kafka.Common.TopicPartition)">
+  LeaderFor(TopicPartition)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#leaderFor-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#leaderFor-org.apache.kafka.common.TopicPartition-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node LeaderFor(TopicPartition arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_NodeById_" data-uid="Org.Apache.Kafka.Common.Cluster.NodeById*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_NodeById_System_Int32_" data-uid="Org.Apache.Kafka.Common.Cluster.NodeById(System.Int32)">
+  NodeById(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodeById-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodeById-int-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node NodeById(int arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_NodeIfOnline_" data-uid="Org.Apache.Kafka.Common.Cluster.NodeIfOnline*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_NodeIfOnline_Org_Apache_Kafka_Common_TopicPartition_System_Int32_" data-uid="Org.Apache.Kafka.Common.Cluster.NodeIfOnline(Org.Apache.Kafka.Common.TopicPartition,System.Int32)">
+  NodeIfOnline(TopicPartition, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodeIfOnline-org.apache.kafka.common.TopicPartition-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodeIfOnline-org.apache.kafka.common.TopicPartition-int-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;Node&gt; NodeIfOnline(TopicPartition arg0, int arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Optional</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Optional</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_Nodes_" data-uid="Org.Apache.Kafka.Common.Cluster.Nodes*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_Nodes" data-uid="Org.Apache.Kafka.Common.Cluster.Nodes">
+  Nodes()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodes--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#nodes--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Node&gt; Nodes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.List</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_Partition_" data-uid="Org.Apache.Kafka.Common.Cluster.Partition*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_Partition_Org_Apache_Kafka_Common_TopicPartition_" data-uid="Org.Apache.Kafka.Common.Cluster.Partition(Org.Apache.Kafka.Common.TopicPartition)">
+  Partition(TopicPartition)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partition-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partition-org.apache.kafka.common.TopicPartition-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PartitionInfo Partition(TopicPartition arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_PartitionCountForTopic_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionCountForTopic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_PartitionCountForTopic_System_String_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionCountForTopic(System.String)">
+  PartitionCountForTopic(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionCountForTopic-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionCountForTopic-java.lang.String-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Integer PartitionCountForTopic(string arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Integer</span></dt>
+    <dd><p><span class="xref">Java.Lang.Integer</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_PartitionsForNode_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionsForNode*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_PartitionsForNode_System_Int32_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionsForNode(System.Int32)">
+  PartitionsForNode(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionsForNode-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionsForNode-int-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;PartitionInfo&gt; PartitionsForNode(int arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.List</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_PartitionsForTopic_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionsForTopic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_PartitionsForTopic_System_String_" data-uid="Org.Apache.Kafka.Common.Cluster.PartitionsForTopic(System.String)">
+  PartitionsForTopic(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionsForTopic-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#partitionsForTopic-java.lang.String-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;PartitionInfo&gt; PartitionsForTopic(string arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.List</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_TopicId_" data-uid="Org.Apache.Kafka.Common.Cluster.TopicId*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_TopicId_System_String_" data-uid="Org.Apache.Kafka.Common.Cluster.TopicId(System.String)">
+  TopicId(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicId-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicId-java.lang.String-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Uuid TopicId(string arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_TopicIds_" data-uid="Org.Apache.Kafka.Common.Cluster.TopicIds*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_TopicIds" data-uid="Org.Apache.Kafka.Common.Cluster.TopicIds">
+  TopicIds()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicIds--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicIds--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;Uuid&gt; TopicIds()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Collection</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_TopicName_" data-uid="Org.Apache.Kafka.Common.Cluster.TopicName*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_TopicName_Org_Apache_Kafka_Common_Uuid_" data-uid="Org.Apache.Kafka.Common.Cluster.TopicName(Org.Apache.Kafka.Common.Uuid)">
+  TopicName(Uuid)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicName-org.apache.kafka.common.Uuid-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topicName-org.apache.kafka.common.Uuid-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TopicName(Uuid arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_Topics_" data-uid="Org.Apache.Kafka.Common.Cluster.Topics*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_Topics" data-uid="Org.Apache.Kafka.Common.Cluster.Topics">
+  Topics()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#topics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Set&lt;string&gt; Topics()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_UnauthorizedTopics_" data-uid="Org.Apache.Kafka.Common.Cluster.UnauthorizedTopics*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_UnauthorizedTopics" data-uid="Org.Apache.Kafka.Common.Cluster.UnauthorizedTopics">
+  UnauthorizedTopics()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#unauthorizedTopics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#unauthorizedTopics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Set&lt;string&gt; UnauthorizedTopics()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Cluster_WithPartitions_" data-uid="Org.Apache.Kafka.Common.Cluster.WithPartitions*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Cluster_WithPartitions_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Common_PartitionInfo__" data-uid="Org.Apache.Kafka.Common.Cluster.WithPartitions(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Common.PartitionInfo})">
+  WithPartitions(Map&lt;TopicPartition, PartitionInfo&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#withPartitions-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/Cluster.html#withPartitions-java.util.Map-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cluster WithPartitions(Map&lt;TopicPartition, PartitionInfo&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">Map</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Map</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Cluster.cs/#L29" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

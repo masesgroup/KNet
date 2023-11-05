@@ -1,1464 +1,1303 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Joined&lt;K, V, VO&gt;
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Joined&lt;K, V, VO&gt;
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class Joined&lt;K, V, VO&gt;
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Joined&lt;K, V, VO&gt;
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3">
-  
-  
-  <h1 id="Org_Apache_Kafka_Streams_Kstream_Joined_3" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3" class="text-break">Class Joined&lt;K, V, VO&gt;
-  </h1>
-  <div class="markdown level0 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html</a></p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
-    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;&gt;</div>
-    <div class="level4"><span class="xref">Joined&lt;K, V, VO&gt;</span></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecuteArray&lt;T&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SGetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SGetField(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SGetField&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SGetField&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SSetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SSetField(System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SSetField&lt;TValue&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.SSetField&lt;TValue&gt;(System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.IsAssignableFrom(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.IsAssignableFrom(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.IsAssignableFrom&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.New(System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.Execute&lt;T&gt;(T[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.DynBridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.BridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynBridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.Kstream.Joined&lt;K, V, VO&gt;&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.BridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf&lt;TClass&gt;(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf(System.String, System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Notify()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.NotifyAll()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64, System.Int32)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField(System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField&lt;TValue&gt;(System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynBridgeInstance</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeInstance</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeListener</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember#system-dynamic-dynamicobject-trydeletemember(system-dynamic-deletememberbinder)">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember#system-dynamic-dynamicobject-tryinvokemember(system-dynamic-invokememberbinder-system-object()-system-object@)">DynamicObject.TryInvokeMember(InvokeMemberBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance#system-dynamic-dynamicobject-trycreateinstance(system-dynamic-createinstancebinder-system-object()-system-object@)">DynamicObject.TryCreateInstance(CreateInstanceBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <span class="xref">System.Dynamic.DynamicObject.TryDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Object[])</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
-    </div>
-    <div>
-      <span class="xref">System.Dynamic.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.html">Org.Apache.Kafka.Streams.Kstream</a></h6>
-  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
-  <h5 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Joined&lt;K, V, VO&gt; : JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
-  </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">K</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">V</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">VO</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L923">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3__ctor_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3__ctor" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.#ctor">Joined()</h4>
-  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Joined()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3__ctor_System_Object___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L927">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3__ctor_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.#ctor(System.Object[])">Joined(Object[])</h4>
-  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Joined(params object[] args)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L934">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_BridgeClassName_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.BridgeClassName*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.BridgeClassName">BridgeClassName</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeClassName</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeAbstract.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.IsBridgeAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L938">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeAbstract*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeAbstract">IsBridgeAbstract</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeAbstract</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeCloseable.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.IsBridgeCloseable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L942">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeCloseable*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeCloseable">IsBridgeCloseable</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeCloseable</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeInterface.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.IsBridgeInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L946">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeInterface*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeInterface">IsBridgeInterface</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeInterface</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeStatic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.IsBridgeStatic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L950">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeStatic*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeStatic">IsBridgeStatic</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeStatic</span></div>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_As_System_String_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.As(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L228">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_As_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.As*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_As_System_String_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.As(System.String)">As(String)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#as-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#as-java.lang.String-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; As(string arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_GracePeriod.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.GracePeriod%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L304">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_GracePeriod_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.GracePeriod*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_GracePeriod" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.GracePeriod">GracePeriod()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#gracePeriod--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#gracePeriod--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Duration GracePeriod()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Time.Duration</span></td>
-        <td><p><span class="xref">Java.Time.Duration</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_KeySerde.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.KeySerde%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L313">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_KeySerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.KeySerde*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_KeySerde" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.KeySerde">KeySerde()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#keySerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#keySerde--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Serde&lt;K&gt; KeySerde()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_KeySerde_Org_Apache_Kafka_Common_Serialization_Serde__0__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.KeySerde(Org.Apache.Kafka.Common.Serialization.Serde%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L237">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_KeySerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.KeySerde*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_KeySerde_Org_Apache_Kafka_Common_Serialization_Serde__0__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.KeySerde(Org.Apache.Kafka.Common.Serialization.Serde{`0})">KeySerde(Serde&lt;K&gt;)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#keySerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#keySerde-org.apache.kafka.common.serialization.Serde-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; KeySerde(Serde&lt;K&gt; arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_OtherValueSerde.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.OtherValueSerde%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L331">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_OtherValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.OtherValueSerde*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_OtherValueSerde" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.OtherValueSerde">OtherValueSerde()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Serde&lt;VO&gt; OtherValueSerde()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_OtherValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__2__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.OtherValueSerde(Org.Apache.Kafka.Common.Serialization.Serde%7B%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L246">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_OtherValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.OtherValueSerde*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_OtherValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__2__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.OtherValueSerde(Org.Apache.Kafka.Common.Serialization.Serde{`2})">OtherValueSerde(Serde&lt;VO&gt;)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; OtherValueSerde(Serde&lt;VO&gt; arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_ValueSerde.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.ValueSerde%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L322">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_ValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.ValueSerde*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_ValueSerde" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.ValueSerde">ValueSerde()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#valueSerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#valueSerde--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Serde&lt;V&gt; ValueSerde()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_ValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__1__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.ValueSerde(Org.Apache.Kafka.Common.Serialization.Serde%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L255">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_ValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.ValueSerde*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_ValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__1__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.ValueSerde(Org.Apache.Kafka.Common.Serialization.Serde{`1})">ValueSerde(Serde&lt;V&gt;)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#valueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#valueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; ValueSerde(Serde&lt;V&gt; arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_With_Org_Apache_Kafka_Common_Serialization_Serde__0__Org_Apache_Kafka_Common_Serialization_Serde__1__Org_Apache_Kafka_Common_Serialization_Serde__2__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.With(Org.Apache.Kafka.Common.Serialization.Serde%7B%600%7D%2COrg.Apache.Kafka.Common.Serialization.Serde%7B%601%7D%2COrg.Apache.Kafka.Common.Serialization.Serde%7B%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L291">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_Org_Apache_Kafka_Common_Serialization_Serde__0__Org_Apache_Kafka_Common_Serialization_Serde__1__Org_Apache_Kafka_Common_Serialization_Serde__2__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With(Org.Apache.Kafka.Common.Serialization.Serde{`0},Org.Apache.Kafka.Common.Serialization.Serde{`1},Org.Apache.Kafka.Common.Serialization.Serde{`2})">With(Serde&lt;K&gt;, Serde&lt;V&gt;, Serde&lt;VO&gt;)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; With(Serde&lt;K&gt; arg0, Serde&lt;V&gt; arg1, Serde&lt;VO&gt; arg2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_With_Org_Apache_Kafka_Common_Serialization_Serde__0__Org_Apache_Kafka_Common_Serialization_Serde__1__Org_Apache_Kafka_Common_Serialization_Serde__2__System_String_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.With(Org.Apache.Kafka.Common.Serialization.Serde%7B%600%7D%2COrg.Apache.Kafka.Common.Serialization.Serde%7B%601%7D%2COrg.Apache.Kafka.Common.Serialization.Serde%7B%602%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L280">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_Org_Apache_Kafka_Common_Serialization_Serde__0__Org_Apache_Kafka_Common_Serialization_Serde__1__Org_Apache_Kafka_Common_Serialization_Serde__2__System_String_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With(Org.Apache.Kafka.Common.Serialization.Serde{`0},Org.Apache.Kafka.Common.Serialization.Serde{`1},Org.Apache.Kafka.Common.Serialization.Serde{`2},System.String)">With(Serde&lt;K&gt;, Serde&lt;V&gt;, Serde&lt;VO&gt;, String)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; With(Serde&lt;K&gt; arg0, Serde&lt;V&gt; arg1, Serde&lt;VO&gt; arg2, string arg3)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg3</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_With_Org_Apache_Kafka_Common_Serialization_Serde__0__Org_Apache_Kafka_Common_Serialization_Serde__1__Org_Apache_Kafka_Common_Serialization_Serde__2__System_String_Java_Time_Duration_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.With(Org.Apache.Kafka.Common.Serialization.Serde%7B%600%7D%2COrg.Apache.Kafka.Common.Serialization.Serde%7B%601%7D%2COrg.Apache.Kafka.Common.Serialization.Serde%7B%602%7D%2CSystem.String%2CJava.Time.Duration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L268">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_Org_Apache_Kafka_Common_Serialization_Serde__0__Org_Apache_Kafka_Common_Serialization_Serde__1__Org_Apache_Kafka_Common_Serialization_Serde__2__System_String_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With(Org.Apache.Kafka.Common.Serialization.Serde{`0},Org.Apache.Kafka.Common.Serialization.Serde{`1},Org.Apache.Kafka.Common.Serialization.Serde{`2},System.String,Java.Time.Duration)">With(Serde&lt;K&gt;, Serde&lt;V&gt;, Serde&lt;VO&gt;, String, Duration)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-java.time.Duration-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; With(Serde&lt;K&gt; arg0, Serde&lt;V&gt; arg1, Serde&lt;VO&gt; arg2, string arg3, Duration arg4)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg3</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Time.Duration</span></td>
-        <td><span class="parametername">arg4</span></td>
-        <td><p><span class="xref">Java.Time.Duration</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_WithGracePeriod_Java_Time_Duration_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.WithGracePeriod(Java.Time.Duration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L340">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithGracePeriod_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithGracePeriod*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithGracePeriod_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithGracePeriod(Java.Time.Duration)">WithGracePeriod(Duration)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withGracePeriod-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withGracePeriod-java.time.Duration-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Joined&lt;K, V, VO&gt; WithGracePeriod(Duration arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Time.Duration</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><span class="xref">Java.Time.Duration</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_WithKeySerde_Org_Apache_Kafka_Common_Serialization_Serde__0__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.WithKeySerde(Org.Apache.Kafka.Common.Serialization.Serde%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L349">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithKeySerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithKeySerde*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithKeySerde_Org_Apache_Kafka_Common_Serialization_Serde__0__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithKeySerde(Org.Apache.Kafka.Common.Serialization.Serde{`0})">WithKeySerde(Serde&lt;K&gt;)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Joined&lt;K, V, VO&gt; WithKeySerde(Serde&lt;K&gt; arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_WithOtherValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__2__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.WithOtherValueSerde(Org.Apache.Kafka.Common.Serialization.Serde%7B%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L358">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithOtherValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithOtherValueSerde*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithOtherValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__2__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithOtherValueSerde(Org.Apache.Kafka.Common.Serialization.Serde{`2})">WithOtherValueSerde(Serde&lt;VO&gt;)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withOtherValueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withOtherValueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Joined&lt;K, V, VO&gt; WithOtherValueSerde(Serde&lt;VO&gt; arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_WithValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__1__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.WithValueSerde(Org.Apache.Kafka.Common.Serialization.Serde%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L367">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithValueSerde*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__1__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithValueSerde(Org.Apache.Kafka.Common.Serialization.Serde{`1})">WithValueSerde(Serde&lt;V&gt;)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withValueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withValueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Joined&lt;K, V, VO&gt; WithValueSerde(Serde&lt;V&gt; arg0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="operators">Operators
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3_op_Implicit_Org_Apache_Kafka_Streams_Kstream_Joined__0__1__2___Org_Apache_Kafka_Streams_Kstream_Joined.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603.op_Implicit(Org.Apache.Kafka.Streams.Kstream.Joined%7B%600%2C%601%2C%602%7D)~Org.Apache.Kafka.Streams.Kstream.Joined%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L214">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_op_Implicit_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.op_Implicit*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_op_Implicit_Org_Apache_Kafka_Streams_Kstream_Joined__0__1__2___Org_Apache_Kafka_Streams_Kstream_Joined" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.op_Implicit(Org.Apache.Kafka.Streams.Kstream.Joined{`0,`1,`2})~Org.Apache.Kafka.Streams.Kstream.Joined">Implicit(Joined&lt;K, V, VO&gt; to Joined)</h4>
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined&lt;K, V, VO&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Joined(Joined&lt;K, V, VO&gt; t)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</td>
-        <td><span class="parametername">t</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
-  </div>
-</article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_Joined_3.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.Joined%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Joined.cs/#L204" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-      </footer>
+
+        <article data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3">
+
+
+
+  <h1 id="Org_Apache_Kafka_Streams_Kstream_Joined_3" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3" class="text-break">
+    Class Joined&lt;K, V, VO&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Apache.html">Apache</a>.<a class="xref" href="Org.Apache.Kafka.html">Kafka</a>.<a class="xref" href="Org.Apache.Kafka.Streams.html">Streams</a>.<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.html">Kstream</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Joined&lt;K, V, VO&gt; : JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd></dd>
+    <dt><code>V</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><span class="xref">JVMBridgeBase</span></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;&gt;</div>
+      <div><span class="xref">Joined&lt;K, V, VO&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
+      <div><span class="xref">IJVMBridgeBase</span></div>
+      <div><span class="xref">IJVMBridgeDefinition</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SGetField(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SSetField(IJavaType, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SSetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.IsAssignableFrom(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.IsAssignableFrom(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.Execute&lt;T&gt;(params T[])</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Joined&lt;K, V, VO&gt;&gt;.BridgeClazz</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ToString()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Notify()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wait()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3__ctor_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3__ctor" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.#ctor">
+  Joined()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\AllPackageClasses.cs/#L923"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Joined()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3__ctor_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.#ctor(System.Object[])">
+  Joined(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\AllPackageClasses.cs/#L927"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Joined(params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_BridgeClassName_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.BridgeClassName*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\AllPackageClasses.cs/#L934"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeAbstract*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\AllPackageClasses.cs/#L938"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeCloseable*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\AllPackageClasses.cs/#L942"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeInterface*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\AllPackageClasses.cs/#L946"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeStatic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\AllPackageClasses.cs/#L950"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_As_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.As*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_As_System_String_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.As(System.String)">
+  As(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#as-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#as-java.lang.String-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; As(string arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_GracePeriod_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.GracePeriod*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_GracePeriod" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.GracePeriod">
+  GracePeriod()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#gracePeriod--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#gracePeriod--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Duration GracePeriod()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Duration</span></dt>
+    <dd><p><span class="xref">Java.Time.Duration</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_KeySerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.KeySerde*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_KeySerde" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.KeySerde">
+  KeySerde()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#keySerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#keySerde--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Serde&lt;K&gt; KeySerde()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_KeySerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.KeySerde*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_KeySerde_Org_Apache_Kafka_Common_Serialization_Serde__0__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.KeySerde(Org.Apache.Kafka.Common.Serialization.Serde{`0})">
+  KeySerde(Serde&lt;K&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#keySerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#keySerde-org.apache.kafka.common.serialization.Serde-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; KeySerde(Serde&lt;K&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_OtherValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.OtherValueSerde*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_OtherValueSerde" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.OtherValueSerde">
+  OtherValueSerde()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Serde&lt;VO&gt; OtherValueSerde()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_OtherValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.OtherValueSerde*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_OtherValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__2__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.OtherValueSerde(Org.Apache.Kafka.Common.Serialization.Serde{`2})">
+  OtherValueSerde(Serde&lt;VO&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; OtherValueSerde(Serde&lt;VO&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_ValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.ValueSerde*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_ValueSerde" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.ValueSerde">
+  ValueSerde()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#valueSerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#valueSerde--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Serde&lt;V&gt; ValueSerde()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_ValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.ValueSerde*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_ValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__1__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.ValueSerde(Org.Apache.Kafka.Common.Serialization.Serde{`1})">
+  ValueSerde(Serde&lt;V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#valueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#valueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; ValueSerde(Serde&lt;V&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_Org_Apache_Kafka_Common_Serialization_Serde__0__Org_Apache_Kafka_Common_Serialization_Serde__1__Org_Apache_Kafka_Common_Serialization_Serde__2__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With(Org.Apache.Kafka.Common.Serialization.Serde{`0},Org.Apache.Kafka.Common.Serialization.Serde{`1},Org.Apache.Kafka.Common.Serialization.Serde{`2})">
+  With(Serde&lt;K&gt;, Serde&lt;V&gt;, Serde&lt;VO&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; With(Serde&lt;K&gt; arg0, Serde&lt;V&gt; arg1, Serde&lt;VO&gt; arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_Org_Apache_Kafka_Common_Serialization_Serde__0__Org_Apache_Kafka_Common_Serialization_Serde__1__Org_Apache_Kafka_Common_Serialization_Serde__2__System_String_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With(Org.Apache.Kafka.Common.Serialization.Serde{`0},Org.Apache.Kafka.Common.Serialization.Serde{`1},Org.Apache.Kafka.Common.Serialization.Serde{`2},System.String)">
+  With(Serde&lt;K&gt;, Serde&lt;V&gt;, Serde&lt;VO&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; With(Serde&lt;K&gt; arg0, Serde&lt;V&gt; arg1, Serde&lt;VO&gt; arg2, string arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_With_Org_Apache_Kafka_Common_Serialization_Serde__0__Org_Apache_Kafka_Common_Serialization_Serde__1__Org_Apache_Kafka_Common_Serialization_Serde__2__System_String_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.With(Org.Apache.Kafka.Common.Serialization.Serde{`0},Org.Apache.Kafka.Common.Serialization.Serde{`1},Org.Apache.Kafka.Common.Serialization.Serde{`2},System.String,Java.Time.Duration)">
+  With(Serde&lt;K&gt;, Serde&lt;V&gt;, Serde&lt;VO&gt;, string, Duration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Joined&lt;K, V, VO&gt; With(Serde&lt;K&gt; arg0, Serde&lt;V&gt; arg1, Serde&lt;VO&gt; arg2, string arg3, Duration arg4)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+    <dt><code>arg4</code> <span class="xref">Duration</span></dt>
+    <dd><p><span class="xref">Java.Time.Duration</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithGracePeriod_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithGracePeriod*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithGracePeriod_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithGracePeriod(Java.Time.Duration)">
+  WithGracePeriod(Duration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withGracePeriod-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withGracePeriod-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Joined&lt;K, V, VO&gt; WithGracePeriod(Duration arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">Duration</span></dt>
+    <dd><p><span class="xref">Java.Time.Duration</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithKeySerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithKeySerde*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithKeySerde_Org_Apache_Kafka_Common_Serialization_Serde__0__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithKeySerde(Org.Apache.Kafka.Common.Serialization.Serde{`0})">
+  WithKeySerde(Serde&lt;K&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Joined&lt;K, V, VO&gt; WithKeySerde(Serde&lt;K&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;K&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithOtherValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithOtherValueSerde*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithOtherValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__2__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithOtherValueSerde(Org.Apache.Kafka.Common.Serialization.Serde{`2})">
+  WithOtherValueSerde(Serde&lt;VO&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withOtherValueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withOtherValueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Joined&lt;K, V, VO&gt; WithOtherValueSerde(Serde&lt;VO&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithValueSerde_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithValueSerde*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_WithValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__1__" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.WithValueSerde(Org.Apache.Kafka.Common.Serialization.Serde{`1})">
+  WithValueSerde(Serde&lt;V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withValueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/kstream/Joined.html#withValueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Joined&lt;K, V, VO&gt; WithValueSerde(Serde&lt;V&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Joined_3_op_Implicit_" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.op_Implicit*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Joined_3_op_Implicit_Org_Apache_Kafka_Streams_Kstream_Joined__0__1__2___Org_Apache_Kafka_Streams_Kstream_Joined" data-uid="Org.Apache.Kafka.Streams.Kstream.Joined`3.op_Implicit(Org.Apache.Kafka.Streams.Kstream.Joined{`0,`1,`2})~Org.Apache.Kafka.Streams.Kstream.Joined">
+  implicit operator Joined(Joined&lt;K, V, VO&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined&lt;K, V, VO&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Joined(Joined&lt;K, V, VO&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined</a>&lt;K, V, VO&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\Kstream\Joined.cs/#L204" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

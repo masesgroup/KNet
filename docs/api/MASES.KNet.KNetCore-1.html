@@ -1,1064 +1,1104 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class KNetCore&lt;T&gt;
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class KNetCore&lt;T&gt;
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class KNetCore&lt;T&gt;
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KNetCore&lt;T&gt;
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MASES.KNet.KNetCore`1">
-  
-  
-  <h1 id="MASES_KNet_KNetCore_1" data-uid="MASES.KNet.KNetCore`1" class="text-break">Class KNetCore&lt;T&gt;
-  </h1>
-  <div class="markdown level0 summary"><p>Public entry point of <a class="xref" href="MASES.KNet.KNetCore-1.html">KNetCore&lt;T&gt;</a></p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper</span></div>
-    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper</span>&lt;T&gt;</div>
-    <div class="level3"><span class="xref">MASES.JNet.JNetCoreBase</span>&lt;T&gt;</div>
-    <div class="level4"><span class="xref">MASES.JNet.JNetCore</span>&lt;T&gt;</div>
-    <div class="level5"><span class="xref">KNetCore&lt;T&gt;</span></div>
-      <div class="level6"><a class="xref" href="MASES.KNetCLI.KNetCLICore-1.html">KNetCLICore&lt;T&gt;</a></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMInterop.IJVMWrapperManagement</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.JARsSubFolder</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.Parser</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.HelpInfo(System.Nullable&lt;System.Int32&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.Class&lt;TClass&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.New(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.New(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationLicensePath</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationJDKHome</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationJVMPath</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationJNIVerbosity</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationJNIOutputFile</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationJmxPort</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationEnableDebug</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationJavaDebugPort</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationDebugSuspendFlag</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationJavaDebugOpts</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationHeapSize</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationInitialHeapSize</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ApplicationLogClassPath</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.LicensePath</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.JDKHome</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.JVMPath</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.JNIVerbosity</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.JNIOutputFile</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.JmxPort</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.EnableDebug</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.JavaDebugPort</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.DebugSuspendFlag</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.JavaDebugOpts</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.GlobalHeapSize</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.InitialHeapSize</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.LogClassPath</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ParsedArgs</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.JVMOptions</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ClassPath</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;T&gt;.CreateGlobalInstance()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;T&gt;.UnwrapOn(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;T&gt;.UnwrapAndDemonizeOn(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;T&gt;.HasGlobalInstance</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;T&gt;.GlobalInstance</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;T&gt;.ScopedOn</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;T&gt;.ScopedOnVersion</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.Initialize()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ImportPackage(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.RegisterCLRGlobal(System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.UnregisterCLRGlobal(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetJVMGlobal(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetCLRGlobal(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.InitializeListener(MASES.JCOBridge.C2JBridge.IJVMBridgeBase)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetListener(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ReleaseListener(MASES.JCOBridge.C2JBridge.IJVMBridgeBase)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetJCGraphicContainer(System.String, System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetJCGraphicContainer(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ReleaseJCGraphicContainer(MASES.JCOBridge.C2JBridge.IJCGraphicContainer)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.InitializeRemote()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.UnwrapOn&lt;T&gt;(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.UnwrapAndDemonizeOn&lt;T&gt;(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetMainClasses(System.Reflection.Assembly)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.Launch&lt;TClass&gt;(System.String[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.Launch(System.Type, System.String[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.FilteredArgs</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.IsContainer</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ContainerId</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.FeatureLevel</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.EnableCriticalMethods</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JVM</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.Management</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JVMStats</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.DynJVM</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.RemoteBridge</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.RemoteJCOBridge</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ModulePath</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JVMPackages</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.SuppressFinalize</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.Globalize</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.LastBindingException</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MASES.KNet.html">MASES.KNet</a></h6>
-  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
-  <h5 id="MASES_KNet_KNetCore_1_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KNetCore&lt;T&gt; : JNetCore&lt;T&gt;, IJVMWrapperManagement, IJVMBridgeCore where T : KNetCore&lt;T&gt;</code></pre>
-  </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>A class which inherits from <a class="xref" href="MASES.KNet.KNetCore-1.html">KNetCore&lt;T&gt;</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1__ctor.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L105">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1__ctor_" data-uid="MASES.KNet.KNetCore`1.#ctor*"></a>
-  <h4 id="MASES_KNet_KNetCore_1__ctor" data-uid="MASES.KNet.KNetCore`1.#ctor">KNetCore()</h4>
-  <div class="markdown level1 summary"><p>Public initializer</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetCore()</code></pre>
-  </div>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_ApplicationClassToRun.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.ApplicationClassToRun%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L132">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_ApplicationClassToRun_" data-uid="MASES.KNet.KNetCore`1.ApplicationClassToRun*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_ApplicationClassToRun" data-uid="MASES.KNet.KNetCore`1.ApplicationClassToRun">ApplicationClassToRun</h4>
-  <div class="markdown level1 summary"><p>Sets the global value of class to run</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ApplicationClassToRun { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_ApplicationDisableJMX.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.ApplicationDisableJMX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L157">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_ApplicationDisableJMX_" data-uid="MASES.KNet.KNetCore`1.ApplicationDisableJMX*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_ApplicationDisableJMX" data-uid="MASES.KNet.KNetCore`1.ApplicationDisableJMX">ApplicationDisableJMX</h4>
-  <div class="markdown level1 summary"><p>Sets the global value to disable JMX</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool? ApplicationDisableJMX { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_ApplicationJarRootPath.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.ApplicationJarRootPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L137">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_ApplicationJarRootPath_" data-uid="MASES.KNet.KNetCore`1.ApplicationJarRootPath*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_ApplicationJarRootPath" data-uid="MASES.KNet.KNetCore`1.ApplicationJarRootPath">ApplicationJarRootPath</h4>
-  <div class="markdown level1 summary"><p>Sets the global value of Jar root path</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ApplicationJarRootPath { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_ApplicationLog4JPath.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.ApplicationLog4JPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L142">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_ApplicationLog4JPath_" data-uid="MASES.KNet.KNetCore`1.ApplicationLog4JPath*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_ApplicationLog4JPath" data-uid="MASES.KNet.KNetCore`1.ApplicationLog4JPath">ApplicationLog4JPath</h4>
-  <div class="markdown level1 summary"><p>Sets the global value of log4j path</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ApplicationLog4JPath { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_ApplicationLogPath.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.ApplicationLogPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L147">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_ApplicationLogPath_" data-uid="MASES.KNet.KNetCore`1.ApplicationLogPath*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_ApplicationLogPath" data-uid="MASES.KNet.KNetCore`1.ApplicationLogPath">ApplicationLogPath</h4>
-  <div class="markdown level1 summary"><p>Sets the global value of log path</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ApplicationLogPath { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_ApplicationScalaVersion.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.ApplicationScalaVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L152">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_ApplicationScalaVersion_" data-uid="MASES.KNet.KNetCore`1.ApplicationScalaVersion*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_ApplicationScalaVersion" data-uid="MASES.KNet.KNetCore`1.ApplicationScalaVersion">ApplicationScalaVersion</h4>
-  <div class="markdown level1 summary"><p>Sets the global value of scala version</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ApplicationScalaVersion { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_ClassToRun.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.ClassToRun%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L163">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_ClassToRun_" data-uid="MASES.KNet.KNetCore`1.ClassToRun*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_ClassToRun" data-uid="MASES.KNet.KNetCore`1.ClassToRun">ClassToRun</h4>
-  <div class="markdown level1 summary"><p>The class to run in CLI version</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string ClassToRun { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_CommandLineArguments.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.CommandLineArguments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L42">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_CommandLineArguments_" data-uid="MASES.KNet.KNetCore`1.CommandLineArguments*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_CommandLineArguments" data-uid="MASES.KNet.KNetCore`1.CommandLineArguments">CommandLineArguments</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;IArgumentMetadata&gt; CommandLineArguments { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">MASES.CLIParser.IArgumentMetadata</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.CommandLineArguments</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_DisableJMX.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.DisableJMX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L203">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_DisableJMX_" data-uid="MASES.KNet.KNetCore`1.DisableJMX*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_DisableJMX" data-uid="MASES.KNet.KNetCore`1.DisableJMX">DisableJMX</h4>
-  <div class="markdown level1 summary"><p>Disable JMX</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool DisableJMX { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_JarRootPath.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.JarRootPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L180">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_JarRootPath_" data-uid="MASES.KNet.KNetCore`1.JarRootPath*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_JarRootPath" data-uid="MASES.KNet.KNetCore`1.JarRootPath">JarRootPath</h4>
-  <div class="markdown level1 summary"><p>The root path where Apache Kafka is installed</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string JarRootPath { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_Log4JOpts.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.Log4JOpts%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L197">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_Log4JOpts_" data-uid="MASES.KNet.KNetCore`1.Log4JOpts*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_Log4JOpts" data-uid="MASES.KNet.KNetCore`1.Log4JOpts">Log4JOpts</h4>
-  <div class="markdown level1 summary"><p>The log4j configuration</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Log4JOpts { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_Log4JPath.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.Log4JPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L186">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_Log4JPath_" data-uid="MASES.KNet.KNetCore`1.Log4JPath*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_Log4JPath" data-uid="MASES.KNet.KNetCore`1.Log4JPath">Log4JPath</h4>
-  <div class="markdown level1 summary"><p>The log4j folder</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Log4JPath { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_LogDir.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.LogDir%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L192">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_LogDir_" data-uid="MASES.KNet.KNetCore`1.LogDir*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_LogDir" data-uid="MASES.KNet.KNetCore`1.LogDir">LogDir</h4>
-  <div class="markdown level1 summary"><p>The log folder</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string LogDir { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_MainClassToRun.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.MainClassToRun%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L127">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_MainClassToRun_" data-uid="MASES.KNet.KNetCore`1.MainClassToRun*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_MainClassToRun" data-uid="MASES.KNet.KNetCore`1.MainClassToRun">MainClassToRun</h4>
-  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> to be invoked at startup</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Type MainClassToRun { get; protected set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_Options.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.Options%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L224">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_Options_" data-uid="MASES.KNet.KNetCore`1.Options*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_Options" data-uid="MASES.KNet.KNetCore`1.Options">Options</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override IDictionary&lt;string, string&gt; Options { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JNet.JNetCore&lt;T&gt;.Options</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_PathToParse.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.PathToParse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L249">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_PathToParse_" data-uid="MASES.KNet.KNetCore`1.PathToParse*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_PathToParse" data-uid="MASES.KNet.KNetCore`1.PathToParse">PathToParse</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override IList&lt;string&gt; PathToParse { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JNet.JNetCore&lt;T&gt;.PathToParse</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_PerformanceOptions.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.PerformanceOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L206">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_PerformanceOptions_" data-uid="MASES.KNet.KNetCore`1.PerformanceOptions*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_PerformanceOptions" data-uid="MASES.KNet.KNetCore`1.PerformanceOptions">PerformanceOptions</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override IList&lt;string&gt; PerformanceOptions { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JNet.JNetCore&lt;T&gt;.PerformanceOptions</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_ScalaBinaryVersion.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.ScalaBinaryVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L174">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_ScalaBinaryVersion_" data-uid="MASES.KNet.KNetCore`1.ScalaBinaryVersion*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_ScalaBinaryVersion" data-uid="MASES.KNet.KNetCore`1.ScalaBinaryVersion">ScalaBinaryVersion</h4>
-  <div class="markdown level1 summary"><p>The Scala binary version to be used</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string ScalaBinaryVersion { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_ScalaVersion.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.ScalaVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L169">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_ScalaVersion_" data-uid="MASES.KNet.KNetCore`1.ScalaVersion*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_ScalaVersion" data-uid="MASES.KNet.KNetCore`1.ScalaVersion">ScalaVersion</h4>
-  <div class="markdown level1 summary"><p>The Scala version to be used</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string ScalaVersion { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1_ProcessCommandLine.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601.ProcessCommandLine%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L111">View Source</a>
-  </span>
-  <a id="MASES_KNet_KNetCore_1_ProcessCommandLine_" data-uid="MASES.KNet.KNetCore`1.ProcessCommandLine*"></a>
-  <h4 id="MASES_KNet_KNetCore_1_ProcessCommandLine" data-uid="MASES.KNet.KNetCore`1.ProcessCommandLine">ProcessCommandLine()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override string[] ProcessCommandLine()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JNet.JNetCoreBase&lt;T&gt;.ProcessCommandLine()</span></div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMInterop.IJVMWrapperManagement</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
-  </div>
-</article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_KNetCore_1.md&amp;value=---%0Auid%3A%20MASES.KNet.KNetCore%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L38" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-      </footer>
+
+        <article data-uid="MASES.KNet.KNetCore`1">
+
+
+
+  <h1 id="MASES_KNet_KNetCore_1" data-uid="MASES.KNet.KNetCore`1" class="text-break">
+    Class KNetCore&lt;T&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Public entry point of <a class="xref" href="MASES.KNet.KNetCore-1.html">KNetCore&lt;T&gt;</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KNetCore&lt;T&gt; : JNetCore&lt;T&gt;, IJVMWrapperManagement, IJVMBridgeCore where T : KNetCore&lt;T&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>A class which inherits from <a class="xref" href="MASES.KNet.KNetCore-1.html">KNetCore&lt;T&gt;</a></p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SetupJVMWrapper</span></div>
+      <div><span class="xref">SetupJVMWrapper</span>&lt;T&gt;</div>
+      <div><span class="xref">JNetCoreBase</span>&lt;T&gt;</div>
+      <div><span class="xref">JNetCore</span>&lt;T&gt;</div>
+      <div><span class="xref">KNetCore&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IJVMWrapperManagement</span></div>
+      <div><span class="xref">IJVMBridgeCore</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNetCLI.KNetCLICore-1.html">KNetCLICore&lt;T&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.JARsSubFolder</span>
     </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.Parser</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">JNetCoreBase&lt;T&gt;.HelpInfo(int?)</a>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.Class&lt;TClass&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;T&gt;.New(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;T&gt;.New(string, params object[])</a>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationLicensePath</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationJDKHome</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationJVMPath</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationJNIVerbosity</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationJNIOutputFile</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationJmxPort</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationEnableDebug</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationJavaDebugPort</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationDebugSuspendFlag</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationJavaDebugOpts</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationHeapSize</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationInitialHeapSize</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ApplicationLogClassPath</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.LicensePath</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.JDKHome</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.JVMPath</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.JNIVerbosity</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.JNIOutputFile</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.JmxPort</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.EnableDebug</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.JavaDebugPort</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.DebugSuspendFlag</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.JavaDebugOpts</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.GlobalHeapSize</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.InitialHeapSize</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.LogClassPath</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ParsedArgs</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.JVMOptions</span>
+    </div>
+    <div>
+      <span class="xref">JNetCoreBase&lt;T&gt;.ClassPath</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper&lt;T&gt;.CreateGlobalInstance()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.parameterizedthreadstart">SetupJVMWrapper&lt;T&gt;.UnwrapOn(ParameterizedThreadStart, object, ApartmentState)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.parameterizedthreadstart">SetupJVMWrapper&lt;T&gt;.UnwrapAndDemonizeOn(ParameterizedThreadStart, object, ApartmentState)</a>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper&lt;T&gt;.HasGlobalInstance</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper&lt;T&gt;.GlobalInstance</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper&lt;T&gt;.ScopedOn</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper&lt;T&gt;.ScopedOnVersion</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.Initialize()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.ImportPackage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.RegisterCLRGlobal(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.UnregisterCLRGlobal(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.GetJVMGlobal(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.GetCLRGlobal(string)</a>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.InitializeListener(IJVMBridgeBase)</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.GetListener(IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.ReleaseListener(IJVMBridgeBase)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.GetJCGraphicContainer(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">SetupJVMWrapper.GetJCGraphicContainer(IJavaObject, bool)</a>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.ReleaseJCGraphicContainer(IJCGraphicContainer)</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.InitializeRemote()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.parameterizedthreadstart">SetupJVMWrapper.UnwrapOn&lt;T&gt;(ParameterizedThreadStart, object, ApartmentState)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.parameterizedthreadstart">SetupJVMWrapper.UnwrapAndDemonizeOn&lt;T&gt;(ParameterizedThreadStart, object, ApartmentState)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">SetupJVMWrapper.GetMainClasses(Assembly)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.Launch&lt;TClass&gt;(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">SetupJVMWrapper.Launch(Type, params string[])</a>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.FilteredArgs</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.IsContainer</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.ContainerId</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.FeatureLevel</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.EnableCriticalMethods</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.JVM</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.Management</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.JVMStats</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.DynJVM</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.RemoteBridge</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.RemoteJCOBridge</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.ModulePath</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.JVMPackages</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.SuppressFinalize</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.Globalize</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.LastBindingException</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="MASES_KNet_KNetCore_1__ctor_" data-uid="MASES.KNet.KNetCore`1.#ctor*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1__ctor" data-uid="MASES.KNet.KNetCore`1.#ctor">
+  KNetCore()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Public initializer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetCore()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_KNetCore_1_ApplicationClassToRun_" data-uid="MASES.KNet.KNetCore`1.ApplicationClassToRun*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_ApplicationClassToRun" data-uid="MASES.KNet.KNetCore`1.ApplicationClassToRun">
+  ApplicationClassToRun
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the global value of class to run</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ApplicationClassToRun { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_ApplicationDisableJMX_" data-uid="MASES.KNet.KNetCore`1.ApplicationDisableJMX*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_ApplicationDisableJMX" data-uid="MASES.KNet.KNetCore`1.ApplicationDisableJMX">
+  ApplicationDisableJMX
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the global value to disable JMX</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? ApplicationDisableJMX { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_ApplicationJarRootPath_" data-uid="MASES.KNet.KNetCore`1.ApplicationJarRootPath*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_ApplicationJarRootPath" data-uid="MASES.KNet.KNetCore`1.ApplicationJarRootPath">
+  ApplicationJarRootPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the global value of Jar root path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ApplicationJarRootPath { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_ApplicationLog4JPath_" data-uid="MASES.KNet.KNetCore`1.ApplicationLog4JPath*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_ApplicationLog4JPath" data-uid="MASES.KNet.KNetCore`1.ApplicationLog4JPath">
+  ApplicationLog4JPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the global value of log4j path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ApplicationLog4JPath { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_ApplicationLogPath_" data-uid="MASES.KNet.KNetCore`1.ApplicationLogPath*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_ApplicationLogPath" data-uid="MASES.KNet.KNetCore`1.ApplicationLogPath">
+  ApplicationLogPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the global value of log path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ApplicationLogPath { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_ApplicationScalaVersion_" data-uid="MASES.KNet.KNetCore`1.ApplicationScalaVersion*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_ApplicationScalaVersion" data-uid="MASES.KNet.KNetCore`1.ApplicationScalaVersion">
+  ApplicationScalaVersion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the global value of scala version</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ApplicationScalaVersion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_ClassToRun_" data-uid="MASES.KNet.KNetCore`1.ClassToRun*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_ClassToRun" data-uid="MASES.KNet.KNetCore`1.ClassToRun">
+  ClassToRun
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The class to run in CLI version</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ClassToRun { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_CommandLineArguments_" data-uid="MASES.KNet.KNetCore`1.CommandLineArguments*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_CommandLineArguments" data-uid="MASES.KNet.KNetCore`1.CommandLineArguments">
+  CommandLineArguments
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> for command line</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;IArgumentMetadata&gt; CommandLineArguments { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">IArgumentMetadata</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_DisableJMX_" data-uid="MASES.KNet.KNetCore`1.DisableJMX*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_DisableJMX" data-uid="MASES.KNet.KNetCore`1.DisableJMX">
+  DisableJMX
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disable JMX</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool DisableJMX { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_JarRootPath_" data-uid="MASES.KNet.KNetCore`1.JarRootPath*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_JarRootPath" data-uid="MASES.KNet.KNetCore`1.JarRootPath">
+  JarRootPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The root path where Apache Kafka is installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string JarRootPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_Log4JOpts_" data-uid="MASES.KNet.KNetCore`1.Log4JOpts*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_Log4JOpts" data-uid="MASES.KNet.KNetCore`1.Log4JOpts">
+  Log4JOpts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The log4j configuration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Log4JOpts { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_Log4JPath_" data-uid="MASES.KNet.KNetCore`1.Log4JPath*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_Log4JPath" data-uid="MASES.KNet.KNetCore`1.Log4JPath">
+  Log4JPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The log4j folder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Log4JPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_LogDir_" data-uid="MASES.KNet.KNetCore`1.LogDir*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_LogDir" data-uid="MASES.KNet.KNetCore`1.LogDir">
+  LogDir
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The log folder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string LogDir { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_MainClassToRun_" data-uid="MASES.KNet.KNetCore`1.MainClassToRun*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_MainClassToRun" data-uid="MASES.KNet.KNetCore`1.MainClassToRun">
+  MainClassToRun
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> to be invoked at startup</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Type MainClassToRun { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_Options_" data-uid="MASES.KNet.KNetCore`1.Options*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_Options" data-uid="MASES.KNet.KNetCore`1.Options">
+  Options
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds options to the JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IDictionary&lt;string, string&gt; Options { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_PathToParse_" data-uid="MASES.KNet.KNetCore`1.PathToParse*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_PathToParse" data-uid="MASES.KNet.KNetCore`1.PathToParse">
+  PathToParse
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list of paths to be used in initialization of JVM ClassPath</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IList&lt;string&gt; PathToParse { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_PerformanceOptions_" data-uid="MASES.KNet.KNetCore`1.PerformanceOptions*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_PerformanceOptions" data-uid="MASES.KNet.KNetCore`1.PerformanceOptions">
+  PerformanceOptions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default performance options used in initialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IList&lt;string&gt; PerformanceOptions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_ScalaBinaryVersion_" data-uid="MASES.KNet.KNetCore`1.ScalaBinaryVersion*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_ScalaBinaryVersion" data-uid="MASES.KNet.KNetCore`1.ScalaBinaryVersion">
+  ScalaBinaryVersion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Scala binary version to be used</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ScalaBinaryVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_KNetCore_1_ScalaVersion_" data-uid="MASES.KNet.KNetCore`1.ScalaVersion*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_ScalaVersion" data-uid="MASES.KNet.KNetCore`1.ScalaVersion">
+  ScalaVersion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Scala version to be used</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ScalaVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_KNetCore_1_ProcessCommandLine_" data-uid="MASES.KNet.KNetCore`1.ProcessCommandLine*"></a>
+
+  <h3 id="MASES_KNet_KNetCore_1_ProcessCommandLine" data-uid="MASES.KNet.KNetCore`1.ProcessCommandLine">
+  ProcessCommandLine()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/M_MASES_JCOBridge_C2JBridge_SetupJVMWrapper_ProcessCommandLine.htm">https://www.jcobridge.com/api-clr/html/M_MASES_JCOBridge_C2JBridge_SetupJVMWrapper_ProcessCommandLine.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override string[] ProcessCommandLine()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\KNetCore.cs/#L38" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

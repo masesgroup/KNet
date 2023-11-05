@@ -1,171 +1,209 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ConsumerConfigBuilder
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ConsumerConfigBuilder
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class ConsumerConfigBuilder
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ConsumerConfigBuilder
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder">
-  
-  
-  <h1 id="MASES_KNet_Consumer_ConsumerConfigBuilder" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder" class="text-break">Class ConsumerConfigBuilder
+
+        <article data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder">
+
+
+
+  <h1 id="MASES_KNet_Consumer_ConsumerConfigBuilder" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder" class="text-break">
+    Class ConsumerConfigBuilder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"><p>Builder for <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html">ConsumerConfig</a></p>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Consumer.html">Consumer</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Builder for <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html">ConsumerConfig</a></p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html">GenericConfigBuilder</a>&lt;<a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a>&gt;</div>
-    <div class="level2"><a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html">CommonClientConfigsBuilder</a>&lt;<a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a>&gt;</div>
-    <div class="level3"><span class="xref">ConsumerConfigBuilder</span></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ConsumerConfigBuilder : CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;, INotifyPropertyChanged</code></pre>
   </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html">GenericConfigBuilder</a>&lt;<a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a>&gt;</div>
+      <div><a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html">CommonClientConfigsBuilder</a>&lt;<a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a>&gt;</div>
+      <div><span class="xref">ConsumerConfigBuilder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_BootstrapServers">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.BootstrapServers</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithBootstrapServers_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithBootstrapServers(String)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithBootstrapServers_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithBootstrapServers(string)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_ClientDnsLookup">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.ClientDnsLookup</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithClientDnsLookup_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithClientDnsLookup(String)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithClientDnsLookup_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithClientDnsLookup(string)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_MetadataMaxAge">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.MetadataMaxAge</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetadataMaxAge_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithMetadataMaxAge(Int64)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetadataMaxAge_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithMetadataMaxAge(long)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_SendBuffer">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.SendBuffer</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSendBuffer_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSendBuffer(Int32)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSendBuffer_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSendBuffer(int)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_ReceiveBuffer">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.ReceiveBuffer</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithReceiveBuffer_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithReceiveBuffer(Int32)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithReceiveBuffer_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithReceiveBuffer(int)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_ClientId">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.ClientId</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithClientId_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithClientId(String)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithClientId_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithClientId(string)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_ClientRack">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.ClientRack</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithClientRack_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithClientRack(String)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithClientRack_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithClientRack(string)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_ReconnectBackoffMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.ReconnectBackoffMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithReconnectBackoffMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithReconnectBackoffMs(Int64)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithReconnectBackoffMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithReconnectBackoffMs(long)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_ReconnectBackoffMaxMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.ReconnectBackoffMaxMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithReconnectBackoffMaxMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithReconnectBackoffMaxMs(Int64)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithReconnectBackoffMaxMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithReconnectBackoffMaxMs(long)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_Retries">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.Retries</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRetries_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithRetries(Int32)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRetries_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithRetries(int)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_RetryBackoffMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.RetryBackoffMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRetryBackoffMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithRetryBackoffMs(Int64)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRetryBackoffMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithRetryBackoffMs(long)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_MetricSampleWindowMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.MetricSampleWindowMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetricSampleWindowMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithMetricSampleWindowMs(Int64)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetricSampleWindowMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithMetricSampleWindowMs(long)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_MetricNumSample">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.MetricNumSample</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetricNumSample_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithMetricNumSample(Int32)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetricNumSample_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithMetricNumSample(int)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_MetricRecordingLevel">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.MetricRecordingLevel</a>
@@ -183,31 +221,31 @@
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_SecurityProtocol">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.SecurityProtocol</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSecurityProtocol_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSecurityProtocol(String)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSecurityProtocol_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSecurityProtocol(string)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_SocketConnectionSetupTimeoutMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.SocketConnectionSetupTimeoutMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSocketConnectionSetupTimeoutMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSocketConnectionSetupTimeoutMs(Int64)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSocketConnectionSetupTimeoutMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSocketConnectionSetupTimeoutMs(long)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_SocketConnectionSetupTimeoutMaxMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.SocketConnectionSetupTimeoutMaxMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSocketConnectionSetupTimeoutMaxMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSocketConnectionSetupTimeoutMaxMs(Int64)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSocketConnectionSetupTimeoutMaxMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSocketConnectionSetupTimeoutMaxMs(long)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_ConnectionMaxIdleMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.ConnectionMaxIdleMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithConnectionMaxIdleMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithConnectionMaxIdleMs(Int64)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithConnectionMaxIdleMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithConnectionMaxIdleMs(long)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_RequestTimeoutMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.RequestTimeoutMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRequestTimeoutMs_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithRequestTimeoutMs(Int32)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRequestTimeoutMs_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithRequestTimeoutMs(int)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_DefaultListKeySerdeInnerClass">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.DefaultListKeySerdeInnerClass</a>
@@ -237,43 +275,43 @@
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_GroupId">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.GroupId</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithGroupId_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithGroupId(String)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithGroupId_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithGroupId(string)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_GroupInstanceId">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.GroupInstanceId</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithGroupInstanceId_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithGroupInstanceId(String)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithGroupInstanceId_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithGroupInstanceId(string)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_MaxPollIntervalMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.MaxPollIntervalMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMaxPollIntervalMs_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithMaxPollIntervalMs(Int32)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMaxPollIntervalMs_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithMaxPollIntervalMs(int)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_RebalanceTimeoutMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.RebalanceTimeoutMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRebalanceTimeoutMs_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithRebalanceTimeoutMs(Int32)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRebalanceTimeoutMs_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithRebalanceTimeoutMs(int)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_SessionTimeoutMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.SessionTimeoutMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSessionTimeoutMs_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSessionTimeoutMs(Int32)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSessionTimeoutMs_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSessionTimeoutMs(int)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_HeartbeatIntervalMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.HeartbeatIntervalMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithHeartbeatIntervalMs_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithHeartbeatIntervalMs(Int32)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithHeartbeatIntervalMs_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithHeartbeatIntervalMs(int)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_DefaultApiTimeoutMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.DefaultApiTimeoutMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultApiTimeoutMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithDefaultApiTimeoutMs(Int64)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultApiTimeoutMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithDefaultApiTimeoutMs(long)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Create">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.Create()</a>
@@ -285,13 +323,13 @@
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_PropertyChanged">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.PropertyChanged</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ExistProperty_System_String_">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.ExistProperty(String)</a>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ExistProperty_System_String_">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.ExistProperty(string)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_GetProperty__1_System_String_">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.GetProperty&lt;TData&gt;(String)</a>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_GetProperty__1_System_String_">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.GetProperty&lt;TData&gt;(string)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_SetProperty_System_String_System_Object_">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.SetProperty(String, Object)</a>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_SetProperty_System_String_System_Object_">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.SetProperty(string, object)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Clone">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.Clone()</a>
@@ -303,1442 +341,1257 @@
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.ToMap()</a>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MASES.KNet.Consumer.html">MASES.KNet.Consumer</a></h6>
-  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
-  <h5 id="MASES_KNet_Consumer_ConsumerConfigBuilder_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConsumerConfigBuilder : CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;, INotifyPropertyChanged</code></pre>
-  </div>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_AllowAutoCreateTopics.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.AllowAutoCreateTopics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L282">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_AllowAutoCreateTopics_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AllowAutoCreateTopics*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_AllowAutoCreateTopics" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AllowAutoCreateTopics">AllowAutoCreateTopics</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ALLOW_AUTO_CREATE_TOPICS_CONFIG">ALLOW_AUTO_CREATE_TOPICS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AllowAutoCreateTopics { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_AutoCommitIntervalMs.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.AutoCommitIntervalMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L77">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_AutoCommitIntervalMs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoCommitIntervalMs*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_AutoCommitIntervalMs" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoCommitIntervalMs">AutoCommitIntervalMs</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_COMMIT_INTERVAL_MS_CONFIG">AUTO_COMMIT_INTERVAL_MS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int AutoCommitIntervalMs { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_AutoOffsetReset.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetReset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L104">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_AutoOffsetReset_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetReset*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_AutoOffsetReset" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetReset">AutoOffsetReset</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_OFFSET_RESET_CONFIG">AUTO_OFFSET_RESET_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder.AutoOffsetResetTypes AutoOffsetReset { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetResetTypes.html">ConsumerConfigBuilder.AutoOffsetResetTypes</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_CheckCrcs.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.CheckCrcs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L186">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_CheckCrcs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.CheckCrcs*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_CheckCrcs" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.CheckCrcs">CheckCrcs</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CHECK_CRCS_CONFIG">CHECK_CRCS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CheckCrcs { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_EnableAutoCommit.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.EnableAutoCommit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L64">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_EnableAutoCommit_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.EnableAutoCommit*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_EnableAutoCommit" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.EnableAutoCommit">EnableAutoCommit</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ENABLE_AUTO_COMMIT_CONFIG">ENABLE_AUTO_COMMIT_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool EnableAutoCommit { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_ExcludeInternalTopics.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.ExcludeInternalTopics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L240">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_ExcludeInternalTopics_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.ExcludeInternalTopics*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_ExcludeInternalTopics" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.ExcludeInternalTopics">ExcludeInternalTopics</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_EXCLUDE_INTERNAL_TOPICS_CONFIG">EXCLUDE_INTERNAL_TOPICS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ExcludeInternalTopics { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMaxBytes.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMaxBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L147">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMaxBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMaxBytes*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMaxBytes" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMaxBytes">FetchMaxBytes</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MAX_BYTES_CONFIG">FETCH_MAX_BYTES_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int FetchMaxBytes { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMaxWaitMs.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMaxWaitMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L160">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMaxWaitMs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMaxWaitMs*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMaxWaitMs" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMaxWaitMs">FetchMaxWaitMs</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MAX_WAIT_MS_CONFIG">FETCH_MAX_WAIT_MS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int FetchMaxWaitMs { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMinBytes.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMinBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L134">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMinBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMinBytes*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMinBytes" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMinBytes">FetchMinBytes</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MIN_BYTES_CONFIG">FETCH_MIN_BYTES_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int FetchMinBytes { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_InterceptorClasses.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.InterceptorClasses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L225">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_InterceptorClasses_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.InterceptorClasses*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_InterceptorClasses" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.InterceptorClasses">InterceptorClasses</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_INTERCEPTOR_CLASSES_CONFIG">INTERCEPTOR_CLASSES_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public List InterceptorClasses { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.List</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_IsolationLevel.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.IsolationLevel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L254">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_IsolationLevel_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.IsolationLevel*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_IsolationLevel" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.IsolationLevel">IsolationLevel</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ISOLATION_LEVEL_CONFIG">ISOLATION_LEVEL_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IsolationLevel IsolationLevel { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.IsolationLevel.html">IsolationLevel</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_KeyDeserializerClass.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.KeyDeserializerClass%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L199">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_KeyDeserializerClass_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.KeyDeserializerClass*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_KeyDeserializerClass" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.KeyDeserializerClass">KeyDeserializerClass</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_KEY_DESERIALIZER_CLASS_CONFIG">KEY_DESERIALIZER_CLASS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string KeyDeserializerClass { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_MaxPartitionFetchBytes.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.MaxPartitionFetchBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L173">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_MaxPartitionFetchBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.MaxPartitionFetchBytes*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_MaxPartitionFetchBytes" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.MaxPartitionFetchBytes">MaxPartitionFetchBytes</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_PARTITION_FETCH_BYTES_CONFIG">MAX_PARTITION_FETCH_BYTES_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxPartitionFetchBytes { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_MaxPollRecords.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.MaxPollRecords%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L51">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_MaxPollRecords_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.MaxPollRecords*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_MaxPollRecords" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.MaxPollRecords">MaxPollRecords</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_POLL_RECORDS_CONFIG">MAX_POLL_RECORDS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxPollRecords { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_PartitionAssignmentStrategy.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.PartitionAssignmentStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L90">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_PartitionAssignmentStrategy_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.PartitionAssignmentStrategy*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_PartitionAssignmentStrategy" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.PartitionAssignmentStrategy">PartitionAssignmentStrategy</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_PARTITION_ASSIGNMENT_STRATEGY_CONFIG">PARTITION_ASSIGNMENT_STRATEGY_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string PartitionAssignmentStrategy { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_SecurityProviders.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.SecurityProviders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L295">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_SecurityProviders_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.SecurityProviders*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_SecurityProviders" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.SecurityProviders">SecurityProviders</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_SECURITY_PROVIDERS_CONFIG">SECURITY_PROVIDERS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SecurityProviders { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_ValueDeserializerClass.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.ValueDeserializerClass%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L212">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_ValueDeserializerClass_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.ValueDeserializerClass*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_ValueDeserializerClass" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.ValueDeserializerClass">ValueDeserializerClass</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_VALUE_DESERIALIZER_CLASS_CONFIG">VALUE_DESERIALIZER_CLASS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ValueDeserializerClass { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithAllowAutoCreateTopics_System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithAllowAutoCreateTopics(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L286">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAllowAutoCreateTopics_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAllowAutoCreateTopics*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAllowAutoCreateTopics_System_Boolean_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAllowAutoCreateTopics(System.Boolean)">WithAllowAutoCreateTopics(Boolean)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ALLOW_AUTO_CREATE_TOPICS_CONFIG">ALLOW_AUTO_CREATE_TOPICS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithAllowAutoCreateTopics(bool allowAutoCreateTopics)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">allowAutoCreateTopics</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithAutoCommitIntervalMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithAutoCommitIntervalMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L81">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAutoCommitIntervalMs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAutoCommitIntervalMs*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAutoCommitIntervalMs_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAutoCommitIntervalMs(System.Int32)">WithAutoCommitIntervalMs(Int32)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_COMMIT_INTERVAL_MS_CONFIG">AUTO_COMMIT_INTERVAL_MS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithAutoCommitIntervalMs(int autoCommitIntervalMs)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">autoCommitIntervalMs</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithAutoOffsetReset_MASES_KNet_Consumer_ConsumerConfigBuilder_AutoOffsetResetTypes_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithAutoOffsetReset(MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetResetTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L125">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAutoOffsetReset_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAutoOffsetReset*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAutoOffsetReset_MASES_KNet_Consumer_ConsumerConfigBuilder_AutoOffsetResetTypes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAutoOffsetReset(MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetResetTypes)">WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_OFFSET_RESET_CONFIG">AUTO_OFFSET_RESET_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes autoOffsetReset)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetResetTypes.html">ConsumerConfigBuilder.AutoOffsetResetTypes</a></td>
-        <td><span class="parametername">autoOffsetReset</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithCheckCrcs_System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithCheckCrcs(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L190">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithCheckCrcs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithCheckCrcs*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithCheckCrcs_System_Boolean_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithCheckCrcs(System.Boolean)">WithCheckCrcs(Boolean)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CHECK_CRCS_CONFIG">CHECK_CRCS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithCheckCrcs(bool checkCrcs)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">checkCrcs</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithEnableAutoCommit_System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithEnableAutoCommit(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L68">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithEnableAutoCommit_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithEnableAutoCommit*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithEnableAutoCommit_System_Boolean_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithEnableAutoCommit(System.Boolean)">WithEnableAutoCommit(Boolean)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ENABLE_AUTO_COMMIT_CONFIG">ENABLE_AUTO_COMMIT_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithEnableAutoCommit(bool enableAutoCommit)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">enableAutoCommit</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithExcludeInternalTopics_System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithExcludeInternalTopics(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L244">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithExcludeInternalTopics_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithExcludeInternalTopics*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithExcludeInternalTopics_System_Boolean_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithExcludeInternalTopics(System.Boolean)">WithExcludeInternalTopics(Boolean)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_EXCLUDE_INTERNAL_TOPICS_CONFIG">EXCLUDE_INTERNAL_TOPICS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithExcludeInternalTopics(bool excludeInternalTopics)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">excludeInternalTopics</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMaxBytes_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMaxBytes(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L151">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMaxBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMaxBytes*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMaxBytes_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMaxBytes(System.Int32)">WithFetchMaxBytes(Int32)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MAX_BYTES_CONFIG">FETCH_MAX_BYTES_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithFetchMaxBytes(int fetchMaxBytes)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">fetchMaxBytes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMaxWaitMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMaxWaitMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L164">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMaxWaitMs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMaxWaitMs*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMaxWaitMs_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMaxWaitMs(System.Int32)">WithFetchMaxWaitMs(Int32)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MAX_WAIT_MS_CONFIG">FETCH_MAX_WAIT_MS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithFetchMaxWaitMs(int fetchMaxWaitMs)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">fetchMaxWaitMs</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMinBytes_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMinBytes(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L138">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMinBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMinBytes*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMinBytes_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMinBytes(System.Int32)">WithFetchMinBytes(Int32)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MIN_BYTES_CONFIG">FETCH_MIN_BYTES_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithFetchMinBytes(int fetchMinBytes)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">fetchMinBytes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithInterceptorClasses_Java_Util_List_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithInterceptorClasses(Java.Util.List)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L230">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithInterceptorClasses_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithInterceptorClasses*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithInterceptorClasses_Java_Util_List_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithInterceptorClasses(Java.Util.List)">WithInterceptorClasses(List)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_INTERCEPTOR_CLASSES_CONFIG">INTERCEPTOR_CLASSES_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.List</span></td>
-        <td><span class="parametername">interceptorClasses</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithIsolationLevel_Org_Apache_Kafka_Common_IsolationLevel_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithIsolationLevel(Org.Apache.Kafka.Common.IsolationLevel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L273">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithIsolationLevel_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithIsolationLevel*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithIsolationLevel_Org_Apache_Kafka_Common_IsolationLevel_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithIsolationLevel(Org.Apache.Kafka.Common.IsolationLevel)">WithIsolationLevel(IsolationLevel)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ISOLATION_LEVEL_CONFIG">ISOLATION_LEVEL_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithIsolationLevel(IsolationLevel isolationLevel)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.IsolationLevel.html">IsolationLevel</a></td>
-        <td><span class="parametername">isolationLevel</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithKeyDeserializerClass_System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithKeyDeserializerClass(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L203">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithKeyDeserializerClass_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithKeyDeserializerClass*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithKeyDeserializerClass_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithKeyDeserializerClass(System.String)">WithKeyDeserializerClass(String)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_KEY_DESERIALIZER_CLASS_CONFIG">KEY_DESERIALIZER_CLASS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithKeyDeserializerClass(string keyDeserializerClass)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">keyDeserializerClass</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithMaxPartitionFetchBytes_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithMaxPartitionFetchBytes(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L177">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithMaxPartitionFetchBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithMaxPartitionFetchBytes*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithMaxPartitionFetchBytes_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithMaxPartitionFetchBytes(System.Int32)">WithMaxPartitionFetchBytes(Int32)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_PARTITION_FETCH_BYTES_CONFIG">MAX_PARTITION_FETCH_BYTES_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithMaxPartitionFetchBytes(int maxPartitionFetchBytes)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">maxPartitionFetchBytes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithMaxPollRecords_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithMaxPollRecords(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L55">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithMaxPollRecords_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithMaxPollRecords*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithMaxPollRecords_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithMaxPollRecords(System.Int32)">WithMaxPollRecords(Int32)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_POLL_RECORDS_CONFIG">MAX_POLL_RECORDS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithMaxPollRecords(int maxPollRecords)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">maxPollRecords</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithPartitionAssignmentStrategy_System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithPartitionAssignmentStrategy(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L94">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithPartitionAssignmentStrategy_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithPartitionAssignmentStrategy*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithPartitionAssignmentStrategy_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithPartitionAssignmentStrategy(System.String)">WithPartitionAssignmentStrategy(String)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_PARTITION_ASSIGNMENT_STRATEGY_CONFIG">PARTITION_ASSIGNMENT_STRATEGY_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithPartitionAssignmentStrategy(string partitionAssignmentStrategy)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">partitionAssignmentStrategy</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithSecurityProviders_System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithSecurityProviders(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L299">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithSecurityProviders_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithSecurityProviders*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithSecurityProviders_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithSecurityProviders(System.String)">WithSecurityProviders(String)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_SECURITY_PROVIDERS_CONFIG">SECURITY_PROVIDERS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithSecurityProviders(string securityProviders)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">securityProviders</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder_WithValueDeserializerClass_System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder.WithValueDeserializerClass(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L216">View Source</a>
-  </span>
-  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithValueDeserializerClass_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithValueDeserializerClass*"></a>
-  <h4 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithValueDeserializerClass_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithValueDeserializerClass(System.String)">WithValueDeserializerClass(String)</h4>
-  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_VALUE_DESERIALIZER_CLASS_CONFIG">VALUE_DESERIALIZER_CLASS_CONFIG</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithValueDeserializerClass(string valueDeserializerClass)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">valueDeserializerClass</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">System.ComponentModel.INotifyPropertyChanged</a>
-  </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
   <div>
       <a class="xref" href="MASES.KNet.Extensions.ConsumerConfigBuilderExtensions.html#MASES_KNet_Extensions_ConsumerConfigBuilderExtensions_CanApplyBasicDeserializer__1_MASES_KNet_Consumer_ConsumerConfigBuilder_">ConsumerConfigBuilderExtensions.CanApplyBasicDeserializer&lt;T&gt;(ConsumerConfigBuilder)</a>
-  </div>
-  <div>
-      <a class="xref" href="MASES.KNet.Extensions.ConsumerConfigBuilderExtensions.html#MASES_KNet_Extensions_ConsumerConfigBuilderExtensions_WithKeyDeserializerClass__1_MASES_KNet_Consumer_ConsumerConfigBuilder_">ConsumerConfigBuilderExtensions.WithKeyDeserializerClass&lt;T&gt;(ConsumerConfigBuilder)</a>
   </div>
   <div>
       <a class="xref" href="MASES.KNet.Extensions.ConsumerConfigBuilderExtensions.html#MASES_KNet_Extensions_ConsumerConfigBuilderExtensions_WithKeyDeserializerClass_MASES_KNet_Consumer_ConsumerConfigBuilder_System_Type_">ConsumerConfigBuilderExtensions.WithKeyDeserializerClass(ConsumerConfigBuilder, Type)</a>
   </div>
   <div>
-      <a class="xref" href="MASES.KNet.Extensions.ConsumerConfigBuilderExtensions.html#MASES_KNet_Extensions_ConsumerConfigBuilderExtensions_WithValueDeserializerClass__1_MASES_KNet_Consumer_ConsumerConfigBuilder_">ConsumerConfigBuilderExtensions.WithValueDeserializerClass&lt;T&gt;(ConsumerConfigBuilder)</a>
+      <a class="xref" href="MASES.KNet.Extensions.ConsumerConfigBuilderExtensions.html#MASES_KNet_Extensions_ConsumerConfigBuilderExtensions_WithKeyDeserializerClass__1_MASES_KNet_Consumer_ConsumerConfigBuilder_">ConsumerConfigBuilderExtensions.WithKeyDeserializerClass&lt;T&gt;(ConsumerConfigBuilder)</a>
   </div>
   <div>
       <a class="xref" href="MASES.KNet.Extensions.ConsumerConfigBuilderExtensions.html#MASES_KNet_Extensions_ConsumerConfigBuilderExtensions_WithValueDeserializerClass_MASES_KNet_Consumer_ConsumerConfigBuilder_System_Type_">ConsumerConfigBuilderExtensions.WithValueDeserializerClass(ConsumerConfigBuilder, Type)</a>
   </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.ConsumerConfigBuilderExtensions.html#MASES_KNet_Extensions_ConsumerConfigBuilderExtensions_WithValueDeserializerClass__1_MASES_KNet_Consumer_ConsumerConfigBuilder_">ConsumerConfigBuilderExtensions.WithValueDeserializerClass&lt;T&gt;(ConsumerConfigBuilder)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_AllowAutoCreateTopics_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AllowAutoCreateTopics*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_AllowAutoCreateTopics" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AllowAutoCreateTopics">
+  AllowAutoCreateTopics
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ALLOW_AUTO_CREATE_TOPICS_CONFIG">ALLOW_AUTO_CREATE_TOPICS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowAutoCreateTopics { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_AutoCommitIntervalMs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoCommitIntervalMs*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_AutoCommitIntervalMs" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoCommitIntervalMs">
+  AutoCommitIntervalMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_COMMIT_INTERVAL_MS_CONFIG">AUTO_COMMIT_INTERVAL_MS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AutoCommitIntervalMs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_AutoOffsetReset_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetReset*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_AutoOffsetReset" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetReset">
+  AutoOffsetReset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_OFFSET_RESET_CONFIG">AUTO_OFFSET_RESET_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder.AutoOffsetResetTypes AutoOffsetReset { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a>.<a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetResetTypes.html">AutoOffsetResetTypes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_CheckCrcs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.CheckCrcs*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_CheckCrcs" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.CheckCrcs">
+  CheckCrcs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CHECK_CRCS_CONFIG">CHECK_CRCS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckCrcs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_EnableAutoCommit_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.EnableAutoCommit*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_EnableAutoCommit" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.EnableAutoCommit">
+  EnableAutoCommit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ENABLE_AUTO_COMMIT_CONFIG">ENABLE_AUTO_COMMIT_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableAutoCommit { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_ExcludeInternalTopics_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.ExcludeInternalTopics*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_ExcludeInternalTopics" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.ExcludeInternalTopics">
+  ExcludeInternalTopics
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_EXCLUDE_INTERNAL_TOPICS_CONFIG">EXCLUDE_INTERNAL_TOPICS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExcludeInternalTopics { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMaxBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMaxBytes*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMaxBytes" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMaxBytes">
+  FetchMaxBytes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MAX_BYTES_CONFIG">FETCH_MAX_BYTES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FetchMaxBytes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMaxWaitMs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMaxWaitMs*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMaxWaitMs" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMaxWaitMs">
+  FetchMaxWaitMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MAX_WAIT_MS_CONFIG">FETCH_MAX_WAIT_MS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FetchMaxWaitMs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMinBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMinBytes*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_FetchMinBytes" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.FetchMinBytes">
+  FetchMinBytes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MIN_BYTES_CONFIG">FETCH_MIN_BYTES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FetchMinBytes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_InterceptorClasses_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.InterceptorClasses*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_InterceptorClasses" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.InterceptorClasses">
+  InterceptorClasses
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_INTERCEPTOR_CLASSES_CONFIG">INTERCEPTOR_CLASSES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
+public List InterceptorClasses { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_IsolationLevel_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.IsolationLevel*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_IsolationLevel" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.IsolationLevel">
+  IsolationLevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ISOLATION_LEVEL_CONFIG">ISOLATION_LEVEL_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IsolationLevel IsolationLevel { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.IsolationLevel.html">IsolationLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_KeyDeserializerClass_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.KeyDeserializerClass*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_KeyDeserializerClass" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.KeyDeserializerClass">
+  KeyDeserializerClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_KEY_DESERIALIZER_CLASS_CONFIG">KEY_DESERIALIZER_CLASS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string KeyDeserializerClass { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_MaxPartitionFetchBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.MaxPartitionFetchBytes*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_MaxPartitionFetchBytes" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.MaxPartitionFetchBytes">
+  MaxPartitionFetchBytes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_PARTITION_FETCH_BYTES_CONFIG">MAX_PARTITION_FETCH_BYTES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxPartitionFetchBytes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_MaxPollRecords_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.MaxPollRecords*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_MaxPollRecords" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.MaxPollRecords">
+  MaxPollRecords
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_POLL_RECORDS_CONFIG">MAX_POLL_RECORDS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxPollRecords { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_PartitionAssignmentStrategy_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.PartitionAssignmentStrategy*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_PartitionAssignmentStrategy" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.PartitionAssignmentStrategy">
+  PartitionAssignmentStrategy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_PARTITION_ASSIGNMENT_STRATEGY_CONFIG">PARTITION_ASSIGNMENT_STRATEGY_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PartitionAssignmentStrategy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_SecurityProviders_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.SecurityProviders*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_SecurityProviders" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.SecurityProviders">
+  SecurityProviders
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_SECURITY_PROVIDERS_CONFIG">SECURITY_PROVIDERS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SecurityProviders { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_ValueDeserializerClass_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.ValueDeserializerClass*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_ValueDeserializerClass" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.ValueDeserializerClass">
+  ValueDeserializerClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_VALUE_DESERIALIZER_CLASS_CONFIG">VALUE_DESERIALIZER_CLASS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ValueDeserializerClass { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAllowAutoCreateTopics_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAllowAutoCreateTopics*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAllowAutoCreateTopics_System_Boolean_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAllowAutoCreateTopics(System.Boolean)">
+  WithAllowAutoCreateTopics(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ALLOW_AUTO_CREATE_TOPICS_CONFIG">ALLOW_AUTO_CREATE_TOPICS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithAllowAutoCreateTopics(bool allowAutoCreateTopics)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>allowAutoCreateTopics</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAutoCommitIntervalMs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAutoCommitIntervalMs*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAutoCommitIntervalMs_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAutoCommitIntervalMs(System.Int32)">
+  WithAutoCommitIntervalMs(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_COMMIT_INTERVAL_MS_CONFIG">AUTO_COMMIT_INTERVAL_MS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithAutoCommitIntervalMs(int autoCommitIntervalMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>autoCommitIntervalMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAutoOffsetReset_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAutoOffsetReset*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAutoOffsetReset_MASES_KNet_Consumer_ConsumerConfigBuilder_AutoOffsetResetTypes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAutoOffsetReset(MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetResetTypes)">
+  WithAutoOffsetReset(AutoOffsetResetTypes)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_OFFSET_RESET_CONFIG">AUTO_OFFSET_RESET_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes autoOffsetReset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>autoOffsetReset</code> <a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a>.<a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetResetTypes.html">AutoOffsetResetTypes</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithCheckCrcs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithCheckCrcs*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithCheckCrcs_System_Boolean_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithCheckCrcs(System.Boolean)">
+  WithCheckCrcs(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CHECK_CRCS_CONFIG">CHECK_CRCS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithCheckCrcs(bool checkCrcs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>checkCrcs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithEnableAutoCommit_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithEnableAutoCommit*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithEnableAutoCommit_System_Boolean_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithEnableAutoCommit(System.Boolean)">
+  WithEnableAutoCommit(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ENABLE_AUTO_COMMIT_CONFIG">ENABLE_AUTO_COMMIT_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithEnableAutoCommit(bool enableAutoCommit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enableAutoCommit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithExcludeInternalTopics_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithExcludeInternalTopics*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithExcludeInternalTopics_System_Boolean_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithExcludeInternalTopics(System.Boolean)">
+  WithExcludeInternalTopics(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_EXCLUDE_INTERNAL_TOPICS_CONFIG">EXCLUDE_INTERNAL_TOPICS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithExcludeInternalTopics(bool excludeInternalTopics)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>excludeInternalTopics</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMaxBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMaxBytes*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMaxBytes_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMaxBytes(System.Int32)">
+  WithFetchMaxBytes(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MAX_BYTES_CONFIG">FETCH_MAX_BYTES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithFetchMaxBytes(int fetchMaxBytes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fetchMaxBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMaxWaitMs_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMaxWaitMs*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMaxWaitMs_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMaxWaitMs(System.Int32)">
+  WithFetchMaxWaitMs(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MAX_WAIT_MS_CONFIG">FETCH_MAX_WAIT_MS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithFetchMaxWaitMs(int fetchMaxWaitMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fetchMaxWaitMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMinBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMinBytes*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithFetchMinBytes_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithFetchMinBytes(System.Int32)">
+  WithFetchMinBytes(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MIN_BYTES_CONFIG">FETCH_MIN_BYTES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithFetchMinBytes(int fetchMinBytes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fetchMinBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithInterceptorClasses_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithInterceptorClasses*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithInterceptorClasses_Java_Util_List_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithInterceptorClasses(Java.Util.List)">
+  WithInterceptorClasses(List)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_INTERCEPTOR_CLASSES_CONFIG">INTERCEPTOR_CLASSES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
+public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>interceptorClasses</code> <span class="xref">List</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithIsolationLevel_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithIsolationLevel*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithIsolationLevel_Org_Apache_Kafka_Common_IsolationLevel_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithIsolationLevel(Org.Apache.Kafka.Common.IsolationLevel)">
+  WithIsolationLevel(IsolationLevel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ISOLATION_LEVEL_CONFIG">ISOLATION_LEVEL_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithIsolationLevel(IsolationLevel isolationLevel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isolationLevel</code> <a class="xref" href="Org.Apache.Kafka.Common.IsolationLevel.html">IsolationLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithKeyDeserializerClass_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithKeyDeserializerClass*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithKeyDeserializerClass_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithKeyDeserializerClass(System.String)">
+  WithKeyDeserializerClass(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_KEY_DESERIALIZER_CLASS_CONFIG">KEY_DESERIALIZER_CLASS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithKeyDeserializerClass(string keyDeserializerClass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>keyDeserializerClass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithMaxPartitionFetchBytes_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithMaxPartitionFetchBytes*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithMaxPartitionFetchBytes_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithMaxPartitionFetchBytes(System.Int32)">
+  WithMaxPartitionFetchBytes(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_PARTITION_FETCH_BYTES_CONFIG">MAX_PARTITION_FETCH_BYTES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithMaxPartitionFetchBytes(int maxPartitionFetchBytes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxPartitionFetchBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithMaxPollRecords_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithMaxPollRecords*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithMaxPollRecords_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithMaxPollRecords(System.Int32)">
+  WithMaxPollRecords(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_POLL_RECORDS_CONFIG">MAX_POLL_RECORDS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithMaxPollRecords(int maxPollRecords)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxPollRecords</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithPartitionAssignmentStrategy_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithPartitionAssignmentStrategy*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithPartitionAssignmentStrategy_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithPartitionAssignmentStrategy(System.String)">
+  WithPartitionAssignmentStrategy(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_PARTITION_ASSIGNMENT_STRATEGY_CONFIG">PARTITION_ASSIGNMENT_STRATEGY_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithPartitionAssignmentStrategy(string partitionAssignmentStrategy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>partitionAssignmentStrategy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithSecurityProviders_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithSecurityProviders*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithSecurityProviders_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithSecurityProviders(System.String)">
+  WithSecurityProviders(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_SECURITY_PROVIDERS_CONFIG">SECURITY_PROVIDERS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithSecurityProviders(string securityProviders)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>securityProviders</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithValueDeserializerClass_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithValueDeserializerClass*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithValueDeserializerClass_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithValueDeserializerClass(System.String)">
+  WithValueDeserializerClass(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_VALUE_DESERIALIZER_CLASS_CONFIG">VALUE_DESERIALIZER_CLASS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithValueDeserializerClass(string valueDeserializerClass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>valueDeserializerClass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_ConsumerConfigBuilder.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.ConsumerConfigBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L28" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Consumer\ConsumerConfigBuilder.cs/#L28" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

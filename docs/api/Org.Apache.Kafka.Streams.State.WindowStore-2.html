@@ -1,1717 +1,1405 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class WindowStore&lt;K, V&gt;
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class WindowStore&lt;K, V&gt;
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class WindowStore&lt;K, V&gt;
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class WindowStore&lt;K, V&gt;
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2">
-  
-  
-  <h1 id="Org_Apache_Kafka_Streams_State_WindowStore_2" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2" class="text-break">Class WindowStore&lt;K, V&gt;
-  </h1>
-  <div class="markdown level0 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html</a></p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
-    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore</a>&lt;K, V&gt;&gt;</div>
-    <div class="level4"><span class="xref">WindowStore&lt;K, V&gt;</span></div>
-      <div class="level5"><a class="xref" href="Org.Apache.Kafka.Streams.State.TimestampedWindowStore-2.html">TimestampedWindowStore&lt;K, V&gt;</a></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
-    <div><a class="xref" href="Org.Apache.Kafka.Streams.State.IWindowStore-2.html">IWindowStore</a>&lt;K, V&gt;</div>
-    <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.IStateStore.html">IStateStore</a></div>
-    <div><a class="xref" href="Org.Apache.Kafka.Streams.State.IReadOnlyWindowStore-2.html">IReadOnlyWindowStore</a>&lt;K, V&gt;</div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecuteArray&lt;T&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SGetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SGetField(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SGetField&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SGetField&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SSetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SSetField(System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SSetField&lt;TValue&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.SSetField&lt;TValue&gt;(System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.IsAssignableFrom(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.IsAssignableFrom(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.IsAssignableFrom&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.New(System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.Execute&lt;T&gt;(T[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.DynBridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.BridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynBridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Streams.State.WindowStore&lt;K, V&gt;&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.BridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf&lt;TClass&gt;(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf(System.String, System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Notify()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.NotifyAll()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64, System.Int32)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField(System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField&lt;TValue&gt;(System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynBridgeInstance</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeInstance</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeListener</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember#system-dynamic-dynamicobject-trydeletemember(system-dynamic-deletememberbinder)">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember#system-dynamic-dynamicobject-tryinvokemember(system-dynamic-invokememberbinder-system-object()-system-object@)">DynamicObject.TryInvokeMember(InvokeMemberBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance#system-dynamic-dynamicobject-trycreateinstance(system-dynamic-createinstancebinder-system-object()-system-object@)">DynamicObject.TryCreateInstance(CreateInstanceBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <span class="xref">System.Dynamic.DynamicObject.TryDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Object[])</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
-    </div>
-    <div>
-      <span class="xref">System.Dynamic.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Org.Apache.Kafka.Streams.State.html">Org.Apache.Kafka.Streams.State</a></h6>
-  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
-  <h5 id="Org_Apache_Kafka_Streams_State_WindowStore_2_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WindowStore&lt;K, V&gt; : JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IWindowStore&lt;K, V&gt;, IStateStore, IReadOnlyWindowStore&lt;K, V&gt;</code></pre>
-  </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">K</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">V</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L2091">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2__ctor_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2__ctor" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.#ctor">WindowStore()</h4>
-  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WindowStore()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2__ctor_System_Object___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L2095">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2__ctor_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.#ctor(System.Object[])">WindowStore(Object[])</h4>
-  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WindowStore(params object[] args)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L2102">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BridgeClassName_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BridgeClassName*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BridgeClassName">BridgeClassName</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeClassName</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeAbstract.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.IsBridgeAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L2106">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeAbstract*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeAbstract">IsBridgeAbstract</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeAbstract</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeCloseable.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.IsBridgeCloseable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L2110">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeCloseable*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeCloseable">IsBridgeCloseable</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeCloseable</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeInterface.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.IsBridgeInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L2114">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeInterface*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeInterface">IsBridgeInterface</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeInterface</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeStatic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.IsBridgeStatic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L2118">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeStatic*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeStatic">IsBridgeStatic</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeStatic</span></div>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0__0_Java_Time_Instant_Java_Time_Instant_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.BackwardFetch(%600%2C%600%2CJava.Time.Instant%2CJava.Time.Instant)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L317">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0__0_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch(`0,`0,Java.Time.Instant,Java.Time.Instant)">BackwardFetch(K, K, Instant, Instant)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; BackwardFetch(K arg0, K arg1, Instant arg2, Instant arg3)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg3</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.illegalargumentexception">IllegalArgumentException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0__0_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.BackwardFetch(%600%2C%600%2CSystem.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L329">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0__0_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch(`0,`0,System.Int64,System.Int64)">BackwardFetch(K, K, Int64, Int64)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-long-long-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; BackwardFetch(K arg0, K arg1, long arg2, long arg3)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg3</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0_Java_Time_Instant_Java_Time_Instant_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.BackwardFetch(%600%2CJava.Time.Instant%2CJava.Time.Instant)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L386">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch(`0,Java.Time.Instant,Java.Time.Instant)">BackwardFetch(K, Instant, Instant)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WindowStoreIterator&lt;V&gt; BackwardFetch(K arg0, Instant arg1, Instant arg2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator-1.html">WindowStoreIterator</a>&lt;V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator.html">WindowStoreIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.illegalargumentexception">IllegalArgumentException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.BackwardFetch(%600%2CSystem.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L397">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch(`0,System.Int64,System.Int64)">BackwardFetch(K, Int64, Int64)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-long-long-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WindowStoreIterator&lt;V&gt; BackwardFetch(K arg0, long arg1, long arg2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator-1.html">WindowStoreIterator</a>&lt;V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator.html">WindowStoreIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetchAll_Java_Time_Instant_Java_Time_Instant_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.BackwardFetchAll(Java.Time.Instant%2CJava.Time.Instant)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L340">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetchAll_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetchAll*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetchAll_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetchAll(Java.Time.Instant,Java.Time.Instant)">BackwardFetchAll(Instant, Instant)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; BackwardFetchAll(Instant arg0, Instant arg1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.illegalargumentexception">IllegalArgumentException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetchAll_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.BackwardFetchAll(System.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L350">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetchAll_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetchAll*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetchAll_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetchAll(System.Int64,System.Int64)">BackwardFetchAll(Int64, Int64)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-long-long-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; BackwardFetchAll(long arg0, long arg1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0__0_Java_Time_Instant_Java_Time_Instant_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.Fetch(%600%2C%600%2CJava.Time.Instant%2CJava.Time.Instant)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L363">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0__0_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch(`0,`0,Java.Time.Instant,Java.Time.Instant)">Fetch(K, K, Instant, Instant)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; Fetch(K arg0, K arg1, Instant arg2, Instant arg3)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg3</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.illegalargumentexception">IllegalArgumentException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0__0_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.Fetch(%600%2C%600%2CSystem.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L273">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0__0_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch(`0,`0,System.Int64,System.Int64)">Fetch(K, K, Int64, Int64)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-long-long-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; Fetch(K arg0, K arg1, long arg2, long arg3)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg3</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0_Java_Time_Instant_Java_Time_Instant_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.Fetch(%600%2CJava.Time.Instant%2CJava.Time.Instant)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L409">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch(`0,Java.Time.Instant,Java.Time.Instant)">Fetch(K, Instant, Instant)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WindowStoreIterator&lt;V&gt; Fetch(K arg0, Instant arg1, Instant arg2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator-1.html">WindowStoreIterator</a>&lt;V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator.html">WindowStoreIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.illegalargumentexception">IllegalArgumentException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.Fetch(%600%2CSystem.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L294">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch(`0,System.Int64,System.Int64)">Fetch(K, Int64, Int64)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-long-long-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WindowStoreIterator&lt;V&gt; Fetch(K arg0, long arg1, long arg2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator-1.html">WindowStoreIterator</a>&lt;V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator.html">WindowStoreIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_FetchAll_Java_Time_Instant_Java_Time_Instant_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.FetchAll(Java.Time.Instant%2CJava.Time.Instant)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L374">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_FetchAll_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.FetchAll*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_FetchAll_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.FetchAll(Java.Time.Instant,Java.Time.Instant)">FetchAll(Instant, Instant)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetchAll-java.time.Instant-java.time.Instant-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; FetchAll(Instant arg0, Instant arg1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">Java.Time.Instant</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.illegalargumentexception">IllegalArgumentException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_FetchAll_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.FetchAll(System.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L283">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_FetchAll_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.FetchAll*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_FetchAll_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.FetchAll(System.Int64,System.Int64)">FetchAll(Int64, Int64)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetchAll-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetchAll-long-long-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; FetchAll(long arg0, long arg1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_Put__0__1_System_Int64_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.Put(%600%2C%601%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L304">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_Put_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Put*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_Put__0__1_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Put(`0,`1,System.Int64)">Put(K, V, Int64)</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#put-java.lang.Object-java.lang.Object-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#put-java.lang.Object-java.lang.Object-long-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Put(K arg0, V arg1, long arg2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">V</span></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">V</code></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">arg2</span></td>
-        <td><p><span class="xref">System.Int64</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="operators">Operators
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_Org_Apache_Kafka_Streams_State_WindowStore__0__1___Org_Apache_Kafka_Streams_Processor_StateStore.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.op_Implicit(Org.Apache.Kafka.Streams.State.WindowStore%7B%600%2C%601%7D)~Org.Apache.Kafka.Streams.Processor.StateStore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L244">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_Org_Apache_Kafka_Streams_State_WindowStore__0__1___Org_Apache_Kafka_Streams_Processor_StateStore" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit(Org.Apache.Kafka.Streams.State.WindowStore{`0,`1})~Org.Apache.Kafka.Streams.Processor.StateStore">Implicit(WindowStore&lt;K, V&gt; to StateStore)</h4>
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Processor.StateStore.html">StateStore</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator StateStore(WindowStore&lt;K, V&gt; t)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore</a>&lt;K, V&gt;</td>
-        <td><span class="parametername">t</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.Processor.StateStore.html">StateStore</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_Org_Apache_Kafka_Streams_State_WindowStore__0__1___Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore__0__1_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.op_Implicit(Org.Apache.Kafka.Streams.State.WindowStore%7B%600%2C%601%7D)~Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore%7B%600%2C%601%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L248">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_Org_Apache_Kafka_Streams_State_WindowStore__0__1___Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore__0__1_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit(Org.Apache.Kafka.Streams.State.WindowStore{`0,`1})~Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore{`0,`1}">Implicit(WindowStore&lt;K, V&gt; to ReadOnlyWindowStore&lt;K, V&gt;)</h4>
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator ReadOnlyWindowStore&lt;K, V&gt;(WindowStore&lt;K, V&gt; t)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore</a>&lt;K, V&gt;</td>
-        <td><span class="parametername">t</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;K, V&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_Org_Apache_Kafka_Streams_State_WindowStore__0__1___Org_Apache_Kafka_Streams_State_WindowStore.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602.op_Implicit(Org.Apache.Kafka.Streams.State.WindowStore%7B%600%2C%601%7D)~Org.Apache.Kafka.Streams.State.WindowStore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L252">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit*"></a>
-  <h4 id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_Org_Apache_Kafka_Streams_State_WindowStore__0__1___Org_Apache_Kafka_Streams_State_WindowStore" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit(Org.Apache.Kafka.Streams.State.WindowStore{`0,`1})~Org.Apache.Kafka.Streams.State.WindowStore">Implicit(WindowStore&lt;K, V&gt; to WindowStore)</h4>
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore.html">WindowStore</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator WindowStore(WindowStore&lt;K, V&gt; t)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore</a>&lt;K, V&gt;</td>
-        <td><span class="parametername">t</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore.html">WindowStore</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
-  </div>
-  <div>
-      <a class="xref" href="Org.Apache.Kafka.Streams.State.IWindowStore-2.html">IWindowStore&lt;K, V&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.IStateStore.html">IStateStore</a>
-  </div>
-  <div>
-      <a class="xref" href="Org.Apache.Kafka.Streams.State.IReadOnlyWindowStore-2.html">IReadOnlyWindowStore&lt;K, V&gt;</a>
-  </div>
-</article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_WindowStore_2.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.WindowStore%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L234" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-      </footer>
+
+        <article data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2">
+
+
+
+  <h1 id="Org_Apache_Kafka_Streams_State_WindowStore_2" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2" class="text-break">
+    Class WindowStore&lt;K, V&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Apache.html">Apache</a>.<a class="xref" href="Org.Apache.Kafka.html">Kafka</a>.<a class="xref" href="Org.Apache.Kafka.Streams.html">Streams</a>.<a class="xref" href="Org.Apache.Kafka.Streams.State.html">State</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class WindowStore&lt;K, V&gt; : JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IWindowStore&lt;K, V&gt;, IStateStore, IReadOnlyWindowStore&lt;K, V&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd></dd>
+    <dt><code>V</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><span class="xref">JVMBridgeBase</span></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore</a>&lt;K, V&gt;&gt;</div>
+      <div><span class="xref">WindowStore&lt;K, V&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
+      <div><span class="xref">IJVMBridgeBase</span></div>
+      <div><span class="xref">IJVMBridgeDefinition</span></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.State.IWindowStore-2.html">IWindowStore</a>&lt;K, V&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.IStateStore.html">IStateStore</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.State.IReadOnlyWindowStore-2.html">IReadOnlyWindowStore</a>&lt;K, V&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.State.TimestampedWindowStore-2.html">TimestampedWindowStore&lt;K, V&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SGetField(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SSetField(IJavaType, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SSetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.IsAssignableFrom(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.IsAssignableFrom(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.Execute&lt;T&gt;(params T[])</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;WindowStore&lt;K, V&gt;&gt;.BridgeClazz</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ToString()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Notify()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wait()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2__ctor_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2__ctor" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.#ctor">
+  WindowStore()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\AllPackageClasses.cs/#L2091"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowStore()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2__ctor_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.#ctor(System.Object[])">
+  WindowStore(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\AllPackageClasses.cs/#L2095"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowStore(params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BridgeClassName_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BridgeClassName*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\AllPackageClasses.cs/#L2102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeAbstract*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\AllPackageClasses.cs/#L2106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeCloseable*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\AllPackageClasses.cs/#L2110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeInterface*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\AllPackageClasses.cs/#L2114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeStatic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\AllPackageClasses.cs/#L2118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch(`0,Java.Time.Instant,Java.Time.Instant)">
+  BackwardFetch(K, Instant, Instant)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowStoreIterator&lt;V&gt; BackwardFetch(K arg0, Instant arg1, Instant arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator-1.html">WindowStoreIterator</a>&lt;V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator.html">WindowStoreIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalArgumentException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch(`0,System.Int64,System.Int64)">
+  BackwardFetch(K, long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L397"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-long-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowStoreIterator&lt;V&gt; BackwardFetch(K arg0, long arg1, long arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator-1.html">WindowStoreIterator</a>&lt;V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator.html">WindowStoreIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0__0_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch(`0,`0,Java.Time.Instant,Java.Time.Instant)">
+  BackwardFetch(K, K, Instant, Instant)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; BackwardFetch(K arg0, K arg1, Instant arg2, Instant arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+    <dt><code>arg3</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalArgumentException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetch__0__0_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetch(`0,`0,System.Int64,System.Int64)">
+  BackwardFetch(K, K, long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-long-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; BackwardFetch(K arg0, K arg1, long arg2, long arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetchAll_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetchAll*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetchAll_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetchAll(Java.Time.Instant,Java.Time.Instant)">
+  BackwardFetchAll(Instant, Instant)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; BackwardFetchAll(Instant arg0, Instant arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalArgumentException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetchAll_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetchAll*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_BackwardFetchAll_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.BackwardFetchAll(System.Int64,System.Int64)">
+  BackwardFetchAll(long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-long-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; BackwardFetchAll(long arg0, long arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch(`0,Java.Time.Instant,Java.Time.Instant)">
+  Fetch(K, Instant, Instant)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L409"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowStoreIterator&lt;V&gt; Fetch(K arg0, Instant arg1, Instant arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator-1.html">WindowStoreIterator</a>&lt;V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator.html">WindowStoreIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalArgumentException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch(`0,System.Int64,System.Int64)">
+  Fetch(K, long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-long-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowStoreIterator&lt;V&gt; Fetch(K arg0, long arg1, long arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator-1.html">WindowStoreIterator</a>&lt;V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStoreIterator.html">WindowStoreIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0__0_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch(`0,`0,Java.Time.Instant,Java.Time.Instant)">
+  Fetch(K, K, Instant, Instant)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; Fetch(K arg0, K arg1, Instant arg2, Instant arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+    <dt><code>arg3</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalArgumentException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_Fetch__0__0_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Fetch(`0,`0,System.Int64,System.Int64)">
+  Fetch(K, K, long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-long-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; Fetch(K arg0, K arg1, long arg2, long arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_FetchAll_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.FetchAll*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_FetchAll_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.FetchAll(Java.Time.Instant,Java.Time.Instant)">
+  FetchAll(Instant, Instant)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetchAll-java.time.Instant-java.time.Instant-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; FetchAll(Instant arg0, Instant arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalArgumentException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_FetchAll_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.FetchAll*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_FetchAll_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.FetchAll(System.Int64,System.Int64)">
+  FetchAll(long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetchAll-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#fetchAll-long-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; FetchAll(long arg0, long arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_Put_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Put*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_Put__0__1_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.Put(`0,`1,System.Int64)">
+  Put(K, V, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#put-java.lang.Object-java.lang.Object-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.0/org/apache/kafka/streams/state/WindowStore.html#put-java.lang.Object-java.lang.Object-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Put(K arg0, V arg1, long arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">V</span></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_Org_Apache_Kafka_Streams_State_WindowStore__0__1___Org_Apache_Kafka_Streams_Processor_StateStore" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit(Org.Apache.Kafka.Streams.State.WindowStore{`0,`1})~Org.Apache.Kafka.Streams.Processor.StateStore">
+  implicit operator StateStore(WindowStore&lt;K, V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Processor.StateStore.html">StateStore</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator StateStore(WindowStore&lt;K, V&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore</a>&lt;K, V&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Processor.StateStore.html">StateStore</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_Org_Apache_Kafka_Streams_State_WindowStore__0__1___Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore__0__1_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit(Org.Apache.Kafka.Streams.State.WindowStore{`0,`1})~Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore{`0,`1}">
+  implicit operator ReadOnlyWindowStore&lt;K, V&gt;(WindowStore&lt;K, V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator ReadOnlyWindowStore&lt;K, V&gt;(WindowStore&lt;K, V&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore</a>&lt;K, V&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;K, V&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_WindowStore_2_op_Implicit_Org_Apache_Kafka_Streams_State_WindowStore__0__1___Org_Apache_Kafka_Streams_State_WindowStore" data-uid="Org.Apache.Kafka.Streams.State.WindowStore`2.op_Implicit(Org.Apache.Kafka.Streams.State.WindowStore{`0,`1})~Org.Apache.Kafka.Streams.State.WindowStore">
+  implicit operator WindowStore(WindowStore&lt;K, V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore.html">WindowStore</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator WindowStore(WindowStore&lt;K, V&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore</a>&lt;K, V&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore.html">WindowStore</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Streams\State\WindowStore.cs/#L234" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

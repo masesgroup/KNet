@@ -1,102 +1,140 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SchemaBuilder
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SchemaBuilder
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class SchemaBuilder
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SchemaBuilder
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder">
-  
-  
-  <h1 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder" class="text-break">Class SchemaBuilder
+
+        <article data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder">
+
+
+
+  <h1 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder" class="text-break">
+    Class SchemaBuilder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html</a></p>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Apache.html">Apache</a>.<a class="xref" href="Org.Apache.Kafka.html">Kafka</a>.<a class="xref" href="Org.Apache.Kafka.Connect.html">Connect</a>.<a class="xref" href="Org.Apache.Kafka.Connect.Data.html">Data</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html</a></p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
-    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a>&gt;</div>
-    <div class="level4"><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></div>
-    <div class="level5"><span class="xref">SchemaBuilder</span></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SchemaBuilder : Schema, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, ISchema</code></pre>
   </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
-    <div><a class="xref" href="Org.Apache.Kafka.Connect.Data.ISchema.html">ISchema</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><span class="xref">JVMBridgeBase</span></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a>&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></div>
+      <div><span class="xref">SchemaBuilder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
+      <div><span class="xref">IJVMBridgeBase</span></div>
+      <div><span class="xref">IJVMBridgeDefinition</span></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Data.ISchema.html">ISchema</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html#Org_Apache_Kafka_Connect_Data_Schema_BOOLEAN_SCHEMA">Schema.BOOLEAN_SCHEMA</a>
     </div>
@@ -158,1937 +196,1795 @@
       <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html#Org_Apache_Kafka_Connect_Data_Schema_TypeMethod">Schema.TypeMethod()</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SExecute(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Schema&gt;.SExecute(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute(System.Type, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Schema&gt;.SExecute(Type, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Schema&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Schema&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Schema&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Schema&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecuteArray&lt;T&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SGetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SGetField(IJavaType, string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SGetField(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SGetField(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SGetField&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SGetField&lt;TReturn&gt;(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SGetField&lt;TReturn&gt;(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SGetFieldArray&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SGetFieldArray&lt;TReturn&gt;(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SSetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SSetField(IJavaType, string, object)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SSetField(System.String, System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SSetField(string, object)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SSetField&lt;TValue&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, TValue)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.SSetField&lt;TValue&gt;(System.String, TValue)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.IsAssignableFrom(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Schema&gt;.IsAssignableFrom(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.IsAssignableFrom(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+      <span class="xref">JVMBridgeBase&lt;Schema&gt;.IsAssignableFrom(IJavaType)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.IsAssignableFrom&lt;T&gt;()</span>
+      <span class="xref">JVMBridgeBase&lt;Schema&gt;.IsAssignableFrom&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.New(System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;Schema&gt;.New(params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.Execute&lt;T&gt;(T[])</span>
+      <span class="xref">JVMBridgeBase&lt;Schema&gt;.Execute&lt;T&gt;(params T[])</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.DynBridgeClazz</span>
+      <span class="xref">JVMBridgeBase&lt;Schema&gt;.DynBridgeClazz</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.BridgeClazz</span>
+      <span class="xref">JVMBridgeBase&lt;Schema&gt;.BridgeClazz</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynBridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Connect.Data.Schema&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.BridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf&lt;TClass&gt;(System.Boolean)</span>
+      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf(System.String, System.Boolean)</span>
+      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(System.String)</span>
+      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+      <span class="xref">JVMBridgeBase.Dispose()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
+      <span class="xref">JVMBridgeBase.ToString()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
+      <span class="xref">JVMBridgeBase.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
+      <span class="xref">JVMBridgeBase.Notify()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
+      <span class="xref">JVMBridgeBase.NotifyAll()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Notify()</span>
+      <span class="xref">JVMBridgeBase.Wait()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.NotifyAll()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64, System.Int32)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField&lt;TReturn&gt;(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField(System.String, System.Object)</span>
+      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField&lt;TValue&gt;(System.String, TValue)</span>
+      <span class="xref">JVMBridgeBase.BridgeInstance</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynBridgeInstance</span>
+      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeInstance</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeListener</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember#system-dynamic-dynamicobject-trydeletemember(system-dynamic-deletememberbinder)">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember#system-dynamic-dynamicobject-tryinvokemember(system-dynamic-invokememberbinder-system-object()-system-object@)">DynamicObject.TryInvokeMember(InvokeMemberBinder, Object[], Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance#system-dynamic-dynamicobject-trycreateinstance(system-dynamic-createinstancebinder-system-object()-system-object@)">DynamicObject.TryCreateInstance(CreateInstanceBinder, Object[], Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
     </div>
     <div>
-      <span class="xref">System.Dynamic.DynamicObject.TryDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">System.Dynamic.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Org.Apache.Kafka.Connect.Data.html">Org.Apache.Kafka.Connect.Data</a></h6>
-  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
-  <h5 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SchemaBuilder : Schema, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, ISchema</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L338">View Source</a>
-  </span>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.#ctor">SchemaBuilder()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.#ctor">
+  SchemaBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\AllPackageClasses.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor_Org_Apache_Kafka_Connect_Data_Schema_Type_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.%23ctor(Org.Apache.Kafka.Connect.Data.Schema.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L36">View Source</a>
-  </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor_Org_Apache_Kafka_Connect_Data_Schema_Type_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.#ctor(Org.Apache.Kafka.Connect.Data.Schema.Type)">SchemaBuilder(Schema.Type)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor_Org_Apache_Kafka_Connect_Data_Schema_Type_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.#ctor(Org.Apache.Kafka.Connect.Data.Schema.Type)">
+  SchemaBuilder(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#org.apache.kafka.connect.data.SchemaBuilder(org.apache.kafka.connect.data.Schema.Type)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#org.apache.kafka.connect.data.SchemaBuilder(org.apache.kafka.connect.data.Schema.Type)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder(Schema.Type arg0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Schema.Type</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Schema.Type</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor_System_Object___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L342">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a>.<a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Type</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Schema.Type</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.#ctor(System.Object[])">SchemaBuilder(Object[])</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.#ctor(System.Object[])">
+  SchemaBuilder(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\AllPackageClasses.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder(params object[] args)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L349">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_BridgeClassName_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.BridgeClassName*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.BridgeClassName">BridgeClassName</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\AllPackageClasses.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html#Org_Apache_Kafka_Connect_Data_Schema_BridgeClassName">Schema.BridgeClassName</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeAbstract.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L353">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeAbstract*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeAbstract">IsBridgeAbstract</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\AllPackageClasses.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html#Org_Apache_Kafka_Connect_Data_Schema_IsBridgeAbstract">Schema.IsBridgeAbstract</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeCloseable.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeCloseable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L357">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeCloseable*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeCloseable">IsBridgeCloseable</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\AllPackageClasses.cs/#L357"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html#Org_Apache_Kafka_Connect_Data_Schema_IsBridgeCloseable">Schema.IsBridgeCloseable</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeInterface.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L361">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeInterface*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeInterface">IsBridgeInterface</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\AllPackageClasses.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html#Org_Apache_Kafka_Connect_Data_Schema_IsBridgeInterface">Schema.IsBridgeInterface</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeStatic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeStatic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L365">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeStatic*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeStatic">IsBridgeStatic</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\AllPackageClasses.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html#Org_Apache_Kafka_Connect_Data_Schema_IsBridgeStatic">Schema.IsBridgeStatic</a></div>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Array_Org_Apache_Kafka_Connect_Data_Schema_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Array(Org.Apache.Kafka.Connect.Data.Schema)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L57">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Array_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Array*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Array_Org_Apache_Kafka_Connect_Data_Schema_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Array(Org.Apache.Kafka.Connect.Data.Schema)">Array(Schema)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Array_Org_Apache_Kafka_Connect_Data_Schema_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Array(Org.Apache.Kafka.Connect.Data.Schema)">
+  Array(Schema)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#array-org.apache.kafka.connect.data.Schema-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#array-org.apache.kafka.connect.data.Schema-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Array(Schema arg0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Bool.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Bool%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L66">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Bool_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Bool*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Bool" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Bool">Bool()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Bool" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Bool">
+  Bool()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#bool--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#bool--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Bool()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Build.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L251">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Build_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Build*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Build" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Build">Build()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Build" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Build">
+  Build()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#build--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#build--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Schema Build()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Bytes.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Bytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L75">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Bytes_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Bytes*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Bytes" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Bytes">Bytes()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Bytes" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Bytes">
+  Bytes()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#bytes--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#bytes--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Bytes()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_DefaultValue.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.DefaultValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L197">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_DefaultValue_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.DefaultValue*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_DefaultValue" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.DefaultValue">DefaultValue()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_DefaultValue" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.DefaultValue">
+  DefaultValue()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#defaultValue--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#defaultValue--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public object DefaultValue()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><p><span class="xref">System.Object</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_DefaultValue_System_Object_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.DefaultValue(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L296">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_DefaultValue_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.DefaultValue*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_DefaultValue_System_Object_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.DefaultValue(System.Object)">DefaultValue(Object)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_DefaultValue_System_Object_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.DefaultValue(System.Object)">
+  DefaultValue(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#defaultValue-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#defaultValue-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder DefaultValue(object arg0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><span class="xref">System.Object</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Doc.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Doc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L206">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Doc_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Doc*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Doc" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Doc">Doc()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Doc" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Doc">
+  Doc()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#doc--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#doc--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Doc()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Doc_System_String_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Doc(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L305">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Doc_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Doc*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Doc_System_String_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Doc(System.String)">Doc(String)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Doc_System_String_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Doc(System.String)">
+  Doc(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#doc-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#doc-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder Doc(string arg0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Field_System_String_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Field(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L242">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Field_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Field*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Field_System_String_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Field(System.String)">Field(String)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Field_System_String_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Field(System.String)">
+  Field(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#field-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#field-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Field Field(string arg0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Field.html">Field</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Field.html">Field</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Field_System_String_Org_Apache_Kafka_Connect_Data_Schema_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Field(System.String%2COrg.Apache.Kafka.Connect.Data.Schema)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L315">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.Field.html">Field</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Field.html">Field</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Field_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Field*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Field_System_String_Org_Apache_Kafka_Connect_Data_Schema_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Field(System.String,Org.Apache.Kafka.Connect.Data.Schema)">Field(String, Schema)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Field_System_String_Org_Apache_Kafka_Connect_Data_Schema_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Field(System.String,Org.Apache.Kafka.Connect.Data.Schema)">
+  Field(string, Schema)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#field-java.lang.String-org.apache.kafka.connect.data.Schema-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#field-java.lang.String-org.apache.kafka.connect.data.Schema-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder Field(string arg0, Schema arg1)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Fields.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Fields%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L224">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Fields_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Fields*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Fields" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Fields">Fields()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Fields" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Fields">
+  Fields()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#fields--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#fields--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public List&lt;Field&gt; Fields()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Data.Field.html">Field</a>&gt;</td>
-        <td><p><span class="xref">Java.Util.List</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Float32.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Float32%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L84">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Data.Field.html">Field</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.List</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Float32_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Float32*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Float32" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Float32">Float32()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Float32" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Float32">
+  Float32()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#float32--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#float32--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Float32()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Float64.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Float64%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L93">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Float64_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Float64*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Float64" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Float64">Float64()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Float64" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Float64">
+  Float64()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#float64--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#float64--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Float64()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int16.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int16%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L102">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int16_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int16*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int16" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int16">Int16()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int16" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int16">
+  Int16()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#int16--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#int16--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Int16()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int32.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int32%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L111">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int32_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int32*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int32" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int32">Int32()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int32" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int32">
+  Int32()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#int32--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#int32--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Int32()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int64.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int64%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L120">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int64_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int64*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int64" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int64">Int64()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int64" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int64">
+  Int64()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#int64--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#int64--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Int64()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int8.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int8%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L129">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int8_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int8*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int8" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int8">Int8()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Int8" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Int8">
+  Int8()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#int8--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#int8--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Int8()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsOptional.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsOptional%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L179">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsOptional_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsOptional*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsOptional" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsOptional">IsOptional()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_IsOptional" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.IsOptional">
+  IsOptional()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#isOptional--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#isOptional--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsOptional()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_KeySchema.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.KeySchema%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L260">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_KeySchema_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.KeySchema*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_KeySchema" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.KeySchema">KeySchema()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_KeySchema" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.KeySchema">
+  KeySchema()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#keySchema--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#keySchema--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Schema KeySchema()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Map_Org_Apache_Kafka_Connect_Data_Schema_Org_Apache_Kafka_Connect_Data_Schema_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Map(Org.Apache.Kafka.Connect.Data.Schema%2COrg.Apache.Kafka.Connect.Data.Schema)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L139">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Map_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Map*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Map_Org_Apache_Kafka_Connect_Data_Schema_Org_Apache_Kafka_Connect_Data_Schema_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Map(Org.Apache.Kafka.Connect.Data.Schema,Org.Apache.Kafka.Connect.Data.Schema)">Map(Schema, Schema)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Map_Org_Apache_Kafka_Connect_Data_Schema_Org_Apache_Kafka_Connect_Data_Schema_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Map(Org.Apache.Kafka.Connect.Data.Schema,Org.Apache.Kafka.Connect.Data.Schema)">
+  Map(Schema, Schema)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#map-org.apache.kafka.connect.data.Schema-org.apache.kafka.connect.data.Schema-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#map-org.apache.kafka.connect.data.Schema-org.apache.kafka.connect.data.Schema-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Map(Schema arg0, Schema arg1)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Name.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L215">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Name_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Name*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Name" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Name">Name()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Name" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Name">
+  Name()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#name--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#name--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Name()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Name_System_String_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Name(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L324">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Name_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Name*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Name_System_String_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Name(System.String)">Name(String)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Name_System_String_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Name(System.String)">
+  Name(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L324"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#name-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#name-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder Name(string arg0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Optional.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Optional%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L333">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Optional_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Optional*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Optional" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Optional">Optional()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Optional" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Optional">
+  Optional()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#optional--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#optional--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder Optional()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameter_System_String_System_String_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameter(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L343">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameter_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameter*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameter_System_String_System_String_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameter(System.String,System.String)">Parameter(String, String)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameter_System_String_System_String_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameter(System.String,System.String)">
+  Parameter(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#parameter-java.lang.String-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#parameter-java.lang.String-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder Parameter(string arg0, string arg1)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">arg1</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameters.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameters%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L233">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameters_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameters*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameters" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameters">Parameters()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameters" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameters">
+  Parameters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#parameters--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#parameters--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Map&lt;string, string&gt; Parameters()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.map">Map</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameters_Java_Util_Map_System_String_System_String__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameters(Java.Util.Map%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L352">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Map</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameters_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameters*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameters_Java_Util_Map_System_String_System_String__" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameters(Java.Util.Map{System.String,System.String})">Parameters(Map&lt;String, String&gt;)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Parameters_Java_Util_Map_System_String_System_String__" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Parameters(Java.Util.Map{System.String,System.String})">
+  Parameters(Map&lt;string, string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#parameters-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#parameters-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder Parameters(Map&lt;string, string&gt; arg0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.map">Map</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Required.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Required%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L361">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Map</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Required_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Required*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Required" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Required">Required()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Required" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Required">
+  Required()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#required--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#required--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder Required()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Schema.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Schema%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L269">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Schema_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Schema*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Schema" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Schema">Schema()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Schema" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Schema">
+  Schema()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#schema--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#schema--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Schema Schema()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_String.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.String%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L148">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_String_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.String*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_String" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.String">String()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_String" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.String">
+  String()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#string--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#string--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder String()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Struct.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Struct%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L157">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Struct_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Struct*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Struct" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Struct">Struct()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Struct" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Struct">
+  Struct()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#struct--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#struct--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Struct()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Type.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L287">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Type_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Type*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Type" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Type">Type()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Type" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Type">
+  Type()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#type--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#type--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Schema.Type Type()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Schema.Type</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Schema.Type</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Type_Org_Apache_Kafka_Connect_Data_Schema_Type_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Type(Org.Apache.Kafka.Connect.Data.Schema.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L166">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a>.<a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Type</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Schema.Type</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Type_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Type*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Type_Org_Apache_Kafka_Connect_Data_Schema_Type_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Type(Org.Apache.Kafka.Connect.Data.Schema.Type)">Type(Schema.Type)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Type_Org_Apache_Kafka_Connect_Data_Schema_Type_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Type(Org.Apache.Kafka.Connect.Data.Schema.Type)">
+  Type(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#type-org.apache.kafka.connect.data.Schema.Type-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#type-org.apache.kafka.connect.data.Schema.Type-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SchemaBuilder Type(Schema.Type arg0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Schema.Type</a></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Schema.Type</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_ValueSchema.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.ValueSchema%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L278">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a>.<a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Type</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.Type.html">Schema.Type</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_ValueSchema_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.ValueSchema*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_ValueSchema" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.ValueSchema">ValueSchema()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_ValueSchema" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.ValueSchema">
+  ValueSchema()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#valueSchema--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#valueSchema--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Schema ValueSchema()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Version.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L188">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Version_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Version*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Version" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Version">Version()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Version" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Version">
+  Version()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#version--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#version--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Integer Version()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Lang.Integer</span></td>
-        <td><p><span class="xref">Java.Lang.Integer</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder_Version_Java_Lang_Integer_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder.Version(Java.Lang.Integer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L370">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Integer</span></dt>
+    <dd><p><span class="xref">Java.Lang.Integer</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Version_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Version*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Version_Java_Lang_Integer_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Version(Java.Lang.Integer)">Version(Integer)</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Data_SchemaBuilder_Version_Java_Lang_Integer_" data-uid="Org.Apache.Kafka.Connect.Data.SchemaBuilder.Version(Java.Lang.Integer)">
+  Version(Integer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#version-java.lang.Integer-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.0/org/apache/kafka/connect/data/SchemaBuilder.html#version-java.lang.Integer-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SchemaBuilder Version(Integer arg0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Lang.Integer</span></td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><span class="xref">Java.Lang.Integer</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
-  </div>
-  <div>
-      <a class="xref" href="Org.Apache.Kafka.Connect.Data.ISchema.html">ISchema</a>
-  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">Integer</span></dt>
+    <dd><p><span class="xref">Java.Lang.Integer</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.SchemaBuilder.html">SchemaBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Data_SchemaBuilder.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Data.SchemaBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/SchemaBuilder.cs/#L29" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Data\SchemaBuilder.cs/#L29" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

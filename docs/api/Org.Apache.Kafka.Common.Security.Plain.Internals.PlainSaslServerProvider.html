@@ -1,841 +1,858 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class PlainSaslServerProvider
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class PlainSaslServerProvider
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class PlainSaslServerProvider
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PlainSaslServerProvider
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider">
-  
-  
-  <h1 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider" class="text-break">Class PlainSaslServerProvider
-  </h1>
-  <div class="markdown level0 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html</a></p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
-    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<span class="xref">Java.Util.Dictionary</span>&lt;<span class="xref">System.Object</span>, <span class="xref">System.Object</span>&gt;&gt;</div>
-    <div class="level4"><span class="xref">Java.Util.Dictionary</span>&lt;<span class="xref">System.Object</span>, <span class="xref">System.Object</span>&gt;</div>
-    <div class="level5"><span class="xref">Java.Util.Hashtable</span>&lt;<span class="xref">System.Object</span>, <span class="xref">System.Object</span>&gt;</div>
-    <div class="level6"><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.properties">Properties</a></div>
-    <div class="level7"><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.security.provider">Provider</a></div>
-    <div class="level8"><span class="xref">PlainSaslServerProvider</span></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">Java.Security.Provider.IsConfigured()</span>
-    </div>
-    <div>
-      <span class="xref">Java.Security.Provider.Configure(System.String)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/java.security.provider.getservice#java-security-provider-getservice(system-string-system-string)">Provider.GetService(String, String)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/java.security.provider.info#java-security-provider-info">Provider.Info</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/java.security.provider.name#java-security-provider-name">Provider.Name</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/java.security.provider.services#java-security-provider-services">Provider.Services</a>
-    </div>
-    <div>
-      <span class="xref">Java.Security.Provider.VersionStr</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.GetProperty(System.String, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.GetProperty(System.String)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.properties.propertynames#java-util-properties-propertynames">Properties.PropertyNames()</a>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.StringPropertyNames()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.properties.setproperty#java-util-properties-setproperty(system-string-system-string)">Properties.SetProperty(String, String)</a>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.Load(Java.Io.InputStream)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.Load(Java.Io.Reader)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.LoadFromXML(Java.Io.InputStream)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.List(Java.Io.PrintStream)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.List(Java.Io.PrintWriter)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.Store(Java.Io.OutputStream, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.Store(Java.Io.Writer, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.StoreToXML(Java.Io.OutputStream, System.String, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.StoreToXML(Java.Io.OutputStream, System.String, Java.Nio.Charset.Charset)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Properties.StoreToXML(Java.Io.OutputStream, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.ContainsValue(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.Values()</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.EntrySetMethod()</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.KeySetMethod()</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.Contains(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.ContainsKey(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.Remove(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.Replace(System.Object, System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.Compute&lt;Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsV&gt;(System.Object, Java.Util.Function.BiFunction&lt;Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsV&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.ComputeIfAbsent&lt;Arg1objectSuperK, Arg1ExtendsV&gt;(System.Object, Java.Util.Function.Function&lt;Arg1objectSuperK, Arg1ExtendsV&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.ComputeIfPresent&lt;Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsV&gt;(System.Object, Java.Util.Function.BiFunction&lt;Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsV&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.GetOrDefault(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.Merge&lt;Arg2objectSuperV, Arg2ExtendsV&gt;(System.Object, System.Object, Java.Util.Function.BiFunction&lt;Arg2objectSuperV, Arg2objectSuperV, Arg2ExtendsV&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.PutIfAbsent(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.Replace(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.Clear()</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.ForEach&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Java.Util.Function.BiConsumer&lt;Arg0objectSuperK, Arg0objectSuperV&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.PutAll&lt;Arg0ExtendsK, Arg0ExtendsV&gt;(Java.Util.Map&lt;Arg0ExtendsK, Arg0ExtendsV&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.ReplaceAll&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsV&gt;(Java.Util.Function.BiFunction&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsV&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.BridgeClassName</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.IsBridgeAbstract</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.IsBridgeCloseable</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.IsBridgeInterface</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Hashtable&lt;System.Object, System.Object&gt;.IsBridgeStatic</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Dictionary&lt;System.Object, System.Object&gt;.IsEmpty()</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Dictionary&lt;System.Object, System.Object&gt;.Size()</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Dictionary&lt;System.Object, System.Object&gt;.Keys()</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Dictionary&lt;System.Object, System.Object&gt;.Elements()</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Dictionary&lt;System.Object, System.Object&gt;.Get(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Dictionary&lt;System.Object, System.Object&gt;.Put(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Java.Util.Dictionary&lt;System.Object, System.Object&gt;.Remove(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecuteArray&lt;T&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SGetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SGetField(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SGetField&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SGetField&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SSetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SSetField(System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SSetField&lt;TValue&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.SSetField&lt;TValue&gt;(System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.IsAssignableFrom(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.IsAssignableFrom(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.IsAssignableFrom&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.New(System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.Execute&lt;T&gt;(T[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.DynBridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.BridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynBridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Util.Dictionary&lt;System.Object, System.Object&gt;&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.BridgeClazz</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf&lt;TClass&gt;(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf(System.String, System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Execute&lt;T&gt;(T[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Notify()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.NotifyAll()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait()</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64, System.Int32)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField(System.String, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField&lt;TValue&gt;(System.String, TValue)</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynBridgeInstance</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeInstance</span>
-    </div>
-    <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeListener</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember#system-dynamic-dynamicobject-trydeletemember(system-dynamic-deletememberbinder)">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember#system-dynamic-dynamicobject-tryinvokemember(system-dynamic-invokememberbinder-system-object()-system-object@)">DynamicObject.TryInvokeMember(InvokeMemberBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance#system-dynamic-dynamicobject-trycreateinstance(system-dynamic-createinstancebinder-system-object()-system-object@)">DynamicObject.TryCreateInstance(CreateInstanceBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
-    </div>
-    <div>
-      <span class="xref">System.Dynamic.DynamicObject.TryDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Object[])</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
-    </div>
-    <div>
-      <span class="xref">System.Dynamic.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Org.Apache.Kafka.Common.Security.Plain.Internals.html">Org.Apache.Kafka.Common.Security.Plain.Internals</a></h6>
-  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
-  <h5 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PlainSaslServerProvider : Provider, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Plain/Internals/AllPackageClasses.cs/#L123">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider__ctor_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider__ctor" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.#ctor">PlainSaslServerProvider()</h4>
-  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlainSaslServerProvider()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider__ctor_System_Object___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Plain/Internals/AllPackageClasses.cs/#L127">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider__ctor_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.#ctor(System.Object[])">PlainSaslServerProvider(Object[])</h4>
-  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlainSaslServerProvider(params object[] args)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Plain/Internals/AllPackageClasses.cs/#L134">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_BridgeClassName_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.BridgeClassName*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.BridgeClassName">BridgeClassName</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Java.Security.Provider.BridgeClassName</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeAbstract.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Plain/Internals/AllPackageClasses.cs/#L138">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeAbstract*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeAbstract">IsBridgeAbstract</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Java.Security.Provider.IsBridgeAbstract</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeCloseable.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeCloseable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Plain/Internals/AllPackageClasses.cs/#L142">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeCloseable*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeCloseable">IsBridgeCloseable</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Java.Security.Provider.IsBridgeCloseable</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeInterface.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Plain/Internals/AllPackageClasses.cs/#L146">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeInterface*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeInterface">IsBridgeInterface</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Java.Security.Provider.IsBridgeInterface</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeStatic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeStatic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Plain/Internals/AllPackageClasses.cs/#L150">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeStatic*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeStatic">IsBridgeStatic</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Java.Security.Provider.IsBridgeStatic</span></div>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_Initialize.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Plain/Internals/PlainSaslServerProvider.cs/#L47">View Source</a>
-  </span>
-  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_Initialize_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.Initialize*"></a>
-  <h4 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_Initialize" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html#initialize--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html#initialize--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Initialize()</code></pre>
-  </div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
-  </div>
-</article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Plain/Internals/PlainSaslServerProvider.cs/#L29" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-      </footer>
+
+        <article data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider">
+
+
+
+  <h1 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider" class="text-break">
+    Class PlainSaslServerProvider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Security\Plain\Internals\PlainSaslServerProvider.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Apache.html">Apache</a>.<a class="xref" href="Org.Apache.Kafka.html">Kafka</a>.<a class="xref" href="Org.Apache.Kafka.Common.html">Common</a>.<a class="xref" href="Org.Apache.Kafka.Common.Security.html">Security</a>.<a class="xref" href="Org.Apache.Kafka.Common.Security.Plain.html">Plain</a>.<a class="xref" href="Org.Apache.Kafka.Common.Security.Plain.Internals.html">Internals</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PlainSaslServerProvider : Provider, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><span class="xref">JVMBridgeBase</span></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<span class="xref">Dictionary</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</div>
+      <div><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</div>
+      <div><span class="xref">Hashtable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</div>
+      <div><span class="xref">Properties</span></div>
+      <div><span class="xref">Provider</span></div>
+      <div><span class="xref">PlainSaslServerProvider</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
+      <div><span class="xref">IJVMBridgeBase</span></div>
+      <div><span class="xref">IJVMBridgeDefinition</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">Provider.IsConfigured()</span>
     </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Provider.Configure(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Provider.GetService(string, string)</a>
+    </div>
+    <div>
+      <span class="xref">Provider.Info</span>
+    </div>
+    <div>
+      <span class="xref">Provider.Name</span>
+    </div>
+    <div>
+      <span class="xref">Provider.Services</span>
+    </div>
+    <div>
+      <span class="xref">Provider.VersionStr</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Properties.GetProperty(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Properties.GetProperty(string)</a>
+    </div>
+    <div>
+      <span class="xref">Properties.PropertyNames()</span>
+    </div>
+    <div>
+      <span class="xref">Properties.StringPropertyNames()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Properties.SetProperty(string, string)</a>
+    </div>
+    <div>
+      <span class="xref">Properties.Load(InputStream)</span>
+    </div>
+    <div>
+      <span class="xref">Properties.Load(Reader)</span>
+    </div>
+    <div>
+      <span class="xref">Properties.LoadFromXML(InputStream)</span>
+    </div>
+    <div>
+      <span class="xref">Properties.List(PrintStream)</span>
+    </div>
+    <div>
+      <span class="xref">Properties.List(PrintWriter)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Properties.Store(OutputStream, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Properties.Store(Writer, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Properties.StoreToXML(OutputStream, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Properties.StoreToXML(OutputStream, string, Charset)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Properties.StoreToXML(OutputStream, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Hashtable&lt;object, object&gt;.ContainsValue(object)</a>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.Values()</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.EntrySetMethod()</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.KeySetMethod()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Hashtable&lt;object, object&gt;.Contains(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Hashtable&lt;object, object&gt;.ContainsKey(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Hashtable&lt;object, object&gt;.Remove(object, object)</a>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.Replace(object, object, object)</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.Compute&lt;Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsV&gt;(object, BiFunction&lt;Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsV&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.ComputeIfAbsent&lt;Arg1objectSuperK, Arg1ExtendsV&gt;(object, Function&lt;Arg1objectSuperK, Arg1ExtendsV&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.ComputeIfPresent&lt;Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsV&gt;(object, BiFunction&lt;Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsV&gt;)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Hashtable&lt;object, object&gt;.GetOrDefault(object, object)</a>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.Merge&lt;Arg2objectSuperV, Arg2ExtendsV&gt;(object, object, BiFunction&lt;Arg2objectSuperV, Arg2objectSuperV, Arg2ExtendsV&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.PutIfAbsent(object, object)</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.Replace(object, object)</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.Clear()</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.ForEach&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(BiConsumer&lt;Arg0objectSuperK, Arg0objectSuperV&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.PutAll&lt;Arg0ExtendsK, Arg0ExtendsV&gt;(Map&lt;Arg0ExtendsK, Arg0ExtendsV&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.ReplaceAll&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsV&gt;(BiFunction&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsV&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.BridgeClassName</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.IsBridgeAbstract</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.IsBridgeCloseable</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.IsBridgeInterface</span>
+    </div>
+    <div>
+      <span class="xref">Hashtable&lt;object, object&gt;.IsBridgeStatic</span>
+    </div>
+    <div>
+      <span class="xref">Dictionary&lt;object, object&gt;.IsEmpty()</span>
+    </div>
+    <div>
+      <span class="xref">Dictionary&lt;object, object&gt;.Size()</span>
+    </div>
+    <div>
+      <span class="xref">Dictionary&lt;object, object&gt;.Keys()</span>
+    </div>
+    <div>
+      <span class="xref">Dictionary&lt;object, object&gt;.Elements()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Dictionary&lt;object, object&gt;.Get(object)</a>
+    </div>
+    <div>
+      <span class="xref">Dictionary&lt;object, object&gt;.Put(object, object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Dictionary&lt;object, object&gt;.Remove(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SGetField(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SSetField(IJavaType, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SSetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.IsAssignableFrom(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.IsAssignableFrom(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.Execute&lt;T&gt;(params T[])</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;Dictionary&lt;object, object&gt;&gt;.BridgeClazz</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Execute&lt;T&gt;(params T[])</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ToString()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Notify()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wait()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider__ctor_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider__ctor" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.#ctor">
+  PlainSaslServerProvider()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Security\Plain\Internals\AllPackageClasses.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlainSaslServerProvider()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider__ctor_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.#ctor(System.Object[])">
+  PlainSaslServerProvider(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Security\Plain\Internals\AllPackageClasses.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlainSaslServerProvider(params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_BridgeClassName_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.BridgeClassName*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Security\Plain\Internals\AllPackageClasses.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeAbstract*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Security\Plain\Internals\AllPackageClasses.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeCloseable*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Security\Plain\Internals\AllPackageClasses.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeInterface*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Security\Plain\Internals\AllPackageClasses.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeStatic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Security\Plain\Internals\AllPackageClasses.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_Initialize_" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.Initialize*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Security_Plain_Internals_PlainSaslServerProvider_Initialize" data-uid="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServerProvider.Initialize">
+  Initialize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Security\Plain\Internals\PlainSaslServerProvider.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html#initialize--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html#initialize--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Initialize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Common\Security\Plain\Internals\PlainSaslServerProvider.cs/#L29" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

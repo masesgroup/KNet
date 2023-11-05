@@ -1,853 +1,792 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class KNetProducerRecord&lt;K, V&gt;
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class KNetProducerRecord&lt;K, V&gt;
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class KNetProducerRecord&lt;K, V&gt;
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KNetProducerRecord&lt;K, V&gt;
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MASES.KNet.Producer.KNetProducerRecord`2">
-  
-  
-  <h1 id="MASES_KNet_Producer_KNetProducerRecord_2" data-uid="MASES.KNet.Producer.KNetProducerRecord`2" class="text-break">Class KNetProducerRecord&lt;K, V&gt;
-  </h1>
-  <div class="markdown level0 summary"><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerRecord-2.html">ProducerRecord&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">KNetProducerRecord&lt;K, V&gt;</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MASES.KNet.Producer.html">MASES.KNet.Producer</a></h6>
-  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
-  <h5 id="MASES_KNet_Producer_KNetProducerRecord_2_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KNetProducerRecord&lt;K, V&gt;</code></pre>
-  </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">K</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">V</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2__ctor.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L32">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor">KNetProducerRecord()</h4>
-  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetProducerRecord()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String__0__1_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.%23ctor(System.String%2C%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L105">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String__0__1_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,`0,`1)">KNetProducerRecord(String, K, V)</h4>
-  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, K key, V value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">V</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String__1_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.%23ctor(System.String%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L114">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String__1_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,`1)">KNetProducerRecord(String, V)</h4>
-  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, V value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">V</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32__0__1_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.%23ctor(System.String%2CSystem.Int32%2C%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L95">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32__0__1_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,`0,`1)">KNetProducerRecord(String, Int32, K, V)</h4>
-  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, K key, V value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">partition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">V</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32__0__1_Org_Apache_Kafka_Common_Header_Headers_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.%23ctor(System.String%2CSystem.Int32%2C%600%2C%601%2COrg.Apache.Kafka.Common.Header.Headers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L84">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">KNetProducerRecord(String, Int32, K, V, Headers)</h4>
-  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, K key, V value, Headers headers)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">partition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">V</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></td>
-        <td><span class="parametername">headers</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_DateTime__0__1_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.%23ctor(System.String%2CSystem.Int32%2CSystem.DateTime%2C%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L73">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_DateTime__0__1_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,System.DateTime,`0,`1)">KNetProducerRecord(String, Int32, DateTime, K, V)</h4>
-  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, DateTime timestamp, K key, V value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">partition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.DateTime</span></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">V</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Common_Header_Headers_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.%23ctor(System.String%2CSystem.Int32%2CSystem.DateTime%2C%600%2C%601%2COrg.Apache.Kafka.Common.Header.Headers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L50">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,System.DateTime,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">KNetProducerRecord(String, Int32, DateTime, K, V, Headers)</h4>
-  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, DateTime timestamp, K key, V value, Headers headers)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">partition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.DateTime</span></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">V</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></td>
-        <td><span class="parametername">headers</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_Int64__0__1_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.%23ctor(System.String%2CSystem.Int32%2CSystem.Int64%2C%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L62">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_Int64__0__1_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,System.Int64,`0,`1)">KNetProducerRecord(String, Int32, Int64, K, V)</h4>
-  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, long timestamp, K key, V value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">partition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">V</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Common_Header_Headers_.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.%23ctor(System.String%2CSystem.Int32%2CSystem.Int64%2C%600%2C%601%2COrg.Apache.Kafka.Common.Header.Headers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L38">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">KNetProducerRecord(String, Int32, Int64, K, V, Headers)</h4>
-  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">partition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">V</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></td>
-        <td><span class="parametername">headers</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2_DateTime.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.DateTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L130">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2_DateTime_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.DateTime*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2_DateTime" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.DateTime">DateTime</h4>
-  <div class="markdown level1 summary"><p><span class="xref">System.DateTime</span> of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerRecord-2.html#Org_Apache_Kafka_Clients_Producer_ProducerRecord_2_Timestamp">Timestamp()</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime? DateTime { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2_Headers.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.Headers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L132">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Headers_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Headers*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2_Headers" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Headers">Headers</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Headers Headers { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></td>
-        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2_Key.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L124">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Key_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Key*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2_Key" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Key">Key</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#key--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#key--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public K Key { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">K</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2_Partition.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.Partition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L122">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Partition_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Partition*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2_Partition" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Partition">Partition</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? Partition { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
-        <td><p><span class="xref">Java.Lang.Integer</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2_Timestamp.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.Timestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L128">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Timestamp_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Timestamp*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2_Timestamp" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Timestamp">Timestamp</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long? Timestamp { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int64</span>&gt;</td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.long">Long</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2_Topic.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.Topic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L120">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Topic_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Topic*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2_Topic" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Topic">Topic</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Topic { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2_Value.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L126">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Value_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Value*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2_Value" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Value">Value</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#value--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#value--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public V Value { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">V</span></td>
-        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">V</code></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2_ToString.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L134">View Source</a>
-  </span>
-  <a id="MASES_KNet_Producer_KNetProducerRecord_2_ToString_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.ToString*"></a>
-  <h4 id="MASES_KNet_Producer_KNetProducerRecord_2_ToString" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Object.ToString()</span></div>
-</article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Producer_KNetProducerRecord_2.md&amp;value=---%0Auid%3A%20MASES.KNet.Producer.KNetProducerRecord%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducerRecord.cs/#L27" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-      </footer>
+
+        <article data-uid="MASES.KNet.Producer.KNetProducerRecord`2">
+
+
+
+  <h1 id="MASES_KNet_Producer_KNetProducerRecord_2" data-uid="MASES.KNet.Producer.KNetProducerRecord`2" class="text-break">
+    Class KNetProducerRecord&lt;K, V&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Producer.html">Producer</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerRecord-2.html">ProducerRecord&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KNetProducerRecord&lt;K, V&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd></dd>
+    <dt><code>V</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">KNetProducerRecord&lt;K, V&gt;</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor">
+  KNetProducerRecord()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetProducerRecord()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_DateTime__0__1_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,System.DateTime,`0,`1)">
+  KNetProducerRecord(string, int, DateTime, K, V)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, DateTime timestamp, K key, V value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <span class="xref">K</span></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">V</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,System.DateTime,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
+  KNetProducerRecord(string, int, DateTime, K, V, Headers)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, DateTime timestamp, K key, V value, Headers headers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <span class="xref">K</span></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">V</span></dt>
+    <dd></dd>
+    <dt><code>headers</code> <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_Int64__0__1_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,System.Int64,`0,`1)">
+  KNetProducerRecord(string, int, long, K, V)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, long timestamp, K key, V value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <span class="xref">K</span></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">V</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
+  KNetProducerRecord(string, int, long, K, V, Headers)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <span class="xref">K</span></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">V</span></dt>
+    <dd></dd>
+    <dt><code>headers</code> <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32__0__1_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,`0,`1)">
+  KNetProducerRecord(string, int, K, V)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, K key, V value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <span class="xref">K</span></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">V</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String_System_Int32__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
+  KNetProducerRecord(string, int, K, V, Headers)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, int partition, K key, V value, Headers headers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <span class="xref">K</span></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">V</span></dt>
+    <dd></dd>
+    <dt><code>headers</code> <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String__0__1_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,`0,`1)">
+  KNetProducerRecord(string, K, V)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, K key, V value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <span class="xref">K</span></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">V</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2__ctor_System_String__1_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.#ctor(System.String,`1)">
+  KNetProducerRecord(string, V)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetProducerRecord(string topic, V value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">V</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2_DateTime_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.DateTime*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2_DateTime" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.DateTime">
+  DateTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerRecord-2.html#Org_Apache_Kafka_Clients_Producer_ProducerRecord_2_Timestamp">Timestamp()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? DateTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Headers_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Headers*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2_Headers" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Headers">
+  Headers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Headers Headers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Key_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Key*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2_Key" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Key">
+  Key
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#key--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#key--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public K Key { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">K</span></dt>
+    <dd><p>K</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Partition_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Partition*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2_Partition" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Partition">
+  Partition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Partition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p><span class="xref">Java.Lang.Integer</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Timestamp_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Timestamp*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2_Timestamp" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Timestamp">
+  Timestamp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? Timestamp { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd><p><span class="xref">Java.Lang.Long</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Topic_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Topic*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2_Topic" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Topic">
+  Topic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Topic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2_Value_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Value*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2_Value" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#value--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/ProducerRecord.html#value--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public V Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">V</span></dt>
+    <dd><p>V</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Producer_KNetProducerRecord_2_ToString_" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.ToString*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducerRecord_2_ToString" data-uid="MASES.KNet.Producer.KNetProducerRecord`2.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that represents the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Producer\KNetProducerRecord.cs/#L27" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

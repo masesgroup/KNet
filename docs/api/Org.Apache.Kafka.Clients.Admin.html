@@ -1,556 +1,852 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace Org.Apache.Kafka.Clients.Admin
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace Org.Apache.Kafka.Clients.Admin
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Namespace Org.Apache.Kafka.Clients.Admin
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Org.Apache.Kafka.Clients.Admin
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Clients.Admin">
-  
-  <h1 id="Org_Apache_Kafka_Clients_Admin" data-uid="Org.Apache.Kafka.Clients.Admin" class="text-break">Namespace Org.Apache.Kafka.Clients.Admin
-  </h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AbortTransactionOptions.html">AbortTransactionOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AbortTransactionResult.html">AbortTransactionResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AbortTransactionSpec.html">AbortTransactionSpec</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AbstractOptions.html">AbstractOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbstractOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbstractOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AbstractOptions-1.html">AbstractOptions&lt;T&gt;</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbstractOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbstractOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html">Admin</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/Admin.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/Admin.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AdminClient.html">AdminClient</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AdminClient.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AdminClient.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AdminClientConfig.html">AdminClientConfig</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AdminClientConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AdminClientConfig.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterClientQuotasOptions.html">AlterClientQuotasOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterClientQuotasOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterClientQuotasOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterClientQuotasResult.html">AlterClientQuotasResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterClientQuotasResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterClientQuotasResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigOp.html">AlterConfigOp</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigOp.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigOp.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType.html">AlterConfigOp.OpType</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions.html">AlterConfigsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigsResult.html">AlterConfigsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsOptions.html">AlterConsumerGroupOffsetsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult.html">AlterConsumerGroupOffsetsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions.html">AlterPartitionReassignmentsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsResult.html">AlterPartitionReassignmentsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions.html">AlterReplicaLogDirsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult.html">AlterReplicaLogDirsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsOptions.html">AlterUserScramCredentialsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsResult.html">AlterUserScramCredentialsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Config.html">Config</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/Config.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/Config.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConfigEntry.html">ConfigEntry</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource.html">ConfigEntry.ConfigSource</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSource.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSource.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym.html">ConfigEntry.ConfigSynonym</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType.html">ConfigEntry.ConfigType</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigType.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription.html">ConsumerGroupDescription</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.html">ConsumerGroupListing</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateAclsOptions.html">CreateAclsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateAclsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateAclsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateAclsResult.html">CreateAclsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateAclsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateAclsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions.html">CreateDelegationTokenOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenResult.html">CreateDelegationTokenResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions.html">CreatePartitionsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreatePartitionsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreatePartitionsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult.html">CreatePartitionsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreatePartitionsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreatePartitionsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions.html">CreateTopicsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateTopicsResult.html">CreateTopicsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateTopicsResult.TopicMetadataAndConfig.html">CreateTopicsResult.TopicMetadataAndConfig</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteAclsOptions.html">DeleteAclsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.html">DeleteAclsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResult.html">DeleteAclsResult.FilterResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResults.html">DeleteAclsResult.FilterResults</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResults.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResults.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions.html">DeleteConsumerGroupOffsetsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult.html">DeleteConsumerGroupOffsetsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions.html">DeleteConsumerGroupsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult.html">DeleteConsumerGroupsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeletedRecords.html">DeletedRecords</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeletedRecords.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeletedRecords.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteRecordsOptions.html">DeleteRecordsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteRecordsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteRecordsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteRecordsResult.html">DeleteRecordsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteRecordsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteRecordsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions.html">DeleteTopicsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteTopicsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteTopicsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult.html">DeleteTopicsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteTopicsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteTopicsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeAclsOptions.html">DescribeAclsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeAclsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeAclsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeAclsResult.html">DescribeAclsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeAclsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeAclsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasOptions.html">DescribeClientQuotasOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClientQuotasOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClientQuotasOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasResult.html">DescribeClientQuotasResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeClusterOptions.html">DescribeClusterOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClusterOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClusterOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeClusterResult.html">DescribeClusterResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClusterResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClusterResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConfigsOptions.html">DescribeConfigsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConfigsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConfigsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConfigsResult.html">DescribeConfigsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConfigsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConfigsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions.html">DescribeConsumerGroupsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult.html">DescribeConsumerGroupsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenOptions.html">DescribeDelegationTokenOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeDelegationTokenOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeDelegationTokenOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenResult.html">DescribeDelegationTokenResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeDelegationTokenResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeDelegationTokenResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeFeaturesOptions.html">DescribeFeaturesOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeFeaturesOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeFeaturesOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeFeaturesResult.html">DescribeFeaturesResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeFeaturesResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeFeaturesResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions.html">DescribeLogDirsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeLogDirsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeLogDirsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeLogDirsResult.html">DescribeLogDirsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeLogDirsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeLogDirsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumOptions.html">DescribeMetadataQuorumOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumResult.html">DescribeMetadataQuorumResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeProducersOptions.html">DescribeProducersOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeProducersResult.html">DescribeProducersResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeProducersResult.PartitionProducerState.html">DescribeProducersResult.PartitionProducerState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersResult.PartitionProducerState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersResult.PartitionProducerState.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsOptions.html">DescribeReplicaLogDirsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.html">DescribeReplicaLogDirsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html">DescribeReplicaLogDirsResult.ReplicaLogDirInfo</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions.html">DescribeTopicsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTopicsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTopicsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult.html">DescribeTopicsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions.html">DescribeTransactionsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTransactionsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTransactionsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult.html">DescribeTransactionsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTransactionsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTransactionsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions.html">DescribeUserScramCredentialsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeUserScramCredentialsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeUserScramCredentialsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult.html">DescribeUserScramCredentialsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeUserScramCredentialsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeUserScramCredentialsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ElectLeadersOptions.html">ElectLeadersOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ElectLeadersOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ElectLeadersOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ElectLeadersResult.html">ElectLeadersResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ElectLeadersResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ElectLeadersResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenOptions.html">ExpireDelegationTokenOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ExpireDelegationTokenOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ExpireDelegationTokenOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenResult.html">ExpireDelegationTokenResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ExpireDelegationTokenResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ExpireDelegationTokenResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FeatureMetadata.html">FeatureMetadata</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureMetadata.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureMetadata.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.html">FeatureUpdate</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureUpdate.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureUpdate.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType.html">FeatureUpdate.UpgradeType</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FenceProducersOptions.html">FenceProducersOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FenceProducersOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FenceProducersOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FenceProducersResult.html">FenceProducersResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FenceProducersResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FenceProducersResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FinalizedVersionRange.html">FinalizedVersionRange</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.html">ForwardingAdmin</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ForwardingAdmin.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ForwardingAdmin.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.KafkaAdminClient.html">KafkaAdminClient</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/KafkaAdminClient.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/KafkaAdminClient.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions.html">ListConsumerGroupOffsetsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult.html">ListConsumerGroupOffsetsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec.html">ListConsumerGroupOffsetsSpec</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsSpec.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions.html">ListConsumerGroupsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult.html">ListConsumerGroupsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListOffsetsOptions.html">ListOffsetsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.html">ListOffsetsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo.html">ListOffsetsResult.ListOffsetsResultInfo</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions.html">ListPartitionReassignmentsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListPartitionReassignmentsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListPartitionReassignmentsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult.html">ListPartitionReassignmentsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListPartitionReassignmentsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListPartitionReassignmentsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListTopicsOptions.html">ListTopicsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTopicsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTopicsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListTopicsResult.html">ListTopicsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTopicsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTopicsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions.html">ListTransactionsOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListTransactionsResult.html">ListTransactionsResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTransactionsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTransactionsResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.LogDirDescription.html">LogDirDescription</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/LogDirDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/LogDirDescription.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.MemberAssignment.html">MemberAssignment</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberAssignment.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberAssignment.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.MemberDescription.html">MemberDescription</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberDescription.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.MemberToRemove.html">MemberToRemove</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberToRemove.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberToRemove.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewPartitionReassignment.html">NewPartitionReassignment</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewPartitionReassignment.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewPartitionReassignment.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewPartitions.html">NewPartitions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewPartitions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewPartitions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewTopic.html">NewTopic</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewTopic.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewTopic.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.html">OffsetSpec</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.EarliestSpec.html">OffsetSpec.EarliestSpec</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.EarliestSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.EarliestSpec.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.LatestSpec.html">OffsetSpec.LatestSpec</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.LatestSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.LatestSpec.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.MaxTimestampSpec.html">OffsetSpec.MaxTimestampSpec</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.MaxTimestampSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.MaxTimestampSpec.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.TimestampSpec.html">OffsetSpec.TimestampSpec</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.TimestampSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.TimestampSpec.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.PartitionReassignment.html">PartitionReassignment</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/PartitionReassignment.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/PartitionReassignment.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ProducerState.html">ProducerState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ProducerState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ProducerState.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.QuorumInfo.html">QuorumInfo</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/QuorumInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/QuorumInfo.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.QuorumInfo.ReplicaState.html">QuorumInfo.ReplicaState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.RecordsToDelete.html">RecordsToDelete</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RecordsToDelete.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RecordsToDelete.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions.html">RemoveMembersFromConsumerGroupOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupResult.html">RemoveMembersFromConsumerGroupResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenOptions.html">RenewDelegationTokenOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenResult.html">RenewDelegationTokenResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RenewDelegationTokenResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RenewDelegationTokenResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ReplicaInfo.html">ReplicaInfo</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ReplicaInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ReplicaInfo.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo.html">ScramCredentialInfo</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ScramMechanism.html">ScramMechanism</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ScramMechanism.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ScramMechanism.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.SupportedVersionRange.html">SupportedVersionRange</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/SupportedVersionRange.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/SupportedVersionRange.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.TopicDescription.html">TopicDescription</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TopicDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TopicDescription.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.TopicListing.html">TopicListing</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TopicListing.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TopicListing.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.TransactionDescription.html">TransactionDescription</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionDescription.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.TransactionListing.html">TransactionListing</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionListing.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionListing.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.TransactionState.html">TransactionState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionState.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UnregisterBrokerOptions.html">UnregisterBrokerOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UnregisterBrokerOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UnregisterBrokerOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UnregisterBrokerResult.html">UnregisterBrokerResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UnregisterBrokerResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UnregisterBrokerResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions.html">UpdateFeaturesOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesResult.html">UpdateFeaturesResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UpdateFeaturesResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UpdateFeaturesResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UserScramCredentialAlteration.html">UserScramCredentialAlteration</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialAlteration.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialAlteration.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UserScramCredentialDeletion.html">UserScramCredentialDeletion</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialDeletion.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialDeletion.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UserScramCredentialsDescription.html">UserScramCredentialsDescription</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialsDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialsDescription.html</a></p>
-</section>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UserScramCredentialUpsertion.html">UserScramCredentialUpsertion</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html</a></p>
-</section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="Org.Apache.Kafka.Clients.Admin.IAdmin.html">IAdmin</a></h4>
-      <section><p>.NET interface for TO BE DEFINED FROM USER</p>
-</section>
-</article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+
+        <article data-uid="Org.Apache.Kafka.Clients.Admin">
+
+  <h1 id="Org_Apache_Kafka_Clients_Admin" data-uid="Org.Apache.Kafka.Clients.Admin" class="text-break">Namespace Org.Apache.Kafka.Clients.Admin
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AbortTransactionOptions.html">AbortTransactionOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AbortTransactionResult.html">AbortTransactionResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AbortTransactionSpec.html">AbortTransactionSpec</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AbstractOptions.html">AbstractOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbstractOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbstractOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AbstractOptions-1.html">AbstractOptions&lt;T&gt;</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbstractOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AbstractOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html">Admin</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/Admin.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/Admin.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AdminClient.html">AdminClient</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AdminClient.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AdminClient.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AdminClientConfig.html">AdminClientConfig</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AdminClientConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AdminClientConfig.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterClientQuotasOptions.html">AlterClientQuotasOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterClientQuotasOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterClientQuotasOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterClientQuotasResult.html">AlterClientQuotasResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterClientQuotasResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterClientQuotasResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigOp.html">AlterConfigOp</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigOp.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigOp.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType.html">AlterConfigOp.OpType</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions.html">AlterConfigsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigsResult.html">AlterConfigsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConfigsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsOptions.html">AlterConsumerGroupOffsetsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult.html">AlterConsumerGroupOffsetsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions.html">AlterPartitionReassignmentsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsResult.html">AlterPartitionReassignmentsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions.html">AlterReplicaLogDirsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult.html">AlterReplicaLogDirsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsOptions.html">AlterUserScramCredentialsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsResult.html">AlterUserScramCredentialsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Config.html">Config</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/Config.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/Config.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConfigEntry.html">ConfigEntry</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource.html">ConfigEntry.ConfigSource</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSource.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSource.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym.html">ConfigEntry.ConfigSynonym</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType.html">ConfigEntry.ConfigType</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigType.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription.html">ConsumerGroupDescription</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.html">ConsumerGroupListing</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateAclsOptions.html">CreateAclsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateAclsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateAclsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateAclsResult.html">CreateAclsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateAclsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateAclsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions.html">CreateDelegationTokenOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenResult.html">CreateDelegationTokenResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions.html">CreatePartitionsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreatePartitionsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreatePartitionsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult.html">CreatePartitionsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreatePartitionsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreatePartitionsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions.html">CreateTopicsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateTopicsResult.html">CreateTopicsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateTopicsResult.TopicMetadataAndConfig.html">CreateTopicsResult.TopicMetadataAndConfig</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteAclsOptions.html">DeleteAclsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.html">DeleteAclsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResult.html">DeleteAclsResult.FilterResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResults.html">DeleteAclsResult.FilterResults</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResults.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResults.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions.html">DeleteConsumerGroupOffsetsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult.html">DeleteConsumerGroupOffsetsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions.html">DeleteConsumerGroupsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult.html">DeleteConsumerGroupsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteConsumerGroupsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteRecordsOptions.html">DeleteRecordsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteRecordsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteRecordsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteRecordsResult.html">DeleteRecordsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteRecordsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteRecordsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions.html">DeleteTopicsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteTopicsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteTopicsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult.html">DeleteTopicsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteTopicsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeleteTopicsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeletedRecords.html">DeletedRecords</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeletedRecords.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DeletedRecords.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeAclsOptions.html">DescribeAclsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeAclsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeAclsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeAclsResult.html">DescribeAclsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeAclsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeAclsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasOptions.html">DescribeClientQuotasOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClientQuotasOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClientQuotasOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasResult.html">DescribeClientQuotasResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeClusterOptions.html">DescribeClusterOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClusterOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClusterOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeClusterResult.html">DescribeClusterResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClusterResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeClusterResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConfigsOptions.html">DescribeConfigsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConfigsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConfigsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConfigsResult.html">DescribeConfigsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConfigsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConfigsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions.html">DescribeConsumerGroupsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult.html">DescribeConsumerGroupsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenOptions.html">DescribeDelegationTokenOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeDelegationTokenOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeDelegationTokenOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenResult.html">DescribeDelegationTokenResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeDelegationTokenResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeDelegationTokenResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeFeaturesOptions.html">DescribeFeaturesOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeFeaturesOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeFeaturesOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeFeaturesResult.html">DescribeFeaturesResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeFeaturesResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeFeaturesResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions.html">DescribeLogDirsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeLogDirsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeLogDirsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeLogDirsResult.html">DescribeLogDirsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeLogDirsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeLogDirsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumOptions.html">DescribeMetadataQuorumOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumResult.html">DescribeMetadataQuorumResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeProducersOptions.html">DescribeProducersOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeProducersResult.html">DescribeProducersResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeProducersResult.PartitionProducerState.html">DescribeProducersResult.PartitionProducerState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersResult.PartitionProducerState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeProducersResult.PartitionProducerState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsOptions.html">DescribeReplicaLogDirsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.html">DescribeReplicaLogDirsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html">DescribeReplicaLogDirsResult.ReplicaLogDirInfo</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions.html">DescribeTopicsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTopicsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTopicsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult.html">DescribeTopicsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions.html">DescribeTransactionsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTransactionsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTransactionsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult.html">DescribeTransactionsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTransactionsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeTransactionsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions.html">DescribeUserScramCredentialsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeUserScramCredentialsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeUserScramCredentialsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult.html">DescribeUserScramCredentialsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeUserScramCredentialsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/DescribeUserScramCredentialsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ElectLeadersOptions.html">ElectLeadersOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ElectLeadersOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ElectLeadersOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ElectLeadersResult.html">ElectLeadersResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ElectLeadersResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ElectLeadersResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenOptions.html">ExpireDelegationTokenOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ExpireDelegationTokenOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ExpireDelegationTokenOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenResult.html">ExpireDelegationTokenResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ExpireDelegationTokenResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ExpireDelegationTokenResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FeatureMetadata.html">FeatureMetadata</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureMetadata.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureMetadata.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.html">FeatureUpdate</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureUpdate.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureUpdate.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType.html">FeatureUpdate.UpgradeType</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FenceProducersOptions.html">FenceProducersOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FenceProducersOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FenceProducersOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FenceProducersResult.html">FenceProducersResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FenceProducersResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FenceProducersResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FinalizedVersionRange.html">FinalizedVersionRange</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.html">ForwardingAdmin</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ForwardingAdmin.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ForwardingAdmin.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.KafkaAdminClient.html">KafkaAdminClient</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/KafkaAdminClient.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/KafkaAdminClient.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions.html">ListConsumerGroupOffsetsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult.html">ListConsumerGroupOffsetsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec.html">ListConsumerGroupOffsetsSpec</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsSpec.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions.html">ListConsumerGroupsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult.html">ListConsumerGroupsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListOffsetsOptions.html">ListOffsetsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.html">ListOffsetsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo.html">ListOffsetsResult.ListOffsetsResultInfo</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions.html">ListPartitionReassignmentsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListPartitionReassignmentsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListPartitionReassignmentsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult.html">ListPartitionReassignmentsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListPartitionReassignmentsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListPartitionReassignmentsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListTopicsOptions.html">ListTopicsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTopicsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTopicsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListTopicsResult.html">ListTopicsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTopicsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTopicsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions.html">ListTransactionsOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListTransactionsResult.html">ListTransactionsResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTransactionsResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ListTransactionsResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.LogDirDescription.html">LogDirDescription</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/LogDirDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/LogDirDescription.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.MemberAssignment.html">MemberAssignment</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberAssignment.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberAssignment.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.MemberDescription.html">MemberDescription</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberDescription.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.MemberToRemove.html">MemberToRemove</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberToRemove.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/MemberToRemove.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewPartitionReassignment.html">NewPartitionReassignment</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewPartitionReassignment.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewPartitionReassignment.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewPartitions.html">NewPartitions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewPartitions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewPartitions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewTopic.html">NewTopic</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewTopic.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/NewTopic.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.html">OffsetSpec</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.EarliestSpec.html">OffsetSpec.EarliestSpec</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.EarliestSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.EarliestSpec.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.LatestSpec.html">OffsetSpec.LatestSpec</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.LatestSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.LatestSpec.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.MaxTimestampSpec.html">OffsetSpec.MaxTimestampSpec</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.MaxTimestampSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.MaxTimestampSpec.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.TimestampSpec.html">OffsetSpec.TimestampSpec</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.TimestampSpec.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/OffsetSpec.TimestampSpec.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.PartitionReassignment.html">PartitionReassignment</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/PartitionReassignment.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/PartitionReassignment.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ProducerState.html">ProducerState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ProducerState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ProducerState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.QuorumInfo.html">QuorumInfo</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/QuorumInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/QuorumInfo.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.QuorumInfo.ReplicaState.html">QuorumInfo.ReplicaState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.RecordsToDelete.html">RecordsToDelete</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RecordsToDelete.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RecordsToDelete.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions.html">RemoveMembersFromConsumerGroupOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupResult.html">RemoveMembersFromConsumerGroupResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenOptions.html">RenewDelegationTokenOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenResult.html">RenewDelegationTokenResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RenewDelegationTokenResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/RenewDelegationTokenResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ReplicaInfo.html">ReplicaInfo</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ReplicaInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ReplicaInfo.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo.html">ScramCredentialInfo</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ScramMechanism.html">ScramMechanism</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ScramMechanism.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/ScramMechanism.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.SupportedVersionRange.html">SupportedVersionRange</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/SupportedVersionRange.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/SupportedVersionRange.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.TopicDescription.html">TopicDescription</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TopicDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TopicDescription.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.TopicListing.html">TopicListing</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TopicListing.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TopicListing.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.TransactionDescription.html">TransactionDescription</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionDescription.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.TransactionListing.html">TransactionListing</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionListing.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionListing.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.TransactionState.html">TransactionState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/TransactionState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UnregisterBrokerOptions.html">UnregisterBrokerOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UnregisterBrokerOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UnregisterBrokerOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UnregisterBrokerResult.html">UnregisterBrokerResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UnregisterBrokerResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UnregisterBrokerResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions.html">UpdateFeaturesOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesResult.html">UpdateFeaturesResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UpdateFeaturesResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UpdateFeaturesResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UserScramCredentialAlteration.html">UserScramCredentialAlteration</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialAlteration.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialAlteration.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UserScramCredentialDeletion.html">UserScramCredentialDeletion</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialDeletion.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialDeletion.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UserScramCredentialUpsertion.html">UserScramCredentialUpsertion</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UserScramCredentialsDescription.html">UserScramCredentialsDescription</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialsDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/admin/UserScramCredentialsDescription.html</a></p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.IAdmin.html">IAdmin</a></dt>
+      <dd><p>.NET interface for TO BE DEFINED FROM USER</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

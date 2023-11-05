@@ -1,1870 +1,1689 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class KNetConnector
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class KNetConnector
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class KNetConnector
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KNetConnector
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MASES.KNet.Connect.KNetConnector">
-  
-  
-  <h1 id="MASES_KNet_Connect_KNetConnector" data-uid="MASES.KNet.Connect.KNetConnector" class="text-break">Class KNetConnector
-  </h1>
-  <div class="markdown level0 summary"><p>The generic class which is the base of both source or sink connectors</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">KNetConnector</span></div>
-      <div class="level2"><a class="xref" href="MASES.KNet.Connect.KNetConnector-1.html">KNetConnector&lt;TConnector&gt;</a></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="MASES.KNet.Connect.IKNetConnector.html">IKNetConnector</a></div>
-    <div><a class="xref" href="MASES.KNet.Connect.IConnector.html">IConnector</a></div>
-    <div><a class="xref" href="MASES.KNet.Connect.IVersion.html">IVersion</a></div>
-    <div><a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html">IKNetConnectLogging</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MASES.KNet.Connect.html">MASES.KNet.Connect</a></h6>
-  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
-  <h5 id="MASES_KNet_Connect_KNetConnector_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class KNetConnector : IKNetConnector, IConnector, IVersion, IKNetConnectLogging</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector__ctor.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L116">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector__ctor_" data-uid="MASES.KNet.Connect.KNetConnector.#ctor*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector__ctor" data-uid="MASES.KNet.Connect.KNetConnector.#ctor">KNetConnector()</h4>
-  <div class="markdown level1 summary"><p>Initializer</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetConnector()</code></pre>
-  </div>
-  <h3 id="fields">Fields
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_taskDictionary.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.taskDictionary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L110">View Source</a>
-  </span>
-  <h4 id="MASES_KNet_Connect_KNetConnector_taskDictionary" data-uid="MASES.KNet.Connect.KNetConnector.taskDictionary">taskDictionary</h4>
-  <div class="markdown level1 summary"><p>The set of allocated <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a> with their associated identifiers</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected ConcurrentDictionary&lt;long, KNetTask&gt; taskDictionary</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2">ConcurrentDictionary</a>&lt;<span class="xref">System.Int64</span>, <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_ConnectorName.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.ConnectorName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L205">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_ConnectorName_" data-uid="MASES.KNet.Connect.KNetConnector.ConnectorName*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_ConnectorName" data-uid="MASES.KNet.Connect.KNetConnector.ConnectorName">ConnectorName</h4>
-  <div class="markdown level1 summary"><p>The unique name of the connector</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract string ConnectorName { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_IsDebugEnabled.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.IsDebugEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L297">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_IsDebugEnabled_" data-uid="MASES.KNet.Connect.KNetConnector.IsDebugEnabled*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_IsDebugEnabled" data-uid="MASES.KNet.Connect.KNetConnector.IsDebugEnabled">IsDebugEnabled</h4>
-  <div class="markdown level1 summary"><p>Reports if debug level is enabled</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsDebugEnabled { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_IsErrorEnabled.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.IsErrorEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L303">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_IsErrorEnabled_" data-uid="MASES.KNet.Connect.KNetConnector.IsErrorEnabled*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_IsErrorEnabled" data-uid="MASES.KNet.Connect.KNetConnector.IsErrorEnabled">IsErrorEnabled</h4>
-  <div class="markdown level1 summary"><p>Reports if error level is enabled</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsErrorEnabled { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_IsInfoEnabled.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.IsInfoEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L299">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_IsInfoEnabled_" data-uid="MASES.KNet.Connect.KNetConnector.IsInfoEnabled*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_IsInfoEnabled" data-uid="MASES.KNet.Connect.KNetConnector.IsInfoEnabled">IsInfoEnabled</h4>
-  <div class="markdown level1 summary"><p>Reports if info level is enabled</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsInfoEnabled { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_IsTraceEnabled.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.IsTraceEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L295">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_IsTraceEnabled_" data-uid="MASES.KNet.Connect.KNetConnector.IsTraceEnabled*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_IsTraceEnabled" data-uid="MASES.KNet.Connect.KNetConnector.IsTraceEnabled">IsTraceEnabled</h4>
-  <div class="markdown level1 summary"><p>Reports if trace level is enabled</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsTraceEnabled { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_IsWarnEnabled.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.IsWarnEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L301">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_IsWarnEnabled_" data-uid="MASES.KNet.Connect.KNetConnector.IsWarnEnabled*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_IsWarnEnabled" data-uid="MASES.KNet.Connect.KNetConnector.IsWarnEnabled">IsWarnEnabled</h4>
-  <div class="markdown level1 summary"><p>Reports if warning level is enabled</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsWarnEnabled { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_Properties.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.Properties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L188">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_Properties_" data-uid="MASES.KNet.Connect.KNetConnector.Properties*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_Properties" data-uid="MASES.KNet.Connect.KNetConnector.Properties">Properties</h4>
-  <div class="markdown level1 summary"><p>The properties retrieved from <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_StartInternal">StartInternal()</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;string, string&gt; Properties { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_ReflectedConnectorClassName.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.ReflectedConnectorClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L203">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_ReflectedConnectorClassName_" data-uid="MASES.KNet.Connect.KNetConnector.ReflectedConnectorClassName*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_ReflectedConnectorClassName" data-uid="MASES.KNet.Connect.KNetConnector.ReflectedConnectorClassName">ReflectedConnectorClassName</h4>
-  <div class="markdown level1 summary"><p>The unique name used to map objects between JVM and .NET</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract string ReflectedConnectorClassName { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_TaskClassType.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.TaskClassType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L207">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_TaskClassType_" data-uid="MASES.KNet.Connect.KNetConnector.TaskClassType*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_TaskClassType" data-uid="MASES.KNet.Connect.KNetConnector.TaskClassType">TaskClassType</h4>
-  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of task to be allocated, it shall inherits from <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Type TaskClassType { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_AllocateTask_System_Int64_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.AllocateTask(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L191">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_AllocateTask_" data-uid="MASES.KNet.Connect.KNetConnector.AllocateTask*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_AllocateTask_System_Int64_" data-uid="MASES.KNet.Connect.KNetConnector.AllocateTask(System.Int64)">AllocateTask(Int64)</h4>
-  <div class="markdown level1 summary"><p>Allocates a task object based on <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object AllocateTask(long taskId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">taskId</span></td>
-        <td><p>The unique id generated from JAva side</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><p>The local .NET object</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_Config.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.Config%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L286">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_Config_" data-uid="MASES.KNet.Connect.KNetConnector.Config*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_Config" data-uid="MASES.KNet.Connect.KNetConnector.Config">Config()</h4>
-  <div class="markdown level1 summary"><p>Not implemented</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConfigDef Config()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Config.ConfigDef.html">ConfigDef</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></td>
-        <td><p>Invoked in Java before any initialization</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_Context__1.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.Context%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L182">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_Context_" data-uid="MASES.KNet.Connect.KNetConnector.Context*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_Context__1" data-uid="MASES.KNet.Connect.KNetConnector.Context``1">Context&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"><p>An helper function to read context data from Java side</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected T Context&lt;T&gt;()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>The <code data-dev-comment-type="typeparamref" class="typeparamref">T</code></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The expected return <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.InvalidOperationException</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_DataToExchange_System_Object_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.DataToExchange(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L162">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_DataToExchange_" data-uid="MASES.KNet.Connect.KNetConnector.DataToExchange*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_DataToExchange_System_Object_" data-uid="MASES.KNet.Connect.KNetConnector.DataToExchange(System.Object)">DataToExchange(Object)</h4>
-  <div class="markdown level1 summary"><p>An helper function to read the data from Java side</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void DataToExchange(object data)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">data</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.InvalidOperationException</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_DataToExchange__1.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.DataToExchange%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L154">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_DataToExchange_" data-uid="MASES.KNet.Connect.KNetConnector.DataToExchange*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_DataToExchange__1" data-uid="MASES.KNet.Connect.KNetConnector.DataToExchange``1">DataToExchange&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"><p>An helper function to read the data from Java side</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected T DataToExchange&lt;T&gt;()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>The <code data-dev-comment-type="typeparamref" class="typeparamref">T</code></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The expected return <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.InvalidOperationException</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_ExecuteOnConnector_System_String_System_Object___.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.ExecuteOnConnector(System.String%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L127">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_ExecuteOnConnector_" data-uid="MASES.KNet.Connect.KNetConnector.ExecuteOnConnector*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_ExecuteOnConnector_System_String_System_Object___" data-uid="MASES.KNet.Connect.KNetConnector.ExecuteOnConnector(System.String,System.Object[])">ExecuteOnConnector(String, Object[])</h4>
-  <div class="markdown level1 summary"><p>An helper function to read the data from Java side</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void ExecuteOnConnector(string method, params object[] args)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">method</span></td>
-        <td><p>Method name to be invoked</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td><p>Arguments of the <code data-dev-comment-type="paramref" class="paramref">method</code> to be invoked</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.InvalidOperationException</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_ExecuteOnConnector__1_System_String_System_Object___.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.ExecuteOnConnector%60%601(System.String%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L142">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_ExecuteOnConnector_" data-uid="MASES.KNet.Connect.KNetConnector.ExecuteOnConnector*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_ExecuteOnConnector__1_System_String_System_Object___" data-uid="MASES.KNet.Connect.KNetConnector.ExecuteOnConnector``1(System.String,System.Object[])">ExecuteOnConnector&lt;T&gt;(String, Object[])</h4>
-  <div class="markdown level1 summary"><p>An helper function to read the data from Java side</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected T ExecuteOnConnector&lt;T&gt;(string method, params object[] args)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">method</span></td>
-        <td><p>Method name to be invoked</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td><p>Arguments of the <code data-dev-comment-type="paramref" class="paramref">method</code> to be invoked</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>The <code data-dev-comment-type="typeparamref" class="typeparamref">T</code></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The expected return <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.InvalidOperationException</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.Initialize(Org.Apache.Kafka.Connect.Connector.ConnectorContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L212">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_Initialize_" data-uid="MASES.KNet.Connect.KNetConnector.Initialize*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_" data-uid="MASES.KNet.Connect.KNetConnector.Initialize(Org.Apache.Kafka.Connect.Connector.ConnectorContext)">Initialize(ConnectorContext)</h4>
-  <div class="markdown level1 summary"><p>Not implemented</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize(ConnectorContext ctx)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Connector.ConnectorContext.html">ConnectorContext</a></td>
-        <td><span class="parametername">ctx</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></td>
-        <td><p>Invoked in Java before any initialization</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_Java_Util_List_Java_Util_Map_System_String_System_String___.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.Initialize(Org.Apache.Kafka.Connect.Connector.ConnectorContext%2CJava.Util.List%7BJava.Util.Map%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L217">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_Initialize_" data-uid="MASES.KNet.Connect.KNetConnector.Initialize*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_Java_Util_List_Java_Util_Map_System_String_System_String___" data-uid="MASES.KNet.Connect.KNetConnector.Initialize(Org.Apache.Kafka.Connect.Connector.ConnectorContext,Java.Util.List{Java.Util.Map{System.String,System.String}})">Initialize(ConnectorContext, List&lt;Map&lt;String, String&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Not implemented</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize(ConnectorContext ctx, List&lt;Map&lt;string, string&gt;&gt; taskConfigs)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Connect.Connector.ConnectorContext.html">ConnectorContext</a></td>
-        <td><span class="parametername">ctx</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Util.List</span>&lt;<span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
-        <td><span class="parametername">taskConfigs</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></td>
-        <td><p>Invoked in Java before any initialization</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_LogDebug_System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.LogDebug(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L309">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_LogDebug_" data-uid="MASES.KNet.Connect.KNetConnector.LogDebug*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_LogDebug_System_String_" data-uid="MASES.KNet.Connect.KNetConnector.LogDebug(System.String)">LogDebug(String)</h4>
-  <div class="markdown level1 summary"><p>Write a debug</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LogDebug(string var1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">var1</span></td>
-        <td><p>String to write</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_LogDebug_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.LogDebug(System.String%2CMASES.JCOBridge.C2JBridge.JVMBridgeException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L311">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_LogDebug_" data-uid="MASES.KNet.Connect.KNetConnector.LogDebug*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_LogDebug_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.KNetConnector.LogDebug(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">LogDebug(String, JVMBridgeException)</h4>
-  <div class="markdown level1 summary"><p>Write a debug</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LogDebug(string var1, JVMBridgeException var2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">var1</span></td>
-        <td><p>String to write</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></td>
-        <td><span class="parametername">var2</span></td>
-        <td><p>Associated <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_LogError_System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.LogError(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L321">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_LogError_" data-uid="MASES.KNet.Connect.KNetConnector.LogError*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_LogError_System_String_" data-uid="MASES.KNet.Connect.KNetConnector.LogError(System.String)">LogError(String)</h4>
-  <div class="markdown level1 summary"><p>Write a error</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LogError(string var1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">var1</span></td>
-        <td><p>String to write</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_LogError_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.LogError(System.String%2CMASES.JCOBridge.C2JBridge.JVMBridgeException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L323">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_LogError_" data-uid="MASES.KNet.Connect.KNetConnector.LogError*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_LogError_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.KNetConnector.LogError(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">LogError(String, JVMBridgeException)</h4>
-  <div class="markdown level1 summary"><p>Write a error</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LogError(string var1, JVMBridgeException var2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">var1</span></td>
-        <td><p>String to write</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></td>
-        <td><span class="parametername">var2</span></td>
-        <td><p>Associated <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_LogInfo_System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.LogInfo(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L313">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_LogInfo_" data-uid="MASES.KNet.Connect.KNetConnector.LogInfo*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_LogInfo_System_String_" data-uid="MASES.KNet.Connect.KNetConnector.LogInfo(System.String)">LogInfo(String)</h4>
-  <div class="markdown level1 summary"><p>Write a info</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LogInfo(string var1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">var1</span></td>
-        <td><p>String to write</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_LogInfo_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.LogInfo(System.String%2CMASES.JCOBridge.C2JBridge.JVMBridgeException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L315">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_LogInfo_" data-uid="MASES.KNet.Connect.KNetConnector.LogInfo*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_LogInfo_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.KNetConnector.LogInfo(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">LogInfo(String, JVMBridgeException)</h4>
-  <div class="markdown level1 summary"><p>Write a info</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LogInfo(string var1, JVMBridgeException var2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">var1</span></td>
-        <td><p>String to write</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></td>
-        <td><span class="parametername">var2</span></td>
-        <td><p>Associated <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_LogTrace_System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.LogTrace(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L305">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_LogTrace_" data-uid="MASES.KNet.Connect.KNetConnector.LogTrace*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_LogTrace_System_String_" data-uid="MASES.KNet.Connect.KNetConnector.LogTrace(System.String)">LogTrace(String)</h4>
-  <div class="markdown level1 summary"><p>Write a trace</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LogTrace(string var1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">var1</span></td>
-        <td><p>String to write</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_LogTrace_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.LogTrace(System.String%2CMASES.JCOBridge.C2JBridge.JVMBridgeException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L307">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_LogTrace_" data-uid="MASES.KNet.Connect.KNetConnector.LogTrace*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_LogTrace_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.KNetConnector.LogTrace(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">LogTrace(String, JVMBridgeException)</h4>
-  <div class="markdown level1 summary"><p>Write a trace</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LogTrace(string var1, JVMBridgeException var2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">var1</span></td>
-        <td><p>String to write</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></td>
-        <td><span class="parametername">var2</span></td>
-        <td><p>Associated <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_LogWarn_System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.LogWarn(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L317">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_LogWarn_" data-uid="MASES.KNet.Connect.KNetConnector.LogWarn*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_LogWarn_System_String_" data-uid="MASES.KNet.Connect.KNetConnector.LogWarn(System.String)">LogWarn(String)</h4>
-  <div class="markdown level1 summary"><p>Write a warning</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LogWarn(string var1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">var1</span></td>
-        <td><p>String to write</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_LogWarn_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.LogWarn(System.String%2CMASES.JCOBridge.C2JBridge.JVMBridgeException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L319">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_LogWarn_" data-uid="MASES.KNet.Connect.KNetConnector.LogWarn*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_LogWarn_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.KNetConnector.LogWarn(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">LogWarn(String, JVMBridgeException)</h4>
-  <div class="markdown level1 summary"><p>Write a warning</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LogWarn(string var1, JVMBridgeException var2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">var1</span></td>
-        <td><p>String to write</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></td>
-        <td><span class="parametername">var2</span></td>
-        <td><p>Associated <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_Reconfigure_Java_Util_Map_System_String_System_String__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.Reconfigure(Java.Util.Map%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L239">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_Reconfigure_" data-uid="MASES.KNet.Connect.KNetConnector.Reconfigure*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_Reconfigure_Java_Util_Map_System_String_System_String__" data-uid="MASES.KNet.Connect.KNetConnector.Reconfigure(Java.Util.Map{System.String,System.String})">Reconfigure(Map&lt;String, String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Not implemented</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Reconfigure(Map&lt;string, string&gt; props)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">props</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_Start_Java_Util_Map_System_String_System_String__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.Start(Java.Util.Map%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L231">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_Start_" data-uid="MASES.KNet.Connect.KNetConnector.Start*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_Start_Java_Util_Map_System_String_System_String__" data-uid="MASES.KNet.Connect.KNetConnector.Start(Java.Util.Map{System.String,System.String})">Start(Map&lt;String, String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Not implemented</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Start(Map&lt;string, string&gt; props)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">props</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></td>
-        <td><p>Local version with a different signature</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_Start_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.Start(System.Collections.Generic.IReadOnlyDictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L234">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_Start_" data-uid="MASES.KNet.Connect.KNetConnector.Start*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_Start_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__" data-uid="MASES.KNet.Connect.KNetConnector.Start(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})">Start(IReadOnlyDictionary&lt;String, String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Implement the method to execute the start action</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Start(IReadOnlyDictionary&lt;string, string&gt; props)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">props</span></td>
-        <td><p>The set of properties returned from Apache Kafka Connect framework: the <span class="xref">System.Collections.Generic.IReadOnlyDictionary&lt;TKey, TValue&gt;</span> contains the same info from configuration file.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_StartInternal.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.StartInternal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L221">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_StartInternal_" data-uid="MASES.KNet.Connect.KNetConnector.StartInternal*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_StartInternal" data-uid="MASES.KNet.Connect.KNetConnector.StartInternal">StartInternal()</h4>
-  <div class="markdown level1 summary"><p>Public method used from Java to trigger <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_Java_Util_Map_System_String_System_String__">Start(Map&lt;String, String&gt;)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartInternal()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_Stop.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L276">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_Stop_" data-uid="MASES.KNet.Connect.KNetConnector.Stop*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_Stop" data-uid="MASES.KNet.Connect.KNetConnector.Stop">Stop()</h4>
-  <div class="markdown level1 summary"><p>Implement the method to execute the stop action</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Stop()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_StopInternal.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.StopInternal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L269">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_StopInternal_" data-uid="MASES.KNet.Connect.KNetConnector.StopInternal*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_StopInternal" data-uid="MASES.KNet.Connect.KNetConnector.StopInternal">StopInternal()</h4>
-  <div class="markdown level1 summary"><p>Public method used from Java to trigger <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Stop">Stop()</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StopInternal()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_TaskClass.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.TaskClass%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L244">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_TaskClass_" data-uid="MASES.KNet.Connect.KNetConnector.TaskClass*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_TaskClass" data-uid="MASES.KNet.Connect.KNetConnector.TaskClass">TaskClass()</h4>
-  <div class="markdown level1 summary"><p>Not implemented</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Class TaskClass()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Lang.Class</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></td>
-        <td><p>Invoked in Java before any initialization</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.TaskConfigs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L265">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_TaskConfigs_" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigs*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigs(System.Int32)">TaskConfigs(Int32)</h4>
-  <div class="markdown level1 summary"><p>Not implemented</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;Map&lt;string, string&gt;&gt; TaskConfigs(int maxTasks)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">maxTasks</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.List</span>&lt;<span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></td>
-        <td><p>Invoked using the other signature</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Collections_Generic_IDictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.TaskConfigs(System.Int32%2CSystem.Collections.Generic.IDictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L260">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_TaskConfigs_" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigs*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Collections_Generic_IDictionary_System_String_System_String__" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigs(System.Int32,System.Collections.Generic.IDictionary{System.String,System.String})">TaskConfigs(Int32, IDictionary&lt;String, String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Invoked during allocation of tasks from Apache Kafka Connect</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void TaskConfigs(int index, IDictionary&lt;string, string&gt; config)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">index</span></td>
-        <td><p>The actual index</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">config</span></td>
-        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey,TValue&gt;</a> to be filled in with properties for the task: the same will be received from <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Start_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__">Start(IReadOnlyDictionary&lt;String, String&gt;)</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_TaskConfigsInternal_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.TaskConfigsInternal(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L248">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_TaskConfigsInternal_" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigsInternal*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_TaskConfigsInternal_System_Int32_" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigsInternal(System.Int32)">TaskConfigsInternal(Int32)</h4>
-  <div class="markdown level1 summary"><p>Public method used from Java to trigger <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Collections_Generic_IDictionary_System_String_System_String__">TaskConfigs(Int32, IDictionary&lt;String, String&gt;)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TaskConfigsInternal(int index)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_Validate_Java_Util_Map_System_String_System_String__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.Validate(Java.Util.Map%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L281">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_Validate_" data-uid="MASES.KNet.Connect.KNetConnector.Validate*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_Validate_Java_Util_Map_System_String_System_String__" data-uid="MASES.KNet.Connect.KNetConnector.Validate(Java.Util.Map{System.String,System.String})">Validate(Map&lt;String, String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Not implemented</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Config Validate(Map&lt;string, string&gt; connectorConfigs)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">connectorConfigs</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Org.Apache.Kafka.Common.Config.Config.html">Config</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></td>
-        <td><p>Invoked in Java before any initialization</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector_Version.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L291">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_KNetConnector_Version_" data-uid="MASES.KNet.Connect.KNetConnector.Version*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnector_Version" data-uid="MASES.KNet.Connect.KNetConnector.Version">Version()</h4>
-  <div class="markdown level1 summary"><p>Not implemented</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Version()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></td>
-        <td><p>Invoked in Java before any initialization</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="MASES.KNet.Connect.IKNetConnector.html">IKNetConnector</a>
-  </div>
-  <div>
-      <a class="xref" href="MASES.KNet.Connect.IConnector.html">IConnector</a>
-  </div>
-  <div>
-      <a class="xref" href="MASES.KNet.Connect.IVersion.html">IVersion</a>
-  </div>
-  <div>
-      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html">IKNetConnectLogging</a>
-  </div>
-</article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnector.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L105" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-      </footer>
+
+        <article data-uid="MASES.KNet.Connect.KNetConnector">
+
+
+
+  <h1 id="MASES_KNet_Connect_KNetConnector" data-uid="MASES.KNet.Connect.KNetConnector" class="text-break">
+    Class KNetConnector
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Connect.html">Connect</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The generic class which is the base of both source or sink connectors</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class KNetConnector : IKNetConnector, IConnector, IVersion, IKNetConnectLogging</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">KNetConnector</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNet.Connect.IKNetConnector.html">IKNetConnector</a></div>
+      <div><a class="xref" href="MASES.KNet.Connect.IConnector.html">IConnector</a></div>
+      <div><a class="xref" href="MASES.KNet.Connect.IVersion.html">IVersion</a></div>
+      <div><a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html">IKNetConnectLogging</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNet.Connect.KNetConnector-1.html">KNetConnector&lt;TConnector&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="MASES_KNet_Connect_KNetConnector__ctor_" data-uid="MASES.KNet.Connect.KNetConnector.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector__ctor" data-uid="MASES.KNet.Connect.KNetConnector.#ctor">
+  KNetConnector()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetConnector()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_taskDictionary" data-uid="MASES.KNet.Connect.KNetConnector.taskDictionary">
+  taskDictionary
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The set of allocated <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a> with their associated identifiers</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ConcurrentDictionary&lt;long, KNetTask&gt; taskDictionary</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2">ConcurrentDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>, <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_ConnectorName_" data-uid="MASES.KNet.Connect.KNetConnector.ConnectorName*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_ConnectorName" data-uid="MASES.KNet.Connect.KNetConnector.ConnectorName">
+  ConnectorName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The unique name of the connector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract string ConnectorName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_IsDebugEnabled_" data-uid="MASES.KNet.Connect.KNetConnector.IsDebugEnabled*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_IsDebugEnabled" data-uid="MASES.KNet.Connect.KNetConnector.IsDebugEnabled">
+  IsDebugEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports if debug level is enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDebugEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_IsErrorEnabled_" data-uid="MASES.KNet.Connect.KNetConnector.IsErrorEnabled*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_IsErrorEnabled" data-uid="MASES.KNet.Connect.KNetConnector.IsErrorEnabled">
+  IsErrorEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports if error level is enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsErrorEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_IsInfoEnabled_" data-uid="MASES.KNet.Connect.KNetConnector.IsInfoEnabled*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_IsInfoEnabled" data-uid="MASES.KNet.Connect.KNetConnector.IsInfoEnabled">
+  IsInfoEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports if info level is enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInfoEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_IsTraceEnabled_" data-uid="MASES.KNet.Connect.KNetConnector.IsTraceEnabled*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_IsTraceEnabled" data-uid="MASES.KNet.Connect.KNetConnector.IsTraceEnabled">
+  IsTraceEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports if trace level is enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTraceEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_IsWarnEnabled_" data-uid="MASES.KNet.Connect.KNetConnector.IsWarnEnabled*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_IsWarnEnabled" data-uid="MASES.KNet.Connect.KNetConnector.IsWarnEnabled">
+  IsWarnEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports if warning level is enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsWarnEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_Properties_" data-uid="MASES.KNet.Connect.KNetConnector.Properties*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_Properties" data-uid="MASES.KNet.Connect.KNetConnector.Properties">
+  Properties
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The properties retrieved from <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_StartInternal">StartInternal()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;string, string&gt; Properties { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_ReflectedConnectorClassName_" data-uid="MASES.KNet.Connect.KNetConnector.ReflectedConnectorClassName*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_ReflectedConnectorClassName" data-uid="MASES.KNet.Connect.KNetConnector.ReflectedConnectorClassName">
+  ReflectedConnectorClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The unique name used to map objects between JVM and .NET</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract string ReflectedConnectorClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_TaskClassType_" data-uid="MASES.KNet.Connect.KNetConnector.TaskClassType*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_TaskClassType" data-uid="MASES.KNet.Connect.KNetConnector.TaskClassType">
+  TaskClassType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of task to be allocated, it shall inherits from <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Type TaskClassType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_AllocateTask_" data-uid="MASES.KNet.Connect.KNetConnector.AllocateTask*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_AllocateTask_System_Int64_" data-uid="MASES.KNet.Connect.KNetConnector.AllocateTask(System.Int64)">
+  AllocateTask(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allocates a task object based on <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object AllocateTask(long taskId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>taskId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The unique id generated from JAva side</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The local .NET object</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_Config_" data-uid="MASES.KNet.Connect.KNetConnector.Config*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_Config" data-uid="MASES.KNet.Connect.KNetConnector.Config">
+  Config()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConfigDef Config()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.ConfigDef.html">ConfigDef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Invoked in Java before any initialization</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_Context_" data-uid="MASES.KNet.Connect.KNetConnector.Context*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_Context__1" data-uid="MASES.KNet.Connect.KNetConnector.Context``1">
+  Context&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An helper function to read context data from Java side</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T Context&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The <code class="typeparamref">T</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The expected return <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_DataToExchange_" data-uid="MASES.KNet.Connect.KNetConnector.DataToExchange*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_DataToExchange_System_Object_" data-uid="MASES.KNet.Connect.KNetConnector.DataToExchange(System.Object)">
+  DataToExchange(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An helper function to read the data from Java side</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void DataToExchange(object data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_DataToExchange_" data-uid="MASES.KNet.Connect.KNetConnector.DataToExchange*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_DataToExchange__1" data-uid="MASES.KNet.Connect.KNetConnector.DataToExchange``1">
+  DataToExchange&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An helper function to read the data from Java side</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T DataToExchange&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The <code class="typeparamref">T</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The expected return <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_ExecuteOnConnector_" data-uid="MASES.KNet.Connect.KNetConnector.ExecuteOnConnector*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_ExecuteOnConnector_System_String_System_Object___" data-uid="MASES.KNet.Connect.KNetConnector.ExecuteOnConnector(System.String,System.Object[])">
+  ExecuteOnConnector(string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An helper function to read the data from Java side</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteOnConnector(string method, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>method</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Method name to be invoked</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Arguments of the <code class="paramref">method</code> to be invoked</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_ExecuteOnConnector_" data-uid="MASES.KNet.Connect.KNetConnector.ExecuteOnConnector*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_ExecuteOnConnector__1_System_String_System_Object___" data-uid="MASES.KNet.Connect.KNetConnector.ExecuteOnConnector``1(System.String,System.Object[])">
+  ExecuteOnConnector&lt;T&gt;(string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An helper function to read the data from Java side</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T ExecuteOnConnector&lt;T&gt;(string method, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>method</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Method name to be invoked</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Arguments of the <code class="paramref">method</code> to be invoked</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The <code class="typeparamref">T</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The expected return <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_Initialize_" data-uid="MASES.KNet.Connect.KNetConnector.Initialize*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_" data-uid="MASES.KNet.Connect.KNetConnector.Initialize(Org.Apache.Kafka.Connect.Connector.ConnectorContext)">
+  Initialize(ConnectorContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize(ConnectorContext ctx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctx</code> <a class="xref" href="Org.Apache.Kafka.Connect.Connector.ConnectorContext.html">ConnectorContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Invoked in Java before any initialization</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_Initialize_" data-uid="MASES.KNet.Connect.KNetConnector.Initialize*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_Java_Util_List_Java_Util_Map_System_String_System_String___" data-uid="MASES.KNet.Connect.KNetConnector.Initialize(Org.Apache.Kafka.Connect.Connector.ConnectorContext,Java.Util.List{Java.Util.Map{System.String,System.String}})">
+  Initialize(ConnectorContext, List&lt;Map&lt;string, string&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize(ConnectorContext ctx, List&lt;Map&lt;string, string&gt;&gt; taskConfigs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctx</code> <a class="xref" href="Org.Apache.Kafka.Connect.Connector.ConnectorContext.html">ConnectorContext</a></dt>
+    <dd></dd>
+    <dt><code>taskConfigs</code> <span class="xref">List</span>&lt;<span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Invoked in Java before any initialization</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_LogDebug_" data-uid="MASES.KNet.Connect.KNetConnector.LogDebug*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_LogDebug_System_String_" data-uid="MASES.KNet.Connect.KNetConnector.LogDebug(System.String)">
+  LogDebug(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a debug</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogDebug(string var1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_LogDebug_" data-uid="MASES.KNet.Connect.KNetConnector.LogDebug*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_LogDebug_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.KNetConnector.LogDebug(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">
+  LogDebug(string, JVMBridgeException)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a debug</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogDebug(string var1, JVMBridgeException var2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+    <dt><code>var2</code> <span class="xref">JVMBridgeException</span></dt>
+    <dd><p>Associated <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_LogError_" data-uid="MASES.KNet.Connect.KNetConnector.LogError*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_LogError_System_String_" data-uid="MASES.KNet.Connect.KNetConnector.LogError(System.String)">
+  LogError(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a error</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogError(string var1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_LogError_" data-uid="MASES.KNet.Connect.KNetConnector.LogError*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_LogError_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.KNetConnector.LogError(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">
+  LogError(string, JVMBridgeException)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a error</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogError(string var1, JVMBridgeException var2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+    <dt><code>var2</code> <span class="xref">JVMBridgeException</span></dt>
+    <dd><p>Associated <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_LogInfo_" data-uid="MASES.KNet.Connect.KNetConnector.LogInfo*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_LogInfo_System_String_" data-uid="MASES.KNet.Connect.KNetConnector.LogInfo(System.String)">
+  LogInfo(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a info</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogInfo(string var1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_LogInfo_" data-uid="MASES.KNet.Connect.KNetConnector.LogInfo*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_LogInfo_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.KNetConnector.LogInfo(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">
+  LogInfo(string, JVMBridgeException)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a info</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogInfo(string var1, JVMBridgeException var2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+    <dt><code>var2</code> <span class="xref">JVMBridgeException</span></dt>
+    <dd><p>Associated <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_LogTrace_" data-uid="MASES.KNet.Connect.KNetConnector.LogTrace*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_LogTrace_System_String_" data-uid="MASES.KNet.Connect.KNetConnector.LogTrace(System.String)">
+  LogTrace(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a trace</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogTrace(string var1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_LogTrace_" data-uid="MASES.KNet.Connect.KNetConnector.LogTrace*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_LogTrace_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.KNetConnector.LogTrace(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">
+  LogTrace(string, JVMBridgeException)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a trace</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogTrace(string var1, JVMBridgeException var2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+    <dt><code>var2</code> <span class="xref">JVMBridgeException</span></dt>
+    <dd><p>Associated <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_LogWarn_" data-uid="MASES.KNet.Connect.KNetConnector.LogWarn*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_LogWarn_System_String_" data-uid="MASES.KNet.Connect.KNetConnector.LogWarn(System.String)">
+  LogWarn(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a warning</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogWarn(string var1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_LogWarn_" data-uid="MASES.KNet.Connect.KNetConnector.LogWarn*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_LogWarn_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.KNetConnector.LogWarn(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">
+  LogWarn(string, JVMBridgeException)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a warning</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogWarn(string var1, JVMBridgeException var2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+    <dt><code>var2</code> <span class="xref">JVMBridgeException</span></dt>
+    <dd><p>Associated <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_Reconfigure_" data-uid="MASES.KNet.Connect.KNetConnector.Reconfigure*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_Reconfigure_Java_Util_Map_System_String_System_String__" data-uid="MASES.KNet.Connect.KNetConnector.Reconfigure(Java.Util.Map{System.String,System.String})">
+  Reconfigure(Map&lt;string, string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reconfigure(Map&lt;string, string&gt; props)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>props</code> <span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_Start_" data-uid="MASES.KNet.Connect.KNetConnector.Start*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_Start_Java_Util_Map_System_String_System_String__" data-uid="MASES.KNet.Connect.KNetConnector.Start(Java.Util.Map{System.String,System.String})">
+  Start(Map&lt;string, string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start(Map&lt;string, string&gt; props)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>props</code> <span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Local version with a different signature</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_Start_" data-uid="MASES.KNet.Connect.KNetConnector.Start*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_Start_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__" data-uid="MASES.KNet.Connect.KNetConnector.Start(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})">
+  Start(IReadOnlyDictionary&lt;string, string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implement the method to execute the start action</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Start(IReadOnlyDictionary&lt;string, string&gt; props)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>props</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The set of properties returned from Apache Kafka Connect framework: the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> contains the same info from configuration file.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_StartInternal_" data-uid="MASES.KNet.Connect.KNetConnector.StartInternal*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_StartInternal" data-uid="MASES.KNet.Connect.KNetConnector.StartInternal">
+  StartInternal()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Public method used from Java to trigger <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_Java_Util_Map_System_String_System_String__">Start(Map&lt;string, string&gt;)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartInternal()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_Stop_" data-uid="MASES.KNet.Connect.KNetConnector.Stop*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_Stop" data-uid="MASES.KNet.Connect.KNetConnector.Stop">
+  Stop()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implement the method to execute the stop action</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Stop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_StopInternal_" data-uid="MASES.KNet.Connect.KNetConnector.StopInternal*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_StopInternal" data-uid="MASES.KNet.Connect.KNetConnector.StopInternal">
+  StopInternal()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Public method used from Java to trigger <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Stop">Stop()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopInternal()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_TaskClass_" data-uid="MASES.KNet.Connect.KNetConnector.TaskClass*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_TaskClass" data-uid="MASES.KNet.Connect.KNetConnector.TaskClass">
+  TaskClass()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Class TaskClass()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Class</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Invoked in Java before any initialization</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_TaskConfigs_" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigs*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigs(System.Int32)">
+  TaskConfigs(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Map&lt;string, string&gt;&gt; TaskConfigs(int maxTasks)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxTasks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Invoked using the other signature</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_TaskConfigs_" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigs*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Collections_Generic_IDictionary_System_String_System_String__" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigs(System.Int32,System.Collections.Generic.IDictionary{System.String,System.String})">
+  TaskConfigs(int, IDictionary&lt;string, string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked during allocation of tasks from Apache Kafka Connect</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void TaskConfigs(int index, IDictionary&lt;string, string&gt; config)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The actual index</p>
+</dd>
+    <dt><code>config</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> to be filled in with properties for the task: the same will be received from <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Start_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__">Start(IReadOnlyDictionary&lt;string, string&gt;)</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_TaskConfigsInternal_" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigsInternal*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_TaskConfigsInternal_System_Int32_" data-uid="MASES.KNet.Connect.KNetConnector.TaskConfigsInternal(System.Int32)">
+  TaskConfigsInternal(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Public method used from Java to trigger <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Collections_Generic_IDictionary_System_String_System_String__">TaskConfigs(int, IDictionary&lt;string, string&gt;)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TaskConfigsInternal(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_Validate_" data-uid="MASES.KNet.Connect.KNetConnector.Validate*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_Validate_Java_Util_Map_System_String_System_String__" data-uid="MASES.KNet.Connect.KNetConnector.Validate(Java.Util.Map{System.String,System.String})">
+  Validate(Map&lt;string, string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Config Validate(Map&lt;string, string&gt; connectorConfigs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>connectorConfigs</code> <span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.Config.html">Config</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Invoked in Java before any initialization</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Connect_KNetConnector_Version_" data-uid="MASES.KNet.Connect.KNetConnector.Version*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetConnector_Version" data-uid="MASES.KNet.Connect.KNetConnector.Version">
+  Version()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Version()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Invoked in Java before any initialization</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Specific\Connect\KNetConnector.cs/#L105" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
