@@ -1,99 +1,137 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class KNetPSCore
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class KNetPSCore
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class KNetPSCore
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KNetPSCore
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNetPS_KNetPSCore.md&amp;value=---%0Auid%3A%20MASES.KNetPS.KNetPSCore%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MASES.KNetPS.KNetPSCore">
-  
-  
-  <h1 id="MASES_KNetPS_KNetPSCore" data-uid="MASES.KNetPS.KNetPSCore" class="text-break">Class KNetPSCore
+
+        <article data-uid="MASES.KNetPS.KNetPSCore">
+
+
+
+  <h1 id="MASES_KNetPS_KNetPSCore" data-uid="MASES.KNetPS.KNetPSCore" class="text-break">
+    Class KNetPSCore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNetPS\KNetPSCore.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"><p>Directly usable implementation of <a class="xref" href="MASES.KNetCLI.KNetCLICore-1.html">KNetCLICore&lt;T&gt;</a></p>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNetPS.html">KNetPS</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNetPS.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Directly usable implementation of <a class="xref" href="MASES.KNetCLI.KNetCLICore-1.html">KNetCLICore&lt;T&gt;</a></p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper</span></div>
-    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper</span>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
-    <div class="level3"><span class="xref">MASES.JNet.JNetCoreBase</span>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
-    <div class="level4"><span class="xref">MASES.JNet.JNetCore</span>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
-    <div class="level5"><a class="xref" href="MASES.KNet.KNetCore-1.html">KNetCore</a>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
-    <div class="level6"><a class="xref" href="MASES.KNetCLI.KNetCLICore-1.html">KNetCLICore</a>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
-    <div class="level7"><span class="xref">KNetPSCore</span></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KNetPSCore : KNetCLICore&lt;KNetPSCore&gt;, IJVMWrapperManagement, IJVMBridgeCore</code></pre>
   </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMInterop.IJVMWrapperManagement</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SetupJVMWrapper</span></div>
+      <div><span class="xref">SetupJVMWrapper</span>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
+      <div><span class="xref">JNetCoreBase</span>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
+      <div><span class="xref">JNetCore</span>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
+      <div><a class="xref" href="MASES.KNet.KNetCore-1.html">KNetCore</a>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
+      <div><a class="xref" href="MASES.KNetCLI.KNetCLICore-1.html">KNetCLICore</a>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
+      <div><span class="xref">KNetPSCore</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IJVMWrapperManagement</span></div>
+      <div><span class="xref">IJVMBridgeCore</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="MASES.KNetCLI.KNetCLICore-1.html#MASES_KNetCLI_KNetCLICore_1_ProcessCommandLine">KNetCLICore&lt;KNetPSCore&gt;.ProcessCommandLine()</a>
     </div>
@@ -155,308 +193,283 @@
       <a class="xref" href="MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_PathToParse">KNetCore&lt;KNetPSCore&gt;.PathToParse</a>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.JARsSubFolder</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.JARsSubFolder</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.Parser</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.Parser</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.HelpInfo(System.Nullable&lt;System.Int32&gt;)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">JNetCoreBase&lt;KNetPSCore&gt;.HelpInfo(int?)</a>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.Class&lt;TClass&gt;()</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.Class&lt;TClass&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.New(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;KNetPSCore&gt;.New(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.New(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;KNetPSCore&gt;.New(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationLicensePath</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationLicensePath</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationJDKHome</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationJDKHome</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationJVMPath</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationJVMPath</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationJNIVerbosity</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationJNIVerbosity</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationJNIOutputFile</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationJNIOutputFile</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationJmxPort</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationJmxPort</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationEnableDebug</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationEnableDebug</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationJavaDebugPort</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationJavaDebugPort</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationDebugSuspendFlag</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationDebugSuspendFlag</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationJavaDebugOpts</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationJavaDebugOpts</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationHeapSize</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationHeapSize</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationInitialHeapSize</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationInitialHeapSize</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ApplicationLogClassPath</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ApplicationLogClassPath</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.LicensePath</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.LicensePath</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.JDKHome</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.JDKHome</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.JVMPath</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.JVMPath</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.JNIVerbosity</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.JNIVerbosity</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.JNIOutputFile</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.JNIOutputFile</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.JmxPort</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.JmxPort</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.EnableDebug</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.EnableDebug</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.JavaDebugPort</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.JavaDebugPort</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.DebugSuspendFlag</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.DebugSuspendFlag</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.JavaDebugOpts</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.JavaDebugOpts</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.GlobalHeapSize</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.GlobalHeapSize</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.InitialHeapSize</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.InitialHeapSize</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.LogClassPath</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.LogClassPath</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ParsedArgs</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ParsedArgs</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.JVMOptions</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.JVMOptions</span>
     </div>
     <div>
-      <span class="xref">MASES.JNet.JNetCoreBase&lt;MASES.KNetPS.KNetPSCore&gt;.ClassPath</span>
+      <span class="xref">JNetCoreBase&lt;KNetPSCore&gt;.ClassPath</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;MASES.KNetPS.KNetPSCore&gt;.CreateGlobalInstance()</span>
+      <span class="xref">SetupJVMWrapper&lt;KNetPSCore&gt;.CreateGlobalInstance()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;MASES.KNetPS.KNetPSCore&gt;.UnwrapOn(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.parameterizedthreadstart">SetupJVMWrapper&lt;KNetPSCore&gt;.UnwrapOn(ParameterizedThreadStart, object, ApartmentState)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;MASES.KNetPS.KNetPSCore&gt;.UnwrapAndDemonizeOn(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.parameterizedthreadstart">SetupJVMWrapper&lt;KNetPSCore&gt;.UnwrapAndDemonizeOn(ParameterizedThreadStart, object, ApartmentState)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;MASES.KNetPS.KNetPSCore&gt;.HasGlobalInstance</span>
+      <span class="xref">SetupJVMWrapper&lt;KNetPSCore&gt;.HasGlobalInstance</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;MASES.KNetPS.KNetPSCore&gt;.GlobalInstance</span>
+      <span class="xref">SetupJVMWrapper&lt;KNetPSCore&gt;.GlobalInstance</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;MASES.KNetPS.KNetPSCore&gt;.ScopedOn</span>
+      <span class="xref">SetupJVMWrapper&lt;KNetPSCore&gt;.ScopedOn</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;MASES.KNetPS.KNetPSCore&gt;.ScopedOnVersion</span>
+      <span class="xref">SetupJVMWrapper&lt;KNetPSCore&gt;.ScopedOnVersion</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.Initialize()</span>
+      <span class="xref">SetupJVMWrapper.Initialize()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ImportPackage(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.ImportPackage(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.RegisterCLRGlobal(System.String, System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.RegisterCLRGlobal(string, object)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.UnregisterCLRGlobal(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.UnregisterCLRGlobal(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetJVMGlobal(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.GetJVMGlobal(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetCLRGlobal(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.GetCLRGlobal(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.InitializeListener(MASES.JCOBridge.C2JBridge.IJVMBridgeBase)</span>
+      <span class="xref">SetupJVMWrapper.InitializeListener(IJVMBridgeBase)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetListener(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <span class="xref">SetupJVMWrapper.GetListener(IJavaObject)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ReleaseListener(MASES.JCOBridge.C2JBridge.IJVMBridgeBase)</span>
+      <span class="xref">SetupJVMWrapper.ReleaseListener(IJVMBridgeBase)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetJCGraphicContainer(System.String, System.Boolean)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.GetJCGraphicContainer(string, bool)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetJCGraphicContainer(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.Boolean)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">SetupJVMWrapper.GetJCGraphicContainer(IJavaObject, bool)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ReleaseJCGraphicContainer(MASES.JCOBridge.C2JBridge.IJCGraphicContainer)</span>
+      <span class="xref">SetupJVMWrapper.ReleaseJCGraphicContainer(IJCGraphicContainer)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.InitializeRemote()</span>
+      <span class="xref">SetupJVMWrapper.InitializeRemote()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.UnwrapOn&lt;T&gt;(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.parameterizedthreadstart">SetupJVMWrapper.UnwrapOn&lt;T&gt;(ParameterizedThreadStart, object, ApartmentState)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.UnwrapAndDemonizeOn&lt;T&gt;(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.parameterizedthreadstart">SetupJVMWrapper.UnwrapAndDemonizeOn&lt;T&gt;(ParameterizedThreadStart, object, ApartmentState)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetMainClasses(System.Reflection.Assembly)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">SetupJVMWrapper.GetMainClasses(Assembly)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.Launch&lt;TClass&gt;(System.String[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">SetupJVMWrapper.Launch&lt;TClass&gt;(params string[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.Launch(System.Type, System.String[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">SetupJVMWrapper.Launch(Type, params string[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.FilteredArgs</span>
+      <span class="xref">SetupJVMWrapper.FilteredArgs</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.IsContainer</span>
+      <span class="xref">SetupJVMWrapper.IsContainer</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ContainerId</span>
+      <span class="xref">SetupJVMWrapper.ContainerId</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.FeatureLevel</span>
+      <span class="xref">SetupJVMWrapper.FeatureLevel</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.EnableCriticalMethods</span>
+      <span class="xref">SetupJVMWrapper.EnableCriticalMethods</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JVM</span>
+      <span class="xref">SetupJVMWrapper.JVM</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.Management</span>
+      <span class="xref">SetupJVMWrapper.Management</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JVMStats</span>
+      <span class="xref">SetupJVMWrapper.JVMStats</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.DynJVM</span>
+      <span class="xref">SetupJVMWrapper.DynJVM</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.RemoteBridge</span>
+      <span class="xref">SetupJVMWrapper.RemoteBridge</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.RemoteJCOBridge</span>
+      <span class="xref">SetupJVMWrapper.RemoteJCOBridge</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ModulePath</span>
+      <span class="xref">SetupJVMWrapper.ModulePath</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JVMPackages</span>
+      <span class="xref">SetupJVMWrapper.JVMPackages</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.SuppressFinalize</span>
+      <span class="xref">SetupJVMWrapper.SuppressFinalize</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.Globalize</span>
+      <span class="xref">SetupJVMWrapper.Globalize</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.LastBindingException</span>
+      <span class="xref">SetupJVMWrapper.LastBindingException</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MASES.KNetPS.html">MASES.KNetPS</a></h6>
-  <h6><strong>Assembly</strong>: MASES.KNetPS.dll</h6>
-  <h5 id="MASES_KNetPS_KNetPSCore_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KNetPSCore : KNetCLICore&lt;KNetPSCore&gt;, IJVMWrapperManagement, IJVMBridgeCore</code></pre>
-  </div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMInterop.IJVMWrapperManagement</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
-  </div>
+  </dd></dl>
+
+
+
+
+
+
+
 </article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNetPS_KNetPSCore.md&amp;value=---%0Auid%3A%20MASES.KNetPS.KNetPSCore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNetPS/KNetPSCore.cs/#L26" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src\net\KNetPS\KNetPSCore.cs/#L26" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

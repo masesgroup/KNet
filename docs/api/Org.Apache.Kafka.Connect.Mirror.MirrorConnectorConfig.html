@@ -1,149 +1,192 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class MirrorConnectorConfig
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class MirrorConnectorConfig
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class MirrorConnectorConfig
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MirrorConnectorConfig
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig">
-  
-  
-  <h1 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig" class="text-break">Class MirrorConnectorConfig
+
+        <article data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig">
+
+
+
+  <h1 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig" class="text-break">
+    Class MirrorConnectorConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html</a></p>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Apache.html">Apache</a>.<a class="xref" href="Org.Apache.Kafka.html">Kafka</a>.<a class="xref" href="Org.Apache.Kafka.Connect.html">Connect</a>.<a class="xref" href="Org.Apache.Kafka.Connect.Mirror.html">Mirror</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html</a></p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
-    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html">AbstractConfig</a>&gt;</div>
-    <div class="level4"><a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html">AbstractConfig</a></div>
-    <div class="level5"><span class="xref">MirrorConnectorConfig</span></div>
-      <div class="level6"><a class="xref" href="Org.Apache.Kafka.Connect.Mirror.MirrorCheckpointConfig.html">MirrorCheckpointConfig</a></div>
-      <div class="level6"><a class="xref" href="Org.Apache.Kafka.Connect.Mirror.MirrorHeartbeatConfig.html">MirrorHeartbeatConfig</a></div>
-      <div class="level6"><a class="xref" href="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.html">MirrorSourceConfig</a></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MirrorConnectorConfig : AbstractConfig, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IJVMBridgeMain</code></pre>
   </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeMain</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><span class="xref">JVMBridgeBase</span></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html">AbstractConfig</a>&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html">AbstractConfig</a></div>
+      <div><span class="xref">MirrorConnectorConfig</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
+      <div><span class="xref">IJVMBridgeBase</span></div>
+      <div><span class="xref">IJVMBridgeDefinition</span></div>
+      <div><span class="xref">IJVMBridgeMain</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Mirror.MirrorCheckpointConfig.html">MirrorCheckpointConfig</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Mirror.MirrorHeartbeatConfig.html">MirrorHeartbeatConfig</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.html">MirrorSourceConfig</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_CONFIG_PROVIDERS_CONFIG">AbstractConfig.CONFIG_PROVIDERS_CONFIG</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetConfiguredInstances__1_System_String_Java_Lang_Class_Java_Util_Map_System_String_System_Object__">AbstractConfig.GetConfiguredInstances&lt;T&gt;(String, Class, Map&lt;String, Object&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetConfiguredInstances__1_System_String_Java_Lang_Class_Java_Util_Map_System_String_System_Object__">AbstractConfig.GetConfiguredInstances&lt;T&gt;(string, Class, Map&lt;string, object&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetConfiguredInstances__1_System_String_Java_Lang_Class_">AbstractConfig.GetConfiguredInstances&lt;T&gt;(String, Class)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetConfiguredInstances__1_System_String_Java_Lang_Class_">AbstractConfig.GetConfiguredInstances&lt;T&gt;(string, Class)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetConfiguredInstances__1_Java_Util_List_System_String__Java_Lang_Class_Java_Util_Map_System_String_System_Object__">AbstractConfig.GetConfiguredInstances&lt;T&gt;(List&lt;String&gt;, Class, Map&lt;String, Object&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetConfiguredInstances__1_Java_Util_List_System_String__Java_Lang_Class_Java_Util_Map_System_String_System_Object__">AbstractConfig.GetConfiguredInstances&lt;T&gt;(List&lt;string&gt;, Class, Map&lt;string, object&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetConfiguredInstance__1_System_String_Java_Lang_Class_Java_Util_Map_System_String_System_Object__">AbstractConfig.GetConfiguredInstance&lt;T&gt;(String, Class, Map&lt;String, Object&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetConfiguredInstance__1_System_String_Java_Lang_Class_Java_Util_Map_System_String_System_Object__">AbstractConfig.GetConfiguredInstance&lt;T&gt;(string, Class, Map&lt;string, object&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetConfiguredInstance__1_System_String_Java_Lang_Class_">AbstractConfig.GetConfiguredInstance&lt;T&gt;(String, Class)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetConfiguredInstance__1_System_String_Java_Lang_Class_">AbstractConfig.GetConfiguredInstance&lt;T&gt;(string, Class)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetBoolean_System_String_">AbstractConfig.GetBoolean(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetBoolean_System_String_">AbstractConfig.GetBoolean(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetClass_System_String_">AbstractConfig.GetClass(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetClass_System_String_">AbstractConfig.GetClass(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetDouble_System_String_">AbstractConfig.GetDouble(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetDouble_System_String_">AbstractConfig.GetDouble(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetInt_System_String_">AbstractConfig.GetInt(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetInt_System_String_">AbstractConfig.GetInt(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetLong_System_String_">AbstractConfig.GetLong(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetLong_System_String_">AbstractConfig.GetLong(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetShort_System_String_">AbstractConfig.GetShort(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetShort_System_String_">AbstractConfig.GetShort(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_DocumentationOf_System_String_">AbstractConfig.DocumentationOf(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_DocumentationOf_System_String_">AbstractConfig.DocumentationOf(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetString_System_String_">AbstractConfig.GetString(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetString_System_String_">AbstractConfig.GetString(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetList_System_String_">AbstractConfig.GetList(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetList_System_String_">AbstractConfig.GetList(string)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_NonInternalValues">AbstractConfig.NonInternalValues()</a>
@@ -155,19 +198,19 @@
       <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_Originals">AbstractConfig.Originals()</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_Originals_Java_Util_Map_System_String_System_Object__">AbstractConfig.Originals(Map&lt;String, Object&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_Originals_Java_Util_Map_System_String_System_Object__">AbstractConfig.Originals(Map&lt;string, object&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_OriginalsWithPrefix_System_String_System_Boolean_">AbstractConfig.OriginalsWithPrefix(String, Boolean)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_OriginalsWithPrefix_System_String_System_Boolean_">AbstractConfig.OriginalsWithPrefix(string, bool)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_OriginalsWithPrefix_System_String_">AbstractConfig.OriginalsWithPrefix(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_OriginalsWithPrefix_System_String_">AbstractConfig.OriginalsWithPrefix(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_ValuesWithPrefixAllOrNothing_System_String_">AbstractConfig.ValuesWithPrefixAllOrNothing(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_ValuesWithPrefixAllOrNothing_System_String_">AbstractConfig.ValuesWithPrefixAllOrNothing(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_ValuesWithPrefixOverride_System_String_">AbstractConfig.ValuesWithPrefixOverride(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_ValuesWithPrefixOverride_System_String_">AbstractConfig.ValuesWithPrefixOverride(string)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_OriginalsStrings">AbstractConfig.OriginalsStrings()</a>
@@ -176,1233 +219,1217 @@
       <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_Unused">AbstractConfig.Unused()</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_TypeOf_System_String_">AbstractConfig.TypeOf(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_TypeOf_System_String_">AbstractConfig.TypeOf(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetPassword_System_String_">AbstractConfig.GetPassword(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_GetPassword_System_String_">AbstractConfig.GetPassword(string)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_Ignore_System_String_">AbstractConfig.Ignore(String)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_Ignore_System_String_">AbstractConfig.Ignore(string)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_LogUnused">AbstractConfig.LogUnused()</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute(System.Type, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(Type, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecuteArray&lt;T&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SGetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField(IJavaType, string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SGetField(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SGetField&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SGetField&lt;TReturn&gt;(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField&lt;TReturn&gt;(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SGetFieldArray&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SGetFieldArray&lt;TReturn&gt;(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SSetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField(IJavaType, string, object)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SSetField(System.String, System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField(string, object)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SSetField&lt;TValue&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, TValue)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.SSetField&lt;TValue&gt;(System.String, TValue)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.IsAssignableFrom(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.IsAssignableFrom(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.IsAssignableFrom(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+      <span class="xref">JVMBridgeBase&lt;AbstractConfig&gt;.IsAssignableFrom(IJavaType)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.IsAssignableFrom&lt;T&gt;()</span>
+      <span class="xref">JVMBridgeBase&lt;AbstractConfig&gt;.IsAssignableFrom&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.New(System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AbstractConfig&gt;.New(params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.Execute&lt;T&gt;(T[])</span>
+      <span class="xref">JVMBridgeBase&lt;AbstractConfig&gt;.Execute&lt;T&gt;(params T[])</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.DynBridgeClazz</span>
+      <span class="xref">JVMBridgeBase&lt;AbstractConfig&gt;.DynBridgeClazz</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.BridgeClazz</span>
+      <span class="xref">JVMBridgeBase&lt;AbstractConfig&gt;.BridgeClazz</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynBridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Org.Apache.Kafka.Common.Config.AbstractConfig&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.BridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf&lt;TClass&gt;(System.Boolean)</span>
+      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf(System.String, System.Boolean)</span>
+      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(System.String)</span>
+      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+      <span class="xref">JVMBridgeBase.Dispose()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
+      <span class="xref">JVMBridgeBase.ToString()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
+      <span class="xref">JVMBridgeBase.GetHashCode()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
+      <span class="xref">JVMBridgeBase.Notify()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
+      <span class="xref">JVMBridgeBase.NotifyAll()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Notify()</span>
+      <span class="xref">JVMBridgeBase.Wait()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.NotifyAll()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64, System.Int32)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField&lt;TReturn&gt;(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(System.String)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField(System.String, System.Object)</span>
+      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField&lt;TValue&gt;(System.String, TValue)</span>
+      <span class="xref">JVMBridgeBase.BridgeInstance</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynBridgeInstance</span>
+      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeInstance</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeListener</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember#system-dynamic-dynamicobject-trydeletemember(system-dynamic-deletememberbinder)">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember#system-dynamic-dynamicobject-tryinvokemember(system-dynamic-invokememberbinder-system-object()-system-object@)">DynamicObject.TryInvokeMember(InvokeMemberBinder, Object[], Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance#system-dynamic-dynamicobject-trycreateinstance(system-dynamic-createinstancebinder-system-object()-system-object@)">DynamicObject.TryCreateInstance(CreateInstanceBinder, Object[], Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
     </div>
     <div>
-      <span class="xref">System.Dynamic.DynamicObject.TryDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Object[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">System.Dynamic.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Org.Apache.Kafka.Connect.Mirror.html">Org.Apache.Kafka.Connect.Mirror</a></h6>
-  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
-  <h5 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MirrorConnectorConfig : AbstractConfig, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IJVMBridgeMain</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L424">View Source</a>
-  </span>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig__ctor_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig__ctor" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.#ctor">MirrorConnectorConfig()</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig__ctor" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.#ctor">
+  MirrorConnectorConfig()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\AllPackageClasses.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public MirrorConnectorConfig()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig__ctor_System_Object___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L428">View Source</a>
-  </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig__ctor_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.#ctor*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.#ctor(System.Object[])">MirrorConnectorConfig(Object[])</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.#ctor(System.Object[])">
+  MirrorConnectorConfig(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\AllPackageClasses.cs/#L428"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public MirrorConnectorConfig(params object[] args)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_ADMIN_TASK_TIMEOUT_MILLIS.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.ADMIN_TASK_TIMEOUT_MILLIS%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L59">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_ADMIN_TASK_TIMEOUT_MILLIS_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.ADMIN_TASK_TIMEOUT_MILLIS*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_ADMIN_TASK_TIMEOUT_MILLIS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.ADMIN_TASK_TIMEOUT_MILLIS">ADMIN_TASK_TIMEOUT_MILLIS</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_ADMIN_TASK_TIMEOUT_MILLIS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.ADMIN_TASK_TIMEOUT_MILLIS">
+  ADMIN_TASK_TIMEOUT_MILLIS
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#ADMIN_TASK_TIMEOUT_MILLIS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#ADMIN_TASK_TIMEOUT_MILLIS</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string ADMIN_TASK_TIMEOUT_MILLIS { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L119">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT">ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT">
+  ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static long ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L435">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_BridgeClassName_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.BridgeClassName*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.BridgeClassName">BridgeClassName</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\AllPackageClasses.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_BridgeClassName">AbstractConfig.BridgeClassName</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_FORWARDING_ADMIN_CLASS.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.FORWARDING_ADMIN_CLASS%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L63">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_FORWARDING_ADMIN_CLASS_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.FORWARDING_ADMIN_CLASS*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_FORWARDING_ADMIN_CLASS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.FORWARDING_ADMIN_CLASS">FORWARDING_ADMIN_CLASS</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_FORWARDING_ADMIN_CLASS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.FORWARDING_ADMIN_CLASS">
+  FORWARDING_ADMIN_CLASS
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#FORWARDING_ADMIN_CLASS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#FORWARDING_ADMIN_CLASS</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string FORWARDING_ADMIN_CLASS { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_FORWARDING_ADMIN_CLASS_DEFAULT.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.FORWARDING_ADMIN_CLASS_DEFAULT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L47">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_FORWARDING_ADMIN_CLASS_DEFAULT_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.FORWARDING_ADMIN_CLASS_DEFAULT*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_FORWARDING_ADMIN_CLASS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.FORWARDING_ADMIN_CLASS_DEFAULT">FORWARDING_ADMIN_CLASS_DEFAULT</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_FORWARDING_ADMIN_CLASS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.FORWARDING_ADMIN_CLASS_DEFAULT">
+  FORWARDING_ADMIN_CLASS_DEFAULT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#FORWARDING_ADMIN_CLASS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#FORWARDING_ADMIN_CLASS_DEFAULT</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Class FORWARDING_ADMIN_CLASS_DEFAULT { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Lang.Class</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L43">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Class</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT">INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT">
+  INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Boolean INTERNAL_TOPIC_SEPARATOR_ENABLED_DEFAULT { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Lang.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeAbstract.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L439">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Boolean</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeAbstract*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeAbstract">IsBridgeAbstract</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\AllPackageClasses.cs/#L439"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_IsBridgeAbstract">AbstractConfig.IsBridgeAbstract</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeCloseable.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeCloseable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L443">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeCloseable*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeCloseable">IsBridgeCloseable</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\AllPackageClasses.cs/#L443"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_IsBridgeCloseable">AbstractConfig.IsBridgeCloseable</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeInterface.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L447">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeInterface*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeInterface">IsBridgeInterface</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\AllPackageClasses.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_IsBridgeInterface">AbstractConfig.IsBridgeInterface</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeStatic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeStatic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L451">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeStatic*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeStatic">IsBridgeStatic</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\AllPackageClasses.cs/#L451"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_IsBridgeStatic">AbstractConfig.IsBridgeStatic</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L67">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION">OFFSET_SYNCS_TOPIC_LOCATION</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION">
+  OFFSET_SYNCS_TOPIC_LOCATION
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#OFFSET_SYNCS_TOPIC_LOCATION">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#OFFSET_SYNCS_TOPIC_LOCATION</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string OFFSET_SYNCS_TOPIC_LOCATION { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L71">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT">OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT">
+  OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION_DOC.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION_DOC%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L75">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION_DOC_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION_DOC*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION_DOC" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION_DOC">OFFSET_SYNCS_TOPIC_LOCATION_DOC</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_OFFSET_SYNCS_TOPIC_LOCATION_DOC" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.OFFSET_SYNCS_TOPIC_LOCATION_DOC">
+  OFFSET_SYNCS_TOPIC_LOCATION_DOC
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#OFFSET_SYNCS_TOPIC_LOCATION_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#OFFSET_SYNCS_TOPIC_LOCATION_DOC</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string OFFSET_SYNCS_TOPIC_LOCATION_DOC { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_CLASS.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_CLASS%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L79">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_CLASS_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_CLASS*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_CLASS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_CLASS">REPLICATION_POLICY_CLASS</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_CLASS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_CLASS">
+  REPLICATION_POLICY_CLASS
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#REPLICATION_POLICY_CLASS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#REPLICATION_POLICY_CLASS</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string REPLICATION_POLICY_CLASS { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_CLASS_DEFAULT.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_CLASS_DEFAULT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L51">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_CLASS_DEFAULT_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_CLASS_DEFAULT*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_CLASS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_CLASS_DEFAULT">REPLICATION_POLICY_CLASS_DEFAULT</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_CLASS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_CLASS_DEFAULT">
+  REPLICATION_POLICY_CLASS_DEFAULT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#REPLICATION_POLICY_CLASS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#REPLICATION_POLICY_CLASS_DEFAULT</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Class REPLICATION_POLICY_CLASS_DEFAULT { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Lang.Class</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_SEPARATOR.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_SEPARATOR%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L83">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Class</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_SEPARATOR_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_SEPARATOR*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_SEPARATOR" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_SEPARATOR">REPLICATION_POLICY_SEPARATOR</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_SEPARATOR" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_SEPARATOR">
+  REPLICATION_POLICY_SEPARATOR
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#REPLICATION_POLICY_SEPARATOR">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#REPLICATION_POLICY_SEPARATOR</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string REPLICATION_POLICY_SEPARATOR { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_SEPARATOR_DEFAULT.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_SEPARATOR_DEFAULT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L87">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_SEPARATOR_DEFAULT_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_SEPARATOR_DEFAULT*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_SEPARATOR_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_SEPARATOR_DEFAULT">REPLICATION_POLICY_SEPARATOR_DEFAULT</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_REPLICATION_POLICY_SEPARATOR_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.REPLICATION_POLICY_SEPARATOR_DEFAULT">
+  REPLICATION_POLICY_SEPARATOR_DEFAULT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#REPLICATION_POLICY_SEPARATOR_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#REPLICATION_POLICY_SEPARATOR_DEFAULT</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string REPLICATION_POLICY_SEPARATOR_DEFAULT { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_SOURCE_CLUSTER_ALIAS.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.SOURCE_CLUSTER_ALIAS%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L91">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_SOURCE_CLUSTER_ALIAS_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.SOURCE_CLUSTER_ALIAS*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_SOURCE_CLUSTER_ALIAS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.SOURCE_CLUSTER_ALIAS">SOURCE_CLUSTER_ALIAS</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_SOURCE_CLUSTER_ALIAS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.SOURCE_CLUSTER_ALIAS">
+  SOURCE_CLUSTER_ALIAS
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#SOURCE_CLUSTER_ALIAS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#SOURCE_CLUSTER_ALIAS</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string SOURCE_CLUSTER_ALIAS { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_SOURCE_CLUSTER_ALIAS_DEFAULT.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.SOURCE_CLUSTER_ALIAS_DEFAULT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L95">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_SOURCE_CLUSTER_ALIAS_DEFAULT_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.SOURCE_CLUSTER_ALIAS_DEFAULT*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_SOURCE_CLUSTER_ALIAS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.SOURCE_CLUSTER_ALIAS_DEFAULT">SOURCE_CLUSTER_ALIAS_DEFAULT</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_SOURCE_CLUSTER_ALIAS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.SOURCE_CLUSTER_ALIAS_DEFAULT">
+  SOURCE_CLUSTER_ALIAS_DEFAULT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#SOURCE_CLUSTER_ALIAS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#SOURCE_CLUSTER_ALIAS_DEFAULT</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string SOURCE_CLUSTER_ALIAS_DEFAULT { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TARGET_CLUSTER_ALIAS.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TARGET_CLUSTER_ALIAS%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L99">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TARGET_CLUSTER_ALIAS_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TARGET_CLUSTER_ALIAS*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TARGET_CLUSTER_ALIAS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TARGET_CLUSTER_ALIAS">TARGET_CLUSTER_ALIAS</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TARGET_CLUSTER_ALIAS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TARGET_CLUSTER_ALIAS">
+  TARGET_CLUSTER_ALIAS
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TARGET_CLUSTER_ALIAS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TARGET_CLUSTER_ALIAS</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string TARGET_CLUSTER_ALIAS { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TARGET_CLUSTER_ALIAS_DEFAULT.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TARGET_CLUSTER_ALIAS_DEFAULT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L103">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TARGET_CLUSTER_ALIAS_DEFAULT_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TARGET_CLUSTER_ALIAS_DEFAULT*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TARGET_CLUSTER_ALIAS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TARGET_CLUSTER_ALIAS_DEFAULT">TARGET_CLUSTER_ALIAS_DEFAULT</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TARGET_CLUSTER_ALIAS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TARGET_CLUSTER_ALIAS_DEFAULT">
+  TARGET_CLUSTER_ALIAS_DEFAULT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TARGET_CLUSTER_ALIAS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TARGET_CLUSTER_ALIAS_DEFAULT</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string TARGET_CLUSTER_ALIAS_DEFAULT { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TASK_INDEX.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TASK_INDEX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L107">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TASK_INDEX_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TASK_INDEX*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TASK_INDEX" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TASK_INDEX">TASK_INDEX</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TASK_INDEX" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TASK_INDEX">
+  TASK_INDEX
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TASK_INDEX">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TASK_INDEX</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string TASK_INDEX { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L111">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS">TOPIC_FILTER_CLASS</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS">
+  TOPIC_FILTER_CLASS
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TOPIC_FILTER_CLASS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TOPIC_FILTER_CLASS</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string TOPIC_FILTER_CLASS { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS_DEFAULT.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS_DEFAULT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L55">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS_DEFAULT_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS_DEFAULT*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS_DEFAULT">TOPIC_FILTER_CLASS_DEFAULT</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS_DEFAULT">
+  TOPIC_FILTER_CLASS_DEFAULT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TOPIC_FILTER_CLASS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TOPIC_FILTER_CLASS_DEFAULT</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Class TOPIC_FILTER_CLASS_DEFAULT { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Lang.Class</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS_DOC.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS_DOC%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L115">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Class</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS_DOC_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS_DOC*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS_DOC" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS_DOC">TOPIC_FILTER_CLASS_DOC</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_TOPIC_FILTER_CLASS_DOC" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.TOPIC_FILTER_CLASS_DOC">
+  TOPIC_FILTER_CLASS_DOC
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TOPIC_FILTER_CLASS_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TOPIC_FILTER_CLASS_DOC</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string TOPIC_FILTER_CLASS_DOC { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_Main_System_String___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.Main(System.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L128">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_Main_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.Main*"></a>
-  <h4 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_Main_System_String___" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.Main(System.String[])">Main(String[])</h4>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_Main_System_String___" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.Main(System.String[])">
+  Main(string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#main-java.lang.String[]-">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#main-java.lang.String[]-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void Main(string[] arg0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td><span class="parametername">arg0</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
-  </div>
-  <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
-  </div>
-  <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeMain</span>
-  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorConnectorConfig.cs/#L29" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src\net\KNet\Generated\Org\Apache\Kafka\Connect\Mirror\MirrorConnectorConfig.cs/#L29" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

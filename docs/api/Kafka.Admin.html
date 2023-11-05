@@ -1,259 +1,357 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace Kafka.Admin
-   | KNet website </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace Kafka.Admin
-   | KNet website ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Namespace Kafka.Admin
+ | MASES Group website - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Kafka.Admin
+ | MASES Group website - KNet ">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.png" alt="">
-              </a>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kafka.Admin">
-  
-  <h1 id="Kafka_Admin" data-uid="Kafka.Admin" class="text-break">Namespace Kafka.Admin
-  </h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="Kafka.Admin.AclCommand.html">AclCommand</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.AclCommand.AclCommandOptions.html">AclCommand.AclCommandOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AclCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AclCommandOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.AclCommand.AclCommandService.html">AclCommand.AclCommandService</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AclCommandService.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AclCommandService.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.AclCommand.AdminClientService.html">AclCommand.AdminClientService</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AdminClientService.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AdminClientService.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.AclCommand.AuthorizerService.html">AclCommand.AuthorizerService</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AuthorizerService.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AuthorizerService.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.BrokerApiVersionsCommand.html">BrokerApiVersionsCommand</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/BrokerApiVersionsCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/BrokerApiVersionsCommand.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.BrokerApiVersionsCommand.BrokerVersionCommandOptions.html">BrokerApiVersionsCommand.BrokerVersionCommandOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/BrokerApiVersionsCommand.BrokerVersionCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/BrokerApiVersionsCommand.BrokerVersionCommandOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConfigCommand.html">ConfigCommand</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConfigCommand.ConfigCommandOptions.html">ConfigCommand.ConfigCommandOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConfigCommand.ConfigEntity.html">ConfigCommand.ConfigEntity</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.ConfigEntity.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.ConfigEntity.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConfigCommand.Entity.html">ConfigCommand.Entity</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.Entity.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.Entity.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.html">ConsumerGroupCommand</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.ConsumerGroupCommandOptions.html">ConsumerGroupCommand.ConsumerGroupCommandOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.ConsumerGroupService.html">ConsumerGroupCommand.ConsumerGroupService</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.CsvRecord.html">ConsumerGroupCommand.CsvRecord</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecord.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecord.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.CsvRecordNoGroup.html">ConsumerGroupCommand.CsvRecordNoGroup</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.CsvRecordWithGroup.html">ConsumerGroupCommand.CsvRecordWithGroup</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.CsvUtils.html">ConsumerGroupCommand.CsvUtils</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.GroupState.html">ConsumerGroupCommand.GroupState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.GroupState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.GroupState.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.LogOffsetResult.html">ConsumerGroupCommand.LogOffsetResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.LogOffsetResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.LogOffsetResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.MemberAssignmentState.html">ConsumerGroupCommand.MemberAssignmentState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.PartitionAssignmentState.html">ConsumerGroupCommand.PartitionAssignmentState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.FeatureCommand.html">FeatureCommand</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/FeatureCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/FeatureCommand.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.LeaderElectionCommand.html">LeaderElectionCommand</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/LeaderElectionCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/LeaderElectionCommand.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.LeaderElectionCommandOptions.html">LeaderElectionCommandOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/LeaderElectionCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/LeaderElectionCommandOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.RackAwareMode.html">RackAwareMode</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/RackAwareMode.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/RackAwareMode.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.html">ReassignPartitionsCommand</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.ActiveMoveState.html">ReassignPartitionsCommand.ActiveMoveState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.CancelledMoveState.html">ReassignPartitionsCommand.CancelledMoveState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.CompletedMoveState.html">ReassignPartitionsCommand.CompletedMoveState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.LogDirMoveState.html">ReassignPartitionsCommand.LogDirMoveState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.LogDirMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.LogDirMoveState.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.MissingLogDirMoveState.html">ReassignPartitionsCommand.MissingLogDirMoveState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.MissingReplicaMoveState.html">ReassignPartitionsCommand.MissingReplicaMoveState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.PartitionMove.html">ReassignPartitionsCommand.PartitionMove</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.PartitionReassignmentState.html">ReassignPartitionsCommand.PartitionReassignmentState</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.ReassignPartitionsCommandOptions.html">ReassignPartitionsCommand.ReassignPartitionsCommandOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.ReassignPartitionsCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.ReassignPartitionsCommandOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.TerseReassignmentFailureException.html">ReassignPartitionsCommand.TerseReassignmentFailureException</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.TerseReassignmentFailureException.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.TerseReassignmentFailureException.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.VerifyAssignmentResult.html">ReassignPartitionsCommand.VerifyAssignmentResult</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.TopicCommand.html">TopicCommand</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.TopicCommand.CommandTopicPartition.html">TopicCommand.CommandTopicPartition</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.CommandTopicPartition.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.CommandTopicPartition.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.TopicCommand.DescribeOptions.html">TopicCommand.DescribeOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.DescribeOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.DescribeOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.TopicCommand.PartitionDescription.html">TopicCommand.PartitionDescription</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.PartitionDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.PartitionDescription.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.TopicCommand.TopicCommandOptions.html">TopicCommand.TopicCommandOptions</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicCommandOptions.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.TopicCommand.TopicDescription.html">TopicCommand.TopicDescription</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicDescription.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.TopicCommand.TopicService.html">TopicCommand.TopicService</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicService.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicService.html</a></p>
-</section>
-      <h4><a class="xref" href="Kafka.Admin.ZkSecurityMigrator.html">ZkSecurityMigrator</a></h4>
-      <section><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ZkSecurityMigrator.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ZkSecurityMigrator.html</a></p>
-</section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="Kafka.Admin.IRackAwareMode.html">IRackAwareMode</a></h4>
-      <section><p>.NET interface for TO BE DEFINED FROM USER</p>
-</section>
-</article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
-            
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+
+        <article data-uid="Kafka.Admin">
+
+  <h1 id="Kafka_Admin" data-uid="Kafka.Admin" class="text-break">Namespace Kafka.Admin
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.AclCommand.html">AclCommand</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.AclCommand.AclCommandOptions.html">AclCommand.AclCommandOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AclCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AclCommandOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.AclCommand.AclCommandService.html">AclCommand.AclCommandService</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AclCommandService.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AclCommandService.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.AclCommand.AdminClientService.html">AclCommand.AdminClientService</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AdminClientService.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AdminClientService.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.AclCommand.AuthorizerService.html">AclCommand.AuthorizerService</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AuthorizerService.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/AclCommand.AuthorizerService.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.BrokerApiVersionsCommand.html">BrokerApiVersionsCommand</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/BrokerApiVersionsCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/BrokerApiVersionsCommand.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.BrokerApiVersionsCommand.BrokerVersionCommandOptions.html">BrokerApiVersionsCommand.BrokerVersionCommandOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/BrokerApiVersionsCommand.BrokerVersionCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/BrokerApiVersionsCommand.BrokerVersionCommandOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConfigCommand.html">ConfigCommand</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConfigCommand.ConfigCommandOptions.html">ConfigCommand.ConfigCommandOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConfigCommand.ConfigEntity.html">ConfigCommand.ConfigEntity</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.ConfigEntity.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.ConfigEntity.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConfigCommand.Entity.html">ConfigCommand.Entity</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.Entity.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConfigCommand.Entity.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.html">ConsumerGroupCommand</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.ConsumerGroupCommandOptions.html">ConsumerGroupCommand.ConsumerGroupCommandOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.ConsumerGroupService.html">ConsumerGroupCommand.ConsumerGroupService</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.CsvRecord.html">ConsumerGroupCommand.CsvRecord</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecord.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecord.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.CsvRecordNoGroup.html">ConsumerGroupCommand.CsvRecordNoGroup</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.CsvRecordWithGroup.html">ConsumerGroupCommand.CsvRecordWithGroup</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.CsvUtils.html">ConsumerGroupCommand.CsvUtils</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.GroupState.html">ConsumerGroupCommand.GroupState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.GroupState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.GroupState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.LogOffsetResult.html">ConsumerGroupCommand.LogOffsetResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.LogOffsetResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.LogOffsetResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.MemberAssignmentState.html">ConsumerGroupCommand.MemberAssignmentState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ConsumerGroupCommand.PartitionAssignmentState.html">ConsumerGroupCommand.PartitionAssignmentState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.FeatureCommand.html">FeatureCommand</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/FeatureCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/FeatureCommand.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.LeaderElectionCommand.html">LeaderElectionCommand</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/LeaderElectionCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/LeaderElectionCommand.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.LeaderElectionCommandOptions.html">LeaderElectionCommandOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/LeaderElectionCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/LeaderElectionCommandOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.RackAwareMode.html">RackAwareMode</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/RackAwareMode.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/RackAwareMode.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.html">ReassignPartitionsCommand</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.ActiveMoveState.html">ReassignPartitionsCommand.ActiveMoveState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.CancelledMoveState.html">ReassignPartitionsCommand.CancelledMoveState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.CompletedMoveState.html">ReassignPartitionsCommand.CompletedMoveState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.LogDirMoveState.html">ReassignPartitionsCommand.LogDirMoveState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.LogDirMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.LogDirMoveState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.MissingLogDirMoveState.html">ReassignPartitionsCommand.MissingLogDirMoveState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.MissingReplicaMoveState.html">ReassignPartitionsCommand.MissingReplicaMoveState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.PartitionMove.html">ReassignPartitionsCommand.PartitionMove</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.PartitionReassignmentState.html">ReassignPartitionsCommand.PartitionReassignmentState</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.ReassignPartitionsCommandOptions.html">ReassignPartitionsCommand.ReassignPartitionsCommandOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.ReassignPartitionsCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.ReassignPartitionsCommandOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.TerseReassignmentFailureException.html">ReassignPartitionsCommand.TerseReassignmentFailureException</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.TerseReassignmentFailureException.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.TerseReassignmentFailureException.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ReassignPartitionsCommand.VerifyAssignmentResult.html">ReassignPartitionsCommand.VerifyAssignmentResult</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.TopicCommand.html">TopicCommand</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.TopicCommand.CommandTopicPartition.html">TopicCommand.CommandTopicPartition</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.CommandTopicPartition.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.CommandTopicPartition.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.TopicCommand.DescribeOptions.html">TopicCommand.DescribeOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.DescribeOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.DescribeOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.TopicCommand.PartitionDescription.html">TopicCommand.PartitionDescription</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.PartitionDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.PartitionDescription.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.TopicCommand.TopicCommandOptions.html">TopicCommand.TopicCommandOptions</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicCommandOptions.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicCommandOptions.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.TopicCommand.TopicDescription.html">TopicCommand.TopicDescription</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicDescription.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicDescription.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.TopicCommand.TopicService.html">TopicCommand.TopicService</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicService.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/TopicCommand.TopicService.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.ZkSecurityMigrator.html">ZkSecurityMigrator</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ZkSecurityMigrator.html">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.0/kafka/admin/ZkSecurityMigrator.html</a></p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kafka.Admin.IRackAwareMode.html">IRackAwareMode</a></dt>
+      <dd><p>.NET interface for TO BE DEFINED FROM USER</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
