@@ -11,7 +11,7 @@ The configuration is:
 ```json
 {
   "RelativeDestinationCSharpClassPath": "net\\KNet\\Generated",
-  "RelativeDestinationJavaListenerPath": "java\\knet\\src\\main\\java",
+  "RelativeDestinationJavaListenerPath": "jvm\\knet\\src\\main\\java",
   "JavaListenerBasePackage": "org.mases.knet.generated",
   "OnlyPropertiesForGetterSetter": true,
   "DisableInterfaceMethodGeneration": true,
@@ -228,5 +228,4 @@ The configuration is:
     "org.apache.zookeeper.server.quorum.QuorumPeerMain"
   ]
 }
-
 ```
