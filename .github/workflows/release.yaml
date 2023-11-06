@@ -37,11 +37,11 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
 
       - name: Install local file to be used within Javadoc plugin of generated POM
-        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/java/knet/pom.xml
+        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/jvm/knet/pom.xml
         shell: bash
 
       - name: Create Jars
-        run: mvn --file ./src/java/knet/pom.xml --no-transfer-progress package
+        run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
@@ -95,11 +95,11 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
 
       - name: Install local file to be used within Javadoc plugin of generated POM
-        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/java/knet/pom.xml
+        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/jvm/knet/pom.xml
         shell: bash
 
       - name: Create Jars
-        run: mvn --file ./src/java/knet/pom.xml --no-transfer-progress package
+        run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
@@ -161,11 +161,11 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
 
       - name: Install local file to be used within Javadoc plugin of generated POM
-        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/java/knet/pom.xml
+        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/jvm/knet/pom.xml
         shell: bash
 
       - name: Create Jars
-        run: mvn --file ./src/java/knet/pom.xml --no-transfer-progress package
+        run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
