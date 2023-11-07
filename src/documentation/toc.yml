@@ -11,7 +11,6 @@
   href: https://github.com/masesgroup/KNet/issues/
 - name: Open source projects
   dropdown: true
-  href: https://masesgroup.github.io/
   items:
   - name: JNet
     href: https://masesgroup.github.io/JNet/
