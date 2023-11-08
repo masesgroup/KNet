@@ -56,7 +56,7 @@
 	  "_appLogoPath": "images/logo.png",
       "_appFaviconPath": "images/favicon.ico",
       "_appTitle": "MASES Group website - KNet",
-      "_appFooter": "<span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>",
+      "_appFooter": "<div style=\"text-align: center;\">Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>",
       "_gitContribute": {
 
       }
