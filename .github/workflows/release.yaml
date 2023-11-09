@@ -63,7 +63,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          file: DockerfileKNet.linux
+          file: ./src/container/DockerfileKNet.linux
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
@@ -121,7 +121,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          file: DockerfileKNetConnect.linux
+          file: ./src/container/DockerfileKNetConnect.linux
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
