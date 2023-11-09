@@ -36,12 +36,12 @@ jobs:
                 echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
               fi
-              if [[ $added_modified_file == "DockerfileKNet.linux"* ]]; then
+              if [[ $added_modified_file == "src/container/DockerfileKNet.linux"* ]]; then
                 echo "$added_modified_file file changed"
                 echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
               fi
-              if [[ $added_modified_file == "DockerfileKNetConnect.linux"* ]]; then
+              if [[ $added_modified_file == "src/container/DockerfileKNetConnect.linux"* ]]; then
                 echo "$added_modified_file file changed"
                 echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
@@ -89,7 +89,7 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
         
       - name: Build KNet Docker Image
-        run: docker build -t mases.knet -f DockerfileKNet.linux .
+        run: docker build -t mases.knet -f ./src/container/DockerfileKNet.linux .
 
       - name: Save Docker Image
         run: docker image save -o mases.knet.linux.tar mases.knet
@@ -98,7 +98,7 @@ jobs:
         run: gzip mases.knet.linux.tar
           
       - name: Build KNetConnect Docker Image
-        run: docker build -t mases.knetconnect -f DockerfileKNetConnect.linux .
+        run: docker build -t mases.knetconnect -f ./src/container/DockerfileKNetConnect.linux .
 
       - name: Save KNetConnect Docker Image
         run: docker image save -o mases.knetconnect.linux.tar mases.knetconnect
