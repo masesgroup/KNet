@@ -1,3 +1,8 @@
+---
+title: PowerShell module of .NET suite for Apache Kafka
+_description: Describes how to use PowerShell module of .NET suite for Apache Kafka
+---
+
 # KNet: PowerShell Module
 
 ## Installation

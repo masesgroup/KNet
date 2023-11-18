@@ -1,4 +1,7 @@
-% KNet performance
+---
+title: Performance of .NET suite for Apache Kafka
+_description: Describes the performance evaluation of .NET suite for Apache Kafka
+---
 
 # KNet: performance evaluation
 
@@ -234,8 +237,6 @@ Looking at the above table KNet performs better than Confluent.Kafka.
 #### SD ratio percentage
 
 Looking at value within the brackets, that represents the ratio of the SD, it is possible to highlight that the more stable values are available with packet size higher than 100 bytes.
-
-
 
 ## Final considerations
 

@@ -1,3 +1,8 @@
+---
+title: Connect SDK of .NET suite for Apache Kafka
+_description: Describes how to use a connector build over KNet Connect SDK of .NET suite for Apache Kafka
+---
+
 # KNet: Connect SDK
 
 This is only a quick start guide, many other information related to Apache Kafka Connect can be found at the following link https://kafka.apache.org/documentation/#connect

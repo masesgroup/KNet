@@ -1,3 +1,8 @@
+---
+title: JVM callbacks within .NET suite for Apache Kafka powered code
+_description: Describes how to manage callbacks from JVM using the .NET suite for Apache Kafka
+---
+
 # KNet: JVM callbacks
 
 One of the features of [JCOBridge](https://www.jcobridge.com/), used in KNet, is the callback management from JVM.

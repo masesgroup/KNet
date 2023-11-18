@@ -1,3 +1,8 @@
+---
+title: Usage of .NET suite for Apache Kafka
+_description: Describes how to use .NET suite for Apache Kafka
+---
+
 # KNet: library usage
 
 To use KNet classes the developer can write code in .NET using the same classes available in the official Apache Kafka package.

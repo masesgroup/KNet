@@ -1,3 +1,8 @@
+---
+title: Current development state of .NET suite for Apache Kafka
+_description: Describes the current development state of .NET suite for Apache Kafka
+---
+
 # KNet: development state
 
 This release comes with some ready made classes:

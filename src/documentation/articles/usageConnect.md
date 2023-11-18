@@ -1,3 +1,8 @@
+---
+title: Kafka Connect SDK of .NET suite for Apache Kafka
+_description: Describes how to use Kafka Connect SDK of .NET suite for Apache Kafka
+---
+
 # KNet: KNet Connect SDK
 
 ## Installation

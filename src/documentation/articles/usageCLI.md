@@ -1,3 +1,8 @@
+---
+title: CLI interface of .NET suite for Apache Kafka
+_description: Describes how to use CLI interface of .NET suite for Apache Kafka
+---
+
 # KNet: CLI
 
 ## Installation

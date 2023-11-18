@@ -1,3 +1,8 @@
+---
+title: Roadmap of .NET suite for Apache Kafka
+_description: Describes the roadmap of .NET suite for Apache Kafka
+---
+
 # KNet roadmap
 
 The roadmap can be synthetized in the following points:
