@@ -1,3 +1,8 @@
+---
+title: Serialization usage of .NET suite for Apache Kafka
+_description: Describes how to use serialization of .NET suite for Apache Kafka
+---
+
 # KNet: Serializer/Deserializer
 
 KNet comes with a base set of serializer and deserializer. Most of them are usable with primitives types (bool, int, etc) and array of bytes.

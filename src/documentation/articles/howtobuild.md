@@ -1,3 +1,8 @@
+---
+title: How to build .NET suite for Apache Kafka
+_description: Describes how to build the Java/JVM suite for .NET from scatch
+---
+
 # KNet: How to build from scratch
 
 If the user clones the repo, the following steps shall be done to use the project. The full steps can be found within the repo, under the **.github\workflows** folder.

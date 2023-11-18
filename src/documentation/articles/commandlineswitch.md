@@ -1,3 +1,8 @@
+---
+title: Command-line switches of .NET suite for Apache Kafka
+_description: Describes the command-line switches of .NET suite for Apache Kafka
+---
+
 # KNet: Command line switches available
 
 _knet_ accepts the following command-line switches:

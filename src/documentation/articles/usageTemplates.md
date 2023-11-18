@@ -1,3 +1,8 @@
+---
+title: Templates usage of .NET suite for Apache Kafka
+_description: Describes how to use templates of .NET suite for Apache Kafka
+---
+
 # KNet: Template Usage Guide
 
 For more information related to .NET templates look at https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new-sdk-templates.
