@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\Common\Common.props" />
 	<PropertyGroup>
 		<OutputPath>..\..\..\bin\</OutputPath>
@@ -19,7 +19,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Apache.Avro" Version="1.11.3" />
-	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
 	    <PrivateAssets>all</PrivateAssets>
 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>
