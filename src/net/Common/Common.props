@@ -21,7 +21,7 @@
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' != 'true'">
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<TargetFrameworks>net462;net6.0;net7.0</TargetFrameworks>
+		<TargetFrameworks>net462;net6.0;net7.0;net8.0</TargetFrameworks>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' == 'true'">
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
