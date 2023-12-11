@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region IPunctuator
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.Punctuator implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/Punctuator.html"/>
     /// </summary>
     public partial interface IPunctuator
     {
@@ -64,12 +64,33 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
+        /// Handlers initializer for <see cref="Punctuator"/>
+        /// </summary>
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("punctuate", new System.EventHandler<CLRListenerEventArgs<CLREventData<long>>>(PunctuateEventHandler));
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/Punctuator.html#punctuate-long-"/>
+        /// </summary>
+        /// <remarks>If <see cref="OnPunctuate"/> has a value it takes precedence over corresponding class method</remarks>
+        public System.Action<long> OnPunctuate { get; set; } = null;
+
+        void PunctuateEventHandler(object sender, CLRListenerEventArgs<CLREventData<long>> data)
+        {
+            var methodToExecute = (OnPunctuate != null) ? OnPunctuate : Punctuate;
+            methodToExecute.Invoke(data.EventData.TypedEventData);
+        }
+
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/Punctuator.html#punctuate-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
-        public void Punctuate(long arg0)
+        public virtual void Punctuate(long arg0)
         {
-            IExecute("punctuate", arg0);
+            
         }
 
         #endregion
