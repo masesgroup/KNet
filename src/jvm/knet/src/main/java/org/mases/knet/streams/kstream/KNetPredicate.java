@@ -21,15 +21,33 @@ package org.mases.knet.streams.kstream;
 import org.apache.kafka.streams.kstream.Predicate;
 import org.mases.jcobridge.*;
 
-public final class PredicateImpl extends JCListener implements Predicate {
-    public PredicateImpl(String key) throws JCNativeException {
-        super(key);
+import java.util.Arrays;
+
+public final class KNetPredicate implements Predicate<byte[], byte[]> {
+    Boolean _isKey = null;
+    byte[] _key = null;
+    byte[] _value = null;
+
+    public KNetPredicate(byte[] keyOrValue, boolean isKey) {
+        _isKey = isKey;
+        _key = keyOrValue;
+    }
+
+    public KNetPredicate(byte[] keyOrValue, byte[] value) {
+        _key = keyOrValue;
+        _value = value;
     }
 
     @Override
-    public boolean test(Object e1, Object e2) {
-        raiseEvent("test", e1, e2);
-        Object retVal = getReturnData();
-        return (boolean) retVal;
+    public boolean test(byte[] bytes, byte[] bytes2) {
+        if (_isKey != null) {
+            if (_isKey == true) {
+                return Arrays.equals(bytes, _key);
+            } else {
+                return Arrays.equals(bytes2, _value);
+            }
+        } else {
+            return Arrays.equals(bytes, _key) && Arrays.equals(bytes2, _value);
+        }
     }
 }
