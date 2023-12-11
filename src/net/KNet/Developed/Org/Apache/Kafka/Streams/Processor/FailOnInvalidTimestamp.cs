@@ -21,13 +21,13 @@ using System;
 
 namespace Org.Apache.Kafka.Streams.Processor
 {
-    public partial class UsePartitionTimeOnInvalidTimestamp
+    public partial class FailOnInvalidTimestamp
     {
         #region Class/Interface conversion operators
         /// <summary>
-        /// Converter from <see cref="UsePartitionTimeOnInvalidTimestamp"/> to <see cref="TimestampExtractor"/>
+        /// Converter from <see cref="FailOnInvalidTimestamp"/> to <see cref="TimestampExtractor"/>
         /// </summary>
-        public static implicit operator TimestampExtractor(UsePartitionTimeOnInvalidTimestamp t) => t.Cast<TimestampExtractor>();
+        public static implicit operator TimestampExtractor(FailOnInvalidTimestamp t) => t.Cast<TimestampExtractor>();
 
         #endregion
     }
