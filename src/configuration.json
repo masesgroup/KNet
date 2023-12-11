@@ -158,6 +158,7 @@
     "org.apache.kafka.streams.kstream.ValueTransformer",
     "org.apache.kafka.streams.kstream.ValueTransformerWithKey",
     "org.apache.kafka.streams.processor.BatchingStateRestoreCallback",
+    "org.apache.kafka.streams.processor.Punctuator",
     "org.apache.kafka.streams.processor.StateRestoreCallback",
     "org.apache.kafka.streams.processor.TimestampExtractor",
     "org.apache.kafka.streams.processor.TopicNameExtractor",
