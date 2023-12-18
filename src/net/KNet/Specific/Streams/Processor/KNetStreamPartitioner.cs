@@ -49,10 +49,17 @@ namespace MASES.KNet.Specific.Streams.Processor
         /// </summary>
         public IKNetSerDes<TValue> ValueSerializer => _valueSerializer;
 
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
+        /// </summary>
+        /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
+        public new System.Func<string, TKey, TValue, int, Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>>> OnPartitions { get; set; } = null;
+
         /// <inheritdoc/>
         public sealed override Optional<Set<Integer>> Partitions(string arg0, byte[] arg1, byte[] arg2, int arg3)
         {
-            return Partitions(arg0, _keySerializer.Deserialize(arg0, arg1), _valueSerializer.Deserialize(arg0, arg2), arg3);
+            var methodToExecute = (OnPartitions != null) ? OnPartitions : Partitions;
+            return methodToExecute(arg0, _keySerializer.Deserialize(arg0, arg1), _valueSerializer.Deserialize(arg0, arg2), arg3);
         }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>

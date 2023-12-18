@@ -29,7 +29,10 @@ namespace MASES.KNet.Serialization
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
     public interface IKNetSerDes<T> : IKNetSerializer<T>, IKNetDeserializer<T>
     {
-
+        /// <summary>
+        /// The <see cref="Serde{T}"/> to use in Apache Kafka
+        /// </summary>
+        Serde<byte[]> KafkaSerde { get; }
     }
 
     /// <summary>
@@ -38,9 +41,57 @@ namespace MASES.KNet.Serialization
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
     public class KNetSerDes<T> : IKNetSerDes<T>
     {
+        #region private fields
         readonly KNetSerialization.SerializationType _SerializationType = KNetSerialization.InternalSerDesType<T>();
+        Serde<byte[]> _KafkaSerde = new Serde<byte[]>();
         Serializer<byte[]> _KafkaSerializer = new ByteArraySerializer();
         Deserializer<byte[]> _KafkaDeserializer = new ByteArrayDeserializer();
+        #endregion
+
+        #region Private methods
+
+        Serializer<byte[]> kafkaSerializer()
+        {
+            return _KafkaSerializer;
+        }
+
+        Deserializer<byte[]> kafkaDeserializer()
+        {
+            return _KafkaDeserializer;
+        }
+
+        #endregion
+
+        #region Constructor
+        /// <summary>
+        /// Default initializer
+        /// </summary>
+        public KNetSerDes()
+        {
+            _KafkaSerde.OnSerializer = kafkaSerializer;
+            _KafkaSerde.OnDeserializer = kafkaDeserializer;
+        }
+        /// <summary>
+        /// Finalizer
+        /// </summary>
+        ~KNetSerDes()
+        {
+            Dispose();
+        }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+            _KafkaSerde?.Dispose();
+            _KafkaSerde = null;
+            _KafkaSerializer?.Dispose();
+            _KafkaSerializer = null;
+            _KafkaDeserializer?.Dispose();
+            _KafkaDeserializer = null;
+        }
+        #endregion
+
+        #region IKNetSerDes<T>
         /// <summary>
         /// External serialization function
         /// </summary>
@@ -57,22 +108,8 @@ namespace MASES.KNet.Serialization
         /// External deserialization function using <see cref="Headers"/>
         /// </summary>
         public Func<string, Headers, byte[], T> OnDeserializeWithHeaders { get; set; }
-        /// <summary>
-        /// Finalizer
-        /// </summary>
-        ~KNetSerDes()
-        {
-            Dispose();
-        }
-        /// <inheritdoc cref="IDisposable.Dispose"/>
-        public void Dispose()
-        {
-            GC.SuppressFinalize(this);
-            _KafkaSerializer?.Dispose();
-            _KafkaSerializer = null;
-            _KafkaDeserializer?.Dispose();
-            _KafkaDeserializer = null;
-        }
+        /// <inheritdoc cref="IKNetSerDes{T}.KafkaSerde"/>
+        public Serde<byte[]> KafkaSerde => _KafkaSerde;
         /// <inheritdoc cref="IKNetSerializer{T}.KafkaSerializer"/>
         public Serializer<byte[]> KafkaSerializer => _KafkaSerializer;
         /// <inheritdoc cref="IKNetDeserializer{T}.KafkaDeserializer"/>
@@ -146,5 +183,6 @@ namespace MASES.KNet.Serialization
 
             return Deserialize(topic, data);
         }
+        #endregion
     }
 }
