@@ -106,7 +106,7 @@ jobs:
       - name: Compress KNetConnect Docker Image
         run: gzip mases.knetconnect.linux.tar
         
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Docker Images
           path: ./*.tar.gz
@@ -193,7 +193,7 @@ jobs:
           Publish-Module -Path .\MASES.KNetPS -Repository Local_Nuget_Feed -NuGetApiKey 'ABC123'
         shell: pwsh
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: KNet
           path: .\bin\*nupkg
