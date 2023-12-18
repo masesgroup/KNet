@@ -151,6 +151,7 @@ The configuration is:
     "org.apache.kafka.common.config.ConfigChangeCallback",
     "org.apache.kafka.common.metrics.MetricsReporter",
     "org.apache.kafka.common.serialization.Deserializer",
+    "org.apache.kafka.common.serialization.Serde",
     "org.apache.kafka.common.serialization.Serializer",
     "org.apache.kafka.streams.KafkaClientSupplier",
     "org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler",
