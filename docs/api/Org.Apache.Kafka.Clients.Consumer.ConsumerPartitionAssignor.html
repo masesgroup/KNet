@@ -95,7 +95,7 @@
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -501,10 +501,10 @@
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnAssign" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnAssign">
   OnAssign
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#assign-org.apache.kafka.common.Cluster-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#assign-org.apache.kafka.common.Cluster-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#assign-org.apache.kafka.common.Cluster-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#assign-org.apache.kafka.common.Cluster-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -532,14 +532,49 @@
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnGetAssignorInstances_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnGetAssignorInstances*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnGetAssignorInstances" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnGetAssignorInstances">
+  OnGetAssignorInstances
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#getAssignorInstances-java.util.List-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#getAssignorInstances-java.util.List-java.util.Map-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;List&lt;string&gt;, Map&lt;string, object&gt;, List&lt;ConsumerPartitionAssignor&gt;&gt; OnGetAssignorInstances { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<span class="xref">List</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;, <span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;, <span class="xref">List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.html">ConsumerPartitionAssignor</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnGetAssignorInstances_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.html#Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnGetAssignorInstances">OnGetAssignorInstances</a> has a value it takes precedence over corresponding class method</p>
+</div>
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnName_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnName*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnName" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnName">
   OnName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#name--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#name--</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#name--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#name--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -571,10 +606,10 @@
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnOnAssignment" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnOnAssignment">
   OnOnAssignment
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -606,10 +641,10 @@
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnSubscriptionUserData" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnSubscriptionUserData">
   OnSubscriptionUserData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -641,10 +676,10 @@
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnSupportedProtocols" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnSupportedProtocols">
   OnSupportedProtocols
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L199"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols--</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -676,10 +711,10 @@
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnVersion" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnVersion">
   OnVersion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version--</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -715,10 +750,10 @@
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Assign_Org_Apache_Kafka_Common_Cluster_Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_GroupSubscription_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assign(Org.Apache.Kafka.Common.Cluster,Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupSubscription)">
   Assign(Cluster, GroupSubscription)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#assign-org.apache.kafka.common.Cluster-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#assign-org.apache.kafka.common.Cluster-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#assign-org.apache.kafka.common.Cluster-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#assign-org.apache.kafka.common.Cluster-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -753,11 +788,53 @@
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_GetAssignorInstances_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GetAssignorInstances*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_GetAssignorInstances_Java_Util_List_System_String__Java_Util_Map_System_String_System_Object__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GetAssignorInstances(Java.Util.List{System.String},Java.Util.Map{System.String,System.Object})">
+  GetAssignorInstances(List&lt;string&gt;, Map&lt;string, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#getAssignorInstances-java.util.List-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#getAssignorInstances-java.util.List-java.util.Map-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual List&lt;ConsumerPartitionAssignor&gt; GetAssignorInstances(List&lt;string&gt; arg0, Map&lt;string, object&gt; arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">List</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.List</span></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Map</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.html">ConsumerPartitionAssignor</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.List</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_InitializeHandlers_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.InitializeHandlers*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_InitializeHandlers" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.InitializeHandlers">
   InitializeHandlers()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handlers initializer for <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.html">ConsumerPartitionAssignor</a></p>
@@ -784,10 +861,10 @@
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Name" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Name">
   Name()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#name--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#name--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#name--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#name--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -817,10 +894,10 @@
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnAssignment_Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Assignment_Org_Apache_Kafka_Clients_Consumer_ConsumerGroupMetadata_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnAssignment(Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment,Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata)">
   OnAssignment(Assignment, ConsumerGroupMetadata)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L281"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -845,6 +922,48 @@
 
 
 
+  <h4 class="section" id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnAssignment_Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Assignment_Org_Apache_Kafka_Clients_Consumer_ConsumerGroupMetadata__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface using <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.html#Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnAssignmentDefault_Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Assignment_Org_Apache_Kafka_Clients_Consumer_ConsumerGroupMetadata_">OnAssignmentDefault(Assignment, ConsumerGroupMetadata)</a>; override the method to implement a different behavior</p>
+</div>
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnAssignmentDefault_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnAssignmentDefault*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnAssignmentDefault_Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Assignment_Org_Apache_Kafka_Clients_Consumer_ConsumerGroupMetadata_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.OnAssignmentDefault(Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment,Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata)">
+  OnAssignmentDefault(Assignment, ConsumerGroupMetadata)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnAssignmentDefault(ConsumerPartitionAssignor.Assignment arg0, ConsumerGroupMetadata arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.html">ConsumerPartitionAssignor</a>.<a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment.html">Assignment</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment.html">ConsumerPartitionAssignor.Assignment</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata.html">ConsumerGroupMetadata</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata.html">ConsumerGroupMetadata</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_OnAssignmentDefault_Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Assignment_Org_Apache_Kafka_Clients_Consumer_ConsumerGroupMetadata__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface</p>
+</div>
 
 
 
@@ -853,10 +972,10 @@
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SubscriptionUserData_Java_Util_Set_System_String__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.SubscriptionUserData(Java.Util.Set{System.String})">
   SubscriptionUserData(Set&lt;string&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -884,6 +1003,51 @@
 
 
 
+  <h4 class="section" id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SubscriptionUserData_Java_Util_Set_System_String___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface using <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.html#Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SubscriptionUserDataDefault_Java_Util_Set_System_String__">SubscriptionUserDataDefault(Set&lt;string&gt;)</a>; override the method to implement a different behavior</p>
+</div>
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SubscriptionUserDataDefault_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.SubscriptionUserDataDefault*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SubscriptionUserDataDefault_Java_Util_Set_System_String__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.SubscriptionUserDataDefault(Java.Util.Set{System.String})">
+  SubscriptionUserDataDefault(Set&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ByteBuffer SubscriptionUserDataDefault(Set&lt;string&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Set</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ByteBuffer</span></dt>
+    <dd><p><span class="xref">Java.Nio.ByteBuffer</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SubscriptionUserDataDefault_Java_Util_Set_System_String___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface</p>
+</div>
 
 
 
@@ -892,10 +1056,10 @@
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SupportedProtocols" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.SupportedProtocols">
   SupportedProtocols()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L214"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -917,6 +1081,45 @@
 
 
 
+  <h4 class="section" id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SupportedProtocols_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface using <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.html#Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SupportedProtocolsDefault">SupportedProtocolsDefault()</a>; override the method to implement a different behavior</p>
+</div>
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SupportedProtocolsDefault_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.SupportedProtocolsDefault*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SupportedProtocolsDefault" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.SupportedProtocolsDefault">
+  SupportedProtocolsDefault()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ConsumerPartitionAssignor.RebalanceProtocol&gt; SupportedProtocolsDefault()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.html">ConsumerPartitionAssignor</a>.<a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.RebalanceProtocol.html">RebalanceProtocol</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.List</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_SupportedProtocolsDefault_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface</p>
+</div>
 
 
 
@@ -925,10 +1128,10 @@
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Version" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Version">
   Version()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L248"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -950,6 +1153,45 @@
 
 
 
+  <h4 class="section" id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Version_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface using <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.html#Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_VersionDefault">VersionDefault()</a>; override the method to implement a different behavior</p>
+</div>
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_VersionDefault_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.VersionDefault*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_VersionDefault" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.VersionDefault">
+  VersionDefault()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public short VersionDefault()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_VersionDefault_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface</p>
+</div>
 
 
 

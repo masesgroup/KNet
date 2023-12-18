@@ -87,7 +87,7 @@
 
   <h1 id="Org_Apache_Kafka_Common_Serialization_Serde_1" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1" class="text-break">
     Class Serde&lt;T&gt;
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L197"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -95,12 +95,12 @@
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/serialization/Serde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/serialization/Serde.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Serde&lt;T&gt; : Closeable, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, ISerde&lt;T&gt;, ICloseable, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Serde&lt;T&gt; : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, ISerde&lt;T&gt;</code></pre>
   </div>
 
 
@@ -117,9 +117,8 @@
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<span class="xref">AutoCloseable</span>&gt;</div>
-      <div><span class="xref">AutoCloseable</span></div>
-      <div><span class="xref">Closeable</span></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<span class="xref">JVMBridgeListener</span>&gt;</div>
+      <div><span class="xref">JVMBridgeListener</span></div>
       <div><span class="xref">Serde&lt;T&gt;</span></div>
     </dd>
   </dl>
@@ -134,119 +133,132 @@
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.Serialization.ISerde-1.html">ISerde</a>&lt;T&gt;</div>
-      <div><span class="xref">ICloseable</span></div>
-      <div><span class="xref">IAutoCloseable</span></div>
     </dd>
   </dl>
 
-  <dl class="typelist derived">
-    <dt>Derived</dt>
-    <dd>
-      <div><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde-1.html">Serdes.WrapperSerde&lt;T&gt;</a></div>
-    </dd>
-  </dl>
 
   <dl class="typelist derived">
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler(string, EventHandler)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler&lt;TDataClass&gt;(string, EventHandler&lt;CLRListenerEventArgs&lt;TDataClass&gt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
+      <span class="xref">JVMBridgeListener.Dispose()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+      <span class="xref">JVMBridgeListener.AutoInit</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, IJavaType, string, params object[])</a>
+      <span class="xref">JVMBridgeListener.IsBridgeStatic</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, string, params object[])</a>
+      <span class="xref">JVMBridgeListener.IsBridgeCloseable</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
+      <span class="xref">JVMBridgeListener.IsBridgeListener</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(Type, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField&lt;TReturn&gt;(string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField(IJavaType, string, object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField(string, object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField(IJavaType, string)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField(string)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField&lt;TReturn&gt;(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(IJavaType)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AutoCloseable&gt;.New(params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField(IJavaType, string, object)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField(string, object)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.DynBridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;JVMBridgeListener&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.Execute&lt;T&gt;(params T[])</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.BridgeClazz</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
@@ -295,9 +307,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
-    </div>
-    <div>
-      <span class="xref">JVMBridgeBase.Dispose()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -360,7 +369,10 @@
       <span class="xref">JVMBridgeBase.BridgeInstance</span>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
+      <span class="xref">JVMBridgeBase.IsBridgeInterface</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsBridgeAbstract</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
@@ -431,7 +443,7 @@
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1__ctor" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.#ctor">
   Serde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L988"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L967"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -454,38 +466,6 @@
 
 
 
-  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1__ctor_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.#ctor*"></a>
-
-  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.#ctor(System.Object[])">
-  Serde(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L992"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Serde(params object[] args)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -494,10 +474,10 @@
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L999"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L972"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -522,19 +502,19 @@
 
 
 
-  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.IsBridgeAbstract*"></a>
+  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnClose_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.OnClose*"></a>
 
-  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.IsBridgeAbstract">
-  IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1003"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnClose" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.OnClose">
+  OnClose
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L286"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Action OnClose { get; set; }</code></pre>
   </div>
 
 
@@ -543,30 +523,33 @@
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
     <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnClose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html#Org_Apache_Kafka_Common_Serialization_Serde_1_OnClose">OnClose</a> has a value it takes precedence over corresponding class method</p>
+</div>
 
 
 
 
-  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.IsBridgeCloseable*"></a>
+  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnConfigure_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.OnConfigure*"></a>
 
-  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.IsBridgeCloseable">
-  IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1007"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnConfigure" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.OnConfigure">
+  OnConfigure
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L317"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Action&lt;Map&lt;string, object&gt;, bool&gt; OnConfigure { get; set; }</code></pre>
   </div>
 
 
@@ -575,30 +558,33 @@
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
     <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnConfigure_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html#Org_Apache_Kafka_Common_Serialization_Serde_1_OnConfigure">OnConfigure</a> has a value it takes precedence over corresponding class method</p>
+</div>
 
 
 
 
-  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.IsBridgeInterface*"></a>
+  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnDeserializer_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.OnDeserializer*"></a>
 
-  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.IsBridgeInterface">
-  IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1011"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnDeserializer" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.OnDeserializer">
+  OnDeserializer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L232"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#deserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#deserializer--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;Deserializer&lt;T&gt;&gt; OnDeserializer { get; set; }</code></pre>
   </div>
 
 
@@ -607,30 +593,33 @@
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer-1.html">Deserializer</a>&lt;T&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnDeserializer_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html#Org_Apache_Kafka_Common_Serialization_Serde_1_OnDeserializer">OnDeserializer</a> has a value it takes precedence over corresponding class method</p>
+</div>
 
 
 
 
-  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.IsBridgeStatic*"></a>
+  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnSerializer_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.OnSerializer*"></a>
 
-  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.IsBridgeStatic">
-  IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1015"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnSerializer" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.OnSerializer">
+  OnSerializer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#serializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#serializer--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;Serializer&lt;T&gt;&gt; OnSerializer { get; set; }</code></pre>
   </div>
 
 
@@ -639,13 +628,16 @@
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serializer-1.html">Serializer</a>&lt;T&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnSerializer_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html#Org_Apache_Kafka_Common_Serialization_Serde_1_OnSerializer">OnSerializer</a> has a value it takes precedence over corresponding class method</p>
+</div>
 
 
 
@@ -658,15 +650,15 @@
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_Close" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L298"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/serialization/Serde.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/serialization/Serde.html#close--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Close()</code></pre>
   </div>
 
 
@@ -677,6 +669,39 @@
 
 
 
+  <h4 class="section" id="Org_Apache_Kafka_Common_Serialization_Serde_1_Close_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface using <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html#Org_Apache_Kafka_Common_Serialization_Serde_1_CloseDefault">CloseDefault()</a>; override the method to implement a different behavior</p>
+</div>
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_CloseDefault_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.CloseDefault*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_CloseDefault" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.CloseDefault">
+  CloseDefault()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#close--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CloseDefault()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Org_Apache_Kafka_Common_Serialization_Serde_1_CloseDefault_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface</p>
+</div>
 
 
 
@@ -685,15 +710,15 @@
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_Configure_Java_Util_Map_System_String_System_Object__System_Boolean_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.Configure(Java.Util.Map{System.String,System.Object},System.Boolean)">
   Configure(Map&lt;string, object&gt;, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L331"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Configure(Map&lt;string, object&gt; arg0, bool arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Configure(Map&lt;string, object&gt; arg0, bool arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -713,6 +738,48 @@
 
 
 
+  <h4 class="section" id="Org_Apache_Kafka_Common_Serialization_Serde_1_Configure_Java_Util_Map_System_String_System_Object__System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface using <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html#Org_Apache_Kafka_Common_Serialization_Serde_1_ConfigureDefault_Java_Util_Map_System_String_System_Object__System_Boolean_">ConfigureDefault(Map&lt;string, object&gt;, bool)</a>; override the method to implement a different behavior</p>
+</div>
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_ConfigureDefault_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.ConfigureDefault*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_ConfigureDefault_Java_Util_Map_System_String_System_Object__System_Boolean_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.ConfigureDefault(Java.Util.Map{System.String,System.Object},System.Boolean)">
+  ConfigureDefault(Map&lt;string, object&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ConfigureDefault(Map&lt;string, object&gt; arg0, bool arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Map</span></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Org_Apache_Kafka_Common_Serialization_Serde_1_ConfigureDefault_Java_Util_Map_System_String_System_Object__System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface</p>
+</div>
 
 
 
@@ -721,15 +788,15 @@
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_Deserializer" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.Deserializer">
   Deserializer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/serialization/Serde.html#deserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/serialization/Serde.html#deserializer--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#deserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#deserializer--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Deserializer&lt;T&gt; Deserializer()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Deserializer&lt;T&gt; Deserializer()</code></pre>
   </div>
 
 
@@ -750,19 +817,46 @@
 
 
 
-  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_Serializer_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.Serializer*"></a>
+  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_InitializeHandlers_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.InitializeHandlers*"></a>
 
-  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_Serializer" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.Serializer">
-  Serializer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_InitializeHandlers" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.InitializeHandlers">
+  InitializeHandlers()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/serialization/Serde.html#serializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/common/serialization/Serde.html#serializer--</a></p>
+  <div class="markdown level1 summary"><p>Handlers initializer for <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Serializer&lt;T&gt; Serializer()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeHandlers()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_Serializer_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.Serializer*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_Serializer" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.Serializer">
+  Serializer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#serializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#serializer--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Serializer&lt;T&gt; Serializer()</code></pre>
   </div>
 
 
@@ -783,52 +877,11 @@
 
 
 
-  <h2 class="section" id="operators">Operators
-</h2>
-
-
-  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_op_Implicit_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.op_Implicit*"></a>
-
-  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_op_Implicit_Org_Apache_Kafka_Common_Serialization_Serde__0___Org_Apache_Kafka_Common_Serialization_Serde" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.op_Implicit(Org.Apache.Kafka.Common.Serialization.Serde{`0})~Org.Apache.Kafka.Common.Serialization.Serde">
-  implicit operator Serde(Serde&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L122"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde&lt;T&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Serde(Serde&lt;T&gt; t)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;T&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L112" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L197" class="edit-link">Edit this page</a>
         </div>
 
 
