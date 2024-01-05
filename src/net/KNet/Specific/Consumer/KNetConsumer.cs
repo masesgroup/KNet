@@ -125,6 +125,16 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// Initialize a new instance of <see cref="KNetConsumer{K, V}"/>
         /// </summary>
+        /// <param name="configBuilder">An instance of <see cref="ConsumerConfigBuilder"/> </param>
+        /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
+        public KNetConsumer(ConsumerConfigBuilder configBuilder, bool useJVMCallback = false)
+            : this(configBuilder, configBuilder.BuildKeySerDes<K>(), configBuilder.BuildValueSerDes<V>())
+        {
+            _autoCreateSerDes = true;
+        }
+        /// <summary>
+        /// Initialize a new instance of <see cref="KNetConsumer{K, V}"/>
+        /// </summary>
         /// <param name="props">The properties to use, see <see cref="ConsumerConfig"/> and <see cref="ConsumerConfigBuilder"/></param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="KNetSerDes{K}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="KNetSerDes{K}"/></param>

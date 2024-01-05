@@ -190,9 +190,17 @@ namespace MASES.KNet.Replicator
         /// </summary>
         ProducerConfigBuilder ProducerConfig { get; }
         /// <summary>
+        /// The <see cref="Type"/> used to create an instance of <see cref="KeySerDes"/>"/>
+        /// </summary>
+        Type KNetKeySerDes { get; }
+        /// <summary>
         /// Get or set an instance of <see cref="IKNetSerDes{TKey}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TKey"/>
         /// </summary>
         IKNetSerDes<TKey> KeySerDes { get; }
+        /// <summary>
+        /// The <see cref="Type"/> used to create an instance of <see cref="ValueSerDes"/>"/>
+        /// </summary>
+        Type KNetValueSerDes { get; }
         /// <summary>
         /// Get or set an instance of <see cref="IKNetSerDes{TValue}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TValue"/>
         /// </summary>
@@ -516,8 +524,12 @@ namespace MASES.KNet.Replicator
         private bool[] _assignmentWaitersStatus;
         private long[] _lastPartitionLags = null;
 
+        private Type _KNetKeySerDes = null;
         private IKNetSerDes<TKey> _keySerDes = null;
+        private bool _disposeKeySerDes = false;
+        private Type _KNetValueSerDes = null;
         private IKNetSerDes<TValue> _valueSerDes = null;
+        private bool _disposeValueSerDes = false;
 
         private bool _started = false;
 
@@ -589,8 +601,62 @@ namespace MASES.KNet.Replicator
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ProducerConfig"/>
         public ProducerConfigBuilder ProducerConfig { get { return _producerConfig; } set { CheckStarted(); _producerConfig = value; } }
 
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.KNetKeySerDes"/>
+        public Type KNetKeySerDes
+        {
+            get { return _KNetKeySerDes; }
+            set
+            {
+                CheckStarted();
+                if (value.GetConstructors().Single(ci => ci.GetParameters().Length == 0) == null)
+                {
+                    throw new ArgumentException($"{value.Name} does not contains a default constructor and cannot be used because it is not a valid Serializer type");
+                }
+
+                if (value.IsGenericType)
+                {
+                    var keyT = value.GetGenericArguments();
+                    if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
+                    var t = value.GetGenericTypeDefinition();
+                    if (t.GetInterface(typeof(IKNetSerDes<>).Name) == null)
+                    {
+                        throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
+                    }
+                    _KNetKeySerDes = value;
+                }
+                else throw new ArgumentException($"{value.Name} is not a generic type and cannot be used as a valid ValueContainer type");
+            }
+        }
+
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.KeySerDes"/>
         public IKNetSerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.KNetValueSerDes"/>
+        public Type KNetValueSerDes
+        {
+            get { return _KNetValueSerDes; }
+            set
+            {
+                CheckStarted();
+                if (value.GetConstructors().Single(ci => ci.GetParameters().Length == 0) == null)
+                {
+                    throw new ArgumentException($"{value.Name} does not contains a default constructor and cannot be used because it is not a valid Serializer type");
+                }
+
+                if (value.IsGenericType)
+                {
+                    var keyT = value.GetGenericArguments();
+                    if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
+                    var t = value.GetGenericTypeDefinition();
+                    if (t.GetInterface(typeof(IKNetSerDes<>).Name) == null)
+                    {
+                        throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
+                    }
+                    _KNetValueSerDes = value;
+                }
+                else throw new ArgumentException($"{value.Name} is not a generic type and cannot be used as a valid Serializer type");
+            }
+        }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ValueSerDes"/>
         public IKNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
@@ -873,19 +939,18 @@ namespace MASES.KNet.Replicator
             {
                 ConsumerConfig.GroupId = GroupId;
             }
-            if (ConsumerConfig.CanApplyBasicDeserializer<TKey>() && KeySerDes == null)
+
+            if (KNetKeySerDes != null)
             {
-                KeySerDes = new KNetSerDes<TKey>();
+                ConsumerConfig.KNetKeySerDes = KNetKeySerDes;
             }
+            else if (KeySerDes == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external deserializer, set KNetKeySerDes or KeySerDes.");
 
-            if (KeySerDes == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external deserializer, set KeySerDes.");
-
-            if (ConsumerConfig.CanApplyBasicDeserializer<TValue>() && ValueSerDes == null)
+            if (KNetValueSerDes != null)
             {
-                ValueSerDes = new KNetSerDes<TValue>();
+                ConsumerConfig.KNetValueSerDes = KNetValueSerDes;
             }
-
-            if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external deserializer, set ValueSerDes.");
+            else if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external deserializer, set KNetValueSerDes or ValueSerDes.");
 
             _assignmentWaiters = new ManualResetEvent[Partitions];
             _assignmentWaitersStatus = new bool[Partitions];
@@ -903,7 +968,7 @@ namespace MASES.KNet.Replicator
             for (int i = 0; i < ConsumersToAllocate(); i++)
             {
                 _consumerAssociatedPartition.Add(i, new System.Collections.Generic.List<int>());
-                _consumers[i] = new KNetConsumer<TKey, TValue>(ConsumerConfig, KeySerDes, ValueSerDes);
+                _consumers[i] = (KNetKeySerDes != null || KNetValueSerDes != null) ? new KNetConsumer<TKey, TValue>(ConsumerConfig) : new KNetConsumer<TKey, TValue>(ConsumerConfig, KeySerDes, ValueSerDes);
                 _consumers[i].SetCallback(OnMessage);
                 _consumerListeners[i] = new KNetCompactedConsumerRebalanceListener(i)
                 {
@@ -922,7 +987,7 @@ namespace MASES.KNet.Replicator
                 ConsumerConfigBuilder consumerConfigBuilder = ConsumerConfigBuilder.CreateFrom(_consumerConfig);
                 consumerConfigBuilder.WithEnableAutoCommit(false).WithGroupId(Guid.NewGuid().ToString());
 
-                _onTheFlyConsumer = new KNetConsumer<TKey, TValue>(consumerConfigBuilder, KeySerDes, ValueSerDes);
+                _onTheFlyConsumer = (KNetKeySerDes != null || KNetValueSerDes != null) ? new KNetConsumer<TKey, TValue>(consumerConfigBuilder) : new KNetConsumer<TKey, TValue>(consumerConfigBuilder, KeySerDes, ValueSerDes);
             }
         }
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -933,21 +998,20 @@ namespace MASES.KNet.Replicator
                                                               .WithLingerMs(1);
 
             ProducerConfig.BootstrapServers = BootstrapServers;
-            if (ProducerConfig.CanApplyBasicSerializer<TKey>() && KeySerDes == null)
+
+            if (KNetKeySerDes != null)
             {
-                KeySerDes = new KNetSerDes<TKey>();
+                ProducerConfig.KNetKeySerDes = KNetKeySerDes;
             }
+            else if (KeySerDes == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external serializer, set KNetKeySerDes or KeySerDes.");
 
-            if (KeySerDes == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external serializer, set KeySerDes.");
-
-            if (ProducerConfig.CanApplyBasicSerializer<TValue>() && ValueSerDes == null)
+            if (KNetValueSerDes != null)
             {
-                ValueSerDes = new KNetSerDes<TValue>();
+                ProducerConfig.KNetValueSerDes = KNetValueSerDes;
             }
+            else if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external serializer, set KNetValueSerDes or ValueSerDes.");
 
-            if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external serializer, set ValueSerDes.");
-
-            _producer = new KNetProducer<TKey, TValue>(ProducerConfig, KeySerDes, ValueSerDes);
+            _producer = (KNetKeySerDes != null || KNetValueSerDes != null) ? new KNetProducer<TKey, TValue>(ProducerConfig) : new KNetProducer<TKey, TValue>(ProducerConfig, KeySerDes, ValueSerDes);
         }
 
         void ConsumerPollHandler(object o)
@@ -1019,6 +1083,9 @@ namespace MASES.KNet.Replicator
             if (string.IsNullOrWhiteSpace(BootstrapServers)) throw new InvalidOperationException("BootstrapServers must be set before start.");
             if (string.IsNullOrWhiteSpace(StateName)) throw new InvalidOperationException("StateName must be set before start.");
 
+            if (KNetKeySerDes != null && KeySerDes != null) { throw new InvalidOperationException($"Set only one of {nameof(KNetKeySerDes)} or {nameof(KeySerDes)}."); }
+            if (KNetValueSerDes != null && ValueSerDes != null) { throw new InvalidOperationException($"Set only one of {nameof(KNetValueSerDes)} or {nameof(ValueSerDes)}."); }
+
             if (ConsumerInstances > Partitions) throw new InvalidOperationException("ConsumerInstances cannot be high than Partitions");
 
             using Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
@@ -1059,6 +1126,18 @@ namespace MASES.KNet.Replicator
                     finally { topics?.Dispose(); }
                 }
                 finally { topic?.Dispose(); }
+            }
+            _disposeKeySerDes = false;
+            if (KNetKeySerDes == null && KeySerDes == null && KNetSerialization.IsInternalManaged<TKey>())
+            {
+                KeySerDes = new KNetSerDes<TKey>();
+                _disposeKeySerDes = true;
+            }
+            _disposeValueSerDes = false;
+            if (KNetValueSerDes == null && ValueSerDes == null && KNetSerialization.IsInternalManaged<TValue>())
+            {
+                ValueSerDes = new KNetSerDes<TValue>();
+                _disposeValueSerDes = true;
             }
 
             if (AccessRights.HasFlag(AccessRightsType.Read))
@@ -1444,6 +1523,18 @@ namespace MASES.KNet.Replicator
             }
 
             _started = false;
+
+            if (_disposeKeySerDes)
+            {
+                KeySerDes?.Dispose();
+                KeySerDes = null;
+            }
+
+            if (_disposeValueSerDes)
+            {
+                ValueSerDes?.Dispose();
+                ValueSerDes = null;
+            }
         }
 
         #endregion
