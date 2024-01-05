@@ -165,7 +165,7 @@ namespace MASES.KNet.Producer
         /// </summary>
         public override string BridgeClassName => "org.mases.knet.clients.producer.KNetProducer";
 
-        readonly bool autoCreateSerDes = false;
+        readonly bool _autoCreateSerDes = false;
         readonly IKNetSerializer<K> _keySerializer;
         readonly IKNetSerializer<V> _valueSerializer;
         /// <summary>
@@ -175,7 +175,16 @@ namespace MASES.KNet.Producer
         public KNetProducer(Properties props)
             : this(props, new KNetSerDes<K>(), new KNetSerDes<V>())
         {
-            autoCreateSerDes = true;
+            _autoCreateSerDes = true;
+        }
+        /// <summary>
+        /// Initialize a new instance of <see cref="KNetProducer{K, V}"/>
+        /// </summary>
+        /// <param name="configBuilder">An instance of <see cref="ProducerConfigBuilder"/> </param>
+        public KNetProducer(ProducerConfigBuilder configBuilder)
+            : this(configBuilder, configBuilder.BuildKeySerDes<K>(), configBuilder.BuildValueSerDes<V>())
+        {
+            _autoCreateSerDes = true;
         }
         /// <summary>
         /// Initialize a new instance of <see cref="KNetProducer{K, V}"/>
@@ -211,7 +220,7 @@ namespace MASES.KNet.Producer
         /// </summary>
         ~KNetProducer()
         {
-            if (autoCreateSerDes)
+            if (_autoCreateSerDes)
             {
                 _keySerializer?.Dispose();
                 _valueSerializer?.Dispose();

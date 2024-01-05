@@ -19,6 +19,8 @@
 using Java.Util;
 using System.Globalization;
 using System;
+using MASES.KNet.Serialization;
+using System.Linq;
 
 namespace MASES.KNet
 {
@@ -44,7 +46,9 @@ namespace MASES.KNet
             if (origin == null) return Create();
             var newT = new T
             {
-                _options = new System.Collections.Generic.Dictionary<string, object>(origin._options)
+                _options = new System.Collections.Generic.Dictionary<string, object>(origin._options),
+                _KNetKeySerDes = origin._KNetKeySerDes,
+                _KNetValueSerDes = origin._KNetValueSerDes,
             };
             return newT;
         }
@@ -106,7 +110,8 @@ namespace MASES.KNet
             var clone = new T
             {
                 _options = new System.Collections.Generic.Dictionary<string, object>(_options)
-            }; return clone;
+            };
+            return clone;
         }
         /// <summary>
         /// Returns the <see cref="Properties"/> from the <typeparamref name="T"/> instance
@@ -136,6 +141,100 @@ namespace MASES.KNet
             }
 
             return props;
+        }
+        Type _KNetKeySerDes = null;
+        /// <summary>
+        /// The <see cref="Type"/> used to create an instance of <see cref="IKNetSerDes{T}"/> for keys with <see cref="BuildKeySerDes{TKey}"/>
+        /// </summary>
+        public Type KNetKeySerDes
+        {
+            get { return _KNetKeySerDes; }
+            set
+            {
+                if (value.GetConstructors().Single(ci => ci.GetParameters().Length == 0) == null)
+                {
+                    throw new ArgumentException($"{value.Name} does not contains a default constructor and cannot be used because it is not a valid Serializer type");
+                }
+
+                if (value.IsGenericType)
+                {
+                    var keyT = value.GetGenericArguments();
+                    if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
+                    var t = value.GetGenericTypeDefinition();
+                    if (t.GetInterface(typeof(IKNetSerDes<>).Name) == null)
+                    {
+                        throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
+                    }
+                    _KNetKeySerDes = value;
+                }
+                else throw new ArgumentException($"{value.Name} is not a generic type and cannot be used as a valid ValueContainer type");
+            }
+        }
+
+        Type _KNetValueSerDes = null;
+        /// <summary>
+        /// The <see cref="Type"/> used to create an instance of <see cref="IKNetSerDes{T}"/> for values with <see cref="BuildValueSerDes{TValue}"/>
+        /// </summary>
+        public Type KNetValueSerDes
+        {
+            get { return _KNetValueSerDes; }
+            set
+            {
+                if (value.GetConstructors().Single(ci => ci.GetParameters().Length == 0) == null)
+                {
+                    throw new ArgumentException($"{value.Name} does not contains a default constructor and cannot be used because it is not a valid Serializer type");
+                }
+
+                if (value.IsGenericType)
+                {
+                    var keyT = value.GetGenericArguments();
+                    if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
+                    var t = value.GetGenericTypeDefinition();
+                    if (t.GetInterface(typeof(IKNetSerDes<>).Name) == null)
+                    {
+                        throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
+                    }
+                    _KNetValueSerDes = value;
+                }
+                else throw new ArgumentException($"{value.Name} is not a generic type and cannot be used as a valid Serializer type");
+            }
+        }
+
+        /// <summary>
+        /// Builds an instance of <see cref="IKNetSerDes{TKey}"/> using the <see cref="Type"/> defined in <see cref="KNetKeySerDes"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key</typeparam>
+        /// <returns>An instance of <see cref="IKNetSerDes{TKey}"/></returns>
+        /// <exception cref="InvalidOperationException">If <see cref="KNetKeySerDes"/> is <see langword="null"/></exception>
+        public IKNetSerDes<TKey> BuildKeySerDes<TKey>()
+        {
+            if (KNetSerialization.IsInternalManaged<TKey>())
+            {
+                return new KNetSerDes<TKey>();
+            }
+
+            if (KNetKeySerDes == null) throw new InvalidOperationException($"No default serializer available for {typeof(TKey)}, property {nameof(KNetKeySerDes)} shall be set.");
+            var tmp = KNetKeySerDes.MakeGenericType(typeof(TKey));
+            var o = Activator.CreateInstance(tmp);
+            return o as IKNetSerDes<TKey>;
+        }
+        /// <summary>
+        /// Builds an instance of <see cref="IKNetSerDes{TValue}"/> using the <see cref="Type"/> defined in <see cref="KNetValueSerDes"/>
+        /// </summary>
+        /// <typeparam name="TValue">The type of the key</typeparam>
+        /// <returns>An instance of <see cref="IKNetSerDes{TValue}"/></returns>
+        /// <exception cref="InvalidOperationException">If <see cref="KNetValueSerDes"/> is <see langword="null"/></exception>
+        public IKNetSerDes<TValue> BuildValueSerDes<TValue>()
+        {
+            if (KNetSerialization.IsInternalManaged<TValue>())
+            {
+                return new KNetSerDes<TValue>();
+            }
+
+            if (KNetValueSerDes == null) throw new InvalidOperationException($"No default serializer available for {typeof(TValue)}, property {nameof(KNetValueSerDes)} shall be set.");
+            var tmp = KNetValueSerDes.MakeGenericType(typeof(TValue));
+            var o = Activator.CreateInstance(tmp);
+            return o as IKNetSerDes<TValue>;
         }
     }
 }
