@@ -16,20 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Util;
-using MASES.KNet.Consumer;
-using MASES.KNet.Producer;
 using MASES.KNet.Serialization;
 using MASES.KNet.Specific.Streams.Processor;
-using Org.Apache.Kafka.Clients.Admin;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Streams;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MASES.KNet.Specific.Streams
 {

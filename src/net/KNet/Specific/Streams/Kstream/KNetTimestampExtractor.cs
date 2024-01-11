@@ -16,14 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Security;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Consumer;
 using MASES.KNet.Serialization;
 using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Streams.Kstream;
 using Org.Apache.Kafka.Streams.Processor;
-using System;
 
 namespace MASES.KNet.Specific.Streams.Kstream
 {

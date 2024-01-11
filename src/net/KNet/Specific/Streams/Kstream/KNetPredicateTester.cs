@@ -16,10 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Security;
 using MASES.JCOBridge.C2JBridge;
 using Org.Apache.Kafka.Streams.Kstream;
-using System;
 
 namespace MASES.KNet.Specific.Streams.Kstream
 {
