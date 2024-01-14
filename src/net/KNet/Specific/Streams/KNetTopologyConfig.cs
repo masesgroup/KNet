@@ -16,18 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet.Serialization;
 using MASES.KNet.Streams;
 using Org.Apache.Kafka.Streams;
 
-namespace MASES.KNet.Specific.Streams
+namespace MASES.KNet.Streams
 {
     /// <summary>
     /// KNet implementation of <see cref="TopologyConfig"/>
     /// </summary>
-    public class KNetTopologyConfig : TopologyConfig
+    public class KNetTopologyConfig : TopologyConfig, IGenericSerDesFactoryApplier
     {
-        StreamsConfigBuilder _StreamsConfigBuilder;
-
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         #region Constructors
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(java.lang.String,org.apache.kafka.streams.StreamsConfig,java.util.Properties)"/>
@@ -38,7 +39,7 @@ namespace MASES.KNet.Specific.Streams
         public KNetTopologyConfig(string arg0, StreamsConfigBuilder arg1, Java.Util.Properties arg2)
             : base(arg0, arg1, arg2)
         {
-            _StreamsConfigBuilder = arg1;
+            _factory = arg1;
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(org.apache.kafka.streams.StreamsConfig)"/>
@@ -47,12 +48,8 @@ namespace MASES.KNet.Specific.Streams
         public KNetTopologyConfig(StreamsConfigBuilder arg0)
             : base(arg0)
         {
-            _StreamsConfigBuilder = arg0;
+            _factory = arg0;
         }
         #endregion
-        /// <summary>
-        /// <see cref="StreamsConfigBuilder"/> used in initialization
-        /// </summary>
-        public StreamsConfigBuilder StreamsConfigBuilder => _StreamsConfigBuilder;
     }
 }

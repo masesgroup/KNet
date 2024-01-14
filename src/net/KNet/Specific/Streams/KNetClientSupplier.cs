@@ -24,7 +24,7 @@ using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Streams;
 
-namespace MASES.KNet.Specific.Streams
+namespace MASES.KNet.Streams
 {
     /// <summary>
     /// KNet implementation of <see cref="KafkaClientSupplier"/>

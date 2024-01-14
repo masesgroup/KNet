@@ -17,33 +17,38 @@
 */
 
 using MASES.KNet.Serialization;
-using MASES.KNet.Specific.Streams.Processor;
+using MASES.KNet.Streams.Kstream;
+using MASES.KNet.Streams.Processor;
 using Org.Apache.Kafka.Streams;
+using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Specific.Streams
+namespace MASES.KNet.Streams
 {
     /// <summary>
     /// KNet implementation of <see cref="Topology"/>
     /// </summary>
-    public class KNetTopology
+    public class KNetTopology : IGenericSerDesFactoryApplier
     {
-        Topology _Topology;
-
+        readonly Topology _topology;
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         #region Constructors
         /// <inheritdoc/>
-        public KNetTopology() { _Topology = new Topology(); }
+        public KNetTopology(IGenericSerDesFactory factory) : base() { _factory = factory; _topology = new Topology(); }
         /// <summary>
-        /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#org.apache.kafka.streams.Topology(org.apache.kafka.streams.TopologyConfig)"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#org.apache.kafka.streams.Topology(org.apache.kafka.streams.TopologyConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KNetTopologyConfig"/></param>
         public KNetTopology(KNetTopologyConfig arg0)
         {
-            _Topology = new Topology(arg0);
+            if (arg0 is IGenericSerDesFactoryApplier applier) _factory = applier.Factory;
+            _topology = new Topology(arg0);
         }
 
-        KNetTopology(Topology topology)
+        KNetTopology(Topology topology, IGenericSerDesFactory factory)
         {
-            _Topology = topology;
+            _factory = factory;
+            _topology = topology;
         }
 
         #endregion
@@ -52,7 +57,7 @@ namespace MASES.KNet.Specific.Streams
         /// <summary>
         /// Converter from <see cref="KNetTopology"/> to <see cref="Topology"/>
         /// </summary>
-        public static implicit operator Topology(KNetTopology t) => t._Topology;
+        public static implicit operator Topology(KNetTopology t) => t._topology;
 
         #endregion
 
@@ -70,8 +75,8 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSink<K, V>(string arg0, string arg1, IKNetSerializer<K> arg2, IKNetSerializer<V> arg3, params string[] arg4)
         {
-            var top = _Topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4);
-            return new KNetTopology(top);
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSink-java.lang.String-java.lang.String-org.apache.kafka.common.serialization.Serializer-org.apache.kafka.common.serialization.Serializer-org.apache.kafka.streams.processor.StreamPartitioner-java.lang.String[]-"/>
@@ -89,8 +94,9 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSink<K, V, Arg4objectSuperK, Arg4objectSuperV>(string arg0, string arg1, IKNetSerializer<K> arg2, IKNetSerializer<V> arg3, KNetStreamPartitioner<Arg4objectSuperK, Arg4objectSuperV> arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V
         {
-            var top = _Topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5);
-            return new KNetTopology(top);
+            if (arg4 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSink-java.lang.String-java.lang.String-org.apache.kafka.streams.processor.StreamPartitioner-java.lang.String[]-"/>
@@ -106,8 +112,9 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSink<Arg2objectSuperK, K, Arg2objectSuperV, V>(string arg0, string arg1, KNetStreamPartitioner<Arg2objectSuperK, Arg2objectSuperV> arg2, params string[] arg3) where Arg2objectSuperK : K where Arg2objectSuperV : V
         {
-            var top = (arg3.Length == 0) ? _Topology.IExecute<Topology>("addSink", arg0, arg1, arg2) : _Topology.IExecute<Topology>("addSource", arg0, arg1, arg2, arg3);
-            return new KNetTopology(top);
+            if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = (arg3.Length == 0) ? _topology.IExecute<Topology>("addSink", arg0, arg1, arg2) : _topology.IExecute<Topology>("addSource", arg0, arg1, arg2, arg3);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSink-java.lang.String-org.apache.kafka.streams.processor.TopicNameExtractor-java.lang.String[]-"/>
@@ -120,8 +127,9 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSink<K, V>(string arg0, KNetTopicNameExtractor<K, V> arg1, params string[] arg2)
         {
-            var top = _Topology.AddSink(arg0, arg1, arg2);
-            return new KNetTopology(top);
+            if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = _topology.AddSink(arg0, arg1, arg2);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSink-java.lang.String-org.apache.kafka.streams.processor.TopicNameExtractor-org.apache.kafka.common.serialization.Serializer-org.apache.kafka.common.serialization.Serializer-java.lang.String[]-"/>
@@ -136,8 +144,9 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSink<K, V>(string arg0, KNetTopicNameExtractor<K, V> arg1, IKNetSerializer<K> arg2, IKNetSerializer<V> arg3, params string[] arg4)
         {
-            var top = _Topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4);
-            return new KNetTopology(top);
+            if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSink-java.lang.String-org.apache.kafka.streams.processor.TopicNameExtractor-org.apache.kafka.common.serialization.Serializer-org.apache.kafka.common.serialization.Serializer-org.apache.kafka.streams.processor.StreamPartitioner-java.lang.String[]-"/>
@@ -155,8 +164,9 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSink<K, V, Arg4objectSuperK, Arg4objectSuperV>(string arg0, KNetTopicNameExtractor<K, V> arg1, IKNetSerializer<K> arg2, IKNetSerializer<V> arg3, KNetStreamPartitioner<Arg4objectSuperK, Arg4objectSuperV> arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V
         {
-            var top = _Topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5);
-            return new KNetTopology(top);
+            if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSink-java.lang.String-org.apache.kafka.streams.processor.TopicNameExtractor-org.apache.kafka.streams.processor.StreamPartitioner-java.lang.String[]-"/>
@@ -172,8 +182,10 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSink<K, V, Arg2objectSuperK, Arg2objectSuperV>(string arg0, KNetTopicNameExtractor<K, V> arg1, KNetStreamPartitioner<Arg2objectSuperK, Arg2objectSuperV> arg2, params string[] arg3) where Arg2objectSuperK : K where Arg2objectSuperV : V
         {
-            var top = _Topology.AddSink(arg0, arg1, arg2, arg3);
-            return new KNetTopology(top);
+            if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            if (arg2 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
+            var top = _topology.AddSink(arg0, arg1, arg2, arg3);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSink-java.lang.String-java.lang.String-java.lang.String[]-"/>
@@ -184,8 +196,8 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSink(string arg0, string arg1, params string[] arg2)
         {
-            var top = _Topology.AddSink(arg0, arg1, arg2);
-            return new KNetTopology(top);
+            var top = _topology.AddSink(arg0, arg1, arg2);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-java.lang.String-java.lang.String[]-"/>
@@ -195,8 +207,8 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(string arg0, params string[] arg1)
         {
-            var top = _Topology.AddSource(arg0, arg1);
-            return new KNetTopology(top);
+            var top = _topology.AddSource(arg0, arg1);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-java.lang.String-java.util.regex.Pattern-"/>
@@ -206,8 +218,8 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(string arg0, Java.Util.Regex.Pattern arg1)
         {
-            var top = _Topology.AddSource(arg0, arg1);
-            return new KNetTopology(top);
+            var top = _topology.AddSource(arg0, arg1);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-java.lang.String-IKNetDeserializer-IKNetDeserializer-java.lang.String[]-"/>
@@ -219,8 +231,8 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(string arg0, IKNetDeserializer<object> arg1, IKNetDeserializer<object> arg2, params string[] arg3)
         {
-            var top = (arg3.Length == 0) ? _Topology.IExecute<Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer) : _Topology.IExecute<Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer, arg3);
-            return new KNetTopology(top);
+            var top = (arg3.Length == 0) ? _topology.IExecute<Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer) : _topology.IExecute<Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer, arg3);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-java.lang.String-IKNetDeserializer-IKNetDeserializer-java.util.regex.Pattern-"/>
@@ -232,8 +244,8 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(string arg0, IKNetDeserializer<object> arg1, IKNetDeserializer<object> arg2, Java.Util.Regex.Pattern arg3)
         {
-            var top = _Topology.IExecute<Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer, arg3);
-            return new KNetTopology(top);
+            var top = _topology.IExecute<Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer, arg3);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.processor.TimestampExtractor-java.lang.String-java.lang.String[]-"/>
@@ -244,8 +256,9 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg0, string arg1, params string[] arg2)
         {
-            var top = (arg2.Length == 0) ? _Topology.IExecute<Topology>("addSource", arg0, arg1) : _Topology.IExecute<Topology>("addSource", arg0, arg1, arg2);
-            return new KNetTopology(top);
+            if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = (arg2.Length == 0) ? _topology.IExecute<Topology>("addSource", arg0, arg1) : _topology.IExecute<Topology>("addSource", arg0, arg1, arg2);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.processor.TimestampExtractor-java.lang.String-java.util.regex.Pattern-"/>
@@ -256,8 +269,9 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg0, string arg1, Java.Util.Regex.Pattern arg2)
         {
-            var top = _Topology.AddSource(arg0, arg1, arg2);
-            return new KNetTopology(top);
+            if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = _topology.AddSource(arg0, arg1, arg2);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-java.lang.String[]-"/>
@@ -268,8 +282,8 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(Topology.AutoOffsetReset arg0, string arg1, params string[] arg2)
         {
-            var top = _Topology.AddSource(arg0, arg1, arg2);
-            return new KNetTopology(top);
+            var top = _topology.AddSource(arg0, arg1, arg2);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-java.util.regex.Pattern-"/>
@@ -280,8 +294,8 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(Topology.AutoOffsetReset arg0, string arg1, Java.Util.Regex.Pattern arg2)
         {
-            var top = _Topology.AddSource(arg0, arg1, arg2);
-            return new KNetTopology(top);
+            var top = _topology.AddSource(arg0, arg1, arg2);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-IKNetDeserializer-IKNetDeserializer-java.lang.String[]-"/>
@@ -294,8 +308,8 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(Topology.AutoOffsetReset arg0, string arg1, IKNetDeserializer<object> arg2, IKNetDeserializer<object> arg3, params string[] arg4)
         {
-            var top = (arg4.Length == 0) ? _Topology.IExecute<Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer) : _Topology.IExecute<Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
-            return new KNetTopology(top);
+            var top = (arg4.Length == 0) ? _topology.IExecute<Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer) : _topology.IExecute<Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-IKNetDeserializer-IKNetDeserializer-java.util.regex.Pattern-"/>
@@ -308,8 +322,8 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(Topology.AutoOffsetReset arg0, string arg1, IKNetDeserializer<object> arg2, IKNetDeserializer<object> arg3, Java.Util.Regex.Pattern arg4)
         {
-            var top = _Topology.IExecute<Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
-            return new KNetTopology(top);
+            var top = _topology.IExecute<Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-org.apache.kafka.streams.processor.TimestampExtractor-IKNetDeserializer-IKNetDeserializer-java.lang.String[]-"/>
@@ -321,10 +335,11 @@ namespace MASES.KNet.Specific.Streams
         /// <param name="arg4"><see cref="IKNetDeserializer{T}"/></param>
         /// <param name="arg5"><see cref="string"/></param>
         /// <returns><see cref="KNetTopology"/></returns>
-        public KNetTopology AddSource(Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, IKNetDeserializer<object> arg3, IKNetDeserializer<object> arg4, params string[] arg5)
+        public KNetTopology AddSource(Topology.AutoOffsetReset arg0, string arg1, TimestampExtractor arg2, IKNetDeserializer<object> arg3, IKNetDeserializer<object> arg4, params string[] arg5)
         {
-            var top = (arg5.Length == 0) ? _Topology.IExecute<Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer) : _Topology.IExecute<Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
-            return new KNetTopology(top);
+            if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = (arg5.Length == 0) ? _topology.IExecute<Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer) : _topology.IExecute<Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-org.apache.kafka.streams.processor.TimestampExtractor-IKNetDeserializer-IKNetDeserializer-java.util.regex.Pattern-"/>
@@ -336,10 +351,11 @@ namespace MASES.KNet.Specific.Streams
         /// <param name="arg4"><see cref="IKNetDeserializer{T}"/></param>
         /// <param name="arg5"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <returns><see cref="KNetTopology"/></returns>
-        public KNetTopology AddSource(Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, IKNetDeserializer<object> arg3, IKNetDeserializer<object> arg4, Java.Util.Regex.Pattern arg5)
+        public KNetTopology AddSource(Topology.AutoOffsetReset arg0, string arg1, TimestampExtractor arg2, IKNetDeserializer<object> arg3, IKNetDeserializer<object> arg4, Java.Util.Regex.Pattern arg5)
         {
-            var top = _Topology.IExecute<Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
-            return new KNetTopology(top);
+            if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = _topology.IExecute<Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-org.apache.kafka.streams.processor.TimestampExtractor-java.lang.String-java.lang.String[]-"/>
@@ -351,8 +367,9 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(Topology.AutoOffsetReset arg0, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg1, string arg2, params string[] arg3)
         {
-            var top = _Topology.AddSource(arg0, arg1, arg2, arg3);
-            return new KNetTopology(top);
+            if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = _topology.AddSource(arg0, arg1, arg2, arg3);
+            return new KNetTopology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-org.apache.kafka.streams.processor.TimestampExtractor-java.lang.String-java.util.regex.Pattern-"/>
@@ -364,8 +381,9 @@ namespace MASES.KNet.Specific.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(Topology.AutoOffsetReset arg0, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg1, string arg2, Java.Util.Regex.Pattern arg3)
         {
-            var top = _Topology.AddSource(arg0, arg1, arg2, arg3);
-            return new KNetTopology(top);
+            if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = _topology.AddSource(arg0, arg1, arg2, arg3);
+            return new KNetTopology(top, _factory);
         }
 
         #endregion

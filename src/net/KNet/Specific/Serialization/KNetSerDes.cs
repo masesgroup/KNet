@@ -43,7 +43,7 @@ namespace MASES.KNet.Serialization
     {
         #region private fields
         readonly KNetSerialization.SerializationType _SerializationType = KNetSerialization.InternalSerDesType<T>();
-        Serde<byte[]> _KafkaSerde = new Serde<byte[]>();
+        Serde<byte[]> _KafkaSerde = Serdes.ByteArray();
         Serializer<byte[]> _KafkaSerializer = new ByteArraySerializer();
         Deserializer<byte[]> _KafkaDeserializer = new ByteArrayDeserializer();
         #endregion

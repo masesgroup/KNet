@@ -22,26 +22,17 @@ using MASES.KNet.Serialization;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Specific.Streams.Kstream
+namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
     /// KNet extension of <see cref="TimestampExtractor"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetTimestampExtractor<TKey, TValue> : TimestampExtractor
+    public class KNetTimestampExtractor<TKey, TValue> : TimestampExtractor, IGenericSerDesFactoryApplier
     {
-        IKNetSerDes<TKey> _keySerializer;
-        IKNetSerDes<TValue> _valueSerializer;
-        /// <summary>
-        /// Default initializer
-        /// </summary>
-        public KNetTimestampExtractor(IKNetSerDes<TKey> keySerializer, IKNetSerDes<TValue> valueSerializer) : base()
-        {
-            _keySerializer = keySerializer;
-            _valueSerializer = valueSerializer;
-        }
-
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TimestampExtractor.html#extract-org.apache.kafka.clients.consumer.ConsumerRecord-long-"/>
         /// </summary>
@@ -51,9 +42,11 @@ namespace MASES.KNet.Specific.Streams.Kstream
         /// <inheritdoc/>
         public sealed override long Extract(ConsumerRecord<object, object> arg0, long arg1)
         {
+            IKNetSerDes<TKey> keySerializer = _factory.BuildKeySerDes<TKey>();
+            IKNetSerDes<TValue> valueSerializer = _factory.BuildValueSerDes<TValue>();
             var record = arg0.Cast<ConsumerRecord<byte[], byte[]>>(); // KNet consider the data within Apache Kafka Streams defined always as byte[]
             var methodToExecute = (OnExtract != null) ? OnExtract : Extract;
-            return methodToExecute(new KNetConsumerRecord<TKey, TValue>(record, _keySerializer, _valueSerializer), arg1);
+            return methodToExecute(new KNetConsumerRecord<TKey, TValue>(record, keySerializer, valueSerializer), arg1);
         }
         /// <summary>
         /// KNet implementation of <see cref="TimestampExtractor.Extract(ConsumerRecord{object, object}, long)"/>

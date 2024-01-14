@@ -19,34 +19,17 @@
 using MASES.KNet.Serialization;
 using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Specific.Streams.Processor
+namespace MASES.KNet.Streams.Processor
 {
     /// <summary>
     /// KNet implementation of <see cref="TopicNameExtractor{K, V}"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetTopicNameExtractor<TKey, TValue> : TopicNameExtractor<byte[], byte[]>
+    public class KNetTopicNameExtractor<TKey, TValue> : TopicNameExtractor<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
-        IKNetSerDes<TKey> _keySerializer;
-        IKNetSerDes<TValue> _valueSerializer;
-        /// <summary>
-        /// Default initializer
-        /// </summary>
-        public KNetTopicNameExtractor(IKNetSerDes<TKey> keySerializer, IKNetSerDes<TValue> valueSerializer) : base()
-        {
-            _keySerializer = keySerializer;
-            _valueSerializer = valueSerializer;
-        }
-        /// <summary>
-        /// The <see cref="IKNetSerDes{T}"/> associated to <typeparamref name="TKey"/>
-        /// </summary>
-        public IKNetSerDes<TKey> KeySerializer => _keySerializer;
-        /// <summary>
-        /// The <see cref="IKNetSerDes{T}"/> associated to <typeparamref name="TValue"/>
-        /// </summary>
-        public IKNetSerDes<TValue> ValueSerializer => _valueSerializer;
-
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>
         /// </summary>
@@ -56,8 +39,10 @@ namespace MASES.KNet.Specific.Streams.Processor
         /// <inheritdoc/>
         public sealed override string Extract(byte[] arg0, byte[] arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
         {
+            IKNetSerDes<TKey> keySerializer = _factory.BuildKeySerDes<TKey>();
+            IKNetSerDes<TValue> valueSerializer = _factory.BuildValueSerDes<TValue>();
             var methodToExecute = (OnExtract != null) ? OnExtract : Extract;
-            return methodToExecute(_keySerializer.Deserialize(null, arg0), _valueSerializer.Deserialize(null, arg1), arg2);
+            return methodToExecute(keySerializer.Deserialize(null, arg0), valueSerializer.Deserialize(null, arg1), arg2);
         }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>

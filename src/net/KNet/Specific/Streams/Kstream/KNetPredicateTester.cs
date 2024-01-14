@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using Org.Apache.Kafka.Streams.Kstream;
 
-namespace MASES.KNet.Specific.Streams.Kstream
+namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
     /// KNet extension of <see cref="Predicate{K, V}"/>

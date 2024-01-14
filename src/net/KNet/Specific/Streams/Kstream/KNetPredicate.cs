@@ -19,34 +19,17 @@
 using MASES.KNet.Serialization;
 using Org.Apache.Kafka.Streams.Kstream;
 
-namespace MASES.KNet.Specific.Streams.Kstream
+namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
     /// KNet implementation of <see cref="Predicate{K, V}"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetPredicate<TKey, TValue> : Predicate<byte[], byte[]>
+    public class KNetPredicate<TKey, TValue> : Predicate<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
-        IKNetSerDes<TKey> _keySerializer;
-        IKNetSerDes<TValue> _valueSerializer;
-        /// <summary>
-        /// Default initializer
-        /// </summary>
-        public KNetPredicate(IKNetSerDes<TKey> keySerializer, IKNetSerDes<TValue> valueSerializer) : base()
-        {
-            _keySerializer = keySerializer;
-            _valueSerializer = valueSerializer;
-        }
-        /// <summary>
-        /// The <see cref="IKNetSerDes{T}"/> associated to <typeparamref name="TKey"/>
-        /// </summary>
-        public IKNetSerDes<TKey> KeySerializer => _keySerializer;
-        /// <summary>
-        /// The <see cref="IKNetSerDes{T}"/> associated to <typeparamref name="TValue"/>
-        /// </summary>
-        public IKNetSerDes<TValue> ValueSerializer => _valueSerializer;
-
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -56,8 +39,11 @@ namespace MASES.KNet.Specific.Streams.Kstream
         /// <inheritdoc/>
         public sealed override bool Test(byte[] arg0, byte[] arg1)
         {
+            IKNetSerDes<TKey> keySerializer = _factory.BuildKeySerDes<TKey>();
+            IKNetSerDes<TValue> valueSerializer = _factory.BuildValueSerDes<TValue>();
+
             var methodToExecute = (OnTest != null) ? OnTest : Test;
-            return methodToExecute(_keySerializer.Deserialize(null, arg0), _valueSerializer.Deserialize(null, arg1));
+            return methodToExecute(keySerializer.Deserialize(null, arg0), valueSerializer.Deserialize(null, arg1));
         }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-"/>

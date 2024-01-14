@@ -21,34 +21,17 @@ using Java.Util;
 using MASES.KNet.Serialization;
 using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Specific.Streams.Processor
+namespace MASES.KNet.Streams.Processor
 {
     /// <summary>
     /// KNet implementation of <see cref="StreamPartitioner{K, V}"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetStreamPartitioner<TKey, TValue> : StreamPartitioner<byte[], byte[]>
+    public class KNetStreamPartitioner<TKey, TValue> : StreamPartitioner<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
-        IKNetSerDes<TKey> _keySerializer;
-        IKNetSerDes<TValue> _valueSerializer;
-        /// <summary>
-        /// Default initializer
-        /// </summary>
-        public KNetStreamPartitioner(IKNetSerDes<TKey> keySerializer, IKNetSerDes<TValue> valueSerializer) : base()
-        {
-            _keySerializer = keySerializer;
-            _valueSerializer = valueSerializer;
-        }
-        /// <summary>
-        /// The <see cref="IKNetSerDes{T}"/> associated to <typeparamref name="TKey"/>
-        /// </summary>
-        public IKNetSerDes<TKey> KeySerializer => _keySerializer;
-        /// <summary>
-        /// The <see cref="IKNetSerDes{T}"/> associated to <typeparamref name="TValue"/>
-        /// </summary>
-        public IKNetSerDes<TValue> ValueSerializer => _valueSerializer;
-
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
@@ -58,8 +41,10 @@ namespace MASES.KNet.Specific.Streams.Processor
         /// <inheritdoc/>
         public sealed override Optional<Set<Integer>> Partitions(string arg0, byte[] arg1, byte[] arg2, int arg3)
         {
+            IKNetSerDes<TKey> keySerializer = _factory.BuildKeySerDes<TKey>();
+            IKNetSerDes<TValue> valueSerializer = _factory.BuildValueSerDes<TValue>();
             var methodToExecute = (OnPartitions != null) ? OnPartitions : Partitions;
-            return methodToExecute(arg0, _keySerializer.Deserialize(arg0, arg1), _valueSerializer.Deserialize(arg0, arg2), arg3);
+            return methodToExecute(arg0, keySerializer.Deserialize(arg0, arg1), valueSerializer.Deserialize(arg0, arg2), arg3);
         }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>

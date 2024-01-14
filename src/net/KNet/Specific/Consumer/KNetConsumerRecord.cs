@@ -39,7 +39,7 @@ namespace MASES.KNet.Consumer
         /// <param name="record">The <see cref="ConsumerRecord{K, V}"/> to use for initialization</param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="KNetSerDes{K}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="KNetSerDes{K}"/></param>
-        public KNetConsumerRecord(ConsumerRecord<byte[], byte[]> record, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
+        internal KNetConsumerRecord(ConsumerRecord<byte[], byte[]> record, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
         {
             _record = record;
             _keyDeserializer = keyDeserializer;

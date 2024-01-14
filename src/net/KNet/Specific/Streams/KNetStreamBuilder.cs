@@ -16,15 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet.Serialization;
 using Org.Apache.Kafka.Streams;
 
-namespace MASES.KNet.Specific.Streams
+namespace MASES.KNet.Streams
 {
     /// <summary>
     /// KNet extension of <see cref="StreamsBuilder"/>
     /// </summary>
-    public class KNetStreamBuilder : StreamsBuilder
+    public class KNetStreamBuilder : StreamsBuilder, IGenericSerDesFactoryApplier
     {
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         #region Constructors
         /// <inheritdoc/>
         public KNetStreamBuilder() : base() { }
@@ -34,7 +37,7 @@ namespace MASES.KNet.Specific.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#org.apache.kafka.streams.StreamsBuilder(org.apache.kafka.streams.TopologyConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.TopologyConfig"/></param>
-        public KNetStreamBuilder(Org.Apache.Kafka.Streams.TopologyConfig arg0)
+        public KNetStreamBuilder(KNetTopologyConfig arg0)
             : base(arg0)
         {
         }
