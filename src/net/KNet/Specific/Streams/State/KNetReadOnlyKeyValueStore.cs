@@ -17,24 +17,23 @@
 */
 
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams.State;
 
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
-    /// KNet implementation of <see cref="ReadOnlyKeyValueStore{K, V}"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore{K, V}"/> 
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetReadOnlyKeyValueStore<TKey, TValue> : KNetManagedStore<ReadOnlyKeyValueStore<byte[], byte[]>>, IGenericSerDesFactoryApplier
+    public class KNetReadOnlyKeyValueStore<TKey, TValue> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]>>, IGenericSerDesFactoryApplier
     {
-        readonly ReadOnlyKeyValueStore<byte[], byte[]> _store;
+        readonly Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]> _store;
         readonly IKNetSerDes<TKey> _keySerDes;
         readonly IKNetSerDes<TValue> _valueSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetReadOnlyKeyValueStore(IGenericSerDesFactory factory, ReadOnlyKeyValueStore<byte[], byte[]> store)
+        internal KNetReadOnlyKeyValueStore(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]> store)
         {
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();

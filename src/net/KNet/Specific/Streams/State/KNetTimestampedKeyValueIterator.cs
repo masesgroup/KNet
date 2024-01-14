@@ -20,13 +20,12 @@ using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams.State;
 using System.Collections.Generic;
 
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
-    /// KNet implementation of <see cref="KeyValueIterator{K, V}"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator{K, V}"/> 
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
@@ -39,25 +38,25 @@ namespace MASES.KNet.Streams.State
 
             protected override object ConvertObject(object input)
             {
-                return isVersion2 ? new KNetTimestampedKeyValue<TKey, TValue>(_factory, input as Org.Apache.Kafka.Streams.KeyValue<byte[], ValueAndTimestamp<byte[]>>)
-                                  : new KNetTimestampedKeyValue<TKey, TValue>(_factory, input as Org.Apache.Kafka.Streams.KeyValue<long, ValueAndTimestamp<byte[]>>);
+                return isVersion2 ? new KNetTimestampedKeyValue<TKey, TValue>(_factory, input as Org.Apache.Kafka.Streams.KeyValue<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>)
+                                  : new KNetTimestampedKeyValue<TKey, TValue>(_factory, input as Org.Apache.Kafka.Streams.KeyValue<long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>);
             }
         }
 
-        readonly KeyValueIterator<byte[], ValueAndTimestamp<byte[]>> _iterator = null;
-        readonly KeyValueIterator<long, ValueAndTimestamp<byte[]>> _iterator2 = null;
+        readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _iterator = null;
+        readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _iterator2 = null;
         readonly IKNetSerDes<TKey> _keySerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetTimestampedKeyValueIterator(IGenericSerDesFactory factory, KeyValueIterator<byte[], ValueAndTimestamp<byte[]>> iterator)
+        internal KNetTimestampedKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> iterator)
         {
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();
             _iterator = iterator;
         }
 
-        internal KNetTimestampedKeyValueIterator(IGenericSerDesFactory factory, KeyValueIterator<long, ValueAndTimestamp<byte[]>> iterator)
+        internal KNetTimestampedKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> iterator)
         {
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();

@@ -19,17 +19,15 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Consumer;
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Streams.Processor;
 
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet extension of <see cref="TimestampExtractor"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetTimestampExtractor<TKey, TValue> : TimestampExtractor, IGenericSerDesFactoryApplier
+    public class KNetTimestampExtractor<TKey, TValue> : Org.Apache.Kafka.Streams.Processor.TimestampExtractor, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -40,16 +38,16 @@ namespace MASES.KNet.Streams.Kstream
         public new System.Func<KNetConsumerRecord<TKey, TValue>, long, long> OnExtract { get; set; } = null;
 
         /// <inheritdoc/>
-        public sealed override long Extract(ConsumerRecord<object, object> arg0, long arg1)
+        public sealed override long Extract(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object> arg0, long arg1)
         {
             IKNetSerDes<TKey> keySerializer = _factory.BuildKeySerDes<TKey>();
             IKNetSerDes<TValue> valueSerializer = _factory.BuildValueSerDes<TValue>();
-            var record = arg0.Cast<ConsumerRecord<byte[], byte[]>>(); // KNet consider the data within Apache Kafka Streams defined always as byte[]
+            var record = arg0.Cast<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>>(); // KNet consider the data within Apache Kafka Streams defined always as byte[]
             var methodToExecute = (OnExtract != null) ? OnExtract : Extract;
             return methodToExecute(new KNetConsumerRecord<TKey, TValue>(record, keySerializer, valueSerializer), arg1);
         }
         /// <summary>
-        /// KNet implementation of <see cref="TimestampExtractor.Extract(ConsumerRecord{object, object}, long)"/>
+        /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor.Extract(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{object, object}, long)"/>
         /// </summary>
         /// <param name="arg0">The <see cref="KNetConsumerRecord{K, V}"/> with information</param>
         /// <param name="arg1"></param>

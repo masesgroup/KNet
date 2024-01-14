@@ -17,7 +17,6 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using Org.Apache.Kafka.Streams.Kstream;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -33,12 +32,12 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// Converter from <see cref="KNetPredicateTester"/> to <see cref="Predicate"/>
         /// </summary>
-        public static implicit operator Predicate(KNetPredicateTester t) => t.Cast<Predicate>();
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Predicate(KNetPredicateTester t) => t.Cast<Org.Apache.Kafka.Streams.Kstream.Predicate>();
         /// <summary>
-        /// Converter from <see cref="KNetPredicateTester"/> to <see cref="Predicate{K, V}"/>
+        /// Converter from <see cref="KNetPredicateTester"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}"/>
         /// </summary>
-        /// <remarks>This cast is useful when an API needs in input a type like <see cref="Predicate{K, V}"/>, however the behavior of the <see cref="Predicate{K, V}"/> in output is different from the same class allocated directly</remarks>
-        public static implicit operator Predicate<byte[], byte[]>(KNetPredicateTester t) => t.Cast<Predicate<byte[], byte[]>>();
+        /// <remarks>This cast is useful when an API needs in input a type like <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}"/>, however the behavior of the <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}"/> in output is different from the same class allocated directly</remarks>
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Predicate<byte[], byte[]>(KNetPredicateTester t) => t.Cast<Org.Apache.Kafka.Streams.Kstream.Predicate<byte[], byte[]>>();
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
@@ -61,7 +60,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <param name="key">The key to use in comparison</param>
         /// <param name="value">The value to use in comparison</param>
-        /// <remarks>Both <paramref name="key"/> and <paramref name="value"/> shall be equal to input parameters of <see cref="Predicate{K, V}.Test(K, V)"/> to return <see langword="true"/></remarks>
+        /// <remarks>Both <paramref name="key"/> and <paramref name="value"/> shall be equal to input parameters of <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}.Test(K, V)"/> to return <see langword="true"/></remarks>
         public KNetPredicateTester(byte[] key, byte[] value) : base(key, value)
         {
         }

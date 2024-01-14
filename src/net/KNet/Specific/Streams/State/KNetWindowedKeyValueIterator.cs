@@ -21,14 +21,12 @@ using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Kstream;
-using Org.Apache.Kafka.Streams.Kstream;
-using Org.Apache.Kafka.Streams.State;
 using System.Collections.Generic;
 
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
-    /// KNet implementation of <see cref="KeyValueIterator{K, V}"/> where K is <see cref="Windowed{K}"/>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator{K, V}"/> where K is <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
@@ -41,15 +39,15 @@ namespace MASES.KNet.Streams.State
 
             protected override object ConvertObject(object input)
             {
-                return new KNetWindowedKeyValue<TKey, TValue>(_factory, input as Org.Apache.Kafka.Streams.KeyValue<Windowed<byte[]>, byte[]>);
+                return new KNetWindowedKeyValue<TKey, TValue>(_factory, input as Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]>);
             }
         }
 
-        readonly KeyValueIterator<Windowed<byte[]>, byte[]> _iterator;
+        readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> _iterator;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetWindowedKeyValueIterator(IGenericSerDesFactory factory, KeyValueIterator<Windowed<byte[]>, byte[]> iterator)
+        internal KNetWindowedKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> iterator)
         {
             _factory = factory;
             _iterator = iterator;

@@ -17,19 +17,17 @@
 */
 
 using MASES.KNet.Serialization;
-using MASES.KNet.Streams;
-using Org.Apache.Kafka.Streams.Processor.Api;
 
 namespace MASES.KNet.Streams.Processor.Api
 {
     /// <summary>
-    /// KNet extension of <see cref="Processor{KIn, VIn, KOut, VOut}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Processor.Api.Processor{KIn, VIn, KOut, VOut}"/>
     /// </summary>
     /// <typeparam name="KIn">The input key type</typeparam>
     /// <typeparam name="VIn">The input key type</typeparam>
     /// <typeparam name="KOut">The output key type</typeparam>
     /// <typeparam name="VOut">The output value type</typeparam>
-    public class KNetProcessor<KIn, VIn, KOut, VOut> : Processor<byte[], byte[], byte[], byte[]>, IGenericSerDesFactoryApplier
+    public class KNetProcessor<KIn, VIn, KOut, VOut> : Org.Apache.Kafka.Streams.Processor.Api.Processor<byte[], byte[], byte[], byte[]>, IGenericSerDesFactoryApplier
     {
         KNetProcessorContext<KOut, VOut> _processorContext = null;
         IGenericSerDesFactory _factory;
@@ -53,7 +51,7 @@ namespace MASES.KNet.Streams.Processor.Api
         }
 
         /// <summary>
-        /// KNet implementation of <see cref="Processor{KIn, VIn, KOut, VOut}.Process(Record{KIn, VIn})"/>
+        /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.Api.Processor{KIn, VIn, KOut, VOut}.Process(Org.Apache.Kafka.Streams.Processor.Api.Record{KIn, VIn})"/>
         /// </summary>
         /// <param name="arg0"><see cref="KNetRecord{KIn, VIn}"/></param>
         public virtual void Process(KNetRecord<KIn, VIn> arg0)

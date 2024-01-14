@@ -18,8 +18,6 @@
 
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.State;
-using Org.Apache.Kafka.Streams;
-using Org.Apache.Kafka.Streams.State;
 
 namespace MASES.KNet.Streams
 {
@@ -30,14 +28,14 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetTimestampedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
-        readonly KeyValue<byte[], ValueAndTimestamp<byte[]>> _value;
-        readonly KeyValue<long, ValueAndTimestamp<byte[]>> _value2;
+        readonly Org.Apache.Kafka.Streams.KeyValue<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _value;
+        readonly Org.Apache.Kafka.Streams.KeyValue<long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _value2;
         readonly IKNetSerDes<TKey> _keySerDes;
         readonly IKNetSerDes<TValue> _valueSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetTimestampedKeyValue(IGenericSerDesFactory factory, KeyValue<byte[], ValueAndTimestamp<byte[]>> value)
+        internal KNetTimestampedKeyValue(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> value)
         {
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();
@@ -45,7 +43,7 @@ namespace MASES.KNet.Streams
             _value = value;
         }
 
-        internal KNetTimestampedKeyValue(IGenericSerDesFactory factory, KeyValue<long, ValueAndTimestamp<byte[]>> value)
+        internal KNetTimestampedKeyValue(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> value)
         {
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();

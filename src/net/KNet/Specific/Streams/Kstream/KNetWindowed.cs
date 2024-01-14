@@ -17,22 +17,21 @@
 */
 
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams.Kstream;
 
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet implementation of <see cref="Windowed{K}"/>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     public class KNetWindowed<TKey> : IGenericSerDesFactoryApplier
     {
-        readonly Windowed<byte[]> _windowed;
+        readonly Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]> _windowed;
         readonly IKNetSerDes<TKey> _keySerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetWindowed(IGenericSerDesFactory factory, Windowed<byte[]> windowed)
+        internal KNetWindowed(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]> windowed)
         {
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();

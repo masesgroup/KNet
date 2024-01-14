@@ -17,25 +17,24 @@
 */
 
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams;
 
 namespace MASES.KNet.Streams
 {
     /// <summary>
-    /// KNet implementation of <see cref="KeyValue{K, V}"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/> 
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
-        readonly KeyValue<byte[], byte[]> _value = null;
-        readonly KeyValue<long, byte[]> _value2 = null;
+        readonly Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> _value = null;
+        readonly Org.Apache.Kafka.Streams.KeyValue<long, byte[]> _value2 = null;
         readonly IKNetSerDes<TKey> _keySerDes;
         readonly IKNetSerDes<TValue> _valueSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetKeyValue(IGenericSerDesFactory factory, KeyValue<byte[], byte[]> value)
+        internal KNetKeyValue(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> value)
         {
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();
@@ -43,7 +42,7 @@ namespace MASES.KNet.Streams
             _value = value;
         }
 
-        internal KNetKeyValue(IGenericSerDesFactory factory, KeyValue<long, byte[]> value)
+        internal KNetKeyValue(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<long, byte[]> value)
         {
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();

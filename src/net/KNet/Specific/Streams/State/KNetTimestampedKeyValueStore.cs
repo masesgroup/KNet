@@ -17,24 +17,23 @@
 */
 
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams.State;
 
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
-    /// KNet implementation of <see cref="ReadOnlySessionStore{K, V}"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore{K, V}"/> 
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetTimestampedKeyValueStore<TKey, TValue> : KNetManagedStore<ReadOnlyKeyValueStore<byte[], ValueAndTimestamp<byte[]>>>, IGenericSerDesFactoryApplier
+    public class KNetTimestampedKeyValueStore<TKey, TValue> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>, IGenericSerDesFactoryApplier
     {
-        readonly ReadOnlyKeyValueStore<byte[], ValueAndTimestamp<byte[]>> _store;
+        readonly Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _store;
         readonly IKNetSerDes<TKey> _keySerDes;
         readonly IKNetSerDes<TValue> _valueSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetTimestampedKeyValueStore(IGenericSerDesFactory factory, ReadOnlyKeyValueStore<byte[], ValueAndTimestamp<byte[]>> store)
+        internal KNetTimestampedKeyValueStore(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> store)
         {
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();

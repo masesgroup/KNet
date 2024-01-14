@@ -16,29 +16,28 @@
 *  Refer to LICENSE for more information.
 */
 
-using Org.Apache.Kafka.Streams.Processor.Api;
 using System;
 
 namespace MASES.KNet.Streams.Processor.Api
 {
     /// <summary>
-    /// KNet implementation of <see cref="ProcessorContext{KForward, VForward}"/>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{KForward, VForward}"/>
     /// </summary>
     /// <typeparam name="KForward"></typeparam>
     /// <typeparam name="VForward"></typeparam>
     public class KNetProcessorContext<KForward, VForward>
     {
-        internal KNetProcessorContext(ProcessorContext<byte[], byte[]> context)
+        internal KNetProcessorContext(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]> context)
         {
             _context = context;
         }
 
-        readonly ProcessorContext<byte[], byte[]> _context;
+        readonly Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]> _context;
 
         /// <summary>
-        /// Converter from <see cref="KNetProcessorContext{KForward, VForward}"/> to <see cref="ProcessorContext{KForward, VForward}"/>
+        /// Converter from <see cref="KNetProcessorContext{KForward, VForward}"/> to <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{KForward, VForward}"/>
         /// </summary>
-        public static implicit operator ProcessorContext<byte[], byte[]>(KNetProcessorContext<KForward, VForward> t) => t._context;
+        public static implicit operator Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]>(KNetProcessorContext<KForward, VForward> t) => t._context;
 
         #region ProcessorContext
 

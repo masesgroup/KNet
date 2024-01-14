@@ -19,16 +19,15 @@
 using Java.Lang;
 using Java.Util;
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams.Processor;
 
 namespace MASES.KNet.Streams.Processor
 {
     /// <summary>
-    /// KNet implementation of <see cref="StreamPartitioner{K, V}"/>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner{K, V}"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetStreamPartitioner<TKey, TValue> : StreamPartitioner<byte[], byte[]>, IGenericSerDesFactoryApplier
+    public class KNetStreamPartitioner<TKey, TValue> : Org.Apache.Kafka.Streams.Processor.StreamPartitioner<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }

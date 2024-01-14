@@ -17,19 +17,18 @@
 */
 
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams.Processor.Api;
 using System;
 
 namespace MASES.KNet.Streams.Processor.Api
 {
     /// <summary>
-    /// KNet extension of <see cref="Record{K, V}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Processor.Api.Record{K, V}"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetRecord<TKey, TValue>
     {
-        internal KNetRecord(IGenericSerDesFactory builder, Record<byte[], byte[]> record, RecordMetadata metadata)
+        internal KNetRecord(IGenericSerDesFactory builder, Org.Apache.Kafka.Streams.Processor.Api.Record<byte[], byte[]> record, Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata metadata)
         {
             _builder = builder;
             _record = record;
@@ -37,13 +36,13 @@ namespace MASES.KNet.Streams.Processor.Api
         }
 
         readonly IGenericSerDesFactory _builder;
-        readonly Record<byte[], byte[]> _record;
-        readonly RecordMetadata _metadata;
+        readonly Org.Apache.Kafka.Streams.Processor.Api.Record<byte[], byte[]> _record;
+        readonly Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata _metadata;
 
         /// <summary>
         /// Converter from <see cref="KNetRecord{TKey, TValue}"/> to <see cref="Org.Apache.Kafka.Streams.Processor.Api.Record{K, V}"/>
         /// </summary>
-        public static implicit operator Record<byte[], byte[]>(KNetRecord<TKey, TValue> t) => t._record;
+        public static implicit operator Org.Apache.Kafka.Streams.Processor.Api.Record<byte[], byte[]>(KNetRecord<TKey, TValue> t) => t._record;
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Record.html#withKey-java.lang.Object-"/>

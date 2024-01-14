@@ -18,24 +18,22 @@
 
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Kstream;
-using Org.Apache.Kafka.Streams;
-using Org.Apache.Kafka.Streams.Kstream;
 
 namespace MASES.KNet.Streams
 {
     /// <summary>
-    /// KNet implementation of <see cref="KeyValue{K, V}"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/> 
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetWindowedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
-        readonly KeyValue<Windowed<byte[]>, byte[]> _value;
+        readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> _value;
         readonly IKNetSerDes<TValue> _valueSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetWindowedKeyValue(IGenericSerDesFactory factory, KeyValue<Windowed<byte[]>, byte[]> value)
+        internal KNetWindowedKeyValue(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> value)
         {
             _factory = factory;
             _valueSerDes = _factory.BuildValueSerDes<TValue>();

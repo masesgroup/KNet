@@ -17,16 +17,15 @@
 */
 
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams.Kstream;
 
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet implementation of <see cref="Predicate{K, V}"/>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetPredicate<TKey, TValue> : Predicate<byte[], byte[]>, IGenericSerDesFactoryApplier
+    public class KNetPredicate<TKey, TValue> : Org.Apache.Kafka.Streams.Kstream.Predicate<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }

@@ -17,23 +17,22 @@
 */
 
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams.State;
 using System;
 
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
-    /// KNet Implementation of <see cref="ValueAndTimestamp{V}"/>
+    /// KNet Implementation of <see cref="Org.Apache.Kafka.Streams.State.ValueAndTimestamp{V}"/>
     /// </summary>
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetValueAndTimestamp<TValue> : IGenericSerDesFactoryApplier
     {
-        readonly ValueAndTimestamp<byte[]> _valueAndTimestamp;
+        readonly Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]> _valueAndTimestamp;
         readonly IKNetSerDes<TValue> _valueSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetValueAndTimestamp(IGenericSerDesFactory factory, ValueAndTimestamp<byte[]> valueAndTimestamp)
+        internal KNetValueAndTimestamp(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]> valueAndTimestamp)
         {
             _factory = factory;
             _valueSerDes = _factory.BuildKeySerDes<TValue>();

@@ -17,16 +17,15 @@
 */
 
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams.Processor;
 
 namespace MASES.KNet.Streams.Processor
 {
     /// <summary>
-    /// KNet implementation of <see cref="TopicNameExtractor{K, V}"/>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor{K, V}"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetTopicNameExtractor<TKey, TValue> : TopicNameExtractor<byte[], byte[]>, IGenericSerDesFactoryApplier
+    public class KNetTopicNameExtractor<TKey, TValue> : Org.Apache.Kafka.Streams.Processor.TopicNameExtractor<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }

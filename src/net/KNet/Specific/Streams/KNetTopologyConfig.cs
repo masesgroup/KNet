@@ -17,15 +17,13 @@
 */
 
 using MASES.KNet.Serialization;
-using MASES.KNet.Streams;
-using Org.Apache.Kafka.Streams;
 
 namespace MASES.KNet.Streams
 {
     /// <summary>
-    /// KNet implementation of <see cref="TopologyConfig"/>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.TopologyConfig"/>
     /// </summary>
-    public class KNetTopologyConfig : TopologyConfig, IGenericSerDesFactoryApplier
+    public class KNetTopologyConfig : Org.Apache.Kafka.Streams.TopologyConfig, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }

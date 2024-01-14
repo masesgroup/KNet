@@ -19,22 +19,21 @@
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
 using MASES.KNet.Streams.State;
-using Org.Apache.Kafka.Streams;
 using System;
 
 namespace MASES.KNet.Streams
 {
     /// <summary>
-    /// KNet extension of <see cref="KafkaStreams"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/>
     /// </summary>
-    public class KNetStreams : KafkaStreams, IGenericSerDesFactoryApplier
+    public class KNetStreams : Org.Apache.Kafka.Streams.KafkaStreams, IGenericSerDesFactoryApplier
     {
         readonly KNetClientSupplier _supplier = null; // used to avoid GC recall
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         Org.Apache.Kafka.Streams.Processor.StateRestoreListener _stateRestoreListener;
-        Org.Apache.Kafka.Streams.KafkaStreams.StateListener _stateListener;
+        StateListener _stateListener;
         Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler _streamsUncaughtExceptionHandler;
 
         #region Constructors
@@ -144,7 +143,7 @@ namespace MASES.KNet.Streams
         public TKNetManagedStore Store<TKNetManagedStore, TStore>(string storageId, KNetQueryableStoreTypes.StoreType<TKNetManagedStore, TStore> storeType)
             where TKNetManagedStore : KNetManagedStore<TStore>, IGenericSerDesFactoryApplier
         {
-            var sqp = StoreQueryParameters<TStore>.FromNameAndType(storageId, storeType.Store);
+            var sqp = Org.Apache.Kafka.Streams.StoreQueryParameters<TStore>.FromNameAndType(storageId, storeType.Store);
             var t = typeof(TKNetManagedStore);
             var substore = Store<TStore>(sqp);
             return Activator.CreateInstance(t, _factory, substore) as TKNetManagedStore;

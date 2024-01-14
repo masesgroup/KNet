@@ -17,12 +17,11 @@
 */
 
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams.State;
 
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
-    /// Generator of KNet <see cref="QueryableStoreTypes"/>
+    /// Generator of KNet <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes"/>
     /// </summary>
     public static class KNetQueryableStoreTypes
     {
@@ -33,46 +32,46 @@ namespace MASES.KNet.Streams.State
         /// <typeparam name="TStore"></typeparam>
         public class StoreType<TKNetManagedStore, TStore> where TKNetManagedStore : KNetManagedStore<TStore>, IGenericSerDesFactoryApplier
         {
-            internal StoreType(QueryableStoreType<TStore> store) { Store = store; }
-            internal QueryableStoreType<TStore> Store;
+            internal StoreType(Org.Apache.Kafka.Streams.State.QueryableStoreType<TStore> store) { Store = store; }
+            internal Org.Apache.Kafka.Streams.State.QueryableStoreType<TStore> Store;
         }
 
         /// <summary>
-        /// KNet value of <see cref="QueryableStoreTypes.KeyValueStore{K, V}"/> based on array of <see cref="byte"/>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.KeyValueStore{K, V}"/> based on array of <see cref="byte"/>
         /// </summary>
-        public static StoreType<KNetReadOnlyKeyValueStore<TKey, TValue>, ReadOnlyKeyValueStore<byte[], byte[]>> KeyValueStore<TKey, TValue>()
+        public static StoreType<KNetReadOnlyKeyValueStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]>> KeyValueStore<TKey, TValue>()
         {
-            return new StoreType<KNetReadOnlyKeyValueStore<TKey, TValue>, ReadOnlyKeyValueStore<byte[], byte[]>>(QueryableStoreTypes.KeyValueStore<byte[], byte[]>());
+            return new StoreType<KNetReadOnlyKeyValueStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.KeyValueStore<byte[], byte[]>());
         }
         /// <summary>
-        /// KNet value of <see cref="QueryableStoreTypes.SessionStore{K, V}"/> based on array of <see cref="byte"/>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.SessionStore{K, V}"/> based on array of <see cref="byte"/>
         /// </summary>
-        public static StoreType<KNetReadOnlySessionStore<TKey, TValue>, ReadOnlySessionStore<byte[], byte[]>> SessionStore<TKey, TValue>()
+        public static StoreType<KNetReadOnlySessionStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<byte[], byte[]>> SessionStore<TKey, TValue>()
         {
-            return new StoreType<KNetReadOnlySessionStore<TKey, TValue>, ReadOnlySessionStore<byte[], byte[]>>(QueryableStoreTypes.SessionStore<byte[], byte[]>());
+            return new StoreType<KNetReadOnlySessionStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<byte[], byte[]>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.SessionStore<byte[], byte[]>());
         }
         /// <summary>
-        /// KNet value of <see cref="QueryableStoreTypes.WindowStore{K, V}"/> based on array of <see cref="byte"/>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.WindowStore{K, V}"/> based on array of <see cref="byte"/>
         /// </summary>
-        public static StoreType<KNetReadOnlyWindowStore<TKey, TValue>, ReadOnlyWindowStore<byte[], byte[]>> WindowStore<TKey, TValue>()
+        public static StoreType<KNetReadOnlyWindowStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], byte[]>> WindowStore<TKey, TValue>()
         {
-            return new StoreType<KNetReadOnlyWindowStore<TKey, TValue>, ReadOnlyWindowStore<byte[], byte[]>>(QueryableStoreTypes.WindowStore<byte[], byte[]>());
-        }
-
-        /// <summary>
-        /// KNet value of <see cref="QueryableStoreTypes.TimestampedKeyValueStore{K, V}"/> based on array of <see cref="byte"/>
-        /// </summary>
-        public static StoreType<KNetTimestampedKeyValueStore<TKey, TValue>, ReadOnlyKeyValueStore<byte[], ValueAndTimestamp<byte[]>>> TimestampedKeyValueStore<TKey, TValue>()
-        {
-            return new StoreType<KNetTimestampedKeyValueStore<TKey, TValue>, ReadOnlyKeyValueStore<byte[], ValueAndTimestamp<byte[]>>>(QueryableStoreTypes.TimestampedKeyValueStore<byte[], byte[]>());
+            return new StoreType<KNetReadOnlyWindowStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], byte[]>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.WindowStore<byte[], byte[]>());
         }
 
         /// <summary>
-        /// KNet value of <see cref="QueryableStoreTypes.TimestampedWindowStore{K, V}"/> based on array of <see cref="byte"/>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore{K, V}"/> based on array of <see cref="byte"/>
         /// </summary>
-        public static StoreType<KNetTimestampedWindowStore<TKey, TValue>, ReadOnlyWindowStore<byte[], ValueAndTimestamp<byte[]>>> TimestampedWindowStore<TKey, TValue>()
+        public static StoreType<KNetTimestampedKeyValueStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>> TimestampedKeyValueStore<TKey, TValue>()
         {
-            return new StoreType<KNetTimestampedWindowStore<TKey, TValue>, ReadOnlyWindowStore<byte[], ValueAndTimestamp<byte[]>>>(QueryableStoreTypes.TimestampedWindowStore<byte[], byte[]>());
+            return new StoreType<KNetTimestampedKeyValueStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore<byte[], byte[]>());
+        }
+
+        /// <summary>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedWindowStore{K, V}"/> based on array of <see cref="byte"/>
+        /// </summary>
+        public static StoreType<KNetTimestampedWindowStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>> TimestampedWindowStore<TKey, TValue>()
+        {
+            return new StoreType<KNetTimestampedWindowStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedWindowStore<byte[], byte[]>());
         }
     }
 }

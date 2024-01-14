@@ -18,21 +18,20 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams.State;
 
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
-    /// KNet implementation of <see cref="WindowStoreIterator"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.WindowStoreIterator"/> 
     /// </summary>
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetTimestampedWindowStoreIterator<TValue> : IGenericSerDesFactoryApplier
     {
-        readonly WindowStoreIterator<ValueAndTimestamp<byte[]>> _iterator;
+        readonly Org.Apache.Kafka.Streams.State.WindowStoreIterator<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _iterator;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetTimestampedWindowStoreIterator(IGenericSerDesFactory factory, WindowStoreIterator<ValueAndTimestamp<byte[]>> iterator)
+        internal KNetTimestampedWindowStoreIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.WindowStoreIterator<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> iterator)
         {
             _factory = factory;
             _iterator = iterator;
@@ -41,7 +40,7 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// Converter from <see cref="KNetTimestampedWindowStoreIterator{TValue}"/> to <see cref="KNetKeyValueIterator{Int64, TValue}"/>
         /// </summary>
-        public static implicit operator KNetTimestampedKeyValueIterator<long, TValue>(KNetTimestampedWindowStoreIterator<TValue> t) => new KNetTimestampedKeyValueIterator<long, TValue>(t._factory, t._iterator.Cast<KeyValueIterator<long, ValueAndTimestamp<byte[]>>>());
+        public static implicit operator KNetTimestampedKeyValueIterator<long, TValue>(KNetTimestampedWindowStoreIterator<TValue> t) => new KNetTimestampedKeyValueIterator<long, TValue>(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>());
 
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#close--"/>
