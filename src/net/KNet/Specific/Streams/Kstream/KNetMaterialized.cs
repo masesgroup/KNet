@@ -18,6 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
+using Org.Apache.Kafka.Common.Serialization;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -28,12 +29,18 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     public class KNetMaterialized<K, V> : IGenericSerDesFactoryApplier
     {
+        readonly Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], Java.Lang.Long, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> _countKeyStore;
         readonly Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], byte[], Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> _keyStore;
         readonly Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], byte[], Org.Apache.Kafka.Streams.State.SessionStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> _sessionStore;
         readonly Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], byte[], Org.Apache.Kafka.Streams.State.WindowStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> _windowStore;
 
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+
+        KNetMaterialized(Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], Java.Lang.Long, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> materialized)
+        {
+            _countKeyStore = materialized;
+        }
 
         KNetMaterialized(Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], byte[], Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> materialized)
         {
@@ -49,6 +56,11 @@ namespace MASES.KNet.Streams.Kstream
         {
             _windowStore = materialized;
         }
+
+        /// <summary>
+        /// Converter from <see cref="KNetMaterialized{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Materialized{K, V, S}"/>
+        /// </summary>
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], Java.Lang.Long, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>(KNetMaterialized<K, V> t) => t._countKeyStore;
 
         /// <summary>
         /// Converter from <see cref="KNetMaterialized{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Materialized{K, V, S}"/>
@@ -137,6 +149,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetMaterialized{K, V}"/></returns>
         public KNetMaterialized<K, V> WithCachingDisabled()
         {
+            _countKeyStore?.WithCachingDisabled();
             _keyStore?.WithCachingDisabled();
             _sessionStore?.WithCachingDisabled();
             _windowStore?.WithCachingDisabled();
@@ -148,6 +161,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetMaterialized{K, V}"/></returns>
         public KNetMaterialized<K, V> WithCachingEnabled()
         {
+            _countKeyStore?.WithCachingEnabled();
             _keyStore?.WithCachingEnabled();
             _sessionStore?.WithCachingEnabled();
             _windowStore?.WithCachingEnabled();
@@ -160,6 +174,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetMaterialized{K, V}"/></returns>
         public KNetMaterialized<K, V> WithKeySerde(IKNetSerDes<K> arg0)
         {
+            _countKeyStore?.WithKeySerde(arg0.KafkaSerde);
             _keyStore?.WithKeySerde(arg0.KafkaSerde);
             _sessionStore?.WithKeySerde(arg0.KafkaSerde);
             _windowStore?.WithKeySerde(arg0.KafkaSerde);
@@ -171,6 +186,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetMaterialized{K, V}"/></returns>
         public KNetMaterialized<K, V> WithLoggingDisabled()
         {
+            _countKeyStore?.WithLoggingDisabled();
             _keyStore?.WithLoggingDisabled();
             _sessionStore?.WithLoggingDisabled();
             _windowStore?.WithLoggingDisabled();
@@ -183,6 +199,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetMaterialized{K, V}"/></returns>
         public KNetMaterialized<K, V> WithLoggingEnabled(Java.Util.Map<string, string> arg0)
         {
+            _countKeyStore?.WithLoggingEnabled(arg0);
             _keyStore?.WithLoggingEnabled(arg0);
             _sessionStore?.WithLoggingEnabled(arg0);
             _windowStore?.WithLoggingEnabled(arg0);
@@ -196,6 +213,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public KNetMaterialized<K, V> WithRetention(Java.Time.Duration arg0)
         {
+            _countKeyStore?.WithRetention(arg0);
             _keyStore?.WithRetention(arg0);
             _sessionStore?.WithRetention(arg0);
             _windowStore?.WithRetention(arg0);
@@ -209,6 +227,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public KNetMaterialized<K, V> WithStoreType(Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType arg0)
         {
+            _countKeyStore?.WithStoreType(arg0);
             _keyStore?.WithStoreType(arg0);
             _sessionStore?.WithStoreType(arg0);
             _windowStore?.WithStoreType(arg0);
@@ -221,6 +240,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetMaterialized{K, V}"/></returns>
         public KNetMaterialized<K, V> WithValueSerde(IKNetSerDes<V> arg0)
         {
+            _countKeyStore?.WithValueSerde(Serdes.Long());
             _keyStore?.WithValueSerde(arg0.KafkaSerde);
             _sessionStore?.WithValueSerde(arg0.KafkaSerde);
             _windowStore?.WithValueSerde(arg0.KafkaSerde);

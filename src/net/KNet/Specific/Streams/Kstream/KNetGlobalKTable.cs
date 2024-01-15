@@ -27,7 +27,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     public class KNetGlobalKTable<K, V> : IGenericSerDesFactoryApplier
     {
-        Org.Apache.Kafka.Streams.Kstream.GlobalKTable<byte[], byte[]> _table;
+        Org.Apache.Kafka.Streams.Kstream.GlobalKTable<byte[], byte[]> _inner;
 
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -35,13 +35,18 @@ namespace MASES.KNet.Streams.Kstream
         internal KNetGlobalKTable(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.GlobalKTable<byte[], byte[]> table)
         {
             _factory = factory;
-            _table = table;
+            _inner = table;
         }
 
         /// <summary>
         /// Converter from <see cref="KNetGlobalKTable{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable{K, V}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.GlobalKTable<byte[], byte[]>(KNetGlobalKTable<K, V> t) => t._table;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.GlobalKTable<byte[], byte[]>(KNetGlobalKTable<K, V> t) => t._inner;
 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName--"/>
+        /// </summary>
+        /// <returns><see cref="string"/></returns>
+        public string QueryableStoreName => _inner.QueryableStoreName();
     }
 }

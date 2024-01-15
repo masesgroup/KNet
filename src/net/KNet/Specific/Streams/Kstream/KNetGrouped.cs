@@ -28,20 +28,20 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     public class KNetGrouped<K, V> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.Grouped<byte[], byte[]> _produced;
+        readonly Org.Apache.Kafka.Streams.Kstream.Grouped<byte[], byte[]> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        KNetGrouped(Org.Apache.Kafka.Streams.Kstream.Grouped<byte[], byte[]> produced)
+        KNetGrouped(Org.Apache.Kafka.Streams.Kstream.Grouped<byte[], byte[]> inner)
         {
-            _produced = produced;
+            _inner = inner;
         }
 
         /// <summary>
         /// Converter from <see cref="KNetGrouped{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Grouped{K, V}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Grouped<byte[], byte[]>(KNetGrouped<K, V> t) => t._produced;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Grouped<byte[], byte[]>(KNetGrouped<K, V> t) => t._inner;
 
-#warning shall be completed
+#warning till now it is only an empty class shall be completed with the method of inner class
     }
 }

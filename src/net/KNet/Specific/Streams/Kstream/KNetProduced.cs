@@ -28,19 +28,29 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     public class KNetProduced<K, V> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.Produced<byte[], byte[]> _produced;
+        KNetStreamPartitioner<K, V> _streamPartitioner = null;
+        readonly Org.Apache.Kafka.Streams.Kstream.Produced<byte[], byte[]> _inner;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
-
-        KNetProduced(Org.Apache.Kafka.Streams.Kstream.Produced<byte[], byte[]> produced)
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory
         {
-            _produced = produced;
+            get => _factory;
+            set
+            {
+                _factory = value;
+                if (_streamPartitioner is IGenericSerDesFactoryApplier applier) applier.Factory = value;
+            }
+        }
+
+        KNetProduced(Org.Apache.Kafka.Streams.Kstream.Produced<byte[], byte[]> inner, KNetStreamPartitioner<K, V> streamPartitioner = null)
+        {
+            _inner = inner;
+            _streamPartitioner = streamPartitioner;
         }
 
         /// <summary>
         /// Converter from <see cref="KNetProduced{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Produced{K, V}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Produced<byte[], byte[]>(KNetProduced<K, V> t) => t._produced;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Produced<byte[], byte[]>(KNetProduced<K, V> t) => t._inner;
 
         #region Static methods
         /// <summary>
@@ -70,10 +80,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="KNetProduced{K, V}"/></returns>
-        public static KNetProduced<K, V> StreamPartitioner<Arg0objectSuperK, Arg0objectSuperV>(KNetStreamPartitioner<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
+        public static KNetProduced<K, V> StreamPartitioner(KNetStreamPartitioner<K, V> arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Produced<byte[], byte[]>.StreamPartitioner(arg0);
-            return new KNetProduced<K, V>(cons);
+            return new KNetProduced<K, V>(cons, arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#valueSerde-org.apache.kafka.common.serialization.Serde-"/>
@@ -91,13 +101,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="IKNetSerDes{K}"/></param>
         /// <param name="arg1"><see cref="IKNetSerDes{V}"/></param>
         /// <param name="arg2"><see cref="KNetStreamPartitioner{TKey, TValue}"/></param>
-        /// <typeparam name="Arg2objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg2objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="KNetProduced{K, V}"/></returns>
-        public static KNetProduced<K, V> With<Arg2objectSuperK, Arg2objectSuperV>(IKNetSerDes<K> arg0, IKNetSerDes<V> arg1, KNetStreamPartitioner<Arg2objectSuperK, Arg2objectSuperV> arg2) where Arg2objectSuperK : K where Arg2objectSuperV : V
+        public static KNetProduced<K, V> With(IKNetSerDes<K> arg0, IKNetSerDes<V> arg1, KNetStreamPartitioner<K, V> arg2)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Produced<byte[], byte[]>.With(arg0.KafkaSerde, arg1.KafkaSerde, arg2);
-            return new KNetProduced<K, V>(cons);
+            return new KNetProduced<K, V>(cons, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
@@ -121,20 +129,19 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetProduced{K, V}"/></returns>
         public KNetProduced<K, V> WithKeySerde(IKNetSerDes<K> arg0)
         {
-            _produced?.WithKeySerde(arg0.KafkaSerde);
+            _inner?.WithKeySerde(arg0.KafkaSerde);
             return this;
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#withStreamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
-        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
+        /// <param name="arg0"><see cref="KNetStreamPartitioner{K, V}"/></param>
         /// <returns><see cref="KNetProduced{K, V}"/></returns>
-        public KNetProduced<K, V> WithStreamPartitioner<Arg0objectSuperK, Arg0objectSuperV>(KNetStreamPartitioner<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
+        public KNetProduced<K, V> WithStreamPartitioner(KNetStreamPartitioner<K, V> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            _produced?.WithStreamPartitioner(arg0);
+            _streamPartitioner = arg0;
+            _inner?.WithStreamPartitioner(arg0);
             return this;
         }
         /// <summary>
@@ -144,7 +151,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetProduced{K, V}"/></returns>
         public KNetProduced<K, V> WithValueSerde(IKNetSerDes<V> arg0)
         {
-            _produced?.WithValueSerde(arg0.KafkaSerde);
+            _inner?.WithValueSerde(arg0.KafkaSerde);
             return this;
         }
 

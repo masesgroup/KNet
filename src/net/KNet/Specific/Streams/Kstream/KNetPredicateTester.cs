@@ -21,7 +21,7 @@ using MASES.JCOBridge.C2JBridge;
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet extension of <see cref="Predicate{K, V}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}"/>
     /// </summary>
     public class KNetPredicateTester : JVMBridgeBase<KNetPredicateTester>
     {
@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         public override string BridgeClassName => "org.mases.knet.streams.kstream.KNetPredicateTester";
         /// <summary>
-        /// Converter from <see cref="KNetPredicateTester"/> to <see cref="Predicate"/>
+        /// Converter from <see cref="KNetPredicateTester"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/>
         /// </summary>
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.Predicate(KNetPredicateTester t) => t.Cast<Org.Apache.Kafka.Streams.Kstream.Predicate>();
         /// <summary>

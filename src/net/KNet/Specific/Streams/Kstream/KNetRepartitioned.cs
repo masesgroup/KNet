@@ -29,19 +29,29 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     public class KNetRepartitioned<K, V> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]> _repartitioned;
+        KNetStreamPartitioner<K, V> _streamPartitioner = null;
+        readonly Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]> _inner;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
-
-        KNetRepartitioned(Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]> repartitioned)
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory
         {
-            _repartitioned = repartitioned;
+            get => _factory;
+            set
+            {
+                _factory = value;
+                if (_streamPartitioner is IGenericSerDesFactoryApplier applier) applier.Factory = value;
+            }
+        }
+
+        KNetRepartitioned(Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]> inner, KNetStreamPartitioner<K, V> streamPartitioner = null)
+        {
+            _inner = inner;
+            _streamPartitioner = streamPartitioner;
         }
 
         /// <summary>
         /// Converter from <see cref="KNetRepartitioned{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned{K, V}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]>(KNetRepartitioned<K, V> t) => t._repartitioned;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]>(KNetRepartitioned<K, V> t) => t._inner;
 
         #region Static methods
         /// <summary>
@@ -72,7 +82,7 @@ namespace MASES.KNet.Streams.Kstream
         public static KNetRepartitioned<K, V> StreamPartitioner(KNetStreamPartitioner<K, V> arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]>.StreamPartitioner(arg0);
-            return new KNetRepartitioned<K, V>(cons);
+            return new KNetRepartitioned<K, V>(cons, arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
@@ -96,7 +106,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetRepartitioned{K, V}"/></returns>
         public KNetRepartitioned<K, V> WithKeySerde(IKNetSerDes<K> arg0)
         {
-            _repartitioned?.WithKeySerde(arg0.KafkaSerde);
+            _inner?.WithKeySerde(arg0.KafkaSerde);
             return this;
         }
         /// <summary>
@@ -106,7 +116,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetRepartitioned{K, V}"/></returns>
         public KNetRepartitioned<K, V> WithNumberOfPartitions(int arg0)
         {
-            _repartitioned?.WithNumberOfPartitions(arg0);
+            _inner?.WithNumberOfPartitions(arg0);
             return this;
         }
         /// <summary>
@@ -117,7 +127,8 @@ namespace MASES.KNet.Streams.Kstream
         public KNetRepartitioned<K, V> WithStreamPartitioner(KNetStreamPartitioner<K, V> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            _repartitioned?.WithStreamPartitioner(arg0);
+            _streamPartitioner = arg0;
+            _inner?.WithStreamPartitioner(arg0);
             return this;
         }
         /// <summary>
@@ -127,7 +138,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetRepartitioned{K, V}"/></returns>
         public KNetRepartitioned<K, V> WithValueSerde(IKNetSerDes<V> arg0)
         {
-            _repartitioned?.WithValueSerde(arg0.KafkaSerde);
+            _inner?.WithValueSerde(arg0.KafkaSerde);
             return this;
         }
 

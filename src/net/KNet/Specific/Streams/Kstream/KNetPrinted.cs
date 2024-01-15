@@ -41,6 +41,6 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.Printed<byte[], byte[]>(KNetPrinted<K, V> t) => t._inner;
 
-#warning shall be completed
+#warning till now it is only an empty class shall be completed with the method of inner class
     }
 }

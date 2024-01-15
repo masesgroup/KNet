@@ -28,21 +28,21 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     public class KNetKStream<K, V> : IGenericSerDesFactoryApplier
     {
-        Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]> _stream;
+        Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]> _inner;
 
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetKStream(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]> table)
+        internal KNetKStream(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]> inner)
         {
             _factory = factory;
-            _stream = table;
+            _inner = inner;
         }
 
         /// <summary>
         /// Converter from <see cref="KNetKStream{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.KStream{K, V}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]>(KNetKStream<K, V> t) => t._stream;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]>(KNetKStream<K, V> t) => t._inner;
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.GlobalKTable-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-"/>
@@ -65,7 +65,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KNetKStream<K, RV>(_factory, _stream.Join<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
+            return new KNetKStream<K, RV>(_factory, _inner.Join<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.GlobalKTable-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -87,7 +87,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KNetKStream<K, RV>(_factory, _stream.Join<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, RV>(_factory, _inner.Join<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.GlobalKTable-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.ValueJoinerWithKey-org.apache.kafka.streams.kstream.Named-"/>
@@ -111,7 +111,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KNetKStream<K, RV>(_factory, _stream.Join<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
+            return new KNetKStream<K, RV>(_factory, _inner.Join<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.GlobalKTable-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.ValueJoinerWithKey-"/>
@@ -134,7 +134,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KNetKStream<K, RV>(_factory, _stream.Join<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, RV>(_factory, _inner.Join<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.GlobalKTable-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-"/>
@@ -157,7 +157,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KNetKStream<K, RV>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
+            return new KNetKStream<K, RV>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.GlobalKTable-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -179,7 +179,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KNetKStream<K, RV>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, RV>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.GlobalKTable-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.ValueJoinerWithKey-org.apache.kafka.streams.kstream.Named-"/>
@@ -203,7 +203,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KNetKStream<K, RV>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
+            return new KNetKStream<K, RV>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.GlobalKTable-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.ValueJoinerWithKey-"/>
@@ -226,7 +226,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KNetKStream<K, RV>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, RV>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#flatMap-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.Named-"/>
@@ -243,7 +243,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<KR, VR> FlatMap<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, Arg0ExtendsVR>(KNetEnumerableKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V  where Arg0ExtendsKR : KR where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<KR, VR>(_factory, _stream.FlatMap<byte[], byte[], byte[], byte[], Java.Lang.Iterable<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>, Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>, byte[], byte[]>(arg0, arg1));
+            return new KNetKStream<KR, VR>(_factory, _inner.FlatMap<byte[], byte[], byte[], byte[], Java.Lang.Iterable<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>, Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>, byte[], byte[]>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#flatMap-org.apache.kafka.streams.kstream.KeyValueMapper-"/>
@@ -259,7 +259,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<KR, VR> FlatMap<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, Arg0ExtendsVR>(KNetEnumerableKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, Arg0ExtendsVR> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V  where Arg0ExtendsKR : KR where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<KR, VR>(_factory, _stream.FlatMap<byte[], byte[], byte[], byte[], Java.Lang.Iterable<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>, Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>, byte[], byte[]>(arg0));
+            return new KNetKStream<KR, VR>(_factory, _inner.FlatMap<byte[], byte[], byte[], byte[], Java.Lang.Iterable<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>, Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>, byte[], byte[]>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#map-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.Named-"/>
@@ -276,7 +276,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<KR, VR> Map<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, Arg0ExtendsVR>(KNetKeyValueKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsKR : KR where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<KR, VR>(_factory, _stream.Map<byte[], byte[], byte[], byte[], Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>, byte[], byte[]>(arg0, arg1));
+            return new KNetKStream<KR, VR>(_factory, _inner.Map<byte[], byte[], byte[], byte[], Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>, byte[], byte[]>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#map-org.apache.kafka.streams.kstream.KeyValueMapper-"/>
@@ -292,7 +292,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<KR, VR> Map<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, Arg0ExtendsVR>(KNetKeyValueKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, Arg0ExtendsVR> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsKR : KR where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<KR, VR>(_factory, _stream.Map<byte[], byte[], byte[], byte[], Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>, byte[], byte[]>(arg0));
+            return new KNetKStream<KR, VR>(_factory, _inner.Map<byte[], byte[], byte[], byte[], Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>, byte[], byte[]>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#groupBy-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.Grouped-"/>
@@ -307,7 +307,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
-            return new KNetKGroupedStream<KR, V>(_factory, _stream.GroupBy<byte[], byte[], byte[]>(arg0, arg1));
+            return new KNetKGroupedStream<KR, V>(_factory, _inner.GroupBy<byte[], byte[], byte[]>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#groupBy-org.apache.kafka.streams.kstream.KeyValueMapper-"/>
@@ -320,7 +320,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKGroupedStream<KR, V> GroupBy<KR, Arg0objectSuperK, Arg0objectSuperV>(KNetKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, KR> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKGroupedStream<KR, V>(_factory, _stream.GroupBy<byte[], byte[], byte[]>(arg0));
+            return new KNetKGroupedStream<KR, V>(_factory, _inner.GroupBy<byte[], byte[], byte[]>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#selectKey-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.Named-"/>
@@ -335,7 +335,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<KR, V> SelectKey<KR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR>(KNetKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsKR : KR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<KR, V>(_factory, _stream.SelectKey<byte[], byte[], byte[], byte[]>(arg0, arg1));
+            return new KNetKStream<KR, V>(_factory, _inner.SelectKey<byte[], byte[], byte[], byte[]>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#selectKey-org.apache.kafka.streams.kstream.KeyValueMapper-"/>
@@ -349,7 +349,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<KR, V> SelectKey<KR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR>(KNetKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsKR : KR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<KR, V>(_factory, _stream.SelectKey<byte[], byte[], byte[], byte[]>(arg0));
+            return new KNetKStream<KR, V>(_factory, _inner.SelectKey<byte[], byte[], byte[], byte[]>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.JoinWindows-org.apache.kafka.streams.kstream.StreamJoined-"/>
@@ -368,7 +368,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.Join<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
+            return new KNetKStream<K, VR>(_factory, _inner.Join<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.JoinWindows-"/>
@@ -385,7 +385,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> Join<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KNetKStream<K, VO> arg0, KNetValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.Join<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, VR>(_factory, _inner.Join<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoinerWithKey-org.apache.kafka.streams.kstream.JoinWindows-org.apache.kafka.streams.kstream.StreamJoined-"/>
@@ -405,7 +405,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.Join<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
+            return new KNetKStream<K, VR>(_factory, _inner.Join<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoinerWithKey-org.apache.kafka.streams.kstream.JoinWindows-"/>
@@ -423,7 +423,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> Join<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KNetKStream<K, VO> arg0, KNetValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, VR>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.JoinWindows-org.apache.kafka.streams.kstream.StreamJoined-"/>
@@ -442,7 +442,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
+            return new KNetKStream<K, VR>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.JoinWindows-"/>
@@ -459,7 +459,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> LeftJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KNetKStream<K, VO> arg0, KNetValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, VR>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoinerWithKey-org.apache.kafka.streams.kstream.JoinWindows-org.apache.kafka.streams.kstream.StreamJoined-"/>
@@ -479,7 +479,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
+            return new KNetKStream<K, VR>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoinerWithKey-org.apache.kafka.streams.kstream.JoinWindows-"/>
@@ -497,7 +497,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> LeftJoin<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KNetKStream<K, VO> arg0, KNetValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, VR>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#outerJoin-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.JoinWindows-org.apache.kafka.streams.kstream.StreamJoined-"/>
@@ -516,7 +516,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.OuterJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
+            return new KNetKStream<K, VR>(_factory, _inner.OuterJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#outerJoin-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.JoinWindows-"/>
@@ -533,7 +533,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> OuterJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KNetKStream<K, VO> arg0, KNetValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.OuterJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, VR>(_factory, _inner.OuterJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#outerJoin-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoinerWithKey-org.apache.kafka.streams.kstream.JoinWindows-org.apache.kafka.streams.kstream.StreamJoined-"/>
@@ -553,7 +553,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.OuterJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
+            return new KNetKStream<K, VR>(_factory, _inner.OuterJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#outerJoin-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.ValueJoinerWithKey-org.apache.kafka.streams.kstream.JoinWindows-"/>
@@ -571,7 +571,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> OuterJoin<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KNetKStream<K, VO> arg0, KNetValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.OuterJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, VR>(_factory, _inner.OuterJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#flatMapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-"/>
@@ -585,7 +585,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> FlatMapValues<VR, Arg0objectSuperV, Arg0ExtendsVR>(KNetEnumerableValueMapper<Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.FlatMapValues<byte[], byte[], Java.Lang.Iterable<byte[]>, byte[]>(arg0, arg1));
+            return new KNetKStream<K, VR>(_factory, _inner.FlatMapValues<byte[], byte[], Java.Lang.Iterable<byte[]>, byte[]>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#flatMapValues-org.apache.kafka.streams.kstream.ValueMapper-"/>
@@ -598,7 +598,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> FlatMapValues<VR, Arg0objectSuperV, Arg0ExtendsVR>(KNetEnumerableValueMapper<Arg0objectSuperV, Arg0ExtendsVR> arg0) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.FlatMapValues<byte[], byte[], Java.Lang.Iterable<byte[]>, byte[]>(arg0));
+            return new KNetKStream<K, VR>(_factory, _inner.FlatMapValues<byte[], byte[], Java.Lang.Iterable<byte[]>, byte[]>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#flatMapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-"/>
@@ -613,7 +613,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> FlatMapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(KNetEnumerableValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.FlatMapValues<byte[], byte[], byte[], Java.Lang.Iterable<byte[]>, byte[]>(arg0, arg1));
+            return new KNetKStream<K, VR>(_factory, _inner.FlatMapValues<byte[], byte[], byte[], Java.Lang.Iterable<byte[]>, byte[]>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#flatMapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-"/>
@@ -627,7 +627,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> FlatMapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(KNetEnumerableValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.FlatMapValues<byte[], byte[], byte[], Java.Lang.Iterable<byte[]>, byte[]>(arg0));
+            return new KNetKStream<K, VR>(_factory, _inner.FlatMapValues<byte[], byte[], byte[], Java.Lang.Iterable<byte[]>, byte[]>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-"/>
@@ -641,7 +641,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> MapValues<VR, Arg0objectSuperV, Arg0ExtendsVR>(KNetValueMapper<Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.MapValues<byte[], byte[], byte[]>(arg0));
+            return new KNetKStream<K, VR>(_factory, _inner.MapValues<byte[], byte[], byte[]>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-"/>
@@ -654,7 +654,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> MapValues<VR, Arg0objectSuperV, Arg0ExtendsVR>(KNetValueMapper<Arg0objectSuperV, Arg0ExtendsVR> arg0) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.MapValues<byte[], byte[], byte[]>(arg0));
+            return new KNetKStream<K, VR>(_factory, _inner.MapValues<byte[], byte[], byte[]>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-"/>
@@ -669,7 +669,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> MapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(KNetValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.MapValues<byte[], byte[], byte[], byte[]>(arg0, arg1));
+            return new KNetKStream<K, VR>(_factory, _inner.MapValues<byte[], byte[], byte[], byte[]>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-"/>
@@ -683,7 +683,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> MapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(KNetValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.MapValues<byte[], byte[], byte[], byte[]>(arg0));
+            return new KNetKStream<K, VR>(_factory, _inner.MapValues<byte[], byte[], byte[], byte[]>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Joined-"/>
@@ -701,7 +701,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.Join<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, VR>(_factory, _inner.Join<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -717,7 +717,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> Join<VR, VT, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(KNetKTable<K, VT> arg0, KNetValueJoiner<Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.Join<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1));
+            return new KNetKStream<K, VR>(_factory, _inner.Join<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoinerWithKey-org.apache.kafka.streams.kstream.Joined-"/>
@@ -736,7 +736,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.Join<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, VR>(_factory, _inner.Join<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoinerWithKey-"/>
@@ -753,7 +753,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> Join<VR, VT, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(KNetKTable<K, VT> arg0, KNetValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1));
+            return new KNetKStream<K, VR>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Joined-"/>
@@ -771,7 +771,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, VR>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -787,7 +787,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> LeftJoin<VR, VT, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(KNetKTable<K, VT> arg0, KNetValueJoiner<Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1));
+            return new KNetKStream<K, VR>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[]>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoinerWithKey-org.apache.kafka.streams.kstream.Joined-"/>
@@ -805,7 +805,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> LeftJoin<VR, VT, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(KNetKTable<K, VT> arg0, KNetValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1, KNetJoined<K, V, VT> arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
+            return new KNetKStream<K, VR>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoinerWithKey-"/>
@@ -822,7 +822,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, VR> LeftJoin<VR, VT, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(KNetKTable<K, VT> arg0, KNetValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, VR>(_factory, _stream.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1));
+            return new KNetKStream<K, VR>(_factory, _inner.LeftJoin<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#split--"/>
@@ -830,7 +830,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream"/></returns>
         public KNetBranchedKStream<K, V> Split()
         {
-            return new KNetBranchedKStream<K, V>(_factory, _stream.Split());
+            return new KNetBranchedKStream<K, V>(_factory, _inner.Split());
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#split-org.apache.kafka.streams.kstream.Named-"/>
@@ -839,7 +839,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream"/></returns>
         public KNetBranchedKStream<K, V> Split(Org.Apache.Kafka.Streams.Kstream.Named arg0)
         {
-            return new KNetBranchedKStream<K, V>(_factory, _stream.Split(arg0));
+            return new KNetBranchedKStream<K, V>(_factory, _inner.Split(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#groupByKey--"/>
@@ -847,7 +847,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedStream"/></returns>
         public KNetKGroupedStream<K, V> GroupByKey()
         {
-            return new KNetKGroupedStream<K, V>(_factory, _stream.GroupByKey());
+            return new KNetKGroupedStream<K, V>(_factory, _inner.GroupByKey());
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#groupByKey-org.apache.kafka.streams.kstream.Grouped-"/>
@@ -857,7 +857,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKGroupedStream<K, V> GroupByKey(KNetGrouped<K, V> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKGroupedStream<K, V>(_factory, _stream.GroupByKey(arg0));
+            return new KNetKGroupedStream<K, V>(_factory, _inner.GroupByKey(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-"/>
@@ -870,7 +870,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, V> Filter<Arg0objectSuperK, Arg0objectSuperV>(KNetPredicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, V>(_factory, _stream.Filter(arg0, arg1));
+            return new KNetKStream<K, V>(_factory, _inner.Filter(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#filter-org.apache.kafka.streams.kstream.Predicate-"/>
@@ -882,7 +882,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, V> Filter<Arg0objectSuperK, Arg0objectSuperV>(KNetPredicate<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, V>(_factory, _stream.Filter(arg0));
+            return new KNetKStream<K, V>(_factory, _inner.Filter(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-"/>
@@ -895,7 +895,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, V> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(KNetPredicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, V>(_factory, _stream.FilterNot(arg0, arg1));
+            return new KNetKStream<K, V>(_factory, _inner.FilterNot(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#filterNot-org.apache.kafka.streams.kstream.Predicate-"/>
@@ -907,7 +907,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, V> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(KNetPredicate<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, V>(_factory, _stream.FilterNot(arg0));
+            return new KNetKStream<K, V>(_factory, _inner.FilterNot(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#merge-org.apache.kafka.streams.kstream.KStream-org.apache.kafka.streams.kstream.Named-"/>
@@ -917,7 +917,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public KNetKStream<K, V> Merge(KNetKStream<K, V> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1)
         {
-            return new KNetKStream<K, V>(_factory, _stream.Merge(arg0, arg1));
+            return new KNetKStream<K, V>(_factory, _inner.Merge(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#merge-org.apache.kafka.streams.kstream.KStream-"/>
@@ -926,7 +926,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetKStream{K, V}"/></returns>
         public KNetKStream<K, V> Merge(KNetKStream<K, V> arg0)
         {
-            return new KNetKStream<K, V>(_factory, _stream.Merge(arg0));
+            return new KNetKStream<K, V>(_factory, _inner.Merge(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#peek-org.apache.kafka.streams.kstream.ForeachAction-org.apache.kafka.streams.kstream.Named-"/>
@@ -939,7 +939,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, V> Peek<Arg0objectSuperK, Arg0objectSuperV>(KNetForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, V>(_factory, _stream.Peek(arg0, arg1));
+            return new KNetKStream<K, V>(_factory, _inner.Peek(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#peek-org.apache.kafka.streams.kstream.ForeachAction-"/>
@@ -951,7 +951,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, V> Peek<Arg0objectSuperK, Arg0objectSuperV>(KNetForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, V>(_factory, _stream.Peek(arg0));
+            return new KNetKStream<K, V>(_factory, _inner.Peek(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#repartition--"/>
@@ -959,7 +959,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public KNetKStream<K, V> Repartition()
         {
-            return new KNetKStream<K, V>(_factory, _stream.Repartition());
+            return new KNetKStream<K, V>(_factory, _inner.Repartition());
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#repartition-org.apache.kafka.streams.kstream.Repartitioned-"/>
@@ -969,7 +969,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKStream<K, V> Repartition(KNetRepartitioned<K, V> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, V>(_factory, _stream.Repartition(arg0));
+            return new KNetKStream<K, V>(_factory, _inner.Repartition(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#toTable--"/>
@@ -978,7 +978,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KNetKTable<K, V> ToTable()
         {
-            return new KNetKTable<K, V>(_factory, _stream.ToTable());
+            return new KNetKTable<K, V>(_factory, _inner.ToTable());
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#toTable-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -988,7 +988,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKTable<K, V> ToTable(KNetMaterialized<K, V> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKTable<K, V>(_factory, _stream.ToTable(arg0));
+            return new KNetKTable<K, V>(_factory, _inner.ToTable(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#toTable-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -999,7 +999,7 @@ namespace MASES.KNet.Streams.Kstream
         public KNetKTable<K, V> ToTable(Org.Apache.Kafka.Streams.Kstream.Named arg0, KNetMaterialized<K, V> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKTable<K, V>(_factory, _stream.ToTable(arg0, arg1));
+            return new KNetKTable<K, V>(_factory, _inner.ToTable(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#toTable-org.apache.kafka.streams.kstream.Named-"/>
@@ -1008,7 +1008,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KNetKTable<K, V> ToTable(Org.Apache.Kafka.Streams.Kstream.Named arg0)
         {
-            return new KNetKTable<K, V>(_factory, _stream.ToTable(arg0));
+            return new KNetKTable<K, V>(_factory, _inner.ToTable(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#foreach-org.apache.kafka.streams.kstream.ForeachAction-org.apache.kafka.streams.kstream.Named-"/>
@@ -1020,7 +1020,7 @@ namespace MASES.KNet.Streams.Kstream
         public void Foreach<Arg0objectSuperK, Arg0objectSuperV>(KNetForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            _stream.Foreach(arg0, arg1);
+            _inner.Foreach(arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#foreach-org.apache.kafka.streams.kstream.ForeachAction-"/>
@@ -1031,7 +1031,7 @@ namespace MASES.KNet.Streams.Kstream
         public void Foreach<Arg0objectSuperK, Arg0objectSuperV>(KNetForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            _stream.Foreach(arg0);
+            _inner.Foreach(arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#print-org.apache.kafka.streams.kstream.Printed-"/>
@@ -1040,7 +1040,7 @@ namespace MASES.KNet.Streams.Kstream
         public void Print(KNetPrinted<K, V> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            _stream.Print(arg0);
+            _inner.Print(arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#to-java.lang.String-org.apache.kafka.streams.kstream.Produced-"/>
@@ -1050,7 +1050,7 @@ namespace MASES.KNet.Streams.Kstream
         public void To(string arg0, KNetProduced<K, V> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            _stream.To(arg0, arg1);
+            _inner.To(arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#to-java.lang.String-"/>
@@ -1058,7 +1058,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="string"/></param>
         public void To(string arg0)
         {
-            _stream.To(arg0);
+            _inner.To(arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#to-org.apache.kafka.streams.processor.TopicNameExtractor-org.apache.kafka.streams.kstream.Produced-"/>
@@ -1069,7 +1069,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
-            _stream.To(arg0, arg1);
+            _inner.To(arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#to-org.apache.kafka.streams.processor.TopicNameExtractor-"/>
@@ -1078,7 +1078,7 @@ namespace MASES.KNet.Streams.Kstream
         public void To(KNetTopicNameExtractor<K, V> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            _stream.To(arg0);
+            _inner.To(arg0);
         }
     }
 }

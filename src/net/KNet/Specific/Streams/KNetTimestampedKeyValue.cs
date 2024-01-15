@@ -22,7 +22,7 @@ using MASES.KNet.Streams.State;
 namespace MASES.KNet.Streams
 {
     /// <summary>
-    /// KNet implementation of <see cref="KeyValue{K, V}"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.ValueAndTimestamp{V}"/> 
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>

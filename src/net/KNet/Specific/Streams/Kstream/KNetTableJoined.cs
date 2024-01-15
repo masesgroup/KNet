@@ -21,27 +21,25 @@ using MASES.KNet.Serialization;
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedStream{K, V}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined{K, KO}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
-    /// <typeparam name="V"></typeparam>
-    public class KNetKGroupedStream<K, V> : IGenericSerDesFactoryApplier
+    /// <typeparam name="KO"></typeparam>
+    public class KNetTableJoined<K, KO> : IGenericSerDesFactoryApplier
     {
-        Org.Apache.Kafka.Streams.Kstream.KGroupedStream<byte[], byte[]> _inner;
-
+        readonly Org.Apache.Kafka.Streams.Kstream.TableJoined<byte[], byte[]> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetKGroupedStream(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.KGroupedStream<byte[], byte[]> inner)
+        KNetTableJoined(Org.Apache.Kafka.Streams.Kstream.TableJoined<byte[], byte[]> inner)
         {
-            _factory = factory;
             _inner = inner;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetKGroupedStream{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedStream{K, V}"/>
+        /// Converter from <see cref="KNetTableJoined{K, KO}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined{K, KO}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.KGroupedStream<byte[], byte[]>(KNetKGroupedStream<K, V> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.TableJoined<byte[], byte[]>(KNetTableJoined<K, KO> t) => t._inner;
 
 #warning till now it is only an empty class shall be completed with the method of inner class
     }

@@ -28,20 +28,20 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VO"></typeparam>
     public class KNetJoined<K, V, VO> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.Joined<byte[], byte[], byte[]> _produced;
+        readonly Org.Apache.Kafka.Streams.Kstream.Joined<byte[], byte[], byte[]> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        KNetJoined(Org.Apache.Kafka.Streams.Kstream.Joined<byte[], byte[], byte[]> produced)
+        KNetJoined(Org.Apache.Kafka.Streams.Kstream.Joined<byte[], byte[], byte[]> inner)
         {
-            _produced = produced;
+            _inner = inner;
         }
 
         /// <summary>
         /// Converter from <see cref="KNetJoined{K, V, VO}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Joined{K, V, VO}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Joined<byte[], byte[], byte[]>(KNetJoined<K, V, VO> t) => t._produced;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Joined<byte[], byte[], byte[]>(KNetJoined<K, V, VO> t) => t._inner;
 
-#warning shall be completed
+#warning till now it is only an empty class shall be completed with the method of inner class
     }
 }
