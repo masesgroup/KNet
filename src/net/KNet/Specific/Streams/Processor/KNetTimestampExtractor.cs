@@ -20,7 +20,7 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Consumer;
 using MASES.KNet.Serialization;
 
-namespace MASES.KNet.Streams.Kstream
+namespace MASES.KNet.Streams.Processor
 {
     /// <summary>
     /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/>

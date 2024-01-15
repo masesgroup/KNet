@@ -37,7 +37,7 @@ namespace MASES.KNet.Streams.Kstream
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetMaterialized{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Materialized{K, V, S}"/>
+        /// Converter from <see cref="KNetConsumed{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Consumed{K, V}"/>
         /// </summary>
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.Consumed<byte[], byte[]>(KNetConsumed<K, V> t) => t._consumed;
 
@@ -127,6 +127,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetConsumed{K, V}"/></returns>
         public KNetConsumed<K, V> WithTimestampExtractor(KNetTimestampExtractor<K, V> arg0)
         {
+            if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             _consumed?.WithTimestampExtractor(arg0);
             return this;
         }
