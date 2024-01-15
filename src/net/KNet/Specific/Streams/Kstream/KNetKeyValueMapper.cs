@@ -18,7 +18,6 @@
 
 using Java.Util;
 using MASES.KNet.Serialization;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace MASES.KNet.Streams.Kstream

@@ -138,7 +138,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public KNetKTable<K, long> Count(KNetMaterialized<K, Java.Lang.Long> arg0)
+        public KNetKTable<K, long> Count(KNetCountingMaterialized<K> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new KNetKTable<K, long>(_factory, _inner.Count(arg0));
@@ -149,7 +149,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public KNetKTable<K, long> Count(Org.Apache.Kafka.Streams.Kstream.Named arg0, KNetMaterialized<K, Java.Lang.Long> arg1)
+        public KNetKTable<K, long> Count(Org.Apache.Kafka.Streams.Kstream.Named arg0, KNetCountingMaterialized<K> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             return new KNetKTable<K, long>(_factory, _inner.Count(arg0, arg1));
