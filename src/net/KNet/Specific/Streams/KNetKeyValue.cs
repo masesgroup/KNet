@@ -65,22 +65,10 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
-        public TKey Key
-        {
-            get
-            {
-                return _key != null ? _keySerDes.Deserialize(null, _key) : (TKey)(object)_keyLong;
-            }
-        }
+        public TKey Key => _key != null ? _keySerDes.Deserialize(null, _key) : (TKey)(object)_keyLong;
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
-        public TValue Value
-        {
-            get
-            {
-                return _valueSerDes.Deserialize(null, _value);
-            }
-        }
+        public TValue Value =>  _valueSerDes.Deserialize(null, _value);
     }
 }

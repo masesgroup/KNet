@@ -32,17 +32,24 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetKeyValueIterator<TKey, TValue> : IGenericSerDesFactoryApplier
     {
-        class LocalEnumerator(bool isVersion2, IGenericSerDesFactory factory, IJavaObject obj) : JVMBridgeBaseEnumerator<KNetKeyValue<TKey, TValue>>(obj), IGenericSerDesFactoryApplier
+        class LocalEnumerator : JVMBridgeBaseEnumerator<KNetKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier
         {
-            IGenericSerDesFactory _factory = factory;
+            readonly bool _isVersion2;
+            IGenericSerDesFactory _factory;
             IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+
+            public LocalEnumerator(bool isVersion2, IGenericSerDesFactory factory, IJavaObject obj) : base(obj)
+            {
+                _isVersion2 = isVersion2;
+                _factory = factory;
+            }
 
             protected override object ConvertObject(object input)
             {
                 if (input is IJavaObject obj)
                 {
-                    return isVersion2 ? new KNetKeyValue<TKey, TValue>(_factory, JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]>>(obj))
-                                      : new KNetKeyValue<TKey, TValue>(_factory, JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>(obj));
+                    return _isVersion2 ? new KNetKeyValue<TKey, TValue>(_factory, JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]>>(obj))
+                                       : new KNetKeyValue<TKey, TValue>(_factory, JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>(obj));
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
