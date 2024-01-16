@@ -22,6 +22,7 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Kstream;
 using System.Collections.Generic;
+using System;
 
 namespace MASES.KNet.Streams.State
 {
@@ -39,7 +40,11 @@ namespace MASES.KNet.Streams.State
 
             protected override object ConvertObject(object input)
             {
-                return new KNetWindowedKeyValue<TKey, TValue>(_factory, input as Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]>);
+                if (input is IJavaObject obj)
+                {
+                    return new KNetWindowedKeyValue<TKey, TValue>(_factory, JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]>>(obj));
+                }
+                throw new InvalidCastException($"input is not a valid IJavaObject");
             }
         }
 

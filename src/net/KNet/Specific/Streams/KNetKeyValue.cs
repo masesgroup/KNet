@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams
 {
@@ -27,8 +28,9 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> _value = null;
-        readonly Org.Apache.Kafka.Streams.KeyValue<long, byte[]> _value2 = null;
+        readonly byte[] _key = null;
+        readonly long? _keyLong = null;
+        readonly byte[] _value = null;
         readonly IKNetSerDes<TKey> _keySerDes;
         readonly IKNetSerDes<TValue> _valueSerDes;
         IGenericSerDesFactory _factory;
@@ -36,18 +38,28 @@ namespace MASES.KNet.Streams
 
         internal KNetKeyValue(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> value)
         {
+#pragma warning disable CA1816
+            GC.SuppressFinalize(value);
+#pragma warning restore CA1816
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();
             _valueSerDes = _factory.BuildValueSerDes<TValue>();
-            _value = value;
+            _key = value.key;
+            _value = value.value;
+            GC.ReRegisterForFinalize(value);
         }
 
-        internal KNetKeyValue(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<long, byte[]> value)
+        internal KNetKeyValue(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]> value)
         {
+#pragma warning disable CA1816
+            GC.SuppressFinalize(value);
+#pragma warning restore CA1816
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();
             _valueSerDes = _factory.BuildValueSerDes<TValue>();
-            _value2 = value;
+            _keyLong = value.key?.LongValue();
+            _value = value.value;
+            GC.ReRegisterForFinalize(value);
         }
 
         /// <summary>
@@ -57,9 +69,7 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                if (_value2 != null) return (TKey)(object)_value2.key;
-                var kk = _value.key;
-                return _keySerDes.Deserialize(null, kk);
+                return _key != null ? _keySerDes.Deserialize(null, _key) : (TKey)(object)_keyLong;
             }
         }
         /// <summary>
@@ -69,8 +79,7 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                var kk = _value.value;
-                return _valueSerDes.Deserialize(null, kk);
+                return _valueSerDes.Deserialize(null, _value);
             }
         }
     }

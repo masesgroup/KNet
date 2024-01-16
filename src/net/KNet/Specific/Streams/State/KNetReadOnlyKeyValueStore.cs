@@ -25,22 +25,8 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetReadOnlyKeyValueStore<TKey, TValue> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]>>, IGenericSerDesFactoryApplier
+    public class KNetReadOnlyKeyValueStore<TKey, TValue> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]>>
     {
-        readonly Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]> _store;
-        readonly IKNetSerDes<TKey> _keySerDes;
-        readonly IKNetSerDes<TValue> _valueSerDes;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
-
-        internal KNetReadOnlyKeyValueStore(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]> store)
-        {
-            _factory = factory;
-            _keySerDes = _factory.BuildKeySerDes<TKey>();
-            _valueSerDes = _factory.BuildValueSerDes<TValue>();
-            _store = store;
-        }
-
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries--"/>
         /// </summary>
@@ -59,6 +45,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetKeyValueIterator{TKey, TValue}"/></returns>
         public KNetKeyValueIterator<TKey, TValue> Range(TKey arg0, TKey arg1)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
 
@@ -71,6 +59,9 @@ namespace MASES.KNet.Streams.State
         /// <returns><typeparamref name="TValue"/></returns>
         public TValue Get(TKey arg0)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            var _valueSerDes = _factory.BuildValueSerDes<TValue>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var res = _store.Get(r0);
             return _valueSerDes.Deserialize(null, res);
@@ -88,6 +79,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetKeyValueIterator{TKey, TValue}"/></returns>
         public KNetKeyValueIterator<TKey, TValue> ReverseRange(TKey arg0, TKey arg1)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
 

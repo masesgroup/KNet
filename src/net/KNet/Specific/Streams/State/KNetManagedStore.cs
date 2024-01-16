@@ -16,9 +16,38 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet.Serialization;
+
 namespace MASES.KNet.Streams.State
 {
-    public class KNetManagedStore<TStore>
+    /// <summary>
+    /// Supporting interface for <see cref="KNetManagedStore{TStore}"/>
+    /// </summary>
+    /// <typeparam name="TStore">The Apache Kafka store type</typeparam>
+    public interface IKNetManagedStore<TStore> : IGenericSerDesFactoryApplier
     {
+        /// <summary>
+        /// Sets store data
+        /// </summary>
+        /// <param name="factory"><see cref="IGenericSerDesFactory"/></param>
+        /// <param name="store"><typeparamref name="TStore"/></param>
+        void SetData(IGenericSerDesFactory factory, TStore store);
+    }
+
+    /// <summary>
+    /// Base class for stores managed from KNet
+    /// </summary>
+    /// <typeparam name="TStore">The Apache Kafka store type</typeparam>
+    public class KNetManagedStore<TStore> : IKNetManagedStore<TStore>, IGenericSerDesFactoryApplier
+    {
+        internal TStore _store;
+        internal IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+
+        void IKNetManagedStore<TStore>.SetData(IGenericSerDesFactory factory, TStore store)
+        {
+            _factory = factory;
+            _store = store;
+        }
     }
 }

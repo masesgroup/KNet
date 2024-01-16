@@ -27,19 +27,6 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetTimestampedWindowStore<TKey, TValue> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>, IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _store;
-        readonly IKNetSerDes<TKey> _keySerDes;
-        readonly IKNetSerDes<TValue> _valueSerDes;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
-
-        internal KNetTimestampedWindowStore(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> store)
-        {
-            _factory = factory;
-            _keySerDes = _factory.BuildKeySerDes<TKey>();
-            _valueSerDes = _factory.BuildValueSerDes<TValue>();
-            _store = store;
-        }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all--"/>
         /// </summary>
@@ -48,14 +35,16 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="K"/></param>
-        /// <param name="arg1"><typeparamref name="K"/></param>
+        /// <param name="arg0"><typeparamref name="TKey"/></param>
+        /// <param name="arg1"><typeparamref name="TKey"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg3"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="KNetTimestampedWindowedKeyValueIterator{TKey, TValue}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public KNetTimestampedWindowedKeyValueIterator<TKey, TValue> Fetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
 
@@ -75,24 +64,28 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="K"/></param>
+        /// <param name="arg0"><typeparamref name="TKey"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.State.WindowStoreIterator"/></returns>
+        /// <returns><see cref="KNetTimestampedWindowStoreIterator{TValue}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public KNetTimestampedWindowStoreIterator<TValue> Fetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             return new(_factory, _store.Fetch(r0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-long-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="K"/></param>
+        /// <param name="arg0"><typeparamref name="TKey"/></param>
         /// <param name="arg1"><see cref="long"/></param>
-        /// <returns><typeparamref name="V"/></returns>
+        /// <returns><see cref="KNetValueAndTimestamp{TValue}"/></returns>
         public KNetValueAndTimestamp<TValue> Fetch(TKey arg0, long arg1)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var agg = _store.Fetch(r0, arg1);
             return new KNetValueAndTimestamp<TValue>(_factory, agg);
@@ -105,14 +98,16 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="K"/></param>
-        /// <param name="arg1"><typeparamref name="K"/></param>
+        /// <param name="arg0"><typeparamref name="TKey"/></param>
+        /// <param name="arg1"><typeparamref name="TKey"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg3"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="KNetTimestampedWindowedKeyValueIterator{TKey, TValue}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public KNetTimestampedWindowedKeyValueIterator<TKey, TValue> BackwardFetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
 
@@ -139,6 +134,8 @@ namespace MASES.KNet.Streams.State
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public KNetTimestampedWindowStoreIterator<TValue> BackwardFetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
 
             return new(_factory, _store.BackwardFetch(r0, arg1, arg2));

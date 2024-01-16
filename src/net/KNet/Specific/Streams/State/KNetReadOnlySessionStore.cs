@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Serialization;
-
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
@@ -25,22 +23,8 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="AGG">The value type</typeparam>
-    public class KNetReadOnlySessionStore<K, AGG> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<byte[], byte[]>>, IGenericSerDesFactoryApplier
+    public class KNetReadOnlySessionStore<K, AGG> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<byte[], byte[]>>
     {
-        readonly Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<byte[], byte[]> _store;
-        readonly IKNetSerDes<K> _keySerDes;
-        readonly IKNetSerDes<AGG> _valueSerDes;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
-
-        internal KNetReadOnlySessionStore(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<byte[], byte[]> store)
-        {
-            _factory = factory;
-            _keySerDes = _factory.BuildKeySerDes<K>();
-            _valueSerDes = _factory.BuildValueSerDes<AGG>();
-            _store = store;
-        }
-
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -49,6 +33,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> Fetch(K arg0, K arg1)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.Fetch(r0, r1));
@@ -60,6 +46,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> Fetch(K arg0)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.Fetch(r0));
         }
@@ -72,6 +60,9 @@ namespace MASES.KNet.Streams.State
         /// <returns><typeparamref name="AGG"/></returns>
         public AGG FetchSession(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+            var _valueSerDes = _factory.BuildValueSerDes<AGG>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var agg = _store.FetchSession(r0, arg1, arg2);
             return _valueSerDes.Deserialize(null, agg);
@@ -85,6 +76,9 @@ namespace MASES.KNet.Streams.State
         /// <returns><typeparamref name="AGG"/></returns>
         public AGG FetchSession(K arg0, long arg1, long arg2)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+            var _valueSerDes = _factory.BuildValueSerDes<AGG>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var agg = _store.FetchSession(r0, arg1, arg2);
             return _valueSerDes.Deserialize(null, agg);
@@ -97,6 +91,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0, K arg1)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFetch(r0, r1));
@@ -108,6 +104,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFetch(r0));
         }
@@ -120,6 +118,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFindSessions(r0, arg1, arg2));
         }
@@ -133,6 +133,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFindSessions(r0, r1, arg2, arg3));
@@ -147,6 +149,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, long arg2, long arg3)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFindSessions(r0, r1, arg2, arg3));
@@ -160,6 +164,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, long arg1, long arg2)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFindSessions(r0, arg1, arg2));
         }
@@ -172,6 +178,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFindSessions(r0, arg1, arg2));
         }
@@ -185,6 +193,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.FindSessions(r0, r1, arg2, arg3));
@@ -199,6 +209,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, long arg2, long arg3)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.FindSessions(r0, r1, arg2, arg3));
@@ -212,6 +224,8 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
         public KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, long arg1, long arg2)
         {
+            var _keySerDes = _factory.BuildKeySerDes<K>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.FindSessions(r0, arg1, arg2));
         }

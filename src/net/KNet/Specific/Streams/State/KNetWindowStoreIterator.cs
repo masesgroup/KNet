@@ -40,7 +40,7 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// Converter from <see cref="KNetWindowStoreIterator{TValue}"/> to <see cref="KNetKeyValueIterator{Int64, TValue}"/>
         /// </summary>
-        public static implicit operator KNetKeyValueIterator<long, TValue>(KNetWindowStoreIterator<TValue> t) => new KNetKeyValueIterator<long, TValue>(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<long, byte[]>>());
+        public static implicit operator KNetKeyValueIterator<long, TValue>(KNetWindowStoreIterator<TValue> t) => new KNetKeyValueIterator<long, TValue>(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, byte[]>>());
 
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#close--"/>

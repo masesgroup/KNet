@@ -32,15 +32,11 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        Org.Apache.Kafka.Streams.Processor.StateRestoreListener _stateRestoreListener;
-        StateListener _stateListener;
-        Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler _streamsUncaughtExceptionHandler;
+        Org.Apache.Kafka.Streams.Processor.StateRestoreListener _stateRestoreListener; // used to avoid GC recall
+        StateListener _stateListener; // used to avoid GC recall
+        Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler _streamsUncaughtExceptionHandler; // used to avoid GC recall
 
         #region Constructors
-        /// <inheritdoc/>
-        public KNetStreams() : base() { }
-        /// <inheritdoc/>
-        public KNetStreams(params object[] args) : base(args) { }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
@@ -125,11 +121,15 @@ namespace MASES.KNet.Streams
         /// <typeparam name="TStore"></typeparam>
         /// <returns><typeparamref name="TKNetManagedStore"/></returns>
         public TKNetManagedStore Store<TKNetManagedStore, TStore>(Org.Apache.Kafka.Streams.StoreQueryParameters<TStore> arg0)
-            where TKNetManagedStore : KNetManagedStore<TStore>, IGenericSerDesFactoryApplier
+            where TKNetManagedStore : KNetManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
         {
-            var t = typeof(TKNetManagedStore);
+            TKNetManagedStore store = new TKNetManagedStore();
             var substore = Store<TStore>(arg0);
-            return Activator.CreateInstance(t, _factory, substore) as TKNetManagedStore;
+            if (store is IKNetManagedStore<TStore> knetManagedStore)
+            {
+                knetManagedStore.SetData(_factory, substore);
+            }
+            return store;
         }
 
         /// <summary>
@@ -141,12 +141,16 @@ namespace MASES.KNet.Streams
         /// <typeparam name="TStore"></typeparam>
         /// <returns><typeparamref name="TKNetManagedStore"/></returns>
         public TKNetManagedStore Store<TKNetManagedStore, TStore>(string storageId, KNetQueryableStoreTypes.StoreType<TKNetManagedStore, TStore> storeType)
-            where TKNetManagedStore : KNetManagedStore<TStore>, IGenericSerDesFactoryApplier
+            where TKNetManagedStore : KNetManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
         {
             var sqp = Org.Apache.Kafka.Streams.StoreQueryParameters<TStore>.FromNameAndType(storageId, storeType.Store);
-            var t = typeof(TKNetManagedStore);
+            TKNetManagedStore store = new TKNetManagedStore();
             var substore = Store<TStore>(sqp);
-            return Activator.CreateInstance(t, _factory, substore) as TKNetManagedStore;
+            if (store is IKNetManagedStore<TStore> knetManagedStore)
+            {
+                knetManagedStore.SetData(_factory, substore);
+            }
+            return store;
         }
 
         /// <summary>
@@ -172,9 +176,8 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StateRestoreListener"/></param>
         public new void SetGlobalStateRestoreListener(Org.Apache.Kafka.Streams.Processor.StateRestoreListener arg0)
         {
-            base.SetGlobalStateRestoreListener(null);
-            _stateRestoreListener = arg0;
             base.SetGlobalStateRestoreListener(arg0);
+            _stateRestoreListener = arg0;
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#setStateListener-org.apache.kafka.streams.KafkaStreams.StateListener-"/>
@@ -182,9 +185,8 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.KafkaStreams.StateListener"/></param>
         public new void SetStateListener(Org.Apache.Kafka.Streams.KafkaStreams.StateListener arg0)
         {
-            base.SetStateListener(null);
-            _stateListener = arg0;
             base.SetStateListener(arg0);
+            _stateListener = arg0;
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler-org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler-"/>
@@ -192,9 +194,8 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler"/></param>
         public new void SetUncaughtExceptionHandler(Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler arg0)
         {
-            base.SetUncaughtExceptionHandler(null);
-            _streamsUncaughtExceptionHandler = arg0;
             base.SetUncaughtExceptionHandler(arg0);
+            _streamsUncaughtExceptionHandler = arg0;
         }
 
         #endregion

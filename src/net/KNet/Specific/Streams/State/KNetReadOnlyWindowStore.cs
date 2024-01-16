@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Serialization;
-
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
@@ -25,21 +23,8 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetReadOnlyWindowStore<TKey, TValue> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], byte[]>>, IGenericSerDesFactoryApplier
+    public class KNetReadOnlyWindowStore<TKey, TValue> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], byte[]>>
     {
-        readonly Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], byte[]> _store;
-        readonly IKNetSerDes<TKey> _keySerDes;
-        readonly IKNetSerDes<TValue> _valueSerDes;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
-
-        internal KNetReadOnlyWindowStore(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], byte[]> store)
-        {
-            _factory = factory;
-            _keySerDes = _factory.BuildKeySerDes<TKey>();
-            _valueSerDes = _factory.BuildValueSerDes<TValue>();
-            _store = store;
-        }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all--"/>
         /// </summary>
@@ -56,6 +41,8 @@ namespace MASES.KNet.Streams.State
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public KNetWindowedKeyValueIterator<TKey, TValue> Fetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
             return new KNetWindowedKeyValueIterator<TKey, TValue>(_factory, _store.Fetch(r0, r1, arg2, arg3));
@@ -81,6 +68,8 @@ namespace MASES.KNet.Streams.State
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public KNetWindowStoreIterator<TValue> Fetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             return new KNetWindowStoreIterator<TValue>(_factory, _store.Fetch(r0, arg1, arg2));
         }
@@ -92,6 +81,9 @@ namespace MASES.KNet.Streams.State
         /// <returns><typeparamref name="TValue"/></returns>
         public TValue Fetch(TKey arg0, long arg1)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            var _valueSerDes = _factory.BuildValueSerDes<TValue>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var agg = _store.Fetch(r0, arg1);
             return _valueSerDes.Deserialize(null, agg);
@@ -112,6 +104,8 @@ namespace MASES.KNet.Streams.State
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public KNetWindowedKeyValueIterator<TKey, TValue> BackwardFetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
             return new KNetWindowedKeyValueIterator<TKey, TValue>(_factory, _store.BackwardFetch(r0, r1, arg2, arg3));
@@ -137,6 +131,8 @@ namespace MASES.KNet.Streams.State
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public KNetWindowStoreIterator<TValue> BackwardFetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
+            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+
             var r0 = _keySerDes.Serialize(null, arg0);
             return new KNetWindowStoreIterator<TValue>(_factory, _store.BackwardFetch(r0, arg1, arg2));
         }

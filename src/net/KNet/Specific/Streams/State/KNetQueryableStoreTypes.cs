@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.State
         /// </summary>
         /// <typeparam name="TKNetManagedStore"></typeparam>
         /// <typeparam name="TStore"></typeparam>
-        public class StoreType<TKNetManagedStore, TStore> where TKNetManagedStore : KNetManagedStore<TStore>, IGenericSerDesFactoryApplier
+        public class StoreType<TKNetManagedStore, TStore> where TKNetManagedStore : KNetManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
         {
             internal StoreType(Org.Apache.Kafka.Streams.State.QueryableStoreType<TStore> store) { Store = store; }
             internal Org.Apache.Kafka.Streams.State.QueryableStoreType<TStore> Store;

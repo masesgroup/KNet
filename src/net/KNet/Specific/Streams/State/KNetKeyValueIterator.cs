@@ -20,6 +20,7 @@ using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KNet.Serialization;
+using System;
 using System.Collections.Generic;
 
 namespace MASES.KNet.Streams.State
@@ -38,13 +39,17 @@ namespace MASES.KNet.Streams.State
 
             protected override object ConvertObject(object input)
             {
-                return isVersion2 ? new KNetKeyValue<TKey, TValue>(_factory, input as Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>)
-                                  : new KNetKeyValue<TKey, TValue>(_factory, input as Org.Apache.Kafka.Streams.KeyValue<long, byte[]>);
+                if (input is IJavaObject obj)
+                {
+                    return isVersion2 ? new KNetKeyValue<TKey, TValue>(_factory, JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]>>(obj))
+                                      : new KNetKeyValue<TKey, TValue>(_factory, JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>(obj));
+                }
+                throw new InvalidCastException($"input is not a valid IJavaObject");
             }
         }
 
         readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<byte[], byte[]> _iterator;
-        readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<long, byte[]> _iterator2;
+        readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, byte[]> _iterator2;
         readonly IKNetSerDes<TKey> _keySerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -56,7 +61,7 @@ namespace MASES.KNet.Streams.State
             _iterator = iterator;
         }
 
-        internal KNetKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<long, byte[]> iterator)
+        internal KNetKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, byte[]> iterator)
         {
             _factory = factory;
             _keySerDes = _factory.BuildKeySerDes<TKey>();
