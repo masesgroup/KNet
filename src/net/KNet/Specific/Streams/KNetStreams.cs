@@ -131,7 +131,16 @@ namespace MASES.KNet.Streams
             var keySerDes = _factory.BuildKeySerDes<TKey>();
             return _inner.IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", arg0, keySerDes.Serialize(null, arg1), arg2);
         }
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#query-org.apache.kafka.streams.query.StateQueryRequest-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.StateQueryRequest{R}"/></param>
+        /// <typeparam name="R"></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Query.StateQueryResult{R}"/></returns>
+        public Org.Apache.Kafka.Streams.Query.StateQueryResult<R> Query<R>(Org.Apache.Kafka.Streams.Query.StateQueryRequest<R> arg0)
+        {
+            return _inner.Query(arg0);
+        }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#store-org.apache.kafka.streams.StoreQueryParameters-"/>
         /// </summary>
@@ -171,7 +180,53 @@ namespace MASES.KNet.Streams
             }
             return store;
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#isPaused--"/>
+        /// </summary>
+        public bool IsPaused => _inner.IsPaused();
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metadataForAllStreamsClients--"/>
+        /// </summary>
+        public Java.Util.Collection<Org.Apache.Kafka.Streams.StreamsMetadata> MetadataForAllStreamsClients => _inner.MetadataForAllStreamsClients();
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#streamsMetadataForStore-java.lang.String-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="string"/></param>
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<Org.Apache.Kafka.Streams.StreamsMetadata> StreamsMetadataForStore(string arg0)
+        {
+            return _inner.StreamsMetadataForStore(arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#allLocalStorePartitionLags--"/>
+        /// </summary>
+        public Java.Util.Map<string, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>> AllLocalStorePartitionLags => _inner.AllLocalStorePartitionLags();
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metrics--"/>
+        /// </summary>
 
+        /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Metric"><see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric> Metrics<ReturnExtendsOrg_Apache_Kafka_Common_Metric>() where ReturnExtendsOrg_Apache_Kafka_Common_Metric : Org.Apache.Kafka.Common.Metric
+        {
+            return _inner.Metrics<ReturnExtendsOrg_Apache_Kafka_Common_Metric>();
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#addStreamThread--"/>
+        /// </summary>
+        /// <returns><see cref="Java.Util.Optional{T}"/></returns>
+        public Java.Util.Optional<string> AddStreamThread()
+        {
+            return _inner.AddStreamThread();
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread--"/>
+        /// </summary>
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<string> RemoveStreamThread()
+        {
+            return _inner.RemoveStreamThread();
+        }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread-java.time.Duration-"/>
         /// </summary>
@@ -182,13 +237,82 @@ namespace MASES.KNet.Streams
             var res = _inner.RemoveStreamThread(arg0);
             return res.IsPresent() ? res.Get() : null;
         }
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metadataForLocalThreads--"/>
+        /// </summary>
+        public Java.Util.Set<Org.Apache.Kafka.Streams.ThreadMetadata> MetadataForLocalThreads => _inner.MetadataForLocalThreads();
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#state--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.KafkaStreams.State"/></returns>
         public Org.Apache.Kafka.Streams.KafkaStreams.State State => _inner.StateMethod();
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close-java.time.Duration-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="TimeSpan"/></param>
+        /// <returns><see cref="bool"/></returns>
+        /// <exception cref="Java.Lang.IllegalArgumentException"/>
+        public bool Close(TimeSpan arg0)
+        {
+            return _inner.Close(arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close-java.time.Duration-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+        /// <returns><see cref="bool"/></returns>
+        /// <exception cref="Java.Lang.IllegalArgumentException"/>
+        public bool Close(Java.Time.Duration arg0)
+        {
+            return _inner.Close(arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close-org.apache.kafka.streams.KafkaStreams.CloseOptions-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions"/></param>
+        /// <returns><see cref="bool"/></returns>
+        /// <exception cref="Java.Lang.IllegalArgumentException"/>
+        public bool Close(Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions arg0)
+        {
+            return _inner.Close(arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#start--"/>
+        /// </summary>
+        /// <exception cref="Java.Lang.IllegalStateException"/>
+        /// <exception cref="Org.Apache.Kafka.Streams.Errors.StreamsException"/>
+        public void Start()
+        {
+            _inner.Start();
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#cleanUp--"/>
+        /// </summary>
+        public void CleanUp()
+        {
+            _inner.CleanUp();
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close--"/>
+        /// </summary>
+        public void Close()
+        {
+            _inner.Close();
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#pause--"/>
+        /// </summary>
+        public void Pause()
+        {
+            _inner.Pause();
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#resume--"/>
+        /// </summary>
+        public void Resume()
+        {
+            _inner.Resume();
+        }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#setGlobalStateRestoreListener-org.apache.kafka.streams.processor.StateRestoreListener-"/>
         /// </summary>

@@ -69,5 +69,69 @@ namespace MASES.KNet.Streams
         {
             return OverrideProperties != null ? OverrideProperties(builder) : builder;
         }
+
+        #region Fields
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#eosEnabled"/>
+        /// </summary>
+        public bool EosEnabled => _inner.eosEnabled;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#maxBufferedSize"/>
+        /// </summary>
+        public int MaxBufferedSize => _inner.maxBufferedSize;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#storeType"/>
+        /// </summary>
+        public string StoreType => _inner.storeType;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#topologyName"/>
+        /// </summary>
+        public string TopologyName => _inner.topologyName;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#deserializationExceptionHandlerSupplier"/>
+        /// </summary>
+        public Java.Util.Function.Supplier DeserializationExceptionHandlerSupplier => _inner.deserializationExceptionHandlerSupplier;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#timestampExtractorSupplier"/>
+        /// </summary>
+        public Java.Util.Function.Supplier TimestampExtractorSupplier => _inner.timestampExtractorSupplier;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#topologyOverrides"/>
+        /// </summary>
+        public Java.Util.Properties TopologyOverrides => _inner.topologyOverrides;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#cacheSize"/>
+        /// </summary>
+        public long CacheSize => _inner.cacheSize;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#maxTaskIdleMs"/>
+        /// </summary>
+        public long MaxTaskIdleMs => _inner.maxTaskIdleMs;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#taskTimeoutMs"/>
+        /// </summary>
+        public long TaskTimeoutMs => _inner.taskTimeoutMs;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#applicationConfigs"/>
+        /// </summary>
+        public Org.Apache.Kafka.Streams.StreamsConfig ApplicationConfigs => _inner.applicationConfigs;
+
+        #endregion
+
+        #region Instance methods
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#getTaskConfig--"/> 
+        /// </summary>
+        public Org.Apache.Kafka.Streams.TopologyConfig.TaskConfig TaskConfig => _inner.GetTaskConfig;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#isNamedTopology--"/>
+        /// </summary>
+        public bool IsNamedTopology => _inner.IsNamedTopology();
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#parseStoreType--"/>
+        /// </summary>
+        public Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType ParseStoreType => _inner.ParseStoreType();
+
+        #endregion
     }
 }
