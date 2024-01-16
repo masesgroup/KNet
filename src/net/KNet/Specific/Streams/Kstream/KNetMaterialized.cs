@@ -16,11 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Security;
+
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Common.Serialization;
-using System;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -37,7 +35,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetMaterialized{K, V}"/></returns>
         public static KNetCountingMaterialized<K> With(IKNetSerDes<K> arg0)
         {
-            var mat = Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], Java.Lang.Long, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>.With(arg0.KafkaSerde, Serdes.Long());
+            var mat = Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], Java.Lang.Long, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>.With(arg0.KafkaSerde, Org.Apache.Kafka.Common.Serialization.Serdes.Long());
             KNetCountingMaterialized<K> cont = new();
             if (cont is IKNetMaterialized<Java.Lang.Long> setStore)
             {
@@ -53,7 +51,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KNetMaterialized{K, V}"/></returns>
         public KNetCountingMaterialized<K> WithValueSerde(IKNetSerDes<long> arg0)
         {
-            _keyStore?.WithValueSerde(Serdes.Long());
+            _keyStore?.WithValueSerde(Org.Apache.Kafka.Common.Serialization.Serdes.Long());
             return this;
         }
     }

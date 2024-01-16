@@ -19,23 +19,19 @@
 using Java.Util;
 using MASES.KNet.Consumer;
 using MASES.KNet.Producer;
-using Org.Apache.Kafka.Clients.Admin;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Clients.Producer;
-using Org.Apache.Kafka.Streams;
 
 namespace MASES.KNet.Streams
 {
     /// <summary>
-    /// KNet implementation of <see cref="KafkaClientSupplier"/>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.KafkaClientSupplier"/>
     /// </summary>
-    /// <remarks>The default <see cref="KafkaClientSupplier"/> used from <see cref="KafkaStreams"/> allocates both <see cref="KafkaConsumer"/> and <see cref="KafkaProducer"/>. 
-    /// <see cref="KNetClientSupplier"/> uses <see cref="KNetConsumer{K, V}"/> and <see cref="KNetProducer{K, V}"/>, the instance shall be disposed when no more in use, but still be alive still <see cref="KafkaStreams"/> is alive.</remarks>
-    public class KNetClientSupplier : KafkaClientSupplier
+    /// <remarks>The default <see cref="Org.Apache.Kafka.Streams.KafkaClientSupplier"/> used from <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/> allocates both <see cref="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer"/> and <see cref="Org.Apache.Kafka.Clients.Producer.KafkaProducer"/>. 
+    /// <see cref="KNetClientSupplier"/> uses <see cref="KNetConsumer{K, V}"/> and <see cref="KNetProducer{K, V}"/>, the instance shall be disposed when no more in use, but still be alive still <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/> is alive.</remarks>
+    public class KNetClientSupplier : Org.Apache.Kafka.Streams.KafkaClientSupplier
     {
         private readonly System.Collections.Generic.List<Org.Apache.Kafka.Clients.Admin.Admin> _admins = new();
-        private readonly System.Collections.Generic.List<Consumer<byte[], byte[]>> _consumers = new();
-        private readonly System.Collections.Generic.List<Producer<byte[], byte[]>> _producers = new();
+        private readonly System.Collections.Generic.List<Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>> _consumers = new();
+        private readonly System.Collections.Generic.List<Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]>> _producers = new();
         /// <summary>
         /// Default initializer
         /// </summary>
@@ -45,12 +41,12 @@ namespace MASES.KNet.Streams
         /// <inheritdoc/>
         public override Org.Apache.Kafka.Clients.Admin.Admin GetAdmin(Map<string, object> arg0)
         {
-            var admin = AdminClient.Create(arg0);
+            var admin = Org.Apache.Kafka.Clients.Admin.Admin.Create(arg0);
             _admins.Add(admin);
             return admin;
         }
         /// <inheritdoc/>
-        public override Consumer<byte[], byte[]> GetConsumer(Map<string, object> arg0)
+        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetConsumer(Map<string, object> arg0)
         {
             Properties properties = new();
             properties.PutAll(arg0);
@@ -60,7 +56,7 @@ namespace MASES.KNet.Streams
             return consumer;
         }
         /// <inheritdoc/>
-        public override Consumer<byte[], byte[]> GetGlobalConsumer(Map<string, object> arg0)
+        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetGlobalConsumer(Map<string, object> arg0)
         {
             Properties properties = new();
             properties.PutAll(arg0);
@@ -70,7 +66,7 @@ namespace MASES.KNet.Streams
             return consumer;
         }
         /// <inheritdoc/>
-        public override Producer<byte[], byte[]> GetProducer(Map<string, object> arg0)
+        public override Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]> GetProducer(Map<string, object> arg0)
         {
             Properties properties = new();
             properties.PutAll(arg0);
@@ -80,7 +76,7 @@ namespace MASES.KNet.Streams
             return producer;
         }
         /// <inheritdoc/>
-        public override Consumer<byte[], byte[]> GetRestoreConsumer(Map<string, object> arg0)
+        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetRestoreConsumer(Map<string, object> arg0)
         {
             Properties properties = new();
             properties.PutAll(arg0);

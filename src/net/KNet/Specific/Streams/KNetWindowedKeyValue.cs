@@ -22,7 +22,7 @@ using MASES.KNet.Streams.Kstream;
 namespace MASES.KNet.Streams
 {
     /// <summary>
-    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/> where the key is <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
