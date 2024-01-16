@@ -53,7 +53,7 @@ namespace MASES.KNet.Consumer
         void OnRecordReadyEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
             var record = this.BridgeInstance.Invoke<ConsumerRecord<byte[], byte[]>>("getRecord");
-            OnRecordReady(new KNetConsumerRecord<K, V>(record, _keyDeserializer, _valueDeserializer));
+            recordReadyFunction(new KNetConsumerRecord<K, V>(record, _keyDeserializer, _valueDeserializer));
         }
 
         public virtual void RecordReady(KNetConsumerRecord<K, V> message) { }

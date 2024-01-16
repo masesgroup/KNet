@@ -21,6 +21,8 @@ using System.Globalization;
 using System;
 using MASES.KNet.Serialization;
 using System.Linq;
+using System.Collections.Concurrent;
+using static Javax.Lang.Model.Util.Elements;
 
 namespace MASES.KNet
 {
@@ -28,7 +30,7 @@ namespace MASES.KNet
     /// Generic base configuration class
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class GenericConfigBuilder<T> : System.ComponentModel.INotifyPropertyChanged
+    public class GenericConfigBuilder<T> : System.ComponentModel.INotifyPropertyChanged, IGenericSerDesFactory
         where T : GenericConfigBuilder<T>, new()
     {
         /// <summary>
@@ -109,7 +111,9 @@ namespace MASES.KNet
         {
             var clone = new T
             {
-                _options = new System.Collections.Generic.Dictionary<string, object>(_options)
+                _options = new System.Collections.Generic.Dictionary<string, object>(_options),
+                _KNetKeySerDes = _KNetKeySerDes,
+                _KNetValueSerDes = _KNetValueSerDes
             };
             return clone;
         }
@@ -143,9 +147,7 @@ namespace MASES.KNet
             return props;
         }
         Type _KNetKeySerDes = null;
-        /// <summary>
-        /// The <see cref="Type"/> used to create an instance of <see cref="IKNetSerDes{T}"/> for keys with <see cref="BuildKeySerDes{TKey}"/>
-        /// </summary>
+        /// <inheritdoc cref="IGenericSerDesFactory.KNetKeySerDes"/>
         public Type KNetKeySerDes
         {
             get { return _KNetKeySerDes; }
@@ -172,9 +174,7 @@ namespace MASES.KNet
         }
 
         Type _KNetValueSerDes = null;
-        /// <summary>
-        /// The <see cref="Type"/> used to create an instance of <see cref="IKNetSerDes{T}"/> for values with <see cref="BuildValueSerDes{TValue}"/>
-        /// </summary>
+        /// <inheritdoc cref="IGenericSerDesFactory.KNetValueSerDes"/>
         public Type KNetValueSerDes
         {
             get { return _KNetValueSerDes; }
@@ -200,41 +200,54 @@ namespace MASES.KNet
             }
         }
 
-        /// <summary>
-        /// Builds an instance of <see cref="IKNetSerDes{TKey}"/> using the <see cref="Type"/> defined in <see cref="KNetKeySerDes"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key</typeparam>
-        /// <returns>An instance of <see cref="IKNetSerDes{TKey}"/></returns>
-        /// <exception cref="InvalidOperationException">If <see cref="KNetKeySerDes"/> is <see langword="null"/></exception>
+        readonly ConcurrentDictionary<Type, object> _keySerDes = new();
+
+        /// <inheritdoc cref="IGenericSerDesFactory.BuildKeySerDes{TKey}"/>
         public IKNetSerDes<TKey> BuildKeySerDes<TKey>()
         {
-            if (KNetSerialization.IsInternalManaged<TKey>())
+            lock (_keySerDes)
             {
-                return new KNetSerDes<TKey>();
+                if (!_keySerDes.TryGetValue(typeof(TKey), out object serDes))
+                {
+                    if (KNetSerialization.IsInternalManaged<TKey>())
+                    {
+                        serDes = new KNetSerDes<TKey>();
+                    }
+                    else
+                    {
+                        if (KNetKeySerDes == null) throw new InvalidOperationException($"No default serializer available for {typeof(TKey)}, property {nameof(KNetKeySerDes)} shall be set.");
+                        var tmp = KNetKeySerDes.MakeGenericType(typeof(TKey));
+                        serDes = Activator.CreateInstance(tmp);
+                    }
+                    _keySerDes[typeof(TKey)] = serDes;
+                }
+                return serDes as IKNetSerDes<TKey>;
             }
-
-            if (KNetKeySerDes == null) throw new InvalidOperationException($"No default serializer available for {typeof(TKey)}, property {nameof(KNetKeySerDes)} shall be set.");
-            var tmp = KNetKeySerDes.MakeGenericType(typeof(TKey));
-            var o = Activator.CreateInstance(tmp);
-            return o as IKNetSerDes<TKey>;
         }
-        /// <summary>
-        /// Builds an instance of <see cref="IKNetSerDes{TValue}"/> using the <see cref="Type"/> defined in <see cref="KNetValueSerDes"/>
-        /// </summary>
-        /// <typeparam name="TValue">The type of the key</typeparam>
-        /// <returns>An instance of <see cref="IKNetSerDes{TValue}"/></returns>
-        /// <exception cref="InvalidOperationException">If <see cref="KNetValueSerDes"/> is <see langword="null"/></exception>
+
+        readonly ConcurrentDictionary<Type, object> _valueSerDes = new();
+
+        /// <inheritdoc cref="IGenericSerDesFactory.BuildValueSerDes{TValue}"/>
         public IKNetSerDes<TValue> BuildValueSerDes<TValue>()
         {
-            if (KNetSerialization.IsInternalManaged<TValue>())
+            lock (_valueSerDes)
             {
-                return new KNetSerDes<TValue>();
+                if (!_valueSerDes.TryGetValue(typeof(TValue), out object serDes))
+                {
+                    if (KNetSerialization.IsInternalManaged<TValue>())
+                    {
+                        serDes = new KNetSerDes<TValue>();
+                    }
+                    else
+                    {
+                        if (KNetValueSerDes == null) throw new InvalidOperationException($"No default serializer available for {typeof(TValue)}, property {nameof(KNetValueSerDes)} shall be set.");
+                        var tmp = KNetValueSerDes.MakeGenericType(typeof(TValue));
+                        serDes = Activator.CreateInstance(tmp);
+                    }
+                    _valueSerDes[typeof(TValue)] = serDes;
+                }
+                return serDes as IKNetSerDes<TValue>;
             }
-
-            if (KNetValueSerDes == null) throw new InvalidOperationException($"No default serializer available for {typeof(TValue)}, property {nameof(KNetValueSerDes)} shall be set.");
-            var tmp = KNetValueSerDes.MakeGenericType(typeof(TValue));
-            var o = Activator.CreateInstance(tmp);
-            return o as IKNetSerDes<TValue>;
         }
     }
 }
