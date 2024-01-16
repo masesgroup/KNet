@@ -17,14 +17,16 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams
 {
     /// <summary>
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.TopologyConfig"/>
     /// </summary>
-    public class KNetTopologyConfig : Org.Apache.Kafka.Streams.TopologyConfig, IGenericSerDesFactoryApplier
+    public class KNetTopologyConfig : IGenericSerDesFactoryApplier
     {
+        readonly Org.Apache.Kafka.Streams.TopologyConfig _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         #region Constructors
@@ -35,8 +37,8 @@ namespace MASES.KNet.Streams
         /// <param name="arg1"><see cref="StreamsConfigBuilder"/></param>
         /// <param name="arg2"><see cref="Java.Util.Properties"/></param>
         public KNetTopologyConfig(string arg0, StreamsConfigBuilder arg1, Java.Util.Properties arg2)
-            : base(arg0, arg1, arg2)
         {
+            _inner = new Org.Apache.Kafka.Streams.TopologyConfig(arg0, PrepareProperties(arg1), arg2);
             _factory = arg1;
         }
         /// <summary>
@@ -44,10 +46,28 @@ namespace MASES.KNet.Streams
         /// </summary>
         /// <param name="arg0"><see cref="StreamsConfigBuilder"/></param>
         public KNetTopologyConfig(StreamsConfigBuilder arg0)
-            : base(arg0)
         {
+            _inner = new Org.Apache.Kafka.Streams.TopologyConfig(PrepareProperties(arg0));
             _factory = arg0;
         }
         #endregion
+
+        /// <summary>
+        /// Converter from <see cref="KNetTopologyConfig"/> to <see cref="Org.Apache.Kafka.Streams.TopologyConfig"/>
+        /// </summary>
+        public static implicit operator Org.Apache.Kafka.Streams.TopologyConfig(KNetTopologyConfig t) => t._inner;
+        /// <summary>
+        /// If set, this <see cref="Func{T, TResult}"/> will be called from <see cref="PrepareProperties(StreamsConfigBuilder)"/>
+        /// </summary>
+        public static Func<Java.Util.Properties, StreamsConfigBuilder> OverrideProperties { get; set; }
+        /// <summary>
+        /// Override this method to check and modify the <see cref="Java.Util.Properties"/> returned to underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/>
+        /// </summary>
+        /// <param name="builder"><see cref="StreamsConfigBuilder"/> to use to return <see cref="Java.Util.Properties"/></param>
+        /// <returns><see cref="Java.Util.Properties"/> used from underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/></returns>
+        protected virtual Java.Util.Properties PrepareProperties(StreamsConfigBuilder builder)
+        {
+            return OverrideProperties != null ? OverrideProperties(builder) : builder;
+        }
     }
 }
