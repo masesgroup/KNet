@@ -35,13 +35,11 @@ namespace MASES.KNet.Streams.State
     {
         class LocalEnumerator : JVMBridgeBaseEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier
         {
-            readonly bool _isVersion2;
             IGenericSerDesFactory _factory;
             IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-            public LocalEnumerator(bool isVersion2, IGenericSerDesFactory factory, IJavaObject obj) : base(obj)
+            public LocalEnumerator(IGenericSerDesFactory factory, IJavaObject obj) : base(obj)
             {
-                _isVersion2 = isVersion2;
                 _factory = factory;
             }
 
