@@ -8,6 +8,7 @@
       <meta name="title" content="Class KNetProducer&lt;K, V&gt;
  | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="Extends  adding less intrusive methods which performs better in high throughput applications">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -587,7 +588,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2__ctor_Java_Util_Properties_MASES_KNet_Serialization_IKNetSerializer__0__MASES_KNet_Serialization_IKNetSerializer__1__" data-uid="MASES.KNet.Producer.KNetProducer`2.#ctor(Java.Util.Properties,MASES.KNet.Serialization.IKNetSerializer{`0},MASES.KNet.Serialization.IKNetSerializer{`1})">
   KNetProducer(Properties, IKNetSerializer&lt;K&gt;, IKNetSerializer&lt;V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Producer.KNetProducer-2.html">KNetProducer&lt;K, V&gt;</a></p>
@@ -608,6 +609,39 @@
 </dd>
     <dt><code>valueSerializer</code> <a class="xref" href="MASES.KNet.Serialization.IKNetSerializer-1.html">IKNetSerializer</a>&lt;V&gt;</dt>
     <dd><p>Value serializer base on <a class="xref" href="MASES.KNet.Serialization.KNetSerDes-1.html">KNetSerDes&lt;T&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Producer_KNetProducer_2__ctor_" data-uid="MASES.KNet.Producer.KNetProducer`2.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Producer_KNetProducer_2__ctor_MASES_KNet_Producer_ProducerConfigBuilder_" data-uid="MASES.KNet.Producer.KNetProducer`2.#ctor(MASES.KNet.Producer.ProducerConfigBuilder)">
+  KNetProducer(ProducerConfigBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Producer.KNetProducer-2.html">KNetProducer&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetProducer(ProducerConfigBuilder configBuilder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configBuilder</code> <a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
+    <dd><p>An instance of <a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></p>
 </dd>
   </dl>
 
@@ -648,7 +682,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -666,7 +700,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Finalize" data-uid="MASES.KNet.Producer.KNetProducer`2.Finalize">
   ~KNetProducer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L221"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Finalizer</p>
@@ -693,7 +727,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Produce_MASES_KNet_Producer_KNetProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.Produce(MASES.KNet.Producer.KNetProducerRecord{`0,`1},Org.Apache.Kafka.Clients.Producer.Callback)">
   Produce(KNetProducerRecord&lt;K, V&gt;, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L381"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L390"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -707,15 +741,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>record</code> <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>cb</code> <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -732,7 +766,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Produce_MASES_KNet_Producer_KNetProducerRecord__0__1__System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`2.Produce(MASES.KNet.Producer.KNetProducerRecord{`0,`1},System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
   Produce(KNetProducerRecord&lt;K, V&gt;, Action&lt;RecordMetadata, JVMBridgeException&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L328"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -746,9 +780,9 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>record</code> <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">JVMBridgeException</span>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -766,7 +800,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Produce_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.Produce(System.String,System.Int32,System.DateTime,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
   Produce(string, int, DateTime, K, V, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L380"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -780,23 +814,23 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>cb</code> <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -813,7 +847,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Produce_System_String_System_Int32_System_DateTime__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`2.Produce(System.String,System.Int32,System.DateTime,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
   Produce(string, int, DateTime, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L323"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -827,17 +861,17 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">JVMBridgeException</span>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -855,7 +889,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Produce_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.Produce(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
   Produce(string, int, long, K, V, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L370"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -869,23 +903,23 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>cb</code> <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -902,7 +936,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Produce_System_String_System_Int32_System_Int64__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`2.Produce(System.String,System.Int32,System.Int64,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
   Produce(string, int, long, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L318"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -916,17 +950,17 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">JVMBridgeException</span>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -944,7 +978,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Produce_System_String_System_Int32__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.Produce(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
   Produce(string, int, K, V, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L360"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -958,21 +992,21 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>cb</code> <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -989,7 +1023,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Produce_System_String_System_Int32__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`2.Produce(System.String,System.Int32,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
   Produce(string, int, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L313"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1003,15 +1037,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">JVMBridgeException</span>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1029,7 +1063,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Produce_System_String__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.Produce(System.String,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
   Produce(string, K, V, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L350"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1043,19 +1077,19 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>cb</code> <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1072,7 +1106,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Produce_System_String__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`2.Produce(System.String,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
   Produce(string, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L308"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1086,13 +1120,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">JVMBridgeException</span>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1110,7 +1144,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_ProduceAndWait_MASES_KNet_Producer_KNetProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.ProduceAndWait(MASES.KNet.Producer.KNetProducerRecord{`0,`1},Org.Apache.Kafka.Clients.Producer.Callback)">
   ProduceAndWait(KNetProducerRecord&lt;K, V&gt;, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L393"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L402"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1124,9 +1158,9 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>record</code> <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>cb</code> <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1144,7 +1178,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_ProduceAndWait_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.ProduceAndWait(System.String,System.Int32,System.DateTime,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
   ProduceAndWait(string, int, DateTime, K, V, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L385"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1158,17 +1192,17 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>cb</code> <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1186,7 +1220,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_ProduceAndWait_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.ProduceAndWait(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
   ProduceAndWait(string, int, long, K, V, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L375"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1200,17 +1234,17 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>cb</code> <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1228,7 +1262,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_ProduceAndWait_System_String_System_Int32__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.ProduceAndWait(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
   ProduceAndWait(string, int, K, V, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L365"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1242,15 +1276,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>cb</code> <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1268,7 +1302,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_ProduceAndWait_System_String__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.ProduceAndWait(System.String,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
   ProduceAndWait(string, K, V, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L355"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1282,13 +1316,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>cb</code> <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1306,7 +1340,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_ProduceAsync_MASES_KNet_Producer_KNetProducerRecord__0__1__System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`2.ProduceAsync(MASES.KNet.Producer.KNetProducerRecord{`0,`1},System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
   ProduceAsync(KNetProducerRecord&lt;K, V&gt;, Action&lt;RecordMetadata, JVMBridgeException&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L435"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1320,15 +1354,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>record</code> <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">JVMBridgeException</span>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1345,7 +1379,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_ProduceAsync_System_String_System_Int32_System_DateTime__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`2.ProduceAsync(System.String,System.Int32,System.DateTime,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
   ProduceAsync(string, int, DateTime, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L421"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L430"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1359,23 +1393,23 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">JVMBridgeException</span>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1392,7 +1426,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_ProduceAsync_System_String_System_Int32_System_Int64__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`2.ProduceAsync(System.String,System.Int32,System.Int64,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
   ProduceAsync(string, int, long, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L416"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L425"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1406,23 +1440,23 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">JVMBridgeException</span>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1439,7 +1473,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_ProduceAsync_System_String_System_Int32__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`2.ProduceAsync(System.String,System.Int32,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
   ProduceAsync(string, int, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L411"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L420"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1453,21 +1487,21 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">JVMBridgeException</span>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1484,7 +1518,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_ProduceAsync_System_String__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`2.ProduceAsync(System.String,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
   ProduceAsync(string, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L415"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1498,19 +1532,19 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">JVMBridgeException</span>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1527,7 +1561,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Send_MASES_KNet_Producer_KNetProducerRecord__0__1__" data-uid="MASES.KNet.Producer.KNetProducer`2.Send(MASES.KNet.Producer.KNetProducerRecord{`0,`1})">
   Send(KNetProducerRecord&lt;K, V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__">Send(ProducerRecord&lt;K, V&gt;)</a></p>
@@ -1541,13 +1575,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>record</code> <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1564,7 +1598,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Send_MASES_KNet_Producer_KNetProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.Send(MASES.KNet.Producer.KNetProducerRecord{`0,`1},Org.Apache.Kafka.Clients.Producer.Callback)">
   Send(KNetProducerRecord&lt;K, V&gt;, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_">Send(ProducerRecord&lt;K, V&gt;, Callback)</a></p>
@@ -1578,15 +1612,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>record</code> <a class="xref" href="MASES.KNet.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>callback</code> <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">Future</span>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1603,7 +1637,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_" data-uid="MASES.KNet.Producer.KNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1)">
   Send(string, int, long, K, V)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__">Send(ProducerRecord&lt;K, V&gt;)</a></p>
@@ -1617,15 +1651,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1643,7 +1677,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
   Send(string, int, long, K, V, Headers)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L278"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__">Send(ProducerRecord&lt;K, V&gt;)</a></p>
@@ -1657,17 +1691,17 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>headers</code> <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1685,7 +1719,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Send_System_String_System_Int32__0__1_" data-uid="MASES.KNet.Producer.KNetProducer`2.Send(System.String,System.Int32,`0,`1)">
   Send(string, int, K, V)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L293"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__">Send(ProducerRecord&lt;K, V&gt;)</a></p>
@@ -1699,13 +1733,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1723,7 +1757,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Send_System_String_System_Int32__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`2.Send(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
   Send(string, int, K, V, Headers)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L288"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__">Send(ProducerRecord&lt;K, V&gt;)</a></p>
@@ -1737,15 +1771,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>headers</code> <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1763,7 +1797,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Send_System_String__0__1_" data-uid="MASES.KNet.Producer.KNetProducer`2.Send(System.String,`0,`1)">
   Send(string, K, V)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L298"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__">Send(ProducerRecord&lt;K, V&gt;)</a></p>
@@ -1777,11 +1811,11 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1799,7 +1833,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_Send_System_String__1_" data-uid="MASES.KNet.Producer.KNetProducer`2.Send(System.String,`1)">
   Send(string, V)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L303"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet version of <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html#Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__">Send(ProducerRecord&lt;K, V&gt;)</a></p>
@@ -1813,9 +1847,9 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
     <dt><code>value</code> <span class="xref">V</span></dt>
-    <dd></dd>
+    <dd>Extends  adding less intrusive methods which performs better in high throughput applications</dd>
   </dl>
 
 
@@ -1833,7 +1867,7 @@
 
   <h3 id="MASES_KNet_Producer_KNetProducer_2_SetCallback_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`2.SetCallback(Org.Apache.Kafka.Clients.Producer.Callback)">
   SetCallback(Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L254"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Callback.html">Callback</a> into instance of <a class="xref" href="MASES.KNet.Producer.IKNetProducer-2.html">IKNetProducer&lt;K, V&gt;</a></p>
