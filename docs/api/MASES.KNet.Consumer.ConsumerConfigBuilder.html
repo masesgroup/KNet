@@ -8,6 +8,7 @@
       <meta name="title" content="Class ConsumerConfigBuilder
  | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="Builder for">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -100,7 +101,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConsumerConfigBuilder : CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConsumerConfigBuilder : CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory</code></pre>
   </div>
 
 
@@ -120,6 +121,7 @@
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
     </dd>
   </dl>
 
@@ -341,6 +343,18 @@
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.ToMap()</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetKeySerDes">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.KNetKeySerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetValueSerDes">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.KNetValueSerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__1">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.BuildKeySerDes&lt;TKey&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__1">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.BuildValueSerDes&lt;TValue&gt;()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -413,7 +427,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -445,7 +459,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -477,7 +491,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a>.<a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetResetTypes.html">AutoOffsetResetTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -509,7 +523,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -541,7 +555,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -573,7 +587,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -605,7 +619,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -637,7 +651,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -669,7 +683,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -702,7 +716,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">List</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -734,7 +748,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Org.Apache.Kafka.Common.IsolationLevel.html">IsolationLevel</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -766,7 +780,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -798,7 +812,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -830,7 +844,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -862,7 +876,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -894,7 +908,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -926,7 +940,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -958,13 +972,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>allowAutoCreateTopics</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -995,13 +1009,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>autoCommitIntervalMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1032,13 +1046,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>autoOffsetReset</code> <a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a>.<a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.AutoOffsetResetTypes.html">AutoOffsetResetTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1069,13 +1083,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>checkCrcs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1106,13 +1120,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>enableAutoCommit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1143,13 +1157,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>excludeInternalTopics</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1180,13 +1194,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>fetchMaxBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1217,13 +1231,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>fetchMaxWaitMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1254,13 +1268,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>fetchMinBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1292,13 +1306,13 @@ public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>interceptorClasses</code> <span class="xref">List</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1329,13 +1343,13 @@ public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>isolationLevel</code> <a class="xref" href="Org.Apache.Kafka.Common.IsolationLevel.html">IsolationLevel</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1366,13 +1380,13 @@ public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>keyDeserializerClass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1403,13 +1417,13 @@ public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxPartitionFetchBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1440,13 +1454,13 @@ public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxPollRecords</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1477,13 +1491,13 @@ public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>partitionAssignmentStrategy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1514,13 +1528,13 @@ public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>securityProviders</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1551,13 +1565,13 @@ public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>valueDeserializerClass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 

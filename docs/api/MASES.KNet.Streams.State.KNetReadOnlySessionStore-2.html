@@ -1,0 +1,820 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class KNetReadOnlySessionStore&lt;K, AGG&gt;
+ | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KNetReadOnlySessionStore&lt;K, AGG&gt;
+ | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="KNet implementation of">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_State_KNetReadOnlySessionStore_2.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.State.KNetReadOnlySessionStore%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2">
+
+
+
+  <h1 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2" class="text-break">
+    Class KNetReadOnlySessionStore&lt;K, AGG&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Streams.html">Streams</a>.<a class="xref" href="MASES.KNet.Streams.State.html">State</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore-2.html">ReadOnlySessionStore&lt;K, AGG&gt;</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KNetReadOnlySessionStore&lt;K, AGG&gt; : KNetManagedStore&lt;ReadOnlySessionStore&lt;byte[], byte[]&gt;&gt;, IKNetManagedStore&lt;ReadOnlySessionStore&lt;byte[], byte[]&gt;&gt;, IGenericSerDesFactoryApplier</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>AGG</code></dt>
+    <dd><p>The value type</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="MASES.KNet.Streams.State.KNetManagedStore-1.html">KNetManagedStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore-2.html">ReadOnlySessionStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</div>
+      <div><span class="xref">KNetReadOnlySessionStore&lt;K, AGG&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNet.Streams.State.IKNetManagedStore-1.html">IKNetManagedStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore-2.html">ReadOnlySessionStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFetch_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFetch*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFetch__0_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFetch(`0)">
+  BackwardFetch(K)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch-java.lang.Object-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; BackwardFetch(K arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator&lt;TKey, TValue&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFetch_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFetch*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFetch__0__0_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFetch(`0,`0)">
+  BackwardFetch(K, K)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch-java.lang.Object-java.lang.Object-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; BackwardFetch(K arg0, K arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFindSessions_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFindSessions*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFindSessions__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFindSessions(`0,Java.Time.Instant,Java.Time.Instant)">
+  BackwardFindSessions(K, Instant, Instant)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; BackwardFindSessions(K arg0, Instant arg1, Instant arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator&lt;TKey, TValue&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFindSessions_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFindSessions*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFindSessions__0_System_Int64_System_Int64_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFindSessions(`0,System.Int64,System.Int64)">
+  BackwardFindSessions(K, long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-long-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; BackwardFindSessions(K arg0, long arg1, long arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator&lt;TKey, TValue&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFindSessions_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFindSessions*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFindSessions__0__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFindSessions(`0,`0,Java.Time.Instant,Java.Time.Instant)">
+  BackwardFindSessions(K, K, Instant, Instant)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; BackwardFindSessions(K arg0, K arg1, Instant arg2, Instant arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+    <dt><code>arg3</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator&lt;TKey, TValue&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFindSessions_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFindSessions*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_BackwardFindSessions__0__0_System_Int64_System_Int64_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.BackwardFindSessions(`0,`0,System.Int64,System.Int64)">
+  BackwardFindSessions(K, K, long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-java.lang.Object-long-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; BackwardFindSessions(K arg0, K arg1, long arg2, long arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator&lt;TKey, TValue&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_Fetch_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.Fetch*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_Fetch__0_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.Fetch(`0)">
+  Fetch(K)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch-java.lang.Object-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; Fetch(K arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator.html">KeyValueIterator</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_Fetch_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.Fetch*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_Fetch__0__0_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.Fetch(`0,`0)">
+  Fetch(K, K)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch-java.lang.Object-java.lang.Object-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; Fetch(K arg0, K arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator&lt;TKey, TValue&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FetchSession_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FetchSession*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FetchSession__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FetchSession(`0,Java.Time.Instant,Java.Time.Instant)">
+  FetchSession(K, Instant, Instant)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AGG FetchSession(K arg0, Instant arg1, Instant arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AGG</span></dt>
+    <dd><p><code class="typeparamref">AGG</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FetchSession_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FetchSession*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FetchSession__0_System_Int64_System_Int64_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FetchSession(`0,System.Int64,System.Int64)">
+  FetchSession(K, long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession-java.lang.Object-long-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AGG FetchSession(K arg0, long arg1, long arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AGG</span></dt>
+    <dd><p><code class="typeparamref">AGG</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FindSessions_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FindSessions*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FindSessions__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FindSessions(`0,Java.Time.Instant,Java.Time.Instant)">
+  FindSessions(K, Instant, Instant)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; FindSessions(K arg0, Instant arg1, Instant arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator&lt;TKey, TValue&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FindSessions_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FindSessions*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FindSessions__0_System_Int64_System_Int64_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FindSessions(`0,System.Int64,System.Int64)">
+  FindSessions(K, long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-long-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; FindSessions(K arg0, long arg1, long arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator&lt;TKey, TValue&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FindSessions_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FindSessions*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FindSessions__0__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FindSessions(`0,`0,Java.Time.Instant,Java.Time.Instant)">
+  FindSessions(K, K, Instant, Instant)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; FindSessions(K arg0, K arg1, Instant arg2, Instant arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+    <dt><code>arg3</code> <span class="xref">Instant</span></dt>
+    <dd><p><span class="xref">Java.Time.Instant</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator&lt;TKey, TValue&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FindSessions_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FindSessions*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_KNetReadOnlySessionStore_2_FindSessions__0__0_System_Int64_System_Int64_" data-uid="MASES.KNet.Streams.State.KNetReadOnlySessionStore`2.FindSessions(`0,`0,System.Int64,System.Int64)">
+  FindSessions(K, K, long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-java.lang.Object-long-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetWindowedKeyValueIterator&lt;K, AGG&gt; FindSessions(K arg0, K arg1, long arg2, long arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator</a>&lt;K, AGG&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html">KNetWindowedKeyValueIterator&lt;TKey, TValue&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/KNetReadOnlySessionStore.cs/#L26" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div style="text-align: center;">Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
