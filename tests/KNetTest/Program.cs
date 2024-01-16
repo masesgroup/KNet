@@ -73,7 +73,7 @@ namespace MASES.KNetTest
 
             KNetSerDes<TestType> serializer = new KNetSerDes<TestType>()
             {
-                OnSerialize = (topic, type) => { return new byte[0]; }
+                OnSerialize = (topic, type) => { return Array.Empty<byte>(); }
             };
 
             KNetSerDes<TestType> deserializer = new KNetSerDes<TestType>()

@@ -23,7 +23,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     #region IProcessorSupplier<KIn, VIn, KOut, VOut>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
     /// </summary>
     public partial interface IProcessorSupplier<KIn, VIn, KOut, VOut>
     {
@@ -41,7 +41,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region ProcessorSupplier<KIn, VIn, KOut, VOut>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
     /// </summary>
     public partial class ProcessorSupplier<KIn, VIn, KOut, VOut> : JVMBridgeListener, Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier<KIn, VIn, KOut, VOut>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Processor.Api.Processor<KIn, VIn, KOut, VOut>>
     {
@@ -68,29 +68,31 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("get", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(GetEventHandler)); OnGet = Get;
+            AddEventHandler("get", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(GetEventHandler));
+            AddEventHandler("stores", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(StoresEventHandler));
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Processor.html#init(org.apache.kafka.streams.processor.api.ProcessorContext)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Processor.html#init(org.apache.kafka.streams.processor.api.ProcessorContext)"/>
         /// </summary>
-        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<KOut, VOut>> OnInit { get; set; }
+        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<KOut, VOut>> OnInit { get; set; } = null;
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Processor.html#process(org.apache.kafka.streams.processor.api.Record)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Processor.html#process(org.apache.kafka.streams.processor.api.Record)"/>
         /// </summary>
-        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.Record<KIn, VIn>> OnProcess { get; set; }
+        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.Record<KIn, VIn>> OnProcess { get; set; } = null;
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html#get()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html#get()"/>
         /// </summary>
-        public System.Func<Org.Apache.Kafka.Streams.Processor.Api.Processor<KIn, VIn, KOut, VOut>> OnGet { get; set; }
+        public System.Func<Org.Apache.Kafka.Streams.Processor.Api.Processor<KIn, VIn, KOut, VOut>> OnGet { get; set; } = null;
 
         void GetEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
-            if (OnGet != null)
+            var methodToExecute = (OnGet != null) ? OnGet : Get;
+            if (methodToExecute != null)
             {
-                var executionResult = OnGet.Invoke();
+                var executionResult = methodToExecute.Invoke();
                 executionResult.OnClose = () =>
                 {
                     lock (m_list)
@@ -107,9 +109,8 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             }
         }
 
-
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html#get()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public virtual Org.Apache.Kafka.Streams.Processor.Api.Processor<KIn, VIn, KOut, VOut> Get()
@@ -119,6 +120,39 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
                 OnInit = OnInit,
                 OnProcess = OnProcess
             };
+        }
+
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
+        /// </summary>
+        /// <returns><see cref="Java.Util.Set"/> of <see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
+        /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
+        public Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder> StoresDefault()
+        {
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder>>("storesDefault");
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
+        /// </summary>
+        /// <remarks>If <see cref="OnStores"/> has a value it takes precedence over corresponding class method</remarks>
+        public System.Func<Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder>> OnStores { get; set; } = null;
+
+        void StoresEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            var methodToExecute = (OnStores != null) ? OnStores : Stores;
+            var executionResult = methodToExecute();
+            data.SetReturnValue(executionResult);
+        }
+
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
+        /// </summary>
+        /// <returns><see cref="Java.Util.Set"/> of <see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
+        /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="StoresDefault"/>; override the method to implement a different behavior</remarks>
+        public virtual Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder> Stores()
+        {
+            return StoresDefault();
         }
 
         #endregion

@@ -197,9 +197,9 @@ namespace MASES.KNetTest
                 }
                 finally
                 {
-                    if (valueMapper != null) valueMapper.Dispose();
-                    if (keyValuemapper != null) keyValuemapper.Dispose();
-                    if (errorHandler != null) errorHandler.Dispose();
+                    valueMapper?.Dispose();
+                    keyValuemapper?.Dispose();
+                    errorHandler?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)

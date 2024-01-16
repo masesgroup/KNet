@@ -18,11 +18,25 @@
 
 package org.mases.knet.streams.kstream;
 
+import org.apache.kafka.streams.state.StoreBuilder;
+
+import java.util.Set;
+
 public final class ValueTransformerSupplier extends org.mases.jcobridge.JCListener implements org.apache.kafka.streams.kstream.ValueTransformerSupplier {
     public ValueTransformerSupplier(String key) throws org.mases.jcobridge.JCNativeException {
         super(key);
     }
 
+    public Set<StoreBuilder<?>> storesDefault() {
+        return org.apache.kafka.streams.kstream.ValueTransformerSupplier.super.stores();
+    }
+
+    @Override
+    public Set<StoreBuilder<?>> stores() {
+        raiseEvent("stores");
+        Object retVal = getReturnData();
+        return (Set<StoreBuilder<?>>) retVal;
+    }
     @Override
     public org.apache.kafka.streams.kstream.ValueTransformer get() {
         raiseEvent("get");

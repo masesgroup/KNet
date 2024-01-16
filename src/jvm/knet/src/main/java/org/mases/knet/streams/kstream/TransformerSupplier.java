@@ -18,11 +18,26 @@
 
 package org.mases.knet.streams.kstream;
 
+import org.apache.kafka.streams.state.StoreBuilder;
+import org.mases.knet.streams.processor.api.FixedKeyProcessorSupplier;
+
+import java.util.Set;
+
 public final class TransformerSupplier extends org.mases.jcobridge.JCListener implements org.apache.kafka.streams.kstream.TransformerSupplier {
     public TransformerSupplier(String key) throws org.mases.jcobridge.JCNativeException {
         super(key);
     }
 
+    public Set<StoreBuilder<?>> storesDefault() {
+        return org.apache.kafka.streams.kstream.TransformerSupplier.super.stores();
+    }
+
+    @Override
+    public Set<StoreBuilder<?>> stores() {
+        raiseEvent("stores");
+        Object retVal = getReturnData();
+        return (Set<StoreBuilder<?>>) retVal;
+    }
     @Override
     public org.apache.kafka.streams.kstream.Transformer get() {
         raiseEvent("get");
