@@ -23,23 +23,19 @@ import org.mases.jcobridge.*;
 
 import java.util.Arrays;
 
-public final class KNetPredicateTester implements Predicate<byte[], byte[]> {
+public final class KNetPredicateEqualityTest implements Predicate<byte[], byte[]> {
     Boolean _isKey = null;
     byte[] _key = null;
     byte[] _value = null;
 
-    public KNetPredicateTester(byte[] keyOrValue, boolean isKey) {
+    public synchronized void setWorkingState(byte[] key, byte[] value, Boolean isKey) {
         _isKey = isKey;
-        _key = keyOrValue;
-    }
-
-    public KNetPredicateTester(byte[] keyOrValue, byte[] value) {
-        _key = keyOrValue;
+        _key = key;
         _value = value;
     }
 
     @Override
-    public boolean test(byte[] bytes, byte[] bytes2) {
+    public synchronized boolean test(byte[] bytes, byte[] bytes2) {
         if (_isKey != null) {
             if (_isKey == true) {
                 return Arrays.equals(bytes, _key);
