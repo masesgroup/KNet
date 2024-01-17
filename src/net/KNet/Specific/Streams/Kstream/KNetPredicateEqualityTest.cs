@@ -24,28 +24,19 @@ namespace MASES.KNet.Streams.Kstream
     /// <summary>
     /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}"/> to execute <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}.Test(K, V)"/> directly in the JVM
     /// </summary>
-    public class KNetPredicateEqualityTest<TKey, TValue> : JVMBridgeBase<KNetPredicateEqualityTest<TKey, TValue>>, IGenericSerDesFactoryApplier
+    public class KNetPredicateEqualityTest<TKey, TValue> : KNetPredicate<TKey, TValue>, IGenericSerDesFactoryApplier
     {
         TKey _key;
         TValue _value;
         bool? _isKeyCheck;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
-
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; updateRemote(); } }
+        /// <inheritdoc/>
+        public override bool AutoInit => false; // avoid to register callback listener
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
         /// </summary>
         public override string BridgeClassName => "org.mases.knet.streams.kstream.KNetPredicateEqualityTest";
-        /// <summary>
-        /// Converter from <see cref="KNetPredicateEqualityTest{TKey, TValue}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}"/>
-        /// </summary>
-        /// <remarks>This cast is useful when an API needs in input a type like <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}"/>, however the behavior of the <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}"/> in output is different from the same class allocated directly</remarks>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Predicate<byte[], byte[]>(KNetPredicateEqualityTest<TKey, TValue> t)
-        {
-            if (t._factory == null) throw new System.InvalidOperationException("The operator shall be invoked within a function which set the IGenericSerDesFactory instance.");
-            t.updateRemote();
-            return t.Cast<Org.Apache.Kafka.Streams.Kstream.Predicate<byte[], byte[]>>();
-        }
 
         void updateRemote()
         {

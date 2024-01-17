@@ -96,13 +96,20 @@ namespace MASES.KNet.Streams.Kstream
     /// <summary>
     /// Supporting interface for <see cref="KNetMaterialized{K, V, TJVM, TContainer}"/>
     /// </summary>
-    /// <typeparam name="TJVM"></typeparam>
+    /// <typeparam name="TJVM">JVM type</typeparam>
     public interface IKNetMaterialized<TJVM>
     {
+        /// <summary>
+        /// Supporting method for <see cref="KNetMaterialized{K, V, TJVM, TContainer}"/>
+        /// </summary>
         void SetStore(Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], TJVM, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> materialized);
-
+        /// <summary>
+        /// Supporting method for <see cref="KNetMaterialized{K, V, TJVM, TContainer}"/>
+        /// </summary>
         void SetStore(Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], TJVM, Org.Apache.Kafka.Streams.State.SessionStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> materialized);
-
+        /// <summary>
+        /// Supporting method for <see cref="KNetMaterialized{K, V, TJVM, TContainer}"/>
+        /// </summary>
         void SetStore(Org.Apache.Kafka.Streams.Kstream.Materialized<byte[], TJVM, Org.Apache.Kafka.Streams.State.WindowStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> materialized);
     }
 
