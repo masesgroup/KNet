@@ -18,6 +18,7 @@
 
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Kstream;
+using System;
 
 namespace MASES.KNet.Streams
 {
@@ -30,8 +31,11 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         #region Constructors
-        /// <inheritdoc/>
-        public KNetStreamsBuilder(IGenericSerDesFactory factory) : base() { _factory = factory; _builder = new Org.Apache.Kafka.Streams.StreamsBuilder(); }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#org.apache.kafka.streams.StreamsBuilder(org.apache.kafka.streams.TopologyConfig)"/>
+        /// </summary>
+        /// <param name="factory"><see cref="StreamsConfigBuilder"/> used as reference of <see cref="IGenericSerDesFactory"/></param>
+        public KNetStreamsBuilder(StreamsConfigBuilder factory) : base() { _factory = factory; _builder = new Org.Apache.Kafka.Streams.StreamsBuilder(); }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#org.apache.kafka.streams.StreamsBuilder(org.apache.kafka.streams.TopologyConfig)"/>
         /// </summary>
@@ -45,6 +49,19 @@ namespace MASES.KNet.Streams
         KNetStreamsBuilder(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.StreamsBuilder builder) : base() { _factory = factory; _builder = builder; }
 
         #endregion
+        /// <summary>
+        /// If set, this <see cref="Func{T, TResult}"/> will be called from <see cref="PrepareProperties(StreamsConfigBuilder)"/>
+        /// </summary>
+        public static Func<Java.Util.Properties, StreamsConfigBuilder> OverrideProperties { get; set; }
+        /// <summary>
+        /// Override this method to check and modify the <see cref="Java.Util.Properties"/> returned to underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/>
+        /// </summary>
+        /// <param name="builder"><see cref="StreamsConfigBuilder"/> to use to return <see cref="Java.Util.Properties"/></param>
+        /// <returns><see cref="Java.Util.Properties"/> used from underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/></returns>
+        protected virtual Java.Util.Properties PrepareProperties(StreamsConfigBuilder builder)
+        {
+            return OverrideProperties != null ? OverrideProperties(builder) : builder;
+        }
 
         #region Instance methods
         /// <summary>
