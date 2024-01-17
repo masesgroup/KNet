@@ -52,7 +52,7 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// If set, this <see cref="Func{T, TResult}"/> will be called from <see cref="PrepareProperties(StreamsConfigBuilder)"/>
         /// </summary>
-        public static Func<Java.Util.Properties, StreamsConfigBuilder> OverrideProperties { get; set; }
+        public static Func<StreamsConfigBuilder, Java.Util.Properties> OverrideProperties { get; set; }
         /// <summary>
         /// Override this method to check and modify the <see cref="Java.Util.Properties"/> returned to underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/>
         /// </summary>
@@ -112,7 +112,7 @@ namespace MASES.KNet.Streams
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="KNetGlobalKTable{K, V}"/></returns>
-        public KNetGlobalKTable<K, V>  GlobalTable<K, V>(string arg0)
+        public KNetGlobalKTable<K, V> GlobalTable<K, V>(string arg0)
         {
             return new KNetGlobalKTable<K, V>(_factory, _builder.GlobalTable<byte[], byte[]>(arg0));
         }
