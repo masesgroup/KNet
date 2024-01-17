@@ -430,7 +430,7 @@ namespace MASES.KNet.Common
             get
             {
                 var strName = GetProperty<string>(TopicConfig.MESSAGE_TIMESTAMP_TYPE_CONFIG);
-                if (System.Enum.TryParse<MessageTimestampTypes>(strName, out var rest))
+                if (!string.IsNullOrWhiteSpace(strName) && System.Enum.TryParse<MessageTimestampTypes>(strName, out var rest))
                 {
                     return rest;
                 }
