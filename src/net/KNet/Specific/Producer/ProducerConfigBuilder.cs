@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Lang;
 using Java.Util;
 using Org.Apache.Kafka.Clients.Producer;
 
@@ -312,11 +313,11 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Manages <see cref="ProducerConfig.INTERCEPTOR_CLASSES_CONFIG"/>
         /// </summary>
-        public List InterceptorClasses { get { return GetProperty<List>(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG); } set { SetProperty(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, value); } }
+        public List<Class> InterceptorClasses { get { return GetProperty<List<Class>>(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG); } set { SetProperty(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ProducerConfig.INTERCEPTOR_CLASSES_CONFIG"/>
         /// </summary>
-        public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)
+        public ProducerConfigBuilder WithInterceptorClasses(List<Class> interceptorClasses)
         {
             var clone = Clone();
             clone.InterceptorClasses = interceptorClasses;

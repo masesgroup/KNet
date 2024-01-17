@@ -67,7 +67,7 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// Manages <see cref="StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG"/>
         /// </summary>
-        public long AcceptableRecoveryLag { get { return GetProperty<int>(StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG); } set { SetProperty(StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG, value); } }
+        public long AcceptableRecoveryLag { get { return GetProperty<long>(StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG); } set { SetProperty(StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG"/>
         /// </summary>

@@ -331,6 +331,8 @@ namespace MASES.KNet.Common
             {
                 var policyStr = GetProperty<string>(TopicConfig.CLEANUP_POLICY_CONFIG);
                 CleanupPolicyTypes policy = CleanupPolicyTypes.None;
+                if (string.IsNullOrWhiteSpace(policyStr)) return policy;
+
                 if (policyStr.Contains(TopicConfig.CLEANUP_POLICY_COMPACT)) policy |= CleanupPolicyTypes.Compact;
                 if (policyStr.Contains(TopicConfig.CLEANUP_POLICY_DELETE)) policy |= CleanupPolicyTypes.Delete;
                 return policy;
@@ -387,7 +389,7 @@ namespace MASES.KNet.Common
             get
             {
                 var strName = GetProperty<string>(TopicConfig.COMPRESSION_TYPE_CONFIG);
-                if (System.Enum.TryParse<CompressionTypes>(strName, out var rest))
+                if (!string.IsNullOrWhiteSpace(strName) && System.Enum.TryParse<CompressionTypes>(strName, out var rest))
                 {
                     return rest;
                 }
