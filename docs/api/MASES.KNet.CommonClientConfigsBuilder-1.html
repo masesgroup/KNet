@@ -8,6 +8,7 @@
       <meta name="title" content="Class CommonClientConfigsBuilder&lt;T&gt;
  | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="Common builder for">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -100,7 +101,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class CommonClientConfigsBuilder&lt;T&gt; : GenericConfigBuilder&lt;T&gt;, INotifyPropertyChanged where T : CommonClientConfigsBuilder&lt;T&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class CommonClientConfigsBuilder&lt;T&gt; : GenericConfigBuilder&lt;T&gt;, INotifyPropertyChanged, IGenericSerDesFactory where T : CommonClientConfigsBuilder&lt;T&gt;, new()</code></pre>
   </div>
 
 
@@ -125,6 +126,7 @@
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
     </dd>
   </dl>
 
@@ -167,6 +169,18 @@
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;T&gt;.ToMap()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetKeySerDes">GenericConfigBuilder&lt;T&gt;.KNetKeySerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetValueSerDes">GenericConfigBuilder&lt;T&gt;.KNetValueSerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__1">GenericConfigBuilder&lt;T&gt;.BuildKeySerDes&lt;TKey&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__1">GenericConfigBuilder&lt;T&gt;.BuildValueSerDes&lt;TValue&gt;()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -222,7 +236,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -254,7 +268,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -286,7 +300,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -318,7 +332,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -350,7 +364,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -382,7 +396,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -415,7 +429,7 @@ public Class DefaultListKeySerdeInnerClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -448,7 +462,7 @@ public Class DefaultListKeySerdeTypeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -481,7 +495,7 @@ public Class DefaultListValueSerdeInnerClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -514,7 +528,7 @@ public Class DefaultListValueSerdeTypeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -546,7 +560,7 @@ public Class DefaultListValueSerdeTypeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -578,7 +592,7 @@ public Class DefaultListValueSerdeTypeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -610,7 +624,7 @@ public Class DefaultListValueSerdeTypeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -642,7 +656,7 @@ public Class DefaultListValueSerdeTypeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -674,7 +688,7 @@ public Class DefaultListValueSerdeTypeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -706,7 +720,7 @@ public Class DefaultListValueSerdeTypeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -738,7 +752,7 @@ public Class DefaultListValueSerdeTypeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.html">Sensor</a>.<a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">RecordingLevel</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -771,7 +785,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">List</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -803,7 +817,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -835,7 +849,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -867,7 +881,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -899,7 +913,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -931,7 +945,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -963,7 +977,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -995,7 +1009,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1027,7 +1041,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1059,7 +1073,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1091,7 +1105,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1123,7 +1137,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1155,7 +1169,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1187,7 +1201,7 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1219,13 +1233,13 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>bootstrapServers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1256,13 +1270,13 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>clientDnsLookup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1293,13 +1307,13 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>clientId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1330,13 +1344,13 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>clientRack</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1367,13 +1381,13 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>connectionMaxIdleMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1404,13 +1418,13 @@ public List MetricReporterClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultApiTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1442,13 +1456,13 @@ public T WithDefaultListKeySerdeInnerClass(Class defaultListKeySerdeInnerClass)<
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultListKeySerdeInnerClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1480,13 +1494,13 @@ public T WithDefaultListKeySerdeTypeClass(Class defaultListKeySerdeTypeClass)</c
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultListKeySerdeTypeClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1518,13 +1532,13 @@ public T WithDefaultListValueSerdeInnerClass(Class defaultListValueSerdeInnerCla
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultListValueSerdeInnerClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1556,13 +1570,13 @@ public T WithDefaultListValueSerdeTypeClass(Class defaultListValueSerdeTypeClass
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultListValueSerdeTypeClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1593,13 +1607,13 @@ public T WithDefaultListValueSerdeTypeClass(Class defaultListValueSerdeTypeClass
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>groupId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1630,13 +1644,13 @@ public T WithDefaultListValueSerdeTypeClass(Class defaultListValueSerdeTypeClass
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>groupInstanceId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1667,13 +1681,13 @@ public T WithDefaultListValueSerdeTypeClass(Class defaultListValueSerdeTypeClass
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>heartbeatIntervalMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1704,13 +1718,13 @@ public T WithDefaultListValueSerdeTypeClass(Class defaultListValueSerdeTypeClass
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxPollIntervalMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1741,13 +1755,13 @@ public T WithDefaultListValueSerdeTypeClass(Class defaultListValueSerdeTypeClass
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>metadataMaxAge</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1778,13 +1792,13 @@ public T WithDefaultListValueSerdeTypeClass(Class defaultListValueSerdeTypeClass
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>metricNumSample</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1815,13 +1829,13 @@ public T WithDefaultListValueSerdeTypeClass(Class defaultListValueSerdeTypeClass
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>metricRecordingLevel</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.html">Sensor</a>.<a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">RecordingLevel</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1853,13 +1867,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>metricReporterClasses</code> <span class="xref">List</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1890,13 +1904,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>metricSampleWindowMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1927,13 +1941,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rebalanceTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -1964,13 +1978,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>receiveBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -2001,13 +2015,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>reconnectBackoffMaxMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -2038,13 +2052,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>reconnectBackoffMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -2075,13 +2089,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>requestTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -2112,13 +2126,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>retries</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -2149,13 +2163,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>retryBackoffMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -2186,13 +2200,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>securityProtocol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -2223,13 +2237,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>sendBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -2260,13 +2274,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>sessionTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -2297,13 +2311,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>socketConnectionSetupTimeoutMaxMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -2334,13 +2348,13 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>socketConnectionSetupTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>Common builder for</dd>
   </dl>
 
 
@@ -2372,7 +2386,7 @@ public T WithMetricReporterClasses(List metricReporterClasses)</code></pre>
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div style="text-align: center;">Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
         </div>
       </div>
     </footer>
