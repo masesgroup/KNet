@@ -222,12 +222,10 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// Manages <see cref="ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public List InterceptorClasses { get { return GetProperty<List>(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG); } set { SetProperty(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)
         {
             var clone = Clone();

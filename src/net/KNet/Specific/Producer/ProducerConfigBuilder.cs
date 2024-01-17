@@ -312,12 +312,10 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Manages <see cref="ProducerConfig.INTERCEPTOR_CLASSES_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public List InterceptorClasses { get { return GetProperty<List>(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG); } set { SetProperty(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ProducerConfig.INTERCEPTOR_CLASSES_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)
         {
             var clone = Clone();
