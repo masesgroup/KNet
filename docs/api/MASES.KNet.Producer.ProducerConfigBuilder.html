@@ -8,6 +8,7 @@
       <meta name="title" content="Class ProducerConfigBuilder
  | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="Builder for">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -100,7 +101,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProducerConfigBuilder : CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProducerConfigBuilder : CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory</code></pre>
   </div>
 
 
@@ -120,6 +121,7 @@
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
     </dd>
   </dl>
 
@@ -341,6 +343,18 @@
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;ProducerConfigBuilder&gt;.ToMap()</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetKeySerDes">GenericConfigBuilder&lt;ProducerConfigBuilder&gt;.KNetKeySerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetValueSerDes">GenericConfigBuilder&lt;ProducerConfigBuilder&gt;.KNetValueSerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__1">GenericConfigBuilder&lt;ProducerConfigBuilder&gt;.BuildKeySerDes&lt;TKey&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__1">GenericConfigBuilder&lt;ProducerConfigBuilder&gt;.BuildValueSerDes&lt;TValue&gt;()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -413,7 +427,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a>.<a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.AcksTypes.html">AcksTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -445,7 +459,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -477,7 +491,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -509,7 +523,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a>.<a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.CompressionTypes.html">CompressionTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -541,7 +555,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -573,7 +587,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -606,7 +620,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">List</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -638,7 +652,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -670,7 +684,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -702,7 +716,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -734,7 +748,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -766,7 +780,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -798,7 +812,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -830,7 +844,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -862,7 +876,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -894,7 +908,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -926,7 +940,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -958,7 +972,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -990,7 +1004,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1022,7 +1036,7 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1054,13 +1068,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>acks</code> <a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a>.<a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.AcksTypes.html">AcksTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1091,13 +1105,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>batchSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1128,13 +1142,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>bufferMemory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1165,13 +1179,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>compressionType</code> <a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a>.<a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.CompressionTypes.html">CompressionTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1202,13 +1216,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>deliveryTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1239,13 +1253,13 @@ public List InterceptorClasses { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>enableIdempotence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1277,13 +1291,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>interceptorClasses</code> <span class="xref">List</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1314,13 +1328,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>keySerializerClass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1351,13 +1365,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>lingerMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1388,13 +1402,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxBlockMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1425,13 +1439,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxInFlightRequestPerConnection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1462,13 +1476,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxRequestSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1499,13 +1513,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>metadataMaxIdle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1536,13 +1550,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>partitionerAvailabilityTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1573,13 +1587,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>partitionerClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1610,13 +1624,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>partitionerIgnoreKeys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1647,13 +1661,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>securityProviders</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1684,13 +1698,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>transactionTimeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1721,13 +1735,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>transactionalId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1758,13 +1772,13 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>valueSerializerClass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1796,7 +1810,7 @@ public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)</co
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div style="text-align: center;">Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
         </div>
       </div>
     </footer>

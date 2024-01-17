@@ -8,6 +8,7 @@
       <meta name="title" content="Class StreamsConfigBuilder
  | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="Builder for">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -100,7 +101,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StreamsConfigBuilder : CommonClientConfigsBuilder&lt;StreamsConfigBuilder&gt;, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public class StreamsConfigBuilder : CommonClientConfigsBuilder&lt;StreamsConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory</code></pre>
   </div>
 
 
@@ -120,6 +121,7 @@
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
     </dd>
   </dl>
 
@@ -341,6 +343,18 @@
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;StreamsConfigBuilder&gt;.ToMap()</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetKeySerDes">GenericConfigBuilder&lt;StreamsConfigBuilder&gt;.KNetKeySerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetValueSerDes">GenericConfigBuilder&lt;StreamsConfigBuilder&gt;.KNetValueSerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__1">GenericConfigBuilder&lt;StreamsConfigBuilder&gt;.BuildKeySerDes&lt;TKey&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__1">GenericConfigBuilder&lt;StreamsConfigBuilder&gt;.BuildValueSerDes&lt;TValue&gt;()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -394,7 +408,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -426,7 +440,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -458,7 +472,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -490,7 +504,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -522,7 +536,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -554,7 +568,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -586,7 +600,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -619,7 +633,7 @@ public Class DefaultDeserializationExceptionHandlerClass { get; set; }</code></p
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -652,7 +666,7 @@ public Class DefaultKeySerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -685,7 +699,7 @@ public Class DefaultProductionExceptionHandlerClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -718,7 +732,7 @@ public Class DefaultTimestampExtractorClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -751,7 +765,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -783,7 +797,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -815,7 +829,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -847,7 +861,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -879,7 +893,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -911,7 +925,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -943,7 +957,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -975,7 +989,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1007,7 +1021,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1039,7 +1053,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1071,7 +1085,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">List</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1103,7 +1117,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1135,7 +1149,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1167,7 +1181,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1200,7 +1214,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1232,7 +1246,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1264,7 +1278,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1296,7 +1310,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1328,7 +1342,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1360,7 +1374,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1392,7 +1406,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1424,7 +1438,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1456,7 +1470,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1488,7 +1502,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1520,13 +1534,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>acceptableRecoveryLag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1557,13 +1571,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>applicationId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1594,13 +1608,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>applicationServer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1631,13 +1645,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>bufferedRecordsPerPartition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1668,13 +1682,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builtInMetricsVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1705,13 +1719,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>commitIntervalMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1742,13 +1756,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultDSLStore</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1780,13 +1794,13 @@ public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(Clas
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultDeserializationExceptionHandlerClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1818,13 +1832,13 @@ public StreamsConfigBuilder WithDefaultKeySerdeClass(Class defaultKeySerdeClass)
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultKeySerdeClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1856,13 +1870,13 @@ public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(Class def
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultProductionExceptionHandlerClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1894,13 +1908,13 @@ public StreamsConfigBuilder WithDefaultTimestampExtractorClass(Class defaultTime
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultTimestampExtractorClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1932,13 +1946,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultValueSerdeClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1969,13 +1983,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxTaskIdleMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2006,13 +2020,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxWarmupReplicas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2043,13 +2057,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>numStandByReplicas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2080,13 +2094,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>numStreamThreads</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2117,13 +2131,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>pollMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2154,13 +2168,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>probingRebalanceIntervalMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2191,13 +2205,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>processingGuarantee</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2228,13 +2242,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rackAwareAssignmentNonOverlapCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2265,13 +2279,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rackAwareAssignmentStrategy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2302,13 +2316,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rackAwareAssignmentTags</code> <span class="xref">List</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2339,13 +2353,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rackAwareAssignmentTrafficCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2376,13 +2390,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>repartitionPurgeIntervalMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2413,13 +2427,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>replicationFactor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2451,13 +2465,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rocksDbConfigSetterClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2488,13 +2502,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stateCleanupDelayMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2525,13 +2539,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stateDir</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2562,13 +2576,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stateStoreMaxBytesBuffering</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2599,13 +2613,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>taskTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2636,13 +2650,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topologyOptimization</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2673,13 +2687,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>upgradeFrom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2710,13 +2724,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>windowSizeMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2747,13 +2761,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>windowStoreChangeLogAdditionalRetentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2784,13 +2798,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>windowedInnerClassSerde</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2822,7 +2836,7 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div style="text-align: center;">Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
         </div>
       </div>
     </footer>

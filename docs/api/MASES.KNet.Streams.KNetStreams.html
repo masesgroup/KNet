@@ -1,0 +1,1417 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class KNetStreams
+ | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KNetStreams
+ | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="KNet extension of">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_KNetStreams.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.KNetStreams%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.Streams.KNetStreams">
+
+
+
+  <h1 id="MASES_KNet_Streams_KNetStreams" data-uid="MASES.KNet.Streams.KNetStreams" class="text-break">
+    Class KNetStreams
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Streams.html">Streams</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KNetStreams : IGenericSerDesFactoryApplier</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">KNetStreams</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="MASES_KNet_Streams_KNetStreams__ctor_" data-uid="MASES.KNet.Streams.KNetStreams.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams__ctor_MASES_KNet_Streams_KNetTopology_MASES_KNet_Streams_StreamsConfigBuilder_" data-uid="MASES.KNet.Streams.KNetStreams.#ctor(MASES.KNet.Streams.KNetTopology,MASES.KNet.Streams.StreamsConfigBuilder)">
+  KNetStreams(KNetTopology, StreamsConfigBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet override of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetStreams(KNetTopology arg0, StreamsConfigBuilder arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.KNetTopology.html">KNetTopology</a></dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.KNetTopology.html">KNetTopology</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
+    <dd><p><span class="xref">Java.Util.Properties</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams__ctor_" data-uid="MASES.KNet.Streams.KNetStreams.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams__ctor_MASES_KNet_Streams_KNetTopology_MASES_KNet_Streams_StreamsConfigBuilder_MASES_KNet_Streams_KNetClientSupplier_" data-uid="MASES.KNet.Streams.KNetStreams.#ctor(MASES.KNet.Streams.KNetTopology,MASES.KNet.Streams.StreamsConfigBuilder,MASES.KNet.Streams.KNetClientSupplier)">
+  KNetStreams(KNetTopology, StreamsConfigBuilder, KNetClientSupplier)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet override of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties,KNetClientSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties,KNetClientSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetStreams(KNetTopology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.KNetTopology.html">KNetTopology</a></dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.KNetTopology.html">KNetTopology</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
+    <dd><p><span class="xref">Java.Util.Properties</span></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.KNetClientSupplier.html">KNetClientSupplier</a></dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.KNetClientSupplier.html">KNetClientSupplier</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams__ctor_" data-uid="MASES.KNet.Streams.KNetStreams.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams__ctor_MASES_KNet_Streams_KNetTopology_MASES_KNet_Streams_StreamsConfigBuilder_MASES_KNet_Streams_KNetClientSupplier_Org_Apache_Kafka_Common_Utils_Time_" data-uid="MASES.KNet.Streams.KNetStreams.#ctor(MASES.KNet.Streams.KNetTopology,MASES.KNet.Streams.StreamsConfigBuilder,MASES.KNet.Streams.KNetClientSupplier,Org.Apache.Kafka.Common.Utils.Time)">
+  KNetStreams(KNetTopology, StreamsConfigBuilder, KNetClientSupplier, Time)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet override of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties,KNetClientSupplier,org.apache.kafka.common.utils.Time)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties,KNetClientSupplier,org.apache.kafka.common.utils.Time)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetStreams(KNetTopology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2, Time arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.KNetTopology.html">KNetTopology</a></dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.KNetTopology.html">KNetTopology</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
+    <dd><p><span class="xref">Java.Util.Properties</span></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.KNetClientSupplier.html">KNetClientSupplier</a></dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.KNetClientSupplier.html">KNetClientSupplier</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams__ctor_" data-uid="MASES.KNet.Streams.KNetStreams.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams__ctor_MASES_KNet_Streams_KNetTopology_MASES_KNet_Streams_StreamsConfigBuilder_Org_Apache_Kafka_Common_Utils_Time_" data-uid="MASES.KNet.Streams.KNetStreams.#ctor(MASES.KNet.Streams.KNetTopology,MASES.KNet.Streams.StreamsConfigBuilder,Org.Apache.Kafka.Common.Utils.Time)">
+  KNetStreams(KNetTopology, StreamsConfigBuilder, Time)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet override of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties,org.apache.kafka.common.utils.Time)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties,org.apache.kafka.common.utils.Time)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetStreams(KNetTopology arg0, StreamsConfigBuilder arg1, Time arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.KNetTopology.html">KNetTopology</a></dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.KNetTopology.html">KNetTopology</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
+    <dd><p><span class="xref">Java.Util.Properties</span></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_AllLocalStorePartitionLags_" data-uid="MASES.KNet.Streams.KNetStreams.AllLocalStorePartitionLags*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_AllLocalStorePartitionLags" data-uid="MASES.KNet.Streams.KNetStreams.AllLocalStorePartitionLags">
+  AllLocalStorePartitionLags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#allLocalStorePartitionLags--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#allLocalStorePartitionLags--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Map&lt;string, Map&lt;Integer, LagInfo&gt;&gt; AllLocalStorePartitionLags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <span class="xref">Map</span>&lt;<span class="xref">Integer</span>, <a class="xref" href="Org.Apache.Kafka.Streams.LagInfo.html">LagInfo</a>&gt;&gt;</dt>
+    <dd>KNet extension of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_IsPaused_" data-uid="MASES.KNet.Streams.KNetStreams.IsPaused*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_IsPaused" data-uid="MASES.KNet.Streams.KNetStreams.IsPaused">
+  IsPaused
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#isPaused--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#isPaused--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPaused { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd>KNet extension of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_MetadataForAllStreamsClients_" data-uid="MASES.KNet.Streams.KNetStreams.MetadataForAllStreamsClients*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_MetadataForAllStreamsClients" data-uid="MASES.KNet.Streams.KNetStreams.MetadataForAllStreamsClients">
+  MetadataForAllStreamsClients
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metadataForAllStreamsClients--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metadataForAllStreamsClients--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;StreamsMetadata&gt; MetadataForAllStreamsClients { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.StreamsMetadata.html">StreamsMetadata</a>&gt;</dt>
+    <dd>KNet extension of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_MetadataForLocalThreads_" data-uid="MASES.KNet.Streams.KNetStreams.MetadataForLocalThreads*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_MetadataForLocalThreads" data-uid="MASES.KNet.Streams.KNetStreams.MetadataForLocalThreads">
+  MetadataForLocalThreads
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metadataForLocalThreads--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metadataForLocalThreads--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Set&lt;ThreadMetadata&gt; MetadataForLocalThreads { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Set</span>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.ThreadMetadata.html">ThreadMetadata</a>&gt;</dt>
+    <dd>KNet extension of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_OverrideProperties_" data-uid="MASES.KNet.Streams.KNetStreams.OverrideProperties*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_OverrideProperties" data-uid="MASES.KNet.Streams.KNetStreams.OverrideProperties">
+  OverrideProperties
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If set, this <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func&lt;T, TResult&gt;</a> will be called from <a class="xref" href="MASES.KNet.Streams.KNetStreams.html#MASES_KNet_Streams_KNetStreams_PrepareProperties_MASES_KNet_Streams_StreamsConfigBuilder_">PrepareProperties(StreamsConfigBuilder)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;Properties, StreamsConfigBuilder&gt; OverrideProperties { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<span class="xref">Properties</span>, <a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a>&gt;</dt>
+    <dd>KNet extension of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_State_" data-uid="MASES.KNet.Streams.KNetStreams.State*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_State" data-uid="MASES.KNet.Streams.KNetStreams.State">
+  State
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#state--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#state--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams.State State { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a>.<a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.State.html">State</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.State.html">KafkaStreams.State</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_AddStreamThread_" data-uid="MASES.KNet.Streams.KNetStreams.AddStreamThread*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_AddStreamThread" data-uid="MASES.KNet.Streams.KNetStreams.AddStreamThread">
+  AddStreamThread()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#addStreamThread--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#addStreamThread--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;string&gt; AddStreamThread()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Optional</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Optional&lt;T&gt;</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_CleanUp_" data-uid="MASES.KNet.Streams.KNetStreams.CleanUp*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_CleanUp" data-uid="MASES.KNet.Streams.KNetStreams.CleanUp">
+  CleanUp()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#cleanUp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#cleanUp--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CleanUp()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_Close_" data-uid="MASES.KNet.Streams.KNetStreams.Close*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_Close" data-uid="MASES.KNet.Streams.KNetStreams.Close">
+  Close()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_Close_" data-uid="MASES.KNet.Streams.KNetStreams.Close*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_Close_Java_Time_Duration_" data-uid="MASES.KNet.Streams.KNetStreams.Close(Java.Time.Duration)">
+  Close(Duration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Close(Duration arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">Duration</span></dt>
+    <dd><p><span class="xref">Java.Time.Duration</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalArgumentException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_Close_" data-uid="MASES.KNet.Streams.KNetStreams.Close*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_Close_Org_Apache_Kafka_Streams_KafkaStreams_CloseOptions_" data-uid="MASES.KNet.Streams.KNetStreams.Close(Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions)">
+  Close(CloseOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close-org.apache.kafka.streams.KafkaStreams.CloseOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close-org.apache.kafka.streams.KafkaStreams.CloseOptions-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Close(KafkaStreams.CloseOptions arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a>.<a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions.html">CloseOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions.html">KafkaStreams.CloseOptions</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalArgumentException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_Close_" data-uid="MASES.KNet.Streams.KNetStreams.Close*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_Close_System_TimeSpan_" data-uid="MASES.KNet.Streams.KNetStreams.Close(System.TimeSpan)">
+  Close(TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#close-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Close(TimeSpan arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalArgumentException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_Metrics_" data-uid="MASES.KNet.Streams.KNetStreams.Metrics*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_Metrics__1" data-uid="MASES.KNet.Streams.KNetStreams.Metrics``1">
+  Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metrics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Map&lt;MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt; Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;() where ReturnExtendsOrg_Apache_Kafka_Common_Metric : Metric</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Map</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Map</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ReturnExtendsOrg_Apache_Kafka_Common_Metric</code></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metric.html">Metric</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_Pause_" data-uid="MASES.KNet.Streams.KNetStreams.Pause*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_Pause" data-uid="MASES.KNet.Streams.KNetStreams.Pause">
+  Pause()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#pause--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#pause--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Pause()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_PrepareProperties_" data-uid="MASES.KNet.Streams.KNetStreams.PrepareProperties*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_PrepareProperties_MASES_KNet_Streams_StreamsConfigBuilder_" data-uid="MASES.KNet.Streams.KNetStreams.PrepareProperties(MASES.KNet.Streams.StreamsConfigBuilder)">
+  PrepareProperties(StreamsConfigBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override this method to check and modify the <span class="xref">Java.Util.Properties</span> returned to underlying <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Properties PrepareProperties(StreamsConfigBuilder builder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a> to use to return <span class="xref">Java.Util.Properties</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Properties</span></dt>
+    <dd><p><span class="xref">Java.Util.Properties</span> used from underlying <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_QueryMetadataForKey_" data-uid="MASES.KNet.Streams.KNetStreams.QueryMetadataForKey*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_QueryMetadataForKey__1_System_String___0_MASES_KNet_Serialization_IKNetSerializer___0__" data-uid="MASES.KNet.Streams.KNetStreams.QueryMetadataForKey``1(System.String,``0,MASES.KNet.Serialization.IKNetSerializer{``0})">
+  QueryMetadataForKey&lt;TKey&gt;(string, TKey, IKNetSerializer&lt;TKey&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.common.serialization.Serializer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.common.serialization.Serializer-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyQueryMetadata QueryMetadataForKey&lt;TKey&gt;(string arg0, TKey arg1, IKNetSerializer&lt;TKey&gt; arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">TKey</span></dt>
+    <dd><p><code class="typeparamref">TKey</code></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.IKNetSerializer-1.html">IKNetSerializer</a>&lt;TKey&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IKNetSerializer-1.html">IKNetSerializer&lt;T&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.KeyQueryMetadata.html">KeyQueryMetadata</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.KeyQueryMetadata.html">KeyQueryMetadata</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_QueryMetadataForKey_" data-uid="MASES.KNet.Streams.KNetStreams.QueryMetadataForKey*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_QueryMetadataForKey__1_System_String___0_MASES_KNet_Streams_Processor_KNetStreamPartitioner___0_System_Object__" data-uid="MASES.KNet.Streams.KNetStreams.QueryMetadataForKey``1(System.String,``0,MASES.KNet.Streams.Processor.KNetStreamPartitioner{``0,System.Object})">
+  QueryMetadataForKey&lt;TKey&gt;(string, TKey, KNetStreamPartitioner&lt;TKey, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.streams.processor.StreamPartitioner-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.streams.processor.StreamPartitioner-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyQueryMetadata QueryMetadataForKey&lt;TKey&gt;(string arg0, TKey arg1, KNetStreamPartitioner&lt;TKey, object&gt; arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">TKey</span></dt>
+    <dd><p><code class="typeparamref">TKey</code></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Processor.KNetStreamPartitioner-2.html">KNetStreamPartitioner</a>&lt;TKey, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.StreamPartitioner.html">StreamPartitioner</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.KeyQueryMetadata.html">KeyQueryMetadata</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.KeyQueryMetadata.html">KeyQueryMetadata</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>The key type</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_Query_" data-uid="MASES.KNet.Streams.KNetStreams.Query*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_Query__1_Org_Apache_Kafka_Streams_Query_StateQueryRequest___0__" data-uid="MASES.KNet.Streams.KNetStreams.Query``1(Org.Apache.Kafka.Streams.Query.StateQueryRequest{``0})">
+  Query&lt;R&gt;(StateQueryRequest&lt;R&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#query-org.apache.kafka.streams.query.StateQueryRequest-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#query-org.apache.kafka.streams.query.StateQueryRequest-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateQueryResult&lt;R&gt; Query&lt;R&gt;(StateQueryRequest&lt;R&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.Query.StateQueryRequest-1.html">StateQueryRequest</a>&lt;R&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Query.StateQueryRequest-1.html">StateQueryRequest&lt;R&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Query.StateQueryResult-1.html">StateQueryResult</a>&lt;R&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Query.StateQueryResult-1.html">StateQueryResult&lt;R&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>R</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_RemoveStreamThread_" data-uid="MASES.KNet.Streams.KNetStreams.RemoveStreamThread*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_RemoveStreamThread" data-uid="MASES.KNet.Streams.KNetStreams.RemoveStreamThread">
+  RemoveStreamThread()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;string&gt; RemoveStreamThread()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Optional</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Optional</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_RemoveStreamThread_" data-uid="MASES.KNet.Streams.KNetStreams.RemoveStreamThread*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_RemoveStreamThread_System_TimeSpan_" data-uid="MASES.KNet.Streams.KNetStreams.RemoveStreamThread(System.TimeSpan)">
+  RemoveStreamThread(TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RemoveStreamThread(TimeSpan arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_Resume_" data-uid="MASES.KNet.Streams.KNetStreams.Resume*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_Resume" data-uid="MASES.KNet.Streams.KNetStreams.Resume">
+  Resume()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L312"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#resume--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#resume--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Resume()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_SetGlobalStateRestoreListener_" data-uid="MASES.KNet.Streams.KNetStreams.SetGlobalStateRestoreListener*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_SetGlobalStateRestoreListener_Org_Apache_Kafka_Streams_Processor_StateRestoreListener_" data-uid="MASES.KNet.Streams.KNetStreams.SetGlobalStateRestoreListener(Org.Apache.Kafka.Streams.Processor.StateRestoreListener)">
+  SetGlobalStateRestoreListener(StateRestoreListener)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L320"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#setGlobalStateRestoreListener-org.apache.kafka.streams.processor.StateRestoreListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#setGlobalStateRestoreListener-org.apache.kafka.streams.processor.StateRestoreListener-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGlobalStateRestoreListener(StateRestoreListener arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.StateRestoreListener.html">StateRestoreListener</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.StateRestoreListener.html">StateRestoreListener</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_SetStateListener_" data-uid="MASES.KNet.Streams.KNetStreams.SetStateListener*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_SetStateListener_Org_Apache_Kafka_Streams_KafkaStreams_StateListener_" data-uid="MASES.KNet.Streams.KNetStreams.SetStateListener(Org.Apache.Kafka.Streams.KafkaStreams.StateListener)">
+  SetStateListener(StateListener)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#setStateListener-org.apache.kafka.streams.KafkaStreams.StateListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#setStateListener-org.apache.kafka.streams.KafkaStreams.StateListener-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStateListener(KafkaStreams.StateListener arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a>.<a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.StateListener.html">StateListener</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.StateListener.html">KafkaStreams.StateListener</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_SetUncaughtExceptionHandler_" data-uid="MASES.KNet.Streams.KNetStreams.SetUncaughtExceptionHandler*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_SetUncaughtExceptionHandler_Org_Apache_Kafka_Streams_Errors_StreamsUncaughtExceptionHandler_" data-uid="MASES.KNet.Streams.KNetStreams.SetUncaughtExceptionHandler(Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler)">
+  SetUncaughtExceptionHandler(StreamsUncaughtExceptionHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler-org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler-org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUncaughtExceptionHandler(StreamsUncaughtExceptionHandler arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.html">StreamsUncaughtExceptionHandler</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.html">StreamsUncaughtExceptionHandler</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_Start_" data-uid="MASES.KNet.Streams.KNetStreams.Start*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_Start" data-uid="MASES.KNet.Streams.KNetStreams.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#start--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#start--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalStateException</span></dt>
+    <dd></dd>
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Errors.StreamsException.html">StreamsException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_Store_" data-uid="MASES.KNet.Streams.KNetStreams.Store*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_Store__2_Org_Apache_Kafka_Streams_StoreQueryParameters___1__" data-uid="MASES.KNet.Streams.KNetStreams.Store``2(Org.Apache.Kafka.Streams.StoreQueryParameters{``1})">
+  Store&lt;TKNetManagedStore, TStore&gt;(StoreQueryParameters&lt;TStore&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#store-org.apache.kafka.streams.StoreQueryParameters-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#store-org.apache.kafka.streams.StoreQueryParameters-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TKNetManagedStore Store&lt;TKNetManagedStore, TStore&gt;(StoreQueryParameters&lt;TStore&gt; arg0) where TKNetManagedStore : KNetManagedStore&lt;TStore&gt;, IGenericSerDesFactoryApplier, new()</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.StoreQueryParameters-1.html">StoreQueryParameters</a>&lt;TStore&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.StoreQueryParameters.html">StoreQueryParameters</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TKNetManagedStore</span></dt>
+    <dd><p><code class="typeparamref">TKNetManagedStore</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKNetManagedStore</code></dt>
+    <dd></dd>
+    <dt><code>TStore</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_Store_" data-uid="MASES.KNet.Streams.KNetStreams.Store*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_Store__2_System_String_MASES_KNet_Streams_State_KNetQueryableStoreTypes_StoreType___0___1__" data-uid="MASES.KNet.Streams.KNetStreams.Store``2(System.String,MASES.KNet.Streams.State.KNetQueryableStoreTypes.StoreType{``0,``1})">
+  Store&lt;TKNetManagedStore, TStore&gt;(string, StoreType&lt;TKNetManagedStore, TStore&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#store-org.apache.kafka.streams.StoreQueryParameters-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#store-org.apache.kafka.streams.StoreQueryParameters-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TKNetManagedStore Store&lt;TKNetManagedStore, TStore&gt;(string storageId, KNetQueryableStoreTypes.StoreType&lt;TKNetManagedStore, TStore&gt; storeType) where TKNetManagedStore : KNetManagedStore&lt;TStore&gt;, IGenericSerDesFactoryApplier, new()</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>storageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.StoreQueryParameters.html">StoreQueryParameters</a></p>
+</dd>
+    <dt><code>storeType</code> <a class="xref" href="MASES.KNet.Streams.State.KNetQueryableStoreTypes.html">KNetQueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.KNetQueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;TKNetManagedStore, TStore&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TKNetManagedStore</span></dt>
+    <dd><p><code class="typeparamref">TKNetManagedStore</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKNetManagedStore</code></dt>
+    <dd></dd>
+    <dt><code>TStore</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_StreamsMetadataForStore_" data-uid="MASES.KNet.Streams.KNetStreams.StreamsMetadataForStore*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_StreamsMetadataForStore_System_String_" data-uid="MASES.KNet.Streams.KNetStreams.StreamsMetadataForStore(System.String)">
+  StreamsMetadataForStore(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#streamsMetadataForStore-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#streamsMetadataForStore-java.lang.String-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;StreamsMetadata&gt; StreamsMetadataForStore(string arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.StreamsMetadata.html">StreamsMetadata</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Collection</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="MASES_KNet_Streams_KNetStreams_op_Implicit_" data-uid="MASES.KNet.Streams.KNetStreams.op_Implicit*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetStreams_op_Implicit_MASES_KNet_Streams_KNetStreams__Org_Apache_Kafka_Streams_KafkaStreams" data-uid="MASES.KNet.Streams.KNetStreams.op_Implicit(MASES.KNet.Streams.KNetStreams)~Org.Apache.Kafka.Streams.KafkaStreams">
+  implicit operator KafkaStreams(KNetStreams)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.KNetStreams.html">KNetStreams</a> to <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator KafkaStreams(KNetStreams t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="MASES.KNet.Streams.KNetStreams.html">KNetStreams</a></dt>
+    <dd>KNet extension of</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a></dt>
+    <dd>KNet extension of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetStreams.cs/#L29" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
