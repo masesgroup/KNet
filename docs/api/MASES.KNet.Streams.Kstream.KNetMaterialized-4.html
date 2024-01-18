@@ -1,0 +1,783 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class KNetMaterialized&lt;K, V, TJVM, TContainer&gt;
+ | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KNetMaterialized&lt;K, V, TJVM, TContainer&gt;
+ | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="KNet base extension of">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_Kstream_KNetMaterialized_4.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.Kstream.KNetMaterialized%604%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4">
+
+
+
+  <h1 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4" class="text-break">
+    Class KNetMaterialized&lt;K, V, TJVM, TContainer&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Streams.html">Streams</a>.<a class="xref" href="MASES.KNet.Streams.Kstream.html">Kstream</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>KNet base extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized-3.html">Materialized&lt;K, V, S&gt;</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class KNetMaterialized&lt;K, V, TJVM, TContainer&gt; : IGenericSerDesFactoryApplier, IKNetMaterialized&lt;TJVM&gt; where TContainer : class, new()</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>Key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>Value type</p>
+</dd>
+    <dt><code>TJVM</code></dt>
+    <dd><p>Backend JVM type</p>
+</dd>
+    <dt><code>TContainer</code></dt>
+    <dd><p>The implementing class, see <a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-2.html">KNetMaterialized&lt;K, V&gt;</a> or <a class="xref" href="MASES.KNet.Streams.Kstream.KNetCountingMaterialized-1.html">KNetCountingMaterialized&lt;K&gt;</a></p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">KNetMaterialized&lt;K, V, TJVM, TContainer&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
+      <div><a class="xref" href="MASES.KNet.Streams.Kstream.IKNetMaterialized-1.html">IKNetMaterialized</a>&lt;TJVM&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNet.Streams.Kstream.KNetCountingMaterialized-1.html">KNetCountingMaterialized</a>&lt;K&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-2.html">KNetMaterialized</a>&lt;K, V&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_As_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.As*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_As_Org_Apache_Kafka_Streams_Kstream_Materialized_StoreType_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.As(Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType)">
+  As(StoreType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.kstream.Materialized.StoreType-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.kstream.Materialized.StoreType-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TContainer As(Materialized.StoreType arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized.html">Materialized</a>.<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType.html">StoreType</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType.html">Materialized.StoreType</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_As_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.As*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_As_Org_Apache_Kafka_Streams_State_KeyValueBytesStoreSupplier_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.As(Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier)">
+  As(KeyValueBytesStoreSupplier)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.KeyValueBytesStoreSupplier-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.KeyValueBytesStoreSupplier-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TContainer As(KeyValueBytesStoreSupplier arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier.html">KeyValueBytesStoreSupplier</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier.html">KeyValueBytesStoreSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_As_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.As*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_As_Org_Apache_Kafka_Streams_State_SessionBytesStoreSupplier_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.As(Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier)">
+  As(SessionBytesStoreSupplier)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.SessionBytesStoreSupplier-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.SessionBytesStoreSupplier-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TContainer As(SessionBytesStoreSupplier arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier.html">SessionBytesStoreSupplier</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier.html">SessionBytesStoreSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_As_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.As*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_As_Org_Apache_Kafka_Streams_State_WindowBytesStoreSupplier_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.As(Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier)">
+  As(WindowBytesStoreSupplier)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.WindowBytesStoreSupplier-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.WindowBytesStoreSupplier-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TContainer As(WindowBytesStoreSupplier arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier.html">WindowBytesStoreSupplier</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier.html">WindowBytesStoreSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_As_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.As*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_As_System_String_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.As(System.String)">
+  As(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#as-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#as-java.lang.String-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TContainer As(string arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithCachingDisabled_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithCachingDisabled*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithCachingDisabled" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithCachingDisabled">
+  WithCachingDisabled()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TContainer WithCachingDisabled()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithCachingEnabled_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithCachingEnabled*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithCachingEnabled" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithCachingEnabled">
+  WithCachingEnabled()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TContainer WithCachingEnabled()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithKeySerde_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithKeySerde*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithKeySerde_MASES_KNet_Serialization_IKNetSerDes__0__" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithKeySerde(MASES.KNet.Serialization.IKNetSerDes{`0})">
+  WithKeySerde(IKNetSerDes&lt;K&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde-org.apache.kafka.common.serialization.Serde-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TContainer WithKeySerde(IKNetSerDes&lt;K&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Serialization.IKNetSerDes-1.html">IKNetSerDes</a>&lt;K&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IKNetSerDes-1.html">IKNetSerDes&lt;T&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithLoggingDisabled_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithLoggingDisabled*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithLoggingDisabled" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithLoggingDisabled">
+  WithLoggingDisabled()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TContainer WithLoggingDisabled()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithLoggingEnabled_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithLoggingEnabled*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithLoggingEnabled_Java_Util_Map_System_String_System_String__" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithLoggingEnabled(Java.Util.Map{System.String,System.String})">
+  WithLoggingEnabled(Map&lt;string, string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled-java.util.Map-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TContainer WithLoggingEnabled(Map&lt;string, string&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p><span class="xref">Java.Util.Map</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithRetention_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithRetention*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithRetention_Java_Time_Duration_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithRetention(Java.Time.Duration)">
+  WithRetention(Duration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withRetention-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withRetention-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TContainer WithRetention(Duration arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">Duration</span></dt>
+    <dd><p><span class="xref">Java.Time.Duration</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalArgumentException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithStoreType_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithStoreType*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_WithStoreType_Org_Apache_Kafka_Streams_Kstream_Materialized_StoreType_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.WithStoreType(Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType)">
+  WithStoreType(StoreType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withStoreType-org.apache.kafka.streams.kstream.Materialized.StoreType-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withStoreType-org.apache.kafka.streams.kstream.Materialized.StoreType-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TContainer WithStoreType(Materialized.StoreType arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized.html">Materialized</a>.<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType.html">StoreType</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType.html">Materialized.StoreType</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TContainer</span></dt>
+    <dd><p><code class="typeparamref">TContainer</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IllegalArgumentException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_op_Implicit_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.op_Implicit*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_op_Implicit_MASES_KNet_Streams_Kstream_KNetMaterialized__0__1__2__3___Org_Apache_Kafka_Streams_Kstream_Materialized_System_Byte____2_Org_Apache_Kafka_Streams_State_KeyValueStore_Org_Apache_Kafka_Common_Utils_Bytes_System_Byte____" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.op_Implicit(MASES.KNet.Streams.Kstream.KNetMaterialized{`0,`1,`2,`3})~Org.Apache.Kafka.Streams.Kstream.Materialized{System.Byte[],`2,Org.Apache.Kafka.Streams.State.KeyValueStore{Org.Apache.Kafka.Common.Utils.Bytes,System.Byte[]}}">
+  implicit operator Materialized&lt;byte[], TJVM, KeyValueStore&lt;Bytes, byte[]&gt;&gt;(KNetMaterialized&lt;K, V, TJVM, TContainer&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-4.html">KNetMaterialized&lt;K, V, TJVM, TContainer&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized-3.html">Materialized&lt;K, V, S&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Materialized&lt;byte[], TJVM, KeyValueStore&lt;Bytes, byte[]&gt;&gt;(KNetMaterialized&lt;K, V, TJVM, TContainer&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-4.html">KNetMaterialized</a>&lt;K, V, TJVM, TContainer&gt;</dt>
+    <dd>KNet base extension of</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized-3.html">Materialized</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], TJVM, <a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueStore-2.html">KeyValueStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Utils.Bytes.html">Bytes</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</dt>
+    <dd>KNet base extension of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_op_Implicit_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.op_Implicit*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_op_Implicit_MASES_KNet_Streams_Kstream_KNetMaterialized__0__1__2__3___Org_Apache_Kafka_Streams_Kstream_Materialized_System_Byte____2_Org_Apache_Kafka_Streams_State_SessionStore_Org_Apache_Kafka_Common_Utils_Bytes_System_Byte____" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.op_Implicit(MASES.KNet.Streams.Kstream.KNetMaterialized{`0,`1,`2,`3})~Org.Apache.Kafka.Streams.Kstream.Materialized{System.Byte[],`2,Org.Apache.Kafka.Streams.State.SessionStore{Org.Apache.Kafka.Common.Utils.Bytes,System.Byte[]}}">
+  implicit operator Materialized&lt;byte[], TJVM, SessionStore&lt;Bytes, byte[]&gt;&gt;(KNetMaterialized&lt;K, V, TJVM, TContainer&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-4.html">KNetMaterialized&lt;K, V, TJVM, TContainer&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized-3.html">Materialized&lt;K, V, S&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Materialized&lt;byte[], TJVM, SessionStore&lt;Bytes, byte[]&gt;&gt;(KNetMaterialized&lt;K, V, TJVM, TContainer&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-4.html">KNetMaterialized</a>&lt;K, V, TJVM, TContainer&gt;</dt>
+    <dd>KNet base extension of</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized-3.html">Materialized</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], TJVM, <a class="xref" href="Org.Apache.Kafka.Streams.State.SessionStore-2.html">SessionStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Utils.Bytes.html">Bytes</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</dt>
+    <dd>KNet base extension of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_op_Implicit_" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.op_Implicit*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetMaterialized_4_op_Implicit_MASES_KNet_Streams_Kstream_KNetMaterialized__0__1__2__3___Org_Apache_Kafka_Streams_Kstream_Materialized_System_Byte____2_Org_Apache_Kafka_Streams_State_WindowStore_Org_Apache_Kafka_Common_Utils_Bytes_System_Byte____" data-uid="MASES.KNet.Streams.Kstream.KNetMaterialized`4.op_Implicit(MASES.KNet.Streams.Kstream.KNetMaterialized{`0,`1,`2,`3})~Org.Apache.Kafka.Streams.Kstream.Materialized{System.Byte[],`2,Org.Apache.Kafka.Streams.State.WindowStore{Org.Apache.Kafka.Common.Utils.Bytes,System.Byte[]}}">
+  implicit operator Materialized&lt;byte[], TJVM, WindowStore&lt;Bytes, byte[]&gt;&gt;(KNetMaterialized&lt;K, V, TJVM, TContainer&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-4.html">KNetMaterialized&lt;K, V, TJVM, TContainer&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized-3.html">Materialized&lt;K, V, S&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Materialized&lt;byte[], TJVM, WindowStore&lt;Bytes, byte[]&gt;&gt;(KNetMaterialized&lt;K, V, TJVM, TContainer&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-4.html">KNetMaterialized</a>&lt;K, V, TJVM, TContainer&gt;</dt>
+    <dd>KNet base extension of</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized-3.html">Materialized</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], TJVM, <a class="xref" href="Org.Apache.Kafka.Streams.State.WindowStore-2.html">WindowStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Utils.Bytes.html">Bytes</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</dt>
+    <dd>KNet base extension of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetMaterialized.cs/#L123" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
