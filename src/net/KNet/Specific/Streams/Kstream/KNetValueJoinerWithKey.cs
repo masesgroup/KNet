@@ -29,6 +29,10 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VR">joined value type</typeparam>
     public class KNetValueJoinerWithKey<K1, V1, V2, VR> : Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<byte[], byte[], byte[], byte[]>, IGenericSerDesFactoryApplier
     {
+        IKNetSerDes<K1> _k1Serializer = null;
+        IKNetSerDes<V1> _v1Serializer = null;
+        IKNetSerDes<V2> _v2Serializer = null;
+        IKNetSerDes<VR> _vrSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
@@ -40,14 +44,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override byte[] Apply(byte[] arg0, byte[] arg1, byte[] arg2)
         {
-            IKNetSerDes<K1> k1Serializer = _factory.BuildKeySerDes<K1>();
-            IKNetSerDes<V1> v1Serializer = _factory.BuildValueSerDes<V1>();
-            IKNetSerDes<V2> v2Serializer = _factory.BuildValueSerDes<V2>();
-            IKNetSerDes<VR> vrSerializer = _factory.BuildValueSerDes<VR>();
+            _k1Serializer ??= _factory.BuildKeySerDes<K1>();
+            _v1Serializer ??= _factory.BuildValueSerDes<V1>();
+            _v2Serializer ??= _factory.BuildValueSerDes<V2>();
+            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(k1Serializer.Deserialize(null, arg0), v1Serializer.Deserialize(null, arg1), v2Serializer.Deserialize(null, arg2));
-            return vrSerializer.Serialize(null, res);
+            var res = methodToExecute(_k1Serializer.Deserialize(null, arg0), _v1Serializer.Deserialize(null, arg1), _v2Serializer.Deserialize(null, arg2));
+            return _vrSerializer.Serialize(null, res);
         }
 
         /// <summary>

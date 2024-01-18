@@ -29,6 +29,8 @@ namespace MASES.KNet.Streams.Processor
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetTimestampExtractor<TKey, TValue> : Org.Apache.Kafka.Streams.Processor.TimestampExtractor, IGenericSerDesFactoryApplier
     {
+        IKNetSerDes<TKey> _keySerializer = null;
+        IKNetSerDes<TValue> _valueSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
@@ -40,11 +42,11 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public sealed override long Extract(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object> arg0, long arg1)
         {
-            IKNetSerDes<TKey> keySerializer = _factory.BuildKeySerDes<TKey>();
-            IKNetSerDes<TValue> valueSerializer = _factory.BuildValueSerDes<TValue>();
+            _keySerializer ??= _factory.BuildKeySerDes<TKey>();
+            _valueSerializer ??= _factory.BuildValueSerDes<TValue>();
             var record = arg0.Cast<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>>(); // KNet consider the data within Apache Kafka Streams defined always as byte[]
             var methodToExecute = (OnExtract != null) ? OnExtract : Extract;
-            return methodToExecute(new KNetConsumerRecord<TKey, TValue>(record, keySerializer, valueSerializer), arg1);
+            return methodToExecute(new KNetConsumerRecord<TKey, TValue>(record, _keySerializer, _valueSerializer), arg1);
         }
         /// <summary>
         /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor.Extract(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{object, object}, long)"/>

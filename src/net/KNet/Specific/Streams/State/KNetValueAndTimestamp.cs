@@ -28,14 +28,13 @@ namespace MASES.KNet.Streams.State
     public class KNetValueAndTimestamp<TValue> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]> _valueAndTimestamp;
-        readonly IKNetSerDes<TValue> _valueSerDes;
+        IKNetSerDes<TValue> _valueSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         internal KNetValueAndTimestamp(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]> valueAndTimestamp)
         {
             _factory = factory;
-            _valueSerDes = _factory.BuildKeySerDes<TValue>();
             _valueAndTimestamp = valueAndTimestamp;
         }
 
@@ -57,6 +56,7 @@ namespace MASES.KNet.Streams.State
         {
             get
             {
+                _valueSerDes ??= _factory.BuildKeySerDes<TValue>();
                 var vv = _valueAndTimestamp.Value();
                 return _valueSerDes.Deserialize(null, vv);
             }
