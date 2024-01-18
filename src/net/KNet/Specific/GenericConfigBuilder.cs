@@ -23,6 +23,8 @@ using MASES.KNet.Serialization;
 using System.Linq;
 using System.Collections.Concurrent;
 using static Javax.Lang.Model.Util.Elements;
+using MASES.JCOBridge.C2JBridge;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
 
 namespace MASES.KNet
 {
@@ -84,7 +86,12 @@ namespace MASES.KNet
         {
             if (_options.TryGetValue(propertyName, out var result))
             {
-                return (TData)result;
+                //if (typeof(IJVMBridgeBase).IsAssignableFrom(typeof(TData)))
+                //{
+                //    return JVMBridgeBase.Wraps<TData>(result as IJavaObject);
+                //}
+
+                return result.Convert<TData>();
             }
             return default;
         }

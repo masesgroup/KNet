@@ -26,6 +26,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VA">The key type</typeparam>
     public class KNetInitializer<VA> : Org.Apache.Kafka.Streams.Kstream.Initializer<byte[]>, IGenericSerDesFactoryApplier
     {
+        IKNetSerDes<VA> _valueSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
@@ -37,11 +38,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override byte[] Apply()
         {
-            IKNetSerDes<VA> valueSerializer = _factory.BuildValueSerDes<VA>();
+            _valueSerializer ??= _factory.BuildValueSerDes<VA>();
 
             var methodToExecute = (OnApply2 != null) ? OnApply2 : Apply2;
             var res = methodToExecute();
-            return valueSerializer.Serialize(null, res);
+            return _valueSerializer.Serialize(null, res);
         }
 
         /// <summary>

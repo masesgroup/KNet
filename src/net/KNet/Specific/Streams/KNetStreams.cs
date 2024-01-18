@@ -93,7 +93,7 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// If set, this <see cref="Func{T, TResult}"/> will be called from <see cref="PrepareProperties(StreamsConfigBuilder)"/>
         /// </summary>
-        public static Func<Java.Util.Properties, StreamsConfigBuilder> OverrideProperties { get; set; }
+        public static Func<StreamsConfigBuilder, Java.Util.Properties> OverrideProperties { get; set; }
         /// <summary>
         /// Override this method to check and modify the <see cref="Java.Util.Properties"/> returned to underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/>
         /// </summary>

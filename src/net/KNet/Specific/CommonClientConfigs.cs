@@ -19,6 +19,7 @@
 using Org.Apache.Kafka.Common.Metrics;
 using Java.Util;
 using Org.Apache.Kafka.Clients;
+using Java.Lang;
 
 namespace MASES.KNet
 {
@@ -202,24 +203,7 @@ namespace MASES.KNet
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG"/>
         /// </summary>
-        public Sensor.RecordingLevel MetricRecordingLevel
-        {
-            get
-            {
-                var strName = GetProperty<string>(CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG);
-                if (System.Enum.GetName(typeof(Sensor.RecordingLevel), Sensor.RecordingLevel.DEBUG) == strName)
-                    return Sensor.RecordingLevel.DEBUG;
-                else if (System.Enum.GetName(typeof(Sensor.RecordingLevel), Sensor.RecordingLevel.INFO) == strName)
-                    return Sensor.RecordingLevel.INFO;
-                else if (System.Enum.GetName(typeof(Sensor.RecordingLevel), Sensor.RecordingLevel.TRACE) == strName)
-                    return Sensor.RecordingLevel.TRACE;
-                else return Sensor.RecordingLevel.INFO;
-            }
-            set
-            {
-                SetProperty(CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG, System.Enum.GetName(typeof(Sensor.RecordingLevel), value));
-            }
-        }
+        public Sensor.RecordingLevel MetricRecordingLevel { get { return GetProperty<Sensor.RecordingLevel>(CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG); } set { SetProperty(CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG"/>
         /// </summary>
@@ -233,14 +217,12 @@ namespace MASES.KNet
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.METRIC_REPORTER_CLASSES_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
-        public List MetricReporterClasses { get { return GetProperty<List>(CommonClientConfigs.METRIC_REPORTER_CLASSES_CONFIG); } set { SetProperty(CommonClientConfigs.METRIC_REPORTER_CLASSES_CONFIG, value); } }
+        public List<Class> MetricReporterClasses { get { return GetProperty<List<Class>>(CommonClientConfigs.METRIC_REPORTER_CLASSES_CONFIG); } set { SetProperty(CommonClientConfigs.METRIC_REPORTER_CLASSES_CONFIG, value); } }
 
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.METRIC_REPORTER_CLASSES_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
-        public T WithMetricReporterClasses(List metricReporterClasses)
+        public T WithMetricReporterClasses(List<Class> metricReporterClasses)
         {
             var clone = Clone();
             clone.MetricReporterClasses = metricReporterClasses;
@@ -314,12 +296,10 @@ namespace MASES.KNet
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_INNER_CLASS"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultListKeySerdeInnerClass { get { return GetProperty<Java.Lang.Class>(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_INNER_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_INNER_CLASS, value); } }
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_INNER_CLASS"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public T WithDefaultListKeySerdeInnerClass(Java.Lang.Class defaultListKeySerdeInnerClass)
         {
             var clone = Clone();
@@ -329,12 +309,10 @@ namespace MASES.KNet
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_INNER_CLASS"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultListValueSerdeInnerClass { get { return GetProperty<Java.Lang.Class>(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_INNER_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_INNER_CLASS, value); } }
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_INNER_CLASS"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public T WithDefaultListValueSerdeInnerClass(Java.Lang.Class defaultListValueSerdeInnerClass)
         {
             var clone = Clone();
@@ -344,12 +322,10 @@ namespace MASES.KNet
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_TYPE_CLASS"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultListKeySerdeTypeClass { get { return GetProperty<Java.Lang.Class>(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_TYPE_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_TYPE_CLASS, value); } }
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_TYPE_CLASS"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public T WithDefaultListKeySerdeTypeClass(Java.Lang.Class defaultListKeySerdeTypeClass)
         {
             var clone = Clone();
@@ -359,12 +335,10 @@ namespace MASES.KNet
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultListValueSerdeTypeClass { get { return GetProperty<Java.Lang.Class>(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS, value); } }
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public T WithDefaultListValueSerdeTypeClass(Java.Lang.Class defaultListValueSerdeTypeClass)
         {
             var clone = Clone();

@@ -28,6 +28,9 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VA">The key type</typeparam>
     public class KNetAggregator<K, V, VA> : Org.Apache.Kafka.Streams.Kstream.Aggregator<byte[], byte[], byte[]>, IGenericSerDesFactoryApplier
     {
+        IKNetSerDes<K> _kSerializer = null;
+        IKNetSerDes<V> _vSerializer = null;
+        IKNetSerDes<VA> _vaSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
@@ -39,14 +42,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override byte[] Apply(byte[] arg0, byte[] arg1, byte[] arg2)
         {
-            IKNetSerDes<K> kSerializer = _factory.BuildKeySerDes<K>();
-            IKNetSerDes<V> vSerializer = _factory.BuildValueSerDes<V>();
-            IKNetSerDes<VA> vaSerializer = _factory.BuildValueSerDes<VA>();
+            _kSerializer = _factory.BuildKeySerDes<K>();
+            _vSerializer = _factory.BuildValueSerDes<V>();
+            _vaSerializer = _factory.BuildValueSerDes<VA>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(kSerializer.Deserialize(null, arg0), vSerializer.Deserialize(null, arg1), vaSerializer.Deserialize(null, arg2));
+            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1), _vaSerializer.Deserialize(null, arg2));
 
-            return vaSerializer.Serialize(null, res);
+            return _vaSerializer.Serialize(null, res);
         }
 
         /// <summary>

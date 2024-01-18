@@ -27,14 +27,13 @@ namespace MASES.KNet.Streams.Kstream
     public class KNetWindowed<TKey> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]> _inner;
-        readonly IKNetSerDes<TKey> _keySerDes;
+        IKNetSerDes<TKey> _keySerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         internal KNetWindowed(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]> windowed)
         {
             _factory = factory;
-            _keySerDes = _factory.BuildKeySerDes<TKey>();
             _inner = windowed;
         }
 
@@ -47,7 +46,7 @@ namespace MASES.KNet.Streams.Kstream
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windowed.html#key--"/>
         /// </summary>
         /// <returns><typeparamref name="TKey"/></returns>
-        public TKey Key => _keySerDes.Deserialize(null, _inner.Key());
+        public TKey Key { get { _keySerDes ??= _factory.BuildKeySerDes<TKey>(); return _keySerDes.Deserialize(null, _inner.Key()); } }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windowed.html#window--"/>
         /// </summary>

@@ -71,8 +71,8 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="K"/></param>
-        /// <param name="arg1"><typeparamref name="K"/></param>
+        /// <param name="arg0"><typeparamref name="TKey"/></param>
+        /// <param name="arg1"><typeparamref name="TKey"/></param>
         /// <returns><see cref="KNetKeyValueIterator{TKey, TValue}"/></returns>
         public KNetTimestampedKeyValueIterator<TKey, TValue> ReverseRange(TKey arg0, TKey arg1)
         {

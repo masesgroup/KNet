@@ -77,8 +77,6 @@ namespace MASES.KNet.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#streamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
         /// <param name="arg0"><see cref="KNetStreamPartitioner{TKey, TValue}"/></param>
-        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="KNetProduced{K, V}"/></returns>
         public static KNetProduced<K, V> StreamPartitioner(KNetStreamPartitioner<K, V> arg0)
         {

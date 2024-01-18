@@ -75,7 +75,7 @@ namespace MASES.KNet.Streams.Processor.Api
         }
 
         /// <summary>
-        /// KNet implementation of <see cref="Processor{KIn, VIn, KOut, VOut}.Init(ProcessorContext{KOut, VOut})"/>
+        /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.Api.Processor{KIn, VIn, KOut, VOut}.Init(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{KOut, VOut})"/>
         /// </summary>
         /// <param name="arg0"><see cref="KNetProcessorContext{KOut, VOut}"/></param>
         public virtual void Init(KNetProcessorContext<KOut, VOut> arg0)

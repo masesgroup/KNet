@@ -67,7 +67,7 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// Manages <see cref="StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG"/>
         /// </summary>
-        public long AcceptableRecoveryLag { get { return GetProperty<int>(StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG); } set { SetProperty(StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG, value); } }
+        public long AcceptableRecoveryLag { get { return GetProperty<long>(StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG); } set { SetProperty(StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG"/>
         /// </summary>
@@ -93,12 +93,10 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultDeserializationExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(Java.Lang.Class defaultDeserializationExceptionHandlerClass)
         {
             var clone = Clone();
@@ -108,12 +106,10 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultKeySerdeClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithDefaultKeySerdeClass(Java.Lang.Class defaultKeySerdeClass)
         {
             var clone = Clone();
@@ -123,12 +119,10 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultProductionExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(Java.Lang.Class defaultProductionExceptionHandlerClass)
         {
             var clone = Clone();
@@ -138,12 +132,10 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultTimestampExtractorClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithDefaultTimestampExtractorClass(Java.Lang.Class defaultTimestampExtractorClass)
         {
             var clone = Clone();
@@ -153,12 +145,10 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultValueSerdeClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithDefaultValueSerdeClass(Java.Lang.Class defaultValueSerdeClass)
         {
             var clone = Clone();
@@ -415,12 +405,10 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// Manages <see cref="StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public Java.Lang.Class RocksDbConfigSetterClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithRocksDbConfigSetterClass(Java.Lang.Class rocksDbConfigSetterClass)
         {
             var clone = Clone();

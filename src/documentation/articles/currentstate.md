@@ -15,5 +15,6 @@ This release comes with some ready made classes:
 * [X] .NET Apache Kafka Connect SDK (a basic version)
 * [X] KNet Connect: added autonomous executable to start connectors based on KNet Connect SDK
 * [X] KNet PowerShell: added some cmdlets
+* [X] KNet Streams SDK: added many classes
 
 If something is not available use [API extensibility](API_extensibility.md) to cover missing features.

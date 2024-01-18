@@ -29,15 +29,17 @@ namespace MASES.KNet.Streams
     public class KNetWindowedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> _value;
-        readonly IKNetSerDes<TValue> _valueSerDes;
+        IKNetSerDes<TValue> _valueSerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetWindowedKeyValue(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> value)
+        internal KNetWindowedKeyValue(IGenericSerDesFactory factory,
+                                      Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> value,
+                                      IKNetSerDes<TValue> valueSerDes)
         {
             _factory = factory;
-            _valueSerDes = _factory.BuildValueSerDes<TValue>();
             _value = value;
+            _valueSerDes = valueSerDes;
         }
 
         /// <summary>
@@ -58,6 +60,7 @@ namespace MASES.KNet.Streams
         {
             get
             {
+                _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
                 var kk = _value.value;
                 return _valueSerDes.Deserialize(null, kk);
             }

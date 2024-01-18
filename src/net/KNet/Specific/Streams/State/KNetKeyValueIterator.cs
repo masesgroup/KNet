@@ -34,22 +34,37 @@ namespace MASES.KNet.Streams.State
     {
         class LocalEnumerator : JVMBridgeBaseEnumerator<KNetKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier
         {
+            IKNetSerDes<TKey> _keySerDes = null;
+            IKNetSerDes<TValue> _valueSerDes = null;
             readonly bool _isVersion2;
             IGenericSerDesFactory _factory;
             IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-            public LocalEnumerator(bool isVersion2, IGenericSerDesFactory factory, IJavaObject obj) : base(obj)
+            public LocalEnumerator(bool isVersion2,
+                                   IGenericSerDesFactory factory,
+                                   IJavaObject obj,
+                                   IKNetSerDes<TKey> keySerDes,
+                                   IKNetSerDes<TValue> valueSerDes)
+                : base(obj)
             {
                 _isVersion2 = isVersion2;
                 _factory = factory;
+                _keySerDes = keySerDes;
+                _valueSerDes = valueSerDes;
             }
 
             protected override object ConvertObject(object input)
             {
                 if (input is IJavaObject obj)
                 {
-                    return _isVersion2 ? new KNetKeyValue<TKey, TValue>(_factory, JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]>>(obj))
-                                       : new KNetKeyValue<TKey, TValue>(_factory, JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>(obj));
+                    return _isVersion2 ? new KNetKeyValue<TKey, TValue>(_factory,
+                                                                        JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]>>(obj),
+                                                                        _keySerDes,
+                                                                        _valueSerDes)
+                                       : new KNetKeyValue<TKey, TValue>(_factory,
+                                                                        JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>(obj),
+                                                                        _keySerDes,
+                                                                        _valueSerDes);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -57,21 +72,20 @@ namespace MASES.KNet.Streams.State
 
         readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<byte[], byte[]> _iterator;
         readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, byte[]> _iterator2;
-        readonly IKNetSerDes<TKey> _keySerDes;
+        IKNetSerDes<TKey> _keySerDes = null;
+        IKNetSerDes<TValue> _valueSerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         internal KNetKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<byte[], byte[]> iterator)
         {
             _factory = factory;
-            _keySerDes = _factory.BuildKeySerDes<TKey>();
             _iterator = iterator;
         }
 
         internal KNetKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, byte[]> iterator)
         {
             _factory = factory;
-            _keySerDes = _factory.BuildKeySerDes<TKey>();
             _iterator2 = iterator;
         }
         /// <summary>
@@ -83,7 +97,13 @@ namespace MASES.KNet.Streams.State
         /// </summary>
         public KNetKeyValue<TKey, TValue> Next
         {
-            get { return _iterator != null ? new KNetKeyValue<TKey, TValue>(_factory, _iterator.Next) : new KNetKeyValue<TKey, TValue>(_factory, _iterator2.Next); }
+            get
+            {
+                _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+                _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+                return _iterator != null ? new KNetKeyValue<TKey, TValue>(_factory, _iterator.Next, _keySerDes, _valueSerDes)
+                                         : new KNetKeyValue<TKey, TValue>(_factory, _iterator2.Next, _keySerDes, _valueSerDes);
+            }
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
@@ -95,7 +115,13 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// Converts an <see cref="Iterator{E}"/> to a <see cref="IEnumerator{E}"/>
         /// </summary>
-        public IEnumerator<KNetKeyValue<TKey, TValue>> ToIEnumerator() => _iterator != null ? new LocalEnumerator(false, _factory, _iterator.BridgeInstance) : new LocalEnumerator(true, _factory, _iterator2.BridgeInstance);
+        public IEnumerator<KNetKeyValue<TKey, TValue>> ToIEnumerator()
+        {
+            _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+            _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+            return _iterator != null ? new LocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes)
+                                     : new LocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes, _valueSerDes);
+        }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey--"/>
         /// </summary>
@@ -105,7 +131,7 @@ namespace MASES.KNet.Streams.State
             get
             {
                 if (_iterator2 != null) return (TKey)(object)_iterator2.PeekNextKey();
-
+                _keySerDes ??= _factory.BuildKeySerDes<TKey>();
                 var kk = _iterator.PeekNextKey();
                 return _keySerDes.Deserialize(null, kk);
             }

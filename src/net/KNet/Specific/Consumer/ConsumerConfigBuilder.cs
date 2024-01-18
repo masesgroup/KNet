@@ -19,6 +19,7 @@
 using Org.Apache.Kafka.Common;
 using Java.Util;
 using Org.Apache.Kafka.Clients.Consumer;
+using Java.Lang;
 
 namespace MASES.KNet.Consumer
 {
@@ -106,6 +107,9 @@ namespace MASES.KNet.Consumer
             get
             {
                 var strName = GetProperty<string>(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG);
+
+                if (string.IsNullOrWhiteSpace(strName)) return AutoOffsetResetTypes.LATEST;
+
                 if (System.Enum.GetName(typeof(AutoOffsetResetTypes), AutoOffsetResetTypes.None).ToLowerInvariant() == strName)
                     return AutoOffsetResetTypes.None;
                 else if (System.Enum.GetName(typeof(AutoOffsetResetTypes), AutoOffsetResetTypes.EARLIEST).ToLowerInvariant() == strName)
@@ -222,13 +226,11 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// Manages <see cref="ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
-        public List InterceptorClasses { get { return GetProperty<List>(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG); } set { SetProperty(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG, value); } }
+        public List<Class> InterceptorClasses { get { return GetProperty<List<Class>>(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG); } set { SetProperty(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG"/>
         /// </summary>
-        [System.Obsolete("To be checked")]
-        public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)
+        public ConsumerConfigBuilder WithInterceptorClasses(List<Class> interceptorClasses)
         {
             var clone = Clone();
             clone.InterceptorClasses = interceptorClasses;
@@ -251,22 +253,7 @@ namespace MASES.KNet.Consumer
         /// Manages <see cref="ConsumerConfig.ISOLATION_LEVEL_CONFIG"/>
         /// </summary>
         // IsolationLevel.READ_COMMITTED.toString().toLowerCase(Locale.ROOT), IsolationLevel.READ_UNCOMMITTED.toString().toLowerCase(Locale.ROOT)
-        public IsolationLevel IsolationLevel
-        {
-            get
-            {
-                var strName = GetProperty<string>(ConsumerConfig.ISOLATION_LEVEL_CONFIG);
-                if (System.Enum.GetName(typeof(IsolationLevel), IsolationLevel.READ_COMMITTED).ToLowerInvariant() == strName)
-                    return IsolationLevel.READ_COMMITTED;
-                else if (System.Enum.GetName(typeof(IsolationLevel), IsolationLevel.READ_UNCOMMITTED).ToLowerInvariant() == strName)
-                    return IsolationLevel.READ_UNCOMMITTED;
-                else return IsolationLevel.READ_UNCOMMITTED;
-            }
-            set
-            {
-                SetProperty(ConsumerConfig.ISOLATION_LEVEL_CONFIG, System.Enum.GetName(typeof(IsolationLevel), value).ToLowerInvariant());
-            }
-        }
+        public IsolationLevel IsolationLevel { get { return GetProperty<IsolationLevel>(ConsumerConfig.ISOLATION_LEVEL_CONFIG); } set { SetProperty(ConsumerConfig.ISOLATION_LEVEL_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.ISOLATION_LEVEL_CONFIG"/>
         /// </summary>

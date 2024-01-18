@@ -28,47 +28,57 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
-        readonly byte[] _key = null;
-        readonly long? _keyLong = null;
-        readonly byte[] _value = null;
-        readonly IKNetSerDes<TKey> _keySerDes;
-        readonly IKNetSerDes<TValue> _valueSerDes;
+        readonly Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> _value1 = null;
+        readonly Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]> _value2 = null;
+        IKNetSerDes<TKey> _keySerDes = null;
+        IKNetSerDes<TValue> _valueSerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetKeyValue(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> value)
+        internal KNetKeyValue(IGenericSerDesFactory factory,
+                              Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> value,
+                              IKNetSerDes<TKey> keySerDes,
+                              IKNetSerDes<TValue> valueSerDes)
         {
-#pragma warning disable CA1816
-            GC.SuppressFinalize(value);
-#pragma warning restore CA1816
             _factory = factory;
-            _keySerDes = _factory.BuildKeySerDes<TKey>();
-            _valueSerDes = _factory.BuildValueSerDes<TValue>();
-            _key = value.key;
-            _value = value.value;
-            GC.ReRegisterForFinalize(value);
+            _value1 = value;
+            _keySerDes = keySerDes;
+            _valueSerDes = valueSerDes;
         }
 
-        internal KNetKeyValue(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]> value)
+        internal KNetKeyValue(IGenericSerDesFactory factory,
+                              Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]> value,
+                              IKNetSerDes<TKey> keySerDes, 
+                              IKNetSerDes<TValue> valueSerDes)
         {
-#pragma warning disable CA1816
-            GC.SuppressFinalize(value);
-#pragma warning restore CA1816
             _factory = factory;
-            _keySerDes = _factory.BuildKeySerDes<TKey>();
-            _valueSerDes = _factory.BuildValueSerDes<TValue>();
-            _keyLong = value.key?.LongValue();
-            _value = value.value;
-            GC.ReRegisterForFinalize(value);
+            _value2 = value;
+            _keySerDes = keySerDes;
+            _valueSerDes = valueSerDes;
         }
 
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
-        public TKey Key => _key != null ? _keySerDes.Deserialize(null, _key) : (TKey)(object)_keyLong;
+        public TKey Key
+        {
+            get
+            {
+                if (_value2 != null && _value2.key != null) { var ll = _value2.key; return (TKey)(object)ll.LongValue(); }
+                _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+                return _keySerDes.Deserialize(null, _value1.key);
+            }
+        }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
-        public TValue Value =>  _valueSerDes.Deserialize(null, _value);
+        public TValue Value
+        {
+            get
+            {
+                _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+                return _valueSerDes.Deserialize(null, _value1 != null ? _value1.value : _value2.value);
+            }
+        }
     }
 }

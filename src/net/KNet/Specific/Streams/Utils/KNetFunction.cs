@@ -26,8 +26,10 @@ namespace MASES.KNet.Streams.Utils
     /// </summary>
     /// <typeparam name="V">The key type</typeparam>
     /// <typeparam name="KO">The value type</typeparam>
-    public class KNetFunction<V, KO>: Java.Util.Function.Function<byte[], byte[]>, IGenericSerDesFactoryApplier
+    public class KNetFunction<V, KO> : Java.Util.Function.Function<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
+        IKNetSerDes<KO> _keySerializer = null;
+        IKNetSerDes<V> _valueSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
@@ -39,12 +41,12 @@ namespace MASES.KNet.Streams.Utils
         /// <inheritdoc/>
         public override byte[] Apply(byte[] arg0)
         {
-            IKNetSerDes<KO> keySerializer = _factory.BuildKeySerDes<KO>();
-            IKNetSerDes<V> valueSerializer = _factory.BuildValueSerDes<V>();
+            _keySerializer ??= _factory.BuildKeySerDes<KO>();
+            _valueSerializer ??= _factory.BuildValueSerDes<V>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(valueSerializer.Deserialize(null, arg0));
+            var res = methodToExecute(_valueSerializer.Deserialize(null, arg0));
 
-            return keySerializer.Serialize(null, res);
+            return _keySerializer.Serialize(null, res);
         }
 
         /// <summary>

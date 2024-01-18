@@ -61,7 +61,7 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="K"/></param>
+        /// <param name="arg0"><typeparamref name="TKey"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="KNetWindowStoreIterator{TValue}"/></returns>
@@ -124,7 +124,7 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="K"/></param>
+        /// <param name="arg0"><typeparamref name="TKey"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="KNetWindowStoreIterator{TValue}"/></returns>

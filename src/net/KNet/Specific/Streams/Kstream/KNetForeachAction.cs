@@ -27,6 +27,8 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V">first value type</typeparam>
     public class KNetForeachAction<K, V> : Org.Apache.Kafka.Streams.Kstream.ForeachAction<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
+        IKNetSerDes<K> _kSerializer = null;
+        IKNetSerDes<V> _vSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
@@ -39,11 +41,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override void Apply(byte[] arg0, byte[] arg1)
         {
-            IKNetSerDes<K> kSerializer = _factory.BuildKeySerDes<K>();
-            IKNetSerDes<V> vSerializer = _factory.BuildValueSerDes<V>();
+            _kSerializer ??= _factory.BuildKeySerDes<K>();
+            _vSerializer ??= _factory.BuildValueSerDes<V>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            methodToExecute(kSerializer.Deserialize(null, arg0), vSerializer.Deserialize(null, arg1));
+            methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
         }
 
         /// <summary>

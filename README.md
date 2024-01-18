@@ -65,6 +65,7 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 * [Current state](src/documentation/articles/currentstate.md)
 * [Performance](src/documentation/articles/performance.md)
 * [Connect SDK](src/documentation/articles/connectSDK.md)
+* [Streams SDK](src/documentation/articles/streamsSDK.md)
 * [KNet usage](src/documentation/articles/usage.md)
 * [KNet APIs extensibility](src/documentation/articles/API_extensibility.md)
 * [KNet Serializer/Deserializer](src/documentation/articles/usageSerDes.md)

@@ -27,6 +27,8 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetPredicate<TKey, TValue> : Org.Apache.Kafka.Streams.Kstream.Predicate<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
+        IKNetSerDes<TKey> _keySerializer = null;
+        IKNetSerDes<TValue> _valueSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
@@ -38,11 +40,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override bool Test(byte[] arg0, byte[] arg1)
         {
-            IKNetSerDes<TKey> keySerializer = _factory.BuildKeySerDes<TKey>();
-            IKNetSerDes<TValue> valueSerializer = _factory.BuildValueSerDes<TValue>();
+            _keySerializer ??= _factory.BuildKeySerDes<TKey>();
+            _valueSerializer ??= _factory.BuildValueSerDes<TValue>();
 
             var methodToExecute = (OnTest != null) ? OnTest : Test;
-            return methodToExecute(keySerializer.Deserialize(null, arg0), valueSerializer.Deserialize(null, arg1));
+            return methodToExecute(_keySerializer.Deserialize(null, arg0), _valueSerializer.Deserialize(null, arg1));
         }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-"/>
