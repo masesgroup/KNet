@@ -1,0 +1,825 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class KNetTopologyConfig
+ | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KNetTopologyConfig
+ | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="KNet implementation of">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_KNetTopologyConfig.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.KNetTopologyConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.Streams.KNetTopologyConfig">
+
+
+
+  <h1 id="MASES_KNet_Streams_KNetTopologyConfig" data-uid="MASES.KNet.Streams.KNetTopologyConfig" class="text-break">
+    Class KNetTopologyConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Streams.html">Streams</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.TopologyConfig.html">TopologyConfig</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KNetTopologyConfig : IGenericSerDesFactoryApplier</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">KNetTopologyConfig</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig__ctor_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig__ctor_MASES_KNet_Streams_StreamsConfigBuilder_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.#ctor(MASES.KNet.Streams.StreamsConfigBuilder)">
+  KNetTopologyConfig(StreamsConfigBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(org.apache.kafka.streams.StreamsConfig)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(org.apache.kafka.streams.StreamsConfig)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetTopologyConfig(StreamsConfigBuilder arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig__ctor_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.#ctor*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig__ctor_System_String_MASES_KNet_Streams_StreamsConfigBuilder_Java_Util_Properties_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.#ctor(System.String,MASES.KNet.Streams.StreamsConfigBuilder,Java.Util.Properties)">
+  KNetTopologyConfig(string, StreamsConfigBuilder, Properties)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(java.lang.String,org.apache.kafka.streams.StreamsConfig,java.util.Properties)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(java.lang.String,org.apache.kafka.streams.StreamsConfig,java.util.Properties)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetTopologyConfig(string arg0, StreamsConfigBuilder arg1, Properties arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">Properties</span></dt>
+    <dd><p><span class="xref">Java.Util.Properties</span></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_ApplicationConfigs_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.ApplicationConfigs*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_ApplicationConfigs" data-uid="MASES.KNet.Streams.KNetTopologyConfig.ApplicationConfigs">
+  ApplicationConfigs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#applicationConfigs">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#applicationConfigs</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamsConfig ApplicationConfigs { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html">StreamsConfig</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_CacheSize_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.CacheSize*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_CacheSize" data-uid="MASES.KNet.Streams.KNetTopologyConfig.CacheSize">
+  CacheSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#cacheSize">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#cacheSize</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long CacheSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_DeserializationExceptionHandlerSupplier_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.DeserializationExceptionHandlerSupplier*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_DeserializationExceptionHandlerSupplier" data-uid="MASES.KNet.Streams.KNetTopologyConfig.DeserializationExceptionHandlerSupplier">
+  DeserializationExceptionHandlerSupplier
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#deserializationExceptionHandlerSupplier">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#deserializationExceptionHandlerSupplier</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Supplier DeserializationExceptionHandlerSupplier { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Supplier</span></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_EosEnabled_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.EosEnabled*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_EosEnabled" data-uid="MASES.KNet.Streams.KNetTopologyConfig.EosEnabled">
+  EosEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#eosEnabled">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#eosEnabled</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EosEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_IsNamedTopology_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.IsNamedTopology*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_IsNamedTopology" data-uid="MASES.KNet.Streams.KNetTopologyConfig.IsNamedTopology">
+  IsNamedTopology
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#isNamedTopology--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#isNamedTopology--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNamedTopology { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_MaxBufferedSize_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.MaxBufferedSize*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_MaxBufferedSize" data-uid="MASES.KNet.Streams.KNetTopologyConfig.MaxBufferedSize">
+  MaxBufferedSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#maxBufferedSize">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#maxBufferedSize</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxBufferedSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_MaxTaskIdleMs_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.MaxTaskIdleMs*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_MaxTaskIdleMs" data-uid="MASES.KNet.Streams.KNetTopologyConfig.MaxTaskIdleMs">
+  MaxTaskIdleMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#maxTaskIdleMs">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#maxTaskIdleMs</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long MaxTaskIdleMs { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_OverrideProperties_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.OverrideProperties*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_OverrideProperties" data-uid="MASES.KNet.Streams.KNetTopologyConfig.OverrideProperties">
+  OverrideProperties
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If set, this <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func&lt;T, TResult&gt;</a> will be called from <a class="xref" href="MASES.KNet.Streams.KNetTopologyConfig.html#MASES_KNet_Streams_KNetTopologyConfig_PrepareProperties_MASES_KNet_Streams_StreamsConfigBuilder_">PrepareProperties(StreamsConfigBuilder)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;StreamsConfigBuilder, Properties&gt; OverrideProperties { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a>, <span class="xref">Properties</span>&gt;</dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_ParseStoreType_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.ParseStoreType*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_ParseStoreType" data-uid="MASES.KNet.Streams.KNetTopologyConfig.ParseStoreType">
+  ParseStoreType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#parseStoreType--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#parseStoreType--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Materialized.StoreType ParseStoreType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized.html">Materialized</a>.<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType.html">StoreType</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_StoreType_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.StoreType*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_StoreType" data-uid="MASES.KNet.Streams.KNetTopologyConfig.StoreType">
+  StoreType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#storeType">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#storeType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string StoreType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_TaskConfig_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.TaskConfig*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_TaskConfig" data-uid="MASES.KNet.Streams.KNetTopologyConfig.TaskConfig">
+  TaskConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#getTaskConfig--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#getTaskConfig--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopologyConfig.TaskConfig TaskConfig { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.TopologyConfig.html">TopologyConfig</a>.<a class="xref" href="Org.Apache.Kafka.Streams.TopologyConfig.TaskConfig.html">TaskConfig</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_TaskTimeoutMs_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.TaskTimeoutMs*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_TaskTimeoutMs" data-uid="MASES.KNet.Streams.KNetTopologyConfig.TaskTimeoutMs">
+  TaskTimeoutMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#taskTimeoutMs">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#taskTimeoutMs</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long TaskTimeoutMs { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_TimestampExtractorSupplier_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.TimestampExtractorSupplier*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_TimestampExtractorSupplier" data-uid="MASES.KNet.Streams.KNetTopologyConfig.TimestampExtractorSupplier">
+  TimestampExtractorSupplier
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#timestampExtractorSupplier">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#timestampExtractorSupplier</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Supplier TimestampExtractorSupplier { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Supplier</span></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_TopologyName_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.TopologyName*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_TopologyName" data-uid="MASES.KNet.Streams.KNetTopologyConfig.TopologyName">
+  TopologyName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#topologyName">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#topologyName</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TopologyName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_TopologyOverrides_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.TopologyOverrides*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_TopologyOverrides" data-uid="MASES.KNet.Streams.KNetTopologyConfig.TopologyOverrides">
+  TopologyOverrides
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#topologyOverrides">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#topologyOverrides</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Properties TopologyOverrides { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Properties</span></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_PrepareProperties_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.PrepareProperties*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_PrepareProperties_MASES_KNet_Streams_StreamsConfigBuilder_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.PrepareProperties(MASES.KNet.Streams.StreamsConfigBuilder)">
+  PrepareProperties(StreamsConfigBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override this method to check and modify the <span class="xref">Java.Util.Properties</span> returned to underlying <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Properties PrepareProperties(StreamsConfigBuilder builder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a> to use to return <span class="xref">Java.Util.Properties</span></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Properties</span></dt>
+    <dd><p><span class="xref">Java.Util.Properties</span> used from underlying <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="MASES_KNet_Streams_KNetTopologyConfig_op_Implicit_" data-uid="MASES.KNet.Streams.KNetTopologyConfig.op_Implicit*"></a>
+
+  <h3 id="MASES_KNet_Streams_KNetTopologyConfig_op_Implicit_MASES_KNet_Streams_KNetTopologyConfig__Org_Apache_Kafka_Streams_TopologyConfig" data-uid="MASES.KNet.Streams.KNetTopologyConfig.op_Implicit(MASES.KNet.Streams.KNetTopologyConfig)~Org.Apache.Kafka.Streams.TopologyConfig">
+  implicit operator TopologyConfig(KNetTopologyConfig)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.KNetTopologyConfig.html">KNetTopologyConfig</a> to <a class="xref" href="Org.Apache.Kafka.Streams.TopologyConfig.html">TopologyConfig</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator TopologyConfig(KNetTopologyConfig t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="MASES.KNet.Streams.KNetTopologyConfig.html">KNetTopologyConfig</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.TopologyConfig.html">TopologyConfig</a></dt>
+    <dd>KNet implementation of</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetTopologyConfig.cs/#L27" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

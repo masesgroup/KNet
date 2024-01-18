@@ -8,6 +8,7 @@
       <meta name="title" content="Class TopicConfigBuilder
  | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="Builder for">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -100,7 +101,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TopicConfigBuilder : GenericConfigBuilder&lt;TopicConfigBuilder&gt;, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public class TopicConfigBuilder : GenericConfigBuilder&lt;TopicConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory</code></pre>
   </div>
 
 
@@ -119,6 +120,7 @@
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
     </dd>
   </dl>
 
@@ -152,6 +154,18 @@
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.ToMap()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetKeySerDes">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.KNetKeySerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetValueSerDes">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.KNetValueSerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__1">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.BuildKeySerDes&lt;TKey&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__1">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.BuildValueSerDes&lt;TValue&gt;()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -207,7 +221,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.CleanupPolicyTypes.html">CleanupPolicyTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -221,7 +235,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_CompressionType" data-uid="MASES.KNet.Common.TopicConfigBuilder.CompressionType">
   CompressionType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L387"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_COMPRESSION_TYPE_CONFIG">COMPRESSION_TYPE_CONFIG</a></p>
@@ -239,7 +253,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.CompressionTypes.html">CompressionTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -271,7 +285,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -303,7 +317,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -335,7 +349,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -367,7 +381,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -399,7 +413,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -431,7 +445,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -463,7 +477,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -495,7 +509,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -527,7 +541,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -541,7 +555,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_MessageDownConversionEnable" data-uid="MASES.KNet.Common.TopicConfigBuilder.MessageDownConversionEnable">
   MessageDownConversionEnable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L480"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L482"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_MESSAGE_DOWNCONVERSION_ENABLE_CONFIG">MESSAGE_DOWNCONVERSION_ENABLE_CONFIG</a></p>
@@ -559,7 +573,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -573,7 +587,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_MessageTimestampAfterMaxMs" data-uid="MASES.KNet.Common.TopicConfigBuilder.MessageTimestampAfterMaxMs">
   MessageTimestampAfterMaxMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L454"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L456"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG">MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG</a></p>
@@ -591,7 +605,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -605,7 +619,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_MessageTimestampBeforeMaxMs" data-uid="MASES.KNet.Common.TopicConfigBuilder.MessageTimestampBeforeMaxMs">
   MessageTimestampBeforeMaxMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L467"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L469"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG">MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG</a></p>
@@ -623,7 +637,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -637,7 +651,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_MessageTimestampType" data-uid="MASES.KNet.Common.TopicConfigBuilder.MessageTimestampType">
   MessageTimestampType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L428"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_MESSAGE_TIMESTAMP_TYPE_CONFIG">MESSAGE_TIMESTAMP_TYPE_CONFIG</a></p>
@@ -655,7 +669,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.MessageTimestampTypes.html">MessageTimestampTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -687,7 +701,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -719,7 +733,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -733,7 +747,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_MinInSyncReplicas" data-uid="MASES.KNet.Common.TopicConfigBuilder.MinInSyncReplicas">
   MinInSyncReplicas
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L372"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L374"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_MIN_IN_SYNC_REPLICAS_CONFIG">MIN_IN_SYNC_REPLICAS_CONFIG</a></p>
@@ -751,7 +765,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -765,7 +779,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_Preallocate" data-uid="MASES.KNet.Common.TopicConfigBuilder.Preallocate">
   Preallocate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L413"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L415"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_PREALLOCATE_CONFIG">PREALLOCATE_CONFIG</a></p>
@@ -783,7 +797,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -815,7 +829,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -847,7 +861,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -879,7 +893,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -911,7 +925,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -943,7 +957,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -975,7 +989,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1007,7 +1021,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1021,7 +1035,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_UncleanLeaderElectionEnable" data-uid="MASES.KNet.Common.TopicConfigBuilder.UncleanLeaderElectionEnable">
   UncleanLeaderElectionEnable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L361"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG">UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG</a></p>
@@ -1039,7 +1053,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1057,7 +1071,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithCleanupPolicy_MASES_KNet_Common_TopicConfigBuilder_CleanupPolicyTypes_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithCleanupPolicy(MASES.KNet.Common.TopicConfigBuilder.CleanupPolicyTypes)">
   WithCleanupPolicy(CleanupPolicyTypes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L352"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_CLEANUP_POLICY_CONFIG">CLEANUP_POLICY_CONFIG</a></p>
@@ -1071,13 +1085,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>cleanupPolicy</code> <a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.CleanupPolicyTypes.html">CleanupPolicyTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1094,7 +1108,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithCompressionType_MASES_KNet_Common_TopicConfigBuilder_CompressionTypes_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithCompressionType(MASES.KNet.Common.TopicConfigBuilder.CompressionTypes)">
   WithCompressionType(CompressionTypes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L404"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L406"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_COMPRESSION_TYPE_CONFIG">COMPRESSION_TYPE_CONFIG</a></p>
@@ -1108,13 +1122,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>compressionType</code> <a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.CompressionTypes.html">CompressionTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1145,13 +1159,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>deleteRetentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1182,13 +1196,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>fileDeleteDelayMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1219,13 +1233,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>flushMessageInterval</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1256,13 +1270,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>flushMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1293,13 +1307,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>indexIntervalBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1330,13 +1344,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>localLogRetentionBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1367,13 +1381,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>localLogRetentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1404,13 +1418,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxCompactationLagMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1441,13 +1455,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxMessageBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1464,7 +1478,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithMessageDownConversionEnable_System_Boolean_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithMessageDownConversionEnable(System.Boolean)">
   WithMessageDownConversionEnable(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L484"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L486"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_MESSAGE_DOWNCONVERSION_ENABLE_CONFIG">MESSAGE_DOWNCONVERSION_ENABLE_CONFIG</a></p>
@@ -1478,13 +1492,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageDownConversionEnable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1501,7 +1515,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithMessageTimestampAfterMaxMs_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithMessageTimestampAfterMaxMs(System.Int32)">
   WithMessageTimestampAfterMaxMs(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L460"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG">MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG</a></p>
@@ -1515,13 +1529,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageTimestampAfterMaxMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1538,7 +1552,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithMessageTimestampBeforeMaxMs_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithMessageTimestampBeforeMaxMs(System.Int32)">
   WithMessageTimestampBeforeMaxMs(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L471"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L473"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG">MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG</a></p>
@@ -1552,13 +1566,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageTimestampBeforeMaxMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1575,7 +1589,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithMessageTimestampType_MASES_KNet_Common_TopicConfigBuilder_MessageTimestampTypes_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithMessageTimestampType(MASES.KNet.Common.TopicConfigBuilder.MessageTimestampTypes)">
   WithMessageTimestampType(MessageTimestampTypes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L445"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L447"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_MESSAGE_TIMESTAMP_TYPE_CONFIG">MESSAGE_TIMESTAMP_TYPE_CONFIG</a></p>
@@ -1589,13 +1603,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageTimestampType</code> <a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.MessageTimestampTypes.html">MessageTimestampTypes</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1626,13 +1640,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>minCleanableDirtyRatio</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1663,13 +1677,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>minCompactationLagMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1686,7 +1700,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithMinInSyncReplicas_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithMinInSyncReplicas(System.Int32)">
   WithMinInSyncReplicas(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L378"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_MIN_IN_SYNC_REPLICAS_CONFIG">MIN_IN_SYNC_REPLICAS_CONFIG</a></p>
@@ -1700,13 +1714,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>minInSyncReplicas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1723,7 +1737,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithPreallocate_System_Boolean_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithPreallocate(System.Boolean)">
   WithPreallocate(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L417"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L419"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_PREALLOCATE_CONFIG">PREALLOCATE_CONFIG</a></p>
@@ -1737,13 +1751,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>preallocate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1774,13 +1788,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>remoteLogStorageEnable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1811,13 +1825,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>retentionBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1848,13 +1862,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>retentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1885,13 +1899,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>segmentBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1922,13 +1936,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>segmentIndexBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1959,13 +1973,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>segmentJitterMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1996,13 +2010,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>segmentMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2019,7 +2033,7 @@
 
   <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithUncleanLeaderElectionEnable_System_Boolean_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithUncleanLeaderElectionEnable(System.Boolean)">
   WithUncleanLeaderElectionEnable(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L365"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.TopicConfig.html#Org_Apache_Kafka_Common_Config_TopicConfig_UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG">UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG</a></p>
@@ -2033,13 +2047,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>uncleanLeaderElectionEnable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2071,7 +2085,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div style="text-align: center;">Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
         </div>
       </div>
     </footer>

@@ -8,6 +8,7 @@
       <meta name="title" content="Class StreamsConfigBuilder
  | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="Builder for">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -100,7 +101,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StreamsConfigBuilder : CommonClientConfigsBuilder&lt;StreamsConfigBuilder&gt;, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public class StreamsConfigBuilder : CommonClientConfigsBuilder&lt;StreamsConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory</code></pre>
   </div>
 
 
@@ -120,6 +121,7 @@
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
     </dd>
   </dl>
 
@@ -215,7 +217,7 @@
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_MetricReporterClasses">CommonClientConfigsBuilder&lt;StreamsConfigBuilder&gt;.MetricReporterClasses</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetricReporterClasses_Java_Util_List_">CommonClientConfigsBuilder&lt;StreamsConfigBuilder&gt;.WithMetricReporterClasses(List)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetricReporterClasses_Java_Util_List_Java_Lang_Class__">CommonClientConfigsBuilder&lt;StreamsConfigBuilder&gt;.WithMetricReporterClasses(List&lt;Class&gt;)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_SecurityProtocol">CommonClientConfigsBuilder&lt;StreamsConfigBuilder&gt;.SecurityProtocol</a>
@@ -341,6 +343,18 @@
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;StreamsConfigBuilder&gt;.ToMap()</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetKeySerDes">GenericConfigBuilder&lt;StreamsConfigBuilder&gt;.KNetKeySerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetValueSerDes">GenericConfigBuilder&lt;StreamsConfigBuilder&gt;.KNetValueSerDes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__1">GenericConfigBuilder&lt;StreamsConfigBuilder&gt;.BuildKeySerDes&lt;TKey&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__1">GenericConfigBuilder&lt;StreamsConfigBuilder&gt;.BuildValueSerDes&lt;TValue&gt;()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -394,7 +408,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -426,7 +440,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -440,7 +454,7 @@
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_ApplicationServer" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.ApplicationServer">
   ApplicationServer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L304"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_APPLICATION_SERVER_CONFIG">APPLICATION_SERVER_CONFIG</a></p>
@@ -458,7 +472,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -472,7 +486,7 @@
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_BufferedRecordsPerPartition" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.BufferedRecordsPerPartition">
   BufferedRecordsPerPartition
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L317"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_BUFFERED_RECORDS_PER_PARTITION_CONFIG">BUFFERED_RECORDS_PER_PARTITION_CONFIG</a></p>
@@ -490,7 +504,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -504,7 +518,7 @@
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_BuiltInMetricsVersion" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.BuiltInMetricsVersion">
   BuiltInMetricsVersion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L330"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_BUILT_IN_METRICS_VERSION_CONFIG">BUILT_IN_METRICS_VERSION_CONFIG</a></p>
@@ -522,7 +536,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -536,7 +550,7 @@
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_CommitIntervalMs" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.CommitIntervalMs">
   CommitIntervalMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L343"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_COMMIT_INTERVAL_MS_CONFIG">COMMIT_INTERVAL_MS_CONFIG</a></p>
@@ -554,7 +568,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -568,7 +582,7 @@
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_DefaultDSLStore" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.DefaultDSLStore">
   DefaultDSLStore
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L369"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_DEFAULT_DSL_STORE_CONFIG">DEFAULT_DSL_STORE_CONFIG</a>: use <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_ROCKS_DB">ROCKS_DB</a> or <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_IN_MEMORY">IN_MEMORY</a></p>
@@ -586,7 +600,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -608,8 +622,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public Class DefaultDeserializationExceptionHandlerClass { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Class DefaultDeserializationExceptionHandlerClass { get; set; }</code></pre>
   </div>
 
 
@@ -619,7 +632,7 @@ public Class DefaultDeserializationExceptionHandlerClass { get; set; }</code></p
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -633,7 +646,7 @@ public Class DefaultDeserializationExceptionHandlerClass { get; set; }</code></p
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_DefaultKeySerdeClass" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.DefaultKeySerdeClass">
   DefaultKeySerdeClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_DEFAULT_KEY_SERDE_CLASS_CONFIG">DEFAULT_KEY_SERDE_CLASS_CONFIG</a></p>
@@ -641,8 +654,7 @@ public Class DefaultDeserializationExceptionHandlerClass { get; set; }</code></p
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public Class DefaultKeySerdeClass { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Class DefaultKeySerdeClass { get; set; }</code></pre>
   </div>
 
 
@@ -652,7 +664,7 @@ public Class DefaultKeySerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -666,7 +678,7 @@ public Class DefaultKeySerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_DefaultProductionExceptionHandlerClass" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.DefaultProductionExceptionHandlerClass">
   DefaultProductionExceptionHandlerClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG">DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG</a></p>
@@ -674,8 +686,7 @@ public Class DefaultKeySerdeClass { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public Class DefaultProductionExceptionHandlerClass { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Class DefaultProductionExceptionHandlerClass { get; set; }</code></pre>
   </div>
 
 
@@ -685,7 +696,7 @@ public Class DefaultProductionExceptionHandlerClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -699,7 +710,7 @@ public Class DefaultProductionExceptionHandlerClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_DefaultTimestampExtractorClass" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.DefaultTimestampExtractorClass">
   DefaultTimestampExtractorClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG">DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG</a></p>
@@ -707,8 +718,7 @@ public Class DefaultProductionExceptionHandlerClass { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public Class DefaultTimestampExtractorClass { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Class DefaultTimestampExtractorClass { get; set; }</code></pre>
   </div>
 
 
@@ -718,7 +728,7 @@ public Class DefaultTimestampExtractorClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -732,7 +742,7 @@ public Class DefaultTimestampExtractorClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_DefaultValueSerdeClass" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.DefaultValueSerdeClass">
   DefaultValueSerdeClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_DEFAULT_VALUE_SERDE_CLASS_CONFIG">DEFAULT_VALUE_SERDE_CLASS_CONFIG</a></p>
@@ -740,8 +750,7 @@ public Class DefaultTimestampExtractorClass { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public Class DefaultValueSerdeClass { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Class DefaultValueSerdeClass { get; set; }</code></pre>
   </div>
 
 
@@ -751,7 +760,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -765,7 +774,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_MaxTaskIdleMs" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.MaxTaskIdleMs">
   MaxTaskIdleMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_MAX_TASK_IDLE_MS_CONFIG">MAX_TASK_IDLE_MS_CONFIG</a></p>
@@ -783,7 +792,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -797,7 +806,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_MaxWarmupReplicas" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.MaxWarmupReplicas">
   MaxWarmupReplicas
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_MAX_WARMUP_REPLICAS_CONFIG">MAX_WARMUP_REPLICAS_CONFIG</a></p>
@@ -815,7 +824,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -847,7 +856,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -861,7 +870,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_NumStreamThreads" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.NumStreamThreads">
   NumStreamThreads
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L187"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_NUM_STREAM_THREADS_CONFIG">NUM_STREAM_THREADS_CONFIG</a></p>
@@ -879,7 +888,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -893,7 +902,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_PollMs" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.PollMs">
   PollMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L392"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L382"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_POLL_MS_CONFIG">POLL_MS_CONFIG</a></p>
@@ -911,7 +920,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -925,7 +934,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_ProbingRebalanceIntervalMs" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.ProbingRebalanceIntervalMs">
   ProbingRebalanceIntervalMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L395"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_PROBING_REBALANCE_INTERVAL_MS_CONFIG">PROBING_REBALANCE_INTERVAL_MS_CONFIG</a></p>
@@ -943,7 +952,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -957,7 +966,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_ProcessingGuarantee" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.ProcessingGuarantee">
   ProcessingGuarantee
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_PROCESSING_GUARANTEE_CONFIG">PROCESSING_GUARANTEE_CONFIG</a>: use <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_AT_LEAST_ONCE">AT_LEAST_ONCE</a> or <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_EXACTLY_ONCE_V2">EXACTLY_ONCE_V2</a></p>
@@ -975,7 +984,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -989,7 +998,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_RackAwareAssignmentNonOverlapCost" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.RackAwareAssignmentNonOverlapCost">
   RackAwareAssignmentNonOverlapCost
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG">RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG</a></p>
@@ -1007,7 +1016,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1021,7 +1030,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_RackAwareAssignmentStrategy" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.RackAwareAssignmentStrategy">
   RackAwareAssignmentStrategy
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L226"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIG">RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIG</a>: use <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_STRATEGY_NONE">RACK_AWARE_ASSIGNMENT_STRATEGY_NONE</a> or <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_STRATEGY_MIN_TRAFFIC">RACK_AWARE_ASSIGNMENT_STRATEGY_MIN_TRAFFIC</a></p>
@@ -1039,7 +1048,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1053,7 +1062,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_RackAwareAssignmentTags" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.RackAwareAssignmentTags">
   RackAwareAssignmentTags
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L239"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_TAGS_CONFIG">RACK_AWARE_ASSIGNMENT_TAGS_CONFIG</a></p>
@@ -1071,7 +1080,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">List</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1085,7 +1094,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_RackAwareAssignmentTrafficCost" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.RackAwareAssignmentTrafficCost">
   RackAwareAssignmentTrafficCost
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIG">RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIG</a></p>
@@ -1103,7 +1112,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1117,7 +1126,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_RepartitionPurgeIntervalMs" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.RepartitionPurgeIntervalMs">
   RepartitionPurgeIntervalMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L356"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_REPARTITION_PURGE_INTERVAL_MS_CONFIG">REPARTITION_PURGE_INTERVAL_MS_CONFIG</a></p>
@@ -1135,7 +1144,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1149,7 +1158,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_ReplicationFactor" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.ReplicationFactor">
   ReplicationFactor
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L265"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_REPLICATION_FACTOR_CONFIG">REPLICATION_FACTOR_CONFIG</a></p>
@@ -1167,7 +1176,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1181,7 +1190,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_RocksDbConfigSetterClass" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.RocksDbConfigSetterClass">
   RocksDbConfigSetterClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L418"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L408"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_ROCKSDB_CONFIG_SETTER_CLASS_CONFIG">ROCKSDB_CONFIG_SETTER_CLASS_CONFIG</a></p>
@@ -1189,8 +1198,7 @@ public Class DefaultValueSerdeClass { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public Class RocksDbConfigSetterClass { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   </div>
 
 
@@ -1200,7 +1208,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1214,7 +1222,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_StateCleanupDelayMs" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.StateCleanupDelayMs">
   StateCleanupDelayMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L421"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_STATE_CLEANUP_DELAY_MS_CONFIG">STATE_CLEANUP_DELAY_MS_CONFIG</a></p>
@@ -1232,7 +1240,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1264,7 +1272,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1296,7 +1304,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1310,7 +1318,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_TaskTimeoutMs" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.TaskTimeoutMs">
   TaskTimeoutMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L278"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_TASK_TIMEOUT_MS_CONFIG">TASK_TIMEOUT_MS_CONFIG</a></p>
@@ -1328,7 +1336,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1342,7 +1350,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_TopologyOptimization" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.TopologyOptimization">
   TopologyOptimization
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L291"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_TOPOLOGY_OPTIMIZATION_CONFIG">TOPOLOGY_OPTIMIZATION_CONFIG</a>: use <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_OPTIMIZE">OPTIMIZE</a> or <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_NO_OPTIMIZATION">NO_OPTIMIZATION</a></p>
@@ -1360,7 +1368,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1374,7 +1382,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_UpgradeFrom" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.UpgradeFrom">
   UpgradeFrom
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L446"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L434"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_UPGRADE_FROM_CONFIG">UPGRADE_FROM_CONFIG</a></p>
@@ -1392,7 +1400,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1406,7 +1414,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WindowSizeMs" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WindowSizeMs">
   WindowSizeMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L485"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L473"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_WINDOW_SIZE_MS_CONFIG">WINDOW_SIZE_MS_CONFIG</a></p>
@@ -1424,7 +1432,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1438,7 +1446,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WindowStoreChangeLogAdditionalRetentionMs" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WindowStoreChangeLogAdditionalRetentionMs">
   WindowStoreChangeLogAdditionalRetentionMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L460"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG">WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG</a></p>
@@ -1456,7 +1464,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1470,7 +1478,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WindowedInnerClassSerde" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WindowedInnerClassSerde">
   WindowedInnerClassSerde
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L459"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L447"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_WINDOWED_INNER_CLASS_SERDE">WINDOWED_INNER_CLASS_SERDE</a></p>
@@ -1488,7 +1496,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1520,13 +1528,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>acceptableRecoveryLag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1557,13 +1565,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>applicationId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1580,7 +1588,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithApplicationServer_System_String_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithApplicationServer(System.String)">
   WithApplicationServer(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L308"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_APPLICATION_SERVER_CONFIG">APPLICATION_SERVER_CONFIG</a></p>
@@ -1594,13 +1602,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>applicationServer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1617,7 +1625,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithBufferedRecordsPerPartition_System_Int32_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithBufferedRecordsPerPartition(System.Int32)">
   WithBufferedRecordsPerPartition(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L321"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_BUFFERED_RECORDS_PER_PARTITION_CONFIG">BUFFERED_RECORDS_PER_PARTITION_CONFIG</a></p>
@@ -1631,13 +1639,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>bufferedRecordsPerPartition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1654,7 +1662,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithBuiltInMetricsVersion_System_String_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithBuiltInMetricsVersion(System.String)">
   WithBuiltInMetricsVersion(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L334"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_BUILT_IN_METRICS_VERSION_CONFIG">BUILT_IN_METRICS_VERSION_CONFIG</a></p>
@@ -1668,13 +1676,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builtInMetricsVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1691,7 +1699,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithCommitIntervalMs_System_Int64_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithCommitIntervalMs(System.Int64)">
   WithCommitIntervalMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L357"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L347"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_COMMIT_INTERVAL_MS_CONFIG">COMMIT_INTERVAL_MS_CONFIG</a></p>
@@ -1705,13 +1713,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>commitIntervalMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1728,7 +1736,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithDefaultDSLStore_System_String_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithDefaultDSLStore(System.String)">
   WithDefaultDSLStore(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L383"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L373"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_DEFAULT_DSL_STORE_CONFIG">DEFAULT_DSL_STORE_CONFIG</a>: use <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_ROCKS_DB">ROCKS_DB</a> or <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_IN_MEMORY">IN_MEMORY</a></p>
@@ -1742,13 +1750,13 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultDSLStore</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1765,7 +1773,7 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithDefaultDeserializationExceptionHandlerClass_Java_Lang_Class_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithDefaultDeserializationExceptionHandlerClass(Java.Lang.Class)">
   WithDefaultDeserializationExceptionHandlerClass(Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG">DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG</a></p>
@@ -1773,20 +1781,19 @@ public Class RocksDbConfigSetterClass { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(Class defaultDeserializationExceptionHandlerClass)</code></pre>
+    <pre><code class="lang-csharp hljs">public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(Class defaultDeserializationExceptionHandlerClass)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultDeserializationExceptionHandlerClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1803,7 +1810,7 @@ public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(Clas
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithDefaultKeySerdeClass_Java_Lang_Class_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithDefaultKeySerdeClass(Java.Lang.Class)">
   WithDefaultKeySerdeClass(Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_DEFAULT_KEY_SERDE_CLASS_CONFIG">DEFAULT_KEY_SERDE_CLASS_CONFIG</a></p>
@@ -1811,20 +1818,19 @@ public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(Clas
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public StreamsConfigBuilder WithDefaultKeySerdeClass(Class defaultKeySerdeClass)</code></pre>
+    <pre><code class="lang-csharp hljs">public StreamsConfigBuilder WithDefaultKeySerdeClass(Class defaultKeySerdeClass)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultKeySerdeClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1841,7 +1847,7 @@ public StreamsConfigBuilder WithDefaultKeySerdeClass(Class defaultKeySerdeClass)
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithDefaultProductionExceptionHandlerClass_Java_Lang_Class_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithDefaultProductionExceptionHandlerClass(Java.Lang.Class)">
   WithDefaultProductionExceptionHandlerClass(Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG">DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG</a></p>
@@ -1849,20 +1855,19 @@ public StreamsConfigBuilder WithDefaultKeySerdeClass(Class defaultKeySerdeClass)
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(Class defaultProductionExceptionHandlerClass)</code></pre>
+    <pre><code class="lang-csharp hljs">public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(Class defaultProductionExceptionHandlerClass)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultProductionExceptionHandlerClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1879,7 +1884,7 @@ public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(Class def
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithDefaultTimestampExtractorClass_Java_Lang_Class_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithDefaultTimestampExtractorClass(Java.Lang.Class)">
   WithDefaultTimestampExtractorClass(Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG">DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG</a></p>
@@ -1887,20 +1892,19 @@ public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(Class def
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public StreamsConfigBuilder WithDefaultTimestampExtractorClass(Class defaultTimestampExtractorClass)</code></pre>
+    <pre><code class="lang-csharp hljs">public StreamsConfigBuilder WithDefaultTimestampExtractorClass(Class defaultTimestampExtractorClass)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultTimestampExtractorClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1917,7 +1921,7 @@ public StreamsConfigBuilder WithDefaultTimestampExtractorClass(Class defaultTime
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithDefaultValueSerdeClass_Java_Lang_Class_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithDefaultValueSerdeClass(Java.Lang.Class)">
   WithDefaultValueSerdeClass(Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_DEFAULT_VALUE_SERDE_CLASS_CONFIG">DEFAULT_VALUE_SERDE_CLASS_CONFIG</a></p>
@@ -1925,20 +1929,19 @@ public StreamsConfigBuilder WithDefaultTimestampExtractorClass(Class defaultTime
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeClass)</code></pre>
+    <pre><code class="lang-csharp hljs">public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeClass)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>defaultValueSerdeClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1955,7 +1958,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithMaxTaskIdleMs_System_Int64_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithMaxTaskIdleMs(System.Int64)">
   WithMaxTaskIdleMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_MAX_TASK_IDLE_MS_CONFIG">MAX_TASK_IDLE_MS_CONFIG</a></p>
@@ -1969,13 +1972,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxTaskIdleMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -1992,7 +1995,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithMaxWarmupReplicas_System_Int32_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithMaxWarmupReplicas(System.Int32)">
   WithMaxWarmupReplicas(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_MAX_WARMUP_REPLICAS_CONFIG">MAX_WARMUP_REPLICAS_CONFIG</a></p>
@@ -2006,13 +2009,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxWarmupReplicas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2043,13 +2046,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>numStandByReplicas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2066,7 +2069,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithNumStreamThreads_System_Int32_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithNumStreamThreads(System.Int32)">
   WithNumStreamThreads(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L191"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_NUM_STREAM_THREADS_CONFIG">NUM_STREAM_THREADS_CONFIG</a></p>
@@ -2080,13 +2083,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>numStreamThreads</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2103,7 +2106,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithPollMs_System_Int64_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithPollMs(System.Int64)">
   WithPollMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L386"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_POLL_MS_CONFIG">POLL_MS_CONFIG</a></p>
@@ -2117,13 +2120,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>pollMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2140,7 +2143,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithProbingRebalanceIntervalMs_System_Int64_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithProbingRebalanceIntervalMs(System.Int64)">
   WithProbingRebalanceIntervalMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L409"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L399"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_PROBING_REBALANCE_INTERVAL_MS_CONFIG">PROBING_REBALANCE_INTERVAL_MS_CONFIG</a></p>
@@ -2154,13 +2157,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>probingRebalanceIntervalMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2177,7 +2180,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithProcessingGuarantee_System_String_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithProcessingGuarantee(System.String)">
   WithProcessingGuarantee(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_PROCESSING_GUARANTEE_CONFIG">PROCESSING_GUARANTEE_CONFIG</a>: use <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_AT_LEAST_ONCE">AT_LEAST_ONCE</a> or <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_EXACTLY_ONCE_V2">EXACTLY_ONCE_V2</a></p>
@@ -2191,13 +2194,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>processingGuarantee</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2214,7 +2217,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithRackAwareAssignmentNonOverlapCost_System_Int32_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithRackAwareAssignmentNonOverlapCost(System.Int32)">
   WithRackAwareAssignmentNonOverlapCost(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L217"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG">RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG</a></p>
@@ -2228,13 +2231,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rackAwareAssignmentNonOverlapCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2251,7 +2254,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithRackAwareAssignmentStrategy_System_String_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithRackAwareAssignmentStrategy(System.String)">
   WithRackAwareAssignmentStrategy(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L230"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG">RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG</a>: use <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_STRATEGY_NONE">RACK_AWARE_ASSIGNMENT_STRATEGY_NONE</a> or <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_STRATEGY_MIN_TRAFFIC">RACK_AWARE_ASSIGNMENT_STRATEGY_MIN_TRAFFIC</a></p>
@@ -2265,13 +2268,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rackAwareAssignmentStrategy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2288,7 +2291,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithRackAwareAssignmentTags_Java_Util_List_System_String__" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithRackAwareAssignmentTags(Java.Util.List{System.String})">
   WithRackAwareAssignmentTags(List&lt;string&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_TAGS_CONFIG">RACK_AWARE_ASSIGNMENT_TAGS_CONFIG</a></p>
@@ -2302,13 +2305,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rackAwareAssignmentTags</code> <span class="xref">List</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2325,7 +2328,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithRackAwareAssignmentTrafficCost_System_Int32_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithRackAwareAssignmentTrafficCost(System.Int32)">
   WithRackAwareAssignmentTrafficCost(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIG">RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIG</a></p>
@@ -2339,13 +2342,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rackAwareAssignmentTrafficCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2362,7 +2365,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithRepartitionPurgeIntervalMs_System_Int64_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithRepartitionPurgeIntervalMs(System.Int64)">
   WithRepartitionPurgeIntervalMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L360"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_REPARTITION_PURGE_INTERVAL_MS_CONFIG">REPARTITION_PURGE_INTERVAL_MS_CONFIG</a></p>
@@ -2376,13 +2379,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>repartitionPurgeIntervalMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2399,7 +2402,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithReplicationFactor_System_Int32_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithReplicationFactor(System.Int32)">
   WithReplicationFactor(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L269"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_REPLICATION_FACTOR_CONFIG">REPLICATION_FACTOR_CONFIG</a></p>
@@ -2413,13 +2416,13 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>replicationFactor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2436,7 +2439,7 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithRocksDbConfigSetterClass_Java_Lang_Class_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithRocksDbConfigSetterClass(Java.Lang.Class)">
   WithRocksDbConfigSetterClass(Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L423"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L412"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_ROCKSDB_CONFIG_SETTER_CLASS_CONFIG">ROCKSDB_CONFIG_SETTER_CLASS_CONFIG</a></p>
@@ -2444,20 +2447,19 @@ public StreamsConfigBuilder WithDefaultValueSerdeClass(Class defaultValueSerdeCl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;To be checked&quot;)]
-public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSetterClass)</code></pre>
+    <pre><code class="lang-csharp hljs">public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSetterClass)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rocksDbConfigSetterClass</code> <span class="xref">Class</span></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2474,7 +2476,7 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithStateCleanupDelayMs_System_Int64_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithStateCleanupDelayMs(System.Int64)">
   WithStateCleanupDelayMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L437"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L425"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_STATE_CLEANUP_DELAY_MS_CONFIG">STATE_CLEANUP_DELAY_MS_CONFIG</a></p>
@@ -2488,13 +2490,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stateCleanupDelayMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2525,13 +2527,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stateDir</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2562,13 +2564,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stateStoreMaxBytesBuffering</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2585,7 +2587,7 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithTaskTimeoutMs_System_Int64_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithTaskTimeoutMs(System.Int64)">
   WithTaskTimeoutMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L282"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_TASK_TIMEOUT_MS_CONFIG">TASK_TIMEOUT_MS_CONFIG</a></p>
@@ -2599,13 +2601,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>taskTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2622,7 +2624,7 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithTopologyOptimization_System_Boolean_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithTopologyOptimization(System.Boolean)">
   WithTopologyOptimization(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L295"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_TOPOLOGY_OPTIMIZATION_CONFIG">TOPOLOGY_OPTIMIZATION_CONFIG</a>: use <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_OPTIMIZE">OPTIMIZE</a> or <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_NO_OPTIMIZATION">NO_OPTIMIZATION</a></p>
@@ -2636,13 +2638,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topologyOptimization</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2659,7 +2661,7 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithUpgradeFrom_System_String_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithUpgradeFrom(System.String)">
   WithUpgradeFrom(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L450"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L438"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_UPGRADE_FROM_CONFIG">UPGRADE_FROM_CONFIG</a></p>
@@ -2673,13 +2675,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>upgradeFrom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2696,7 +2698,7 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithWindowSizeMs_System_Int64_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithWindowSizeMs(System.Int64)">
   WithWindowSizeMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L489"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L477"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_WINDOW_SIZE_MS_CONFIG">WINDOW_SIZE_MS_CONFIG</a></p>
@@ -2710,13 +2712,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>windowSizeMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2733,7 +2735,7 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithWindowStoreChangeLogAdditionalRetentionMs_System_Int64_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithWindowStoreChangeLogAdditionalRetentionMs(System.Int64)">
   WithWindowStoreChangeLogAdditionalRetentionMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L476"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L464"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG">WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG</a></p>
@@ -2747,13 +2749,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>windowStoreChangeLogAdditionalRetentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2770,7 +2772,7 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
 
   <h3 id="MASES_KNet_Streams_StreamsConfigBuilder_WithWindowedInnerClassSerde_System_String_" data-uid="MASES.KNet.Streams.StreamsConfigBuilder.WithWindowedInnerClassSerde(System.String)">
   WithWindowedInnerClassSerde(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L463"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsConfigBuilder.cs/#L451"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html#Org_Apache_Kafka_Streams_StreamsConfig_WINDOWED_INNER_CLASS_SERDE">WINDOWED_INNER_CLASS_SERDE</a></p>
@@ -2784,13 +2786,13 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>windowedInnerClassSerde</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
-    <dd></dd>
+    <dd>Builder for</dd>
   </dl>
 
 
@@ -2822,7 +2824,7 @@ public StreamsConfigBuilder WithRocksDbConfigSetterClass(Class rocksDbConfigSett
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div style="text-align: center;">Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
         </div>
       </div>
     </footer>
