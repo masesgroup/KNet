@@ -253,22 +253,7 @@ namespace MASES.KNet.Consumer
         /// Manages <see cref="ConsumerConfig.ISOLATION_LEVEL_CONFIG"/>
         /// </summary>
         // IsolationLevel.READ_COMMITTED.toString().toLowerCase(Locale.ROOT), IsolationLevel.READ_UNCOMMITTED.toString().toLowerCase(Locale.ROOT)
-        public IsolationLevel IsolationLevel
-        {
-            get
-            {
-                var strName = GetProperty<string>(ConsumerConfig.ISOLATION_LEVEL_CONFIG);
-                if (System.Enum.GetName(typeof(IsolationLevel), IsolationLevel.READ_COMMITTED).ToLowerInvariant() == strName)
-                    return IsolationLevel.READ_COMMITTED;
-                else if (System.Enum.GetName(typeof(IsolationLevel), IsolationLevel.READ_UNCOMMITTED).ToLowerInvariant() == strName)
-                    return IsolationLevel.READ_UNCOMMITTED;
-                else return IsolationLevel.READ_UNCOMMITTED;
-            }
-            set
-            {
-                SetProperty(ConsumerConfig.ISOLATION_LEVEL_CONFIG, System.Enum.GetName(typeof(IsolationLevel), value).ToLowerInvariant());
-            }
-        }
+        public IsolationLevel IsolationLevel { get { return GetProperty<IsolationLevel>(ConsumerConfig.ISOLATION_LEVEL_CONFIG); } set { SetProperty(ConsumerConfig.ISOLATION_LEVEL_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.ISOLATION_LEVEL_CONFIG"/>
         /// </summary>
