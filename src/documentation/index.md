@@ -80,7 +80,7 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 * V1.4.7+: From version 1.4.7 there is a new project, named KNetConnect, to execute Apache Kafka Connect related jobs, [here full usage](articles/usageConnect.md).
 * V1.5.4+: From version 1.5.4 there are new packages dedicated to [KNet Serializer/Deserializer](articles/usageSerDes.md)
 * V2.0.0+: From version 2.0.0 the code base is fully reflected from the JARs of the Apache Kafka distribution downloaded from Maven; some developed classes still remains beside the specific KNet implementations
-
+* V2.4.0+: From version 2.4.0 it is available the new KNet Streams SDK
 ---
 
 ## Runtime engine
