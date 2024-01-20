@@ -10,6 +10,9 @@ The benchmarks are:
 1. [Produce and Consume Benchmark](#produce-and-consume-benchmark)
 2. [Roundtrip benchmark](#roundtrip-benchmark)
 
+> [!IMPORTANT]
+> Following applies to an older version: latests JNet(2.2.1+)/JCOBridge(2.5.10+) contain performance improvements shall be tested again.
+
 ## Initial considerations
 
 Apache Kafka is a client-server architecture which relies on the network for communication. 
