@@ -29,9 +29,10 @@ namespace MASES.KNet.Streams
     {
         readonly Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> _valueInner1 = null;
         readonly Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]> _valueInner2 = null;
-        readonly bool _fromAsync;
-        readonly TKey _key;
-        readonly TValue _value;
+        TKey _key;
+        bool _keyStored;
+        TValue _value;
+        bool _valueStored;
         IKNetSerDes<TKey> _keySerDes = null;
         IKNetSerDes<TValue> _valueSerDes = null;
         IGenericSerDesFactory _factory;
@@ -47,19 +48,20 @@ namespace MASES.KNet.Streams
             _valueInner1 = value;
             _keySerDes = keySerDes;
             _valueSerDes = valueSerDes;
-            _fromAsync = fromAsync;
-            if (_fromAsync)
+            if (fromAsync)
             {
                 _keySerDes ??= _factory.BuildKeySerDes<TKey>();
                 _key = _keySerDes.Deserialize(null, _valueInner1.key);
+                _keyStored = true;
                 _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
                 _value = _valueSerDes.Deserialize(null, _valueInner1.value);
+                _valueStored = true;
             }
         }
 
         internal KNetKeyValue(IGenericSerDesFactory factory,
                               Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]> value,
-                              IKNetSerDes<TKey> keySerDes, 
+                              IKNetSerDes<TKey> keySerDes,
                               IKNetSerDes<TValue> valueSerDes,
                               bool fromAsync)
         {
@@ -67,13 +69,14 @@ namespace MASES.KNet.Streams
             _valueInner2 = value;
             _keySerDes = keySerDes;
             _valueSerDes = valueSerDes;
-            _fromAsync = fromAsync;
-            if (_fromAsync)
+            if (fromAsync)
             {
                 _keySerDes ??= _factory.BuildKeySerDes<TKey>();
                 _key = (TKey)(object)_valueInner2.key.LongValue();
+                _keyStored = true;
                 _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
                 _value = _valueSerDes.Deserialize(null, _valueInner1.value);
+                _valueStored = true;
             }
         }
 
@@ -84,10 +87,21 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                if (_fromAsync) return _key;
-                if (_valueInner2 != null && _valueInner2.key != null) { var ll = _valueInner2.key; return (TKey)(object)ll.LongValue(); }
-                _keySerDes ??= _factory.BuildKeySerDes<TKey>();
-                return _keySerDes.Deserialize(null, _valueInner1.key);
+                if (!_keyStored)
+                {
+                    if (_valueInner2 != null && _valueInner2.key != null)
+                    {
+                        var ll = _valueInner2.key; 
+                        _key = (TKey)(object)ll.LongValue();
+                    }
+                    else
+                    {
+                        _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+                        _key = _keySerDes.Deserialize(null, _valueInner1.key);
+                    }
+                    _keyStored = true;
+                }
+                return _key;
             }
         }
         /// <summary>
@@ -97,9 +111,13 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                if (_fromAsync) return _value;
-                _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
-                return _valueSerDes.Deserialize(null, _valueInner1 != null ? _valueInner1.value : _valueInner2.value);
+                if (!_valueStored)
+                {
+                    _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+                    _value = _valueSerDes.Deserialize(null, _valueInner1 != null ? _valueInner1.value : _valueInner2.value);
+                    _valueStored = true;
+                }
+                return _value;
             }
         }
     }

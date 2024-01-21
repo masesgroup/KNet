@@ -69,6 +69,15 @@ KNetStreams streams = new KNetStreams(topology, streamsConfig);
 
 streams.Start();
 
+KNetReadOnlyKeyValueStore<string, string> keyValueStore = streams.Store(storageId, KNetQueryableStoreTypes.KeyValueStore<string, string>());
+KNetKeyValueIterator<string, string> keyValueIterator = keyValueStore.All;
+
+while (keyValueIterator.HasNext)
+{
+    KNetKeyValue<string, string> kv = keyValueIterator.Next;
+
+}
+
 ```
 
 The above example uses simple type, i.e. `string`, as data stored within the topic.
@@ -113,8 +122,73 @@ KNetStreams streams = new KNetStreams(topology, streamsConfig);
 
 streams.Start();
 
+KNetReadOnlyKeyValueStore<int, TestType> keyValueStore = streams.Store(storageId, KNetQueryableStoreTypes.KeyValueStore<int, TestType>());
+KNetKeyValueIterator<int, TestType> keyValueIterator = keyValueStore.All;
+
+while (keyValueIterator.HasNext)
+{
+    KNetKeyValue<int, TestType> kv = keyValueIterator.Next;
+
+}
+
 ```
 
 The above example uses a complex type for value, i.e. `TestType`, as data stored within the topic. The selected serializer is the JSON serializer (`JsonSerDes.Value<V>`) applied over `StreamsConfigBuilder` instance.
 If even the key needs a complex type just uncomment the line with `streamsConfig.KNetKeySerDes = typeof(JsonSerDes.Key<>);` and replace the key type with your custom key type.
 Other ready made serializers can be found on [KNet serializers](usageSerDes.md).
+
+## Performance consideration
+
+In the previous examples data retrieve use a `KNetKeyValueIterator<TKey, TValue>` obtained from a `KNetReadOnlyKeyValueStore<TKey, TValue>`. 
+In KNet Streams SDK the serializer is used only when the specifc field is requested, so the following cycle can traverse the full `KNetKeyValueIterator<TKey, TValue>` content searching a specifc key, then the value is returned:
+
+```C#
+while (keyValueIterator.HasNext)
+{
+    KNetKeyValue<int, TestType> kv = keyValueIterator.Next;
+    if (kv.Key == 100) // key deserialization happens here
+    {
+        return kv.Value; // value deserialization happens here
+    }
+}
+
+```
+
+The approach reduces the serialization impact when not needed.
+However there are conditions which needs to avoid the deserialization to be made in sync. Consider a condition where there is a lot of work done on key and/or value returned, the serialization can impact the whole cycle:
+
+```C#
+while (keyValueIterator.HasNext)
+{
+    KNetKeyValue<int, TestType> kv = keyValueIterator.Next;
+    longFunction(kv.Key, kv.Value); // key and value deserialization happens here before invocation of longFunction
+}
+
+void longFunction(int key, TestType value)
+{
+    // long work here
+}
+
+```
+
+To solve this problem KNet Streams SDK comes with a feature to deserialize in parallel while `longFunction` do its work; `KNetKeyValueIterator<TKey, TValue>` can return a special `IEnumerator<TKeyValue>` which deserialize in parallel:
+
+```C#
+IEnumerator<KNetKeyValue<int, TestType>> enumerator = keyValueIterator.ToIEnumerator(); // it was used the default, i.e. with prefetch feature
+// key and value deserialization happens behind the scene
+while (enumerator.MoveNext())
+{
+    KNetKeyValue<int, TestType> kv = keyValueIterator.Current; 
+    longFunction(kv.Key, kv.Value); // key and value are already ready before invocation of longFunction
+}
+
+void longFunction(int key, TestType value)
+{
+    // long work here
+}
+
+```
+
+> [!WARNING]
+> This feature uses an external thread and cannot be stopped; upon executed `ToIEnumerator` function, the thread starts and continues till the end of the available data.
+

@@ -30,13 +30,14 @@ namespace MASES.KNet.Streams
     {
         readonly Org.Apache.Kafka.Streams.KeyValue<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _valueInner1 = null;
         readonly Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _valueInner2 = null;
-        readonly bool _fromAsync;
-        readonly TKey _key;
+        TKey _key;
+        bool _keyStored = false;
+        KNetValueAndTimestamp<TValue> _value = null;
         IKNetSerDes<TKey> _keySerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetTimestampedKeyValue(IGenericSerDesFactory factory, 
+        internal KNetTimestampedKeyValue(IGenericSerDesFactory factory,
                                          Org.Apache.Kafka.Streams.KeyValue<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> value,
                                          IKNetSerDes<TKey> keySerDes,
                                          bool fromAsync)
@@ -44,15 +45,15 @@ namespace MASES.KNet.Streams
             _factory = factory;
             _valueInner1 = value;
             _keySerDes = keySerDes;
-            _fromAsync = fromAsync;
-            if (_fromAsync)
+            if (fromAsync)
             {
                 _keySerDes ??= _factory.BuildKeySerDes<TKey>();
                 _key = _keySerDes.Deserialize(null, _valueInner1.key);
+                _keyStored = true;
             }
         }
 
-        internal KNetTimestampedKeyValue(IGenericSerDesFactory factory, 
+        internal KNetTimestampedKeyValue(IGenericSerDesFactory factory,
                                          Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> value,
                                          IKNetSerDes<TKey> keySerDes,
                                          bool fromAsync)
@@ -60,11 +61,11 @@ namespace MASES.KNet.Streams
             _factory = factory;
             _valueInner2 = value;
             _keySerDes = keySerDes;
-            _fromAsync = fromAsync;
-            if (_fromAsync)
+            if (fromAsync)
             {
                 _keySerDes ??= _factory.BuildKeySerDes<TKey>();
                 _key = (TKey)(object)_valueInner2.key.LongValue();
+                _keyStored = true;
             }
         }
 
@@ -75,15 +76,32 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                if (_fromAsync) return _key;
-                if (_valueInner2 != null && _valueInner2.key != null) { var ll = _valueInner2.key; return (TKey)(object)ll.LongValue(); }
-                _keySerDes ??= _factory.BuildKeySerDes<TKey>();
-                return _keySerDes.Deserialize(null, _valueInner1.key);
+                if (!_keyStored)
+                {
+                    if (_valueInner2 != null && _valueInner2.key != null)
+                    {
+                        var ll = _valueInner2.key; _key = (TKey)(object)ll.LongValue();
+                    }
+                    else
+                    {
+                        _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+                        _key = _keySerDes.Deserialize(null, _valueInner1.key);
+                    }
+                    _keyStored = true;
+                }
+                return _key;
             }
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
-        public KNetValueAndTimestamp<TValue> Value => new KNetValueAndTimestamp<TValue>(_factory, _valueInner1 != null ? _valueInner1.value : _valueInner2.value);
+        public KNetValueAndTimestamp<TValue> Value
+        {
+            get
+            {
+                _value ??= new KNetValueAndTimestamp<TValue>(_factory, _valueInner1 != null ? _valueInner1.value : _valueInner2.value);
+                return _value;
+            }
+        }
     }
 }
