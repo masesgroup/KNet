@@ -149,6 +149,15 @@ KNetStreams streams = new KNetStreams(topology, streamsConfig);
 
 streams.Start();
 
+KNetReadOnlyKeyValueStore&lt;string, string&gt; keyValueStore = streams.Store(storageId, KNetQueryableStoreTypes.KeyValueStore&lt;string, string&gt;());
+KNetKeyValueIterator&lt;string, string&gt; keyValueIterator = keyValueStore.All;
+
+while (keyValueIterator.HasNext)
+{
+    KNetKeyValue&lt;string, string&gt; kv = keyValueIterator.Next;
+
+}
+
 </code></pre>
 <p>The above example uses simple type, i.e. <code>string</code>, as data stored within the topic.</p>
 <h3 id="complex-types-example">Complex types example</h3>
@@ -188,10 +197,65 @@ KNetStreams streams = new KNetStreams(topology, streamsConfig);
 
 streams.Start();
 
+KNetReadOnlyKeyValueStore&lt;int, TestType&gt; keyValueStore = streams.Store(storageId, KNetQueryableStoreTypes.KeyValueStore&lt;int, TestType&gt;());
+KNetKeyValueIterator&lt;int, TestType&gt; keyValueIterator = keyValueStore.All;
+
+while (keyValueIterator.HasNext)
+{
+    KNetKeyValue&lt;int, TestType&gt; kv = keyValueIterator.Next;
+
+}
+
 </code></pre>
 <p>The above example uses a complex type for value, i.e. <code>TestType</code>, as data stored within the topic. The selected serializer is the JSON serializer (<code>JsonSerDes.Value&lt;V&gt;</code>) applied over <code>StreamsConfigBuilder</code> instance.
 If even the key needs a complex type just uncomment the line with <code>streamsConfig.KNetKeySerDes = typeof(JsonSerDes.Key&lt;&gt;);</code> and replace the key type with your custom key type.
 Other ready made serializers can be found on <a href="usageSerDes.html">KNet serializers</a>.</p>
+<h2 id="performance-consideration">Performance consideration</h2>
+<p>In the previous examples data retrieve use a <code>KNetKeyValueIterator&lt;TKey, TValue&gt;</code> obtained from a <code>KNetReadOnlyKeyValueStore&lt;TKey, TValue&gt;</code>.
+In KNet Streams SDK the serializer is used only when the specifc field is requested, so the following cycle can traverse the full <code>KNetKeyValueIterator&lt;TKey, TValue&gt;</code> content searching a specifc key, then the value is returned:</p>
+<pre><code class="lang-C#">while (keyValueIterator.HasNext)
+{
+    KNetKeyValue&lt;int, TestType&gt; kv = keyValueIterator.Next;
+    if (kv.Key == 100) // key deserialization happens here
+    {
+        return kv.Value; // value deserialization happens here
+    }
+}
+
+</code></pre>
+<p>The approach reduces the serialization impact when not needed.
+However there are conditions which needs to avoid the deserialization to be made in sync. Consider a condition where there is a lot of work done on key and/or value returned, the serialization can impact the whole cycle:</p>
+<pre><code class="lang-C#">while (keyValueIterator.HasNext)
+{
+    KNetKeyValue&lt;int, TestType&gt; kv = keyValueIterator.Next;
+    longFunction(kv.Key, kv.Value); // key and value deserialization happens here before invocation of longFunction
+}
+
+void longFunction(int key, TestType value)
+{
+    // long work here
+}
+
+</code></pre>
+<p>To solve this problem KNet Streams SDK comes with a feature to deserialize in parallel while <code>longFunction</code> do its work; <code>KNetKeyValueIterator&lt;TKey, TValue&gt;</code> can return a special <code>IEnumerator&lt;TKeyValue&gt;</code> which deserialize in parallel:</p>
+<pre><code class="lang-C#">IEnumerator&lt;KNetKeyValue&lt;int, TestType&gt;&gt; enumerator = keyValueIterator.ToIEnumerator(); // it was used the default, i.e. with prefetch feature
+// key and value deserialization happens behind the scene
+while (enumerator.MoveNext())
+{
+    KNetKeyValue&lt;int, TestType&gt; kv = keyValueIterator.Current; 
+    longFunction(kv.Key, kv.Value); // key and value are already ready before invocation of longFunction
+}
+
+void longFunction(int key, TestType value)
+{
+    // long work here
+}
+
+</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This feature uses an external thread and cannot be stopped; upon executed <code>ToIEnumerator</code> function, the thread starts and continues till the end of the available data.</p>
+</div>
 
 </article>
 
