@@ -28,18 +28,27 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetWindowedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> _value;
+        readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> _valueInner;
+        readonly bool _fromAsync;
+        readonly TValue _value;
         IKNetSerDes<TValue> _valueSerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         internal KNetWindowedKeyValue(IGenericSerDesFactory factory,
                                       Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> value,
-                                      IKNetSerDes<TValue> valueSerDes)
+                                      IKNetSerDes<TValue> valueSerDes,
+                                      bool fromAsync)
         {
             _factory = factory;
-            _value = value;
+            _valueInner = value;
             _valueSerDes = valueSerDes;
+            _fromAsync = fromAsync;
+            if (_fromAsync)
+            {
+                _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+                _value = _valueSerDes.Deserialize(null, _valueInner.value);
+            }
         }
 
         /// <summary>
@@ -49,7 +58,7 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                var kk = _value.key;
+                var kk = _valueInner.key;
                 return new KNetWindowed<TKey>(_factory, kk);
             }
         }
@@ -60,8 +69,9 @@ namespace MASES.KNet.Streams
         {
             get
             {
+                if (_fromAsync) return _value;
                 _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
-                var kk = _value.value;
+                var kk = _valueInner.value;
                 return _valueSerDes.Deserialize(null, kk);
             }
         }
