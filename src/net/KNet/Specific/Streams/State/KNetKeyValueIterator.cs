@@ -21,6 +21,8 @@ using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KNet.Serialization;
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MASES.KNet.Streams.State
 {
@@ -29,28 +31,19 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetKeyValueIterator<TKey, TValue> : IGenericSerDesFactoryApplier
+    public sealed class KNetKeyValueIterator<TKey, TValue> : CommonIterator<KNetKeyValue<TKey, TValue>>
     {
 #if NET7_0_OR_GREATER
         class PrefetchableLocalEnumerator(bool isVersion2,
                                           IGenericSerDesFactory factory,
                                           IJavaObject obj,
                                           IKNetSerDes<TKey> keySerDes,
-                                          IKNetSerDes<TValue> valueSerDes)
-            : JVMBridgeBasePrefetchableEnumerator<KNetKeyValue<TKey, TValue>>(obj, new PrefetchableEnumeratorSettings()), IGenericSerDesFactoryApplier
+                                          IKNetSerDes<TValue> valueSerDes,
+                                          bool isAsync, CancellationToken token = default)
+            : JVMBridgeBasePrefetchableEnumerator<KNetKeyValue<TKey, TValue>>(obj, new PrefetchableEnumeratorSettings()),
+              IGenericSerDesFactoryApplier,
+              IAsyncEnumerator<KNetKeyValue<TKey, TValue>>
         {
-            class PrefetchableEnumeratorSettings : IEnumerableExtension
-            {
-                public PrefetchableEnumeratorSettings()
-                {
-                    UsePrefetch = true;
-                    UseThread = true;
-                }
-                public bool UsePrefetch { get; set; }
-                public bool UseThread { get; set; }
-                public IConverterBridge ConverterBridge { get; set; }
-            }
-
             readonly bool _isVersion2 = isVersion2;
             IGenericSerDesFactory _factory = factory;
             IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -68,12 +61,30 @@ namespace MASES.KNet.Streams.State
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
+
+            protected override bool DoWorkCycle()
+            {
+                return isAsync ? !token.IsCancellationRequested : base.DoWorkCycle();
+            }
+
+            public KNetKeyValue<TKey, TValue> Current => (this as IEnumerator<KNetKeyValue<TKey, TValue>>).Current;
+
+            public ValueTask<bool> MoveNextAsync()
+            {
+                return new ValueTask<bool>(MoveNext());
+            }
+
+            public ValueTask DisposeAsync()
+            {
+                Dispose();
+                return new ValueTask();
+            }
         }
 #endif
-        class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier
+        class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetKeyValue<TKey, TValue>>
         {
-            IKNetSerDes<TKey> _keySerDes = null;
-            IKNetSerDes<TValue> _valueSerDes = null;
+            readonly IKNetSerDes<TKey> _keySerDes = null;
+            readonly IKNetSerDes<TValue> _valueSerDes = null;
             readonly bool _isVersion2;
             IGenericSerDesFactory _factory;
             IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -108,26 +119,53 @@ namespace MASES.KNet.Streams.State
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
+
+            public KNetKeyValue<TKey, TValue> Current => (this as IEnumerator<KNetKeyValue<TKey, TValue>>).Current;
+
+            public ValueTask<bool> MoveNextAsync()
+            {
+                return new ValueTask<bool>(MoveNext());
+            }
+
+            public ValueTask DisposeAsync()
+            {
+                Dispose();
+                return new ValueTask();
+            }
         }
 
         readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<byte[], byte[]> _iterator;
         readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, byte[]> _iterator2;
         IKNetSerDes<TKey> _keySerDes = null;
         IKNetSerDes<TValue> _valueSerDes = null;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         internal KNetKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<byte[], byte[]> iterator)
+            : base(factory)
         {
-            _factory = factory;
             _iterator = iterator;
         }
 
         internal KNetKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, byte[]> iterator)
+            : base(factory)
         {
-            _factory = factory;
             _iterator2 = iterator;
         }
+        /// <inheritdoc/>
+        protected override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
+        {
+            _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+            _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+#if NET7_0_OR_GREATER
+            if (UsePrefetch)
+            {
+                return _iterator != null ? new PrefetchableLocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes, isAsync, cancellationToken)
+                                         : new PrefetchableLocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes, _valueSerDes, isAsync, cancellationToken);
+            }
+#endif
+            return _iterator != null ? new StandardLocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes)
+                                     : new StandardLocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes, _valueSerDes);
+        }
+
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()"/> 
         /// </summary>
@@ -160,17 +198,8 @@ namespace MASES.KNet.Streams.State
         /// <remarks><paramref name="usePrefetch"/> is not considered with .NET 6 and .NET Framework</remarks>
         public IEnumerator<KNetKeyValue<TKey, TValue>> ToIEnumerator(bool usePrefetch = true)
         {
-            _keySerDes ??= _factory.BuildKeySerDes<TKey>();
-            _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
-#if NET7_0_OR_GREATER
-            if (usePrefetch)
-            {
-                return _iterator != null ? new PrefetchableLocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes)
-                                         : new PrefetchableLocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes, _valueSerDes);
-            }
-#endif
-            return _iterator != null ? new StandardLocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes)
-                                     : new StandardLocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes, _valueSerDes);
+            UsePrefetch = usePrefetch;
+            return GetEnumerator(false) as IEnumerator<KNetKeyValue<TKey, TValue>>;
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey--"/>
