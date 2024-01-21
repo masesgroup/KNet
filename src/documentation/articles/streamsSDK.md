@@ -195,8 +195,6 @@ void longFunction(int key, TestType value)
 The previous point can be mitigated using the `foreach` statement since iterators implements both `IEnumerable<T>` and `IAsyncEnumerable<T>`:
 
 ```C#
-IEnumerator<KNetKeyValue<int, TestType>> enumerator = keyValueIterator.ToIEnumerator(); // it was used the default, i.e. with prefetch feature
-// key and value deserialization happens behind the scene
 foreach (KNetKeyValue<int, TestType> kv in keyValueIterator) 
 {
     if (kv.Key == 100) break; // when iteration breaks, keyValueIterator is Disposed and the external thread exit
@@ -213,8 +211,6 @@ void longFunction(int key, TestType value)
 or
 
 ```C#
-IEnumerator<KNetKeyValue<int, TestType>> enumerator = keyValueIterator.ToIEnumerator(); // it was used the default, i.e. with prefetch feature
-// key and value deserialization happens behind the scene
 await foreach (KNetKeyValue<int, TestType> kv in keyValueIterator) 
 {
     if (kv.Key == 100) break; // when iteration breaks, keyValueIterator is Disposed and the external thread exit
