@@ -16,7 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KNet.Serialization;
@@ -32,17 +31,54 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetTimestampedKeyValueIterator<TKey, TValue> : IGenericSerDesFactoryApplier
     {
-        class LocalEnumerator : JVMBridgeBaseEnumerator<KNetTimestampedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier
+#if NET7_0_OR_GREATER
+        class PrefetchableLocalEnumerator(bool isVersion2,
+                                          IGenericSerDesFactory factory,
+                                          IJavaObject obj,
+                                          IKNetSerDes<TKey> keySerDes)
+            : JVMBridgeBasePrefetchableEnumerator<KNetTimestampedKeyValue<TKey, TValue>>(obj, new PrefetchableEnumeratorSettings()), IGenericSerDesFactoryApplier
+        {
+            class PrefetchableEnumeratorSettings : IEnumerableExtension
+            {
+                public PrefetchableEnumeratorSettings()
+                {
+                    UsePrefetch = true;
+                    UseThread = true;
+                }
+                public bool UsePrefetch { get; set; }
+                public bool UseThread { get; set; }
+                public IConverterBridge ConverterBridge { get; set; }
+            }
+            readonly bool _isVersion2 = isVersion2;
+            IGenericSerDesFactory _factory = factory;
+            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+
+            protected override object ConvertObject(object input)
+            {
+                if (input is IJavaObject obj)
+                {
+                    return _isVersion2 ? new KNetTimestampedKeyValue<TKey, TValue>(factory,
+                                                                                   JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>(obj),
+                                                                                   keySerDes, true)
+                                       : new KNetTimestampedKeyValue<TKey, TValue>(factory,
+                                                                                   JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>(obj),
+                                                                                   keySerDes, true);
+                }
+                throw new InvalidCastException($"input is not a valid IJavaObject");
+            }
+        }
+#endif
+        class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetTimestampedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier
         {
             IKNetSerDes<TKey> _keySerDes = null;
             readonly bool _isVersion2;
             IGenericSerDesFactory _factory;
             IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-            public LocalEnumerator(bool isVersion2,
-                                   IGenericSerDesFactory factory,
-                                   IJavaObject obj,
-                                   IKNetSerDes<TKey> keySerDes)
+            public StandardLocalEnumerator(bool isVersion2,
+                                           IGenericSerDesFactory factory,
+                                           IJavaObject obj,
+                                           IKNetSerDes<TKey> keySerDes)
                 : base(obj)
             {
                 _isVersion2 = isVersion2;
@@ -56,10 +92,10 @@ namespace MASES.KNet.Streams.State
                 {
                     return _isVersion2 ? new KNetTimestampedKeyValue<TKey, TValue>(_factory,
                                                                                    JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>(obj),
-                                                                                   _keySerDes)
+                                                                                   _keySerDes, false)
                                        : new KNetTimestampedKeyValue<TKey, TValue>(_factory,
                                                                                    JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>(obj),
-                                                                                   _keySerDes);
+                                                                                   _keySerDes, false);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -94,7 +130,7 @@ namespace MASES.KNet.Streams.State
             get
             {
                 _keySerDes ??= _factory.BuildKeySerDes<TKey>();
-                return new KNetTimestampedKeyValue<TKey, TValue>(_factory, _iterator.Next, _keySerDes);
+                return new KNetTimestampedKeyValue<TKey, TValue>(_factory, _iterator.Next, _keySerDes, false);
             }
         }
         /// <summary>
@@ -105,13 +141,23 @@ namespace MASES.KNet.Streams.State
             _iterator.Remove();
         }
         /// <summary>
-        /// Converts an <see cref="Iterator{E}"/> to a <see cref="IEnumerator{E}"/>
+        /// Returns an <see cref="IEnumerator{E}"/> of <see cref="KNetTimestampedKeyValue{TKey, TValue}"/>
         /// </summary>
-        public IEnumerator<KNetTimestampedKeyValue<TKey, TValue>> ToIEnumerator()
+        /// <param name="usePrefetch"><see langword="true"/> to return an <see cref="IEnumerator{T}"/> making preparation of <see cref="KNetTimestampedKeyValue{TKey, TValue}"/> in parallel</param>
+        /// <returns>An <see cref="IEnumerator{T}"/> of <see cref="KNetTimestampedKeyValue{TKey, TValue}"/></returns>
+        /// <remarks><paramref name="usePrefetch"/> is not considered with .NET 6 and .NET Framework</remarks>
+        public IEnumerator<KNetTimestampedKeyValue<TKey, TValue>> ToIEnumerator(bool usePrefetch = true)
         {
             _keySerDes ??= _factory.BuildKeySerDes<TKey>();
-            return _iterator != null ? new LocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes)
-                                     : new LocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes);
+#if NET7_0_OR_GREATER
+            if (usePrefetch)
+            {
+                return _iterator != null ? new PrefetchableLocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes)
+                                         : new PrefetchableLocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes);
+            }
+#endif
+            return _iterator != null ? new StandardLocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes)
+                                     : new StandardLocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes);
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey--"/>
