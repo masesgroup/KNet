@@ -256,6 +256,32 @@ void longFunction(int key, TestType value)
 <h5>Warning</h5>
 <p>This feature uses an external thread and cannot be stopped; upon executed <code>ToIEnumerator</code> function, the thread starts and continues till the end of the available data.</p>
 </div>
+<p>The previous point can be mitigated using the <code>foreach</code> statement since iterators implements both <code>IEnumerable&lt;T&gt;</code> and <code>IAsyncEnumerable&lt;T&gt;</code>:</p>
+<pre><code class="lang-C#">foreach (KNetKeyValue&lt;int, TestType&gt; kv in keyValueIterator) 
+{
+    if (kv.Key == 100) break; // when iteration breaks, keyValueIterator is Disposed and the external thread exit
+    longFunction(kv.Key, kv.Value); // key and value are already ready before invocation of longFunction
+}
+
+void longFunction(int key, TestType value)
+{
+    // long work here
+}
+
+</code></pre>
+<p>or</p>
+<pre><code class="lang-C#">await foreach (KNetKeyValue&lt;int, TestType&gt; kv in keyValueIterator) 
+{
+    if (kv.Key == 100) break; // when iteration breaks, keyValueIterator is Disposed and the external thread exit
+    longFunction(kv.Key, kv.Value); // key and value are already ready before invocation of longFunction
+}
+
+void longFunction(int key, TestType value)
+{
+    // long work here
+}
+
+</code></pre>
 
 </article>
 
