@@ -1984,6 +1984,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.State.CommonIterator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.State.CommonIterator-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Streams.State.IKNetManagedStore-1.yml",
       "output": {
         ".html": {
