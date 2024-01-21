@@ -29,7 +29,9 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetTimestampedWindowedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _value;
+        readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _valueInner;
+        KNetWindowed<TKey> _key = null;
+        KNetValueAndTimestamp<TValue> _value = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
@@ -37,7 +39,7 @@ namespace MASES.KNet.Streams
                                                  Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> value)
         {
             _factory = factory;
-            _value = value;
+            _valueInner = value;
         }
 
         /// <summary>
@@ -47,8 +49,8 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                var kk = _value.key;
-                return new KNetWindowed<TKey>(_factory, kk);
+                _key ??= new KNetWindowed<TKey>(_factory, _valueInner.key);
+                return _key;
             }
         }
         /// <summary>
@@ -58,8 +60,8 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                var kk = _value.value;
-                return new KNetValueAndTimestamp<TValue>(_factory, kk);
+                _value ??= new KNetValueAndTimestamp<TValue>(_factory, _valueInner.value);
+                return _value;
             }
         }
     }

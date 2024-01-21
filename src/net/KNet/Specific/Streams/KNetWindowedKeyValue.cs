@@ -29,8 +29,9 @@ namespace MASES.KNet.Streams
     public class KNetWindowedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> _valueInner;
-        readonly bool _fromAsync;
-        readonly TValue _value;
+        KNetWindowed<TKey> _key = null;
+        TValue _value;
+        bool _valueStored;
         IKNetSerDes<TValue> _valueSerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -43,11 +44,11 @@ namespace MASES.KNet.Streams
             _factory = factory;
             _valueInner = value;
             _valueSerDes = valueSerDes;
-            _fromAsync = fromAsync;
-            if (_fromAsync)
+            if (fromAsync)
             {
                 _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
                 _value = _valueSerDes.Deserialize(null, _valueInner.value);
+                _valueStored = true;
             }
         }
 
@@ -58,8 +59,8 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                var kk = _valueInner.key;
-                return new KNetWindowed<TKey>(_factory, kk);
+                _key ??= new KNetWindowed<TKey>(_factory, _valueInner.key);
+                return _key;
             }
         }
         /// <summary>
@@ -69,10 +70,14 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                if (_fromAsync) return _value;
-                _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
-                var kk = _valueInner.value;
-                return _valueSerDes.Deserialize(null, kk);
+                if (!_valueStored)
+                {
+                    _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+                    var kk = _valueInner.value;
+                    _value = _valueSerDes.Deserialize(null, kk);
+                    _valueStored = true;
+                }
+                return _value;
             }
         }
     }
