@@ -25,7 +25,7 @@ namespace MASES.KNet.Streams.State
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.WindowStoreIterator"/> 
     /// </summary>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetTimestampedWindowStoreIterator<TValue> : IGenericSerDesFactoryApplier
+    public sealed class KNetTimestampedWindowStoreIterator<TValue> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.State.WindowStoreIterator<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _iterator;
         IGenericSerDesFactory _factory;
