@@ -32,12 +32,12 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetTimestampedWindowedKeyValueIterator<TKey, TValue> : CommonIterator<KNetTimestampedWindowedKeyValue<TKey, TValue>>
+    public sealed class KNetTimestampedWindowedKeyValueIterator<TKey, TValue> : CommonIterator<KNetTimestampedWindowedKeyValue<TKey, TValue>>
     {
 #if NET7_0_OR_GREATER
-        class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
-                                          IJavaObject obj,
-                                          bool isAsync, CancellationToken token = default)
+        sealed class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
+                                                 IJavaObject obj,
+                                                 bool isAsync, CancellationToken token = default)
             : JVMBridgeBasePrefetchableEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>(obj, new PrefetchableEnumeratorSettings()),
               IGenericSerDesFactoryApplier,
               IAsyncEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>
@@ -74,7 +74,7 @@ namespace MASES.KNet.Streams.State
         }
 #endif
 
-        class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>
+        sealed class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>
         {
             IGenericSerDesFactory _factory;
             IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -116,7 +116,7 @@ namespace MASES.KNet.Streams.State
         }
 
         /// <inheritdoc/>
-        protected override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
+        protected sealed override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
         {
 #if NET7_0_OR_GREATER
             if (UsePrefetch)

@@ -34,12 +34,12 @@ namespace MASES.KNet.Streams.State
     public sealed class KNetKeyValueIterator<TKey, TValue> : CommonIterator<KNetKeyValue<TKey, TValue>>
     {
 #if NET7_0_OR_GREATER
-        class PrefetchableLocalEnumerator(bool isVersion2,
-                                          IGenericSerDesFactory factory,
-                                          IJavaObject obj,
-                                          IKNetSerDes<TKey> keySerDes,
-                                          IKNetSerDes<TValue> valueSerDes,
-                                          bool isAsync, CancellationToken token = default)
+        sealed class PrefetchableLocalEnumerator(bool isVersion2,
+                                                 IGenericSerDesFactory factory,
+                                                 IJavaObject obj,
+                                                 IKNetSerDes<TKey> keySerDes,
+                                                 IKNetSerDes<TValue> valueSerDes,
+                                                 bool isAsync, CancellationToken token = default)
             : JVMBridgeBasePrefetchableEnumerator<KNetKeyValue<TKey, TValue>>(obj, new PrefetchableEnumeratorSettings()),
               IGenericSerDesFactoryApplier,
               IAsyncEnumerator<KNetKeyValue<TKey, TValue>>
@@ -81,7 +81,7 @@ namespace MASES.KNet.Streams.State
             }
         }
 #endif
-        class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetKeyValue<TKey, TValue>>
+        sealed class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetKeyValue<TKey, TValue>>
         {
             readonly IKNetSerDes<TKey> _keySerDes = null;
             readonly IKNetSerDes<TValue> _valueSerDes = null;
@@ -151,7 +151,7 @@ namespace MASES.KNet.Streams.State
             _iterator2 = iterator;
         }
         /// <inheritdoc/>
-        protected override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
+        protected sealed override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
         {
             _keySerDes ??= _factory.BuildKeySerDes<TKey>();
             _valueSerDes ??= _factory.BuildValueSerDes<TValue>();

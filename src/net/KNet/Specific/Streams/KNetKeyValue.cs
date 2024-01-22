@@ -25,7 +25,7 @@ namespace MASES.KNet.Streams
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
+    public sealed class KNetKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> _valueInner1 = null;
         readonly Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]> _valueInner2 = null;

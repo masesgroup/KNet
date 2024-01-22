@@ -32,13 +32,13 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetWindowedKeyValueIterator<TKey, TValue> : CommonIterator<KNetWindowedKeyValue<TKey, TValue>>
+    public sealed class KNetWindowedKeyValueIterator<TKey, TValue> : CommonIterator<KNetWindowedKeyValue<TKey, TValue>>
     {
 #if NET7_0_OR_GREATER
-        class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
-                                          IJavaObject obj,
-                                          IKNetSerDes<TValue> valueSerDes,
-                                          bool isAsync, CancellationToken token = default)
+        sealed class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
+                                                 IJavaObject obj,
+                                                 IKNetSerDes<TValue> valueSerDes,
+                                                 bool isAsync, CancellationToken token = default)
             : JVMBridgeBasePrefetchableEnumerator<KNetWindowedKeyValue<TKey, TValue>>(obj, new PrefetchableEnumeratorSettings()),
               IGenericSerDesFactoryApplier,
               IAsyncEnumerator<KNetWindowedKeyValue<TKey, TValue>>
@@ -76,7 +76,7 @@ namespace MASES.KNet.Streams.State
             }
         }
 #endif
-        class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetWindowedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetWindowedKeyValue<TKey, TValue>>
+        sealed class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetWindowedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetWindowedKeyValue<TKey, TValue>>
         {
             IKNetSerDes<TValue> _valueSerDes = null;
             IGenericSerDesFactory _factory;
@@ -126,7 +126,7 @@ namespace MASES.KNet.Streams.State
         }
 
         /// <inheritdoc/>
-        protected override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
+        protected sealed override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
         {
             _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
 #if NET7_0_OR_GREATER
