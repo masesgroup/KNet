@@ -101,7 +101,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KNetTimestampedKeyValueIterator&lt;TKey, TValue&gt; : CommonIterator&lt;KNetTimestampedKeyValue&lt;TKey, TValue&gt;&gt;, IGenericSerDesFactoryApplier, IEnumerable&lt;KNetTimestampedKeyValue&lt;TKey, TValue&gt;&gt;, IEnumerable, IAsyncEnumerable&lt;KNetTimestampedKeyValue&lt;TKey, TValue&gt;&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class KNetTimestampedKeyValueIterator&lt;TKey, TValue&gt; : CommonIterator&lt;KNetTimestampedKeyValue&lt;TKey, TValue&gt;&gt;, IGenericSerDesFactoryApplier, IEnumerable&lt;KNetTimestampedKeyValue&lt;TKey, TValue&gt;&gt;, IEnumerable, IAsyncEnumerable&lt;KNetTimestampedKeyValue&lt;TKey, TValue&gt;&gt;</code></pre>
   </div>
 
 
@@ -140,9 +140,6 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1__factory">CommonIterator&lt;KNetTimestampedKeyValue&lt;TKey, TValue&gt;&gt;._factory</a>
-    </div>
-    <div>
       <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_UsePrefetch">CommonIterator&lt;KNetTimestampedKeyValue&lt;TKey, TValue&gt;&gt;.UsePrefetch</a>
     </div>
     <div>
@@ -150,9 +147,6 @@
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_GetAsyncEnumerator_System_Threading_CancellationToken_">CommonIterator&lt;KNetTimestampedKeyValue&lt;TKey, TValue&gt;&gt;.GetAsyncEnumerator(CancellationToken)</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_GetEnumerator_System_Boolean_System_Threading_CancellationToken_">CommonIterator&lt;KNetTimestampedKeyValue&lt;TKey, TValue&gt;&gt;.GetEnumerator(bool, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -171,9 +165,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -326,7 +317,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override sealed object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
