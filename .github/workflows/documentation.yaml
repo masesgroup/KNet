@@ -48,7 +48,7 @@ jobs:
         shell: bash
 
       - name: Request a PR to commit changes
-        if: ${{ github.repository_owner == 'masesgroup' }} && ${{ inputs.GeneratePR == 'yes' }} #do not push any changes outside main repo or withPR is no
+        if: ${{ github.repository_owner == 'masesgroup' }} && ${{ inputs.GeneratePR == true }} #do not push any changes outside main repo or GeneratePR is false
         uses: peter-evans/create-pull-request@v5
         with:
           branch-suffix: short-commit-hash
