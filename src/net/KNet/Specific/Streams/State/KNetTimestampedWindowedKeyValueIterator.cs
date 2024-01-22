@@ -35,9 +35,9 @@ namespace MASES.KNet.Streams.State
     public sealed class KNetTimestampedWindowedKeyValueIterator<TKey, TValue> : CommonIterator<KNetTimestampedWindowedKeyValue<TKey, TValue>>
     {
 #if NET7_0_OR_GREATER
-        class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
-                                          IJavaObject obj,
-                                          bool isAsync, CancellationToken token = default)
+        sealed class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
+                                                 IJavaObject obj,
+                                                 bool isAsync, CancellationToken token = default)
             : JVMBridgeBasePrefetchableEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>(obj, new PrefetchableEnumeratorSettings()),
               IGenericSerDesFactoryApplier,
               IAsyncEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>
@@ -74,7 +74,7 @@ namespace MASES.KNet.Streams.State
         }
 #endif
 
-        class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>
+        sealed class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetTimestampedWindowedKeyValue<TKey, TValue>>
         {
             IGenericSerDesFactory _factory;
             IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }

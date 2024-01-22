@@ -27,7 +27,7 @@ namespace MASES.KNet.Streams
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetTimestampedWindowedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
+    public sealed class KNetTimestampedWindowedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _valueInner;
         KNetWindowed<TKey> _key = null;

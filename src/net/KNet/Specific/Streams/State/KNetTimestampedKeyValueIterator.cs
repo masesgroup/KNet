@@ -34,11 +34,11 @@ namespace MASES.KNet.Streams.State
     public sealed class KNetTimestampedKeyValueIterator<TKey, TValue> : CommonIterator<KNetTimestampedKeyValue<TKey, TValue>>
     {
 #if NET7_0_OR_GREATER
-        class PrefetchableLocalEnumerator(bool isVersion2,
-                                          IGenericSerDesFactory factory,
-                                          IJavaObject obj,
-                                          IKNetSerDes<TKey> keySerDes,
-                                          bool isAsync, CancellationToken token = default)
+        sealed class PrefetchableLocalEnumerator(bool isVersion2,
+                                                 IGenericSerDesFactory factory,
+                                                 IJavaObject obj,
+                                                 IKNetSerDes<TKey> keySerDes,
+                                                 bool isAsync, CancellationToken token = default)
             : JVMBridgeBasePrefetchableEnumerator<KNetTimestampedKeyValue<TKey, TValue>>(obj, new PrefetchableEnumeratorSettings()),
               IGenericSerDesFactoryApplier,
               IAsyncEnumerator<KNetTimestampedKeyValue<TKey, TValue>>
@@ -79,7 +79,7 @@ namespace MASES.KNet.Streams.State
             }
         }
 #endif
-        class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetTimestampedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetTimestampedKeyValue<TKey, TValue>>
+        sealed class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetTimestampedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetTimestampedKeyValue<TKey, TValue>>
         {
             IKNetSerDes<TKey> _keySerDes = null;
             readonly bool _isVersion2;
