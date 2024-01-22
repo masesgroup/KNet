@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetWindowedKeyValueIterator<TKey, TValue> : CommonIterator<KNetWindowedKeyValue<TKey, TValue>>
+    public sealed class KNetWindowedKeyValueIterator<TKey, TValue> : CommonIterator<KNetWindowedKeyValue<TKey, TValue>>
     {
 #if NET7_0_OR_GREATER
         class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
@@ -126,7 +126,7 @@ namespace MASES.KNet.Streams.State
         }
 
         /// <inheritdoc/>
-        protected override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
+        protected sealed override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
         {
             _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
 #if NET7_0_OR_GREATER

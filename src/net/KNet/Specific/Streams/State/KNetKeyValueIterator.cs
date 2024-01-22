@@ -151,7 +151,7 @@ namespace MASES.KNet.Streams.State
             _iterator2 = iterator;
         }
         /// <inheritdoc/>
-        protected override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
+        protected sealed override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
         {
             _keySerDes ??= _factory.BuildKeySerDes<TKey>();
             _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
