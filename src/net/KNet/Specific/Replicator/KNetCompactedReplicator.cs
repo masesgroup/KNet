@@ -198,6 +198,7 @@ namespace MASES.KNet.Replicator
         /// Get or set an instance of <see cref="IKNetSerDes{TValue}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TValue"/>
         /// </summary>
         IKNetSerDes<TValue> ValueSerDes { get; }
+#if NET7_0_OR_GREATER
         /// <summary>
         /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in an external thread
         /// </summary>
@@ -208,6 +209,7 @@ namespace MASES.KNet.Replicator
         /// </summary>
         /// <remarks>The default value is 10, however it shall be chosen by the developer and in the decision shall be verified if external thread activation costs more than inline execution</remarks>
         int PrefetchThreshold { get; }
+#endif
         /// <summary>
         /// <see langword="true"/> if the instance was started
         /// </summary>
@@ -229,6 +231,7 @@ namespace MASES.KNet.Replicator
         #endregion
 
         #region Public methods
+#if NET7_0_OR_GREATER
         /// <summary>
         /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="KNetConsumerRecord{K, V}"/> in external thread 
         /// </summary>
@@ -236,6 +239,7 @@ namespace MASES.KNet.Replicator
         /// <param name="prefetchThreshold">The minimum threshold to activate pretech, default is 10. See <see cref="PrefetchThreshold"/></param>
         /// <remarks>Setting <paramref name="prefetchThreshold"/> to a value less, or equal, to 0 and <paramref name="enablePrefetch"/> to <see langword="true"/>, the prefetch is always actived</remarks>
         void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10);
+#endif
         /// <summary>
         /// Start this <see cref="KNetCompactedReplicator{TKey, TValue}"/>: create the <see cref="StateName"/> topic if not available, allocates Producer and Consumer, sets serializer/deserializer
         /// </summary>
@@ -670,13 +674,13 @@ namespace MASES.KNet.Replicator
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ValueSerDes"/>
         public IKNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
-
+#if NET7_0_OR_GREATER
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsPrefecth"/>
         public bool IsPrefecth { get; private set; } = !(typeof(TKey).IsValueType && typeof(TValue).IsValueType);
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.PrefetchThreshold"/>
         public int PrefetchThreshold { get; private set; } = 10;
-
+#endif
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsStarted"/>
         public bool IsStarted => _started;
 
@@ -985,7 +989,9 @@ namespace MASES.KNet.Replicator
             {
                 _consumerAssociatedPartition.Add(i, new System.Collections.Generic.List<int>());
                 _consumers[i] = (KNetKeySerDes != null || KNetValueSerDes != null) ? new KNetConsumer<TKey, TValue>(ConsumerConfig) : new KNetConsumer<TKey, TValue>(ConsumerConfig, KeySerDes, ValueSerDes);
+#if NET7_0_OR_GREATER
                 _consumers[i].ApplyPrefetch(IsPrefecth, PrefetchThreshold);
+#endif
                 _consumers[i].SetCallback(OnMessage);
                 _consumerListeners[i] = new KNetCompactedConsumerRebalanceListener(i)
                 {
@@ -1091,16 +1097,17 @@ namespace MASES.KNet.Replicator
             return _consumers[index].IsEmpty && !_consumers[index].IsCompleting && lagInSync;
         }
 
-        #endregion
+#endregion
 
         #region Public methods
+#if NET7_0_OR_GREATER
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ApplyPrefetch(bool, int)"/>
         public void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10)
         {
             IsPrefecth = enablePrefetch;
             PrefetchThreshold = IsPrefecth ? prefetchThreshold : 10;
         }
-
+#endif
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.Start"/>
         public void Start()
         {
@@ -1578,5 +1585,5 @@ namespace MASES.KNet.Replicator
 
         #endregion
     }
-    #endregion
+#endregion
 }

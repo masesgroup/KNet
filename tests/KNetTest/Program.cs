@@ -282,7 +282,11 @@ namespace MASES.KNetTest
                         {
                             var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
                             watcherTotal.Start();
+#if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
+#else
+                            foreach (var item in records)
+#endif
                             {
                                 elements++;
                                 watcher.Start();

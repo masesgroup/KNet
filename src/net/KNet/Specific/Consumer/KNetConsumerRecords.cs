@@ -44,18 +44,19 @@ namespace MASES.KNet.Consumer
             _records = records;
             _keyDeserializer = keyDeserializer;
             _valueDeserializer = valueDeserializer;
-            IsPrefecth = !(typeof(K).IsValueType && typeof(V).IsValueType);
         }
+#if NET7_0_OR_GREATER
         /// <summary>
         /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in an external thread
         /// </summary>
         /// <remarks>It is <see langword="true"/> by default if one of <typeparamref name="K"/> or <typeparamref name="V"/> are not <see cref="ValueType"/>, override the value using <see cref="ApplyPrefetch(bool, int)"/></remarks>
-        public bool IsPrefecth { get; private set; }
+        public bool IsPrefecth { get; private set; } = !(typeof(K).IsValueType && typeof(V).IsValueType);
         /// <summary>
         /// The minimum threshold to activate pretech, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in external thread if <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{K, V}"/> contains more than <see cref="PrefetchThreshold"/> elements
         /// </summary>
         /// <remarks>The default value is 10, however it shall be chosen by the developer and in the decision shall be verified if external thread activation costs more than inline execution</remarks>
         public int PrefetchThreshold { get; private set; } = 10;
+#endif
         /// <summary>
         /// <see langword="true"/> if the <see cref="KNetConsumerRecords{K, V}"/> is empty
         /// </summary>
@@ -64,6 +65,7 @@ namespace MASES.KNet.Consumer
         /// The number of elements in <see cref="KNetConsumerRecords{K, V}"/>
         /// </summary>
         public int Count => _records.Count();
+#if NET7_0_OR_GREATER
         /// <summary>
         /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="KNetConsumerRecord{K, V}"/> in external thread 
         /// </summary>
@@ -83,28 +85,34 @@ namespace MASES.KNet.Consumer
             return IsPrefecth &&
                 (PrefetchThreshold <= 0 || _records.Count() > PrefetchThreshold);
         }
-
+#endif
         IEnumerator<KNetConsumerRecord<K, V>> IEnumerable<KNetConsumerRecord<K, V>>.GetEnumerator()
         {
+#if NET7_0_OR_GREATER
             if (UsePrefetch())
                 return new KNetConsumerRecordsPrefetchableEnumerator<K, V>(_records.Iterator(), _keyDeserializer, _valueDeserializer, false);
             else
+#endif
                 return new KNetConsumerRecordsEnumerator<K, V>(_records, _keyDeserializer, _valueDeserializer);
         }
 
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
+#if NET7_0_OR_GREATER
             if (UsePrefetch())
                 return new KNetConsumerRecordsPrefetchableEnumerator<K, V>(_records.Iterator(), _keyDeserializer, _valueDeserializer, false);
             else
+#endif
                 return new KNetConsumerRecordsEnumerator<K, V>(_records, _keyDeserializer, _valueDeserializer);
         }
 
         IAsyncEnumerator<KNetConsumerRecord<K, V>> IAsyncEnumerable<KNetConsumerRecord<K, V>>.GetAsyncEnumerator(CancellationToken cancellationToken)
         {
+#if NET7_0_OR_GREATER
             if (UsePrefetch())
                 return new KNetConsumerRecordsPrefetchableEnumerator<K, V>(_records.Iterator(), _keyDeserializer, _valueDeserializer, true, cancellationToken);
             else
+#endif
                 return new KNetConsumerRecordsEnumerator<K, V>(_records, _keyDeserializer, _valueDeserializer, cancellationToken);
         }
     }

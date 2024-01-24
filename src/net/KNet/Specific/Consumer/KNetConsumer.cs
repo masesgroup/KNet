@@ -31,6 +31,7 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="V">The value type</typeparam>
     public interface IKNetConsumer<K, V> : Org.Apache.Kafka.Clients.Consumer.IConsumer<byte[], byte[]>
     {
+#if NET7_0_OR_GREATER
         /// <summary>
         /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in an external thread
         /// </summary>
@@ -41,6 +42,7 @@ namespace MASES.KNet.Consumer
         /// </summary>
         /// <remarks>The default value is 10, however it shall be chosen by the developer and in the decision shall be verified if external thread activation costs more than inline execution</remarks>
         int PrefetchThreshold { get; }
+#endif
         /// <summary>
         /// <see langword="true"/> if the <see cref="IKNetConsumer{K, V}"/> instance is completing async operation
         /// </summary>
@@ -53,6 +55,7 @@ namespace MASES.KNet.Consumer
         /// Number of messages in the <see cref="IKNetConsumer{K, V}"/> instance waiting to be processed in async operation
         /// </summary>
         int WaitingMessages { get; }
+#if NET7_0_OR_GREATER
         /// <summary>
         /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="KNetConsumerRecord{K, V}"/> in external thread 
         /// </summary>
@@ -60,6 +63,7 @@ namespace MASES.KNet.Consumer
         /// <param name="prefetchThreshold">The minimum threshold to activate pretech, default is 10. See <see cref="PrefetchThreshold"/></param>
         /// <remarks>Setting <paramref name="prefetchThreshold"/> to a value less, or equal, to 0 and <paramref name="enablePrefetch"/> to <see langword="true"/>, the prefetch is always actived</remarks>
         void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10);
+#endif
         /// <summary>
         /// Sets the <see cref="Action{T}"/> to use to receive <see cref="KNetConsumerRecord{K, V}"/>
         /// </summary>
@@ -216,12 +220,14 @@ namespace MASES.KNet.Consumer
             }
             base.Dispose();
         }
+#if NET7_0_OR_GREATER
         /// <inheritdoc cref="IKNetConsumer{K, V}.ApplyPrefetch(bool, int)"/>
         public void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10)
         {
             IsPrefecth = enablePrefetch;
             PrefetchThreshold = IsPrefecth ? prefetchThreshold : 10;
         }
+#endif
         /// <inheritdoc cref="IKNetConsumer{K, V}.SetCallback(Action{KNetConsumerRecord{K, V}})"/>
         public void SetCallback(Action<KNetConsumerRecord<K, V>> cb)
         {
@@ -261,10 +267,12 @@ namespace MASES.KNet.Consumer
             }
             catch { }
         }
+#if NET7_0_OR_GREATER
         /// <inheritdoc cref="IKNetConsumer{K, V}.IsPrefecth"/>
         public bool IsPrefecth { get; private set; } = !(typeof(K).IsValueType && typeof(V).IsValueType);
         /// <inheritdoc cref="IKNetConsumer{K, V}.PrefetchThreshold"/>
         public int PrefetchThreshold { get; private set; } = 10;
+#endif
         /// <inheritdoc cref="IKNetConsumer{K, V}.IsCompleting"/>
         public bool IsCompleting => !_consumedRecords.IsEmpty || System.Threading.Interlocked.Read(ref _dequeing) != 0;
         /// <inheritdoc cref="IKNetConsumer{K, V}.IsEmpty"/>
@@ -283,7 +291,11 @@ namespace MASES.KNet.Consumer
                 bool isEmpty = results.IsEmpty;
                 if (!isEmpty)
                 {
+#if NET7_0_OR_GREATER
                     _consumedRecords.Enqueue(results.ApplyPrefetch(IsPrefecth, PrefetchThreshold));
+#else
+                    _consumedRecords.Enqueue(results);
+#endif
                     lock (_consumedRecords)
                     {
                         System.Threading.Monitor.Pulse(_consumedRecords);
