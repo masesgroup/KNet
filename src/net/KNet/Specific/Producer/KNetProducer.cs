@@ -166,17 +166,11 @@ namespace MASES.KNet.Producer
         public override string BridgeClassName => "org.mases.knet.clients.producer.KNetProducer";
 
         readonly bool _autoCreateSerDes = false;
-        readonly IKNetSerializer<K> _keySerializer;
-        readonly IKNetSerializer<V> _valueSerializer;
-        /// <summary>
-        /// Initialize a new instance of <see cref="KNetProducer{K, V}"/>
-        /// </summary>
-        /// <param name="props">The properties to use, see <see cref="ProducerConfig"/> and <see cref="ProducerConfigBuilder"/></param>
-        public KNetProducer(Properties props)
-            : this(props, new KNetSerDes<K>(), new KNetSerDes<V>())
-        {
-            _autoCreateSerDes = true;
-        }
+        readonly IKNetSerDes<K> _keySerializer;
+        readonly IKNetSerDes<V> _valueSerializer;
+
+        internal KNetProducer(Properties props) : base(props) { }
+
         /// <summary>
         /// Initialize a new instance of <see cref="KNetProducer{K, V}"/>
         /// </summary>
@@ -184,15 +178,14 @@ namespace MASES.KNet.Producer
         public KNetProducer(ProducerConfigBuilder configBuilder)
             : this(configBuilder, configBuilder.BuildKeySerDes<K>(), configBuilder.BuildValueSerDes<V>())
         {
-            _autoCreateSerDes = true;
         }
         /// <summary>
         /// Initialize a new instance of <see cref="KNetProducer{K, V}"/>
         /// </summary>
-        /// <param name="props">The properties to use, see <see cref="ProducerConfig"/> and <see cref="ProducerConfigBuilder"/></param>
+        /// <param name="props">The properties to use, see <see cref="ProducerConfigBuilder"/></param>
         /// <param name="keySerializer">Key serializer base on <see cref="KNetSerDes{K}"/></param>
         /// <param name="valueSerializer">Value serializer base on <see cref="KNetSerDes{K}"/></param>
-        public KNetProducer(Properties props, IKNetSerializer<K> keySerializer, IKNetSerializer<V> valueSerializer)
+        public KNetProducer(ProducerConfigBuilder props, IKNetSerDes<K> keySerializer, IKNetSerDes<V> valueSerializer)
             : base(CheckProperties(props), keySerializer.KafkaSerializer, valueSerializer.KafkaSerializer)
         {
             _keySerializer = keySerializer;

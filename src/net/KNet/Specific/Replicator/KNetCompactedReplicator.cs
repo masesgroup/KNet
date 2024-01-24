@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Time;
-using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Admin;
 using MASES.KNet.Common;
@@ -25,11 +23,6 @@ using MASES.KNet.Consumer;
 using MASES.KNet.Extensions;
 using MASES.KNet.Producer;
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Clients.Admin;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Clients.Producer;
-using Org.Apache.Kafka.Common;
-using Org.Apache.Kafka.Common.Errors;
 using System;
 using System.Collections;
 using System.Collections.Concurrent;
@@ -206,6 +199,16 @@ namespace MASES.KNet.Replicator
         /// </summary>
         IKNetSerDes<TValue> ValueSerDes { get; }
         /// <summary>
+        /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in an external thread
+        /// </summary>
+        /// <remarks>It is <see langword="true"/> by default if one of <typeparamref name="K"/> or <typeparamref name="V"/> are not <see cref="ValueType"/>, override the value using <see cref="ApplyPrefetch(bool, int)"/></remarks>
+        bool IsPrefecth { get; }
+        /// <summary>
+        /// The minimum threshold to activate pretech, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in external thread if <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{K, V}"/> contains more than <see cref="PrefetchThreshold"/> elements
+        /// </summary>
+        /// <remarks>The default value is 10, however it shall be chosen by the developer and in the decision shall be verified if external thread activation costs more than inline execution</remarks>
+        int PrefetchThreshold { get; }
+        /// <summary>
         /// <see langword="true"/> if the instance was started
         /// </summary>
         bool IsStarted { get; }
@@ -226,6 +229,13 @@ namespace MASES.KNet.Replicator
         #endregion
 
         #region Public methods
+        /// <summary>
+        /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="KNetConsumerRecord{K, V}"/> in external thread 
+        /// </summary>
+        /// <param name="enablePrefetch"><see langword="true"/> to enable prefetch. See <see cref="IsPrefecth"/></param>
+        /// <param name="prefetchThreshold">The minimum threshold to activate pretech, default is 10. See <see cref="PrefetchThreshold"/></param>
+        /// <remarks>Setting <paramref name="prefetchThreshold"/> to a value less, or equal, to 0 and <paramref name="enablePrefetch"/> to <see langword="true"/>, the prefetch is always actived</remarks>
+        void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10);
         /// <summary>
         /// Start this <see cref="KNetCompactedReplicator{TKey, TValue}"/>: create the <see cref="StateName"/> topic if not available, allocates Producer and Consumer, sets serializer/deserializer
         /// </summary>
@@ -429,9 +439,9 @@ namespace MASES.KNet.Replicator
             [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
             static void OnDemandRetrieve(IKNetConsumer<TKey, TValue> consumer, string topic, TKey key, ILocalDataStorage data)
             {
-                var topicPartition = new TopicPartition(topic, data.Partition);
-                var topics = Collections.SingletonList(topicPartition);
-                Duration duration = TimeSpan.FromMinutes(1);
+                var topicPartition = new Org.Apache.Kafka.Common.TopicPartition(topic, data.Partition);
+                var topics = Java.Util.Collections.SingletonList(topicPartition);
+                Java.Time.Duration duration = TimeSpan.FromMinutes(1);
                 try
                 {
                     consumer.Assign(topics);
@@ -460,7 +470,7 @@ namespace MASES.KNet.Replicator
 
         #region KNetCompactedConsumerRebalanceListener
 
-        class KNetCompactedConsumerRebalanceListener : ConsumerRebalanceListener
+        class KNetCompactedConsumerRebalanceListener : Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener
         {
             int _consumerIndex;
             public KNetCompactedConsumerRebalanceListener(int consumerIndex)
@@ -661,6 +671,12 @@ namespace MASES.KNet.Replicator
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ValueSerDes"/>
         public IKNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
 
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsPrefecth"/>
+        public bool IsPrefecth { get; private set; } = !(typeof(TKey).IsValueType && typeof(TValue).IsValueType);
+
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.PrefetchThreshold"/>
+        public int PrefetchThreshold { get; private set; } = 10;
+
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsStarted"/>
         public bool IsStarted => _started;
 
@@ -772,7 +788,7 @@ namespace MASES.KNet.Replicator
             }
         }
 
-        private void OnTopicPartitionsAssigned(KNetCompactedConsumerRebalanceListener listener, Collection<TopicPartition> topicPartitions)
+        private void OnTopicPartitionsAssigned(KNetCompactedConsumerRebalanceListener listener, Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> topicPartitions)
         {
             foreach (var topicPartition in topicPartitions)
             {
@@ -789,7 +805,7 @@ namespace MASES.KNet.Replicator
             }
         }
 
-        private void OnTopicPartitionsRevoked(KNetCompactedConsumerRebalanceListener listener, Collection<TopicPartition> topicPartitions)
+        private void OnTopicPartitionsRevoked(KNetCompactedConsumerRebalanceListener listener, Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> topicPartitions)
         {
             foreach (var topicPartition in topicPartitions)
             {
@@ -806,7 +822,7 @@ namespace MASES.KNet.Replicator
             }
         }
 
-        private void OnTopicPartitionsLost(KNetCompactedConsumerRebalanceListener listener, Collection<TopicPartition> topicPartitions)
+        private void OnTopicPartitionsLost(KNetCompactedConsumerRebalanceListener listener, Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> topicPartitions)
         {
             foreach (var topicPartition in topicPartitions)
             {
@@ -834,12 +850,12 @@ namespace MASES.KNet.Replicator
 
             if (UpdateModeOnDelivery)
             {
-                RecordMetadata metadata = null;
+                Org.Apache.Kafka.Clients.Producer.RecordMetadata metadata = null;
                 JVMBridgeException exception = null;
                 DateTime pTimestamp = DateTime.MaxValue;
                 using (AutoResetEvent deliverySemaphore = new AutoResetEvent(false))
                 {
-                    using (Callback cb = new Callback()
+                    using (Org.Apache.Kafka.Clients.Producer.Callback cb = new Org.Apache.Kafka.Clients.Producer.Callback()
                     {
                         OnOnCompletion = (record, error) =>
                         {
@@ -904,7 +920,7 @@ namespace MASES.KNet.Replicator
             }
             else if (UpdateModeOnConsume || UpdateModeOnConsumeSync)
             {
-                _producer.Produce(StateName, key, value, (Callback)null);
+                _producer.Produce(StateName, key, value, (Org.Apache.Kafka.Clients.Producer.Callback)null);
                 if (UpdateModeOnConsumeSync)
                 {
                     _OnConsumeSyncWaiter = new Tuple<TKey, ManualResetEvent>(key, new ManualResetEvent(false));
@@ -969,6 +985,7 @@ namespace MASES.KNet.Replicator
             {
                 _consumerAssociatedPartition.Add(i, new System.Collections.Generic.List<int>());
                 _consumers[i] = (KNetKeySerDes != null || KNetValueSerDes != null) ? new KNetConsumer<TKey, TValue>(ConsumerConfig) : new KNetConsumer<TKey, TValue>(ConsumerConfig, KeySerDes, ValueSerDes);
+                _consumers[i].ApplyPrefetch(IsPrefecth, PrefetchThreshold);
                 _consumers[i].SetCallback(OnMessage);
                 _consumerListeners[i] = new KNetCompactedConsumerRebalanceListener(i)
                 {
@@ -1018,7 +1035,7 @@ namespace MASES.KNet.Replicator
         {
             bool firstExecution = false;
             int index = (int)o;
-            var topics = Collections.Singleton(StateName);
+            var topics = Java.Util.Collections.Singleton(StateName);
             try
             {
                 _consumers[index].Subscribe(topics, _consumerListeners[index]);
@@ -1040,7 +1057,7 @@ namespace MASES.KNet.Replicator
                                 {
                                     try
                                     {
-                                        var lag = _consumers[index].CurrentLag(new TopicPartition(StateName, partitionIndex));
+                                        var lag = _consumers[index].CurrentLag(new Org.Apache.Kafka.Common.TopicPartition(StateName, partitionIndex));
                                         Interlocked.Exchange(ref _lastPartitionLags[partitionIndex], lag.IsPresent() ? lag.AsLong : NotPresentLagState);
                                     }
                                     catch (Java.Lang.IllegalStateException)
@@ -1051,7 +1068,7 @@ namespace MASES.KNet.Replicator
                             }
                         }
                     }
-                    catch (WakeupException) { return; }
+                    catch (Org.Apache.Kafka.Common.Errors.WakeupException) { return; }
                     catch { }
                 }
             }
@@ -1077,6 +1094,13 @@ namespace MASES.KNet.Replicator
         #endregion
 
         #region Public methods
+        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ApplyPrefetch(bool, int)"/>
+        public void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10)
+        {
+            IsPrefecth = enablePrefetch;
+            PrefetchThreshold = IsPrefecth ? prefetchThreshold : 10;
+        }
+
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.Start"/>
         public void Start()
         {
@@ -1088,12 +1112,12 @@ namespace MASES.KNet.Replicator
 
             if (ConsumerInstances > Partitions) throw new InvalidOperationException("ConsumerInstances cannot be high than Partitions");
 
-            using Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
-            using var admin = KafkaAdminClient.Create(props);
+            using Java.Util.Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
+            using var admin = Org.Apache.Kafka.Clients.Admin.KafkaAdminClient.Create(props);
 
             if (AccessRights.HasFlag(AccessRightsType.Write))
             {
-                var topic = new NewTopic(StateName, Partitions, ReplicationFactor);
+                var topic = new Org.Apache.Kafka.Clients.Admin.NewTopic(StateName, Partitions, ReplicationFactor);
                 _topicConfig ??= TopicConfigBuilder.Create().WithDeleteRetentionMs(100)
                                                             .WithMinCleanableDirtyRatio(0.01)
                                                             .WithSegmentMs(100)
@@ -1105,9 +1129,9 @@ namespace MASES.KNet.Replicator
                 {
                     admin.CreateTopic(topic);
                 }
-                catch (TopicExistsException)
+                catch (Org.Apache.Kafka.Common.Errors.TopicExistsException)
                 {
-                    var topics = Collections.Singleton(StateName);
+                    var topics = Java.Util.Collections.Singleton(StateName);
                     // recover partitions of the topic
                     try
                     {

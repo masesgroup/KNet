@@ -30,6 +30,7 @@ using MASES.KNet.Admin;
 using MASES.KNet.Producer;
 using MASES.KNet.Consumer;
 using MASES.KNet.Common;
+using System.Diagnostics;
 
 namespace MASES.KNetTest
 {
@@ -97,7 +98,8 @@ namespace MASES.KNetTest
 
             Console.CancelKeyPress += Console_CancelKeyPress;
             Console.WriteLine("Press Ctrl-C to exit");
-            resetEvent.WaitOne();
+            resetEvent.WaitOne(TimeSpan.FromSeconds(10));
+            resetEvent.Set();
             Thread.Sleep(2000); // wait the threads exit
         }
 
@@ -172,12 +174,11 @@ namespace MASES.KNetTest
                 props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
                 ******/
 
-                Properties props = ProducerConfigBuilder.Create()
-                                                        .WithBootstrapServers(serverToUse)
-                                                        .WithAcks(ProducerConfigBuilder.AcksTypes.All)
-                                                        .WithRetries(0)
-                                                        .WithLingerMs(1)
-                                                        .ToProperties();
+                ProducerConfigBuilder props = ProducerConfigBuilder.Create()
+                                                                   .WithBootstrapServers(serverToUse)
+                                                                   .WithAcks(ProducerConfigBuilder.AcksTypes.All)
+                                                                   .WithRetries(0)
+                                                                   .WithLingerMs(1);
 
                 KNetSerDes<string> keySerializer = new KNetSerDes<string>();
                 JsonSerDes.Value<TestType> valueSerializer = new JsonSerDes.Value<TestType>();
@@ -240,12 +241,11 @@ namespace MASES.KNetTest
                 props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
                 *******/
 
-                Properties props = ConsumerConfigBuilder.Create()
-                                                        .WithBootstrapServers(serverToUse)
-                                                        .WithGroupId("test")
-                                                        .WithEnableAutoCommit(true)
-                                                        .WithAutoCommitIntervalMs(1000)
-                                                        .ToProperties();
+                ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
+                                                                   .WithBootstrapServers(serverToUse)
+                                                                   .WithGroupId("test")
+                                                                   .WithEnableAutoCommit(true)
+                                                                   .WithAutoCommitIntervalMs(1000);
 
                 KNetSerDes<string> keyDeserializer = new KNetSerDes<string>();
                 KNetSerDes<TestType> valueDeserializer = new JsonSerDes.Value<TestType>();
@@ -266,6 +266,10 @@ namespace MASES.KNetTest
                         }
                     };
                 }
+                const bool withPrefetch = true;
+                long elements = 0;
+                Stopwatch watcherTotal = new Stopwatch();
+                Stopwatch watcher = new Stopwatch();
                 var topics = Collections.Singleton(topicToUse);
                 try
                 {
@@ -277,9 +281,15 @@ namespace MASES.KNetTest
                         while (!resetEvent.WaitOne(0))
                         {
                             var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
-                            foreach (var item in records)
+                            watcherTotal.Start();
+                            foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
                             {
-                                Console.WriteLine($"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                                elements++;
+                                watcher.Start();
+                                var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
+                                watcher.Stop();
+                                watcherTotal.Stop();
+                                Console.WriteLine(str);
                             }
                         }
                     }
@@ -289,6 +299,7 @@ namespace MASES.KNetTest
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
                     topics?.Dispose();
+                    if (elements != 0) Console.WriteLine($"Total mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)

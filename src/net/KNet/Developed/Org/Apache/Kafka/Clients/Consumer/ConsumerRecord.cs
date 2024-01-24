@@ -18,24 +18,27 @@
 
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using Org.Apache.Kafka.Common.Record;
+using System;
 
 namespace Org.Apache.Kafka.Clients.Consumer
 {
     public partial class ConsumerRecord
     {
+        DateTime? _dateTime = null;
         /// <summary>
         /// <see cref="System.DateTime"/> of <see cref="Timestamp"/>
         /// </summary>
-        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
+        public System.DateTime DateTime => _dateTime ??= System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
 
         // public TimestampType TimestampType => (TimestampType)System.Enum.Parse(typeof(TimestampType), IExecute<IJavaObject>("timestampType").Invoke<string>("name")); // (TimestampType)(int)IExecute<IJavaObject>("timestampType").GetField("id");
     }
 
     public partial class ConsumerRecord<K, V>
     {
+        DateTime? _dateTime = null;
         /// <summary>
         /// <see cref="System.DateTime"/> of <see cref="Timestamp"/>
         /// </summary>
-        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
+        public System.DateTime DateTime => _dateTime ??= System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
     }
 }

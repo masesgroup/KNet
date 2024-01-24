@@ -47,5 +47,9 @@ namespace MASES.KNet.Serialization
         /// <returns>An instance of <see cref="IKNetSerDes{TValue}"/></returns>
         /// <exception cref="InvalidOperationException">If <see cref="KNetValueSerDes"/> is <see langword="null"/></exception>
         public IKNetSerDes<TValue> BuildValueSerDes<TValue>();
+        /// <summary>
+        /// Clear the current factory
+        /// </summary>
+        public void Clear();
     }
 }
