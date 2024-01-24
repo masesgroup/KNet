@@ -1,0 +1,94 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI_GENERATECLASSES
+
+# Controls when the action will run. Triggers the workflow on push
+# events but only for the master branch
+on:
+  workflow_dispatch:
+    inputs:
+      GeneratePR:
+        description: 'Generate the PR at the end'
+        required: true
+        default: false
+        type: boolean
+        
+# This workflow contains one job called "build_documentation"
+jobs:
+  build_classes:
+    # The type of runner that the job will run on
+    runs-on: windows-2022
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: '1'
+          submodules: 'true'
+
+      - name: Pre compile
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
+
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v4
+        with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
+          java-version: 11
+          cache: 'maven'
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+
+      - name: Install local file to be used within Javadoc plugin of generated POM
+        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.10 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/jvm/knet/pom.xml
+        shell: bash
+
+      - name: Create Jars
+        run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+
+      - name: Clear C# generated files
+        run: Remove-Item .\src\net\KNet\Generated\* -Recurse -Force -Exclude README.md
+
+      - name: Clear Java generated files
+        run: Remove-Item .\src\jvm\knet\src\main\java\org\mases\knet\generated\* -Recurse -Force -Exclude README.md
+
+      - run: dotnet tool update -g MASES.JNetReflector
+
+      - name: Build classes
+        shell: cmd
+        run: jnetreflector -TraceLevel 0 -OriginRootPath .\jars -DestinationRootPath .\src\ -ConfigurationFile .\src\configuration.json
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
+      - name: Extract commit SHA
+        run: |
+          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Request a PR to commit changes
+        if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true }} #do not push any changes outside main repo or GeneratePR is false
+        uses: peter-evans/create-pull-request@v5
+        with:
+          branch-suffix: short-commit-hash
+          add-paths: src/*.*
+          commit-message: |
+            Update generated classes after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+            
+            fix #92
+          title: Changes by GitHub action
+          body: Automated changes by GitHub action
+          reviewers: masesdevelopers
+          assignees: masesdevelopers
+          labels: java, .NET, enhancement 
