@@ -59,10 +59,10 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
       - name: Clear C# generated files
-        run: Remove-Item .\src\net\JNet\Generated\* -Recurse -Force -Exclude README.md
+        run: Remove-Item .\src\net\KNet\Generated\* -Recurse -Force -Exclude README.md
 
       - name: Clear Java generated files
-        run: Remove-Item .\src\jvm\jnet\src\main\java\org\mases\jnet\generated\* -Recurse -Force -Exclude README.md
+        run: Remove-Item .\src\jvm\knet\src\main\java\org\mases\knet\generated\* -Recurse -Force -Exclude README.md
 
       - run: dotnet tool update -g MASES.JNetReflector
 
