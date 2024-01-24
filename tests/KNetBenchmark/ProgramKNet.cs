@@ -42,20 +42,19 @@ namespace MASES.KNet.Benchmark
         {
             if (knetProducer == null || !SharedObjects)
             {
-                Properties props = ProducerConfigBuilder.Create()
-                                                        .WithBootstrapServers(Server)
-                                                        .WithAcks(Acks ? ProducerConfigBuilder.AcksTypes.One : ProducerConfigBuilder.AcksTypes.None)
-                                                        .WithRetries(MessageSendMaxRetries)
-                                                        .WithLingerMs(LingerMs)
-                                                        .WithBatchSize(BatchSize)
-                                                        .WithMaxInFlightRequestPerConnection(MaxInFlight)
-                                                        .WithEnableIdempotence(false)
-                                                        .WithSendBuffer(SocketSendBufferBytes)
-                                                        .WithReceiveBuffer(SocketReceiveBufferBytes)
-                                                        .WithBufferMemory(128 * 1024 * 1024)
-                                                        .WithKeySerializerClass("org.apache.kafka.common.serialization.LongSerializer")
-                                                        .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer")
-                                                        .ToProperties();
+                ProducerConfigBuilder props = ProducerConfigBuilder.Create()
+                                                                   .WithBootstrapServers(Server)
+                                                                   .WithAcks(Acks ? ProducerConfigBuilder.AcksTypes.One : ProducerConfigBuilder.AcksTypes.None)
+                                                                   .WithRetries(MessageSendMaxRetries)
+                                                                   .WithLingerMs(LingerMs)
+                                                                   .WithBatchSize(BatchSize)
+                                                                   .WithMaxInFlightRequestPerConnection(MaxInFlight)
+                                                                   .WithEnableIdempotence(false)
+                                                                   .WithSendBuffer(SocketSendBufferBytes)
+                                                                   .WithReceiveBuffer(SocketReceiveBufferBytes)
+                                                                   .WithBufferMemory(128 * 1024 * 1024)
+                                                                   .WithKeySerializerClass("org.apache.kafka.common.serialization.LongSerializer")
+                                                                   .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer");
 
                 knetKeySerializer = new KNetSerDes<long>()
                 {
@@ -178,18 +177,17 @@ namespace MASES.KNet.Benchmark
         {
             if (knetConsumer == null || !SharedObjects)
             {
-                Properties props = ConsumerConfigBuilder.Create()
-                                                        .WithBootstrapServers(Server)
-                                                        .WithGroupId(Guid.NewGuid().ToString())
-                                                        .WithEnableAutoCommit(!AlwaysCommit)
-                                                        .WithAutoCommitIntervalMs(1000)
-                                                        .WithSendBuffer(SocketSendBufferBytes)
-                                                        .WithReceiveBuffer(SocketReceiveBufferBytes)
-                                                        .WithFetchMinBytes(FetchMinBytes)
-                                                        .WithKeyDeserializerClass("org.apache.kafka.common.serialization.LongDeserializer")
-                                                        .WithValueDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer")
-                                                        .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
-                                                        .ToProperties();
+                ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
+                                                                   .WithBootstrapServers(Server)
+                                                                   .WithGroupId(Guid.NewGuid().ToString())
+                                                                   .WithEnableAutoCommit(!AlwaysCommit)
+                                                                   .WithAutoCommitIntervalMs(1000)
+                                                                   .WithSendBuffer(SocketSendBufferBytes)
+                                                                   .WithReceiveBuffer(SocketReceiveBufferBytes)
+                                                                   .WithFetchMinBytes(FetchMinBytes)
+                                                                   .WithKeyDeserializerClass("org.apache.kafka.common.serialization.LongDeserializer")
+                                                                   .WithValueDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer")
+                                                                   .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST);
                 if (UseSerdes)
                 {
                     knetKeyDeserializer = new KNetSerDes<long>()
