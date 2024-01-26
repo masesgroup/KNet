@@ -40,12 +40,12 @@ namespace MASES.KNet.Streams
         internal KNetTimestampedKeyValue(IGenericSerDesFactory factory,
                                          Org.Apache.Kafka.Streams.KeyValue<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> value,
                                          IKNetSerDes<TKey> keySerDes,
-                                         bool fromAsync)
+                                         bool fromPrefetched)
         {
             _factory = factory;
             _valueInner1 = value;
             _keySerDes = keySerDes;
-            if (fromAsync)
+            if (fromPrefetched)
             {
                 _keySerDes ??= _factory.BuildKeySerDes<TKey>();
                 _key = _keySerDes.Deserialize(null, _valueInner1.key);
@@ -56,12 +56,12 @@ namespace MASES.KNet.Streams
         internal KNetTimestampedKeyValue(IGenericSerDesFactory factory,
                                          Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> value,
                                          IKNetSerDes<TKey> keySerDes,
-                                         bool fromAsync)
+                                         bool fromPrefetched)
         {
             _factory = factory;
             _valueInner2 = value;
             _keySerDes = keySerDes;
-            if (fromAsync)
+            if (fromPrefetched)
             {
                 _keySerDes ??= _factory.BuildKeySerDes<TKey>();
                 _key = (TKey)(object)_valueInner2.key.LongValue();
