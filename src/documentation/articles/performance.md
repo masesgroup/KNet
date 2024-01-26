@@ -10,9 +10,6 @@ The benchmarks are:
 1. [Produce and Consume Benchmark](#produce-and-consume-benchmark)
 2. [Roundtrip benchmark](#roundtrip-benchmark)
 
-> [!IMPORTANT]
-> Following applies to an older version: latests JNet(2.2.1+)/JCOBridge(2.5.10+) contain performance improvements shall be tested again.
-
 ## Initial considerations
 
 Apache Kafka is a client-server architecture which relies on the network for communication. 
@@ -51,6 +48,7 @@ The tests:
 - uses their own topic to avoid impacts from the previous tests: schema is {TopicPrefix}__{testName}__{length}__{testNum} where 
   - **TopicPrefix** is an user definible string (default is _testTopic_)
   - **testName** is KNET or CONF
+  - **packets** is the number of packets
   - **length** is the payload length
   - **testNum** is the actual execution repetition
 - to reduce impacts from different implementations of serializer/deserializer the most simple data types are used in the messages:
@@ -100,7 +98,7 @@ The most important are Average, Standard deviation and Coefficient of Variation.
 
 The tests was done with:
 - different messages length varying the payload length: from 10 bytes to 100 kbytes
-- different number of messages for each benchmark execution: from 10 to 10000 messages;
+- different number of messages for each benchmark execution: from 10 to 10000 messages; we cannot go over: using 100000 messages Confluent.Kafka reports the same error of https://github.com/confluentinc/confluent-kafka-dotnet/issues/703 and KNet uses a lot of memeory;
 - for each benchmark execution the tests are repeated at least 20 times.
 
 The configuration is:
@@ -112,7 +110,7 @@ The configuration is:
 - ReceiveBuffer: 32 Mb
 - FetchMinBytes: 100000
 
-Here below a set of results, in bold the results which are better using KNet (the table reports the changes from previous tests and current tests done with JNet 1.5.2 and JCOBridge 2.5.3):
+Here below a set of results using 10000 messages, in bold the results which are better using KNet 2.4.2:
 
 - KNet/Confluent.Kafka Produce Average ratio percentage (SD ratio percentage):
 
@@ -158,6 +156,7 @@ The tests:
 - uses their own topic to avoid impacts from the previous tests: schema is {TopicPrefix}__{testName}__{length}__{testNum} where 
   - **TopicPrefix** is an user definible string (default is _testTopic_)
   - **testName** is KNET or CONF
+  - **packets** is the number of packets
   - **length** is the payload length
   - **testNum** is the actual execution repetition
 - to reduce impacts from different implementations of serializer/deserializer the most simple data types are used in the messages:
@@ -212,7 +211,7 @@ The most important are Average, Standard deviation and Coefficient of Variation.
 
 The tests was done with:
 - different messages length varying the payload length: from 10 bytes to 100 kbytes
-- a set of 10000 messages to have enough statistics data;
+- a set of 10000 messages to have enough statistics data; we cannot go over: using 100000 messages Confluent.Kafka reports the same error of https://github.com/confluentinc/confluent-kafka-dotnet/issues/703 and KNet uses a lot of memeory;
 - for each benchmark execution the tests are repeated at least 20 times.
 
 The configuration is:

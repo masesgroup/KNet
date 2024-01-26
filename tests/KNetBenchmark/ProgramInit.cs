@@ -26,7 +26,8 @@ namespace MASES.KNet.Benchmark
     {
         // CommonArgs
         public const string ShowLogs = "ShowLogs";
-        public const string ShowResults = "ShowResults";
+        public const string ShowIntermediateResults = "ShowIntermediateResults";
+        public const string ShowFinalResults = "ShowFinalResults";
         public const string ResultsPath = "ResultsPath";
         public const string Server = "Server";
         public const string TopicPrefix = "TopicPrefix";
@@ -36,7 +37,10 @@ namespace MASES.KNet.Benchmark
         public const string MinPacketLength = "MinPacketLength";
         public const string FixedPacketLength = "FixedPacketLength";
         public const string PacketLengthMultiplier = "PacketLengthMultiplier";
-        public const string PacketToExchange = "PacketToExchange";
+        public const string MinPacketsToExchange = "MinPacketsToExchange";
+        public const string MaxPacketsToExchange = "MaxPacketsToExchange";
+        public const string FixedPacketsToExchange = "FixedPacketsToExchange";
+        public const string PacketsToExchangeMultiplier = "PacketsToExchangeMultiplier";
         public const string UseKNetProducer = "UseKNetProducer";
         public const string UseKNetConsumer = "UseKNetConsumer";
         public const string UseSerdes = "UseSerdes";
@@ -55,6 +59,7 @@ namespace MASES.KNet.Benchmark
         public const string BurstInterval = "BurstInterval";
         public const string WithBurst = "WithBurst";
         public const string ProduceOnly = "ProduceOnly";
+        public const string NoFlushTime = "NoFlushTime";
         // setup
         public const string NoAcks = "NoAcks";
         public const string MaxRetries = "MaxRetries";
@@ -81,6 +86,8 @@ namespace MASES.KNet.Benchmark
             baseExceptionJNICalls = JVMStats.ExceptionJNICalls;
         }
 
+        public long CurrentJNICalls => JVMStats.TotalJNICalls;
+
 #if DEBUG
         public override bool EnableDebug => true;
 #endif
@@ -100,7 +107,13 @@ namespace MASES.KNet.Benchmark
                     },
                     new ArgumentMetadata<object>()
                     {
-                        Name = CLIParam.ShowResults,
+                        Name = CLIParam.ShowIntermediateResults,
+                        Type = ArgumentType.Single,
+                        Help = "Show intermediate result logs.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.ShowFinalResults,
                         Type = ArgumentType.Single,
                         Help = "Show final result logs.",
                     },
@@ -160,9 +173,27 @@ namespace MASES.KNet.Benchmark
                     },
                     new ArgumentMetadata<int>()
                     {
-                        Name = CLIParam.PacketToExchange,
+                        Name = CLIParam.MinPacketsToExchange,
                         Default = 1000,
-                        Help = "The packet number to exchange (produce/consume).",
+                        Help = "The minimum packets number to exchange (produce/consume).",
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.MaxPacketsToExchange,
+                        Default = 1000,
+                        Help = "The maximum packets number to exchange (produce/consume).",
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.FixedPacketsToExchange,
+                        Default = 0,
+                        Help = "The fixed packet packets number to exchange, overrides MinPacketsToExchange and MaxPacketsToExchange.",
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.PacketsToExchangeMultiplier,
+                        Default = 10,
+                        Help = "The packets to exchange mulitplier to use.",
                     },
                     new ArgumentMetadata<int>()
                     {
@@ -256,6 +287,12 @@ namespace MASES.KNet.Benchmark
                     },
                     new ArgumentMetadata<object>()
                     {
+                        Name = CLIParam.NoFlushTime,
+                        Type = ArgumentType.Single,
+                        Help = "Do not consider the time spent in flush when evaluate results.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
                         Name = CLIParam.ProduceOnly,
                         Type = ArgumentType.Single,
                         Help = "Use to only produce.",
@@ -310,7 +347,8 @@ namespace MASES.KNet.Benchmark
     partial class Program
     {
         static bool ShowLogs;
-        static bool ShowResults;
+        static bool ShowIntermediateResults;
+        static bool ShowFinalResults;
         static string ResultsPath;
         static string Server;
         static string TopicPrefix;
@@ -320,7 +358,10 @@ namespace MASES.KNet.Benchmark
         static int MinPacketLength;
         static int FixedPacketLength;
         static int PacketLengthMultiplier;
-        static int PacketToExchange;
+        static int MinPacketsToExchange;
+        static int MaxPacketsToExchange;
+        static int FixedPacketsToExchange;
+        static int PacketsToExchangeMultiplier;
         static int BurstLength;
         static int BurstInterval;
         static bool UseKNetProducer;
@@ -337,6 +378,7 @@ namespace MASES.KNet.Benchmark
         static bool ContinuousFlushConfluent;
         static bool SharedObjects;
         static bool WithBurst;
+        static bool NoFlushTime;
         static bool ProduceOnly;
         static bool Acks;
         static int MessageSendMaxRetries;
@@ -350,10 +392,14 @@ namespace MASES.KNet.Benchmark
         static void Init(string[] args)
         {
             BenchmarkKNetCore.ApplicationHeapSize = "4G";
+            BenchmarkKNetCore.ApplicationInitialHeapSize = "4G";
             BenchmarkKNetCore.CreateGlobalInstance();
 
+            Console.WriteLine($"Unknown params: {string.Join(", ", BenchmarkKNetCore.FilteredArgs)}");
+
             ShowLogs = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ShowLogs);
-            ShowResults = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ShowResults);
+            ShowIntermediateResults = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ShowIntermediateResults);
+            ShowFinalResults = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ShowFinalResults);
             ResultsPath = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<string>(CLIParam.ResultsPath);
             Server = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<string>(CLIParam.Server);
             TopicPrefix = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<string>(CLIParam.TopicPrefix);
@@ -367,7 +413,14 @@ namespace MASES.KNet.Benchmark
                 MinPacketLength = MaxPacketLength = FixedPacketLength;
             }
             PacketLengthMultiplier = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.PacketLengthMultiplier);
-            PacketToExchange = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.PacketToExchange);
+            MinPacketsToExchange = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.MinPacketsToExchange);
+            MaxPacketsToExchange = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.MaxPacketsToExchange);
+            FixedPacketsToExchange = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.FixedPacketsToExchange);
+            if (FixedPacketsToExchange != 0)
+            {
+                MinPacketsToExchange = MaxPacketsToExchange = FixedPacketsToExchange;
+            }
+            PacketsToExchangeMultiplier = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.PacketsToExchangeMultiplier);
             BurstLength = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.BurstLength);
             BurstInterval = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.BurstInterval);
             UseKNetProducer = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UseKNetProducer);
@@ -384,6 +437,7 @@ namespace MASES.KNet.Benchmark
             ContinuousFlushConfluent = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ContinuousFlushConfluent);
             SharedObjects = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.SharedObjects);
             WithBurst = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.WithBurst);
+            NoFlushTime = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.NoFlushTime);
             ProduceOnly = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ProduceOnly);
             Acks = !BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.NoAcks);
             MessageSendMaxRetries = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.MaxRetries);

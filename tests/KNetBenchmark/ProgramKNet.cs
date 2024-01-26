@@ -101,6 +101,7 @@ namespace MASES.KNet.Benchmark
                 Stopwatch swCreateRecord = null;
                 Stopwatch swSendRecord = null;
                 Stopwatch stopWatch = null;
+                Stopwatch flushTimeWatch = null;
                 try
                 {
                     if (data == null)
@@ -156,10 +157,15 @@ namespace MASES.KNet.Benchmark
                         }
                     }
                 }
-                finally { knetproducer.Flush(); stopWatch.Stop(); if (!SharedObjects) knetproducer.Dispose(); }
-                if (ShowResults && !ProducePreLoad)
+                finally { if (NoFlushTime) stopWatch.Stop();
+                    flushTimeWatch = Stopwatch.StartNew();      
+                    knetproducer.Flush();
+                    flushTimeWatch.Stop();
+                    stopWatch.Stop(); 
+                    if (!SharedObjects) knetproducer.Dispose(); }
+                if (ShowIntermediateResults && !ProducePreLoad)
                 {
-                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
+                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) Flush {flushTimeWatch.ElapsedMicroSeconds()} -> TotalTime {stopWatch.ElapsedMicroSeconds()} BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
                 }
                 return stopWatch;
             }
@@ -463,7 +469,7 @@ namespace MASES.KNet.Benchmark
                 finally { producer.Flush(); stopWatch.Stop(); if (!SharedObjects) producer.Dispose(); }
                 startEvent.WaitOne();
                 totalExecution.Stop();
-                if (ShowResults)
+                if (ShowIntermediateResults)
                 {
                     Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
                 }

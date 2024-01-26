@@ -18,6 +18,7 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KNet.Consumer;
 using MASES.KNet.Producer;
 using Org.Apache.Kafka.Clients.Consumer;
@@ -54,6 +55,7 @@ namespace MASES.KNet.Benchmark
                                                         .WithBufferMemory(128 * 1024 * 1024)
                                                         .WithKeySerializerClass("org.apache.kafka.common.serialization.LongSerializer")
                                                         .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer")
+                                                        .WithPartitionerIgnoreKeys(true)
                                                         .ToProperties();
                 if (UseSerdes)
                 {
@@ -104,6 +106,9 @@ namespace MASES.KNet.Benchmark
                 Stopwatch swCreateRecord = null;
                 Stopwatch swSendRecord = null;
                 Stopwatch stopWatch = null;
+                Stopwatch flushTimeWatch = null;
+                long produceJNICalls = 0;
+
                 try
                 {
                     if (data == null)
@@ -169,12 +174,14 @@ namespace MASES.KNet.Benchmark
                                 record = new ProducerRecord<long, byte[]>(topicName, i, newData);
                                 swCreateRecord.Stop();
                             }
+                            long baseJNICalls = BenchmarkKNetCore.GlobalInstance.CurrentJNICalls;
                             swSendRecord.Start();
                             if (UseCallback)
                                 kafkaproducer.Send(record, kafkaCallback);
                             else
                                 kafkaproducer.Send(record);
                             swSendRecord.Stop();
+                            produceJNICalls += BenchmarkKNetCore.GlobalInstance.CurrentJNICalls - baseJNICalls;
                             if (WithBurst)
                             {
                                 if (i % BurstLength == 0)
@@ -188,10 +195,18 @@ namespace MASES.KNet.Benchmark
                         }
                     }
                 }
-                finally { kafkaproducer.Flush(); stopWatch.Stop(); if (!SharedObjects) kafkaproducer.Dispose(); }
-                if (ShowResults && !ProducePreLoad)
+                finally
                 {
-                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
+                    if (NoFlushTime) stopWatch.Stop();
+                    flushTimeWatch = Stopwatch.StartNew();
+                    kafkaproducer.Flush();
+                    flushTimeWatch.Stop();
+                    stopWatch.Stop();
+                    if (!SharedObjects) kafkaproducer.Dispose();
+                }
+                if (ShowIntermediateResults && !ProducePreLoad)
+                {
+                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) Flush {flushTimeWatch.ElapsedMicroSeconds()} -> TotalTime {stopWatch.ElapsedMicroSeconds()} BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())} Send JNICalls {produceJNICalls} Mean Send JNICalls {produceJNICalls / numpacket}");
                 }
                 return stopWatch;
             }
@@ -358,7 +373,7 @@ namespace MASES.KNet.Benchmark
                             }
                         };
 
-                        consumer.Subscribe(topics, rebalanceListener);     
+                        consumer.Subscribe(topics, rebalanceListener);
                         int counter = 0;
                         while (true)
                         {
@@ -467,7 +482,7 @@ namespace MASES.KNet.Benchmark
                 finally { producer.Flush(); stopWatch.Stop(); if (!SharedObjects) producer.Dispose(); }
                 startEvent.WaitOne();
                 totalExecution.Stop();
-                if (ShowResults)
+                if (ShowIntermediateResults)
                 {
                     Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
                 }

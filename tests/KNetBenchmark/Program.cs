@@ -31,6 +31,7 @@ namespace MASES.KNet.Benchmark
     {
         static void Main(string[] args)
         {
+            StringBuilder singleTestResultsSb = new();
             try
             {
                 Init(args);
@@ -40,137 +41,144 @@ namespace MASES.KNet.Benchmark
                 List<long> confluentProduceTimes = new();
                 List<long> kNetConsumeTimes = new();
                 List<long> confluentConsumeTimes = new();
-                StringBuilder sb = new();
-                sb.AppendLine("Length;NumPackets;KNETProd;KNETCons;ConfluentProd;ConfluentCons");
 
-                for (int testNum = 0; testNum < Repeat; testNum++)
+                singleTestResultsSb.AppendLine("Length;NumPackets;KNETProd;KNETCons;ConfluentProd;ConfluentCons");
+
+                for (int packets = MinPacketsToExchange; packets <= MaxPacketsToExchange; packets *= PacketsToExchangeMultiplier)
                 {
                     for (int length = MinPacketLength; length <= MaxPacketLength; length *= PacketLengthMultiplier)
                     {
-                        var rand = new Random();
-                        byte[] data = new byte[length];
-                        for (int i = 0; i < length; i++)
+                        for (int testNum = 0; testNum < Repeat; testNum++)
                         {
-                            data[i] = (byte)rand.Next(0, byte.MaxValue);
-                        }
+                            var rand = new Random();
+                            byte[] data = new byte[length];
+                            for (int i = 0; i < length; i++)
+                            {
+                                data[i] = (byte)rand.Next(0, byte.MaxValue);
+                            }
 
-                        if (ShowResults)
-                        {
-                            Console.WriteLine($"Test {testNum}: Length {length} Packets {PacketToExchange}");
-                        }
+                            if (ShowIntermediateResults)
+                            {
+                                Console.WriteLine($"Test {testNum}: Length {length} Packets {packets}");
+                            }
 
-                        var topicNameKNet = TopicName("KNET", length, testNum);
-                        var topicNameConfluent = TopicName("CONF", length, testNum);
-                        try
-                        {
+                            var topicNameKNet = TopicName("KNET", packets, length, testNum);
+                            var topicNameConfluent = TopicName("CONF", packets, length, testNum);
                             try
                             {
-                                CreateTopic(topicNameKNet);
-                            }
-                            catch (TopicExistsException)
-                            {
-                                DeleteTopic(topicNameKNet);
-                                System.Threading.Thread.Sleep(1000); // wait kafka server
-                                CreateTopic(topicNameKNet);
-                            }
-
-                            if (ShowLogs) Console.WriteLine($"Producing on topic {topicNameKNet}");
-                            var KNETProdSW = UseKNetProducer ? ProduceKNet(topicNameKNet, length, PacketToExchange, CheckOnConsume ? data : null) : ProduceKafka(topicNameKNet, length, PacketToExchange, CheckOnConsume ? data : null);
-                            Stopwatch KNETConsSW = new();
-                            if (!ProduceOnly)
-                            {
-                                if (ShowLogs) Console.WriteLine($"Consuming from topic {topicNameKNet}");
-                                KNETConsSW = UseKNetConsumer ? ConsumeKNet(testNum, topicNameKNet, length, PacketToExchange, CheckOnConsume ? data : null) : ConsumeKafka(testNum, topicNameKNet, length, PacketToExchange, CheckOnConsume ? data : null);
-                            }
-
-                            try
-                            {
-                                CreateTopic(topicNameConfluent);
-                            }
-                            catch (TopicExistsException)
-                            {
-                                DeleteTopic(topicNameConfluent);
-                                System.Threading.Thread.Sleep(1000); // wait kafka server
-                                CreateTopic(topicNameConfluent);
-                            }
-
-                            if (ShowLogs) Console.WriteLine($"Producing on topic {topicNameConfluent}");
-                            var ConfluentProdSW = ProduceConfluent(topicNameConfluent, length, PacketToExchange, CheckOnConsume ? data : null);
-                            Stopwatch ConfluentConsSW = new();
-                            if (!ProduceOnly)
-                            {
-                                if (ShowLogs) Console.WriteLine($"Consuming from topic {topicNameConfluent}");
-                                ConfluentConsSW = ConsumeConfluent(testNum, topicNameConfluent, length, PacketToExchange, CheckOnConsume ? data : null);
-                            }
-
-                            kNetProduceTimes.Add(KNETProdSW.ElapsedMicroSeconds());
-                            confluentProduceTimes.Add(ConfluentProdSW.ElapsedMicroSeconds());
-                            kNetConsumeTimes.Add(KNETConsSW.ElapsedMicroSeconds());
-                            confluentConsumeTimes.Add(ConfluentConsSW.ElapsedMicroSeconds());
-
-                            sb.AppendLine($"{length};{PacketToExchange};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW?.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW?.ElapsedMicroSeconds()}");
-
-                            if (ShowResults)
-                            {
-                                if (ProduceOnly)
+                                try
                                 {
-                                    Console.WriteLine($"Produce Diff {KNETProdSW.ElapsedMicroSeconds() - ConfluentProdSW.ElapsedMicroSeconds()}");
+                                    CreateTopic(topicNameKNet);
                                 }
-                                else
+                                catch (TopicExistsException)
                                 {
-                                    Console.WriteLine($"Produce Diff {KNETProdSW.ElapsedMicroSeconds() - ConfluentProdSW.ElapsedMicroSeconds()} us - Consume Diff {KNETConsSW.ElapsedMicroSeconds() - ConfluentConsSW.ElapsedMicroSeconds()}");
+                                    DeleteTopic(topicNameKNet);
+                                    System.Threading.Thread.Sleep(1000); // wait kafka server
+                                    CreateTopic(topicNameKNet);
                                 }
 
-                                Console.WriteLine($"Produce KNET: Total {KNETProdSW.ElapsedMicroSeconds()} us -  Mean {KNETProdSW.MeanMicroSeconds(PacketToExchange)} us - {KNETProdSW.PacketsPerSeconds(PacketToExchange)} packets/s - {KNETProdSW.MbPerSecond(PacketToExchange, length)} Mb/s");
-                                if (!ProduceOnly) Console.WriteLine($"Consume KNET: Total {KNETConsSW.ElapsedMicroSeconds()} us - Mean {KNETConsSW.MeanMicroSeconds(PacketToExchange)} us - {KNETConsSW.PacketsPerSeconds(PacketToExchange)} packets/s - {KNETConsSW.MbPerSecond(PacketToExchange, length)} Mb/s");
+                                if (ShowLogs) Console.WriteLine($"Producing on topic {topicNameKNet}");
+                                var KNETProdSW = UseKNetProducer ? ProduceKNet(topicNameKNet, length, packets, CheckOnConsume ? data : null) : ProduceKafka(topicNameKNet, length, packets, CheckOnConsume ? data : null);
+                                Stopwatch KNETConsSW = new();
+                                if (!ProduceOnly)
+                                {
+                                    if (ShowLogs) Console.WriteLine($"Consuming from topic {topicNameKNet}");
+                                    KNETConsSW = UseKNetConsumer ? ConsumeKNet(testNum, topicNameKNet, length, packets, CheckOnConsume ? data : null) : ConsumeKafka(testNum, topicNameKNet, length, packets, CheckOnConsume ? data : null);
+                                }
 
-                                Console.WriteLine($"Produce Confluent: Total {ConfluentProdSW.ElapsedMicroSeconds()} us - Mean {ConfluentProdSW.MeanMicroSeconds(PacketToExchange)} us - {ConfluentProdSW.PacketsPerSeconds(PacketToExchange)} packets/s - {ConfluentProdSW.MbPerSecond(PacketToExchange, length)} Mb/s");
-                                if (!ProduceOnly) Console.WriteLine($"Consume Confluent: Total {ConfluentConsSW.ElapsedMicroSeconds()} us - Mean {ConfluentConsSW.MeanMicroSeconds(PacketToExchange)} us - {ConfluentConsSW.PacketsPerSeconds(PacketToExchange)} packets/s - {ConfluentConsSW.MbPerSecond(PacketToExchange, length)} Mb/s");
+                                try
+                                {
+                                    CreateTopic(topicNameConfluent);
+                                }
+                                catch (TopicExistsException)
+                                {
+                                    DeleteTopic(topicNameConfluent);
+                                    System.Threading.Thread.Sleep(1000); // wait kafka server
+                                    CreateTopic(topicNameConfluent);
+                                }
+
+                                if (ShowLogs) Console.WriteLine($"Producing on topic {topicNameConfluent}");
+                                var ConfluentProdSW = ProduceConfluent(topicNameConfluent, length, packets, CheckOnConsume ? data : null);
+                                Stopwatch ConfluentConsSW = new();
+                                if (!ProduceOnly)
+                                {
+                                    if (ShowLogs) Console.WriteLine($"Consuming from topic {topicNameConfluent}");
+                                    ConfluentConsSW = ConsumeConfluent(testNum, topicNameConfluent, length, packets, CheckOnConsume ? data : null);
+                                }
+
+                                kNetProduceTimes.Add(KNETProdSW.ElapsedMicroSeconds());
+                                confluentProduceTimes.Add(ConfluentProdSW.ElapsedMicroSeconds());
+                                kNetConsumeTimes.Add(KNETConsSW.ElapsedMicroSeconds());
+                                confluentConsumeTimes.Add(ConfluentConsSW.ElapsedMicroSeconds());
+
+                                singleTestResultsSb.AppendLine($"{length};{packets};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW?.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW?.ElapsedMicroSeconds()}");
+
+                                if (ShowIntermediateResults)
+                                {
+                                    if (ProduceOnly)
+                                    {
+                                        Console.WriteLine($"Produce Diff {KNETProdSW.ElapsedMicroSeconds() - ConfluentProdSW.ElapsedMicroSeconds()}");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine($"Produce Diff {KNETProdSW.ElapsedMicroSeconds() - ConfluentProdSW.ElapsedMicroSeconds()} us - Consume Diff {KNETConsSW.ElapsedMicroSeconds() - ConfluentConsSW.ElapsedMicroSeconds()}");
+                                    }
+
+                                    Console.WriteLine($"Produce KNET: Total {KNETProdSW.ElapsedMicroSeconds()} us -  Mean {KNETProdSW.MeanMicroSeconds(packets)} us - {KNETProdSW.PacketsPerSeconds(packets)} packets/s - {KNETProdSW.MbPerSecond(packets, length)} Mb/s");
+                                    if (!ProduceOnly) Console.WriteLine($"Consume KNET: Total {KNETConsSW.ElapsedMicroSeconds()} us - Mean {KNETConsSW.MeanMicroSeconds(packets)} us - {KNETConsSW.PacketsPerSeconds(packets)} packets/s - {KNETConsSW.MbPerSecond(packets, length)} Mb/s");
+
+                                    Console.WriteLine($"Produce Confluent: Total {ConfluentProdSW.ElapsedMicroSeconds()} us - Mean {ConfluentProdSW.MeanMicroSeconds(packets)} us - {ConfluentProdSW.PacketsPerSeconds(packets)} packets/s - {ConfluentProdSW.MbPerSecond(packets, length)} Mb/s");
+                                    if (!ProduceOnly) Console.WriteLine($"Consume Confluent: Total {ConfluentConsSW.ElapsedMicroSeconds()} us - Mean {ConfluentConsSW.MeanMicroSeconds(packets)} us - {ConfluentConsSW.PacketsPerSeconds(packets)} packets/s - {ConfluentConsSW.MbPerSecond(packets, length)} Mb/s");
+                                }
+                            }
+                            finally
+                            {
+                                if (!LeaveTopics)
+                                {
+                                    DeleteTopic(topicNameKNet);
+                                    DeleteTopic(topicNameConfluent);
+                                }
+                                if (ShowIntermediateResults) BenchmarkKNetCore.GlobalInstance.ShowStats(packets);
+
+                                GC.Collect();
+                                Java.Lang.System.Gc();
                             }
                         }
-                        finally
+                    }
+
+                    if (ShowFinalResults)
+                    {
+                        Console.WriteLine($"FINAL REPORT Exchanged {packets} packets with size from {MinPacketLength} to {MaxPacketLength} repeated {Repeat} times");
+
+                        if (ProduceOnly)
                         {
-                            if (!LeaveTopics)
-                            {
-                                DeleteTopic(topicNameKNet);
-                                DeleteTopic(topicNameConfluent);
-                            }
-                            if (ShowResults) BenchmarkKNetCore.GlobalInstance.ShowStats(PacketToExchange);
+                            Console.WriteLine("Produce");
+                            Console.WriteLine($"KNet       microseconds -> Max {kNetProduceTimes.Max():####.##} - Min {kNetProduceTimes.Min():####.##} - Avg {kNetProduceTimes.Average():####.##} - SD {kNetProduceTimes.StandardDeviation():####.##} - CV {100 * kNetProduceTimes.StandardDeviation() / kNetProduceTimes.Average():####.##} %");
+                            Console.WriteLine($"KNet       microseconds -> Avg Filtered {kNetProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {kNetProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetProduceTimes.FilterMinMax().StandardDeviation() / kNetProduceTimes.FilterMinMax().Average():####.##} %");
+                            Console.WriteLine($"Confluent  microseconds -> Max {confluentProduceTimes.Max():####.##} - Min {confluentProduceTimes.Min():####.##} - Avg {confluentProduceTimes.Average():####.##} SD {confluentProduceTimes.StandardDeviation():####.##} - CV {100 * confluentProduceTimes.StandardDeviation() / confluentProduceTimes.Average():####.##} %");
+                            Console.WriteLine($"Confluent  microseconds -> Avg Filtered {confluentProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {confluentProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * confluentProduceTimes.FilterMinMax().StandardDeviation() / confluentProduceTimes.FilterMinMax().Average():####.##} %");
+                            Console.WriteLine($"KNet/Confluent ratio(%) -> Max {100 * (double)kNetProduceTimes.Max() / confluentProduceTimes.Max():####.##} - Min {100 * (double)kNetProduceTimes.Min() / confluentProduceTimes.Min():####.##} - Avg {100 * (double)kNetProduceTimes.Average() / confluentProduceTimes.Average():####.##} - SD {100 * (double)kNetProduceTimes.StandardDeviation() / confluentProduceTimes.StandardDeviation():####.##} - CV {100 * kNetProduceTimes.CoefficientOfVariation() / confluentProduceTimes.CoefficientOfVariation():####.##}");
+                            Console.WriteLine($"KNet/Confluent ratio(%) -> Avg Filtered {100 * (double)kNetProduceTimes.FilterMinMax().Average() / confluentProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {100 * (double)kNetProduceTimes.FilterMinMax().StandardDeviation() / confluentProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetProduceTimes.FilterMinMax().CoefficientOfVariation() / confluentProduceTimes.FilterMinMax().CoefficientOfVariation():####.##}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Produce");
+                            Console.WriteLine($"KNet       microseconds -> Max {kNetProduceTimes.Max():####.##} - Min {kNetProduceTimes.Min():####.##} - Avg {kNetProduceTimes.Average():####.##} - SD {kNetProduceTimes.StandardDeviation():####.##} - CV {100 * kNetProduceTimes.StandardDeviation() / kNetProduceTimes.Average():####.##} %");
+                            Console.WriteLine($"KNet       microseconds -> Avg Filtered {kNetProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {kNetProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetProduceTimes.FilterMinMax().StandardDeviation() / kNetProduceTimes.FilterMinMax().Average():####.##} %");
+                            Console.WriteLine($"Confluent  microseconds -> Max {confluentProduceTimes.Max():####.##} - Min {confluentProduceTimes.Min():####.##} - Avg {confluentProduceTimes.Average():####.##} - SD {confluentProduceTimes.StandardDeviation():####.##} - CV {100 * confluentProduceTimes.StandardDeviation() / confluentProduceTimes.Average():####.##} %");
+                            Console.WriteLine($"Confluent  microseconds -> Avg Filtered {confluentProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {confluentProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * confluentProduceTimes.FilterMinMax().StandardDeviation() / confluentProduceTimes.FilterMinMax().Average():####.##} %");
+                            Console.WriteLine($"KNet/Confluent ratio(%) -> Max {100 * (double)kNetProduceTimes.Max() / confluentProduceTimes.Max():####.##} - Min {100 * (double)kNetProduceTimes.Min() / confluentProduceTimes.Min():####.##} - Avg {100 * (double)kNetProduceTimes.Average() / confluentProduceTimes.Average():####.##} - SD {100 * (double)kNetProduceTimes.StandardDeviation() / confluentProduceTimes.StandardDeviation():####.##} - CV {100 * kNetProduceTimes.CoefficientOfVariation() / confluentProduceTimes.CoefficientOfVariation():####.##}");
+                            Console.WriteLine($"KNet/Confluent ratio(%) -> Avg Filtered {100 * (double)kNetProduceTimes.FilterMinMax().Average() / confluentProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {100 * (double)kNetProduceTimes.FilterMinMax().StandardDeviation() / confluentProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetProduceTimes.FilterMinMax().CoefficientOfVariation() / confluentProduceTimes.FilterMinMax().CoefficientOfVariation():####.##}");
+                            Console.WriteLine("Consume");
+                            Console.WriteLine($"KNet       microseconds -> Max {kNetConsumeTimes.Max():####.##} - Min {kNetConsumeTimes.Min():####.##} Avg {kNetConsumeTimes.Average():####.##} - SD {kNetConsumeTimes.StandardDeviation():####.##} - CV {100 * kNetConsumeTimes.CoefficientOfVariation():####.##} %");
+                            Console.WriteLine($"KNet       microseconds -> Avg Filtered {kNetConsumeTimes.FilterMinMax().Average():####.##} - SD Filtered {kNetConsumeTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetConsumeTimes.FilterMinMax().CoefficientOfVariation():####.##} %");
+                            Console.WriteLine($"Confluent  microseconds -> Max {confluentConsumeTimes.Max():####.##} - Min {confluentConsumeTimes.Min():####.##} - Avg {confluentConsumeTimes.Average():####.##} - SD {confluentConsumeTimes.StandardDeviation():####.##} - CV {100 * confluentConsumeTimes.CoefficientOfVariation():####.##} %");
+                            Console.WriteLine($"Confluent  microseconds -> Avg Filtered {confluentConsumeTimes.FilterMinMax().Average():####.##} - SD Filtered {confluentConsumeTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * confluentConsumeTimes.FilterMinMax().CoefficientOfVariation():####.##} %");
+                            Console.WriteLine($"KNet/Confluent ratio(%) -> Max {100 * (double)kNetConsumeTimes.Max() / confluentConsumeTimes.Max():########.##} - Min {100 * (double)kNetConsumeTimes.Min() / confluentConsumeTimes.Min():####.##} - Avg {100 * (double)kNetConsumeTimes.Average() / confluentConsumeTimes.Average():####.##} - SD {100 * (double)kNetConsumeTimes.StandardDeviation() / confluentConsumeTimes.StandardDeviation():####.##} - CV {100 * kNetConsumeTimes.CoefficientOfVariation() / confluentConsumeTimes.CoefficientOfVariation():####.##}");
+                            Console.WriteLine($"KNet/Confluent ratio(%) -> Avg Filtered {100 * (double)kNetConsumeTimes.FilterMinMax().Average() / confluentConsumeTimes.FilterMinMax().Average():####.##} - SD Filtered {100 * (double)kNetConsumeTimes.FilterMinMax().StandardDeviation() / confluentConsumeTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetConsumeTimes.FilterMinMax().CoefficientOfVariation() / confluentConsumeTimes.FilterMinMax().CoefficientOfVariation():####.##}");
                         }
                     }
                 }
-
-                Console.WriteLine($"FINAL REPORT Exchanged {PacketToExchange} packets with size from {MinPacketLength} to {MaxPacketLength} repeated {Repeat} times");
-
-                if (ProduceOnly)
-                {
-                    Console.WriteLine("Produce");
-                    Console.WriteLine($"KNet       microseconds -> Max {kNetProduceTimes.Max():####.##} - Min {kNetProduceTimes.Min():####.##} - Avg {kNetProduceTimes.Average():####.##} - SD {kNetProduceTimes.StandardDeviation():####.##} - CV {100 * kNetProduceTimes.StandardDeviation() / kNetProduceTimes.Average():####.##} %");
-                    Console.WriteLine($"KNet       microseconds -> Avg Filtered {kNetProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {kNetProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetProduceTimes.FilterMinMax().StandardDeviation() / kNetProduceTimes.FilterMinMax().Average():####.##} %");
-                    Console.WriteLine($"Confluent  microseconds -> Max {confluentProduceTimes.Max():####.##} - Min {confluentProduceTimes.Min():####.##} - Avg {confluentProduceTimes.Average():####.##} SD {confluentProduceTimes.StandardDeviation():####.##} - CV {100 * confluentProduceTimes.StandardDeviation() / confluentProduceTimes.Average():####.##} %");
-                    Console.WriteLine($"Confluent  microseconds -> Avg Filtered {confluentProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {confluentProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * confluentProduceTimes.FilterMinMax().StandardDeviation() / confluentProduceTimes.FilterMinMax().Average():####.##} %");
-                    Console.WriteLine($"KNet/Confluent ratio(%) -> Max {100 * (double)kNetProduceTimes.Max() / confluentProduceTimes.Max():####.##} - Min {100 * (double)kNetProduceTimes.Min() / confluentProduceTimes.Min():####.##} - Avg {100 * (double)kNetProduceTimes.Average() / confluentProduceTimes.Average():####.##} - SD {100 * (double)kNetProduceTimes.StandardDeviation() / confluentProduceTimes.StandardDeviation():####.##} - CV {100 * kNetProduceTimes.CoefficientOfVariation() / confluentProduceTimes.CoefficientOfVariation():####.##}");
-                    Console.WriteLine($"KNet/Confluent ratio(%) -> Avg Filtered {100 * (double)kNetProduceTimes.FilterMinMax().Average() / confluentProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {100 * (double)kNetProduceTimes.FilterMinMax().StandardDeviation() / confluentProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetProduceTimes.FilterMinMax().CoefficientOfVariation() / confluentProduceTimes.FilterMinMax().CoefficientOfVariation():####.##}");
-                }
-                else
-                {
-                    Console.WriteLine("Produce");
-                    Console.WriteLine($"KNet       microseconds -> Max {kNetProduceTimes.Max():####.##} - Min {kNetProduceTimes.Min():####.##} - Avg {kNetProduceTimes.Average():####.##} - SD {kNetProduceTimes.StandardDeviation():####.##} - CV {100 * kNetProduceTimes.StandardDeviation() / kNetProduceTimes.Average():####.##} %");
-                    Console.WriteLine($"KNet       microseconds -> Avg Filtered {kNetProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {kNetProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetProduceTimes.FilterMinMax().StandardDeviation() / kNetProduceTimes.FilterMinMax().Average():####.##} %");
-                    Console.WriteLine($"Confluent  microseconds -> Max {confluentProduceTimes.Max():####.##} - Min {confluentProduceTimes.Min():####.##} - Avg {confluentProduceTimes.Average():####.##} - SD {confluentProduceTimes.StandardDeviation():####.##} - CV {100 * confluentProduceTimes.StandardDeviation() / confluentProduceTimes.Average():####.##} %");
-                    Console.WriteLine($"Confluent  microseconds -> Avg Filtered {confluentProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {confluentProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * confluentProduceTimes.FilterMinMax().StandardDeviation() / confluentProduceTimes.FilterMinMax().Average():####.##} %");
-                    Console.WriteLine($"KNet/Confluent ratio(%) -> Max {100 * (double)kNetProduceTimes.Max() / confluentProduceTimes.Max():####.##} - Min {100 * (double)kNetProduceTimes.Min() / confluentProduceTimes.Min():####.##} - Avg {100 * (double)kNetProduceTimes.Average() / confluentProduceTimes.Average():####.##} - SD {100 * (double)kNetProduceTimes.StandardDeviation() / confluentProduceTimes.StandardDeviation():####.##} - CV {100 * kNetProduceTimes.CoefficientOfVariation() / confluentProduceTimes.CoefficientOfVariation():####.##}");
-                    Console.WriteLine($"KNet/Confluent ratio(%) -> Avg Filtered {100 * (double)kNetProduceTimes.FilterMinMax().Average() / confluentProduceTimes.FilterMinMax().Average():####.##} - SD Filtered {100 * (double)kNetProduceTimes.FilterMinMax().StandardDeviation() / confluentProduceTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetProduceTimes.FilterMinMax().CoefficientOfVariation() / confluentProduceTimes.FilterMinMax().CoefficientOfVariation():####.##}");
-                    Console.WriteLine("Consume");
-                    Console.WriteLine($"KNet       microseconds -> Max {kNetConsumeTimes.Max():####.##} - Min {kNetConsumeTimes.Min():####.##} Avg {kNetConsumeTimes.Average():####.##} - SD {kNetConsumeTimes.StandardDeviation():####.##} - CV {100 * kNetConsumeTimes.CoefficientOfVariation():####.##} %");
-                    Console.WriteLine($"KNet       microseconds -> Avg Filtered {kNetConsumeTimes.FilterMinMax().Average():####.##} - SD Filtered {kNetConsumeTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetConsumeTimes.FilterMinMax().CoefficientOfVariation():####.##} %");
-                    Console.WriteLine($"Confluent  microseconds -> Max {confluentConsumeTimes.Max():####.##} - Min {confluentConsumeTimes.Min():####.##} - Avg {confluentConsumeTimes.Average():####.##} - SD {confluentConsumeTimes.StandardDeviation():####.##} - CV {100 * confluentConsumeTimes.CoefficientOfVariation():####.##} %");
-                    Console.WriteLine($"Confluent  microseconds -> Avg Filtered {confluentConsumeTimes.FilterMinMax().Average():####.##} - SD Filtered {confluentConsumeTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * confluentConsumeTimes.FilterMinMax().CoefficientOfVariation():####.##} %");
-                    Console.WriteLine($"KNet/Confluent ratio(%) -> Max {100 * (double)kNetConsumeTimes.Max() / confluentConsumeTimes.Max():########.##} - Min {100 * (double)kNetConsumeTimes.Min() / confluentConsumeTimes.Min():####.##} - Avg {100 * (double)kNetConsumeTimes.Average() / confluentConsumeTimes.Average():####.##} - SD {100 * (double)kNetConsumeTimes.StandardDeviation() / confluentConsumeTimes.StandardDeviation():####.##} - CV {100 * kNetConsumeTimes.CoefficientOfVariation() / confluentConsumeTimes.CoefficientOfVariation():####.##}");
-                    Console.WriteLine($"KNet/Confluent ratio(%) -> Avg Filtered {100 * (double)kNetConsumeTimes.FilterMinMax().Average() / confluentConsumeTimes.FilterMinMax().Average():####.##} - SD Filtered {100 * (double)kNetConsumeTimes.FilterMinMax().StandardDeviation() / confluentConsumeTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetConsumeTimes.FilterMinMax().CoefficientOfVariation() / confluentConsumeTimes.FilterMinMax().CoefficientOfVariation():####.##}");
-                }
-
-                File.WriteAllText(Path.Combine(ResultsPath, $"results_{DateTime.Now:yyyyMMdd_HHmmss}.csv"), sb.ToString());
             }
             catch (Java.Lang.NullPointerException e)
             {
@@ -201,6 +209,10 @@ namespace MASES.KNet.Benchmark
                     Console.WriteLine(innerException.Message);
                     innerException = innerException.InnerException;
                 }
+            }
+            finally
+            {
+                File.WriteAllText(Path.Combine(ResultsPath, $"results_{DateTime.Now:yyyyMMdd_HHmmss}.csv"), singleTestResultsSb.ToString());
             }
         }
     }

@@ -68,6 +68,7 @@ namespace MASES.KNet.Benchmark
             Stopwatch swCreateRecord = null;
             Stopwatch swSendRecord = null;
             Stopwatch stopWatch = null;
+            Stopwatch flushTimeWatch = null;
             IProducer<long, byte[]> producer = ConfluentProducer();
             try
             {
@@ -173,11 +174,19 @@ namespace MASES.KNet.Benchmark
                     }
                 }
             }
-            finally { producer.Flush(); stopWatch?.Stop(); if (!SharedObjects) producer.Dispose(); }
-
-            if (numpacket != 0 && ShowResults && !ProducePreLoad)
+            finally
             {
-                Console.WriteLine($"Confluent: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
+                if (NoFlushTime) stopWatch.Stop();
+                flushTimeWatch = Stopwatch.StartNew();
+                producer.Flush();
+                flushTimeWatch.Stop();
+                stopWatch?.Stop();
+                if (!SharedObjects) producer.Dispose();
+            }
+
+            if (numpacket != 0 && ShowIntermediateResults && !ProducePreLoad)
+            {
+                Console.WriteLine($"Confluent: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) Flush {flushTimeWatch.ElapsedMicroSeconds()} -> TotalTime {stopWatch.ElapsedMicroSeconds()} BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
             }
             return stopWatch;
         }
@@ -455,7 +464,7 @@ namespace MASES.KNet.Benchmark
                 finally { producer.Flush(); stopWatch.Stop(); if (!SharedObjects) producer.Dispose(); }
                 startEvent.WaitOne();
                 totalExecution.Stop();
-                if (ShowResults)
+                if (ShowIntermediateResults)
                 {
                     Console.WriteLine($"Confluent: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
                 }
