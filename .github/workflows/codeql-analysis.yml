@@ -104,11 +104,11 @@ jobs:
 
     - name: Maven preparation (step 1)
       if: matrix.language == 'java' 
-      run: dotnet build --no-incremental --configuration Release --framework net6.0 /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" ./src/net/KNet.sln
+      run: dotnet build --no-incremental --configuration Release --framework net8.0 /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" ./src/net/KNet.sln
 
     - name: Maven preparation (step 2)
       if: matrix.language == 'java' 
-      run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.10 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/jvm/knet/pom.xml
+      run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.10 -Dpackaging=jar -Dfile=../../../bin/net8.0/JCOBridge.jar -f ./src/jvm/knet/pom.xml
       shell: bash
 
     - if: matrix.language == 'java' 
