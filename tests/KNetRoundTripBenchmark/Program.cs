@@ -37,7 +37,7 @@ namespace MASES.KNet.Benchmark
                 List<double> KNETData = new();
                 List<double> ConfluentData = new();
 
-                singleTestResultsSb.AppendLine("Length;NumPackets;KNETMax;KNETMin;KNETMean;ConfluentMax;ConfluentMin;ConfluentMean");
+                singleTestResultsSb.AppendLine("NumPackets;Length;KNETMax;KNETMin;KNETMean;ConfluentMax;ConfluentMin;ConfluentMean");
 
                 for (int packets = MinPacketsToExchange; packets <= MaxPacketsToExchange; packets *= PacketsToExchangeMultiplier)
                 {
@@ -95,7 +95,7 @@ namespace MASES.KNet.Benchmark
                                 }
                                 ConfluentData.AddRange(tempConfluentData.Item2);
 
-                                singleTestResultsSb.AppendLine($"{length};{packets};{KNETData.Max()};{KNETData.Min()};{KNETData.Average()};{ConfluentData.Max()};{ConfluentData.Min()};{ConfluentData.Average()};");
+                                singleTestResultsSb.AppendLine($"{packets};{length};{KNETData.Max()};{KNETData.Min()};{KNETData.Average()};{ConfluentData.Max()};{ConfluentData.Min()};{ConfluentData.Average()};");
 
                                 if (ShowIntermediateResults)
                                 {

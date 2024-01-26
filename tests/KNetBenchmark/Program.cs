@@ -42,7 +42,7 @@ namespace MASES.KNet.Benchmark
                 List<long> kNetConsumeTimes = new();
                 List<long> confluentConsumeTimes = new();
 
-                singleTestResultsSb.AppendLine("Length;NumPackets;KNETProd;KNETCons;ConfluentProd;ConfluentCons");
+                singleTestResultsSb.AppendLine("NumPackets;Length;KNETProd;KNETCons;ConfluentProd;ConfluentCons");
 
                 for (int packets = MinPacketsToExchange; packets <= MaxPacketsToExchange; packets *= PacketsToExchangeMultiplier)
                 {
@@ -111,7 +111,7 @@ namespace MASES.KNet.Benchmark
                                 kNetConsumeTimes.Add(KNETConsSW.ElapsedMicroSeconds());
                                 confluentConsumeTimes.Add(ConfluentConsSW.ElapsedMicroSeconds());
 
-                                singleTestResultsSb.AppendLine($"{length};{packets};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW?.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW?.ElapsedMicroSeconds()}");
+                                singleTestResultsSb.AppendLine($"{packets};{length};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW?.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW?.ElapsedMicroSeconds()}");
 
                                 if (ShowIntermediateResults)
                                 {

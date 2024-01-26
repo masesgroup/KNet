@@ -32,7 +32,7 @@ namespace MASES.KNet.Benchmark
             try
             {
                 Init(args);
-                singleTestResultsSb.AppendLine("Length;NumPackets;KNETProd;KNETCons;ConfluentProd;ConfluentCons");
+                singleTestResultsSb.AppendLine("NumPackets;Length;KNETProd;KNETCons;ConfluentProd;ConfluentCons");
 
                 for (int packets = MinPacketsToExchange; packets <= MaxPacketsToExchange; packets *= PacketsToExchangeMultiplier)
                 {
@@ -101,7 +101,7 @@ namespace MASES.KNet.Benchmark
                             if (ShowLogs) Console.WriteLine($"Consuming from topic {topicNameConfluent}");
                             var ConfluentConsSW = ConsumeProduceConfluent(topicNameConfluent, length, packets, CheckOnConsume ? data : null);
 
-                            singleTestResultsSb.AppendLine($"{length};{packets};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW.ElapsedMicroSeconds()}");
+                            singleTestResultsSb.AppendLine($"{packets};{length};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW.ElapsedMicroSeconds()}");
 
                             if (ShowIntermediateResults)
                             {
