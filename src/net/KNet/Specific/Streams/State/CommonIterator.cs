@@ -25,18 +25,6 @@ using System.Threading;
 
 namespace MASES.KNet.Streams.State
 {
-    class PrefetchableEnumeratorSettings : IEnumerableExtension
-    {
-        public PrefetchableEnumeratorSettings()
-        {
-            UsePrefetch = true;
-            UseThread = true;
-        }
-        public bool UsePrefetch { get; set; }
-        public bool UseThread { get; set; }
-        public IConverterBridge ConverterBridge { get; set; }
-    }
-
     /// <summary>
     /// A common class for all iterators
     /// </summary>

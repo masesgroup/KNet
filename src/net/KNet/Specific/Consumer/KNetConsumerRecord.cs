@@ -16,15 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using Org.Apache.Kafka.Clients.Consumer;
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Common.Header;
-using Org.Apache.Kafka.Common.Record;
 
 namespace MASES.KNet.Consumer
 {
     /// <summary>
-    /// KNet extension of <see cref="ConsumerRecord{K, V}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
@@ -32,43 +29,58 @@ namespace MASES.KNet.Consumer
     {
         readonly IKNetDeserializer<K> _keyDeserializer;
         readonly IKNetDeserializer<V> _valueDeserializer;
-        readonly ConsumerRecord<byte[], byte[]> _record;
+        readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> _record;
         /// <summary>
         /// Initialize a new <see cref="KNetConsumerRecord{K, V}"/>
         /// </summary>
-        /// <param name="record">The <see cref="ConsumerRecord{K, V}"/> to use for initialization</param>
+        /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}"/> to use for initialization</param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="KNetSerDes{K}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="KNetSerDes{K}"/></param>
-        internal KNetConsumerRecord(ConsumerRecord<byte[], byte[]> record, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
+        /// <param name="fromPrefetched">True if the initialization comes from the prefetch iterator</param>
+        internal KNetConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> record, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer, bool fromPrefetched)
         {
             _record = record;
             _keyDeserializer = keyDeserializer;
             _valueDeserializer = valueDeserializer;
+            if (fromPrefetched)
+            {
+                // the following lines will read and prepares Key, Value, Topic, Headers
+                _ = Key;
+                _ = Value;
+            }
         }
-        /// <inheritdoc cref="ConsumerRecord{K, V}.Topic"/>
-        public string Topic => _record.Topic();
-        /// <inheritdoc cref="ConsumerRecord{K, V}.LeaderEpoch"/>
+        string _topic = null;
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Topic"/>
+        public string Topic { get { _topic ??= _record.Topic(); return _topic; } }
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.LeaderEpoch"/>
         public int? LeaderEpoch { get { var epoch = _record.LeaderEpoch(); return epoch.IsEmpty() ? null : epoch.Get(); } }
-        /// <inheritdoc cref="ConsumerRecord{K, V}.Partition"/>
-        public int Partition => _record.Partition();
-        /// <inheritdoc cref="ConsumerRecord{K, V}.Headers"/>
-        public Headers Headers => _record.Headers();
-        /// <inheritdoc cref="ConsumerRecord{K, V}.Offset"/>
-        public long Offset => _record.Offset();
-        /// <inheritdoc cref="ConsumerRecord{K, V}.DateTime"/>
+        int? _partition = null;
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Partition"/>
+        public int Partition => _partition ??= _record.Partition();
+        Org.Apache.Kafka.Common.Header.Headers _headers = null;
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Headers"/>
+        public Org.Apache.Kafka.Common.Header.Headers Headers => _headers ??= _record.Headers();
+        long? _offset = null;
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Offset"/>
+        public long Offset => _offset ??= _record.Offset();
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.DateTime"/>
         public System.DateTime DateTime => _record.DateTime;
-        /// <inheritdoc cref="ConsumerRecord{K, V}.Timestamp"/>
-        public long Timestamp => _record.Timestamp();
-        /// <inheritdoc cref="ConsumerRecord{K, V}.TimestampType"/>
-        public TimestampType TimestampType => _record.TimestampType();
-        /// <inheritdoc cref="ConsumerRecord{K, V}.SerializedKeySize"/>
-        public int SerializedKeySize => _record.SerializedKeySize();
-        /// <inheritdoc cref="ConsumerRecord{K, V}.SerializedValueSize"/>
-        public int SerializedValueSize => _record.SerializedValueSize();
+        long? _timestamp = null;
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Timestamp"/>
+        public long Timestamp => _timestamp ??= _record.Timestamp();
+        Org.Apache.Kafka.Common.Record.TimestampType _timestampType = null;
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.TimestampType"/>
+        public Org.Apache.Kafka.Common.Record.TimestampType TimestampType => _timestampType ??= _record.TimestampType();
+        int? _serializedKeySize = null;
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.SerializedKeySize"/>
+        public int SerializedKeySize => _serializedKeySize ??= _record.SerializedKeySize();
+        int? _serializedValueSize = null;
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.SerializedValueSize"/>
+        public int SerializedValueSize => _serializedValueSize ??= _record.SerializedValueSize();
 
         bool _localKeyDes = false;
         K _localKey = default;
-        /// <inheritdoc cref="ConsumerRecord{K, V}.Key"/>
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Key"/>
         public K Key
         {
             get
@@ -84,7 +96,7 @@ namespace MASES.KNet.Consumer
 
         bool _localValueDes = false;
         V _localValue = default;
-        /// <inheritdoc cref="ConsumerRecord{K, V}.Value"/>
+        /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Value"/>
         public V Value
         {
             get

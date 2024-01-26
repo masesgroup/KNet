@@ -39,12 +39,12 @@ namespace MASES.KNet.Streams
         internal KNetWindowedKeyValue(IGenericSerDesFactory factory,
                                       Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> value,
                                       IKNetSerDes<TValue> valueSerDes,
-                                      bool fromAsync)
+                                      bool fromPrefetched)
         {
             _factory = factory;
             _valueInner = value;
             _valueSerDes = valueSerDes;
-            if (fromAsync)
+            if (fromPrefetched)
             {
                 _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
                 _value = _valueSerDes.Deserialize(null, _valueInner.value);
