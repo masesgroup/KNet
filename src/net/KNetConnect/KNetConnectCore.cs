@@ -31,6 +31,11 @@ namespace MASES.KNetCLI
     /// </summary>
     internal class KNetConnectCore : KNetCore<KNetConnectCore>
     {
+        protected override string DefaultLog4JConfiguration()
+        {
+            return Path.Combine(Const.DefaultConfigurationPath, "tools-log4j.properties");
+        }
+
         public override IEnumerable<IArgumentMetadata> CommandLineArguments
         {
             get
