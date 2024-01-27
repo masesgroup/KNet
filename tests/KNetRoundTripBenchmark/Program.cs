@@ -109,6 +109,9 @@ namespace MASES.KNet.Benchmark
                                     DeleteTopic(topicNameKNet);
                                     DeleteTopic(topicNameConfluent);
                                 }
+
+                                GC.Collect();
+                                Java.Lang.System.Gc();
                             }
                         }
                     }

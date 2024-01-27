@@ -202,7 +202,7 @@ namespace MASES.KNet.Benchmark
                     kafkaproducer.Flush();
                     flushTimeWatch.Stop();
                     stopWatch.Stop();
-                    if (!SharedObjects) kafkaproducer.Dispose();
+                    if (!SharedObjects) { kafkaproducer.Dispose(); kafkaproducer = null; }
                 }
                 if (ShowIntermediateResults && !ProducePreLoad)
                 {
@@ -332,7 +332,7 @@ namespace MASES.KNet.Benchmark
                 }
                 finally
                 {
-                    if (!SharedObjects) consumer.Dispose();
+                    if (!SharedObjects) { consumer.Dispose(); consumer = null; }
                     rebalanceListener?.Dispose();
                     duration?.Dispose();
                     topics?.Dispose();
@@ -419,6 +419,7 @@ namespace MASES.KNet.Benchmark
                         if (!SharedObjects)
                         {
                             consumer.Dispose();
+                            consumer = null;
                         }
                         startEvent.Set();
                         duration?.Dispose();
@@ -479,7 +480,12 @@ namespace MASES.KNet.Benchmark
                         if (ContinuousFlushKNet) producer.Flush();
                     }
                 }
-                finally { producer.Flush(); stopWatch.Stop(); if (!SharedObjects) producer.Dispose(); }
+                finally
+                {
+                    producer.Flush();
+                    stopWatch.Stop();
+                    if (!SharedObjects) { producer.Dispose(); producer = null; }
+                }
                 startEvent.WaitOne();
                 totalExecution.Stop();
                 if (ShowIntermediateResults)

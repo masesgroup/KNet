@@ -123,6 +123,9 @@ namespace MASES.KNet.Benchmark
                                 DeleteTopic(topicNameConfluent);
                                 DeleteTopic(topicNameConfluent + "_COPY");
                             }
+
+                            GC.Collect();
+                            Java.Lang.System.Gc();
                         }
                     }
                 }
