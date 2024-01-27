@@ -66,7 +66,7 @@ namespace MASES.KNet
                     new ArgumentMetadata<string>()
                     {
                         Name = CLIParam.Log4JConfiguration,
-                        Default = Const.DefaultLog4JPath,
+                        Default = DefaultLog4JConfiguration(),
                         Help = "The file containing the configuration of log4j.",
                     },
                     new ArgumentMetadata<string>()
@@ -100,6 +100,16 @@ namespace MASES.KNet
             }
         }
         /// <summary>
+        /// Returns the default configuration file to use when initializing command line defaults
+        /// </summary>
+        /// <returns>The configuration file to use for logging</returns>
+        /// <remarks>Overrides in derived classes to give another default file</remarks>
+        protected virtual string DefaultLog4JConfiguration()
+        {
+            return Const.DefaultLog4JConfigurationPath;
+        }
+
+        /// <summary>
         /// Public initializer
         /// </summary>
         public KNetCore()
@@ -115,6 +125,18 @@ namespace MASES.KNet
             _classToRun = ParsedArgs.Get<string>(CLIParam.ClassToRun);
             _JarRootPath = ParsedArgs.Get<string>(CLIParam.KafkaLocation);
             _log4JPath = ParsedArgs.Get<string>(CLIParam.Log4JConfiguration);
+            if (!Path.IsPathRooted(_log4JPath)) // it is not a full path
+            {
+                var absolutePath = Path.Combine(Const.DefaultConfigurationPath, _log4JPath);
+                if (File.Exists(absolutePath))
+                {
+                    _log4JPath = absolutePath;
+                }
+                else
+                {
+                    throw new ArgumentException($"{_log4JPath} is not an absolute path and there is no file under {Const.DefaultConfigurationPath} whose absolute path is {absolutePath}");
+                }
+            }
             _logPath = ParsedArgs.Get<string>(CLIParam.LogPath);
             _scalaVersion = ParsedArgs.Get<string>(CLIParam.ScalaVersion);
             _disableJMX = ParsedArgs.Exist(CLIParam.DisableJMX);

@@ -83,12 +83,9 @@ jobs:
         with:
           branch-suffix: short-commit-hash
           add-paths: src/*.*
-          commit-message: |
-            Update generated classes after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-            
-            fix #92
+          commit-message: Update generated classes after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           title: Changes by GitHub action
-          body: Automated changes by GitHub action
+          body: Automated changes by GitHub action, fix #92
           reviewers: masesdevelopers
           assignees: masesdevelopers
           labels: java, .NET, enhancement 

@@ -18,20 +18,20 @@
 	</PropertyGroup>
 
 	<ItemGroup Condition="True">
-		<knetcli_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
-		<knetcli_config Include="$(ProjectDir)\..\..\config\*.*" />
-		<knetcli_kraft Include="$(ProjectDir)\..\..\config\kraft\*.*" />
+		<knetconnect_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
+		<knetconnect_config Include="$(ProjectDir)\..\..\config\*.*" />
+		<knetconnect_kraft Include="$(ProjectDir)\..\..\config\kraft\*.*" />
 	</ItemGroup>
 
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
-		<Copy SourceFiles="@(knetcli_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetcli_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetcli_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+		<Copy SourceFiles="@(knetconnect_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(knetconnect_config)" DestinationFolder="$(OutDir)\config" />
+		<Copy SourceFiles="@(knetconnect_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
 	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
-		<Copy SourceFiles="@(knetcli_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetcli_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetcli_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+		<Copy SourceFiles="@(knetconnect_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(knetconnect_config)" DestinationFolder="$(OutDir)\config" />
+		<Copy SourceFiles="@(knetconnect_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
 	
 	<ItemGroup>
