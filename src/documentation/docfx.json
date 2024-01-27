@@ -52,7 +52,7 @@
       "https://xref.docs.microsoft.com/query?uid={uid}"
     ],
     "xref": [
-      https://jnet.masesgroup.com/xrefmap.yml
+      "https://jnet.masesgroup.com/xrefmap.yml"
     ],
     "postProcessors": [ "ExtractSearchIndex" ],
     "globalMetadata": {
