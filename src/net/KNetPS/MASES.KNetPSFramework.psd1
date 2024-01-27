@@ -28,7 +28,10 @@ Copyright = 'Copyright ©  MASES s.r.l. 2024'
 Description = 'PowerShell command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).'
 
 # Minimum version of the Windows PowerShell engine required by this module
-PowerShellVersion = '3.0'
+PowerShellVersion = '5.1'
+
+# Specifies the compatible PSEditions of the module.
+CompatiblePSEditions = @('Desktop')
 
 # Name of the Windows PowerShell host required by this module
 PowerShellHostName = ''
@@ -64,16 +67,68 @@ TypesToProcess = @()
 NestedModules= @()
 
 # Functions to export from this module
-FunctionsToExport = '*'
+FunctionsToExport = @()
 
 # Cmdlets to export from this module
-CmdletsToExport = '*'
+CmdletsToExport = @(
+    'Start-KNetPS',
+    'New-KObject',
+    'Start-AclCommand',
+    'Start-BrokerApiVersionsCommand',
+    'Start-ConfigCommand',
+    'Start-ConsumerGroupCommand',
+    'Start-DelegationTokenCommand',
+    'Start-DeleteRecordsCommand',
+    'Start-FeatureCommand',
+    'Start-LeaderElectionCommand',
+    'Start-LogDirsCommand',
+    'Start-MetadataQuorumCommand',
+    'Start-ReassignPartitionsCommand',
+    'Start-TopicCommand',
+    'Start-ZkSecurityMigrator',
+    'Start-KafkaStart',
+    'Start-ZooKeeperShell',
+    'Start-ZooKeeperStart',
+    'Start-MetadataShell',
+    'Start-ClusterTool',
+    'Start-ConsoleConsumer',
+    'Start-ConsoleProducer',
+    'Start-ConsumerPerformance',
+    'Start-DumpLogSegments',
+    'Start-GetOffsetShell',
+    'Start-MirrorMaker',
+    'Start-ProducerPerformance',
+    'Start-ReplicaVerificationTool',
+    'Start-StorageTool',
+    'Start-StreamsResetter',
+    'Start-TransactionsCommand',
+    'Start-VerifiableConsumer',
+    'Start-VerifiableProducer',
+    'Start-ConnectDistributed',
+    'Start-ConnectStandalone',
+    'Start-MirrorMaker2',
+    'New-AdminClientConfigBuilder',
+    'New-ConsumerConfigBuilder',
+    'New-KafkaAdminClient',
+    'New-KafkaConsumer',
+    'New-KafkaProducer',
+    'New-KNetConsumer',
+    'New-KNetProducer',
+    'New-ProducerConfigBuilder',
+    'Invoke-Poll',
+    'Get-ConsumerRecord',
+    'Get-ConsumerGroupMetadata',
+    'Invoke-Subscribe',
+    'Invoke-Unsubscribe',
+    'New-ProducerRecord',
+    'Invoke-Send'
+)
 
 # Variables to export from this module
 VariablesToExport = '*'
 
 # Aliases to export from this module
-AliasesToExport = '*'
+AliasesToExport = @()
 
 # List of all modules packaged with this module
 ModuleList = @()
@@ -82,5 +137,25 @@ ModuleList = @()
 FileList = ''
 
 # Private data to pass to the module specified in ModuleToProcess
-PrivateData = ''
+PrivateData = @{
+
+    PSData = @{
+
+        Tags = @('KNetPS', 'PSEdition_Core', 'PSEdition_Desktop', 'Windows', 'Linux', 'ZooKeeper', 'Apache', 'Kafka', 'ApacheKafka', 'Admin', 'Consumer', 'Producer')
+
+        LicenseUri = 'https://github.com/masesgroup/KNet/blob/master/LICENSE'
+
+        ProjectUri = 'https://github.com/masesgroup/KNet'
+
+        IconUri = 'https://raw.githubusercontent.com/masesgroup/KNet/master/src/net/Common/JCOB128x128.png'
+
+        ReleaseNotes = 'https://github.com/masesgroup/KNet/releases'
+
+    }
+
+}
+
+HelpInfoURI = 'https://knet.masesgroup.com/articles/usagePS.html'
+
+# DefaultCommandPrefix = ''
 }

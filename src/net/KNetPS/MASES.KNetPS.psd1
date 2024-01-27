@@ -10,7 +10,7 @@ RootModule = 'MASES.KNetPS.psm1'
 
 ModuleVersion = '2.4.1'
 
-# CompatiblePSEditions = @()
+CompatiblePSEditions = 'Desktop', 'Core'
 
 GUID = '701745F8-9DD8-4A84-830F-42098FD5FB49'
 
@@ -27,7 +27,7 @@ Description = 'KNet PowerShell command line interface is a PowerShell Module to 
 
 More information within the project hosted on GitHub. Further information at https://github.com/masesgroup/KNet.'
 
-# PowerShellVersion = ''
+PowerShellVersion = '5.1'
 
 # PowerShellHostName = ''
 
@@ -135,7 +135,7 @@ PrivateData = @{
 
 } 
 
-HelpInfoURI = 'https://masesgroup.github.io/KNet/articles/usagePS.html'
+HelpInfoURI = 'https://knet.masesgroup.com/articles/usagePS.html'
 
 # DefaultCommandPrefix = ''
 }
