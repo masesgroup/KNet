@@ -2,11 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>Class TopicConfigBuilder
- | MASES Group - KNet </title>
+      <title>Class TopicConfigBuilder | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class TopicConfigBuilder
- | MASES Group - KNet ">
+      <meta name="title" content="Class TopicConfigBuilder | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
       <meta name="description" content="Builder for">
       <link rel="icon" href="../images/favicon.ico">
@@ -87,8 +85,7 @@
 
 
   <h1 id="MASES_KNet_Common_TopicConfigBuilder" data-uid="MASES.KNet.Common.TopicConfigBuilder" class="text-break">
-    Class TopicConfigBuilder
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L26"><i class="bi bi-code-slash"></i></a>
+Class TopicConfigBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +98,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TopicConfigBuilder : GenericConfigBuilder&lt;TopicConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory</code></pre>
+    <pre><code class="lang-csharp hljs">public class TopicConfigBuilder : GenericConfigBuilder&lt;TopicConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable</code></pre>
   </div>
 
 
@@ -121,11 +118,12 @@
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
 
 
-  <dl class="typelist derived">
+  <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
@@ -166,6 +164,12 @@
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__1">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.BuildValueSerDes&lt;TValue&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Clear">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Dispose">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.Dispose()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -221,7 +225,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.CleanupPolicyTypes.html">CleanupPolicyTypes</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -253,7 +257,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.CompressionTypes.html">CompressionTypes</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -285,7 +289,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -317,7 +321,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -349,7 +353,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -381,7 +385,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -413,7 +417,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -445,7 +449,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -477,7 +481,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -509,7 +513,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -541,7 +545,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -573,7 +577,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -605,7 +609,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -637,7 +641,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -669,7 +673,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.MessageTimestampTypes.html">MessageTimestampTypes</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -701,7 +705,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -733,7 +737,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -765,7 +769,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -797,7 +801,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -829,7 +833,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -861,7 +865,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -893,7 +897,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -925,7 +929,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -957,7 +961,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -989,7 +993,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1021,7 +1025,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1053,7 +1057,7 @@
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1085,13 +1089,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>cleanupPolicy</code> <a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.CleanupPolicyTypes.html">CleanupPolicyTypes</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1122,13 +1126,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>compressionType</code> <a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.CompressionTypes.html">CompressionTypes</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1159,13 +1163,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>deleteRetentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1196,13 +1200,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>fileDeleteDelayMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1233,13 +1237,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>flushMessageInterval</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1270,13 +1274,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>flushMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1307,13 +1311,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>indexIntervalBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1344,13 +1348,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>localLogRetentionBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1381,13 +1385,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>localLogRetentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1418,13 +1422,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxCompactationLagMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1455,13 +1459,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxMessageBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1492,13 +1496,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageDownConversionEnable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1529,13 +1533,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageTimestampAfterMaxMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1566,13 +1570,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageTimestampBeforeMaxMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1603,13 +1607,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageTimestampType</code> <a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a>.<a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.MessageTimestampTypes.html">MessageTimestampTypes</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1640,13 +1644,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>minCleanableDirtyRatio</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1677,13 +1681,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>minCompactationLagMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1714,13 +1718,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>minInSyncReplicas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1751,13 +1755,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>preallocate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1788,13 +1792,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>remoteLogStorageEnable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1825,13 +1829,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>retentionBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1862,13 +1866,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>retentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1899,13 +1903,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>segmentBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1936,13 +1940,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>segmentIndexBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1973,13 +1977,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>segmentJitterMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -2010,13 +2014,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>segmentMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
@@ -2047,13 +2051,13 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>uncleanLeaderElectionEnable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
-    <dd>Builder for</dd>
+    <dd></dd>
   </dl>
 
 
