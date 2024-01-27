@@ -153,4 +153,9 @@ PrivateData = @{
 
     }
 
-} 
+}
+
+HelpInfoURI = 'https://knet.masesgroup.com/articles/usagePS.html'
+
+# DefaultCommandPrefix = ''
+}

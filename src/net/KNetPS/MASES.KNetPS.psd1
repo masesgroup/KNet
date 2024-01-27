@@ -135,7 +135,7 @@ PrivateData = @{
 
 } 
 
-HelpInfoURI = 'https://masesgroup.github.io/KNet/articles/usagePS.html'
+HelpInfoURI = 'https://knet.masesgroup.com/articles/usagePS.html'
 
 # DefaultCommandPrefix = ''
 }
