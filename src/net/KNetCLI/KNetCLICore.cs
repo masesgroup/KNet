@@ -29,6 +29,11 @@ namespace MASES.KNetCLI
     public class KNetCLICore<T> : KNetCore<T>
         where T : KNetCLICore<T>
     {
+        protected override string DefaultLog4JConfiguration()
+        {
+            return Path.Combine(Const.DefaultConfigurationPath, "tools-log4j.properties");
+        }
+
         protected override string[] ProcessCommandLine()
         {
             var result = base.ProcessCommandLine();

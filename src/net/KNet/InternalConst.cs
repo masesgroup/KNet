@@ -48,13 +48,21 @@ namespace MASES.KNet
         /// </summary>
         public const string DefaultScalaVersion = "2.13.6";
         /// <summary>
+        /// Default path location of configuration files
+        /// </summary>
+        public static readonly string DefaultConfigurationPath = Path.Combine(AssemblyLocation, "config");
+        /// <summary>
+        /// Default path location of Jars files
+        /// </summary>
+        public static readonly string DefaultJarsPath = Path.Combine(AssemblyLocation, "jars");
+        /// <summary>
         /// Default root path, i.e. consider installation within bin folder
         /// </summary>
-        public static readonly string DefaultRootPath = Path.Combine(AssemblyLocation, "jars") + Path.DirectorySeparatorChar;
+        public static readonly string DefaultRootPath = DefaultJarsPath + Path.DirectorySeparatorChar;
         /// <summary>
-        /// Default log4j path, i.e. consider installation within bin folder
+        /// Default log4j configuration file, i.e. considering a relative location to <see cref="DefaultConfigurationPath"/>
         /// </summary>
-        public static readonly string DefaultLog4JPath = Path.Combine(AssemblyLocation, "config", "log4j.properties");
+        public static readonly string DefaultLog4JConfigurationPath = Path.Combine(DefaultConfigurationPath, "knet-log4j.properties");
         /// <summary>
         /// Default log path, i.e. consider installation within bin folder
         /// </summary>
