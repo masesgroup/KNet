@@ -51,6 +51,9 @@
     "xrefService": [
       "https://xref.docs.microsoft.com/query?uid={uid}"
     ],
+    "xref": [
+      https://jnet.masesgroup.com/xrefmap.yml
+    ],
     "postProcessors": [ "ExtractSearchIndex" ],
     "globalMetadata": {
 	  "_appLogoPath": "images/logo.png",
