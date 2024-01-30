@@ -191,7 +191,6 @@ jobs:
         run: |
           Copy-Item .\src\net\KNetPS\MASES.KNetPS.psd1 -Destination .\MASES.KNetPS\MASES.KNetPS.psd1 -Force
           Copy-Item .\src\net\KNetPS\MASES.KNetPS.psm1 -Destination .\MASES.KNetPS\MASES.KNetPS.psm1 -Force
-          New-FileCatalog -Path .\MASES.KNetPS\ -CatalogFilePath .\MASES.KNetPS\MASES.KNetPS.cat
         shell: pwsh
 
       - name: Recompile to create nuget packages
