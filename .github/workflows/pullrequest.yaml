@@ -24,7 +24,7 @@ jobs:
         run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do
-              if [[ $added_modified_file == ".github/workflows/build.yaml"* ]]; then
+              if [[ $added_modified_file == ".github/workflows/pullrequest.yaml"* ]]; then
                 echo "$added_modified_file is myself."
                 echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
