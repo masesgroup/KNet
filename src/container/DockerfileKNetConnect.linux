@@ -10,7 +10,11 @@ RUN dotnet restore KNetDocker.sln
 RUN dotnet publish ./KNetConnect/KNetConnect.csproj --framework net8.0 -c Release -o out
 
 # Build runtime image
-FROM ghcr.io/masesgroup/mases.jnet:latest
+FROM mcr.microsoft.com/dotnet/runtime:6.0
+
+# Add JRE
+RUN apt update
+RUN apt install -y openjdk-11-jre-headless
 
 ADD ./jars /app/jars
 ADD ./src/config /app/config
