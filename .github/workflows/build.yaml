@@ -89,22 +89,22 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
         
       - name: Build KNet Docker Image
-        run: docker build -t mases.knet -f ./src/container/DockerfileKNet.linux .
+        run: docker build -t knet -f ./src/container/DockerfileKNet.linux .
 
       - name: Save Docker Image
-        run: docker image save -o mases.knet.linux.tar mases.knet
+        run: docker image save -o knet.linux.tar knet
         
       - name: Compress KNet Docker Image
-        run: gzip mases.knet.linux.tar
+        run: gzip knet.linux.tar
           
       - name: Build KNetConnect Docker Image
-        run: docker build -t mases.knetconnect -f ./src/container/DockerfileKNetConnect.linux .
+        run: docker build -t knetconnect -f ./src/container/DockerfileKNetConnect.linux .
 
       - name: Save KNetConnect Docker Image
-        run: docker image save -o mases.knetconnect.linux.tar mases.knetconnect
+        run: docker image save -o knetconnect.linux.tar knetconnect
         
       - name: Compress KNetConnect Docker Image
-        run: gzip mases.knetconnect.linux.tar
+        run: gzip knetconnect.linux.tar
         
       - uses: actions/upload-artifact@v4
         with:
@@ -183,7 +183,6 @@ jobs:
         run: |
           Copy-Item .\src\net\KNetPS\MASES.KNetPS.psd1 -Destination .\MASES.KNetPS\MASES.KNetPS.psd1 -Force
           Copy-Item .\src\net\KNetPS\MASES.KNetPS.psm1 -Destination .\MASES.KNetPS\MASES.KNetPS.psm1 -Force
-          New-FileCatalog -Path .\MASES.KNetPS\ -CatalogFilePath .\MASES.KNetPS\MASES.KNetPS.cat
         shell: pwsh
      
       - name: Create PowerShell package
