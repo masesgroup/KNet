@@ -22,6 +22,8 @@
   href: usageCLI.md
 - name: KNet Connect usage
   href: usageConnect.md
+- name: KNet Docker images
+  href: docker.md
 - name: KNet PowerShell usage
   href: usagePS.md
 - name: KNet Template usage
