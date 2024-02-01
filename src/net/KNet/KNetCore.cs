@@ -142,6 +142,25 @@ namespace MASES.KNet
             _disableJMX = ParsedArgs.Exist(CLIParam.DisableJMX);
             return result;
         }
+        /// <summary>
+        /// Prepare <see cref="MainClassToRun"/> property
+        /// </summary>
+        /// <param name="className">The class to search</param>
+        /// <exception cref="ArgumentException">If <paramref name="className"/> does not have a corresponding implemented <see cref="Type"/></exception>
+        protected virtual void PrepareMainClassToRun(string className)
+        {
+            if (!string.IsNullOrEmpty(className)) return;
+            Type type = null;
+            foreach (var item in typeof(KNetCore<>).Assembly.ExportedTypes)
+            {
+                if (item.Name == className || item.FullName == className)
+                {
+                    type = item;
+                    break;
+                }
+            }
+            MainClassToRun = type ?? throw new ArgumentException($"Requested class {className} is not a valid class name.");
+        }
 
         /// <summary>
         /// Sets the <see cref="Type"/> to be invoked at startup
