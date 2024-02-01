@@ -10,7 +10,7 @@ _description: Describes how to use Kafka Connect SDK of .NET suite for Apache Ka
 KNet Connect is available in two different formats:
 
 - dotnet tool hosted on NuGet.org: check https://www.nuget.org/packages/MASES.KNetConnect/ and https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools for installation deep instructions.
-- Docker image hosted on https://github.com/masesgroup/KNet/pkgs/container/mases.knetconnect: follow instruction within the page and general instruction on https://docs.docker.com
+- Docker image hosted on [GitHub](https://github.com/masesgroup/KNet/pkgs/container/knetconnect) or [Docker Hub](https://hub.docker.com/repository/docker/masesgroup/knetconnect/general): follow instruction within the page and general instruction on https://docs.docker.com
 
 ## Usage
 
@@ -24,9 +24,13 @@ To use the Connect interface (KNetConnect) runs a command like the following:
 
 - **Docker image**
 
-> docker run ghcr.io/masesgroup/mases.knetconnect -s connect-standalone.properties specific-connector.properties
+> docker run ghcr.io/masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
 
-> docker run ghcr.io/masesgroup/mases.knetconnect -d connect-distributed.properties
+> docker run masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
+
+> docker run ghcr.io/masesgroup/knetconnect -d connect-distributed.properties
+
+> docker run masesgroup/knetconnect -d connect-distributed.properties
 
 ### Command line switch available
 

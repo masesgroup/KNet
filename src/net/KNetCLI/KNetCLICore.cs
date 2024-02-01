@@ -95,7 +95,7 @@ namespace MASES.KNetCLI
                         Name = CLIParam.NoLogo[0],
                         ShortName = CLIParam.NoLogo[1],
                         Type = ArgumentType.Single,
-                        Help = "Do not display initial logo",
+                        Help = "Do not display initial informative string",
                     },
                     new ArgumentMetadata<string>()
                     {
@@ -116,7 +116,7 @@ namespace MASES.KNetCLI
                         Name = CLIParam.NamespaceList[0],
                         ShortName = CLIParam.NamespaceList[1],
                         Type = ArgumentType.Double,
-                        Help = "A CSV list of namespace to be used for interactive shell, JNet namespace are added automatically",
+                        Help = "A CSV list of namespace to be used for interactive shell, JNet/KNet namespaces are added automatically",
                     },
                     new ArgumentMetadata<string>()
                     {

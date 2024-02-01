@@ -71,6 +71,7 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 * [KNet Serializer/Deserializer](src/documentation/articles/usageSerDes.md)
 * [KNet CLI usage](src/documentation/articles/usageCLI.md)
 * [KNet Connect usage](src/documentation/articles/usageConnect.md)
+* [KNet Docker usage](src/documentation/articles/docker.md)
 * [KNet PowerShell usage](src/documentation/articles/usagePS.md)
 * [KNet Template usage](src/documentation/articles/usageTemplates.md)
 * [How to build from scratch](src/documentation/articles/howtobuild.md)
