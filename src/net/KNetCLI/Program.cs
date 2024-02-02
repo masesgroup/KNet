@@ -17,36 +17,119 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using MASES.JNet.Specific;
+using MASES.JNet;
 using MASES.KNet;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+using Microsoft.CodeAnalysis.CSharp.Scripting;
+using Microsoft.CodeAnalysis.Scripting;
 
 namespace MASES.KNetCLI
 {
     class Program
     {
-        static void Main(string[] args)
+        static Assembly _assembly = typeof(Program).Assembly;
+
+        static async Task Main(string[] args)
         {
             try
             {
                 KNetCLICore.CreateGlobalInstance();
 
-                if (KNetCLICore.MainClassToRun == null) { ShowHelp(); return; }
+                if (KNetCLICore.MainClassToRun != null)
+                {
+                    try
+                    {
+                        KNetCLICore.Launch(KNetCLICore.MainClassToRun, KNetCLICore.FilteredArgs);
+                    }
+                    catch (TargetInvocationException tie)
+                    {
+                        throw tie.InnerException;
+                    }
+                    catch (JCOBridge.C2JBridge.JVMInterop.JavaException je)
+                    {
+                        throw je.Convert();
+                    }
+                }
+                else if (KNetCLICore.Interactive)
+                {
+                    ShowLogo("Interactive shell");
 
-                try
-                {
-                    KNetCLICore.Launch(KNetCLICore.MainClassToRun, KNetCLICore.FilteredArgs);
+                    ScriptOptions options = ScriptOptions.Default.WithReferences(typeof(JNetCoreBase<>).Assembly)
+                                                                 .WithImports(KNetCLICore.NamespaceList);
+                    ScriptState<object> state = null;
+                    while (true)
+                    {
+                        try
+                        {
+                            var codeToEval = Console.ReadLine();
+                            if (state == null)
+                            {
+                                state = await CSharpScript.RunAsync(codeToEval, options);
+                            }
+                            else
+                            {
+                                state = await state.ContinueWithAsync(codeToEval, options, (o) =>
+                                {
+                                    if (o is CompilationErrorException)
+                                    {
+                                        Console.WriteLine(o);
+                                        return true;
+                                    }
+                                    else if (o is JVMBridgeException jvmbe)
+                                    {
+                                        Console.WriteLine($"{jvmbe.BridgeClassName}: {jvmbe.Message}");
+                                        return true;
+                                    }
+                                    return false;
+                                });
+                            }
+                            if (state.ReturnValue != null) Console.WriteLine(state.ReturnValue);
+                        }
+                        catch (JVMBridgeException e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        catch (CompilationErrorException e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                    }
                 }
-                catch (TargetInvocationException tie)
+                else if (!string.IsNullOrEmpty(KNetCLICore.Script))
                 {
-                    throw tie.InnerException;
+                    ShowLogo("Script mode");
+
+                    if (!File.Exists(KNetCLICore.Script)) throw new FileNotFoundException("A valid file must be provided", KNetCLICore.Script);
+
+                    var scriptCode = File.ReadAllText(KNetCLICore.Script);
+
+                    ScriptOptions options = ScriptOptions.Default.WithReferences(typeof(JNetCoreBase<>).Assembly, typeof(KNetCore<>).Assembly)
+                                                                 .WithImports(KNetCLICore.NamespaceList);
+
+                    var script = CSharpScript.Create(scriptCode, options);
+                    var result = await script.RunAsync();
+                    if (result.ReturnValue != null) Console.WriteLine(result.ReturnValue);
                 }
-                catch (JCOBridge.C2JBridge.JVMInterop.JavaException je)
+                else ShowHelp();
+            }
+            catch (TargetInvocationException tie)
+            {
+                StringBuilder sb = new StringBuilder();
+                Exception e = tie.InnerException;
+                sb.AppendLine(e.Message);
+                Exception innerException = e.InnerException;
+                while (innerException != null)
                 {
-                    throw je.Convert();
+                    sb.AppendLine(innerException.Message);
+                    innerException = innerException.InnerException;
                 }
+                ShowHelp(sb.ToString());
             }
             catch (JVMBridgeException e)
             {
@@ -74,13 +157,16 @@ namespace MASES.KNetCLI
             }
         }
 
+        static void ShowLogo(string logoTrailer)
+        {
+            if (!KNetCLICore.NoLogo)
+            {
+                Console.WriteLine($"KNetCLI - CLI interface for KNet - Version {_assembly.GetName().Version} - {logoTrailer}");
+            }
+        }
+
         static void ShowHelp(string errorString = null)
         {
-            var assembly = typeof(Program).Assembly;
-
-            Console.WriteLine("KNetCLI - CLI interface for KNet - Version " + assembly.GetName().Version.ToString());
-            Console.WriteLine(assembly.GetName().Name + " -ClassToRun classname [-KafkaLocation kafkaFolder] <JCOBridgeArguments> <ClassArguments>");
-            Console.WriteLine();
             if (!string.IsNullOrEmpty(errorString))
             {
                 Console.WriteLine("Error: {0}", errorString);
@@ -90,8 +176,9 @@ namespace MASES.KNetCLI
             foreach (var item in implementedClasses.Keys)
             {
                 avTypes.AppendFormat("{0}, ", item);
-            }      
-
+            }
+            Console.WriteLine(_assembly.GetName().Name + " -ClassToRun classname [-KafkaLocation kafkaFolder] <JCOBridgeArguments> <ClassArguments>");
+            Console.WriteLine();
             Console.WriteLine("ClassToRun: the class to be invoked ({0}...). ", avTypes.ToString());
             Console.WriteLine("KafkaLocation: The folder where Kafka package is available. Default consider this application uses the package jars folder.");
             Console.WriteLine("ScalaVersion: the scala version to be used. The default version (2.13.6) is binded to the deafult Apache Kafka version available in the package.");
@@ -100,7 +187,7 @@ namespace MASES.KNetCLI
             Console.WriteLine("ClassArguments: the arguments of the class. Depends on the ClassToRun value, to obtain them runs the application or look at Apache Kafka documentation.");
             Console.WriteLine();
             Console.WriteLine("Examples:");
-            Console.WriteLine(assembly.GetName().Name + " -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning");
+            Console.WriteLine(_assembly.GetName().Name + " -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning");
         }
     }
 }

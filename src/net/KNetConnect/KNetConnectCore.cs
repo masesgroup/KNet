@@ -124,17 +124,7 @@ namespace MASES.KNetCLI
                 }
             }
 
-            Type type = null;
-
-            foreach (var item in typeof(KNetCore<>).Assembly.ExportedTypes)
-            {
-                if (item.Name == _classToRun || item.FullName == _classToRun)
-                {
-                    type = item;
-                    break;
-                }
-            }
-            MainClassToRun = type ?? throw new ArgumentException($"Requested class {_classToRun} is not a valid class name.");
+            PrepareMainClassToRun(_classToRun);
 
             return result;
         }
