@@ -9,8 +9,11 @@ _description: Describes how to use CLI interface of .NET suite for Apache Kafka
 
 KNet CLI is available in two different formats:
 
-- dotnet tool hosted on NuGet.org: check https://www.nuget.org/packages/MASES.KNetCLI/ and https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools for installation deep instructions.
-- Docker image hosted on [GitHub](https://github.com/masesgroup/KNet/pkgs/container/knet) and [Docker Hub](https://hub.docker.com/repository/docker/masesgroup/knet/general): follow instruction within the page and general instruction on https://docs.docker.com
+- **dotnet tool** hosted on [NuGet](https://www.nuget.org/packages/MASES.KNetCLI/): check https://www.nuget.org/packages/MASES.KNetCLI/ and https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools for installation deep instructions.
+- **Docker image** hosted on [GitHub](https://github.com/masesgroup/KNet/pkgs/container/knet) and [Docker Hub](https://hub.docker.com/repository/docker/masesgroup/knet/general): follow instruction within the page and general instruction on https://docs.docker.com
+
+> [!IMPORTANT]
+> The **dotnet tool** needs a JRE/JDK installed within the system
 
 ## Usage
 
@@ -20,13 +23,19 @@ To use the CLI interface (KNetCLI) runs a command like the following:
 
 - **dotnet tool**
 
-> knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+```sh
+knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+```
 
 - **Docker image**
 
-> docker run ghcr.io/masesgroup/knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+```sh
+docker run ghcr.io/masesgroup/knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+```
 
-> docker run masesgroup/knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+```sh
+docker run masesgroup/knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+```
 
 ### Execute an interactive shell
 
@@ -34,13 +43,21 @@ To use the CLI interface (KNetCLI) in interactive mode runs a command like the f
 
 - **dotnet tool**
 
+```sh
+knet -i
+```
+
 > knet -i
 
 - **Docker image**
 
-> docker run ghcr.io/masesgroup/knet -i
+```sh
+docker run ghcr.io/masesgroup/knet -i
+```
 
-> docker run masesgroup/knet -i
+```sh
+docker run masesgroup/knet -i
+```
 
 ### Execute in script based mode
 
@@ -48,14 +65,19 @@ To use the CLI interface (KNetCLI) in script based mode runs a command like the 
 
 - **dotnet tool**
 
-> knet -s path-to-script
+```sh
+knet -s path-to-script
+```
 
 - **Docker image**
 
-> docker run ghcr.io/masesgroup/knet -s path-to-script
+```sh
+docker run ghcr.io/masesgroup/knet -s path-to-script
+```
 
-> docker run masesgroup/knet -s path-to-script
-
+```sh
+docker run masesgroup/knet -s path-to-script
+```
 
 ### Command line switches available
 
