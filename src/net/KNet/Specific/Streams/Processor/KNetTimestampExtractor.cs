@@ -19,6 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Consumer;
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.Processor
 {
@@ -29,6 +30,8 @@ namespace MASES.KNet.Streams.Processor
     /// <typeparam name="TValue">The value type</typeparam>
     public class KNetTimestampExtractor<TKey, TValue> : Org.Apache.Kafka.Streams.Processor.TimestampExtractor, IGenericSerDesFactoryApplier
     {
+        KNetConsumerRecord<TKey, TValue> _record;
+        DateTime? _partitionTime;
         IKNetSerDes<TKey> _keySerializer = null;
         IKNetSerDes<TValue> _valueSerializer = null;
         IGenericSerDesFactory _factory;
@@ -37,24 +40,32 @@ namespace MASES.KNet.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TimestampExtractor.html#extract-org.apache.kafka.clients.consumer.ConsumerRecord-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
-        public new System.Func<KNetConsumerRecord<TKey, TValue>, long, long> OnExtract { get; set; } = null;
-
+        public new System.Func<KNetTimestampExtractor<TKey, TValue>, DateTime> OnExtract { get; set; } = null;
+        /// <summary>
+        /// The <see cref="KNetConsumerRecord{K, V}"/> to be used
+        /// </summary>
+        public KNetConsumerRecord<TKey, TValue> Record => _record;
+        /// <summary>
+        /// The highest extracted valid <see cref="DateTime"/> of the current record's partition˙ (could be <see langword="null"/> if unknown)
+        /// </summary>
+        public DateTime? PartitionTime => _partitionTime;
         /// <inheritdoc/>
         public sealed override long Extract(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object> arg0, long arg1)
         {
             _keySerializer ??= _factory.BuildKeySerDes<TKey>();
             _valueSerializer ??= _factory.BuildValueSerDes<TValue>();
             var record = arg0.Cast<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>>(); // KNet consider the data within Apache Kafka Streams defined always as byte[]
-            var methodToExecute = (OnExtract != null) ? OnExtract : Extract;
-            return methodToExecute(new KNetConsumerRecord<TKey, TValue>(record, _keySerializer, _valueSerializer, false), arg1);
+
+            _record = new KNetConsumerRecord<TKey, TValue>(record, _factory);
+            _partitionTime = (arg1 == -1) ? null : DateTimeOffset.FromUnixTimeMilliseconds(arg1).DateTime;
+            var res = (OnExtract != null) ? OnExtract(this) : Extract();
+            return new DateTimeOffset(res).ToUnixTimeMilliseconds();
         }
         /// <summary>
         /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor.Extract(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{object, object}, long)"/>
         /// </summary>
-        /// <param name="arg0">The <see cref="KNetConsumerRecord{K, V}"/> with information</param>
-        /// <param name="arg1"></param>
-        /// <returns></returns>
-        public virtual long Extract(KNetConsumerRecord<TKey, TValue> arg0, long arg1)
+        /// <returns>The <see cref="DateTime"/> timestamp of the record</returns>
+        public virtual DateTime Extract()
         {
             return default;
         }

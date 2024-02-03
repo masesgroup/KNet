@@ -23,36 +23,53 @@ namespace MASES.KNet.Streams.Processor
     /// <summary>
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor{K, V}"/>
     /// </summary>
-    /// <typeparam name="TKey">The key type</typeparam>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetTopicNameExtractor<TKey, TValue> : Org.Apache.Kafka.Streams.Processor.TopicNameExtractor<byte[], byte[]>, IGenericSerDesFactoryApplier
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    public class KNetTopicNameExtractor<K, V> : Org.Apache.Kafka.Streams.Processor.TopicNameExtractor<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
-        IKNetSerDes<TKey> _keySerializer = null;
-        IKNetSerDes<TValue> _valueSerializer = null;
+        byte[] _arg0, _arg1;
+        K _key;
+        bool _keySet = false;
+        V _value;
+        bool _valueSet = false;
+        Org.Apache.Kafka.Streams.Processor.RecordContext _context;
+        IKNetSerDes<K> _kSerializer = null;
+        IKNetSerDes<V> _vSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
-        public new System.Func<TKey, TValue, Org.Apache.Kafka.Streams.Processor.RecordContext, string> OnExtract { get; set; } = null;
+        /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding <see cref="Extract()"/> class method</remarks>
+        public new System.Func<KNetTopicNameExtractor<K, V>, string> OnExtract { get; set; } = null;
+        /// <summary>
+        /// The <typeparamref name="K"/> content
+        /// </summary>
+        public K Key { get { if (!_keySet) { _kSerializer ??= _factory.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
+        /// <summary>
+        /// The <typeparamref name="V"/> content
+        /// </summary>
+        public V Value { get { if (!_valueSet) { _vSerializer ??= _factory.BuildValueSerDes<V>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
+        /// <summary>
+        /// Current <see cref="Org.Apache.Kafka.Streams.Processor.RecordContext"/> metadata of the record
+        /// </summary>
+        public Org.Apache.Kafka.Streams.Processor.RecordContext RecordContext => _context;
 
         /// <inheritdoc/>
         public sealed override string Extract(byte[] arg0, byte[] arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
         {
-            _keySerializer ??= _factory.BuildKeySerDes<TKey>();
-            _valueSerializer ??= _factory.BuildValueSerDes<TValue>();
-            var methodToExecute = (OnExtract != null) ? OnExtract : Extract;
-            return methodToExecute(_keySerializer.Deserialize(null, arg0), _valueSerializer.Deserialize(null, arg1), arg2);
+            _keySet = _valueSet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+            _context = arg2;
+
+            return (OnExtract != null) ? OnExtract(this) : Extract();
         }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="TKey"/></param>
-        /// <param name="arg1"><typeparamref name="TValue"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.RecordContext"/></param>
         /// <returns><see cref="string"/></returns>
-        public virtual string Extract(TKey arg0, TValue arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
+        public virtual string Extract()
         {
             return default;
         }
