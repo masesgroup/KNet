@@ -25,11 +25,13 @@ namespace MASES.KNet.Consumer
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetConsumerRecord<K, V>
+    public class KNetConsumerRecord<K, V>: IGenericSerDesFactoryApplier
     {
-        readonly IKNetDeserializer<K> _keyDeserializer;
-        readonly IKNetDeserializer<V> _valueDeserializer;
+        IKNetDeserializer<K> _keyDeserializer;
+        IKNetDeserializer<V> _valueDeserializer;
         readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> _record;
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
         /// Initialize a new <see cref="KNetConsumerRecord{K, V}"/>
         /// </summary>
@@ -49,6 +51,17 @@ namespace MASES.KNet.Consumer
                 _ = Value;
             }
         }
+        /// <summary>
+        /// Initialize a new <see cref="KNetConsumerRecord{K, V}"/>
+        /// </summary>
+        /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}"/> to use for initialization</param>
+        /// <param name="factory"><see cref="IGenericSerDesFactory"/></param>
+        internal KNetConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> record, IGenericSerDesFactory factory)
+        {
+            _record = record;
+            _factory = factory;
+        }
+
         string _topic = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Topic"/>
         public string Topic { get { _topic ??= _record.Topic(); return _topic; } }
@@ -87,6 +100,7 @@ namespace MASES.KNet.Consumer
             {
                 if (!_localKeyDes)
                 {
+                    _keyDeserializer ??= _factory.BuildKeySerDes<K>();
                     _localKey = _keyDeserializer.UseHeaders ? _keyDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Key()) : _keyDeserializer.Deserialize(Topic, _record.Key());
                     _localKeyDes = true;
                 }
@@ -103,6 +117,7 @@ namespace MASES.KNet.Consumer
             {
                 if (!_localValueDes)
                 {
+                    _valueDeserializer ??= _factory.BuildKeySerDes<V>();
                     _localValue = _valueDeserializer.UseHeaders ? _valueDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Value()) : _valueDeserializer.Deserialize(Topic, _record.Value());
                     _localValueDes = true;
                 }

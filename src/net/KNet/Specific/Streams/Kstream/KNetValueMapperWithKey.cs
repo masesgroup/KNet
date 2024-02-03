@@ -31,6 +31,11 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VR">joined value type</typeparam>
     public class KNetValueMapperWithKey<K, V, VR> : Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<byte[], byte[], byte[]>, IGenericSerDesFactoryApplier
     {
+        byte[] _arg0, _arg1;
+        K _key;
+        bool _keySet = false;
+        V _value;
+        bool _valueSet = false;
         IKNetSerDes<K> _kSerializer = null;
         IKNetSerDes<V> _vSerializer = null;
         IKNetSerDes<VR> _vrSerializer = null;
@@ -40,28 +45,33 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
-        public new System.Func<K, V, VR> OnApply { get; set; } = null;
-
+        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
+        public new System.Func<KNetValueMapperWithKey<K, V, VR>, VR> OnApply { get; set; } = null;
+        /// <summary>
+        /// The <typeparamref name="K"/> content
+        /// </summary>
+        public K Key { get { if (!_keySet) { _kSerializer ??= _factory.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
+        /// <summary>
+        /// The <typeparamref name="V"/> content
+        /// </summary>
+        public V Value { get { if (!_valueSet) { _vSerializer ??= _factory.BuildValueSerDes<V>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
         /// <inheritdoc/>
         public sealed override byte[] Apply(byte[] arg0, byte[] arg1)
         {
-            _kSerializer ??= _factory.BuildKeySerDes<K>();
-            _vSerializer ??= _factory.BuildValueSerDes<V>();
-            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
+            _keySet = _valueSet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
 
-            var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
+            VR res = (OnApply != null) ? OnApply(this) : Apply();
+            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
             return _vrSerializer.Serialize(null, res);
         }
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="K"/></param>
-        /// <param name="arg1"><typeparamref name="V"/></param>
         /// <returns><typeparamref name="VR"/></returns>
-        public virtual VR Apply(K arg0, V arg1)
+        public virtual VR Apply()
         {
             return default;
         }
@@ -75,6 +85,11 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VR">joined value type</typeparam>
     public class KNetEnumerableValueMapperWithKey<K, V, VR> : Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<byte[], byte[], Java.Lang.Iterable<byte[]>>, IGenericSerDesFactoryApplier
     {
+        byte[] _arg0, _arg1;
+        K _key;
+        bool _keySet = false;
+        V _value;
+        bool _valueSet = false;
         IKNetSerDes<K> _kSerializer = null;
         IKNetSerDes<V> _vSerializer = null;
         IKNetSerDes<VR> _vrSerializer = null;
@@ -84,18 +99,25 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
-        public new System.Func<K, V, IEnumerable<VR>> OnApply { get; set; } = null;
-
+        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
+        public new System.Func<KNetEnumerableValueMapperWithKey<K, V, VR>, IEnumerable<VR>> OnApply { get; set; } = null;
+        /// <summary>
+        /// The <typeparamref name="K"/> content
+        /// </summary>
+        public K Key { get { if (!_keySet) { _kSerializer ??= _factory.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
+        /// <summary>
+        /// The <typeparamref name="V"/> content
+        /// </summary>
+        public V Value { get { if (!_valueSet) { _vSerializer ??= _factory.BuildValueSerDes<V>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
         /// <inheritdoc/>
         public sealed override Java.Lang.Iterable<byte[]> Apply(byte[] arg0, byte[] arg1)
         {
-            _kSerializer ??= _factory.BuildKeySerDes<K>();
-            _vSerializer ??= _factory.BuildValueSerDes<V>();
-            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
+            _keySet = _valueSet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
 
-            var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
+            IEnumerable<VR> res = (OnApply != null) ? OnApply(this) : Apply();
+            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
             var result = new ArrayList<byte[]>();
             foreach (var item in res)
             {
@@ -107,10 +129,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="K"/></param>
-        /// <param name="arg1"><typeparamref name="V"/></param>
         /// <returns><typeparamref name="VR"/></returns>
-        public virtual IEnumerable<VR> Apply(K arg0, V arg1)
+        public virtual IEnumerable<VR> Apply()
         {
             return default;
         }

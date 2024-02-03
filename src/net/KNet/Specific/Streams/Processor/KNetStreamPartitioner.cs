@@ -25,39 +25,67 @@ namespace MASES.KNet.Streams.Processor
     /// <summary>
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner{K, V}"/>
     /// </summary>
-    /// <typeparam name="TKey">The key type</typeparam>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetStreamPartitioner<TKey, TValue> : Org.Apache.Kafka.Streams.Processor.StreamPartitioner<byte[], byte[]>, IGenericSerDesFactoryApplier
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    public class KNetStreamPartitioner<K, V> : Org.Apache.Kafka.Streams.Processor.StreamPartitioner<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
-        IKNetSerDes<TKey> _keySerializer = null;
-        IKNetSerDes<TValue> _valueSerializer = null;
+        string _arg0;
+        byte[] _arg1, _arg2;
+        int _arg3;
+        K _key;
+        bool _keySet = false;
+        V _value;
+        bool _valueSet = false;
+        IKNetSerDes<K> _kSerializer = null;
+        IKNetSerDes<V> _vSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
-        public new System.Func<string, TKey, TValue, int, Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>>> OnPartitions { get; set; } = null;
-
+        /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding <see cref="Partitions()"/> class method</remarks>
+        public new System.Func<KNetStreamPartitioner<K, V>, System.Collections.Generic.ICollection<int?>> OnPartitions { get; set; } = null;
+        /// <summary>
+        /// The topic name this record is sent to
+        /// </summary>
+        public string Topic => _arg0;
+        /// <summary>
+        /// The <typeparamref name="K"/> content
+        /// </summary>
+        public K Key { get { if (!_keySet) { _kSerializer ??= _factory.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
+        /// <summary>
+        /// The <typeparamref name="V"/> content
+        /// </summary>
+        public V Value { get { if (!_valueSet) { _vSerializer ??= _factory.BuildValueSerDes<V>(); _value = _vSerializer.Deserialize(null, _arg2); _valueSet = true; } return _value; } }
+        /// <summary>
+        /// The total number of partitions
+        /// </summary>
+        public int NumPartitions => _arg3;
         /// <inheritdoc/>
         public sealed override Optional<Set<Integer>> Partitions(string arg0, byte[] arg1, byte[] arg2, int arg3)
         {
-            _keySerializer ??= _factory.BuildKeySerDes<TKey>();
-            _valueSerializer ??= _factory.BuildValueSerDes<TValue>();
-            var methodToExecute = (OnPartitions != null) ? OnPartitions : Partitions;
-            return methodToExecute(arg0, _keySerializer.Deserialize(arg0, arg1), _valueSerializer.Deserialize(arg0, arg2), arg3);
+            _keySet = _valueSet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+            _arg2 = arg2;
+            _arg3 = arg3;
+
+            var res = (OnPartitions != null) ? OnPartitions(this) : Partitions();
+            if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
+            HashSet<Integer> result = new HashSet<Integer>();
+            foreach (var item in res)
+            {
+                result.Add(item.HasValue ? Integer.ValueOf(item.Value) : null);
+            }
+            return Optional<Set<Integer>>.Of(result);
         }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
-        /// <param name="arg0">The topic name this record is sent to</param>
-        /// <param name="arg1">The key of the record</param>
-        /// <param name="arg2">The value of the record</param>
-        /// <param name="arg3">The total number of partitions</param>
         /// <returns>An <see cref="Optional"/> of <see cref="Set"/> of <see cref="Integer"/>s between 0 and numPartitions-1, Empty optional means using default partitioner <see cref="Optional"/> of an empty set means the record won't be sent to any partitions i.e drop it. Optional of Set of integers means the partitions to which the record should be sent to.</returns>
-        public virtual Optional<Set<Integer>> Partitions(string arg0, TKey arg1, TValue arg2, int arg3)
+        public virtual System.Collections.Generic.ICollection<int?> Partitions()
         {
-            return Optional<Set<Integer>>.Empty();
+            return null;
         }
     }
 }

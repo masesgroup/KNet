@@ -29,39 +29,54 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VR">joined value type</typeparam>
     public class KNetValueJoinerWithKey<K1, V1, V2, VR> : Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<byte[], byte[], byte[], byte[]>, IGenericSerDesFactoryApplier
     {
+        byte[] _arg0, _arg1, _arg2;
+        K1 _key1;
+        bool _key1Set = false;
+        V1 _value1;
+        bool _value1Set = false;
+        V2 _value2;
+        bool _value2Set = false;
         IKNetSerDes<K1> _k1Serializer = null;
         IKNetSerDes<V1> _v1Serializer = null;
         IKNetSerDes<V2> _v2Serializer = null;
         IKNetSerDes<VR> _vrSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
-
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
-        public new System.Func<K1, V1, V2, VR> OnApply { get; set; } = null;
+        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
+        public new System.Func<KNetValueJoinerWithKey<K1, V1, V2, VR>, VR> OnApply { get; set; } = null;
+        /// <summary>
+        /// The <typeparamref name="K1"/> content
+        /// </summary>
+        public K1 Key { get { if (!_key1Set) { _k1Serializer ??= _factory.BuildKeySerDes<K1>();  _key1 = _k1Serializer.Deserialize(null, _arg0); _key1Set = true; } return _key1; } }
+        /// <summary>
+        /// The <typeparamref name="V1"/> content
+        /// </summary>
+        public V1 Value1 { get { if (!_value1Set) { _v1Serializer ??= _factory.BuildValueSerDes<V1>(); _value1 = _v1Serializer.Deserialize(null, _arg1); _value1Set = true; } return _value1; } }
+        /// <summary>
+        /// The <typeparamref name="V2"/> content
+        /// </summary>
+        public V2 Value2 { get { if (!_value2Set) { _v2Serializer ??= _factory.BuildValueSerDes<V2>(); _value2 = _v2Serializer.Deserialize(null, _arg2); _value2Set = true; } return _value2; } }
         /// <inheritdoc/>
         public sealed override byte[] Apply(byte[] arg0, byte[] arg1, byte[] arg2)
         {
-            _k1Serializer ??= _factory.BuildKeySerDes<K1>();
-            _v1Serializer ??= _factory.BuildValueSerDes<V1>();
-            _v2Serializer ??= _factory.BuildValueSerDes<V2>();
-            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
+            _key1Set = _value1Set = _value2Set = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+            _arg2 = arg2;
 
-            var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_k1Serializer.Deserialize(null, arg0), _v1Serializer.Deserialize(null, arg1), _v2Serializer.Deserialize(null, arg2));
+            VR res = (OnApply != null) ? OnApply(this) : Apply();
+            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
             return _vrSerializer.Serialize(null, res);
         }
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="K1"/></param>
-        /// <param name="arg1"><typeparamref name="V1"/></param>
-        /// <param name="arg2"><typeparamref name="V2"/></param>
         /// <returns><typeparamref name="VR"/></returns>
-        public virtual VR Apply(K1 arg0, V1 arg1, V2 arg2)
+        public virtual VR Apply()
         {
             return default;
         }
