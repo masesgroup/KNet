@@ -48,7 +48,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             _kSerializer = _factory.BuildKeySerDes<K>();
             _vSerializer = _factory.BuildValueSerDes<V>();
-            _vrSerializer = _factory.BuildValueSerDes<VA>();
+            _vrSerializer = _factory.BuildValueSerDes<VR>();
         }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-"/>
