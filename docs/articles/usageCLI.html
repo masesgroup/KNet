@@ -86,26 +86,68 @@
 <h2 id="installation">Installation</h2>
 <p>KNet CLI is available in two different formats:</p>
 <ul>
-<li>dotnet tool hosted on NuGet.org: check <a href="https://www.nuget.org/packages/MASES.KNetCLI/">https://www.nuget.org/packages/MASES.KNetCLI/</a> and <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools</a> for installation deep instructions.</li>
-<li>Docker image hosted on <a href="https://github.com/masesgroup/KNet/pkgs/container/mases.knet">https://github.com/masesgroup/KNet/pkgs/container/mases.knet</a>: follow instruction within the page and general instruction on <a href="https://docs.docker.com">https://docs.docker.com</a></li>
+<li><strong>dotnet tool</strong> hosted on <a href="https://www.nuget.org/packages/MASES.KNetCLI/">NuGet</a>: check <a href="https://www.nuget.org/packages/MASES.KNetCLI/">https://www.nuget.org/packages/MASES.KNetCLI/</a> and <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools</a> for installation deep instructions.</li>
+<li><strong>Docker image</strong> hosted on <a href="https://github.com/masesgroup/KNet/pkgs/container/knet">GitHub</a> and <a href="https://hub.docker.com/repository/docker/masesgroup/knet/general">Docker Hub</a>: follow instruction within the page and general instruction on <a href="https://docs.docker.com">https://docs.docker.com</a></li>
 </ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The <strong>dotnet tool</strong> needs a JRE/JDK installed within the system</p>
+</div>
 <h2 id="usage">Usage</h2>
+<h3 id="execute-an-apache-kafka-command">Execute an Apache Kafka command</h3>
 <p>To use the CLI interface (KNetCLI) runs a command like the following:</p>
 <ul>
 <li><strong>dotnet tool</strong></li>
 </ul>
+<pre><code class="lang-sh">knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+</code></pre>
+<ul>
+<li><strong>Docker image</strong></li>
+</ul>
+<pre><code class="lang-sh">docker run ghcr.io/masesgroup/knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+</code></pre>
+<pre><code class="lang-sh">docker run masesgroup/knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+</code></pre>
+<h3 id="execute-an-interactive-shell">Execute an interactive shell</h3>
+<p>To use the CLI interface (KNetCLI) in interactive mode runs a command like the following:</p>
+<ul>
+<li><strong>dotnet tool</strong></li>
+</ul>
+<pre><code class="lang-sh">knet -i
+</code></pre>
 <blockquote>
-<p>knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning</p>
+<p>knet -i</p>
 </blockquote>
 <ul>
 <li><strong>Docker image</strong></li>
 </ul>
-<blockquote>
-<p>docker run ghcr.io/masesgroup/mases.knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning</p>
-</blockquote>
-<h3 id="command-line-switch-available">Command line switch available</h3>
-<p><em>knetcli</em> needs at least <strong>ClassToRun</strong> command-line switch to identify its behavior.
-Other options on <a href="commandlineswitch.html">Command line switch</a> page.</p>
+<pre><code class="lang-sh">docker run ghcr.io/masesgroup/knet -i
+</code></pre>
+<pre><code class="lang-sh">docker run masesgroup/knet -i
+</code></pre>
+<h3 id="execute-in-script-based-mode">Execute in script based mode</h3>
+<p>To use the CLI interface (KNetCLI) in script based mode runs a command like the following:</p>
+<ul>
+<li><strong>dotnet tool</strong></li>
+</ul>
+<pre><code class="lang-sh">knet -s path-to-script
+</code></pre>
+<ul>
+<li><strong>Docker image</strong></li>
+</ul>
+<pre><code class="lang-sh">docker run ghcr.io/masesgroup/knet -s path-to-script
+</code></pre>
+<pre><code class="lang-sh">docker run masesgroup/knet -s path-to-script
+</code></pre>
+<h3 id="command-line-switches-available">Command line switches available</h3>
+<p><em>knetcli</em> needs at least <strong>ClassToRun</strong>, <strong>Interactive</strong> or <strong>Script</strong> command-line switch to identify its behavior. Here the list:</p>
+<ul>
+<li><strong>ClassToRun</strong>: has precedence to all others and needs a second parameter which identify the command class to be executed</li>
+<li><strong>Interactive</strong> (<strong>i</strong>): starts an interactive session where the user can write code like in a REPL shell, optionally can be set <strong>JarList</strong>, <strong>NamespaceList</strong> and <strong>ImportList</strong></li>
+<li><strong>Script</strong> (<strong>s</strong>): start a session to execute the script of the second parameter, optionally can be set <strong>JarList</strong>, <strong>NamespaceList</strong> and <strong>ImportList</strong></li>
+<li><strong>NoLogo</strong> (<strong>nl</strong>): do not display initial informative string</li>
+</ul>
+<p>Other options on <a href="commandlineswitch.html">Command line switch</a> page.</p>
 
 </article>
 

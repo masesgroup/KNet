@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>Kafka Connect SDK of .NET suite for Apache Kafka | MASES Group - KNet </title>
+      <title>Docker images of .NET suite for Apache Kafka | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Kafka Connect SDK of .NET suite for Apache Kafka | MASES Group - KNet ">
-      <meta name="description" content="Describes how to use Kafka Connect SDK of .NET suite for Apache Kafka">
+      <meta name="title" content="Docker images of .NET suite for Apache Kafka | MASES Group - KNet ">
+      <meta name="description" content="Describes the Docker images of .NET suite for Apache Kafka">
       
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/blob/master/src/documentation/articles/usageConnect.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/blob/master/src/documentation/articles/docker.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -81,65 +81,18 @@
         </div>
 
         <article data-uid="">
-<h1 id="knet-knet-connect-sdk">KNet: KNet Connect SDK</h1>
+<h1 id="knet-docker-images">KNet: Docker images</h1>
 
-<h2 id="installation">Installation</h2>
-<p>KNet Connect is available in two different formats:</p>
+<p>.NET suite for Apache Kafka comes with some ready made Docker images:</p>
 <ul>
-<li><strong>dotnet tool</strong> hosted on <a href="https://www.nuget.org/packages/MASES.KNetConnect/">NuGet</a>: check <a href="https://www.nuget.org/packages/MASES.KNetConnect/">https://www.nuget.org/packages/MASES.KNetConnect/</a> and <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools</a> for installation deep instructions.</li>
-<li><strong>Docker image</strong> hosted on <a href="https://github.com/masesgroup/KNet/pkgs/container/knetconnect">GitHub</a> or <a href="https://hub.docker.com/repository/docker/masesgroup/knetconnect/general">Docker Hub</a>: follow instruction within the page and general instruction on <a href="https://docs.docker.com">https://docs.docker.com</a></li>
+<li>KNet CLI: see <a href="usageCLI.html">KNet CLI usage</a></li>
+<li>KNet Connect: see <a href="usageConnect.html">KNet Connect usage</a></li>
 </ul>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>The <strong>dotnet tool</strong> needs a JRE/JDK installed within the system</p>
-</div>
-<h2 id="usage">Usage</h2>
-<p>To use the Connect interface (KNetConnect) runs a command like the following:</p>
-<ul>
-<li><strong>dotnet tool</strong></li>
-</ul>
-<pre><code class="lang-sh">knetconnect -s connect-standalone.properties specific-connector.properties
-</code></pre>
-<pre><code class="lang-sh">knetconnect -d connect-distributed.properties
-</code></pre>
-<ul>
-<li><strong>Docker image</strong></li>
-</ul>
-<pre><code class="lang-sh">docker run ghcr.io/masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
-</code></pre>
-<pre><code class="lang-sh">docker run masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
-</code></pre>
-<pre><code class="lang-sh">docker run ghcr.io/masesgroup/knetconnect -d connect-distributed.properties
-</code></pre>
-<pre><code class="lang-sh">docker run masesgroup/knetconnect -d connect-distributed.properties
-</code></pre>
-<h3 id="command-line-switch-available">Command line switch available</h3>
-<p><em>knetconnect</em> accepts the following command-line switch to identify its behavior:</p>
-<ul>
-<li><strong>d</strong>: starts a distributed version of Connector defined in the file identified from the subsequent parameter</li>
-<li><strong>s</strong>: starts a standalone version of Connector defined in the file identified from the subsequent parameter</li>
-<li><strong>k</strong>: starts a KNet version (Distributed or Standalone) accepting environment variables names containing the data associated to the parameters expected from the stanard version</li>
-<li>other parameters in sequence are:
-<ul>
-<li>Apache Kafka Connect configuration file</li>
-<li>KNet Connector configuration file</li>
-<li>or in case of <strong>k</strong> switch is used the parameters are the environemnt variables containing the configuration data in the following form:
-<ul>
-<li>key and value separated with <strong>=</strong></li>
-<li>key-value pair separated with <strong>||</strong></li>
-<li>an example is key1=value1||key2=value2||key3</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="connector-properties">Connector properties</h3>
-<p>For an overview of configuration see <a href="connectSDK.html">Connect SDK</a></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/documentation/articles/usageConnect.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/documentation/articles/docker.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
