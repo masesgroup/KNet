@@ -49,6 +49,7 @@ namespace MASES.KNet.Benchmark
         public const string SinglePacket = "SinglePacket";
         public const string ProducePreLoad = "ProducePreLoad";
         public const string SimpleCount = "SimpleCount";
+        public const string ReadAllData = "ReadAllData";
         public const string CheckOnConsume = "CheckOnConsume";
         public const string LeaveTopics = "LeaveTopics";
         public const string AlwaysCommit = "AlwaysCommit";
@@ -233,6 +234,12 @@ namespace MASES.KNet.Benchmark
                     },
                     new ArgumentMetadata<object>()
                     {
+                        Name = CLIParam.UsePrefetch,
+                        Type = ArgumentType.Single,
+                        Help = "Use prefetch behavior.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
                         Name = CLIParam.SinglePacket,
                         Type = ArgumentType.Single,
                         Help = "Use to send always the same packet.",
@@ -242,6 +249,12 @@ namespace MASES.KNet.Benchmark
                         Name = CLIParam.ProducePreLoad,
                         Type = ArgumentType.Single,
                         Help = "Use to send always the same packet.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.ReadAllData,
+                        Type = ArgumentType.Single,
+                        Help = "Reads all data when using KNet classes.",
                     },
                     new ArgumentMetadata<object>()
                     {
@@ -370,6 +383,7 @@ namespace MASES.KNet.Benchmark
         static bool UseCallback;
         static bool UsePrefetch;
         static bool ProducePreLoad;
+        static bool ReadAllData;
         static bool SinglePacket;
         static bool CheckOnConsume;
         static bool LeaveTopics;
@@ -429,6 +443,7 @@ namespace MASES.KNet.Benchmark
             UseCallback = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UseCallback);
             UsePrefetch = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UsePrefetch);
             ProducePreLoad = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ProducePreLoad);
+            ReadAllData = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ReadAllData);
             SinglePacket = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.SinglePacket);
             CheckOnConsume = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.CheckOnConsume);
             LeaveTopics = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.LeaveTopics);

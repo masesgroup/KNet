@@ -291,13 +291,21 @@ namespace MASES.KNet.Benchmark
                         var records = consumer.Poll(duration);
                         if (!CheckOnConsume)
                         {
-                            counter += records.Count();
+                            if (ReadAllData)
+                            {
+                                foreach (var item in records)
+                                {
+                                    item.Key(); item.Value();
+                                    counter++;
+                                }
+                            }
+                            else counter += records.Count();
                         }
                         else
                         {
                             if (UsePrefetch)
                             {
-                                foreach (var item in records.WithPrefetch().WithConvert((o) => { return (o.Value(), o.Key()); }))
+                                foreach (var item in records.WithPrefetch().WithThread().WithConvert((o) => { return (o.Value(), o.Key()); }))
                                 {
                                     if (!item.Item1.SequenceEqual(data)
                                         || (!SinglePacket && item.Item2 != counter))
@@ -380,7 +388,7 @@ namespace MASES.KNet.Benchmark
                             var records = consumer.Poll(duration);
                             if (UsePrefetch)
                             {
-                                foreach (var item in records.WithPrefetch().WithConvert((o) => { return (o.Key(), o.Value()); }))
+                                foreach (var item in records.WithPrefetch().WithThread().WithConvert((o) => { return (o.Key(), o.Value()); }))
                                 {
                                     roundTripTime.Add((double)(DateTime.Now.Ticks - item.Item1) / (TimeSpan.TicksPerMillisecond / 1000));
 
@@ -395,11 +403,16 @@ namespace MASES.KNet.Benchmark
                             {
                                 foreach (var item in records)
                                 {
-                                    roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key()) / (TimeSpan.TicksPerMillisecond / 1000));
-
-                                    if (CheckOnConsume && !item.Value().SequenceEqual(data))
+                                    var key = item.Key();
+                                    roundTripTime.Add((double)(DateTime.Now.Ticks - key) / (TimeSpan.TicksPerMillisecond / 1000));
+                                    byte[] value = Array.Empty<byte>();
+                                    if (ReadAllData)
                                     {
-                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key()}");
+                                        value = item.Value();
+                                    }
+                                    if (CheckOnConsume && !((ReadAllData ? value : item.Value()).SequenceEqual(data)))
+                                    {
+                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {key}");
                                     }
                                     counter++;
                                 }
