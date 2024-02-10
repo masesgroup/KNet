@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -27,6 +28,7 @@ namespace MASES.KNet.Streams.Kstream
     public class KNetSuppressed<K> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.Kstream.Suppressed<byte[]> _inner;
+        readonly Org.Apache.Kafka.Streams.Kstream.Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed> _inner2;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
@@ -35,11 +37,43 @@ namespace MASES.KNet.Streams.Kstream
             _inner = inner;
         }
 
+        KNetSuppressed(Org.Apache.Kafka.Streams.Kstream.Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed> inner)
+        {
+            _inner2 = inner;
+        }
+
         /// <summary>
         /// Converter from <see cref="KNetSuppressed{K}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed{K}"/>
         /// </summary>
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.Suppressed<byte[]>(KNetSuppressed<K> t) => t._inner;
+        /// <summary>
+        /// Converter from <see cref="KNetSuppressed{K}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed{K}"/>
+        /// </summary>
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed>(KNetSuppressed<K> t) => t._inner2;
 
-#warning till now it is only an empty class shall be completed with the method of inner class
+        #region Static methods
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.html#untilTimeLimit-java.time.Duration-org.apache.kafka.streams.kstream.Suppressed.BufferConfig-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="TimeSpan"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig"/></param>
+        /// <returns><see cref="KNetSuppressed{K}"/></returns>
+        public static KNetSuppressed<K> UntilTimeLimit(TimeSpan arg0, Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig arg1)
+        {
+            var cons = Org.Apache.Kafka.Streams.Kstream.Suppressed<byte[]>.UntilTimeLimit(arg0, arg1);
+            return new KNetSuppressed<K>(cons);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.html#untilWindowCloses-org.apache.kafka.streams.kstream.Suppressed.StrictBufferConfig-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></param>
+        /// <returns><see cref="KNetSuppressed{K}"/> with <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed"/></returns>
+        public static KNetSuppressed<Org.Apache.Kafka.Streams.Kstream.Windowed> UntilWindowCloses(Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig arg0)
+        {
+            var cons = Org.Apache.Kafka.Streams.Kstream.Suppressed<byte[]>.UntilWindowCloses(arg0);
+            return new KNetSuppressed<Org.Apache.Kafka.Streams.Kstream.Windowed>(cons);
+        }
+
+        #endregion
     }
 }

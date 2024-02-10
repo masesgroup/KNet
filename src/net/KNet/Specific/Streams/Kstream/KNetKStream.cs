@@ -1036,7 +1036,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#print-org.apache.kafka.streams.kstream.Printed-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Printed"/></param>
+        /// <param name="arg0"><see cref="KNetPrinted{K, V}"/></param>
         public void Print(KNetPrinted<K, V> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -1046,7 +1046,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html#to-java.lang.String-org.apache.kafka.streams.kstream.Produced-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></param>
+        /// <param name="arg1"><see cref="KNetProduced{K, V}"/></param>
         public void To(string arg0, KNetProduced<K, V> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;

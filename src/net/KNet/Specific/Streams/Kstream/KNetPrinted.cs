@@ -41,6 +41,54 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.Printed<byte[], byte[]>(KNetPrinted<K, V> t) => t._inner;
 
-#warning till now it is only an empty class shall be completed with the method of inner class
+        #region Static methods
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Printed.html#toFile-java.lang.String-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="string"/></param>
+        /// <returns><see cref="KNetPrinted{K, V}"/></returns>
+        public static KNetPrinted<K, V> ToFile(string arg0)
+        {
+            var cons = Org.Apache.Kafka.Streams.Kstream.Printed<byte[], byte[]>.ToFile(arg0);
+            return new KNetPrinted<K, V>(cons);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Printed.html#toSysOut--"/>
+        /// </summary>
+        /// <returns><see cref="KNetPrinted{K, V}"/></returns>
+        public static KNetPrinted<K, V> ToSysOut()
+        {
+            var cons = Org.Apache.Kafka.Streams.Kstream.Printed<byte[], byte[]>.ToSysOut();
+            return new KNetPrinted<K, V>(cons);
+        }
+
+        #endregion
+
+        #region Instance methods
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Printed.html#withKeyValueMapper-org.apache.kafka.streams.kstream.KeyValueMapper-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></param>
+        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
+        /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
+        /// <returns><see cref="KNetPrinted{K, V}"/></returns>
+        public KNetPrinted<K, V> WithKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV>(KNetKeyValueMapperForString<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
+        {
+            if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            _inner?.WithKeyValueMapper(arg0);
+            return this;
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Printed.html#withLabel-java.lang.String-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="string"/></param>
+        /// <returns><see cref="KNetPrinted{K, V}"/></returns>
+        public KNetPrinted<K, V> WithLabel(string arg0)
+        {
+            _inner?.WithLabel(arg0);
+            return this;
+        }
+
+        #endregion
     }
 }
