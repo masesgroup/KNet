@@ -56,7 +56,7 @@ namespace MASES.KNet.Streams.Processor
         public Org.Apache.Kafka.Streams.Processor.RecordContext RecordContext => _context;
 
         /// <inheritdoc/>
-        public sealed override string Extract(byte[] arg0, byte[] arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
+        public sealed override Java.Lang.String Extract(byte[] arg0, byte[] arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
         {
             _keySet = _valueSet = false;
             _arg0 = arg0;

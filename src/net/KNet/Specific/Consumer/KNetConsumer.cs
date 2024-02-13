@@ -21,6 +21,7 @@ using Java.Util;
 using System;
 using System.Collections.Concurrent;
 using MASES.KNet.Serialization;
+using System.Threading;
 
 namespace MASES.KNet.Consumer
 {
@@ -78,9 +79,9 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// KNet extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
-        /// <param name="timeout">Timeout expressed as <see cref="Duration"/></param>
+        /// <param name="timeout">Timeout expressed as <see cref="TimeSpan"/></param>
         /// <returns><see cref="KNetConsumerRecords{K, V}"/></returns>
-        new KNetConsumerRecords<K, V> Poll(Duration timeout);
+        KNetConsumerRecords<K, V> Poll(TimeSpan timeout);
         /// <summary>
         /// KNet async extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
@@ -179,14 +180,19 @@ namespace MASES.KNet.Consumer
         /// <inheritdoc cref="IKNetConsumer{K, V}.Poll(long)"/>
         public new KNetConsumerRecords<K, V> Poll(long timeoutMs)
         {
-            var records = IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<byte[], byte[]>>("poll", timeoutMs);
+            var records = base.Poll(timeoutMs);
             return new KNetConsumerRecords<K, V>(records, _keyDeserializer, _valueDeserializer);
         }
-        /// <inheritdoc cref="IKNetConsumer{K, V}.Poll(Duration)"/>
-        public new KNetConsumerRecords<K, V> Poll(Duration timeout)
+        /// <inheritdoc cref="IKNetConsumer{K, V}.Poll(TimeSpan)"/>
+        public KNetConsumerRecords<K, V> Poll(TimeSpan timeout)
         {
-            var records = IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<byte[], byte[]>>("poll", timeout);
-            return new KNetConsumerRecords<K, V>(records, _keyDeserializer, _valueDeserializer);
+            Duration duration = timeout;
+            try
+            {
+                var records = base.Poll(duration);
+                return new KNetConsumerRecords<K, V>(records, _keyDeserializer, _valueDeserializer);
+            }
+            finally { duration?.Dispose(); }
         }
 
         Action<KNetConsumerRecord<K, V>> actionCallback = null;
@@ -282,31 +288,23 @@ namespace MASES.KNet.Consumer
         /// <inheritdoc cref="IKNetConsumer{K, V}.ConsumeAsync(long)"/>
         public bool ConsumeAsync(long timeoutMs)
         {
-            Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
             if (_consumedRecords == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to true.");
             if (!_threadRunning) throw new InvalidOperationException("Dispatching thread is not running.");
-            try
+            var results = this.Poll(TimeSpan.FromMilliseconds(timeoutMs));
+            bool isEmpty = results.IsEmpty;
+            if (!isEmpty)
             {
-                var results = this.Poll(duration);
-                bool isEmpty = results.IsEmpty;
-                if (!isEmpty)
-                {
 #if NET7_0_OR_GREATER
-                    _consumedRecords.Enqueue(results.ApplyPrefetch(IsPrefecth, PrefetchThreshold));
+                _consumedRecords.Enqueue(results.ApplyPrefetch(IsPrefecth, PrefetchThreshold));
 #else
-                    _consumedRecords.Enqueue(results);
+                _consumedRecords.Enqueue(results);
 #endif
-                    lock (_consumedRecords)
-                    {
-                        System.Threading.Monitor.Pulse(_consumedRecords);
-                    }
+                lock (_consumedRecords)
+                {
+                    System.Threading.Monitor.Pulse(_consumedRecords);
                 }
-                return !isEmpty;
             }
-            finally
-            {
-                duration?.Dispose();
-            }
+            return !isEmpty;
         }
         /// <inheritdoc cref="IKNetConsumer{K, V}.Consume(long, Action{KNetConsumerRecord{K, V}})"/>
         public void Consume(long timeoutMs, Action<KNetConsumerRecord<K, V>> callback)

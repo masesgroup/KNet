@@ -445,12 +445,11 @@ namespace MASES.KNet.Replicator
             {
                 var topicPartition = new Org.Apache.Kafka.Common.TopicPartition(topic, data.Partition);
                 var topics = Java.Util.Collections.SingletonList(topicPartition);
-                Java.Time.Duration duration = TimeSpan.FromMinutes(1);
                 try
                 {
                     consumer.Assign(topics);
                     consumer.Seek(topicPartition, data.Offset);
-                    var results = consumer.Poll(duration);
+                    var results = consumer.Poll(TimeSpan.FromMinutes(1));
                     if (results == null) throw new InvalidOperationException("Failed to get records from remote.");
                     foreach (var result in results)
                     {
@@ -465,7 +464,6 @@ namespace MASES.KNet.Replicator
                 {
                     topicPartition?.Dispose();
                     topics?.Dispose();
-                    duration?.Dispose();
                 }
             }
         }
@@ -1041,7 +1039,7 @@ namespace MASES.KNet.Replicator
         {
             bool firstExecution = false;
             int index = (int)o;
-            var topics = Java.Util.Collections.Singleton(StateName);
+            var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
             try
             {
                 _consumers[index].Subscribe(topics, _consumerListeners[index]);
@@ -1138,7 +1136,7 @@ namespace MASES.KNet.Replicator
                 }
                 catch (Org.Apache.Kafka.Common.Errors.TopicExistsException)
                 {
-                    var topics = Java.Util.Collections.Singleton(StateName);
+                    var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
                     // recover partitions of the topic
                     try
                     {

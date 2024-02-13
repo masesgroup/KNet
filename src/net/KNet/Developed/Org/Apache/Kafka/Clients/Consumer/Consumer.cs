@@ -32,15 +32,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <inheritdoc cref="Consumer.Assignment"/>
         Set<TopicPartition> Assignment();
         /// <inheritdoc cref="Consumer.Subscription"/>
-        Set<string> Subscription();
+        Set<Java.Lang.String> Subscription();
         /// <inheritdoc cref="Consumer.Paused"/>
         Set<TopicPartition> Paused();
         /// <inheritdoc cref="Consumer.Metrics"/>
         Map<MetricName, T> Metrics<T>() where T : Metric;
         /// <inheritdoc cref="Consumer.Subscribe(Collection)"/>
-        void Subscribe(Collection<string> topics);
+        void Subscribe(Collection<Java.Lang.String> topics);
         /// <inheritdoc cref="Consumer.Subscribe(Collection, ConsumerRebalanceListener)"/>
-        void Subscribe(Collection<string> topics, ConsumerRebalanceListener listener);
+        void Subscribe(Collection<Java.Lang.String> topics, ConsumerRebalanceListener listener);
         /// <inheritdoc cref="Consumer.Assign(Collection)"/>
         void Assign(Collection<TopicPartition> partitions);
         /// <inheritdoc cref="Consumer.Subscribe(Pattern, ConsumerRebalanceListener)"/>
@@ -79,14 +79,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
         Map<TopicPartition, OffsetAndMetadata> Committed(Set<TopicPartition> partitions);
         /// <inheritdoc cref="Consumer.Committed(Set, Duration)"/>
         Map<TopicPartition, OffsetAndMetadata> Committed(Set<TopicPartition> partitions, Duration timeout);
-        /// <inheritdoc cref="Consumer.PartitionsFor(string)"/>
-        List<PartitionInfo> PartitionsFor(string topic);
-        /// <inheritdoc cref="Consumer.PartitionsFor(string, Duration)"/>
-        List<PartitionInfo> PartitionsFor(string topic, Duration timeout);
+        /// <inheritdoc cref="Consumer.PartitionsFor(Java.Lang.String)"/>
+        List<PartitionInfo> PartitionsFor(Java.Lang.String topic);
+        /// <inheritdoc cref="Consumer.PartitionsFor(Java.Lang.String, Duration)"/>
+        List<PartitionInfo> PartitionsFor(Java.Lang.String topic, Duration timeout);
         /// <inheritdoc cref="Consumer.ListTopics()"/>
-        Map<string, List<PartitionInfo>> ListTopics();
+        Map<Java.Lang.String, List<PartitionInfo>> ListTopics();
         /// <inheritdoc cref="Consumer.ListTopics(Duration)"/>
-        Map<string, List<PartitionInfo>> ListTopics(Duration timeout);
+        Map<Java.Lang.String, List<PartitionInfo>> ListTopics(Duration timeout);
         /// <inheritdoc cref="Consumer.Pause(Collection)"/>
         void Pause(Collection<TopicPartition> partitions);
         /// <inheritdoc cref="Consumer.Resume(Collection)"/>
@@ -109,8 +109,8 @@ namespace Org.Apache.Kafka.Clients.Consumer
         ConsumerGroupMetadata GroupMetadata();
         /// <inheritdoc cref="Consumer.EnforceRebalance()"/>
         void EnforceRebalance();
-        /// <inheritdoc cref="Consumer.EnforceRebalance(string)"/>
-        void EnforceRebalance(string reason);
+        /// <inheritdoc cref="Consumer.EnforceRebalance(Java.Lang.String)"/>
+        void EnforceRebalance(Java.Lang.String reason);
         /// <inheritdoc cref="Consumer.Wakeup"/>
         void Wakeup();
     }

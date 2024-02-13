@@ -39,14 +39,14 @@ namespace MASES.KNet.Streams
         {
         }
         /// <inheritdoc/>
-        public override Org.Apache.Kafka.Clients.Admin.Admin GetAdmin(Map<string, object> arg0)
+        public override Org.Apache.Kafka.Clients.Admin.Admin GetAdmin(Map<Java.Lang.String, object> arg0)
         {
             var admin = Org.Apache.Kafka.Clients.Admin.Admin.Create(arg0);
             _admins.Add(admin);
             return admin;
         }
         /// <inheritdoc/>
-        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetConsumer(Map<string, object> arg0)
+        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetConsumer(Map<Java.Lang.String, object> arg0)
         {
             Properties properties = new();
             properties.PutAll(arg0);
@@ -56,7 +56,7 @@ namespace MASES.KNet.Streams
             return consumer;
         }
         /// <inheritdoc/>
-        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetGlobalConsumer(Map<string, object> arg0)
+        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetGlobalConsumer(Map<Java.Lang.String, object> arg0)
         {
             Properties properties = new();
             properties.PutAll(arg0);
@@ -66,7 +66,7 @@ namespace MASES.KNet.Streams
             return consumer;
         }
         /// <inheritdoc/>
-        public override Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]> GetProducer(Map<string, object> arg0)
+        public override Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]> GetProducer(Map<Java.Lang.String, object> arg0)
         {
             Properties properties = new();
             properties.PutAll(arg0);
@@ -76,7 +76,7 @@ namespace MASES.KNet.Streams
             return producer;
         }
         /// <inheritdoc/>
-        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetRestoreConsumer(Map<string, object> arg0)
+        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetRestoreConsumer(Map<Java.Lang.String, object> arg0)
         {
             Properties properties = new();
             properties.PutAll(arg0);

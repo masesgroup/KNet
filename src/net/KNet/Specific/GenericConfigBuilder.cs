@@ -136,9 +136,9 @@ namespace MASES.KNet
         /// Returns the <see cref="Map{String, String}"/> from the <typeparamref name="T"/> instance
         /// </summary>
         /// <returns><see cref="Map{String, String}"/> containing the properties</returns>
-        public Map<string, string> ToMap()
+        public Map<Java.Lang.String, Java.Lang.String> ToMap()
         {
-            HashMap<string, string> props = new();
+            HashMap<Java.Lang.String, Java.Lang.String> props = new();
             foreach (var item in _options)
             {
                 props.Put(item.Key, Convert.ToString(item.Value, CultureInfo.InvariantCulture));

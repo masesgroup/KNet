@@ -18,6 +18,7 @@
 
 using Java.Util;
 using Java.Util.Concurrent;
+using MASES.JNet.Specific.Extensions;
 using Org.Apache.Kafka.Clients.Admin;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Common;
@@ -25,6 +26,8 @@ using Org.Apache.Kafka.Common.Acl;
 using Org.Apache.Kafka.Common.Config;
 using Org.Apache.Kafka.Common.Quota;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace MASES.KNet.Extensions
@@ -202,14 +205,14 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.CreateTopics, newTopics, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DeleteTopics(Collection{string})"/>
+        /// Async version of <see cref="IAdmin.DeleteTopics(Collection{Java.Lang.String})"/>
         /// </summary>
         public static void DeleteTopic(this IAdmin admin, string topicName)
         {
-            Set<string> coll = null;
+            Set<Java.Lang.String> coll = null;
             try
             {
-                coll = Collections.Singleton(topicName);
+                coll = Collections.Singleton((Java.Lang.String)topicName);
                 var res = admin.DeleteTopics(coll);
                 res.All().Get();
             }
@@ -223,44 +226,35 @@ namespace MASES.KNet.Extensions
             }
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DeleteTopics(Collection{string})"/>
+        /// Async version of <see cref="IAdmin.DeleteTopics(Collection{Java.Lang.String})"/>
         /// </summary>
-        public static async Task<DeleteTopicsResult> DeleteTopicsAsync(this IAdmin admin, Collection<string> topics)
+        public static async Task<DeleteTopicsResult> DeleteTopicsAsync(this IAdmin admin, IEnumerable<string> topics)
         {
-            return await Execute(admin.DeleteTopics, topics);
+            return await Execute(admin.DeleteTopics, topics.ToJCollection());
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DeleteTopics(Collection{string})"/>
+        /// Async version of <see cref="IAdmin.DeleteTopics(Collection{Java.Lang.String})"/>
         /// </summary>
         public static async Task<DeleteTopicsResult> DeleteTopicAsync(this IAdmin admin, string topicName)
         {
-            Set<string> coll = null;
-            try
-            {
-                coll = Collections.Singleton(topicName);
-                return await DeleteTopicsAsync(admin, coll);
-            }
-            finally
-            { // this piece of code tryies to mitigate the effect of GC object recall
-                if (coll != null && coll.IsBridgeStatic) coll.ToString();
-            }
+            return await DeleteTopicsAsync(admin, new string[] { topicName });
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DeleteTopics(Collection{string})"/>
+        /// Async version of <see cref="IAdmin.DeleteTopics(Collection{Java.Lang.String})"/>
         /// </summary>
-        public static async Task<DeleteTopicsResult> DeleteTopicsAsync(this IAdmin admin, Collection<string> topics, DeleteTopicsOptions options)
+        public static async Task<DeleteTopicsResult> DeleteTopicsAsync(this IAdmin admin, IEnumerable<string> topics, DeleteTopicsOptions options)
         {
-            return await Execute(admin.DeleteTopics, topics, options);
+            return await Execute(admin.DeleteTopics, topics.ToJCollection(), options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DeleteTopics(Collection{string})"/>
+        /// Async version of <see cref="IAdmin.DeleteTopics(TopicCollection)"/>
         /// </summary>
         public static async Task<DeleteTopicsResult> DeleteTopicsAsync(this IAdmin admin, TopicCollection topics)
         {
             return await Execute(admin.DeleteTopics, topics);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DeleteTopics(Collection{string})"/>
+        /// Async version of <see cref="IAdmin.DeleteTopics(TopicCollection, DeleteTopicsOptions)"/>
         /// </summary>
         public static async Task<DeleteTopicsResult> DeleteTopicsAsync(this IAdmin admin, TopicCollection topics, DeleteTopicsOptions options)
         {
@@ -281,30 +275,25 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.ListTopics, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DescribeTopics(Collection{string})"/>
+        /// Async version of <see cref="IAdmin.DescribeTopics(Collection{Java.Lang.String})"/>
         /// </summary>
-        public static async Task<DescribeTopicsResult> DescribeTopicsAsync(this IAdmin admin, Collection<string> topicNames)
+        public static async Task<DescribeTopicsResult> DescribeTopicsAsync(this IAdmin admin, IEnumerable<string> topicNames)
         {
-            return await Execute(admin.DescribeTopics, topicNames);
+            return await Execute(admin.DescribeTopics, topicNames.ToJCollection());
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DescribeTopics(Collection{string})"/>
+        /// Async version of <see cref="IAdmin.DescribeTopics(Collection{Java.Lang.String})"/>
         /// </summary>
         public static async Task<DescribeTopicsResult> DescribeTopicAsync(this IAdmin admin, string topicName)
         {
-            var topics = Collections.Singleton(topicName);
-            try
-            {
-                return await Execute(admin.DescribeTopics, topics);
-            }
-            finally { topics?.Dispose(); }
+            return await DescribeTopicsAsync(admin, new string[] { topicName });
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DescribeTopics(Collection{string}, DescribeTopicsOptions)"/>
+        /// Async version of <see cref="IAdmin.DescribeTopics(Collection{Java.Lang.String}, DescribeTopicsOptions)"/>
         /// </summary>
-        public static async Task<DescribeTopicsResult> DescribeTopicsAsync(this IAdmin admin, Collection<string> topicNames, DescribeTopicsOptions options)
+        public static async Task<DescribeTopicsResult> DescribeTopicsAsync(this IAdmin admin, IEnumerable<string> topicNames, DescribeTopicsOptions options)
         {
-            return await Execute(admin.DescribeTopics, topicNames, options);
+            return await Execute(admin.DescribeTopics, topicNames.ToJCollection(), options);
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.DescribeCluster()"/>
@@ -391,16 +380,16 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.IncrementalAlterConfigs, configs, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.AlterReplicaLogDirs(Map{TopicPartitionReplica, string})"/>
+        /// Async version of <see cref="IAdmin.AlterReplicaLogDirs(Map{TopicPartitionReplica, Java.Lang.String})"/>
         /// </summary>
-        public static async Task<AlterReplicaLogDirsResult> AlterReplicaLogDirsAsync(this IAdmin admin, Map<TopicPartitionReplica, string> replicaAssignment)
+        public static async Task<AlterReplicaLogDirsResult> AlterReplicaLogDirsAsync(this IAdmin admin, Map<TopicPartitionReplica, Java.Lang.String> replicaAssignment)
         {
             return await Execute(admin.AlterReplicaLogDirs, replicaAssignment);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.AlterReplicaLogDirs(Map{TopicPartitionReplica, string}, AlterReplicaLogDirsOptions)"/>
+        /// Async version of <see cref="IAdmin.AlterReplicaLogDirs(Map{TopicPartitionReplica, Java.Lang.String}, AlterReplicaLogDirsOptions)"/>
         /// </summary>
-        public static async Task<AlterReplicaLogDirsResult> AlterReplicaLogDirsAsync(this IAdmin admin, Map<TopicPartitionReplica, string> replicaAssignment, AlterReplicaLogDirsOptions options)
+        public static async Task<AlterReplicaLogDirsResult> AlterReplicaLogDirsAsync(this IAdmin admin, Map<TopicPartitionReplica, Java.Lang.String> replicaAssignment, AlterReplicaLogDirsOptions options)
         {
             return await Execute(admin.AlterReplicaLogDirs, replicaAssignment, options);
         }
@@ -433,16 +422,16 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.DescribeReplicaLogDirs, replicas, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.CreatePartitions(Map{string, NewPartitions})"/>
+        /// Async version of <see cref="IAdmin.CreatePartitions(Map{Java.Lang.String, NewPartitions})"/>
         /// </summary>
-        public static async Task<CreatePartitionsResult> CreatePartitionsAsync(this IAdmin admin, Map<string, NewPartitions> newPartitions)
+        public static async Task<CreatePartitionsResult> CreatePartitionsAsync(this IAdmin admin, Map<Java.Lang.String, NewPartitions> newPartitions)
         {
             return await Execute(admin.CreatePartitions, newPartitions);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.CreatePartitions(Map{string, NewPartitions}, CreatePartitionsOptions)"/>
+        /// Async version of <see cref="IAdmin.CreatePartitions(Map{Java.Lang.String, NewPartitions}, CreatePartitionsOptions)"/>
         /// </summary>
-        public static async Task<CreatePartitionsResult> CreatePartitionsAsync(this IAdmin admin, Map<string, NewPartitions> newPartitions, CreatePartitionsOptions options)
+        public static async Task<CreatePartitionsResult> CreatePartitionsAsync(this IAdmin admin, Map<Java.Lang.String, NewPartitions> newPartitions, CreatePartitionsOptions options)
         {
             return await Execute(admin.CreatePartitions, newPartitions, options);
         }
@@ -517,18 +506,18 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.DescribeDelegationToken, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DescribeConsumerGroups(Collection{string})"/>
+        /// Async version of <see cref="IAdmin.DescribeConsumerGroups(Collection{Java.Lang.String})"/>
         /// </summary>
-        public static async Task<DescribeConsumerGroupsResult> DescribeConsumerGroupsAsync(this IAdmin admin, Collection<string> groupIds, DescribeConsumerGroupsOptions options)
+        public static async Task<DescribeConsumerGroupsResult> DescribeConsumerGroupsAsync(this IAdmin admin, IEnumerable<string> groupIds, DescribeConsumerGroupsOptions options)
         {
-            return await Execute(admin.DescribeConsumerGroups, groupIds, options);
+            return await Execute(admin.DescribeConsumerGroups, groupIds.ToJCollection(), options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DescribeConsumerGroups(Collection{string}, DescribeConsumerGroupsOptions)"/>
+        /// Async version of <see cref="IAdmin.DescribeConsumerGroups(Collection{Java.Lang.String}, DescribeConsumerGroupsOptions)"/>
         /// </summary>
-        public static async Task<DescribeConsumerGroupsResult> DescribeConsumerGroupsAsync(this IAdmin admin, Collection<string> groupIds)
+        public static async Task<DescribeConsumerGroupsResult> DescribeConsumerGroupsAsync(this IAdmin admin, IEnumerable<string> groupIds)
         {
-            return await Execute(admin.DescribeConsumerGroups, groupIds);
+            return await Execute(admin.DescribeConsumerGroups, groupIds.ToJCollection());
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.ListConsumerGroups(ListConsumerGroupsOptions)"/>
@@ -545,46 +534,46 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.ListConsumerGroups);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.ListConsumerGroupOffsets(string, ListConsumerGroupOffsetsOptions)"/>
+        /// Async version of <see cref="IAdmin.ListConsumerGroupOffsets(Java.Lang.String, ListConsumerGroupOffsetsOptions)"/>
         /// </summary>
         public static async Task<ListConsumerGroupOffsetsResult> ListConsumerGroupOffsetsAsync(this IAdmin admin, string groupId, ListConsumerGroupOffsetsOptions options)
         {
-            return await Execute(admin.ListConsumerGroupOffsets, groupId, options);
+            return await Execute(admin.ListConsumerGroupOffsets, (Java.Lang.String)groupId, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.ListConsumerGroupOffsets(string)"/>
+        /// Async version of <see cref="IAdmin.ListConsumerGroupOffsets(Java.Lang.String)"/>
         /// </summary>
         public static async Task<ListConsumerGroupOffsetsResult> ListConsumerGroupOffsetsAsync(this IAdmin admin, string groupId)
         {
-            return await Execute(admin.ListConsumerGroupOffsets, groupId);
+            return await Execute(admin.ListConsumerGroupOffsets, (Java.Lang.String)groupId);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DeleteConsumerGroups(Collection{string}, DeleteConsumerGroupsOptions)"/>
+        /// Async version of <see cref="IAdmin.DeleteConsumerGroups(Collection{Java.Lang.String}, DeleteConsumerGroupsOptions)"/>
         /// </summary>
-        public static async Task<DeleteConsumerGroupsResult> DeleteConsumerGroupsAsync(this IAdmin admin, Collection<string> groupIds, DeleteConsumerGroupsOptions options)
+        public static async Task<DeleteConsumerGroupsResult> DeleteConsumerGroupsAsync(this IAdmin admin, IEnumerable<string> groupIds, DeleteConsumerGroupsOptions options)
         {
-            return await Execute(admin.DeleteConsumerGroups, groupIds, options);
+            return await Execute(admin.DeleteConsumerGroups, groupIds.ToJCollection(), options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DeleteConsumerGroups(Collection{string})"/>
+        /// Async version of <see cref="IAdmin.DeleteConsumerGroups(Collection{Java.Lang.String})"/>
         /// </summary>
-        public static async Task<DeleteConsumerGroupsResult> DeleteConsumerGroupsAsync(this IAdmin admin, Collection<string> groupIds)
+        public static async Task<DeleteConsumerGroupsResult> DeleteConsumerGroupsAsync(this IAdmin admin, IEnumerable<string> groupIds)
         {
-            return await Execute(admin.DeleteConsumerGroups, groupIds);
+            return await Execute(admin.DeleteConsumerGroups, groupIds.ToJCollection());
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DeleteConsumerGroupOffsets(string, Set{TopicPartition}, DeleteConsumerGroupOffsetsOptions)"/>
+        /// Async version of <see cref="IAdmin.DeleteConsumerGroupOffsets(Java.Lang.String, Set{TopicPartition}, DeleteConsumerGroupOffsetsOptions)"/>
         /// </summary>
         public static async Task<DeleteConsumerGroupOffsetsResult> DeleteConsumerGroupOffsetsAsync(this IAdmin admin, string groupId, Set<TopicPartition> partitions, DeleteConsumerGroupOffsetsOptions options)
         {
-            return await Execute(admin.DeleteConsumerGroupOffsets, groupId, partitions, options);
+            return await Execute(admin.DeleteConsumerGroupOffsets, (Java.Lang.String)groupId, partitions, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DeleteConsumerGroupOffsets(string, Set{TopicPartition})"/>
+        /// Async version of <see cref="IAdmin.DeleteConsumerGroupOffsets(Java.Lang.String, Set{TopicPartition})"/>
         /// </summary>
         public static async Task<DeleteConsumerGroupOffsetsResult> DeleteConsumerGroupOffsetsAsync(this IAdmin admin, string groupId, Set<TopicPartition> partitions)
         {
-            return await Execute(admin.DeleteConsumerGroupOffsets, groupId, partitions);
+            return await Execute(admin.DeleteConsumerGroupOffsets, (Java.Lang.String)groupId, partitions);
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.ElectLeaders(ElectionType, Set{TopicPartition})"/>
@@ -650,25 +639,25 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.ListPartitionReassignments, partitions, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.RemoveMembersFromConsumerGroup(string, RemoveMembersFromConsumerGroupOptions)"/>
+        /// Async version of <see cref="IAdmin.RemoveMembersFromConsumerGroup(Java.Lang.String, RemoveMembersFromConsumerGroupOptions)"/>
         /// </summary>
         public static async Task<RemoveMembersFromConsumerGroupResult> RemoveMembersFromConsumerGroupAsync(this IAdmin admin, string groupId, RemoveMembersFromConsumerGroupOptions options)
         {
-            return await Execute(admin.RemoveMembersFromConsumerGroup, groupId, options);
+            return await Execute(admin.RemoveMembersFromConsumerGroup, (Java.Lang.String)groupId, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.AlterConsumerGroupOffsets(string, Map{TopicPartition, OffsetAndMetadata})"/>
+        /// Async version of <see cref="IAdmin.AlterConsumerGroupOffsets(Java.Lang.String, Map{TopicPartition, OffsetAndMetadata})"/>
         /// </summary>
         public static async Task<AlterConsumerGroupOffsetsResult> AlterConsumerGroupOffsetsAsync(this IAdmin admin, string groupId, Map<TopicPartition, OffsetAndMetadata> offsets)
         {
-            return await Execute(admin.AlterConsumerGroupOffsets, groupId, offsets);
+            return await Execute(admin.AlterConsumerGroupOffsets, (Java.Lang.String)groupId, offsets);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.AlterConsumerGroupOffsets(string, Map{TopicPartition, OffsetAndMetadata}, AlterConsumerGroupOffsetsOptions)"/>
+        /// Async version of <see cref="IAdmin.AlterConsumerGroupOffsets(Java.Lang.String, Map{TopicPartition, OffsetAndMetadata}, AlterConsumerGroupOffsetsOptions)"/>
         /// </summary>
         public static async Task<AlterConsumerGroupOffsetsResult> AlterConsumerGroupOffsetsAsync(this IAdmin admin, string groupId, Map<TopicPartition, OffsetAndMetadata> offsets, AlterConsumerGroupOffsetsOptions options)
         {
-            return await Execute(admin.AlterConsumerGroupOffsets, groupId, offsets, options);
+            return await Execute(admin.AlterConsumerGroupOffsets, (Java.Lang.String)groupId, offsets, options);
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.ListOffsets(Map{TopicPartition, OffsetSpec})"/>
@@ -720,28 +709,28 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.DescribeUserScramCredentials);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DescribeUserScramCredentials(List{string})"/>
+        /// Async version of <see cref="IAdmin.DescribeUserScramCredentials(Java.Util.List{Java.Lang.String})"/>
         /// </summary>
-        public static async Task<DescribeUserScramCredentialsResult> DescribeUserScramCredentialsAsync(this IAdmin admin, Java.Util.List<string> users)
+        public static async Task<DescribeUserScramCredentialsResult> DescribeUserScramCredentialsAsync(this IAdmin admin, Java.Util.List<Java.Lang.String> users)
         {
             return await Execute(admin.DescribeUserScramCredentials, users);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DescribeUserScramCredentials(List{string}, DescribeUserScramCredentialsOptions)"/>
+        /// Async version of <see cref="IAdmin.DescribeUserScramCredentials(Java.Util.List{Java.Lang.String}, DescribeUserScramCredentialsOptions)"/>
         /// </summary>
-        public static async Task<DescribeUserScramCredentialsResult> DescribeUserScramCredentialsAsync(this IAdmin admin, Java.Util.List<string> users, DescribeUserScramCredentialsOptions options)
+        public static async Task<DescribeUserScramCredentialsResult> DescribeUserScramCredentialsAsync(this IAdmin admin, Java.Util.List<Java.Lang.String> users, DescribeUserScramCredentialsOptions options)
         {
             return await Execute(admin.DescribeUserScramCredentials, users, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.AlterUserScramCredentials(List{UserScramCredentialAlteration})"/>
+        /// Async version of <see cref="IAdmin.AlterUserScramCredentials(Java.Util.List{UserScramCredentialAlteration})"/>
         /// </summary>
         public static async Task<AlterUserScramCredentialsResult> AlterUserScramCredentialsAsync(this IAdmin admin, Java.Util.List<UserScramCredentialAlteration> alterations)
         {
             return await Execute(admin.AlterUserScramCredentials, alterations);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.AlterUserScramCredentials(List{UserScramCredentialAlteration}, AlterUserScramCredentialsOptions)"/>
+        /// Async version of <see cref="IAdmin.AlterUserScramCredentials(Java.Util.List{UserScramCredentialAlteration}, AlterUserScramCredentialsOptions)"/>
         /// </summary>
         public static async Task<AlterUserScramCredentialsResult> AlterUserScramCredentialsAsync(this IAdmin admin, Java.Util.List<UserScramCredentialAlteration> alterations, AlterUserScramCredentialsOptions options)
         {
@@ -762,9 +751,9 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.DescribeFeatures, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.UpdateFeatures(Map{string, FeatureUpdate}, UpdateFeaturesOptions)"/>
+        /// Async version of <see cref="IAdmin.UpdateFeatures(Map{Java.Lang.String, FeatureUpdate}, UpdateFeaturesOptions)"/>
         /// </summary>
-        public static async Task<UpdateFeaturesResult> UpdateFeaturesAsync(this IAdmin admin, Map<string, FeatureUpdate> featureUpdates, UpdateFeaturesOptions options)
+        public static async Task<UpdateFeaturesResult> UpdateFeaturesAsync(this IAdmin admin, Map<Java.Lang.String, FeatureUpdate> featureUpdates, UpdateFeaturesOptions options)
         {
             return await Execute(admin.UpdateFeatures, featureUpdates, options);
         }
@@ -797,18 +786,18 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.DescribeProducers, partitions, options);
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DescribeTransactions(Collection{string})"/>
+        /// Async version of <see cref="IAdmin.DescribeTransactions(Collection{Java.Lang.String})"/>
         /// </summary>
-        public static async Task<DescribeTransactionsResult> DescribeTransactionsAsync(this IAdmin admin, Collection<string> transactionalIds)
+        public static async Task<DescribeTransactionsResult> DescribeTransactionsAsync(this IAdmin admin, IEnumerable<string> transactionalIds)
         {
-            return await Execute(admin.DescribeTransactions, transactionalIds);
+            return await Execute(admin.DescribeTransactions, transactionalIds.ToJCollection());
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.DescribeTransactions(Collection{string}, DescribeTransactionsOptions)"/>
+        /// Async version of <see cref="IAdmin.DescribeTransactions(Collection{Java.Lang.String}, DescribeTransactionsOptions)"/>
         /// </summary>
-        public static async Task<DescribeTransactionsResult> DescribeTransactionsAsync(this IAdmin admin, Collection<string> transactionalIds, DescribeTransactionsOptions options)
+        public static async Task<DescribeTransactionsResult> DescribeTransactionsAsync(this IAdmin admin, IEnumerable<string> transactionalIds, DescribeTransactionsOptions options)
         {
-            return await Execute(admin.DescribeTransactions, transactionalIds, options);
+            return await Execute(admin.DescribeTransactions, transactionalIds.ToJCollection(), options);
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.AbortTransaction(AbortTransactionSpec)"/>

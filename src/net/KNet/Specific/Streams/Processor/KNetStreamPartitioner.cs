@@ -62,7 +62,7 @@ namespace MASES.KNet.Streams.Processor
         /// </summary>
         public int NumPartitions => _arg3;
         /// <inheritdoc/>
-        public sealed override Optional<Set<Integer>> Partitions(string arg0, byte[] arg1, byte[] arg2, int arg3)
+        public sealed override Optional<Set<Integer>> Partitions(Java.Lang.String arg0, byte[] arg1, byte[] arg2, int arg3)
         {
             _keySet = _valueSet = false;
             _arg0 = arg0;

@@ -41,8 +41,8 @@ namespace Org.Apache.Kafka.Clients.Producer
         void AbortTransaction();
         /// <inheritdoc cref="Producer.Flush"/>
         void Flush();
-        /// <inheritdoc cref="Producer.PartitionsFor(string)"/>
-        List<PartitionInfo> PartitionsFor(string topic);
+        /// <inheritdoc cref="Producer.PartitionsFor(Java.Lang.String)"/>
+        List<PartitionInfo> PartitionsFor(Java.Lang.String topic);
         /// <inheritdoc cref="Producer.Metrics"/>
         Map<MetricName, T> Metrics<T>() where T : Metric;
     }
