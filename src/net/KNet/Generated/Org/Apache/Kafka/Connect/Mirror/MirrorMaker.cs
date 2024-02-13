@@ -35,7 +35,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        public MirrorMaker(Java.Util.Map<string, string> arg0, Java.Util.List<string> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
+        public MirrorMaker(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0, Java.Util.List<Java.Lang.String> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
-        public MirrorMaker(Java.Util.Map<string, string> arg0, Java.Util.List<string> arg1)
+        public MirrorMaker(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0, Java.Util.List<Java.Lang.String> arg1)
             : base(arg0, arg1)
         {
         }
@@ -52,7 +52,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorMaker.html#org.apache.kafka.connect.mirror.MirrorMaker(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public MirrorMaker(Java.Util.Map<string, string> arg0)
+        public MirrorMaker(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
             : base(arg0)
         {
         }
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        public MirrorMaker(Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig arg0, Java.Util.List<string> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
+        public MirrorMaker(Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig arg0, Java.Util.List<Java.Lang.String> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -87,8 +87,8 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorMaker.html#main-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public static void Main(string[] arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public static void Main(Java.Lang.String[] arg0)
         {
             SExecute(LocalBridgeClazz, "main", new object[] { arg0 });
         }

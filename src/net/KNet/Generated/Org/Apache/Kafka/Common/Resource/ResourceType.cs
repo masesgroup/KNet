@@ -101,19 +101,19 @@ namespace Org.Apache.Kafka.Common.Resource
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/resource/ResourceType.html#fromString-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public static Org.Apache.Kafka.Common.Resource.ResourceType FromString(string arg0)
+        public static Org.Apache.Kafka.Common.Resource.ResourceType FromString(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.Resource.ResourceType>(LocalBridgeClazz, "fromString", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/resource/ResourceType.html#valueOf-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></returns>
-        public static Org.Apache.Kafka.Common.Resource.ResourceType ValueOf(string arg0)
+        public static Org.Apache.Kafka.Common.Resource.ResourceType ValueOf(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.Resource.ResourceType>(LocalBridgeClazz, "valueOf", arg0);
         }

@@ -68,27 +68,27 @@ namespace Org.Apache.Kafka.Connect.Health
         /// </summary>
 
         /// <returns><see cref="Java.Util.Collection"/></returns>
-        public Java.Util.Collection<string> Connectors()
+        public Java.Util.Collection<Java.Lang.String> Connectors()
         {
-            return IExecute<Java.Util.Collection<string>>("connectors");
+            return IExecute<Java.Util.Collection<Java.Lang.String>>("connectors");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/health/ConnectClusterState.html#connectorHealth-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorHealth"/></returns>
-        public Org.Apache.Kafka.Connect.Health.ConnectorHealth ConnectorHealth(string arg0)
+        public Org.Apache.Kafka.Connect.Health.ConnectorHealth ConnectorHealth(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Health.ConnectorHealth>("connectorHealth", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/health/ConnectClusterState.html#connectorConfig-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, string> ConnectorConfig(string arg0)
+        public Java.Util.Map<Java.Lang.String, Java.Lang.String> ConnectorConfig(Java.Lang.String arg0)
         {
-            return IExecute<Java.Util.Map<string, string>>("connectorConfig", arg0);
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("connectorConfig", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/health/ConnectClusterState.html#clusterDetails--"/>

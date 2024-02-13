@@ -32,10 +32,10 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(java.lang.String,org.apache.kafka.streams.StreamsConfig,java.util.Properties)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.StreamsConfig"/></param>
         /// <param name="arg2"><see cref="Java.Util.Properties"/></param>
-        public TopologyConfig(string arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1, Java.Util.Properties arg2)
+        public TopologyConfig(Java.Lang.String arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1, Java.Util.Properties arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -70,14 +70,14 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#storeType"/>
         /// </summary>
-        public string storeType { get { if (!_storeTypeReady) { _storeTypeContent = IGetField<string>("storeType"); _storeTypeReady = true; } return _storeTypeContent; } }
-        private string _storeTypeContent = default;
+        public Java.Lang.String storeType { get { if (!_storeTypeReady) { _storeTypeContent = IGetField<Java.Lang.String>("storeType"); _storeTypeReady = true; } return _storeTypeContent; } }
+        private Java.Lang.String _storeTypeContent = default;
         private bool _storeTypeReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#topologyName"/>
         /// </summary>
-        public string topologyName { get { if (!_topologyNameReady) { _topologyNameContent = IGetField<string>("topologyName"); _topologyNameReady = true; } return _topologyNameContent; } }
-        private string _topologyNameContent = default;
+        public Java.Lang.String topologyName { get { if (!_topologyNameReady) { _topologyNameContent = IGetField<Java.Lang.String>("topologyName"); _topologyNameReady = true; } return _topologyNameContent; } }
+        private Java.Lang.String _topologyNameContent = default;
         private bool _topologyNameReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#deserializationExceptionHandlerSupplier"/>

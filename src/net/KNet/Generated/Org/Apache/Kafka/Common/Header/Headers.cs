@@ -66,18 +66,18 @@ namespace Org.Apache.Kafka.Common.Header
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/header/Headers.html#headers-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Iterable"/></returns>
-        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header> HeadersMethod(string arg0)
+        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header> HeadersMethod(Java.Lang.String arg0)
         {
             return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header>>("headers", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/header/Headers.html#lastHeader-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Header"/></returns>
-        public Org.Apache.Kafka.Common.Header.Header LastHeader(string arg0)
+        public Org.Apache.Kafka.Common.Header.Header LastHeader(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Header.Header>("lastHeader", arg0);
         }
@@ -93,11 +93,11 @@ namespace Org.Apache.Kafka.Common.Header
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/header/Headers.html#add-java.lang.String-byte[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         /// <exception cref="Java.Lang.IllegalStateException"/>
-        public Org.Apache.Kafka.Common.Header.Headers Add(string arg0, byte[] arg1)
+        public Org.Apache.Kafka.Common.Header.Headers Add(Java.Lang.String arg0, byte[] arg1)
         {
             return IExecute<Org.Apache.Kafka.Common.Header.Headers>("add", arg0, arg1);
         }
@@ -114,10 +114,10 @@ namespace Org.Apache.Kafka.Common.Header
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/header/Headers.html#remove-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         /// <exception cref="Java.Lang.IllegalStateException"/>
-        public Org.Apache.Kafka.Common.Header.Headers Remove(string arg0)
+        public Org.Apache.Kafka.Common.Header.Headers Remove(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Header.Headers>("remove", arg0);
         }

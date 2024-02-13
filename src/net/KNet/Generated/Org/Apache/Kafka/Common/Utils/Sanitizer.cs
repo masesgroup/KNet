@@ -44,29 +44,29 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Sanitizer.html#desanitize-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string Desanitize(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String Desanitize(Java.Lang.String arg0)
         {
-            return SExecute<string>(LocalBridgeClazz, "desanitize", arg0);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "desanitize", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Sanitizer.html#jmxSanitize-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string JmxSanitize(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String JmxSanitize(Java.Lang.String arg0)
         {
-            return SExecute<string>(LocalBridgeClazz, "jmxSanitize", arg0);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "jmxSanitize", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Sanitizer.html#sanitize-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string Sanitize(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String Sanitize(Java.Lang.String arg0)
         {
-            return SExecute<string>(LocalBridgeClazz, "sanitize", arg0);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "sanitize", arg0);
         }
 
         #endregion

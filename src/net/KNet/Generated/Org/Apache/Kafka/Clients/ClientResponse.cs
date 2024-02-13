@@ -76,10 +76,10 @@ namespace Org.Apache.Kafka.Clients
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/ClientResponse.html#destination--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Destination()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Destination()
         {
-            return IExecute<string>("destination");
+            return IExecute<Java.Lang.String>("destination");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/ClientResponse.html#receivedTimeMs--"/>

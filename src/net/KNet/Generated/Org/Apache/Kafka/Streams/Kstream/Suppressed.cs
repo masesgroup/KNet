@@ -254,7 +254,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <returns><typeparamref name="BC"/></returns>
-            public BC WithLoggingEnabled(Java.Util.Map<string, string> arg0)
+            public BC WithLoggingEnabled(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
             {
                 return IExecute<BC>("withLoggingEnabled", arg0);
             }

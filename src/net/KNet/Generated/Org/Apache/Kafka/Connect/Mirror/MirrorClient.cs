@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/MirrorClient.html#org.apache.kafka.connect.mirror.MirrorClient(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public MirrorClient(Java.Util.Map<string, object> arg0)
+        public MirrorClient(Java.Util.Map<Java.Lang.String, object> arg0)
             : base(arg0)
         {
         }
@@ -64,21 +64,21 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/MirrorClient.html#replicationHops-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="int"/></returns>
         /// <exception cref="Java.Lang.InterruptedException"/>
-        public int ReplicationHops(string arg0)
+        public int ReplicationHops(Java.Lang.String arg0)
         {
             return IExecute<int>("replicationHops", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/MirrorClient.html#remoteConsumerOffsets-java.lang.String-java.lang.String-java.time.Duration-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> RemoteConsumerOffsets(string arg0, string arg1, Java.Time.Duration arg2)
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> RemoteConsumerOffsets(Java.Lang.String arg0, Java.Lang.String arg1, Java.Time.Duration arg2)
         {
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("remoteConsumerOffsets", arg0, arg1, arg2);
         }
@@ -88,9 +88,9 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         /// <returns><see cref="Java.Util.Set"/></returns>
         /// <exception cref="Java.Lang.InterruptedException"/>
-        public Java.Util.Set<string> CheckpointTopics()
+        public Java.Util.Set<Java.Lang.String> CheckpointTopics()
         {
-            return IExecute<Java.Util.Set<string>>("checkpointTopics");
+            return IExecute<Java.Util.Set<Java.Lang.String>>("checkpointTopics");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/MirrorClient.html#heartbeatTopics--"/>
@@ -98,9 +98,9 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         /// <returns><see cref="Java.Util.Set"/></returns>
         /// <exception cref="Java.Lang.InterruptedException"/>
-        public Java.Util.Set<string> HeartbeatTopics()
+        public Java.Util.Set<Java.Lang.String> HeartbeatTopics()
         {
-            return IExecute<Java.Util.Set<string>>("heartbeatTopics");
+            return IExecute<Java.Util.Set<Java.Lang.String>>("heartbeatTopics");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/MirrorClient.html#remoteTopics--"/>
@@ -108,19 +108,19 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         /// <returns><see cref="Java.Util.Set"/></returns>
         /// <exception cref="Java.Lang.InterruptedException"/>
-        public Java.Util.Set<string> RemoteTopics()
+        public Java.Util.Set<Java.Lang.String> RemoteTopics()
         {
-            return IExecute<Java.Util.Set<string>>("remoteTopics");
+            return IExecute<Java.Util.Set<Java.Lang.String>>("remoteTopics");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/MirrorClient.html#remoteTopics-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
         /// <exception cref="Java.Lang.InterruptedException"/>
-        public Java.Util.Set<string> RemoteTopics(string arg0)
+        public Java.Util.Set<Java.Lang.String> RemoteTopics(Java.Lang.String arg0)
         {
-            return IExecute<Java.Util.Set<string>>("remoteTopics", arg0);
+            return IExecute<Java.Util.Set<Java.Lang.String>>("remoteTopics", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/MirrorClient.html#upstreamClusters--"/>
@@ -128,9 +128,9 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         /// <returns><see cref="Java.Util.Set"/></returns>
         /// <exception cref="Java.Lang.InterruptedException"/>
-        public Java.Util.Set<string> UpstreamClusters()
+        public Java.Util.Set<Java.Lang.String> UpstreamClusters()
         {
-            return IExecute<Java.Util.Set<string>>("upstreamClusters");
+            return IExecute<Java.Util.Set<Java.Lang.String>>("upstreamClusters");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/MirrorClient.html#replicationPolicy--"/>

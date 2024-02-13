@@ -52,8 +52,8 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/OperatingSystem.html#NAME"/>
         /// </summary>
-        public static string NAME { get { if (!_NAMEReady) { _NAMEContent = SGetField<string>(LocalBridgeClazz, "NAME"); _NAMEReady = true; } return _NAMEContent; } }
-        private static string _NAMEContent = default;
+        public static Java.Lang.String NAME { get { if (!_NAMEReady) { _NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "NAME"); _NAMEReady = true; } return _NAMEContent; } }
+        private static Java.Lang.String _NAMEContent = default;
         private static bool _NAMEReady = false; // this is used because in case of generics 
 
         #endregion

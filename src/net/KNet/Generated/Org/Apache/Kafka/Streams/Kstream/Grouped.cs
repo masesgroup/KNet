@@ -44,9 +44,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Grouped.html#as-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Grouped"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Grouped As(string arg0)
+        public static Org.Apache.Kafka.Streams.Kstream.Grouped As(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Grouped>(LocalBridgeClazz, "as", arg0);
         }
@@ -71,11 +71,11 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Grouped.html#with-java.lang.String-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Grouped"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Grouped With(string arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1, Org.Apache.Kafka.Common.Serialization.Serde arg2)
+        public static Org.Apache.Kafka.Streams.Kstream.Grouped With(Java.Lang.String arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1, Org.Apache.Kafka.Common.Serialization.Serde arg2)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Grouped>(LocalBridgeClazz, "with", arg0, arg1, arg2);
         }
@@ -145,9 +145,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Grouped.html#as-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Grouped"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Grouped<K, V> As(string arg0)
+        public static Org.Apache.Kafka.Streams.Kstream.Grouped<K, V> As(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Grouped<K, V>>(LocalBridgeClazz, "as", arg0);
         }
@@ -172,11 +172,11 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Grouped.html#with-java.lang.String-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Grouped"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Grouped<K, V> With(string arg0, Org.Apache.Kafka.Common.Serialization.Serde<K> arg1, Org.Apache.Kafka.Common.Serialization.Serde<V> arg2)
+        public static Org.Apache.Kafka.Streams.Kstream.Grouped<K, V> With(Java.Lang.String arg0, Org.Apache.Kafka.Common.Serialization.Serde<K> arg1, Org.Apache.Kafka.Common.Serialization.Serde<V> arg2)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Grouped<K, V>>(LocalBridgeClazz, "with", arg0, arg1, arg2);
         }

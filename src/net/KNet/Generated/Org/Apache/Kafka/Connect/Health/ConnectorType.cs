@@ -62,9 +62,9 @@ namespace Org.Apache.Kafka.Connect.Health
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/health/ConnectorType.html#valueOf-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorType"/></returns>
-        public static Org.Apache.Kafka.Connect.Health.ConnectorType ValueOf(string arg0)
+        public static Org.Apache.Kafka.Connect.Health.ConnectorType ValueOf(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Health.ConnectorType>(LocalBridgeClazz, "valueOf", arg0);
         }

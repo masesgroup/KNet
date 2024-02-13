@@ -74,18 +74,18 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html#shouldReplicateConfigProperty-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public bool ShouldReplicateConfigProperty(string arg0)
+        public bool ShouldReplicateConfigProperty(Java.Lang.String arg0)
         {
             return IExecute<bool>("shouldReplicateConfigProperty", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html#shouldReplicateSourceDefault-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public bool ShouldReplicateSourceDefault(string arg0)
+        public bool ShouldReplicateSourceDefault(Java.Lang.String arg0)
         {
             return IExecute<bool>("shouldReplicateSourceDefault", arg0);
         }
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Configure(Java.Util.Map<string, object> arg0)
+        public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("configure", arg0);
         }

@@ -48,19 +48,19 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/DirectoryConfigProvider.html#get-java.lang.String-java.util.Set-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></returns>
-        public Org.Apache.Kafka.Common.Config.ConfigData Get(string arg0, Java.Util.Set<string> arg1)
+        public Org.Apache.Kafka.Common.Config.ConfigData Get(Java.Lang.String arg0, Java.Util.Set<Java.Lang.String> arg1)
         {
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigData>("get", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/DirectoryConfigProvider.html#get-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></returns>
-        public Org.Apache.Kafka.Common.Config.ConfigData Get(string arg0)
+        public Org.Apache.Kafka.Common.Config.ConfigData Get(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigData>("get", arg0);
         }
@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/DirectoryConfigProvider.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Configure(Java.Util.Map<string, object> arg0)
+        public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("configure", arg0);
         }

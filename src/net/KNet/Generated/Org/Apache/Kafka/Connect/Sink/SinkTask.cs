@@ -40,14 +40,14 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/sink/SinkTask.html#TOPICS_CONFIG"/>
         /// </summary>
-        public static string TOPICS_CONFIG { get { if (!_TOPICS_CONFIGReady) { _TOPICS_CONFIGContent = SGetField<string>(LocalBridgeClazz, "TOPICS_CONFIG"); _TOPICS_CONFIGReady = true; } return _TOPICS_CONFIGContent; } }
-        private static string _TOPICS_CONFIGContent = default;
+        public static Java.Lang.String TOPICS_CONFIG { get { if (!_TOPICS_CONFIGReady) { _TOPICS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_CONFIG"); _TOPICS_CONFIGReady = true; } return _TOPICS_CONFIGContent; } }
+        private static Java.Lang.String _TOPICS_CONFIGContent = default;
         private static bool _TOPICS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/sink/SinkTask.html#TOPICS_REGEX_CONFIG"/>
         /// </summary>
-        public static string TOPICS_REGEX_CONFIG { get { if (!_TOPICS_REGEX_CONFIGReady) { _TOPICS_REGEX_CONFIGContent = SGetField<string>(LocalBridgeClazz, "TOPICS_REGEX_CONFIG"); _TOPICS_REGEX_CONFIGReady = true; } return _TOPICS_REGEX_CONFIGContent; } }
-        private static string _TOPICS_REGEX_CONFIGContent = default;
+        public static Java.Lang.String TOPICS_REGEX_CONFIG { get { if (!_TOPICS_REGEX_CONFIGReady) { _TOPICS_REGEX_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_REGEX_CONFIG"); _TOPICS_REGEX_CONFIGReady = true; } return _TOPICS_REGEX_CONFIGContent; } }
+        private static Java.Lang.String _TOPICS_REGEX_CONFIGContent = default;
         private static bool _TOPICS_REGEX_CONFIGReady = false; // this is used because in case of generics 
 
         #endregion
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/sink/SinkTask.html#start-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Start(Java.Util.Map<string, string> arg0)
+        public void Start(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             IExecute("start", arg0);
         }

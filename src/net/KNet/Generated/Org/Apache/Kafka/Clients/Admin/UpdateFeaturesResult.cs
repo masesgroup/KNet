@@ -50,9 +50,9 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> Values()
+        public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> Values()
         {
-            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>>("values");
+            return IExecute<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>>("values");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/UpdateFeaturesResult.html#all--"/>

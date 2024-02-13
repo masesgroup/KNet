@@ -79,22 +79,22 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnBatchRestored"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.TopicPartition, string, long, long> OnOnBatchRestored { get; set; } = null;
+        public System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long, long> OnOnBatchRestored { get; set; } = null;
 
         void OnBatchRestoredEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
         {
             var methodToExecute = (OnOnBatchRestored != null) ? OnOnBatchRestored : OnBatchRestored;
-            methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<string>(0), data.EventData.GetAt<long>(1), data.EventData.GetAt<long>(2));
+            methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<Java.Lang.String>(0), data.EventData.GetAt<long>(1), data.EventData.GetAt<long>(2));
         }
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><see cref="long"/></param>
-        public virtual void OnBatchRestored(Org.Apache.Kafka.Common.TopicPartition arg0, string arg1, long arg2, long arg3)
+        public virtual void OnBatchRestored(Org.Apache.Kafka.Common.TopicPartition arg0, Java.Lang.String arg1, long arg2, long arg3)
         {
             
         }
@@ -103,21 +103,21 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnRestoreEnd"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.TopicPartition, string, long> OnOnRestoreEnd { get; set; } = null;
+        public System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long> OnOnRestoreEnd { get; set; } = null;
 
         void OnRestoreEndEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
         {
             var methodToExecute = (OnOnRestoreEnd != null) ? OnOnRestoreEnd : OnRestoreEnd;
-            methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<string>(0), data.EventData.GetAt<long>(1));
+            methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<Java.Lang.String>(0), data.EventData.GetAt<long>(1));
         }
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="long"/></param>
-        public virtual void OnRestoreEnd(Org.Apache.Kafka.Common.TopicPartition arg0, string arg1, long arg2)
+        public virtual void OnRestoreEnd(Org.Apache.Kafka.Common.TopicPartition arg0, Java.Lang.String arg1, long arg2)
         {
             
         }
@@ -126,22 +126,22 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnRestoreStart"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.TopicPartition, string, long, long> OnOnRestoreStart { get; set; } = null;
+        public System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long, long> OnOnRestoreStart { get; set; } = null;
 
         void OnRestoreStartEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
         {
             var methodToExecute = (OnOnRestoreStart != null) ? OnOnRestoreStart : OnRestoreStart;
-            methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<string>(0), data.EventData.GetAt<long>(1), data.EventData.GetAt<long>(2));
+            methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<Java.Lang.String>(0), data.EventData.GetAt<long>(1), data.EventData.GetAt<long>(2));
         }
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><see cref="long"/></param>
-        public virtual void OnRestoreStart(Org.Apache.Kafka.Common.TopicPartition arg0, string arg1, long arg2, long arg3)
+        public virtual void OnRestoreStart(Org.Apache.Kafka.Common.TopicPartition arg0, Java.Lang.String arg1, long arg2, long arg3)
         {
             
         }
@@ -149,10 +149,10 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
-        public void OnRestoreSuspendedDefault(Org.Apache.Kafka.Common.TopicPartition arg0, string arg1, long arg2)
+        public void OnRestoreSuspendedDefault(Org.Apache.Kafka.Common.TopicPartition arg0, Java.Lang.String arg1, long arg2)
         {
             IExecute("onRestoreSuspendedDefault", arg0, arg1, arg2);
         }
@@ -161,22 +161,22 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnRestoreSuspended"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.TopicPartition, string, long> OnOnRestoreSuspended { get; set; } = null;
+        public System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long> OnOnRestoreSuspended { get; set; } = null;
 
         void OnRestoreSuspendedEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
         {
             var methodToExecute = (OnOnRestoreSuspended != null) ? OnOnRestoreSuspended : OnRestoreSuspended;
-            methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<string>(0), data.EventData.GetAt<long>(1));
+            methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<Java.Lang.String>(0), data.EventData.GetAt<long>(1));
         }
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="OnRestoreSuspendedDefault"/>; override the method to implement a different behavior</remarks>
-        public virtual void OnRestoreSuspended(Org.Apache.Kafka.Common.TopicPartition arg0, string arg1, long arg2)
+        public virtual void OnRestoreSuspended(Org.Apache.Kafka.Common.TopicPartition arg0, Java.Lang.String arg1, long arg2)
         {
             OnRestoreSuspendedDefault(arg0, arg1, arg2);
         }

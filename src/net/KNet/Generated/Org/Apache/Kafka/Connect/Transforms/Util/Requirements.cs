@@ -45,29 +45,29 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/util/Requirements.html#requireMap-java.lang.Object-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public static Java.Util.Map<string, object> RequireMap(object arg0, string arg1)
+        public static Java.Util.Map<Java.Lang.String, object> RequireMap(object arg0, Java.Lang.String arg1)
         {
-            return SExecute<Java.Util.Map<string, object>>(LocalBridgeClazz, "requireMap", arg0, arg1);
+            return SExecute<Java.Util.Map<Java.Lang.String, object>>(LocalBridgeClazz, "requireMap", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/util/Requirements.html#requireMapOrNull-java.lang.Object-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public static Java.Util.Map<string, object> RequireMapOrNull(object arg0, string arg1)
+        public static Java.Util.Map<Java.Lang.String, object> RequireMapOrNull(object arg0, Java.Lang.String arg1)
         {
-            return SExecute<Java.Util.Map<string, object>>(LocalBridgeClazz, "requireMapOrNull", arg0, arg1);
+            return SExecute<Java.Util.Map<Java.Lang.String, object>>(LocalBridgeClazz, "requireMapOrNull", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/util/Requirements.html#requireStruct-java.lang.Object-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Struct"/></returns>
-        public static Org.Apache.Kafka.Connect.Data.Struct RequireStruct(object arg0, string arg1)
+        public static Org.Apache.Kafka.Connect.Data.Struct RequireStruct(object arg0, Java.Lang.String arg1)
         {
             return SExecute<Org.Apache.Kafka.Connect.Data.Struct>(LocalBridgeClazz, "requireStruct", arg0, arg1);
         }
@@ -75,9 +75,9 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/util/Requirements.html#requireStructOrNull-java.lang.Object-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Struct"/></returns>
-        public static Org.Apache.Kafka.Connect.Data.Struct RequireStructOrNull(object arg0, string arg1)
+        public static Org.Apache.Kafka.Connect.Data.Struct RequireStructOrNull(object arg0, Java.Lang.String arg1)
         {
             return SExecute<Org.Apache.Kafka.Connect.Data.Struct>(LocalBridgeClazz, "requireStructOrNull", arg0, arg1);
         }
@@ -85,9 +85,9 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/util/Requirements.html#requireSinkRecord-org.apache.kafka.connect.connector.ConnectRecord-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Sink.SinkRecord"/></returns>
-        public static Org.Apache.Kafka.Connect.Sink.SinkRecord RequireSinkRecord(Org.Apache.Kafka.Connect.Connector.ConnectRecord arg0, string arg1)
+        public static Org.Apache.Kafka.Connect.Sink.SinkRecord RequireSinkRecord(Org.Apache.Kafka.Connect.Connector.ConnectRecord arg0, Java.Lang.String arg1)
         {
             return SExecute<Org.Apache.Kafka.Connect.Sink.SinkRecord>(LocalBridgeClazz, "requireSinkRecord", arg0, arg1);
         }
@@ -95,8 +95,8 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/util/Requirements.html#requireSchema-org.apache.kafka.connect.data.Schema-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        public static void RequireSchema(Org.Apache.Kafka.Connect.Data.Schema arg0, string arg1)
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        public static void RequireSchema(Org.Apache.Kafka.Connect.Data.Schema arg0, Java.Lang.String arg1)
         {
             SExecute(LocalBridgeClazz, "requireSchema", arg0, arg1);
         }

@@ -123,10 +123,10 @@ namespace Org.Apache.Kafka.Connect.Data
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string ConvertToString(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String ConvertToString(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
         {
-            return SExecute<string>(LocalBridgeClazz, "convertToString", arg0, arg1);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "convertToString", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Values.html#convertToDecimal-org.apache.kafka.connect.data.Schema-java.lang.Object-int-"/>
@@ -210,9 +210,9 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Values.html#parseString-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaAndValue"/></returns>
-        public static Org.Apache.Kafka.Connect.Data.SchemaAndValue ParseString(string arg0)
+        public static Org.Apache.Kafka.Connect.Data.SchemaAndValue ParseString(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Data.SchemaAndValue>(LocalBridgeClazz, "parseString", arg0);
         }

@@ -32,27 +32,27 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#org.apache.kafka.clients.admin.ConsumerGroupDescription(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.ConsumerGroupState,org.apache.kafka.common.Node,java.util.Set)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
         /// <param name="arg2"><see cref="Java.Util.Collection"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg6"><see cref="Java.Util.Set"/></param>
-        public ConsumerGroupDescription(string arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, string arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg6)
+        public ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#org.apache.kafka.clients.admin.ConsumerGroupDescription(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.ConsumerGroupState,org.apache.kafka.common.Node)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
         /// <param name="arg2"><see cref="Java.Util.Collection"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Node"/></param>
-        public ConsumerGroupDescription(string arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, string arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5)
+        public ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5)
             : base(arg0, arg1, arg2, arg3, arg4, arg5)
         {
         }
@@ -85,19 +85,19 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#groupId--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string GroupId()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String GroupId()
         {
-            return IExecute<string>("groupId");
+            return IExecute<Java.Lang.String>("groupId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#partitionAssignor--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string PartitionAssignor()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String PartitionAssignor()
         {
-            return IExecute<string>("partitionAssignor");
+            return IExecute<Java.Lang.String>("partitionAssignor");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#members--"/>

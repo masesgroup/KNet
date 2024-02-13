@@ -52,20 +52,20 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/IntegerSerializer.html#serialize-java.lang.String-java.lang.Integer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <returns><see cref="byte"/></returns>
-        public byte[] Serialize(string arg0, Java.Lang.Integer arg1)
+        public byte[] Serialize(Java.Lang.String arg0, Java.Lang.Integer arg1)
         {
             return IExecuteArray<byte>("serialize", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/IntegerSerializer.html#serialize-java.lang.String-java.lang.Object-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <returns><see cref="byte"/></returns>
-        public byte[] Serialize(string arg0, object arg1)
+        public byte[] Serialize(Java.Lang.String arg0, object arg1)
         {
             return IExecuteArray<byte>("serialize", arg0, arg1);
         }

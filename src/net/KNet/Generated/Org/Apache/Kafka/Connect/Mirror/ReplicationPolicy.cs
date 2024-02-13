@@ -66,102 +66,102 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html#formatRemoteTopic-java.lang.String-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public string FormatRemoteTopic(string arg0, string arg1)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String FormatRemoteTopic(Java.Lang.String arg0, Java.Lang.String arg1)
         {
-            return IExecute<string>("formatRemoteTopic", arg0, arg1);
+            return IExecute<Java.Lang.String>("formatRemoteTopic", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html#topicSource-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public string TopicSource(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String TopicSource(Java.Lang.String arg0)
         {
-            return IExecute<string>("topicSource", arg0);
+            return IExecute<Java.Lang.String>("topicSource", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html#upstreamTopic-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public string UpstreamTopic(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String UpstreamTopic(Java.Lang.String arg0)
         {
-            return IExecute<string>("upstreamTopic", arg0);
+            return IExecute<Java.Lang.String>("upstreamTopic", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isCheckpointsTopic-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public bool IsCheckpointsTopic(string arg0)
+        public bool IsCheckpointsTopic(Java.Lang.String arg0)
         {
             return IExecute<bool>("isCheckpointsTopic", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isHeartbeatsTopic-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public bool IsHeartbeatsTopic(string arg0)
+        public bool IsHeartbeatsTopic(Java.Lang.String arg0)
         {
             return IExecute<bool>("isHeartbeatsTopic", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isInternalTopic-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public bool IsInternalTopic(string arg0)
+        public bool IsInternalTopic(Java.Lang.String arg0)
         {
             return IExecute<bool>("isInternalTopic", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isMM2InternalTopic-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public bool IsMM2InternalTopic(string arg0)
+        public bool IsMM2InternalTopic(Java.Lang.String arg0)
         {
             return IExecute<bool>("isMM2InternalTopic", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html#checkpointsTopic-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public string CheckpointsTopic(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String CheckpointsTopic(Java.Lang.String arg0)
         {
-            return IExecute<string>("checkpointsTopic", arg0);
+            return IExecute<Java.Lang.String>("checkpointsTopic", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html#heartbeatsTopic--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string HeartbeatsTopic()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String HeartbeatsTopic()
         {
-            return IExecute<string>("heartbeatsTopic");
+            return IExecute<Java.Lang.String>("heartbeatsTopic");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html#offsetSyncsTopic-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public string OffsetSyncsTopic(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String OffsetSyncsTopic(Java.Lang.String arg0)
         {
-            return IExecute<string>("offsetSyncsTopic", arg0);
+            return IExecute<Java.Lang.String>("offsetSyncsTopic", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html#originalTopic-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public string OriginalTopic(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String OriginalTopic(Java.Lang.String arg0)
         {
-            return IExecute<string>("originalTopic", arg0);
+            return IExecute<Java.Lang.String>("originalTopic", arg0);
         }
 
         #endregion

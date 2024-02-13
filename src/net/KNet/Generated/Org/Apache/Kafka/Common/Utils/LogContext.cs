@@ -32,8 +32,8 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/LogContext.html#org.apache.kafka.common.utils.LogContext(java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public LogContext(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public LogContext(Java.Lang.String arg0)
             : base(arg0)
         {
         }
@@ -57,10 +57,10 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/LogContext.html#logPrefix--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string LogPrefix()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String LogPrefix()
         {
-            return IExecute<string>("logPrefix");
+            return IExecute<Java.Lang.String>("logPrefix");
         }
 
         #endregion

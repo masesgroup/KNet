@@ -76,10 +76,10 @@ namespace Org.Apache.Kafka.Common.Header
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/header/Header.html#key--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Key()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Key()
         {
-            return IExecute<string>("key");
+            return IExecute<Java.Lang.String>("key");
         }
 
         #endregion

@@ -149,27 +149,27 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>> DefaultBranch()
+        public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>> DefaultBranch()
         {
-            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>>("defaultBranch");
+            return IExecute<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>>("defaultBranch");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch-org.apache.kafka.streams.kstream.Branched-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>> DefaultBranch(Org.Apache.Kafka.Streams.Kstream.Branched<K, V> arg0)
+        public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>> DefaultBranch(Org.Apache.Kafka.Streams.Kstream.Branched<K, V> arg0)
         {
-            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>>("defaultBranch", arg0);
+            return IExecute<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>>("defaultBranch", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html#noDefaultBranch--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>> NoDefaultBranch()
+        public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>> NoDefaultBranch()
         {
-            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>>("noDefaultBranch");
+            return IExecute<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>>("noDefaultBranch");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html#branch-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Branched-"/>

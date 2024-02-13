@@ -53,9 +53,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/To.html#child-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.To"/></returns>
-        public static Org.Apache.Kafka.Streams.Processor.To Child(string arg0)
+        public static Org.Apache.Kafka.Streams.Processor.To Child(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Processor.To>(LocalBridgeClazz, "child", arg0);
         }

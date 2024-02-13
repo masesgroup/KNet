@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/converters/NumberConverterConfig.html#org.apache.kafka.connect.converters.NumberConverterConfig(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public NumberConverterConfig(Java.Util.Map<string, object> arg0)
+        public NumberConverterConfig(Java.Util.Map<Java.Lang.String, object> arg0)
             : base(arg0)
         {
         }

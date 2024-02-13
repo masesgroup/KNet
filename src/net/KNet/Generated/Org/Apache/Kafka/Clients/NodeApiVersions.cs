@@ -78,10 +78,10 @@ namespace Org.Apache.Kafka.Clients
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/NodeApiVersions.html#toString-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
-        /// <returns><see cref="string"/></returns>
-        public string ToString(bool arg0)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String ToString(bool arg0)
         {
-            return IExecute<string>("toString", arg0);
+            return IExecute<Java.Lang.String>("toString", arg0);
         }
 
         #endregion

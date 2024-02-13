@@ -56,9 +56,9 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.1/org/apache/kafka/connect/json/DecimalFormat.html#valueOf-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Json.DecimalFormat"/></returns>
-        public static Org.Apache.Kafka.Connect.Json.DecimalFormat ValueOf(string arg0)
+        public static Org.Apache.Kafka.Connect.Json.DecimalFormat ValueOf(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Json.DecimalFormat>(LocalBridgeClazz, "valueOf", arg0);
         }

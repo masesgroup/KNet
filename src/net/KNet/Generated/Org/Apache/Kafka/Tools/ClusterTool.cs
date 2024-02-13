@@ -44,8 +44,8 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ClusterTool.html#main-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public static void Main(params string[] arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public static void Main(params Java.Lang.String[] arg0)
         {
             if (arg0.Length == 0) SExecute(LocalBridgeClazz, "main"); else SExecute(LocalBridgeClazz, "main", arg0);
         }

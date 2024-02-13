@@ -44,9 +44,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html#as-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.StreamJoined As(string arg0)
+        public static Org.Apache.Kafka.Streams.Kstream.StreamJoined As(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.StreamJoined>(LocalBridgeClazz, "as", arg0);
         }
@@ -123,9 +123,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.StreamJoined WithStoreName(string arg0)
+        public Org.Apache.Kafka.Streams.Kstream.StreamJoined WithStoreName(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withStoreName", arg0);
         }
@@ -181,9 +181,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html#as-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2> As(string arg0)
+        public static Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2> As(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>(LocalBridgeClazz, "as", arg0);
         }
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2> WithLoggingEnabled(Java.Util.Map<string, string> arg0)
+        public Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2> WithLoggingEnabled(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withLoggingEnabled", arg0);
         }
@@ -260,9 +260,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2> WithStoreName(string arg0)
+        public Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2> WithStoreName(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withStoreName", arg0);
         }

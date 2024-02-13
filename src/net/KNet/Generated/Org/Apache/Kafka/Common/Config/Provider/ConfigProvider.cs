@@ -74,39 +74,39 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/ConfigProvider.html#get-java.lang.String-java.util.Set-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></returns>
-        public Org.Apache.Kafka.Common.Config.ConfigData Get(string arg0, Java.Util.Set<string> arg1)
+        public Org.Apache.Kafka.Common.Config.ConfigData Get(Java.Lang.String arg0, Java.Util.Set<Java.Lang.String> arg1)
         {
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigData>("get", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/ConfigProvider.html#get-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></returns>
-        public Org.Apache.Kafka.Common.Config.ConfigData Get(string arg0)
+        public Org.Apache.Kafka.Common.Config.ConfigData Get(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigData>("get", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/ConfigProvider.html#subscribe-java.lang.String-java.util.Set-org.apache.kafka.common.config.ConfigChangeCallback-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Config.ConfigChangeCallback"/></param>
-        public void Subscribe(string arg0, Java.Util.Set<string> arg1, Org.Apache.Kafka.Common.Config.ConfigChangeCallback arg2)
+        public void Subscribe(Java.Lang.String arg0, Java.Util.Set<Java.Lang.String> arg1, Org.Apache.Kafka.Common.Config.ConfigChangeCallback arg2)
         {
             IExecute("subscribe", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/ConfigProvider.html#unsubscribe-java.lang.String-java.util.Set-org.apache.kafka.common.config.ConfigChangeCallback-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Config.ConfigChangeCallback"/></param>
-        public void Unsubscribe(string arg0, Java.Util.Set<string> arg1, Org.Apache.Kafka.Common.Config.ConfigChangeCallback arg2)
+        public void Unsubscribe(Java.Lang.String arg0, Java.Util.Set<Java.Lang.String> arg1, Org.Apache.Kafka.Common.Config.ConfigChangeCallback arg2)
         {
             IExecute("unsubscribe", arg0, arg1, arg2);
         }

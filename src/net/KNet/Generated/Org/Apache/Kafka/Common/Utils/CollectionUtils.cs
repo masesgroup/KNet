@@ -64,9 +64,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <typeparam name="T"></typeparam>
         /// <typeparam name="Arg0ExtendsT"><typeparamref name="T"/></typeparam>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public static Java.Util.Map<string, Java.Util.Map<Java.Lang.Integer, T>> GroupPartitionDataByTopic<T, Arg0ExtendsT>(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Arg0ExtendsT> arg0) where Arg0ExtendsT: T
+        public static Java.Util.Map<Java.Lang.String, Java.Util.Map<Java.Lang.Integer, T>> GroupPartitionDataByTopic<T, Arg0ExtendsT>(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Arg0ExtendsT> arg0) where Arg0ExtendsT: T
         {
-            return SExecute<Java.Util.Map<string, Java.Util.Map<Java.Lang.Integer, T>>>(LocalBridgeClazz, "groupPartitionDataByTopic", arg0);
+            return SExecute<Java.Util.Map<Java.Lang.String, Java.Util.Map<Java.Lang.Integer, T>>>(LocalBridgeClazz, "groupPartitionDataByTopic", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/CollectionUtils.html#groupPartitionsByTopic-java.util.Collection-java.util.function.Function-java.util.function.BiConsumer-"/>
@@ -76,18 +76,18 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <param name="arg2"><see cref="Java.Util.Function.BiConsumer"/></param>
         /// <typeparam name="T"></typeparam>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public static Java.Util.Map<string, T> GroupPartitionsByTopic<T>(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0, Java.Util.Function.Function<string, T> arg1, Java.Util.Function.BiConsumer<T, Java.Lang.Integer> arg2)
+        public static Java.Util.Map<Java.Lang.String, T> GroupPartitionsByTopic<T>(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0, Java.Util.Function.Function<Java.Lang.String, T> arg1, Java.Util.Function.BiConsumer<T, Java.Lang.Integer> arg2)
         {
-            return SExecute<Java.Util.Map<string, T>>(LocalBridgeClazz, "groupPartitionsByTopic", arg0, arg1, arg2);
+            return SExecute<Java.Util.Map<Java.Lang.String, T>>(LocalBridgeClazz, "groupPartitionsByTopic", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/CollectionUtils.html#groupPartitionsByTopic-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public static Java.Util.Map<string, Java.Util.List<Java.Lang.Integer>> GroupPartitionsByTopic(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
+        public static Java.Util.Map<Java.Lang.String, Java.Util.List<Java.Lang.Integer>> GroupPartitionsByTopic(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
         {
-            return SExecute<Java.Util.Map<string, Java.Util.List<Java.Lang.Integer>>>(LocalBridgeClazz, "groupPartitionsByTopic", arg0);
+            return SExecute<Java.Util.Map<Java.Lang.String, Java.Util.List<Java.Lang.Integer>>>(LocalBridgeClazz, "groupPartitionsByTopic", arg0);
         }
 
         #endregion

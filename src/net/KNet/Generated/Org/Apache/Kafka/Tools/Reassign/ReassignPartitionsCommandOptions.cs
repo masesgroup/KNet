@@ -32,8 +32,8 @@ namespace Org.Apache.Kafka.Tools.Reassign
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/reassign/ReassignPartitionsCommandOptions.html#org.apache.kafka.tools.reassign.ReassignPartitionsCommandOptions(java.lang.String[])"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public ReassignPartitionsCommandOptions(string[] arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public ReassignPartitionsCommandOptions(Java.Lang.String[] arg0)
             : base(arg0)
         {
         }

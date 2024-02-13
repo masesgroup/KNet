@@ -32,8 +32,8 @@ namespace Kafka.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.1/kafka/admin/LeaderElectionCommandOptions.html#kafka.admin.LeaderElectionCommandOptions(java.lang.String[])"/>
         /// </summary>
-        /// <param name="args"><see cref="string"/></param>
-        public LeaderElectionCommandOptions(string[] args)
+        /// <param name="args"><see cref="Java.Lang.String"/></param>
+        public LeaderElectionCommandOptions(Java.Lang.String[] args)
             : base(args)
         {
         }

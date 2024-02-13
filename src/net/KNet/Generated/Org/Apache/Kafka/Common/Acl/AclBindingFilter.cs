@@ -100,10 +100,10 @@ namespace Org.Apache.Kafka.Common.Acl
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/acl/AclBindingFilter.html#findIndefiniteField--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string FindIndefiniteField()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String FindIndefiniteField()
         {
-            return IExecute<string>("findIndefiniteField");
+            return IExecute<Java.Lang.String>("findIndefiniteField");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/acl/AclBindingFilter.html#patternFilter--"/>

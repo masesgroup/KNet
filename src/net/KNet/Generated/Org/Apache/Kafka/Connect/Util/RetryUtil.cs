@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <typeparam name="T"></typeparam>
         /// <returns><typeparamref name="T"/></returns>
         /// <exception cref="Java.Lang.Exception"/>
-        public static T RetryUntilTimeout<T>(Java.Util.Concurrent.Callable<T> arg0, Java.Util.Function.Supplier<string> arg1, Java.Time.Duration arg2, long arg3)
+        public static T RetryUntilTimeout<T>(Java.Util.Concurrent.Callable<T> arg0, Java.Util.Function.Supplier<Java.Lang.String> arg1, Java.Time.Duration arg2, long arg3)
         {
             return SExecute<T>(LocalBridgeClazz, "retryUntilTimeout", arg0, arg1, arg2, arg3);
         }

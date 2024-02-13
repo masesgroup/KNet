@@ -67,10 +67,10 @@ namespace Org.Apache.Kafka.Connect.Components
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/components/Versioned.html#version--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Version()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Version()
         {
-            return IExecute<string>("version");
+            return IExecute<Java.Lang.String>("version");
         }
 
         #endregion

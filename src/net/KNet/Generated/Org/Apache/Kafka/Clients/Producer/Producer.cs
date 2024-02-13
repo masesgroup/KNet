@@ -67,9 +67,9 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/Producer.html#partitionsFor-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List PartitionsFor(string arg0)
+        public Java.Util.List PartitionsFor(Java.Lang.String arg0)
         {
             return IExecute<Java.Util.List>("partitionsFor", arg0);
         }
@@ -223,9 +223,9 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/Producer.html#partitionsFor-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo> PartitionsFor(string arg0)
+        public Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo> PartitionsFor(Java.Lang.String arg0)
         {
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>("partitionsFor", arg0);
         }

@@ -49,10 +49,10 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/UserScramCredentialAlteration.html#user--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string User()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String User()
         {
-            return IExecute<string>("user");
+            return IExecute<Java.Lang.String>("user");
         }
 
         #endregion

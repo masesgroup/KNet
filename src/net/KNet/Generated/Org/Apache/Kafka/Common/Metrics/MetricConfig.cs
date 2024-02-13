@@ -59,9 +59,9 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, string> Tags()
+        public Java.Util.Map<Java.Lang.String, Java.Lang.String> Tags()
         {
-            return IExecute<Java.Util.Map<string, string>>("tags");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("tags");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/MetricConfig.html#eventWindow--"/>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></returns>
-        public Org.Apache.Kafka.Common.Metrics.MetricConfig Tags(Java.Util.Map<string, string> arg0)
+        public Org.Apache.Kafka.Common.Metrics.MetricConfig Tags(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Metrics.MetricConfig>("tags", arg0);
         }

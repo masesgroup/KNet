@@ -64,92 +64,92 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#ADMIN_TASK_TIMEOUT_MILLIS"/>
         /// </summary>
-        public static string ADMIN_TASK_TIMEOUT_MILLIS { get { if (!_ADMIN_TASK_TIMEOUT_MILLISReady) { _ADMIN_TASK_TIMEOUT_MILLISContent = SGetField<string>(LocalBridgeClazz, "ADMIN_TASK_TIMEOUT_MILLIS"); _ADMIN_TASK_TIMEOUT_MILLISReady = true; } return _ADMIN_TASK_TIMEOUT_MILLISContent; } }
-        private static string _ADMIN_TASK_TIMEOUT_MILLISContent = default;
+        public static Java.Lang.String ADMIN_TASK_TIMEOUT_MILLIS { get { if (!_ADMIN_TASK_TIMEOUT_MILLISReady) { _ADMIN_TASK_TIMEOUT_MILLISContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ADMIN_TASK_TIMEOUT_MILLIS"); _ADMIN_TASK_TIMEOUT_MILLISReady = true; } return _ADMIN_TASK_TIMEOUT_MILLISContent; } }
+        private static Java.Lang.String _ADMIN_TASK_TIMEOUT_MILLISContent = default;
         private static bool _ADMIN_TASK_TIMEOUT_MILLISReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#FORWARDING_ADMIN_CLASS"/>
         /// </summary>
-        public static string FORWARDING_ADMIN_CLASS { get { if (!_FORWARDING_ADMIN_CLASSReady) { _FORWARDING_ADMIN_CLASSContent = SGetField<string>(LocalBridgeClazz, "FORWARDING_ADMIN_CLASS"); _FORWARDING_ADMIN_CLASSReady = true; } return _FORWARDING_ADMIN_CLASSContent; } }
-        private static string _FORWARDING_ADMIN_CLASSContent = default;
+        public static Java.Lang.String FORWARDING_ADMIN_CLASS { get { if (!_FORWARDING_ADMIN_CLASSReady) { _FORWARDING_ADMIN_CLASSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FORWARDING_ADMIN_CLASS"); _FORWARDING_ADMIN_CLASSReady = true; } return _FORWARDING_ADMIN_CLASSContent; } }
+        private static Java.Lang.String _FORWARDING_ADMIN_CLASSContent = default;
         private static bool _FORWARDING_ADMIN_CLASSReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#OFFSET_SYNCS_TOPIC_LOCATION"/>
         /// </summary>
-        public static string OFFSET_SYNCS_TOPIC_LOCATION { get { if (!_OFFSET_SYNCS_TOPIC_LOCATIONReady) { _OFFSET_SYNCS_TOPIC_LOCATIONContent = SGetField<string>(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_LOCATION"); _OFFSET_SYNCS_TOPIC_LOCATIONReady = true; } return _OFFSET_SYNCS_TOPIC_LOCATIONContent; } }
-        private static string _OFFSET_SYNCS_TOPIC_LOCATIONContent = default;
+        public static Java.Lang.String OFFSET_SYNCS_TOPIC_LOCATION { get { if (!_OFFSET_SYNCS_TOPIC_LOCATIONReady) { _OFFSET_SYNCS_TOPIC_LOCATIONContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_LOCATION"); _OFFSET_SYNCS_TOPIC_LOCATIONReady = true; } return _OFFSET_SYNCS_TOPIC_LOCATIONContent; } }
+        private static Java.Lang.String _OFFSET_SYNCS_TOPIC_LOCATIONContent = default;
         private static bool _OFFSET_SYNCS_TOPIC_LOCATIONReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT"/>
         /// </summary>
-        public static string OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT { get { if (!_OFFSET_SYNCS_TOPIC_LOCATION_DEFAULTReady) { _OFFSET_SYNCS_TOPIC_LOCATION_DEFAULTContent = SGetField<string>(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT"); _OFFSET_SYNCS_TOPIC_LOCATION_DEFAULTReady = true; } return _OFFSET_SYNCS_TOPIC_LOCATION_DEFAULTContent; } }
-        private static string _OFFSET_SYNCS_TOPIC_LOCATION_DEFAULTContent = default;
+        public static Java.Lang.String OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT { get { if (!_OFFSET_SYNCS_TOPIC_LOCATION_DEFAULTReady) { _OFFSET_SYNCS_TOPIC_LOCATION_DEFAULTContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_LOCATION_DEFAULT"); _OFFSET_SYNCS_TOPIC_LOCATION_DEFAULTReady = true; } return _OFFSET_SYNCS_TOPIC_LOCATION_DEFAULTContent; } }
+        private static Java.Lang.String _OFFSET_SYNCS_TOPIC_LOCATION_DEFAULTContent = default;
         private static bool _OFFSET_SYNCS_TOPIC_LOCATION_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#OFFSET_SYNCS_TOPIC_LOCATION_DOC"/>
         /// </summary>
-        public static string OFFSET_SYNCS_TOPIC_LOCATION_DOC { get { if (!_OFFSET_SYNCS_TOPIC_LOCATION_DOCReady) { _OFFSET_SYNCS_TOPIC_LOCATION_DOCContent = SGetField<string>(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_LOCATION_DOC"); _OFFSET_SYNCS_TOPIC_LOCATION_DOCReady = true; } return _OFFSET_SYNCS_TOPIC_LOCATION_DOCContent; } }
-        private static string _OFFSET_SYNCS_TOPIC_LOCATION_DOCContent = default;
+        public static Java.Lang.String OFFSET_SYNCS_TOPIC_LOCATION_DOC { get { if (!_OFFSET_SYNCS_TOPIC_LOCATION_DOCReady) { _OFFSET_SYNCS_TOPIC_LOCATION_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_LOCATION_DOC"); _OFFSET_SYNCS_TOPIC_LOCATION_DOCReady = true; } return _OFFSET_SYNCS_TOPIC_LOCATION_DOCContent; } }
+        private static Java.Lang.String _OFFSET_SYNCS_TOPIC_LOCATION_DOCContent = default;
         private static bool _OFFSET_SYNCS_TOPIC_LOCATION_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#REPLICATION_POLICY_CLASS"/>
         /// </summary>
-        public static string REPLICATION_POLICY_CLASS { get { if (!_REPLICATION_POLICY_CLASSReady) { _REPLICATION_POLICY_CLASSContent = SGetField<string>(LocalBridgeClazz, "REPLICATION_POLICY_CLASS"); _REPLICATION_POLICY_CLASSReady = true; } return _REPLICATION_POLICY_CLASSContent; } }
-        private static string _REPLICATION_POLICY_CLASSContent = default;
+        public static Java.Lang.String REPLICATION_POLICY_CLASS { get { if (!_REPLICATION_POLICY_CLASSReady) { _REPLICATION_POLICY_CLASSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLICATION_POLICY_CLASS"); _REPLICATION_POLICY_CLASSReady = true; } return _REPLICATION_POLICY_CLASSContent; } }
+        private static Java.Lang.String _REPLICATION_POLICY_CLASSContent = default;
         private static bool _REPLICATION_POLICY_CLASSReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#REPLICATION_POLICY_SEPARATOR"/>
         /// </summary>
-        public static string REPLICATION_POLICY_SEPARATOR { get { if (!_REPLICATION_POLICY_SEPARATORReady) { _REPLICATION_POLICY_SEPARATORContent = SGetField<string>(LocalBridgeClazz, "REPLICATION_POLICY_SEPARATOR"); _REPLICATION_POLICY_SEPARATORReady = true; } return _REPLICATION_POLICY_SEPARATORContent; } }
-        private static string _REPLICATION_POLICY_SEPARATORContent = default;
+        public static Java.Lang.String REPLICATION_POLICY_SEPARATOR { get { if (!_REPLICATION_POLICY_SEPARATORReady) { _REPLICATION_POLICY_SEPARATORContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLICATION_POLICY_SEPARATOR"); _REPLICATION_POLICY_SEPARATORReady = true; } return _REPLICATION_POLICY_SEPARATORContent; } }
+        private static Java.Lang.String _REPLICATION_POLICY_SEPARATORContent = default;
         private static bool _REPLICATION_POLICY_SEPARATORReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#REPLICATION_POLICY_SEPARATOR_DEFAULT"/>
         /// </summary>
-        public static string REPLICATION_POLICY_SEPARATOR_DEFAULT { get { if (!_REPLICATION_POLICY_SEPARATOR_DEFAULTReady) { _REPLICATION_POLICY_SEPARATOR_DEFAULTContent = SGetField<string>(LocalBridgeClazz, "REPLICATION_POLICY_SEPARATOR_DEFAULT"); _REPLICATION_POLICY_SEPARATOR_DEFAULTReady = true; } return _REPLICATION_POLICY_SEPARATOR_DEFAULTContent; } }
-        private static string _REPLICATION_POLICY_SEPARATOR_DEFAULTContent = default;
+        public static Java.Lang.String REPLICATION_POLICY_SEPARATOR_DEFAULT { get { if (!_REPLICATION_POLICY_SEPARATOR_DEFAULTReady) { _REPLICATION_POLICY_SEPARATOR_DEFAULTContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLICATION_POLICY_SEPARATOR_DEFAULT"); _REPLICATION_POLICY_SEPARATOR_DEFAULTReady = true; } return _REPLICATION_POLICY_SEPARATOR_DEFAULTContent; } }
+        private static Java.Lang.String _REPLICATION_POLICY_SEPARATOR_DEFAULTContent = default;
         private static bool _REPLICATION_POLICY_SEPARATOR_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#SOURCE_CLUSTER_ALIAS"/>
         /// </summary>
-        public static string SOURCE_CLUSTER_ALIAS { get { if (!_SOURCE_CLUSTER_ALIASReady) { _SOURCE_CLUSTER_ALIASContent = SGetField<string>(LocalBridgeClazz, "SOURCE_CLUSTER_ALIAS"); _SOURCE_CLUSTER_ALIASReady = true; } return _SOURCE_CLUSTER_ALIASContent; } }
-        private static string _SOURCE_CLUSTER_ALIASContent = default;
+        public static Java.Lang.String SOURCE_CLUSTER_ALIAS { get { if (!_SOURCE_CLUSTER_ALIASReady) { _SOURCE_CLUSTER_ALIASContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SOURCE_CLUSTER_ALIAS"); _SOURCE_CLUSTER_ALIASReady = true; } return _SOURCE_CLUSTER_ALIASContent; } }
+        private static Java.Lang.String _SOURCE_CLUSTER_ALIASContent = default;
         private static bool _SOURCE_CLUSTER_ALIASReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#SOURCE_CLUSTER_ALIAS_DEFAULT"/>
         /// </summary>
-        public static string SOURCE_CLUSTER_ALIAS_DEFAULT { get { if (!_SOURCE_CLUSTER_ALIAS_DEFAULTReady) { _SOURCE_CLUSTER_ALIAS_DEFAULTContent = SGetField<string>(LocalBridgeClazz, "SOURCE_CLUSTER_ALIAS_DEFAULT"); _SOURCE_CLUSTER_ALIAS_DEFAULTReady = true; } return _SOURCE_CLUSTER_ALIAS_DEFAULTContent; } }
-        private static string _SOURCE_CLUSTER_ALIAS_DEFAULTContent = default;
+        public static Java.Lang.String SOURCE_CLUSTER_ALIAS_DEFAULT { get { if (!_SOURCE_CLUSTER_ALIAS_DEFAULTReady) { _SOURCE_CLUSTER_ALIAS_DEFAULTContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SOURCE_CLUSTER_ALIAS_DEFAULT"); _SOURCE_CLUSTER_ALIAS_DEFAULTReady = true; } return _SOURCE_CLUSTER_ALIAS_DEFAULTContent; } }
+        private static Java.Lang.String _SOURCE_CLUSTER_ALIAS_DEFAULTContent = default;
         private static bool _SOURCE_CLUSTER_ALIAS_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TARGET_CLUSTER_ALIAS"/>
         /// </summary>
-        public static string TARGET_CLUSTER_ALIAS { get { if (!_TARGET_CLUSTER_ALIASReady) { _TARGET_CLUSTER_ALIASContent = SGetField<string>(LocalBridgeClazz, "TARGET_CLUSTER_ALIAS"); _TARGET_CLUSTER_ALIASReady = true; } return _TARGET_CLUSTER_ALIASContent; } }
-        private static string _TARGET_CLUSTER_ALIASContent = default;
+        public static Java.Lang.String TARGET_CLUSTER_ALIAS { get { if (!_TARGET_CLUSTER_ALIASReady) { _TARGET_CLUSTER_ALIASContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TARGET_CLUSTER_ALIAS"); _TARGET_CLUSTER_ALIASReady = true; } return _TARGET_CLUSTER_ALIASContent; } }
+        private static Java.Lang.String _TARGET_CLUSTER_ALIASContent = default;
         private static bool _TARGET_CLUSTER_ALIASReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TARGET_CLUSTER_ALIAS_DEFAULT"/>
         /// </summary>
-        public static string TARGET_CLUSTER_ALIAS_DEFAULT { get { if (!_TARGET_CLUSTER_ALIAS_DEFAULTReady) { _TARGET_CLUSTER_ALIAS_DEFAULTContent = SGetField<string>(LocalBridgeClazz, "TARGET_CLUSTER_ALIAS_DEFAULT"); _TARGET_CLUSTER_ALIAS_DEFAULTReady = true; } return _TARGET_CLUSTER_ALIAS_DEFAULTContent; } }
-        private static string _TARGET_CLUSTER_ALIAS_DEFAULTContent = default;
+        public static Java.Lang.String TARGET_CLUSTER_ALIAS_DEFAULT { get { if (!_TARGET_CLUSTER_ALIAS_DEFAULTReady) { _TARGET_CLUSTER_ALIAS_DEFAULTContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TARGET_CLUSTER_ALIAS_DEFAULT"); _TARGET_CLUSTER_ALIAS_DEFAULTReady = true; } return _TARGET_CLUSTER_ALIAS_DEFAULTContent; } }
+        private static Java.Lang.String _TARGET_CLUSTER_ALIAS_DEFAULTContent = default;
         private static bool _TARGET_CLUSTER_ALIAS_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TASK_INDEX"/>
         /// </summary>
-        public static string TASK_INDEX { get { if (!_TASK_INDEXReady) { _TASK_INDEXContent = SGetField<string>(LocalBridgeClazz, "TASK_INDEX"); _TASK_INDEXReady = true; } return _TASK_INDEXContent; } }
-        private static string _TASK_INDEXContent = default;
+        public static Java.Lang.String TASK_INDEX { get { if (!_TASK_INDEXReady) { _TASK_INDEXContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TASK_INDEX"); _TASK_INDEXReady = true; } return _TASK_INDEXContent; } }
+        private static Java.Lang.String _TASK_INDEXContent = default;
         private static bool _TASK_INDEXReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TOPIC_FILTER_CLASS"/>
         /// </summary>
-        public static string TOPIC_FILTER_CLASS { get { if (!_TOPIC_FILTER_CLASSReady) { _TOPIC_FILTER_CLASSContent = SGetField<string>(LocalBridgeClazz, "TOPIC_FILTER_CLASS"); _TOPIC_FILTER_CLASSReady = true; } return _TOPIC_FILTER_CLASSContent; } }
-        private static string _TOPIC_FILTER_CLASSContent = default;
+        public static Java.Lang.String TOPIC_FILTER_CLASS { get { if (!_TOPIC_FILTER_CLASSReady) { _TOPIC_FILTER_CLASSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPIC_FILTER_CLASS"); _TOPIC_FILTER_CLASSReady = true; } return _TOPIC_FILTER_CLASSContent; } }
+        private static Java.Lang.String _TOPIC_FILTER_CLASSContent = default;
         private static bool _TOPIC_FILTER_CLASSReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#TOPIC_FILTER_CLASS_DOC"/>
         /// </summary>
-        public static string TOPIC_FILTER_CLASS_DOC { get { if (!_TOPIC_FILTER_CLASS_DOCReady) { _TOPIC_FILTER_CLASS_DOCContent = SGetField<string>(LocalBridgeClazz, "TOPIC_FILTER_CLASS_DOC"); _TOPIC_FILTER_CLASS_DOCReady = true; } return _TOPIC_FILTER_CLASS_DOCContent; } }
-        private static string _TOPIC_FILTER_CLASS_DOCContent = default;
+        public static Java.Lang.String TOPIC_FILTER_CLASS_DOC { get { if (!_TOPIC_FILTER_CLASS_DOCReady) { _TOPIC_FILTER_CLASS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPIC_FILTER_CLASS_DOC"); _TOPIC_FILTER_CLASS_DOCReady = true; } return _TOPIC_FILTER_CLASS_DOCContent; } }
+        private static Java.Lang.String _TOPIC_FILTER_CLASS_DOCContent = default;
         private static bool _TOPIC_FILTER_CLASS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#ADMIN_TASK_TIMEOUT_MILLIS_DEFAULT"/>
@@ -164,8 +164,8 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html#main-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public static void Main(string[] arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public static void Main(Java.Lang.String[] arg0)
         {
             SExecute(LocalBridgeClazz, "main", new object[] { arg0 });
         }

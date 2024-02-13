@@ -52,21 +52,21 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/DoubleDeserializer.html#deserialize-java.lang.String-byte[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
         /// <returns><see cref="object"/></returns>
-        public object Deserialize(string arg0, byte[] arg1)
+        public object Deserialize(Java.Lang.String arg0, byte[] arg1)
         {
             return IExecute("deserialize", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/DoubleDeserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
         /// <param name="arg2"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="object"/></returns>
-        public object Deserialize(string arg0, Org.Apache.Kafka.Common.Header.Headers arg1, Java.Nio.ByteBuffer arg2)
+        public object Deserialize(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, Java.Nio.ByteBuffer arg2)
         {
             return IExecute("deserialize", arg0, arg1, arg2);
         }

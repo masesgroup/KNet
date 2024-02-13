@@ -395,10 +395,10 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string QueryableStoreName()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String QueryableStoreName()
         {
-            return IExecute<string>("queryableStoreName");
+            return IExecute<Java.Lang.String>("queryableStoreName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream--"/>
@@ -1038,10 +1038,10 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string QueryableStoreName()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String QueryableStoreName()
         {
-            return IExecute<string>("queryableStoreName");
+            return IExecute<Java.Lang.String>("queryableStoreName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream--"/>

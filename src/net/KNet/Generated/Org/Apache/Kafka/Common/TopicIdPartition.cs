@@ -34,8 +34,8 @@ namespace Org.Apache.Kafka.Common
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
         /// <param name="arg1"><see cref="int"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        public TopicIdPartition(Org.Apache.Kafka.Common.Uuid arg0, int arg1, string arg2)
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        public TopicIdPartition(Org.Apache.Kafka.Common.Uuid arg0, int arg1, Java.Lang.String arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -77,10 +77,10 @@ namespace Org.Apache.Kafka.Common
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicIdPartition.html#topic--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Topic()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Topic()
         {
-            return IExecute<string>("topic");
+            return IExecute<Java.Lang.String>("topic");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicIdPartition.html#topicPartition--"/>

@@ -48,9 +48,9 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/util/RegexValidator.html#ensureValid-java.lang.String-java.lang.Object-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
-        public void EnsureValid(string arg0, object arg1)
+        public void EnsureValid(Java.Lang.String arg0, object arg1)
         {
             IExecute("ensureValid", arg0, arg1);
         }

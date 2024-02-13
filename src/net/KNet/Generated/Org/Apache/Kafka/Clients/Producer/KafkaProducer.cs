@@ -76,14 +76,14 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/KafkaProducer.html#NETWORK_THREAD_PREFIX"/>
         /// </summary>
-        public static string NETWORK_THREAD_PREFIX { get { if (!_NETWORK_THREAD_PREFIXReady) { _NETWORK_THREAD_PREFIXContent = SGetField<string>(LocalBridgeClazz, "NETWORK_THREAD_PREFIX"); _NETWORK_THREAD_PREFIXReady = true; } return _NETWORK_THREAD_PREFIXContent; } }
-        private static string _NETWORK_THREAD_PREFIXContent = default;
+        public static Java.Lang.String NETWORK_THREAD_PREFIX { get { if (!_NETWORK_THREAD_PREFIXReady) { _NETWORK_THREAD_PREFIXContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "NETWORK_THREAD_PREFIX"); _NETWORK_THREAD_PREFIXReady = true; } return _NETWORK_THREAD_PREFIXContent; } }
+        private static Java.Lang.String _NETWORK_THREAD_PREFIXContent = default;
         private static bool _NETWORK_THREAD_PREFIXReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/KafkaProducer.html#PRODUCER_METRIC_GROUP_NAME"/>
         /// </summary>
-        public static string PRODUCER_METRIC_GROUP_NAME { get { if (!_PRODUCER_METRIC_GROUP_NAMEReady) { _PRODUCER_METRIC_GROUP_NAMEContent = SGetField<string>(LocalBridgeClazz, "PRODUCER_METRIC_GROUP_NAME"); _PRODUCER_METRIC_GROUP_NAMEReady = true; } return _PRODUCER_METRIC_GROUP_NAMEContent; } }
-        private static string _PRODUCER_METRIC_GROUP_NAMEContent = default;
+        public static Java.Lang.String PRODUCER_METRIC_GROUP_NAME { get { if (!_PRODUCER_METRIC_GROUP_NAMEReady) { _PRODUCER_METRIC_GROUP_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PRODUCER_METRIC_GROUP_NAME"); _PRODUCER_METRIC_GROUP_NAMEReady = true; } return _PRODUCER_METRIC_GROUP_NAMEContent; } }
+        private static Java.Lang.String _PRODUCER_METRIC_GROUP_NAMEContent = default;
         private static bool _PRODUCER_METRIC_GROUP_NAMEReady = false; // this is used because in case of generics 
 
         #endregion
@@ -115,9 +115,9 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/KafkaProducer.html#partitionsFor-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List PartitionsFor(string arg0)
+        public Java.Util.List PartitionsFor(Java.Lang.String arg0)
         {
             return IExecute<Java.Util.List>("partitionsFor", arg0);
         }
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
-        public KafkaProducer(Java.Util.Map<string, object> arg0, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Serializer<V> arg2)
+        public KafkaProducer(Java.Util.Map<Java.Lang.String, object> arg0, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Serializer<V> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -225,7 +225,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/KafkaProducer.html#org.apache.kafka.clients.producer.KafkaProducer(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public KafkaProducer(Java.Util.Map<string, object> arg0)
+        public KafkaProducer(Java.Util.Map<Java.Lang.String, object> arg0)
             : base(arg0)
         {
         }
@@ -262,14 +262,14 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/KafkaProducer.html#NETWORK_THREAD_PREFIX"/>
         /// </summary>
-        public static string NETWORK_THREAD_PREFIX { get { if (!_NETWORK_THREAD_PREFIXReady) { _NETWORK_THREAD_PREFIXContent = SGetField<string>(LocalBridgeClazz, "NETWORK_THREAD_PREFIX"); _NETWORK_THREAD_PREFIXReady = true; } return _NETWORK_THREAD_PREFIXContent; } }
-        private static string _NETWORK_THREAD_PREFIXContent = default;
+        public static Java.Lang.String NETWORK_THREAD_PREFIX { get { if (!_NETWORK_THREAD_PREFIXReady) { _NETWORK_THREAD_PREFIXContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "NETWORK_THREAD_PREFIX"); _NETWORK_THREAD_PREFIXReady = true; } return _NETWORK_THREAD_PREFIXContent; } }
+        private static Java.Lang.String _NETWORK_THREAD_PREFIXContent = default;
         private static bool _NETWORK_THREAD_PREFIXReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/KafkaProducer.html#PRODUCER_METRIC_GROUP_NAME"/>
         /// </summary>
-        public static string PRODUCER_METRIC_GROUP_NAME { get { if (!_PRODUCER_METRIC_GROUP_NAMEReady) { _PRODUCER_METRIC_GROUP_NAMEContent = SGetField<string>(LocalBridgeClazz, "PRODUCER_METRIC_GROUP_NAME"); _PRODUCER_METRIC_GROUP_NAMEReady = true; } return _PRODUCER_METRIC_GROUP_NAMEContent; } }
-        private static string _PRODUCER_METRIC_GROUP_NAMEContent = default;
+        public static Java.Lang.String PRODUCER_METRIC_GROUP_NAME { get { if (!_PRODUCER_METRIC_GROUP_NAMEReady) { _PRODUCER_METRIC_GROUP_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PRODUCER_METRIC_GROUP_NAME"); _PRODUCER_METRIC_GROUP_NAMEReady = true; } return _PRODUCER_METRIC_GROUP_NAMEContent; } }
+        private static Java.Lang.String _PRODUCER_METRIC_GROUP_NAMEContent = default;
         private static bool _PRODUCER_METRIC_GROUP_NAMEReady = false; // this is used because in case of generics 
 
         #endregion
@@ -301,9 +301,9 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/KafkaProducer.html#partitionsFor-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo> PartitionsFor(string arg0)
+        public Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo> PartitionsFor(Java.Lang.String arg0)
         {
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>("partitionsFor", arg0);
         }

@@ -202,19 +202,19 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/SchemaBuilder.html#doc--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Doc()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Doc()
         {
-            return IExecute<string>("doc");
+            return IExecute<Java.Lang.String>("doc");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/SchemaBuilder.html#name--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Name()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Name()
         {
-            return IExecute<string>("name");
+            return IExecute<Java.Lang.String>("name");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/SchemaBuilder.html#fields--"/>
@@ -230,16 +230,16 @@ namespace Org.Apache.Kafka.Connect.Data
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, string> Parameters()
+        public Java.Util.Map<Java.Lang.String, Java.Lang.String> Parameters()
         {
-            return IExecute<Java.Util.Map<string, string>>("parameters");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("parameters");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/SchemaBuilder.html#field-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Field"/></returns>
-        public Org.Apache.Kafka.Connect.Data.Field Field(string arg0)
+        public Org.Apache.Kafka.Connect.Data.Field Field(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Data.Field>("field", arg0);
         }
@@ -300,28 +300,28 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/SchemaBuilder.html#doc-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>
-        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Doc(string arg0)
+        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Doc(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Data.SchemaBuilder>("doc", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/SchemaBuilder.html#field-java.lang.String-org.apache.kafka.connect.data.Schema-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>
-        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Field(string arg0, Org.Apache.Kafka.Connect.Data.Schema arg1)
+        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Field(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Data.Schema arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Data.SchemaBuilder>("field", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/SchemaBuilder.html#name-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>
-        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Name(string arg0)
+        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Name(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Data.SchemaBuilder>("name", arg0);
         }
@@ -337,10 +337,10 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/SchemaBuilder.html#parameter-java.lang.String-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>
-        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Parameter(string arg0, string arg1)
+        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Parameter(Java.Lang.String arg0, Java.Lang.String arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Data.SchemaBuilder>("parameter", arg0, arg1);
         }
@@ -349,7 +349,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>
-        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Parameters(Java.Util.Map<string, string> arg0)
+        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Parameters(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Data.SchemaBuilder>("parameters", arg0);
         }

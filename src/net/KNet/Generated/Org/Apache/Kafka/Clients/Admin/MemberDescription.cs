@@ -32,23 +32,23 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/MemberDescription.html#org.apache.kafka.clients.admin.MemberDescription(java.lang.String,java.lang.String,java.lang.String,org.apache.kafka.clients.admin.MemberAssignment)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Clients.Admin.MemberAssignment"/></param>
-        public MemberDescription(string arg0, string arg1, string arg2, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg3)
+        public MemberDescription(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/MemberDescription.html#org.apache.kafka.clients.admin.MemberDescription(java.lang.String,java.util.Optional,java.lang.String,java.lang.String,org.apache.kafka.clients.admin.MemberAssignment)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Clients.Admin.MemberAssignment"/></param>
-        public MemberDescription(string arg0, Java.Util.Optional<string> arg1, string arg2, string arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4)
+        public MemberDescription(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -72,37 +72,37 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/MemberDescription.html#clientId--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string ClientId()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String ClientId()
         {
-            return IExecute<string>("clientId");
+            return IExecute<Java.Lang.String>("clientId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/MemberDescription.html#consumerId--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string ConsumerId()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String ConsumerId()
         {
-            return IExecute<string>("consumerId");
+            return IExecute<Java.Lang.String>("consumerId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/MemberDescription.html#host--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Host()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Host()
         {
-            return IExecute<string>("host");
+            return IExecute<Java.Lang.String>("host");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/MemberDescription.html#groupInstanceId--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<string> GroupInstanceId()
+        public Java.Util.Optional<Java.Lang.String> GroupInstanceId()
         {
-            return IExecute<Java.Util.Optional<string>>("groupInstanceId");
+            return IExecute<Java.Util.Optional<Java.Lang.String>>("groupInstanceId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/MemberDescription.html#assignment--"/>

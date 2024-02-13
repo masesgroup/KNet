@@ -58,17 +58,17 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<string> ReconfigurableConfigs()
+        public Java.Util.Set<Java.Lang.String> ReconfigurableConfigs()
         {
-            return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
+            return IExecute<Java.Util.Set<Java.Lang.String>>("reconfigurableConfigs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/ssl/SslFactory.html#createSslEngine-java.lang.String-int-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
         /// <returns><see cref="Javax.Net.Ssl.SSLEngine"/></returns>
-        public Javax.Net.Ssl.SSLEngine CreateSslEngine(string arg0, int arg1)
+        public Javax.Net.Ssl.SSLEngine CreateSslEngine(Java.Lang.String arg0, int arg1)
         {
             return IExecute<Javax.Net.Ssl.SSLEngine>("createSslEngine", arg0, arg1);
         }
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <exception cref="Org.Apache.Kafka.Common.KafkaException"/>
-        public void Configure(Java.Util.Map<string, object> arg0)
+        public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("configure", arg0);
         }
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <exception cref="Org.Apache.Kafka.Common.KafkaException"/>
-        public void Reconfigure(Java.Util.Map<string, object> arg0)
+        public void Reconfigure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("reconfigure", arg0);
         }
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/ssl/SslFactory.html#validateReconfiguration-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void ValidateReconfiguration(Java.Util.Map<string, object> arg0)
+        public void ValidateReconfiguration(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("validateReconfiguration", arg0);
         }

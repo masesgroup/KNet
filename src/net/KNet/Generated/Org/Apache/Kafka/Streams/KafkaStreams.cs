@@ -117,25 +117,25 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.common.serialization.Serializer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
         /// <typeparam name="K"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.KeyQueryMetadata"/></returns>
-        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K>(string arg0, K arg1, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg2)
+        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K>(Java.Lang.String arg0, K arg1, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg2)
         {
             return IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="Arg2objectSuperK"><typeparamref name="K"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.KeyQueryMetadata"/></returns>
-        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K, Arg2objectSuperK>(string arg0, K arg1, Org.Apache.Kafka.Streams.Processor.StreamPartitioner<Arg2objectSuperK, object> arg2) where Arg2objectSuperK: K
+        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K, Arg2objectSuperK>(Java.Lang.String arg0, K arg1, Org.Apache.Kafka.Streams.Processor.StreamPartitioner<Arg2objectSuperK, object> arg2) where Arg2objectSuperK: K
         {
             return IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", arg0, arg1, arg2);
         }
@@ -180,9 +180,9 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#streamsMetadataForStore-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Collection"/></returns>
-        public Java.Util.Collection<Org.Apache.Kafka.Streams.StreamsMetadata> StreamsMetadataForStore(string arg0)
+        public Java.Util.Collection<Org.Apache.Kafka.Streams.StreamsMetadata> StreamsMetadataForStore(Java.Lang.String arg0)
         {
             return IExecute<Java.Util.Collection<Org.Apache.Kafka.Streams.StreamsMetadata>>("streamsMetadataForStore", arg0);
         }
@@ -191,9 +191,9 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>> AllLocalStorePartitionLags()
+        public Java.Util.Map<Java.Lang.String, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>> AllLocalStorePartitionLags()
         {
-            return IExecute<Java.Util.Map<string, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>>>("allLocalStorePartitionLags");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>>>("allLocalStorePartitionLags");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metrics--"/>
@@ -210,27 +210,27 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<string> AddStreamThread()
+        public Java.Util.Optional<Java.Lang.String> AddStreamThread()
         {
-            return IExecute<Java.Util.Optional<string>>("addStreamThread");
+            return IExecute<Java.Util.Optional<Java.Lang.String>>("addStreamThread");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<string> RemoveStreamThread()
+        public Java.Util.Optional<Java.Lang.String> RemoveStreamThread()
         {
-            return IExecute<Java.Util.Optional<string>>("removeStreamThread");
+            return IExecute<Java.Util.Optional<Java.Lang.String>>("removeStreamThread");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<string> RemoveStreamThread(Java.Time.Duration arg0)
+        public Java.Util.Optional<Java.Lang.String> RemoveStreamThread(Java.Time.Duration arg0)
         {
-            return IExecute<Java.Util.Optional<string>>("removeStreamThread", arg0);
+            return IExecute<Java.Util.Optional<Java.Lang.String>>("removeStreamThread", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metadataForLocalThreads--"/>
@@ -446,9 +446,9 @@ namespace Org.Apache.Kafka.Streams
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.State.html#valueOf-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.KafkaStreams.State"/></returns>
-            public static Org.Apache.Kafka.Streams.KafkaStreams.State ValueOf(string arg0)
+            public static Org.Apache.Kafka.Streams.KafkaStreams.State ValueOf(Java.Lang.String arg0)
             {
                 return SExecute<Org.Apache.Kafka.Streams.KafkaStreams.State>(LocalBridgeClazz, "valueOf", arg0);
             }

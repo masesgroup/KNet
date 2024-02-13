@@ -40,8 +40,8 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#NL"/>
         /// </summary>
-        public static string NL { get { if (!_NLReady) { _NLContent = SGetField<string>(LocalBridgeClazz, "NL"); _NLReady = true; } return _NLContent; } }
-        private static string _NLContent = default;
+        public static Java.Lang.String NL { get { if (!_NLReady) { _NLContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "NL"); _NLReady = true; } return _NLContent; } }
+        private static Java.Lang.String _NLContent = default;
         private static bool _NLReady = false; // this is used because in case of generics 
 
         #endregion
@@ -112,16 +112,16 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#mkString-java.util.Map-java.lang.String-java.lang.String-java.lang.String-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
-        /// <param name="arg4"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg4"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
-        /// <returns><see cref="string"/></returns>
-        public static string MkString<K, V>(Java.Util.Map<K, V> arg0, string arg1, string arg2, string arg3, string arg4)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String MkString<K, V>(Java.Util.Map<K, V> arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Lang.String arg3, Java.Lang.String arg4)
         {
-            return SExecute<string>(LocalBridgeClazz, "mkString", arg0, arg1, arg2, arg3, arg4);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "mkString", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#filterMap-java.util.Map-java.util.function.Predicate-"/>
@@ -172,13 +172,13 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#loadClass-java.lang.String-java.lang.Class-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Class"/></param>
         /// <typeparam name="ReturnExtendsT"><typeparamref name="T"/></typeparam>
         /// <typeparam name="T"></typeparam>
         /// <returns><see cref="Java.Lang.Class"/></returns>
         /// <exception cref="Java.Lang.ClassNotFoundException"/>
-        public static Java.Lang.Class LoadClass<ReturnExtendsT, T>(string arg0, Java.Lang.Class arg1) where ReturnExtendsT: T
+        public static Java.Lang.Class LoadClass<ReturnExtendsT, T>(Java.Lang.String arg0, Java.Lang.Class arg1) where ReturnExtendsT: T
         {
             return SExecute<Java.Lang.Class>(LocalBridgeClazz, "loadClass", arg0, arg1);
         }
@@ -186,36 +186,36 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#join-java.util.Collection-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="T"></typeparam>
-        /// <returns><see cref="string"/></returns>
-        public static string Join<T>(Java.Util.Collection<T> arg0, string arg1)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String Join<T>(Java.Util.Collection<T> arg0, Java.Lang.String arg1)
         {
-            return SExecute<string>(LocalBridgeClazz, "join", arg0, arg1);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "join", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#join-java.lang.Object[]-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="T"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="T"></typeparam>
-        /// <returns><see cref="string"/></returns>
-        public static string Join<T>(T[] arg0, string arg1)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String Join<T>(T[] arg0, Java.Lang.String arg1)
         {
-            return SExecute<string>(LocalBridgeClazz, "join", arg0, arg1);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "join", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#mkString-java.util.stream.Stream-java.lang.String-java.lang.String-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Stream.Stream"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="T"></typeparam>
-        /// <returns><see cref="string"/></returns>
-        public static string MkString<T>(Java.Util.Stream.Stream<T> arg0, string arg1, string arg2, string arg3)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String MkString<T>(Java.Util.Stream.Stream<T> arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Lang.String arg3)
         {
-            return SExecute<string>(LocalBridgeClazz, "mkString", arg0, arg1, arg2, arg3);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "mkString", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#safe-java.util.List-"/>
@@ -312,24 +312,24 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#newInstance-java.lang.String-java.lang.Class-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Class"/></param>
         /// <typeparam name="T"></typeparam>
         /// <returns><typeparamref name="T"/></returns>
         /// <exception cref="Java.Lang.ClassNotFoundException"/>
-        public static T NewInstance<T>(string arg0, Java.Lang.Class arg1)
+        public static T NewInstance<T>(Java.Lang.String arg0, Java.Lang.Class arg1)
         {
             return SExecute<T>(LocalBridgeClazz, "newInstance", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#newParameterizedInstance-java.lang.String-java.lang.Object[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <typeparam name="T"></typeparam>
         /// <returns><typeparamref name="T"/></returns>
         /// <exception cref="Java.Lang.ClassNotFoundException"/>
-        public static T NewParameterizedInstance<T>(string arg0, params object[] arg1)
+        public static T NewParameterizedInstance<T>(Java.Lang.String arg0, params object[] arg1)
         {
             if (arg1.Length == 0) return SExecute<T>(LocalBridgeClazz, "newParameterizedInstance", arg0); else return SExecute<T>(LocalBridgeClazz, "newParameterizedInstance", arg0, arg1);
         }
@@ -337,31 +337,31 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#entriesWithPrefix-java.util.Map-java.lang.String-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="bool"/></param>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public static Java.Util.Map<string, V> EntriesWithPrefix<V>(Java.Util.Map<string, V> arg0, string arg1, bool arg2)
+        public static Java.Util.Map<Java.Lang.String, V> EntriesWithPrefix<V>(Java.Util.Map<Java.Lang.String, V> arg0, Java.Lang.String arg1, bool arg2)
         {
-            return SExecute<Java.Util.Map<string, V>>(LocalBridgeClazz, "entriesWithPrefix", arg0, arg1, arg2);
+            return SExecute<Java.Util.Map<Java.Lang.String, V>>(LocalBridgeClazz, "entriesWithPrefix", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#entriesWithPrefix-java.util.Map-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public static Java.Util.Map<string, V> EntriesWithPrefix<V>(Java.Util.Map<string, V> arg0, string arg1)
+        public static Java.Util.Map<Java.Lang.String, V> EntriesWithPrefix<V>(Java.Util.Map<Java.Lang.String, V> arg0, Java.Lang.String arg1)
         {
-            return SExecute<Java.Util.Map<string, V>>(LocalBridgeClazz, "entriesWithPrefix", arg0, arg1);
+            return SExecute<Java.Util.Map<Java.Lang.String, V>>(LocalBridgeClazz, "entriesWithPrefix", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#isBlank-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public static bool IsBlank(string arg0)
+        public static bool IsBlank(Java.Lang.String arg0)
         {
             return SExecute<bool>(LocalBridgeClazz, "isBlank", arg0);
         }
@@ -378,9 +378,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#validHostPattern-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public static bool ValidHostPattern(string arg0)
+        public static bool ValidHostPattern(Java.Lang.String arg0)
         {
             return SExecute<bool>(LocalBridgeClazz, "validHostPattern", arg0);
         }
@@ -474,9 +474,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#utf8-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="byte"/></returns>
-        public static byte[] Utf8(string arg0)
+        public static byte[] Utf8(Java.Lang.String arg0)
         {
             return SExecuteArray<byte>(LocalBridgeClazz, "utf8", arg0);
         }
@@ -539,87 +539,87 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#getPort-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
-        public static Java.Lang.Integer GetPort(string arg0)
+        public static Java.Lang.Integer GetPort(Java.Lang.String arg0)
         {
             return SExecute<Java.Lang.Integer>(LocalBridgeClazz, "getPort", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#formatAddress-java.lang.String-java.lang.Integer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string FormatAddress(string arg0, Java.Lang.Integer arg1)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String FormatAddress(Java.Lang.String arg0, Java.Lang.Integer arg1)
         {
-            return SExecute<string>(LocalBridgeClazz, "formatAddress", arg0, arg1);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "formatAddress", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#formatBytes-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string FormatBytes(long arg0)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String FormatBytes(long arg0)
         {
-            return SExecute<string>(LocalBridgeClazz, "formatBytes", arg0);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "formatBytes", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#getHost-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string GetHost(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String GetHost(Java.Lang.String arg0)
         {
-            return SExecute<string>(LocalBridgeClazz, "getHost", arg0);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "getHost", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#readFileAsString-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
         /// <exception cref="Java.Io.IOException"/>
-        public static string ReadFileAsString(string arg0)
+        public static Java.Lang.String ReadFileAsString(Java.Lang.String arg0)
         {
-            return SExecute<string>(LocalBridgeClazz, "readFileAsString", arg0);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "readFileAsString", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#replaceSuffix-java.lang.String-java.lang.String-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string ReplaceSuffix(string arg0, string arg1, string arg2)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String ReplaceSuffix(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         {
-            return SExecute<string>(LocalBridgeClazz, "replaceSuffix", arg0, arg1, arg2);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "replaceSuffix", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#stackTrace-java.lang.Throwable-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string StackTrace(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String StackTrace(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
-            return SExecute<string>(LocalBridgeClazz, "stackTrace", arg0);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "stackTrace", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#toLogDateTimeFormat-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string ToLogDateTimeFormat(long arg0)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String ToLogDateTimeFormat(long arg0)
         {
-            return SExecute<string>(LocalBridgeClazz, "toLogDateTimeFormat", arg0);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "toLogDateTimeFormat", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#utf8-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string Utf8(byte[] arg0)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String Utf8(byte[] arg0)
         {
-            return SExecute<string>(LocalBridgeClazz, "utf8", new object[] { arg0 });
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "utf8", new object[] { arg0 });
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#utf8-java.nio.ByteBuffer-int-int-"/>
@@ -627,38 +627,38 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="int"/></param>
         /// <param name="arg2"><see cref="int"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string Utf8(Java.Nio.ByteBuffer arg0, int arg1, int arg2)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String Utf8(Java.Nio.ByteBuffer arg0, int arg1, int arg2)
         {
-            return SExecute<string>(LocalBridgeClazz, "utf8", arg0, arg1, arg2);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "utf8", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#utf8-java.nio.ByteBuffer-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="int"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string Utf8(Java.Nio.ByteBuffer arg0, int arg1)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String Utf8(Java.Nio.ByteBuffer arg0, int arg1)
         {
-            return SExecute<string>(LocalBridgeClazz, "utf8", arg0, arg1);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "utf8", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#utf8-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string Utf8(Java.Nio.ByteBuffer arg0)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String Utf8(Java.Nio.ByteBuffer arg0)
         {
-            return SExecute<string>(LocalBridgeClazz, "utf8", arg0);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "utf8", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#enumOptions-java.lang.Class-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string[] EnumOptions(Java.Lang.Class arg0)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String[] EnumOptions(Java.Lang.Class arg0)
         {
-            return SExecuteArray<string>(LocalBridgeClazz, "enumOptions", arg0);
+            return SExecuteArray<Java.Lang.String>(LocalBridgeClazz, "enumOptions", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#ensureCapacity-java.nio.ByteBuffer-int-"/>
@@ -704,48 +704,48 @@ namespace Org.Apache.Kafka.Common.Utils
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Properties"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public static Java.Util.Map<string, object> PropsToMap(Java.Util.Properties arg0)
+        public static Java.Util.Map<Java.Lang.String, object> PropsToMap(Java.Util.Properties arg0)
         {
-            return SExecute<Java.Util.Map<string, object>>(LocalBridgeClazz, "propsToMap", arg0);
+            return SExecute<Java.Util.Map<Java.Lang.String, object>>(LocalBridgeClazz, "propsToMap", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#parseMap-java.lang.String-java.lang.String-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public static Java.Util.Map<string, string> ParseMap(string arg0, string arg1, string arg2)
+        public static Java.Util.Map<Java.Lang.String, Java.Lang.String> ParseMap(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         {
-            return SExecute<Java.Util.Map<string, string>>(LocalBridgeClazz, "parseMap", arg0, arg1, arg2);
+            return SExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>(LocalBridgeClazz, "parseMap", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#propsToStringMap-java.util.Properties-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Properties"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public static Java.Util.Map<string, string> PropsToStringMap(Java.Util.Properties arg0)
+        public static Java.Util.Map<Java.Lang.String, Java.Lang.String> PropsToStringMap(Java.Util.Properties arg0)
         {
-            return SExecute<Java.Util.Map<string, string>>(LocalBridgeClazz, "propsToStringMap", arg0);
+            return SExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>(LocalBridgeClazz, "propsToStringMap", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#loadProps-java.lang.String-java.util.List-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
         /// <exception cref="Java.Io.IOException"/>
-        public static Java.Util.Properties LoadProps(string arg0, Java.Util.List<string> arg1)
+        public static Java.Util.Properties LoadProps(Java.Lang.String arg0, Java.Util.List<Java.Lang.String> arg1)
         {
             return SExecute<Java.Util.Properties>(LocalBridgeClazz, "loadProps", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#loadProps-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
         /// <exception cref="Java.Io.IOException"/>
-        public static Java.Util.Properties LoadProps(string arg0)
+        public static Java.Util.Properties LoadProps(Java.Lang.String arg0)
         {
             return SExecute<Java.Util.Properties>(LocalBridgeClazz, "loadProps", arg0);
         }
@@ -754,7 +754,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
-        public static Java.Util.Properties MkObjectProperties(Java.Util.Map<string, object> arg0)
+        public static Java.Util.Properties MkObjectProperties(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return SExecute<Java.Util.Properties>(LocalBridgeClazz, "mkObjectProperties", arg0);
         }
@@ -763,7 +763,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
-        public static Java.Util.Properties MkProperties(Java.Util.Map<string, string> arg0)
+        public static Java.Util.Properties MkProperties(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return SExecute<Java.Util.Properties>(LocalBridgeClazz, "mkProperties", arg0);
         }
@@ -779,11 +779,11 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#getDateTime-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="long"/></returns>
         /// <exception cref="Java.Text.ParseException"/>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public static long GetDateTime(string arg0)
+        public static long GetDateTime(Java.Lang.String arg0)
         {
             return SExecute<long>(LocalBridgeClazz, "getDateTime", arg0);
         }
@@ -851,9 +851,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#closeAllQuietly-java.util.concurrent.atomic.AtomicReference-java.lang.String-java.lang.AutoCloseable[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.Atomic.AtomicReference"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="Java.Lang.AutoCloseable"/></param>
-        public static void CloseAllQuietly(Java.Util.Concurrent.Atomic.AtomicReference<Java.Lang.Throwable> arg0, string arg1, params Java.Lang.AutoCloseable[] arg2)
+        public static void CloseAllQuietly(Java.Util.Concurrent.Atomic.AtomicReference<Java.Lang.Throwable> arg0, Java.Lang.String arg1, params Java.Lang.AutoCloseable[] arg2)
         {
             if (arg2.Length == 0) SExecute(LocalBridgeClazz, "closeAllQuietly", arg0, arg1); else SExecute(LocalBridgeClazz, "closeAllQuietly", arg0, arg1, arg2);
         }
@@ -861,9 +861,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#closeQuietly-java.lang.AutoCloseable-java.lang.String-java.util.concurrent.atomic.AtomicReference-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.AutoCloseable"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="Java.Util.Concurrent.Atomic.AtomicReference"/></param>
-        public static void CloseQuietly(Java.Lang.AutoCloseable arg0, string arg1, Java.Util.Concurrent.Atomic.AtomicReference<Java.Lang.Throwable> arg2)
+        public static void CloseQuietly(Java.Lang.AutoCloseable arg0, Java.Lang.String arg1, Java.Util.Concurrent.Atomic.AtomicReference<Java.Lang.Throwable> arg2)
         {
             SExecute(LocalBridgeClazz, "closeQuietly", arg0, arg1, arg2);
         }
@@ -871,8 +871,8 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Utils.html#closeQuietly-java.lang.AutoCloseable-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.AutoCloseable"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        public static void CloseQuietly(Java.Lang.AutoCloseable arg0, string arg1)
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        public static void CloseQuietly(Java.Lang.AutoCloseable arg0, Java.Lang.String arg1)
         {
             SExecute(LocalBridgeClazz, "closeQuietly", arg0, arg1);
         }
@@ -920,9 +920,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <param name="arg0"><see cref="Java.Nio.Channels.FileChannel"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg2"><see cref="long"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Java.Io.IOException"/>
-        public static void ReadFullyOrFail(Java.Nio.Channels.FileChannel arg0, Java.Nio.ByteBuffer arg1, long arg2, string arg3)
+        public static void ReadFullyOrFail(Java.Nio.Channels.FileChannel arg0, Java.Nio.ByteBuffer arg1, long arg2, Java.Lang.String arg3)
         {
             SExecute(LocalBridgeClazz, "readFullyOrFail", arg0, arg1, arg2, arg3);
         }
