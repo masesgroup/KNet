@@ -21,27 +21,27 @@ using MASES.KNet.Serialization;
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedTable{K, V}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedTable{TJVMK, TJVMV}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public class KNetKGroupedTable<K, V> : IGenericSerDesFactoryApplier
+    public class KNetKGroupedTable<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        Org.Apache.Kafka.Streams.Kstream.KGroupedTable<byte[], byte[]> _inner;
+        Org.Apache.Kafka.Streams.Kstream.KGroupedTable<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetKGroupedTable(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.KGroupedTable<byte[], byte[]> inner)
+        internal KNetKGroupedTable(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.KGroupedTable<TJVMK, TJVMV> inner)
         {
             _factory = factory;
             _inner = inner;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetKGroupedTable{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedTable{K, V}"/>
+        /// Converter from <see cref="KNetKGroupedTable{K, V,TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedTable{TJVMK, TJVMV}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.KGroupedTable<byte[], byte[]>(KNetKGroupedTable<K, V> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.KGroupedTable<TJVMK, TJVMV>(KNetKGroupedTable<K, V, TJVMK, TJVMV> t) => t._inner;
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Materialized-"/>
