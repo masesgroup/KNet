@@ -32,9 +32,9 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/SourceAndTarget.html#org.apache.kafka.connect.mirror.SourceAndTarget(java.lang.String,java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        public SourceAndTarget(string arg0, string arg1)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        public SourceAndTarget(Java.Lang.String arg0, Java.Lang.String arg1)
             : base(arg0, arg1)
         {
         }
@@ -58,19 +58,19 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/SourceAndTarget.html#source--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Source()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Source()
         {
-            return IExecute<string>("source");
+            return IExecute<Java.Lang.String>("source");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/SourceAndTarget.html#target--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Target()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Target()
         {
-            return IExecute<string>("target");
+            return IExecute<Java.Lang.String>("target");
         }
 
         #endregion

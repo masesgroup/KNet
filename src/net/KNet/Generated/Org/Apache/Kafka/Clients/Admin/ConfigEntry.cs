@@ -32,24 +32,24 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConfigEntry.html#org.apache.kafka.clients.admin.ConfigEntry(java.lang.String,java.lang.String,org.apache.kafka.clients.admin.ConfigEntry.ConfigSource,boolean,boolean,java.util.List,org.apache.kafka.clients.admin.ConfigEntry.ConfigType,java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource"/></param>
         /// <param name="arg3"><see cref="bool"/></param>
         /// <param name="arg4"><see cref="bool"/></param>
         /// <param name="arg5"><see cref="Java.Util.List"/></param>
         /// <param name="arg6"><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType"/></param>
-        /// <param name="arg7"><see cref="string"/></param>
-        public ConfigEntry(string arg0, string arg1, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource arg2, bool arg3, bool arg4, Java.Util.List<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym> arg5, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType arg6, string arg7)
+        /// <param name="arg7"><see cref="Java.Lang.String"/></param>
+        public ConfigEntry(Java.Lang.String arg0, Java.Lang.String arg1, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource arg2, bool arg3, bool arg4, Java.Util.List<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym> arg5, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType arg6, Java.Lang.String arg7)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConfigEntry.html#org.apache.kafka.clients.admin.ConfigEntry(java.lang.String,java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        public ConfigEntry(string arg0, string arg1)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        public ConfigEntry(Java.Lang.String arg0, Java.Lang.String arg1)
             : base(arg0, arg1)
         {
         }
@@ -100,28 +100,28 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConfigEntry.html#documentation--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Documentation()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Documentation()
         {
-            return IExecute<string>("documentation");
+            return IExecute<Java.Lang.String>("documentation");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConfigEntry.html#name--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Name()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Name()
         {
-            return IExecute<string>("name");
+            return IExecute<Java.Lang.String>("name");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConfigEntry.html#value--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Value()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Value()
         {
-            return IExecute<string>("value");
+            return IExecute<Java.Lang.String>("value");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConfigEntry.html#synonyms--"/>
@@ -215,9 +215,9 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConfigEntry.ConfigSource.html#valueOf-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource"/></returns>
-            public static Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource ValueOf(string arg0)
+            public static Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource ValueOf(Java.Lang.String arg0)
             {
                 return SExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>(LocalBridgeClazz, "valueOf", arg0);
             }
@@ -269,19 +269,19 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html#name--"/>
             /// </summary>
 
-            /// <returns><see cref="string"/></returns>
-            public string Name()
+            /// <returns><see cref="Java.Lang.String"/></returns>
+            public Java.Lang.String Name()
             {
-                return IExecute<string>("name");
+                return IExecute<Java.Lang.String>("name");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html#value--"/>
             /// </summary>
 
-            /// <returns><see cref="string"/></returns>
-            public string Value()
+            /// <returns><see cref="Java.Lang.String"/></returns>
+            public Java.Lang.String Value()
             {
-                return IExecute<string>("value");
+                return IExecute<Java.Lang.String>("value");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html#source--"/>
@@ -382,9 +382,9 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ConfigEntry.ConfigType.html#valueOf-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType"/></returns>
-            public static Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType ValueOf(string arg0)
+            public static Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType ValueOf(Java.Lang.String arg0)
             {
                 return SExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType>(LocalBridgeClazz, "valueOf", arg0);
             }

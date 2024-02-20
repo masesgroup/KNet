@@ -86,10 +86,10 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Sensor.html#name--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Name()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Name()
         {
-            return IExecute<string>("name");
+            return IExecute<Java.Lang.String>("name");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Sensor.html#add-org.apache.kafka.common.MetricName-org.apache.kafka.common.metrics.MeasurableStat-org.apache.kafka.common.metrics.MetricConfig-"/>
@@ -189,8 +189,8 @@ namespace Org.Apache.Kafka.Common.Metrics
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Sensor.RecordingLevel.html#name"/>
             /// </summary>
-            public string name { get { if (!_nameReady) { _nameContent = IGetField<string>("name"); _nameReady = true; } return _nameContent; } }
-            private string _nameContent = default;
+            public Java.Lang.String name { get { if (!_nameReady) { _nameContent = IGetField<Java.Lang.String>("name"); _nameReady = true; } return _nameContent; } }
+            private Java.Lang.String _nameContent = default;
             private bool _nameReady = false; // this is used because in case of generics 
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Sensor.RecordingLevel.html#id"/>
@@ -238,18 +238,18 @@ namespace Org.Apache.Kafka.Common.Metrics
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Sensor.RecordingLevel.html#forName-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel"/></returns>
-            public static Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel ForName(string arg0)
+            public static Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel ForName(Java.Lang.String arg0)
             {
                 return SExecute<Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel>(LocalBridgeClazz, "forName", arg0);
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Sensor.RecordingLevel.html#valueOf-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel"/></returns>
-            public static Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel ValueOf(string arg0)
+            public static Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel ValueOf(Java.Lang.String arg0)
             {
                 return SExecute<Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel>(LocalBridgeClazz, "valueOf", arg0);
             }

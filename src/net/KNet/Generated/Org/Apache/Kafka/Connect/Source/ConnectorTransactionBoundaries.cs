@@ -56,9 +56,9 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html#valueOf-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries"/></returns>
-        public static Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries ValueOf(string arg0)
+        public static Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries ValueOf(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries>(LocalBridgeClazz, "valueOf", arg0);
         }

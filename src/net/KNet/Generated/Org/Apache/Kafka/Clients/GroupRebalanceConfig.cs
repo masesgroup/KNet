@@ -35,11 +35,11 @@ namespace Org.Apache.Kafka.Clients
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="int"/></param>
         /// <param name="arg2"><see cref="int"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <param name="arg4"><see cref="Java.Util.Optional"/></param>
         /// <param name="arg5"><see cref="long"/></param>
         /// <param name="arg6"><see cref="bool"/></param>
-        public GroupRebalanceConfig(int arg0, int arg1, int arg2, string arg3, Java.Util.Optional<string> arg4, long arg5, bool arg6)
+        public GroupRebalanceConfig(int arg0, int arg1, int arg2, Java.Lang.String arg3, Java.Util.Optional<Java.Lang.String> arg4, long arg5, bool arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }
@@ -87,8 +87,8 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/GroupRebalanceConfig.html#groupId"/>
         /// </summary>
-        public string groupId { get { if (!_groupIdReady) { _groupIdContent = IGetField<string>("groupId"); _groupIdReady = true; } return _groupIdContent; } }
-        private string _groupIdContent = default;
+        public Java.Lang.String groupId { get { if (!_groupIdReady) { _groupIdContent = IGetField<Java.Lang.String>("groupId"); _groupIdReady = true; } return _groupIdContent; } }
+        private Java.Lang.String _groupIdContent = default;
         private bool _groupIdReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/GroupRebalanceConfig.html#groupInstanceId"/>
@@ -145,9 +145,9 @@ namespace Org.Apache.Kafka.Clients
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#valueOf-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType"/></returns>
-            public static Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType ValueOf(string arg0)
+            public static Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType ValueOf(Java.Lang.String arg0)
             {
                 return SExecute<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>(LocalBridgeClazz, "valueOf", arg0);
             }

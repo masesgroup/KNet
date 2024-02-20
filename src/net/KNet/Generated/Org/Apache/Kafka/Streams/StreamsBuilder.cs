@@ -56,71 +56,71 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-org.apache.kafka.streams.kstream.Consumed-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V> GlobalTable<K, V>(string arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2)
+        public Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V> GlobalTable<K, V>(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V>>("globalTable", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-org.apache.kafka.streams.kstream.Consumed-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V> GlobalTable<K, V>(string arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1)
+        public Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V> GlobalTable<K, V>(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V>>("globalTable", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V> GlobalTable<K, V>(string arg0, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg1)
+        public Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V> GlobalTable<K, V>(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg1)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V>>("globalTable", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V> GlobalTable<K, V>(string arg0)
+        public Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V> GlobalTable<K, V>(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V>>("globalTable", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.lang.String-org.apache.kafka.streams.kstream.Consumed-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Stream<K, V>(string arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1)
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Stream<K, V>(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("stream", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Stream<K, V>(string arg0)
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Stream<K, V>(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("stream", arg0);
         }
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Streams
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Stream<K, V>(Java.Util.Collection<string> arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1)
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Stream<K, V>(Java.Util.Collection<Java.Lang.String> arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("stream", arg0, arg1);
         }
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Streams
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Stream<K, V>(Java.Util.Collection<string> arg0)
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Stream<K, V>(Java.Util.Collection<Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("stream", arg0);
         }
@@ -173,48 +173,48 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-org.apache.kafka.streams.kstream.Consumed-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> Table<K, V>(string arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2)
+        public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> Table<K, V>(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("table", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-org.apache.kafka.streams.kstream.Consumed-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> Table<K, V>(string arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1)
+        public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> Table<K, V>(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg1)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("table", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> Table<K, V>(string arg0, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg1)
+        public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> Table<K, V>(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg1)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("table", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> Table<K, V>(string arg0)
+        public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> Table<K, V>(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("table", arg0);
         }

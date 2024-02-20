@@ -40,14 +40,14 @@ namespace Org.Apache.Kafka.Snapshot
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/snapshot/Snapshots.html#DELETE_SUFFIX"/>
         /// </summary>
-        public static string DELETE_SUFFIX { get { if (!_DELETE_SUFFIXReady) { _DELETE_SUFFIXContent = SGetField<string>(LocalBridgeClazz, "DELETE_SUFFIX"); _DELETE_SUFFIXReady = true; } return _DELETE_SUFFIXContent; } }
-        private static string _DELETE_SUFFIXContent = default;
+        public static Java.Lang.String DELETE_SUFFIX { get { if (!_DELETE_SUFFIXReady) { _DELETE_SUFFIXContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DELETE_SUFFIX"); _DELETE_SUFFIXReady = true; } return _DELETE_SUFFIXContent; } }
+        private static Java.Lang.String _DELETE_SUFFIXContent = default;
         private static bool _DELETE_SUFFIXReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/snapshot/Snapshots.html#SUFFIX"/>
         /// </summary>
-        public static string SUFFIX { get { if (!_SUFFIXReady) { _SUFFIXContent = SGetField<string>(LocalBridgeClazz, "SUFFIX"); _SUFFIXReady = true; } return _SUFFIXContent; } }
-        private static string _SUFFIXContent = default;
+        public static Java.Lang.String SUFFIX { get { if (!_SUFFIXReady) { _SUFFIXContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SUFFIX"); _SUFFIXReady = true; } return _SUFFIXContent; } }
+        private static Java.Lang.String _SUFFIXContent = default;
         private static bool _SUFFIXReady = false; // this is used because in case of generics 
 
         #endregion
@@ -67,10 +67,10 @@ namespace Org.Apache.Kafka.Snapshot
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/snapshot/Snapshots.html#filenameFromSnapshotId-org.apache.kafka.raft.OffsetAndEpoch-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string FilenameFromSnapshotId(Org.Apache.Kafka.Raft.OffsetAndEpoch arg0)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String FilenameFromSnapshotId(Org.Apache.Kafka.Raft.OffsetAndEpoch arg0)
         {
-            return SExecute<string>(LocalBridgeClazz, "filenameFromSnapshotId", arg0);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "filenameFromSnapshotId", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/snapshot/Snapshots.html#createTempFile-java.nio.file.Path-org.apache.kafka.raft.OffsetAndEpoch-"/>

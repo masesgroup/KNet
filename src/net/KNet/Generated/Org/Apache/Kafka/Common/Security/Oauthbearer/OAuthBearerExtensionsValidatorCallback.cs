@@ -59,27 +59,27 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, string> IgnoredExtensions()
+        public Java.Util.Map<Java.Lang.String, Java.Lang.String> IgnoredExtensions()
         {
-            return IExecute<Java.Util.Map<string, string>>("ignoredExtensions");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("ignoredExtensions");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerExtensionsValidatorCallback.html#invalidExtensions--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, string> InvalidExtensions()
+        public Java.Util.Map<Java.Lang.String, Java.Lang.String> InvalidExtensions()
         {
-            return IExecute<Java.Util.Map<string, string>>("invalidExtensions");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("invalidExtensions");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerExtensionsValidatorCallback.html#validatedExtensions--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, string> ValidatedExtensions()
+        public Java.Util.Map<Java.Lang.String, Java.Lang.String> ValidatedExtensions()
         {
-            return IExecute<Java.Util.Map<string, string>>("validatedExtensions");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("validatedExtensions");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerExtensionsValidatorCallback.html#inputExtensions--"/>
@@ -102,17 +102,17 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerExtensionsValidatorCallback.html#error-java.lang.String-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        public void Error(string arg0, string arg1)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        public void Error(Java.Lang.String arg0, Java.Lang.String arg1)
         {
             IExecute("error", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerExtensionsValidatorCallback.html#valid-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public void Valid(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public void Valid(Java.Lang.String arg0)
         {
             IExecute("valid", arg0);
         }

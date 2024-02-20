@@ -56,93 +56,93 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getMap-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<K, V> GetMap<K, V>(string arg0)
+        public Java.Util.Map<K, V> GetMap<K, V>(Java.Lang.String arg0)
         {
             return IExecute<Java.Util.Map<K, V>>("getMap", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getArray-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="T"></typeparam>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List<T> GetArray<T>(string arg0)
+        public Java.Util.List<T> GetArray<T>(Java.Lang.String arg0)
         {
             return IExecute<Java.Util.List<T>>("getArray", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getBytes-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="byte"/></returns>
-        public byte[] GetBytes(string arg0)
+        public byte[] GetBytes(Java.Lang.String arg0)
         {
             return IExecuteArray<byte>("getBytes", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getBoolean-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Boolean"/></returns>
-        public Java.Lang.Boolean GetBoolean(string arg0)
+        public Java.Lang.Boolean GetBoolean(Java.Lang.String arg0)
         {
             return IExecute<Java.Lang.Boolean>("getBoolean", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getInt8-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Byte"/></returns>
-        public Java.Lang.Byte GetInt8(string arg0)
+        public Java.Lang.Byte GetInt8(Java.Lang.String arg0)
         {
             return IExecute<Java.Lang.Byte>("getInt8", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getFloat64-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Double"/></returns>
-        public Java.Lang.Double GetFloat64(string arg0)
+        public Java.Lang.Double GetFloat64(Java.Lang.String arg0)
         {
             return IExecute<Java.Lang.Double>("getFloat64", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getFloat32-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Float"/></returns>
-        public Java.Lang.Float GetFloat32(string arg0)
+        public Java.Lang.Float GetFloat32(Java.Lang.String arg0)
         {
             return IExecute<Java.Lang.Float>("getFloat32", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getInt32-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
-        public Java.Lang.Integer GetInt32(string arg0)
+        public Java.Lang.Integer GetInt32(Java.Lang.String arg0)
         {
             return IExecute<Java.Lang.Integer>("getInt32", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getInt64-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Long"/></returns>
-        public Java.Lang.Long GetInt64(string arg0)
+        public Java.Lang.Long GetInt64(Java.Lang.String arg0)
         {
             return IExecute<Java.Lang.Long>("getInt64", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#get-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="object"/></returns>
-        public object Get(string arg0)
+        public object Get(Java.Lang.String arg0)
         {
             return IExecute("get", arg0);
         }
@@ -158,29 +158,29 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getWithoutDefault-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="object"/></returns>
-        public object GetWithoutDefault(string arg0)
+        public object GetWithoutDefault(Java.Lang.String arg0)
         {
             return IExecute("getWithoutDefault", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getInt16-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Short"/></returns>
-        public Java.Lang.Short GetInt16(string arg0)
+        public Java.Lang.Short GetInt16(Java.Lang.String arg0)
         {
             return IExecute<Java.Lang.Short>("getInt16", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getString-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
-        public string GetString(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String GetString(Java.Lang.String arg0)
         {
-            return IExecute<string>("getString", arg0);
+            return IExecute<Java.Lang.String>("getString", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#schema--"/>
@@ -194,19 +194,19 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#getStruct-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Struct"/></returns>
-        public Org.Apache.Kafka.Connect.Data.Struct GetStruct(string arg0)
+        public Org.Apache.Kafka.Connect.Data.Struct GetStruct(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Data.Struct>("getStruct", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/data/Struct.html#put-java.lang.String-java.lang.Object-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Struct"/></returns>
-        public Org.Apache.Kafka.Connect.Data.Struct Put(string arg0, object arg1)
+        public Org.Apache.Kafka.Connect.Data.Struct Put(Java.Lang.String arg0, object arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Data.Struct>("put", arg0, arg1);
         }

@@ -67,10 +67,10 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/auth/AuthenticationContext.html#listenerName--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string ListenerName()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String ListenerName()
         {
-            return IExecute<string>("listenerName");
+            return IExecute<Java.Lang.String>("listenerName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/auth/AuthenticationContext.html#clientAddress--"/>

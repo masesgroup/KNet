@@ -32,11 +32,11 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Endpoint.html#org.apache.kafka.common.Endpoint(java.lang.String,org.apache.kafka.common.security.auth.SecurityProtocol,java.lang.String,int)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <param name="arg3"><see cref="int"/></param>
-        public Endpoint(string arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, string arg2, int arg3)
+        public Endpoint(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Lang.String arg2, int arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -69,19 +69,19 @@ namespace Org.Apache.Kafka.Common
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Endpoint.html#host--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Host()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Host()
         {
-            return IExecute<string>("host");
+            return IExecute<Java.Lang.String>("host");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Endpoint.html#listenerName--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<string> ListenerName()
+        public Java.Util.Optional<Java.Lang.String> ListenerName()
         {
-            return IExecute<Java.Util.Optional<string>>("listenerName");
+            return IExecute<Java.Util.Optional<Java.Lang.String>>("listenerName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Endpoint.html#securityProtocol--"/>

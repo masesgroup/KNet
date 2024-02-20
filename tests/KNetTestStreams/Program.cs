@@ -126,8 +126,8 @@ namespace MASES.KNetTest
                 // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
                 props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
-                ValueMapper<string, Java.Lang.Iterable<string>> valueMapper = null;
-                KeyValueMapper<string, string, string> keyValuemapper = null;
+                ValueMapper<string, Java.Lang.Iterable<Java.Lang.String>> valueMapper = null;
+                KeyValueMapper<string, Java.Lang.String, Java.Lang.String> keyValuemapper = null;
                 StreamsUncaughtExceptionHandler errorHandler = null;
 
                 try
@@ -136,13 +136,13 @@ namespace MASES.KNetTest
 
                     KStream<string, string> source = builder.Stream<string, string>(topicToUse);
 
-                    valueMapper = new ValueMapper<string, Java.Lang.Iterable<string>>()
+                    valueMapper = new ValueMapper<string, Java.Lang.Iterable<Java.Lang.String>>()
                     {
                         OnApply = (value) =>
                         {
                             Regex regex = new("\\W+");
 
-                            ArrayList<string> arrayList = new();
+                            ArrayList<Java.Lang.String> arrayList = new();
 
                             foreach (var item in regex.Split(value))
                             {
@@ -153,7 +153,7 @@ namespace MASES.KNetTest
                         }
                     };
 
-                    keyValuemapper = new KeyValueMapper<string, string, string>()
+                    keyValuemapper = new KeyValueMapper<string, Java.Lang.String, Java.Lang.String>()
                     {
                         OnApply = (key, value) =>
                         {
@@ -161,9 +161,9 @@ namespace MASES.KNetTest
                         }
                     };
 
-                    KTable<string, Java.Lang.Long> counts = source.FlatMapValues<string, string, Java.Lang.Iterable<string>, string>(valueMapper)
-                                                                  .GroupBy(keyValuemapper)
-                                                                  .Count();
+                    KTable<Java.Lang.String, Java.Lang.Long> counts = source.FlatMapValues<Java.Lang.String, string, Java.Lang.Iterable<Java.Lang.String>, Java.Lang.String>(valueMapper)
+                                                                            .GroupBy(keyValuemapper)
+                                                                            .Count();
 
                     /***** version using Dynamic engine ******
                     
@@ -174,7 +174,7 @@ namespace MASES.KNetTest
                     ******************************************/
 
                     // need to override value serde to Long type
-                    counts.ToStream().To(OUTPUT_TOPIC, Produced<string, Java.Lang.Long>.With(Serdes.String(), Serdes.Long()));
+                    counts.ToStream().To(OUTPUT_TOPIC, Produced<Java.Lang.String, Java.Lang.Long>.With(Serdes.String(), Serdes.Long()));
 
                     using (var streams = new KafkaStreams(builder.Build(), props))
                     {

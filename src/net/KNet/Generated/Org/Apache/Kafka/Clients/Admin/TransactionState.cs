@@ -92,18 +92,18 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/TransactionState.html#parse-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></returns>
-        public static Org.Apache.Kafka.Clients.Admin.TransactionState Parse(string arg0)
+        public static Org.Apache.Kafka.Clients.Admin.TransactionState Parse(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "parse", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/TransactionState.html#valueOf-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></returns>
-        public static Org.Apache.Kafka.Clients.Admin.TransactionState ValueOf(string arg0)
+        public static Org.Apache.Kafka.Clients.Admin.TransactionState ValueOf(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "valueOf", arg0);
         }

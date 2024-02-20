@@ -270,7 +270,7 @@ namespace MASES.KNetTest
                 long elements = 0;
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
-                var topics = Collections.Singleton(topicToUse);
+                var topics = Collections.Singleton((Java.Lang.String)topicToUse);
                 try
                 {
                     using (consumer = new KNetConsumer<string, TestType>(props, keyDeserializer, valueDeserializer))

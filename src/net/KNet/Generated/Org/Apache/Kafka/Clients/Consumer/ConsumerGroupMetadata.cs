@@ -32,19 +32,19 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#org.apache.kafka.clients.consumer.ConsumerGroupMetadata(java.lang.String,int,java.lang.String,java.util.Optional)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <param name="arg3"><see cref="Java.Util.Optional"/></param>
-        public ConsumerGroupMetadata(string arg0, int arg1, string arg2, Java.Util.Optional<string> arg3)
+        public ConsumerGroupMetadata(Java.Lang.String arg0, int arg1, Java.Lang.String arg2, Java.Util.Optional<Java.Lang.String> arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#org.apache.kafka.clients.consumer.ConsumerGroupMetadata(java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public ConsumerGroupMetadata(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public ConsumerGroupMetadata(Java.Lang.String arg0)
             : base(arg0)
         {
         }
@@ -77,28 +77,28 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#groupId--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string GroupId()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String GroupId()
         {
-            return IExecute<string>("groupId");
+            return IExecute<Java.Lang.String>("groupId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#memberId--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string MemberId()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String MemberId()
         {
-            return IExecute<string>("memberId");
+            return IExecute<Java.Lang.String>("memberId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#groupInstanceId--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<string> GroupInstanceId()
+        public Java.Util.Optional<Java.Lang.String> GroupInstanceId()
         {
-            return IExecute<Java.Util.Optional<string>>("groupInstanceId");
+            return IExecute<Java.Util.Optional<Java.Lang.String>>("groupInstanceId");
         }
 
         #endregion

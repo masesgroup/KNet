@@ -32,10 +32,10 @@ namespace Org.Apache.Kafka.Connect.Health
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/health/AbstractState.html#org.apache.kafka.connect.health.AbstractState(java.lang.String,java.lang.String,java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        public AbstractState(string arg0, string arg1, string arg2)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        public AbstractState(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -59,28 +59,28 @@ namespace Org.Apache.Kafka.Connect.Health
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/health/AbstractState.html#state--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string State()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String State()
         {
-            return IExecute<string>("state");
+            return IExecute<Java.Lang.String>("state");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/health/AbstractState.html#traceMessage--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string TraceMessage()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String TraceMessage()
         {
-            return IExecute<string>("traceMessage");
+            return IExecute<Java.Lang.String>("traceMessage");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/health/AbstractState.html#workerId--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string WorkerId()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String WorkerId()
         {
-            return IExecute<string>("workerId");
+            return IExecute<Java.Lang.String>("workerId");
         }
 
         #endregion

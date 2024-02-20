@@ -93,7 +93,7 @@ namespace MASES.KNetTestAdmin
             try
             {
                 string topicName = topicToUse;
-                var coll = Collections.Singleton(topicName);
+                var coll = Collections.Singleton((Java.Lang.String)topicName);
 
                 // Create a compacted topic
                 DeleteTopicsResult result = admin.DeleteTopics(coll);

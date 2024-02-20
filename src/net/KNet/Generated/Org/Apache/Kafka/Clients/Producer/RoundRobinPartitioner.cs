@@ -52,14 +52,14 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/RoundRobinPartitioner.html#partition-java.lang.String-java.lang.Object-byte[]-java.lang.Object-byte[]-org.apache.kafka.common.Cluster-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <param name="arg2"><see cref="byte"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="byte"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Cluster"/></param>
         /// <returns><see cref="int"/></returns>
-        public int Partition(string arg0, object arg1, byte[] arg2, object arg3, byte[] arg4, Org.Apache.Kafka.Common.Cluster arg5)
+        public int Partition(Java.Lang.String arg0, object arg1, byte[] arg2, object arg3, byte[] arg4, Org.Apache.Kafka.Common.Cluster arg5)
         {
             return IExecute<int>("partition", arg0, arg1, arg2, arg3, arg4, arg5);
         }
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/RoundRobinPartitioner.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Configure(Java.Util.Map<string, object> arg0)
+        public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("configure", arg0);
         }

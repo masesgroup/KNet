@@ -50,19 +50,19 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("partitions", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(PartitionsEventHandler));
+            AddEventHandler("partitions", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(PartitionsEventHandler));
 
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <param name="arg2"><see cref="object"/></param>
         /// <param name="arg3"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
-        public Java.Util.Optional PartitionsDefault(string arg0, object arg1, object arg2, int arg3)
+        public Java.Util.Optional PartitionsDefault(Java.Lang.String arg0, object arg1, object arg2, int arg3)
         {
             return IExecute<Java.Util.Optional>("partitionsDefault", arg0, arg1, arg2, arg3);
         }
@@ -71,9 +71,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
         /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<string, object, object, int, Java.Util.Optional> OnPartitions { get; set; } = null;
+        public System.Func<Java.Lang.String, object, object, int, Java.Util.Optional> OnPartitions { get; set; } = null;
 
-        void PartitionsEventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        void PartitionsEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Lang.String>> data)
         {
             var methodToExecute = (OnPartitions != null) ? OnPartitions : Partitions;
             var executionResult = methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<object>(0), data.EventData.GetAt<object>(1), data.EventData.GetAt<int>(2));
@@ -83,13 +83,13 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <param name="arg2"><see cref="object"/></param>
         /// <param name="arg3"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="PartitionsDefault"/>; override the method to implement a different behavior</remarks>
-        public virtual Java.Util.Optional Partitions(string arg0, object arg1, object arg2, int arg3)
+        public virtual Java.Util.Optional Partitions(Java.Lang.String arg0, object arg1, object arg2, int arg3)
         {
             return PartitionsDefault(arg0, arg1, arg2, arg3);
         }
@@ -147,19 +147,19 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("partitions", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(PartitionsEventHandler));
+            AddEventHandler("partitions", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(PartitionsEventHandler));
 
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><typeparamref name="V"/></param>
         /// <param name="arg3"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
-        public Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>> PartitionsDefault(string arg0, K arg1, V arg2, int arg3)
+        public Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>> PartitionsDefault(Java.Lang.String arg0, K arg1, V arg2, int arg3)
         {
             return IExecute<Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>>>("partitionsDefault", arg0, arg1, arg2, arg3);
         }
@@ -168,9 +168,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
         /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<string, K, V, int, Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>>> OnPartitions { get; set; } = null;
+        public System.Func<Java.Lang.String, K, V, int, Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>>> OnPartitions { get; set; } = null;
 
-        void PartitionsEventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        void PartitionsEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Lang.String>> data)
         {
             var methodToExecute = (OnPartitions != null) ? OnPartitions : Partitions;
             var executionResult = methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<K>(0), data.EventData.GetAt<V>(1), data.EventData.GetAt<int>(2));
@@ -180,13 +180,13 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><typeparamref name="V"/></param>
         /// <param name="arg3"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="PartitionsDefault"/>; override the method to implement a different behavior</remarks>
-        public virtual Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>> Partitions(string arg0, K arg1, V arg2, int arg3)
+        public virtual Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>> Partitions(Java.Lang.String arg0, K arg1, V arg2, int arg3)
         {
             return PartitionsDefault(arg0, arg1, arg2, arg3);
         }

@@ -32,14 +32,14 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/KafkaBasedLog.html#org.apache.kafka.connect.util.KafkaBasedLog(java.lang.String,java.util.Map,java.util.Map,java.util.function.Supplier,org.apache.kafka.connect.util.Callback,org.apache.kafka.common.utils.Time,java.util.function.Consumer)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="Java.Util.Map"/></param>
         /// <param name="arg3"><see cref="Java.Util.Function.Supplier"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
         /// <param name="arg6"><see cref="Java.Util.Function.Consumer"/></param>
-        public KafkaBasedLog(string arg0, Java.Util.Map arg1, Java.Util.Map arg2, Java.Util.Function.Supplier arg3, Org.Apache.Kafka.Connect.Util.Callback arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer arg6)
+        public KafkaBasedLog(Java.Lang.String arg0, Java.Util.Map arg1, Java.Util.Map arg2, Java.Util.Function.Supplier arg3, Org.Apache.Kafka.Connect.Util.Callback arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }
@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/KafkaBasedLog.html#withExistingClients-java.lang.String-org.apache.kafka.clients.consumer.Consumer-org.apache.kafka.clients.producer.Producer-org.apache.kafka.connect.util.TopicAdmin-org.apache.kafka.connect.util.Callback-org.apache.kafka.common.utils.Time-java.util.function.Consumer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Clients.Producer.Producer"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin"/></param>
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
         /// <param name="arg6"><see cref="Java.Util.Function.Consumer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.KafkaBasedLog"/></returns>
-        public static Org.Apache.Kafka.Connect.Util.KafkaBasedLog WithExistingClients(string arg0, Org.Apache.Kafka.Clients.Consumer.Consumer arg1, Org.Apache.Kafka.Clients.Producer.Producer arg2, Org.Apache.Kafka.Connect.Util.TopicAdmin arg3, Org.Apache.Kafka.Connect.Util.Callback arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer arg6)
+        public static Org.Apache.Kafka.Connect.Util.KafkaBasedLog WithExistingClients(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Consumer.Consumer arg1, Org.Apache.Kafka.Clients.Producer.Producer arg2, Org.Apache.Kafka.Connect.Util.TopicAdmin arg3, Org.Apache.Kafka.Connect.Util.Callback arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer arg6)
         {
             return SExecute<Org.Apache.Kafka.Connect.Util.KafkaBasedLog>(LocalBridgeClazz, "withExistingClients", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
@@ -179,14 +179,14 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/KafkaBasedLog.html#org.apache.kafka.connect.util.KafkaBasedLog(java.lang.String,java.util.Map,java.util.Map,java.util.function.Supplier,org.apache.kafka.connect.util.Callback,org.apache.kafka.common.utils.Time,java.util.function.Consumer)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="Java.Util.Map"/></param>
         /// <param name="arg3"><see cref="Java.Util.Function.Supplier"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
         /// <param name="arg6"><see cref="Java.Util.Function.Consumer"/></param>
-        public KafkaBasedLog(string arg0, Java.Util.Map<string, object> arg1, Java.Util.Map<string, object> arg2, Java.Util.Function.Supplier<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg3, Org.Apache.Kafka.Connect.Util.Callback<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg6)
+        public KafkaBasedLog(Java.Lang.String arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Util.Map<Java.Lang.String, object> arg2, Java.Util.Function.Supplier<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg3, Org.Apache.Kafka.Connect.Util.Callback<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/KafkaBasedLog.html#withExistingClients-java.lang.String-org.apache.kafka.clients.consumer.Consumer-org.apache.kafka.clients.producer.Producer-org.apache.kafka.connect.util.TopicAdmin-org.apache.kafka.connect.util.Callback-org.apache.kafka.common.utils.Time-java.util.function.Consumer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Clients.Producer.Producer"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin"/></param>
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
         /// <param name="arg6"><see cref="Java.Util.Function.Consumer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.KafkaBasedLog"/></returns>
-        public static Org.Apache.Kafka.Connect.Util.KafkaBasedLog<K, V> WithExistingClients(string arg0, Org.Apache.Kafka.Clients.Consumer.Consumer<K, V> arg1, Org.Apache.Kafka.Clients.Producer.Producer<K, V> arg2, Org.Apache.Kafka.Connect.Util.TopicAdmin arg3, Org.Apache.Kafka.Connect.Util.Callback<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg6)
+        public static Org.Apache.Kafka.Connect.Util.KafkaBasedLog<K, V> WithExistingClients(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Consumer.Consumer<K, V> arg1, Org.Apache.Kafka.Clients.Producer.Producer<K, V> arg2, Org.Apache.Kafka.Connect.Util.TopicAdmin arg3, Org.Apache.Kafka.Connect.Util.Callback<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg6)
         {
             return SExecute<Org.Apache.Kafka.Connect.Util.KafkaBasedLog<K, V>>(LocalBridgeClazz, "withExistingClients", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }

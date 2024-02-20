@@ -32,19 +32,19 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,java.lang.Object,java.lang.Object)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="object"/></param>
-        public ConsumerRecord(string arg0, int arg1, long arg2, object arg3, object arg4)
+        public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, object arg3, object arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers,java.util.Optional)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><see cref="long"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg8"><see cref="object"/></param>
         /// <param name="arg9"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
         /// <param name="arg10"><see cref="Java.Util.Optional"/></param>
-        public ConsumerRecord(string arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, object arg7, object arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional arg10)
+        public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, object arg7, object arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional arg10)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
         {
         }
@@ -118,10 +118,10 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#topic--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Topic()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Topic()
         {
-            return IExecute<string>("topic");
+            return IExecute<Java.Lang.String>("topic");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#leaderEpoch--"/>
@@ -204,19 +204,19 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,java.lang.Object,java.lang.Object)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><typeparamref name="K"/></param>
         /// <param name="arg4"><typeparamref name="V"/></param>
-        public ConsumerRecord(string arg0, int arg1, long arg2, K arg3, V arg4)
+        public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, K arg3, V arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers,java.util.Optional)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><see cref="long"/></param>
@@ -227,7 +227,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg8"><typeparamref name="V"/></param>
         /// <param name="arg9"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
         /// <param name="arg10"><see cref="Java.Util.Optional"/></param>
-        public ConsumerRecord(string arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, K arg7, V arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional<Java.Lang.Integer> arg10)
+        public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, K arg7, V arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional<Java.Lang.Integer> arg10)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
         {
         }
@@ -294,10 +294,10 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#topic--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Topic()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Topic()
         {
-            return IExecute<string>("topic");
+            return IExecute<Java.Lang.String>("topic");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#leaderEpoch--"/>

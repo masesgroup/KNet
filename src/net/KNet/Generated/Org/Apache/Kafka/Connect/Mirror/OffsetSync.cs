@@ -50,26 +50,26 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/OffsetSync.html#DOWNSTREAM_OFFSET_KEY"/>
         /// </summary>
-        public static string DOWNSTREAM_OFFSET_KEY { get { if (!_DOWNSTREAM_OFFSET_KEYReady) { _DOWNSTREAM_OFFSET_KEYContent = SGetField<string>(LocalBridgeClazz, "DOWNSTREAM_OFFSET_KEY"); _DOWNSTREAM_OFFSET_KEYReady = true; } return _DOWNSTREAM_OFFSET_KEYContent; } }
-        private static string _DOWNSTREAM_OFFSET_KEYContent = default;
+        public static Java.Lang.String DOWNSTREAM_OFFSET_KEY { get { if (!_DOWNSTREAM_OFFSET_KEYReady) { _DOWNSTREAM_OFFSET_KEYContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DOWNSTREAM_OFFSET_KEY"); _DOWNSTREAM_OFFSET_KEYReady = true; } return _DOWNSTREAM_OFFSET_KEYContent; } }
+        private static Java.Lang.String _DOWNSTREAM_OFFSET_KEYContent = default;
         private static bool _DOWNSTREAM_OFFSET_KEYReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/OffsetSync.html#PARTITION_KEY"/>
         /// </summary>
-        public static string PARTITION_KEY { get { if (!_PARTITION_KEYReady) { _PARTITION_KEYContent = SGetField<string>(LocalBridgeClazz, "PARTITION_KEY"); _PARTITION_KEYReady = true; } return _PARTITION_KEYContent; } }
-        private static string _PARTITION_KEYContent = default;
+        public static Java.Lang.String PARTITION_KEY { get { if (!_PARTITION_KEYReady) { _PARTITION_KEYContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PARTITION_KEY"); _PARTITION_KEYReady = true; } return _PARTITION_KEYContent; } }
+        private static Java.Lang.String _PARTITION_KEYContent = default;
         private static bool _PARTITION_KEYReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/OffsetSync.html#TOPIC_KEY"/>
         /// </summary>
-        public static string TOPIC_KEY { get { if (!_TOPIC_KEYReady) { _TOPIC_KEYContent = SGetField<string>(LocalBridgeClazz, "TOPIC_KEY"); _TOPIC_KEYReady = true; } return _TOPIC_KEYContent; } }
-        private static string _TOPIC_KEYContent = default;
+        public static Java.Lang.String TOPIC_KEY { get { if (!_TOPIC_KEYReady) { _TOPIC_KEYContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPIC_KEY"); _TOPIC_KEYReady = true; } return _TOPIC_KEYContent; } }
+        private static Java.Lang.String _TOPIC_KEYContent = default;
         private static bool _TOPIC_KEYReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/OffsetSync.html#UPSTREAM_OFFSET_KEY"/>
         /// </summary>
-        public static string UPSTREAM_OFFSET_KEY { get { if (!_UPSTREAM_OFFSET_KEYReady) { _UPSTREAM_OFFSET_KEYContent = SGetField<string>(LocalBridgeClazz, "UPSTREAM_OFFSET_KEY"); _UPSTREAM_OFFSET_KEYReady = true; } return _UPSTREAM_OFFSET_KEYContent; } }
-        private static string _UPSTREAM_OFFSET_KEYContent = default;
+        public static Java.Lang.String UPSTREAM_OFFSET_KEY { get { if (!_UPSTREAM_OFFSET_KEYReady) { _UPSTREAM_OFFSET_KEYContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "UPSTREAM_OFFSET_KEY"); _UPSTREAM_OFFSET_KEYReady = true; } return _UPSTREAM_OFFSET_KEYContent; } }
+        private static Java.Lang.String _UPSTREAM_OFFSET_KEYContent = default;
         private static bool _UPSTREAM_OFFSET_KEYReady = false; // this is used because in case of generics 
 
         #endregion

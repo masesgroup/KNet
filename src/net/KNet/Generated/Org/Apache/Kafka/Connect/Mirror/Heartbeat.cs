@@ -32,10 +32,10 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/Heartbeat.html#org.apache.kafka.connect.mirror.Heartbeat(java.lang.String,java.lang.String,long)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="long"/></param>
-        public Heartbeat(string arg0, string arg1, long arg2)
+        public Heartbeat(Java.Lang.String arg0, Java.Lang.String arg1, long arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -50,26 +50,26 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/Heartbeat.html#SOURCE_CLUSTER_ALIAS_KEY"/>
         /// </summary>
-        public static string SOURCE_CLUSTER_ALIAS_KEY { get { if (!_SOURCE_CLUSTER_ALIAS_KEYReady) { _SOURCE_CLUSTER_ALIAS_KEYContent = SGetField<string>(LocalBridgeClazz, "SOURCE_CLUSTER_ALIAS_KEY"); _SOURCE_CLUSTER_ALIAS_KEYReady = true; } return _SOURCE_CLUSTER_ALIAS_KEYContent; } }
-        private static string _SOURCE_CLUSTER_ALIAS_KEYContent = default;
+        public static Java.Lang.String SOURCE_CLUSTER_ALIAS_KEY { get { if (!_SOURCE_CLUSTER_ALIAS_KEYReady) { _SOURCE_CLUSTER_ALIAS_KEYContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SOURCE_CLUSTER_ALIAS_KEY"); _SOURCE_CLUSTER_ALIAS_KEYReady = true; } return _SOURCE_CLUSTER_ALIAS_KEYContent; } }
+        private static Java.Lang.String _SOURCE_CLUSTER_ALIAS_KEYContent = default;
         private static bool _SOURCE_CLUSTER_ALIAS_KEYReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/Heartbeat.html#TARGET_CLUSTER_ALIAS_KEY"/>
         /// </summary>
-        public static string TARGET_CLUSTER_ALIAS_KEY { get { if (!_TARGET_CLUSTER_ALIAS_KEYReady) { _TARGET_CLUSTER_ALIAS_KEYContent = SGetField<string>(LocalBridgeClazz, "TARGET_CLUSTER_ALIAS_KEY"); _TARGET_CLUSTER_ALIAS_KEYReady = true; } return _TARGET_CLUSTER_ALIAS_KEYContent; } }
-        private static string _TARGET_CLUSTER_ALIAS_KEYContent = default;
+        public static Java.Lang.String TARGET_CLUSTER_ALIAS_KEY { get { if (!_TARGET_CLUSTER_ALIAS_KEYReady) { _TARGET_CLUSTER_ALIAS_KEYContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TARGET_CLUSTER_ALIAS_KEY"); _TARGET_CLUSTER_ALIAS_KEYReady = true; } return _TARGET_CLUSTER_ALIAS_KEYContent; } }
+        private static Java.Lang.String _TARGET_CLUSTER_ALIAS_KEYContent = default;
         private static bool _TARGET_CLUSTER_ALIAS_KEYReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/Heartbeat.html#TIMESTAMP_KEY"/>
         /// </summary>
-        public static string TIMESTAMP_KEY { get { if (!_TIMESTAMP_KEYReady) { _TIMESTAMP_KEYContent = SGetField<string>(LocalBridgeClazz, "TIMESTAMP_KEY"); _TIMESTAMP_KEYReady = true; } return _TIMESTAMP_KEYContent; } }
-        private static string _TIMESTAMP_KEYContent = default;
+        public static Java.Lang.String TIMESTAMP_KEY { get { if (!_TIMESTAMP_KEYReady) { _TIMESTAMP_KEYContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TIMESTAMP_KEY"); _TIMESTAMP_KEYReady = true; } return _TIMESTAMP_KEYContent; } }
+        private static Java.Lang.String _TIMESTAMP_KEYContent = default;
         private static bool _TIMESTAMP_KEYReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/Heartbeat.html#VERSION_KEY"/>
         /// </summary>
-        public static string VERSION_KEY { get { if (!_VERSION_KEYReady) { _VERSION_KEYContent = SGetField<string>(LocalBridgeClazz, "VERSION_KEY"); _VERSION_KEYReady = true; } return _VERSION_KEYContent; } }
-        private static string _VERSION_KEYContent = default;
+        public static Java.Lang.String VERSION_KEY { get { if (!_VERSION_KEYReady) { _VERSION_KEYContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "VERSION_KEY"); _VERSION_KEYReady = true; } return _VERSION_KEYContent; } }
+        private static Java.Lang.String _VERSION_KEYContent = default;
         private static bool _VERSION_KEYReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/Heartbeat.html#VERSION"/>
@@ -98,19 +98,19 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/Heartbeat.html#sourceClusterAlias--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string SourceClusterAlias()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String SourceClusterAlias()
         {
-            return IExecute<string>("sourceClusterAlias");
+            return IExecute<Java.Lang.String>("sourceClusterAlias");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/Heartbeat.html#targetClusterAlias--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string TargetClusterAlias()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String TargetClusterAlias()
         {
-            return IExecute<string>("targetClusterAlias");
+            return IExecute<Java.Lang.String>("targetClusterAlias");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/org/apache/kafka/connect/mirror/Heartbeat.html#timestamp--"/>

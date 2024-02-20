@@ -60,10 +60,10 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize-java.lang.String-byte[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
         /// <returns><see cref="object"/></returns>
-        public object Deserialize(string arg0, byte[] arg1)
+        public object Deserialize(Java.Lang.String arg0, byte[] arg1)
         {
             return IExecute("deserialize", arg0, arg1);
         }
@@ -133,10 +133,10 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize-java.lang.String-byte[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
         /// <returns><see cref="object"/></returns>
-        public object Deserialize(string arg0, byte[] arg1)
+        public object Deserialize(Java.Lang.String arg0, byte[] arg1)
         {
             return IExecute("deserialize", arg0, arg1);
         }
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
-        public void Configure(Java.Util.Map<string, object> arg0, bool arg1)
+        public void Configure(Java.Util.Map<Java.Lang.String, object> arg0, bool arg1)
         {
             IExecute("configure", arg0, arg1);
         }

@@ -76,28 +76,28 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#principalName--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string PrincipalName()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String PrincipalName()
         {
-            return IExecute<string>("principalName");
+            return IExecute<Java.Lang.String>("principalName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#value--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Value()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Value()
         {
-            return IExecute<string>("value");
+            return IExecute<Java.Lang.String>("value");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#scope--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<string> Scope()
+        public Java.Util.Set<Java.Lang.String> Scope()
         {
-            return IExecute<Java.Util.Set<string>>("scope");
+            return IExecute<Java.Util.Set<Java.Lang.String>>("scope");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#lifetimeMs--"/>

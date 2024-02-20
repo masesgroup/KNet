@@ -32,9 +32,9 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/HostInfo.html#org.apache.kafka.streams.state.HostInfo(java.lang.String,int)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
-        public HostInfo(string arg0, int arg1)
+        public HostInfo(Java.Lang.String arg0, int arg1)
             : base(arg0, arg1)
         {
         }
@@ -53,9 +53,9 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/HostInfo.html#buildFromEndpoint-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.HostInfo"/></returns>
-        public static Org.Apache.Kafka.Streams.State.HostInfo BuildFromEndpoint(string arg0)
+        public static Org.Apache.Kafka.Streams.State.HostInfo BuildFromEndpoint(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.State.HostInfo>(LocalBridgeClazz, "buildFromEndpoint", arg0);
         }
@@ -85,10 +85,10 @@ namespace Org.Apache.Kafka.Streams.State
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/HostInfo.html#host--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Host()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Host()
         {
-            return IExecute<string>("host");
+            return IExecute<Java.Lang.String>("host");
         }
 
         #endregion

@@ -32,8 +32,8 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#org.apache.kafka.common.security.ssl.SslPrincipalMapper(java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public SslPrincipalMapper(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public SslPrincipalMapper(Java.Lang.String arg0)
             : base(arg0)
         {
         }
@@ -52,9 +52,9 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#fromRules-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Ssl.SslPrincipalMapper"/></returns>
-        public static Org.Apache.Kafka.Common.Security.Ssl.SslPrincipalMapper FromRules(string arg0)
+        public static Org.Apache.Kafka.Common.Security.Ssl.SslPrincipalMapper FromRules(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.Security.Ssl.SslPrincipalMapper>(LocalBridgeClazz, "fromRules", arg0);
         }
@@ -65,12 +65,12 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#getName-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
         /// <exception cref="Java.Io.IOException"/>
-        public string GetName(string arg0)
+        public Java.Lang.String GetName(Java.Lang.String arg0)
         {
-            return IExecute<string>("getName", arg0);
+            return IExecute<Java.Lang.String>("getName", arg0);
         }
 
         #endregion

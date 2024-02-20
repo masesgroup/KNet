@@ -44,17 +44,17 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/StreamsResetter.html#matchesInternalTopicFormat-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public static bool MatchesInternalTopicFormat(string arg0)
+        public static bool MatchesInternalTopicFormat(Java.Lang.String arg0)
         {
             return SExecute<bool>(LocalBridgeClazz, "matchesInternalTopicFormat", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/StreamsResetter.html#main-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public static void Main(string[] arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public static void Main(Java.Lang.String[] arg0)
         {
             SExecute(LocalBridgeClazz, "main", new object[] { arg0 });
         }
@@ -65,19 +65,19 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/StreamsResetter.html#execute-java.lang.String[]-java.util.Properties-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Properties"/></param>
         /// <returns><see cref="int"/></returns>
-        public int Execute(string[] arg0, Java.Util.Properties arg1)
+        public int Execute(Java.Lang.String[] arg0, Java.Util.Properties arg1)
         {
             return IExecute<int>("execute", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/StreamsResetter.html#execute-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="int"/></returns>
-        public int Execute(string[] arg0)
+        public int Execute(Java.Lang.String[] arg0)
         {
             return IExecute<int>("execute", new object[] { arg0 });
         }
@@ -86,17 +86,17 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
-        public void DoDelete(Java.Util.List<string> arg0, Org.Apache.Kafka.Clients.Admin.Admin arg1)
+        public void DoDelete(Java.Util.List<Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Admin.Admin arg1)
         {
             IExecute("doDelete", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/StreamsResetter.html#maybeSeekToEnd-java.lang.String-org.apache.kafka.clients.consumer.Consumer-java.util.Set-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>
         /// <param name="arg2"><see cref="Java.Util.Set"/></param>
-        public void MaybeSeekToEnd(string arg0, Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> arg1, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg2)
+        public void MaybeSeekToEnd(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> arg1, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg2)
         {
             IExecute("maybeSeekToEnd", arg0, arg1, arg2);
         }

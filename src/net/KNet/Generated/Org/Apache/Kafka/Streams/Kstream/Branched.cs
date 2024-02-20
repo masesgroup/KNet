@@ -44,9 +44,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#as-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Branched As(string arg0)
+        public static Org.Apache.Kafka.Streams.Kstream.Branched As(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Branched>(LocalBridgeClazz, "as", arg0);
         }
@@ -54,9 +54,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer-java.util.function.Consumer-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Consumer"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Branched WithConsumer(Java.Util.Function.Consumer arg0, string arg1)
+        public static Org.Apache.Kafka.Streams.Kstream.Branched WithConsumer(Java.Util.Function.Consumer arg0, Java.Lang.String arg1)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Branched>(LocalBridgeClazz, "withConsumer", arg0, arg1);
         }
@@ -73,9 +73,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withFunction-java.util.function.Function-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Function"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Branched WithFunction(Java.Util.Function.Function arg0, string arg1)
+        public static Org.Apache.Kafka.Streams.Kstream.Branched WithFunction(Java.Util.Function.Function arg0, Java.Lang.String arg1)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Branched>(LocalBridgeClazz, "withFunction", arg0, arg1);
         }
@@ -126,9 +126,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#as-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Branched<K, V> As(string arg0)
+        public static Org.Apache.Kafka.Streams.Kstream.Branched<K, V> As(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Branched<K, V>>(LocalBridgeClazz, "as", arg0);
         }
@@ -136,10 +136,10 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer-java.util.function.Consumer-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Consumer"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_"><see cref="Org.Apache.Kafka.Streams.Kstream.KStream{K, V}"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Branched<K, V> WithConsumer<Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_>(Java.Util.Function.Consumer<Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_> arg0, string arg1) where Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_: Org.Apache.Kafka.Streams.Kstream.KStream<K, V>
+        public static Org.Apache.Kafka.Streams.Kstream.Branched<K, V> WithConsumer<Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_>(Java.Util.Function.Consumer<Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_> arg0, Java.Lang.String arg1) where Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_: Org.Apache.Kafka.Streams.Kstream.KStream<K, V>
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Branched<K, V>>(LocalBridgeClazz, "withConsumer", arg0, arg1);
         }
@@ -156,11 +156,11 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withFunction-java.util.function.Function-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Function"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_"><see cref="Org.Apache.Kafka.Streams.Kstream.KStream{K, V}"/></typeparam>
         /// <typeparam name="Arg0ExtendsOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_"><see cref="Org.Apache.Kafka.Streams.Kstream.KStream{K, V}"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Branched<K, V> WithFunction<Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_, Arg0ExtendsOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_>(Java.Util.Function.Function<Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_, Arg0ExtendsOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_> arg0, string arg1) where Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_: Org.Apache.Kafka.Streams.Kstream.KStream<K, V> where Arg0ExtendsOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_: Org.Apache.Kafka.Streams.Kstream.KStream<K, V>
+        public static Org.Apache.Kafka.Streams.Kstream.Branched<K, V> WithFunction<Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_, Arg0ExtendsOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_>(Java.Util.Function.Function<Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_, Arg0ExtendsOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_> arg0, Java.Lang.String arg1) where Arg0objectSuperOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_: Org.Apache.Kafka.Streams.Kstream.KStream<K, V> where Arg0ExtendsOrg_Apache_Kafka_Streams_Kstream_KStream_K_V_: Org.Apache.Kafka.Streams.Kstream.KStream<K, V>
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Branched<K, V>>(LocalBridgeClazz, "withFunction", arg0, arg1);
         }

@@ -76,10 +76,10 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/RecordContext.html#topic--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Topic()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Topic()
         {
-            return IExecute<string>("topic");
+            return IExecute<Java.Lang.String>("topic");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/RecordContext.html#offset--"/>

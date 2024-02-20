@@ -90,9 +90,9 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html#getCurrentReplicaLogDir--"/> 
             /// </summary>
-            public string CurrentReplicaLogDir
+            public Java.Lang.String CurrentReplicaLogDir
             {
-                get { return IExecute<string>("getCurrentReplicaLogDir"); }
+                get { return IExecute<Java.Lang.String>("getCurrentReplicaLogDir"); }
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html#getCurrentReplicaOffsetLag--"/> 
@@ -104,9 +104,9 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html#getFutureReplicaLogDir--"/> 
             /// </summary>
-            public string FutureReplicaLogDir
+            public Java.Lang.String FutureReplicaLogDir
             {
-                get { return IExecute<string>("getFutureReplicaLogDir"); }
+                get { return IExecute<Java.Lang.String>("getFutureReplicaLogDir"); }
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html#getFutureReplicaOffsetLag--"/> 

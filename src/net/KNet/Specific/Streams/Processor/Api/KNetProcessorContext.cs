@@ -80,27 +80,25 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#stateDir--"/>
         /// </summary>
-
         /// <returns><see cref="Java.Io.File"/></returns>
         public Java.Io.File StateDir => _context.StateDir();
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#applicationId--"/>
         /// </summary>
-
         /// <returns><see cref="string"/></returns>
         public string ApplicationId => _context.ApplicationId();
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigs--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, object> AppConfigs => _context.AppConfigs();
+        public Java.Util.Map<Java.Lang.String, object> AppConfigs => _context.AppConfigs();
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigsWithPrefix-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, object> AppConfigsWithPrefix(string arg0)
+        public Java.Util.Map<Java.Lang.String, object> AppConfigsWithPrefix(string arg0)
         {
             return _context.AppConfigsWithPrefix(arg0);
         }

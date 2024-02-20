@@ -32,27 +32,27 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/token/delegation/TokenInformation.html#org.apache.kafka.common.security.token.delegation.TokenInformation(java.lang.String,org.apache.kafka.common.security.auth.KafkaPrincipal,java.util.Collection,long,long,long)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
         /// <param name="arg2"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg3"><see cref="long"/></param>
         /// <param name="arg4"><see cref="long"/></param>
         /// <param name="arg5"><see cref="long"/></param>
-        public TokenInformation(string arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg2, long arg3, long arg4, long arg5)
+        public TokenInformation(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg2, long arg3, long arg4, long arg5)
             : base(arg0, arg1, arg2, arg3, arg4, arg5)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/token/delegation/TokenInformation.html#org.apache.kafka.common.security.token.delegation.TokenInformation(java.lang.String,org.apache.kafka.common.security.auth.KafkaPrincipal,org.apache.kafka.common.security.auth.KafkaPrincipal,java.util.Collection,long,long,long)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
         /// <param name="arg3"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg4"><see cref="long"/></param>
         /// <param name="arg5"><see cref="long"/></param>
         /// <param name="arg6"><see cref="long"/></param>
-        public TokenInformation(string arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg2, Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg3, long arg4, long arg5, long arg6)
+        public TokenInformation(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg2, Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg3, long arg4, long arg5, long arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/token/delegation/TokenInformation.html#fromRecord-java.lang.String-org.apache.kafka.common.security.auth.KafkaPrincipal-org.apache.kafka.common.security.auth.KafkaPrincipal-java.util.Collection-long-long-long-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
         /// <param name="arg3"><see cref="Java.Util.Collection"/></param>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
         /// <param name="arg5"><see cref="long"/></param>
         /// <param name="arg6"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation"/></returns>
-        public static Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation FromRecord(string arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg2, Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg3, long arg4, long arg5, long arg6)
+        public static Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation FromRecord(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg2, Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg3, long arg4, long arg5, long arg6)
         {
             return SExecute<Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation>(LocalBridgeClazz, "fromRecord", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
@@ -100,37 +100,37 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/token/delegation/TokenInformation.html#ownerAsString--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string OwnerAsString()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String OwnerAsString()
         {
-            return IExecute<string>("ownerAsString");
+            return IExecute<Java.Lang.String>("ownerAsString");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenId--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string TokenId()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String TokenId()
         {
-            return IExecute<string>("tokenId");
+            return IExecute<Java.Lang.String>("tokenId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenRequesterAsString--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string TokenRequesterAsString()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String TokenRequesterAsString()
         {
-            return IExecute<string>("tokenRequesterAsString");
+            return IExecute<Java.Lang.String>("tokenRequesterAsString");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/token/delegation/TokenInformation.html#renewersAsString--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Collection"/></returns>
-        public Java.Util.Collection<string> RenewersAsString()
+        public Java.Util.Collection<Java.Lang.String> RenewersAsString()
         {
-            return IExecute<Java.Util.Collection<string>>("renewersAsString");
+            return IExecute<Java.Util.Collection<Java.Lang.String>>("renewersAsString");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/token/delegation/TokenInformation.html#renewers--"/>

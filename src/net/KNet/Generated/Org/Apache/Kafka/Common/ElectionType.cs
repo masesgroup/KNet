@@ -71,9 +71,9 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/ElectionType.html#valueOf-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.ElectionType"/></returns>
-        public static Org.Apache.Kafka.Common.ElectionType ValueOf(string arg0)
+        public static Org.Apache.Kafka.Common.ElectionType ValueOf(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.ElectionType>(LocalBridgeClazz, "valueOf", arg0);
         }

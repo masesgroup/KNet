@@ -40,8 +40,8 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/RangeAssignor.html#RANGE_ASSIGNOR_NAME"/>
         /// </summary>
-        public static string RANGE_ASSIGNOR_NAME { get { if (!_RANGE_ASSIGNOR_NAMEReady) { _RANGE_ASSIGNOR_NAMEContent = SGetField<string>(LocalBridgeClazz, "RANGE_ASSIGNOR_NAME"); _RANGE_ASSIGNOR_NAMEReady = true; } return _RANGE_ASSIGNOR_NAMEContent; } }
-        private static string _RANGE_ASSIGNOR_NAMEContent = default;
+        public static Java.Lang.String RANGE_ASSIGNOR_NAME { get { if (!_RANGE_ASSIGNOR_NAMEReady) { _RANGE_ASSIGNOR_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RANGE_ASSIGNOR_NAME"); _RANGE_ASSIGNOR_NAMEReady = true; } return _RANGE_ASSIGNOR_NAMEContent; } }
+        private static Java.Lang.String _RANGE_ASSIGNOR_NAMEContent = default;
         private static bool _RANGE_ASSIGNOR_NAMEReady = false; // this is used because in case of generics 
 
         #endregion

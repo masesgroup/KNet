@@ -113,12 +113,12 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#toHtmlTable-java.lang.String-java.lang.Iterable-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Iterable"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string ToHtmlTable(string arg0, Java.Lang.Iterable<Org.Apache.Kafka.Common.MetricNameTemplate> arg1)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public static Java.Lang.String ToHtmlTable(Java.Lang.String arg0, Java.Lang.Iterable<Org.Apache.Kafka.Common.MetricNameTemplate> arg1)
         {
-            return SExecute<string>(LocalBridgeClazz, "toHtmlTable", arg0, arg1);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "toHtmlTable", arg0, arg1);
         }
 
         #endregion
@@ -146,9 +146,9 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#metricInstance-org.apache.kafka.common.MetricNameTemplate-java.lang.String[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.MetricNameTemplate"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
-        public Org.Apache.Kafka.Common.MetricName MetricInstance(Org.Apache.Kafka.Common.MetricNameTemplate arg0, params string[] arg1)
+        public Org.Apache.Kafka.Common.MetricName MetricInstance(Org.Apache.Kafka.Common.MetricNameTemplate arg0, params Java.Lang.String[] arg1)
         {
             if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Common.MetricName>("metricInstance", arg0); else return IExecute<Org.Apache.Kafka.Common.MetricName>("metricInstance", arg0, arg1);
         }
@@ -158,63 +158,63 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.MetricNameTemplate"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
-        public Org.Apache.Kafka.Common.MetricName MetricInstance(Org.Apache.Kafka.Common.MetricNameTemplate arg0, Java.Util.Map<string, string> arg1)
+        public Org.Apache.Kafka.Common.MetricName MetricInstance(Org.Apache.Kafka.Common.MetricNameTemplate arg0, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg1)
         {
             return IExecute<Org.Apache.Kafka.Common.MetricName>("metricInstance", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.lang.String-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
-        public Org.Apache.Kafka.Common.MetricName MetricName(string arg0, string arg1, string arg2, params string[] arg3)
+        public Org.Apache.Kafka.Common.MetricName MetricName(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, params Java.Lang.String[] arg3)
         {
             if (arg3.Length == 0) return IExecute<Org.Apache.Kafka.Common.MetricName>("metricName", arg0, arg1, arg2); else return IExecute<Org.Apache.Kafka.Common.MetricName>("metricName", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.lang.String-java.util.Map-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <param name="arg3"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
-        public Org.Apache.Kafka.Common.MetricName MetricName(string arg0, string arg1, string arg2, Java.Util.Map<string, string> arg3)
+        public Org.Apache.Kafka.Common.MetricName MetricName(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg3)
         {
             return IExecute<Org.Apache.Kafka.Common.MetricName>("metricName", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
-        public Org.Apache.Kafka.Common.MetricName MetricName(string arg0, string arg1, string arg2)
+        public Org.Apache.Kafka.Common.MetricName MetricName(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         {
             return IExecute<Org.Apache.Kafka.Common.MetricName>("metricName", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.util.Map-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
-        public Org.Apache.Kafka.Common.MetricName MetricName(string arg0, string arg1, Java.Util.Map<string, string> arg2)
+        public Org.Apache.Kafka.Common.MetricName MetricName(Java.Lang.String arg0, Java.Lang.String arg1, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg2)
         {
             return IExecute<Org.Apache.Kafka.Common.MetricName>("metricName", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
-        public Org.Apache.Kafka.Common.MetricName MetricName(string arg0, string arg1)
+        public Org.Apache.Kafka.Common.MetricName MetricName(Java.Lang.String arg0, Java.Lang.String arg1)
         {
             return IExecute<Org.Apache.Kafka.Common.MetricName>("metricName", arg0, arg1);
         }
@@ -250,49 +250,49 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#getSensor-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
-        public Org.Apache.Kafka.Common.Metrics.Sensor GetSensor(string arg0)
+        public Org.Apache.Kafka.Common.Metrics.Sensor GetSensor(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("getSensor", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.Sensor[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
-        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(string arg0, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg1)
+        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg1)
         {
             if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0); else return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-org.apache.kafka.common.metrics.Sensor[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
-        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(string arg0, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg1, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg2)
+        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg1, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg2)
         {
             if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1); else return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
-        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(string arg0, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg1)
+        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg1)
         {
             return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
-        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(string arg0)
+        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0);
         }
@@ -308,48 +308,48 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-long-org.apache.kafka.common.metrics.Sensor[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
-        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(string arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, long arg2, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg3)
+        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, long arg2, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg3)
         {
             if (arg3.Length == 0) return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1, arg2); else return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-long-org.apache.kafka.common.metrics.Sensor.RecordingLevel-org.apache.kafka.common.metrics.Sensor[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
-        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(string arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, long arg2, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg3, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg4)
+        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, long arg2, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg3, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg4)
         {
             if (arg4.Length == 0) return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1, arg2, arg3); else return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.Sensor[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
-        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(string arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg2)
+        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg2)
         {
             if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1); else return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.Sensor.RecordingLevel-org.apache.kafka.common.metrics.Sensor[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
-        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(string arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg2, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg3)
+        public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg2, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg3)
         {
             if (arg3.Length == 0) return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1, arg2); else return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", arg0, arg1, arg2, arg3);
         }
@@ -417,8 +417,8 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/Metrics.html#removeSensor-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public void RemoveSensor(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public void RemoveSensor(Java.Lang.String arg0)
         {
             IExecute("removeSensor", arg0);
         }

@@ -32,9 +32,9 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/UserScramCredentialDeletion.html#org.apache.kafka.clients.admin.UserScramCredentialDeletion(java.lang.String,org.apache.kafka.clients.admin.ScramMechanism)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ScramMechanism"/></param>
-        public UserScramCredentialDeletion(string arg0, Org.Apache.Kafka.Clients.Admin.ScramMechanism arg1)
+        public UserScramCredentialDeletion(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramMechanism arg1)
             : base(arg0, arg1)
         {
         }

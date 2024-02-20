@@ -32,19 +32,19 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/KafkaThread.html#org.apache.kafka.common.utils.KafkaThread(java.lang.String,boolean)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
-        public KafkaThread(string arg0, bool arg1)
+        public KafkaThread(Java.Lang.String arg0, bool arg1)
             : base(arg0, arg1)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/KafkaThread.html#org.apache.kafka.common.utils.KafkaThread(java.lang.String,java.lang.Runnable,boolean)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Runnable"/></param>
         /// <param name="arg2"><see cref="bool"/></param>
-        public KafkaThread(string arg0, Java.Lang.Runnable arg1, bool arg2)
+        public KafkaThread(Java.Lang.String arg0, Java.Lang.Runnable arg1, bool arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -63,20 +63,20 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/KafkaThread.html#daemon-java.lang.String-java.lang.Runnable-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Runnable"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.KafkaThread"/></returns>
-        public static Org.Apache.Kafka.Common.Utils.KafkaThread Daemon(string arg0, Java.Lang.Runnable arg1)
+        public static Org.Apache.Kafka.Common.Utils.KafkaThread Daemon(Java.Lang.String arg0, Java.Lang.Runnable arg1)
         {
             return SExecute<Org.Apache.Kafka.Common.Utils.KafkaThread>(LocalBridgeClazz, "daemon", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/KafkaThread.html#nonDaemon-java.lang.String-java.lang.Runnable-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Runnable"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.KafkaThread"/></returns>
-        public static Org.Apache.Kafka.Common.Utils.KafkaThread NonDaemon(string arg0, Java.Lang.Runnable arg1)
+        public static Org.Apache.Kafka.Common.Utils.KafkaThread NonDaemon(Java.Lang.String arg0, Java.Lang.Runnable arg1)
         {
             return SExecute<Org.Apache.Kafka.Common.Utils.KafkaThread>(LocalBridgeClazz, "nonDaemon", arg0, arg1);
         }

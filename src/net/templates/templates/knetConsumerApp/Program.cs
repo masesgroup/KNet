@@ -102,8 +102,8 @@ namespace MASES.KNetTemplate.KNetConsumer
 
                 using (var consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
                 {
-                    if (useCallback) consumer.Subscribe(Collections.Singleton(topicToUse), rebalanceListener);
-                    else consumer.Subscribe(Collections.Singleton(topicToUse));
+                    if (useCallback) consumer.Subscribe(Collections.Singleton((Java.Lang.String)topicToUse), rebalanceListener);
+                    else consumer.Subscribe(Collections.Singleton((Java.Lang.String)topicToUse));
 
                     while (!resetEvent.WaitOne(0))
                     {

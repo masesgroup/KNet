@@ -40,8 +40,8 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/RoundRobinAssignor.html#ROUNDROBIN_ASSIGNOR_NAME"/>
         /// </summary>
-        public static string ROUNDROBIN_ASSIGNOR_NAME { get { if (!_ROUNDROBIN_ASSIGNOR_NAMEReady) { _ROUNDROBIN_ASSIGNOR_NAMEContent = SGetField<string>(LocalBridgeClazz, "ROUNDROBIN_ASSIGNOR_NAME"); _ROUNDROBIN_ASSIGNOR_NAMEReady = true; } return _ROUNDROBIN_ASSIGNOR_NAMEContent; } }
-        private static string _ROUNDROBIN_ASSIGNOR_NAMEContent = default;
+        public static Java.Lang.String ROUNDROBIN_ASSIGNOR_NAME { get { if (!_ROUNDROBIN_ASSIGNOR_NAMEReady) { _ROUNDROBIN_ASSIGNOR_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ROUNDROBIN_ASSIGNOR_NAME"); _ROUNDROBIN_ASSIGNOR_NAMEReady = true; } return _ROUNDROBIN_ASSIGNOR_NAMEContent; } }
+        private static Java.Lang.String _ROUNDROBIN_ASSIGNOR_NAMEContent = default;
         private static bool _ROUNDROBIN_ASSIGNOR_NAMEReady = false; // this is used because in case of generics 
 
         #endregion

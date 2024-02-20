@@ -32,8 +32,8 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/MemberToRemove.html#org.apache.kafka.clients.admin.MemberToRemove(java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public MemberToRemove(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public MemberToRemove(Java.Lang.String arg0)
             : base(arg0)
         {
         }
@@ -57,10 +57,10 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/MemberToRemove.html#groupInstanceId--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string GroupInstanceId()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String GroupInstanceId()
         {
-            return IExecute<string>("groupInstanceId");
+            return IExecute<Java.Lang.String>("groupInstanceId");
         }
 
         #endregion

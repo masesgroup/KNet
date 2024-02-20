@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="topic">topic associated with the data</param>
         /// <param name="data"><typeparamref name="T"/> data</param>
         /// <returns>serialized bytes</returns>
-        byte[] Serialize(string topic, T data);
+        byte[] Serialize(Java.Lang.String topic, T data);
         /// <summary>
         /// Executes the Serializer action in the CLR
         /// </summary>
@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
         /// <param name="data"><typeparamref name="T"/> data</param>
         /// <returns>serialized bytes</returns>
-        byte[] Serialize(string topic, Headers headers, T data);
+        byte[] Serialize(Java.Lang.String topic, Headers headers, T data);
     }
     /// <summary>
     /// Listener for Kafka Serializer. Extends <see cref="JVMBridgeListener"/>. Implements <see cref="ISerializer{T}"/>

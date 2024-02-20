@@ -74,9 +74,9 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#allWithName-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
-        public Java.Util.Iterator<Org.Apache.Kafka.Connect.Header.Header> AllWithName(string arg0)
+        public Java.Util.Iterator<Org.Apache.Kafka.Connect.Header.Header> AllWithName(Java.Lang.String arg0)
         {
             return IExecute<Java.Util.Iterator<Org.Apache.Kafka.Connect.Header.Header>>("allWithName", arg0);
         }
@@ -92,30 +92,30 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#lastWithName-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Header"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Header LastWithName(string arg0)
+        public Org.Apache.Kafka.Connect.Header.Header LastWithName(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Header>("lastWithName", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#add-java.lang.String-java.lang.Object-org.apache.kafka.connect.data.Schema-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers Add(string arg0, object arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
+        public Org.Apache.Kafka.Connect.Header.Headers Add(Java.Lang.String arg0, object arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("add", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#add-java.lang.String-org.apache.kafka.connect.data.SchemaAndValue-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Data.SchemaAndValue"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers Add(string arg0, Org.Apache.Kafka.Connect.Data.SchemaAndValue arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers Add(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Data.SchemaAndValue arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("add", arg0, arg1);
         }
@@ -131,172 +131,172 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addBoolean-java.lang.String-boolean-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddBoolean(string arg0, bool arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddBoolean(Java.Lang.String arg0, bool arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addBoolean", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addByte-java.lang.String-byte-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddByte(string arg0, byte arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddByte(Java.Lang.String arg0, byte arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addByte", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addBytes-java.lang.String-byte[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddBytes(string arg0, byte[] arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddBytes(Java.Lang.String arg0, byte[] arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addBytes", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addDate-java.lang.String-java.util.Date-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Date"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddDate(string arg0, Java.Util.Date arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddDate(Java.Lang.String arg0, Java.Util.Date arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addDate", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addDecimal-java.lang.String-java.math.BigDecimal-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Math.BigDecimal"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddDecimal(string arg0, Java.Math.BigDecimal arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddDecimal(Java.Lang.String arg0, Java.Math.BigDecimal arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addDecimal", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addDouble-java.lang.String-double-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="double"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddDouble(string arg0, double arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddDouble(Java.Lang.String arg0, double arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addDouble", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addFloat-java.lang.String-float-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="float"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddFloat(string arg0, float arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddFloat(Java.Lang.String arg0, float arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addFloat", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addInt-java.lang.String-int-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddInt(string arg0, int arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddInt(Java.Lang.String arg0, int arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addInt", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addList-java.lang.String-java.util.List-org.apache.kafka.connect.data.Schema-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddList(string arg0, Java.Util.List<object> arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
+        public Org.Apache.Kafka.Connect.Header.Headers AddList(Java.Lang.String arg0, Java.Util.List<object> arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addList", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addLong-java.lang.String-long-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddLong(string arg0, long arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddLong(Java.Lang.String arg0, long arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addLong", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addMap-java.lang.String-java.util.Map-org.apache.kafka.connect.data.Schema-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddMap(string arg0, Java.Util.Map<object, object> arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
+        public Org.Apache.Kafka.Connect.Header.Headers AddMap(Java.Lang.String arg0, Java.Util.Map<object, object> arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addMap", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addShort-java.lang.String-short-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="short"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddShort(string arg0, short arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddShort(Java.Lang.String arg0, short arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addShort", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addString-java.lang.String-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddString(string arg0, string arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddString(Java.Lang.String arg0, Java.Lang.String arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addString", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addStruct-java.lang.String-org.apache.kafka.connect.data.Struct-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Data.Struct"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddStruct(string arg0, Org.Apache.Kafka.Connect.Data.Struct arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddStruct(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Data.Struct arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addStruct", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addTime-java.lang.String-java.util.Date-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Date"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddTime(string arg0, Java.Util.Date arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddTime(Java.Lang.String arg0, Java.Util.Date arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addTime", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#addTimestamp-java.lang.String-java.util.Date-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Date"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers AddTimestamp(string arg0, Java.Util.Date arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers AddTimestamp(Java.Lang.String arg0, Java.Util.Date arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addTimestamp", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#apply-java.lang.String-org.apache.kafka.connect.header.Headers.HeaderTransform-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Header.Headers.HeaderTransform"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers Apply(string arg0, Org.Apache.Kafka.Connect.Header.Headers.HeaderTransform arg1)
+        public Org.Apache.Kafka.Connect.Header.Headers Apply(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Header.Headers.HeaderTransform arg1)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("apply", arg0, arg1);
         }
@@ -330,9 +330,9 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#remove-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers Remove(string arg0)
+        public Org.Apache.Kafka.Connect.Header.Headers Remove(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("remove", arg0);
         }
@@ -348,9 +348,9 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/header/ConnectHeaders.html#retainLatest-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Connect.Header.Headers RetainLatest(string arg0)
+        public Org.Apache.Kafka.Connect.Header.Headers RetainLatest(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("retainLatest", arg0);
         }

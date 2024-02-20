@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JNet.Specific.Extensions;
 using System;
 using System.Collections.Generic;
 
@@ -67,7 +68,7 @@ namespace Org.Apache.Kafka.Tools
             }
             if (force) strings.Add("--force");
 
-            return new StreamsResetter().Execute(strings.ToArray()) == 0;
+            return new StreamsResetter().Execute(((IEnumerable<string>)strings).ToArray()) == 0;
         }
     }
     #endregion

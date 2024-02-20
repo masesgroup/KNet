@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/auth/SaslExtensions.html#org.apache.kafka.common.security.auth.SaslExtensions(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public SaslExtensions(Java.Util.Map<string, string> arg0)
+        public SaslExtensions(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
             : base(arg0)
         {
         }
@@ -67,9 +67,9 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, string> Map()
+        public Java.Util.Map<Java.Lang.String, Java.Lang.String> Map()
         {
-            return IExecute<Java.Util.Map<string, string>>("map");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("map");
         }
 
         #endregion

@@ -84,19 +84,19 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#partitionsFor-java.lang.String-java.time.Duration-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List PartitionsFor(string arg0, Java.Time.Duration arg1)
+        public Java.Util.List PartitionsFor(Java.Lang.String arg0, Java.Time.Duration arg1)
         {
             return IExecute<Java.Util.List>("partitionsFor", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#partitionsFor-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List PartitionsFor(string arg0)
+        public Java.Util.List PartitionsFor(Java.Lang.String arg0)
         {
             return IExecute<Java.Util.List>("partitionsFor", arg0);
         }
@@ -365,8 +365,8 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#enforceRebalance-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public void EnforceRebalance(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public void EnforceRebalance(Java.Lang.String arg0)
         {
             IExecute("enforceRebalance", arg0);
         }
@@ -489,7 +489,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
-        public KafkaConsumer(Java.Util.Map<string, object> arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg2)
+        public KafkaConsumer(Java.Util.Map<Java.Lang.String, object> arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -497,7 +497,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#org.apache.kafka.clients.consumer.KafkaConsumer(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public KafkaConsumer(Java.Util.Map<string, object> arg0)
+        public KafkaConsumer(Java.Util.Map<Java.Lang.String, object> arg0)
             : base(arg0)
         {
         }
@@ -542,19 +542,19 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#partitionsFor-java.lang.String-java.time.Duration-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo> PartitionsFor(string arg0, Java.Time.Duration arg1)
+        public Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo> PartitionsFor(Java.Lang.String arg0, Java.Time.Duration arg1)
         {
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>("partitionsFor", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#partitionsFor-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo> PartitionsFor(string arg0)
+        public Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo> PartitionsFor(Java.Lang.String arg0)
         {
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>("partitionsFor", arg0);
         }
@@ -563,18 +563,18 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>> ListTopics()
+        public Java.Util.Map<Java.Lang.String, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>> ListTopics()
         {
-            return IExecute<Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>>("listTopics");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>>("listTopics");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#listTopics-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>> ListTopics(Java.Time.Duration arg0)
+        public Java.Util.Map<Java.Lang.String, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>> ListTopics(Java.Time.Duration arg0)
         {
-            return IExecute<Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>>("listTopics", arg0);
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>>("listTopics", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#metrics--"/>
@@ -676,9 +676,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<string> Subscription()
+        public Java.Util.Set<Java.Lang.String> Subscription()
         {
-            return IExecute<Java.Util.Set<string>>("subscription");
+            return IExecute<Java.Util.Set<Java.Lang.String>>("subscription");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#assignment--"/>
@@ -824,8 +824,8 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#enforceRebalance-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public void EnforceRebalance(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public void EnforceRebalance(Java.Lang.String arg0)
         {
             IExecute("enforceRebalance", arg0);
         }
@@ -884,7 +884,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener"/></param>
-        public void Subscribe(Java.Util.Collection<string> arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener arg1)
+        public void Subscribe(Java.Util.Collection<Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener arg1)
         {
             IExecute("subscribe", arg0, arg1);
         }
@@ -892,7 +892,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#subscribe-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
-        public void Subscribe(Java.Util.Collection<string> arg0)
+        public void Subscribe(Java.Util.Collection<Java.Lang.String> arg0)
         {
             IExecute("subscribe", arg0);
         }

@@ -48,14 +48,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/DropHeaders.html#HEADERS_FIELD"/>
         /// </summary>
-        public static string HEADERS_FIELD { get { if (!_HEADERS_FIELDReady) { _HEADERS_FIELDContent = SGetField<string>(LocalBridgeClazz, "HEADERS_FIELD"); _HEADERS_FIELDReady = true; } return _HEADERS_FIELDContent; } }
-        private static string _HEADERS_FIELDContent = default;
+        public static Java.Lang.String HEADERS_FIELD { get { if (!_HEADERS_FIELDReady) { _HEADERS_FIELDContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "HEADERS_FIELD"); _HEADERS_FIELDReady = true; } return _HEADERS_FIELDContent; } }
+        private static Java.Lang.String _HEADERS_FIELDContent = default;
         private static bool _HEADERS_FIELDReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/DropHeaders.html#OVERVIEW_DOC"/>
         /// </summary>
-        public static string OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<string>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
-        private static string _OVERVIEW_DOCContent = default;
+        public static Java.Lang.String OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
+        private static Java.Lang.String _OVERVIEW_DOCContent = default;
         private static bool _OVERVIEW_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/DropHeaders.html#CONFIG_DEF"/>
@@ -75,10 +75,10 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/DropHeaders.html#version--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Version()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Version()
         {
-            return IExecute<string>("version");
+            return IExecute<Java.Lang.String>("version");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/DropHeaders.html#config--"/>
@@ -151,14 +151,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/DropHeaders.html#HEADERS_FIELD"/>
         /// </summary>
-        public static string HEADERS_FIELD { get { if (!_HEADERS_FIELDReady) { _HEADERS_FIELDContent = SGetField<string>(LocalBridgeClazz, "HEADERS_FIELD"); _HEADERS_FIELDReady = true; } return _HEADERS_FIELDContent; } }
-        private static string _HEADERS_FIELDContent = default;
+        public static Java.Lang.String HEADERS_FIELD { get { if (!_HEADERS_FIELDReady) { _HEADERS_FIELDContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "HEADERS_FIELD"); _HEADERS_FIELDReady = true; } return _HEADERS_FIELDContent; } }
+        private static Java.Lang.String _HEADERS_FIELDContent = default;
         private static bool _HEADERS_FIELDReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/DropHeaders.html#OVERVIEW_DOC"/>
         /// </summary>
-        public static string OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<string>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
-        private static string _OVERVIEW_DOCContent = default;
+        public static Java.Lang.String OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
+        private static Java.Lang.String _OVERVIEW_DOCContent = default;
         private static bool _OVERVIEW_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/DropHeaders.html#CONFIG_DEF"/>
@@ -178,10 +178,10 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/DropHeaders.html#version--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Version()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Version()
         {
-            return IExecute<string>("version");
+            return IExecute<Java.Lang.String>("version");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/DropHeaders.html#config--"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/DropHeaders.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Configure(Java.Util.Map<string, object> arg0)
+        public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("configure", arg0);
         }

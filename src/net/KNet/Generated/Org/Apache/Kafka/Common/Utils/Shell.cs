@@ -52,23 +52,23 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Shell.html#execCommand-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="string"/></returns>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Lang.String"/></returns>
         /// <exception cref="Java.Io.IOException"/>
-        public static string ExecCommand(params string[] arg0)
+        public static Java.Lang.String ExecCommand(params Java.Lang.String[] arg0)
         {
-            if (arg0.Length == 0) return SExecute<string>(LocalBridgeClazz, "execCommand"); else return SExecute<string>(LocalBridgeClazz, "execCommand", arg0);
+            if (arg0.Length == 0) return SExecute<Java.Lang.String>(LocalBridgeClazz, "execCommand"); else return SExecute<Java.Lang.String>(LocalBridgeClazz, "execCommand", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Shell.html#execCommand-java.lang.String[]-long-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="long"/></param>
-        /// <returns><see cref="string"/></returns>
+        /// <returns><see cref="Java.Lang.String"/></returns>
         /// <exception cref="Java.Io.IOException"/>
-        public static string ExecCommand(string[] arg0, long arg1)
+        public static Java.Lang.String ExecCommand(Java.Lang.String[] arg0, long arg1)
         {
-            return SExecute<string>(LocalBridgeClazz, "execCommand", arg0, arg1);
+            return SExecute<Java.Lang.String>(LocalBridgeClazz, "execCommand", arg0, arg1);
         }
 
         #endregion
@@ -134,9 +134,9 @@ namespace Org.Apache.Kafka.Common.Utils
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#org.apache.kafka.common.utils.Shell$ShellCommandExecutor(java.lang.String[],long)"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="long"/></param>
-            public ShellCommandExecutor(string[] arg0, long arg1)
+            public ShellCommandExecutor(Java.Lang.String[] arg0, long arg1)
                 : base(arg0, arg1)
             {
             }
@@ -160,10 +160,10 @@ namespace Org.Apache.Kafka.Common.Utils
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#output--"/>
             /// </summary>
 
-            /// <returns><see cref="string"/></returns>
-            public string Output()
+            /// <returns><see cref="Java.Lang.String"/></returns>
+            public Java.Lang.String Output()
             {
-                return IExecute<string>("output");
+                return IExecute<Java.Lang.String>("output");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#execute--"/>

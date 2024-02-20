@@ -65,9 +65,9 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/Config.html#get-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.ConfigEntry Get(string arg0)
+        public Org.Apache.Kafka.Clients.Admin.ConfigEntry Get(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry>("get", arg0);
         }
