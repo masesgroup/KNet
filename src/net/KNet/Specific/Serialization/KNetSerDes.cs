@@ -17,6 +17,7 @@
 */
 
 using Java.Nio;
+using MASES.JCOBridge.C2JBridge;
 using Org.Apache.Kafka.Common.Header;
 using Org.Apache.Kafka.Common.Serialization;
 using System;
@@ -27,39 +28,38 @@ namespace MASES.KNet.Serialization
     /// KNet common serializer/deserializer
     /// </summary>
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
-    public interface IKNetSerDes<T> : IKNetSerializer<T>, IKNetDeserializer<T>
+    /// <typeparam name="TJVMT">The corresponding JVM type used</typeparam>
+    public interface IKNetSerDes<T, TJVMT> : IKNetSerializer<T, TJVMT>, IKNetDeserializer<T, TJVMT>
     {
         /// <summary>
         /// The <see cref="Serde{T}"/> to use in Apache Kafka
         /// </summary>
-        Serde<byte[]> KafkaSerde { get; }
+        Serde<TJVMT> KafkaSerde { get; }
+    }
+
+    /// <summary>
+    /// KNet common serializer/deserializer based on <see cref="byte"/> array JVM type
+    /// </summary>
+    /// <typeparam name="T">The type to serialize/deserialize</typeparam>
+    public interface IKNetSerDes<T> : IKNetSerDes<T, byte[]>, IKNetSerializer<T>, IKNetDeserializer<T>
+    {
+
     }
 
     /// <summary>
     /// Common serializer/deserializer
     /// </summary>
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
-    public class KNetSerDes<T> : IKNetSerDes<T>
+    /// <typeparam name="TJVMT">The corresponding JVM type used</typeparam>
+    public class KNetSerDes<T, TJVMT> : IKNetSerDes<T, TJVMT>
     {
         #region private fields
-        readonly KNetSerialization.SerializationType _SerializationType = KNetSerialization.InternalSerDesType<T>();
-        Serde<byte[]> _KafkaSerde = Serdes.ByteArray();
-        Serializer<byte[]> _KafkaSerializer = new ByteArraySerializer();
-        Deserializer<byte[]> _KafkaDeserializer = new ByteArrayDeserializer();
-        #endregion
-
-        #region Private methods
-
-        Serializer<byte[]> kafkaSerializer()
-        {
-            return _KafkaSerializer;
-        }
-
-        Deserializer<byte[]> kafkaDeserializer()
-        {
-            return _KafkaDeserializer;
-        }
-
+        readonly KNetSerialization.SerializationType _SerializationType;
+        readonly KNetSerialization.SerializationType _JVMSerializationType;
+        Serdes.WrapperSerde<TJVMT> _KafkaWrapperSerde;
+        Serde<TJVMT> _KafkaSerde;
+        Serializer<TJVMT> _KafkaSerializer;
+        Deserializer<TJVMT> _KafkaDeserializer;
         #endregion
 
         #region Constructor
@@ -68,8 +68,70 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public KNetSerDes()
         {
-            _KafkaSerde.OnSerializer = kafkaSerializer;
-            _KafkaSerde.OnDeserializer = kafkaDeserializer;
+            _SerializationType = KNetSerialization.InternalSerDesType<T>();
+            _JVMSerializationType = KNetSerialization.InternalJVMSerDesType<TJVMT>();
+            if (_JVMSerializationType == KNetSerialization.SerializationType.External)
+            {
+                throw new ArgumentException($"Cannot manage {typeof(TJVMT).FullName} into TJVMT generic parameter");
+            }
+
+            if (_SerializationType == KNetSerialization.SerializationType.External &&
+                _JVMSerializationType != KNetSerialization.SerializationType.ByteArray)
+            {
+                throw new InvalidOperationException($"Serialization of {typeof(T).Name} can only be managed with TJVMT set to byte[].");
+            }
+
+            switch (_SerializationType)
+            {
+                case KNetSerialization.SerializationType.External:
+                    if (_JVMSerializationType != KNetSerialization.SerializationType.ByteArray)
+                    {
+                        throw new InvalidOperationException($"Serialization of {typeof(T).Name} can only be managed with TJVMT set to byte[].");
+                    }
+                    break;
+                case KNetSerialization.SerializationType.Boolean:
+                case KNetSerialization.SerializationType.ByteArray:
+                case KNetSerialization.SerializationType.ByteBuffer:
+                case KNetSerialization.SerializationType.Bytes:
+                case KNetSerialization.SerializationType.Double:
+                case KNetSerialization.SerializationType.Float:
+                case KNetSerialization.SerializationType.Integer:
+                case KNetSerialization.SerializationType.Long:
+                case KNetSerialization.SerializationType.Short:
+                case KNetSerialization.SerializationType.String:
+                case KNetSerialization.SerializationType.Guid:
+                case KNetSerialization.SerializationType.Void:
+                    if (_JVMSerializationType != _SerializationType && _JVMSerializationType != KNetSerialization.SerializationType.ByteArray)
+                    {
+                        throw new InvalidOperationException($"{typeof(T).Name} is incompatible with {typeof(TJVMT).Name}.");
+                    }
+                    break;
+                default:
+                    throw new InvalidOperationException($"{_SerializationType} is not valid.");
+            }
+
+            var kafkaSerde = _JVMSerializationType switch
+            {
+                KNetSerialization.SerializationType.Boolean => Serdes.Boolean().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.ByteArray => Serdes.ByteArray().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.ByteBuffer => Serdes.ByteBuffer().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.Bytes => Serdes.Bytes().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.Double => Serdes.Double().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.Float => Serdes.Float().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.Integer => Serdes.Integer().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.Long => Serdes.Long().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.Short => Serdes.Short().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.String => Serdes.String().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.Guid => Serdes.UUID().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.Void => Serdes.Void().Cast<Serdes.WrapperSerde<TJVMT>>(),
+                KNetSerialization.SerializationType.External => throw new InvalidOperationException($"{typeof(T)} needs an external serializer: set {nameof(OnSerialize)} or {nameof(OnSerializeWithHeaders)}."),
+                _ => default,
+            };
+
+            _KafkaSerializer = kafkaSerde.Serializer();
+            _KafkaDeserializer = kafkaSerde.Deserializer();
+
+            _KafkaSerde = kafkaSerde;
         }
         /// <summary>
         /// Finalizer
@@ -82,12 +144,10 @@ namespace MASES.KNet.Serialization
         public void Dispose()
         {
             GC.SuppressFinalize(this);
-            _KafkaSerde?.Dispose();
             _KafkaSerde = null;
-            _KafkaSerializer?.Dispose();
             _KafkaSerializer = null;
-            _KafkaDeserializer?.Dispose();
             _KafkaDeserializer = null;
+            _KafkaWrapperSerde = null;
         }
         #endregion
 
@@ -108,15 +168,15 @@ namespace MASES.KNet.Serialization
         /// External deserialization function using <see cref="Headers"/>
         /// </summary>
         public Func<string, Headers, byte[], T> OnDeserializeWithHeaders { get; set; }
-        /// <inheritdoc cref="IKNetSerDes{T}.KafkaSerde"/>
-        public Serde<byte[]> KafkaSerde => _KafkaSerde;
-        /// <inheritdoc cref="IKNetSerializer{T}.KafkaSerializer"/>
-        public Serializer<byte[]> KafkaSerializer => _KafkaSerializer;
-        /// <inheritdoc cref="IKNetDeserializer{T}.KafkaDeserializer"/>
-        public Deserializer<byte[]> KafkaDeserializer => _KafkaDeserializer;
-        /// <inheritdoc cref="IKNetDeserializer{T}.UseHeaders"/>
+        /// <inheritdoc cref="IKNetSerDes{T, TJVMT}.KafkaSerde"/>
+        public Serde<TJVMT> KafkaSerde => _KafkaSerde;
+        /// <inheritdoc cref="IKNetSerializer{T, TJVMT}.KafkaSerializer"/>
+        public Serializer<TJVMT> KafkaSerializer => _KafkaSerializer;
+        /// <inheritdoc cref="IKNetDeserializer{T, TJVMT}.KafkaDeserializer"/>
+        public Deserializer<TJVMT> KafkaDeserializer => _KafkaDeserializer;
+        /// <inheritdoc cref="IKNetDeserializer{T, TJVMT}.UseHeaders"/>
         public virtual bool UseHeaders => false;
-        /// <inheritdoc cref="IKNetSerializer{T}.Serialize(string, T)"/>
+        /// <inheritdoc cref="IKNetSerializer{T, TJVMT}.Serialize(string, T)"/>
         public virtual byte[] Serialize(string topic, T data)
         {
             if (OnSerialize != null)
@@ -125,12 +185,13 @@ namespace MASES.KNet.Serialization
             }
             return _SerializationType switch
             {
+                KNetSerialization.SerializationType.Boolean => KNetSerialization.SerializeBoolean(topic, (bool)Convert.ChangeType(data, typeof(bool))),
                 KNetSerialization.SerializationType.ByteArray => KNetSerialization.SerializeByteArray(topic, data as byte[]),
                 KNetSerialization.SerializationType.ByteBuffer => KNetSerialization.SerializeByteBuffer(topic, data as ByteBuffer),
                 KNetSerialization.SerializationType.Bytes => KNetSerialization.SerializeBytes(topic, data as Org.Apache.Kafka.Common.Utils.Bytes),
                 KNetSerialization.SerializationType.Double => KNetSerialization.SerializeDouble(topic, (double)Convert.ChangeType(data, typeof(double))),
                 KNetSerialization.SerializationType.Float => KNetSerialization.SerializeFloat(topic, (float)Convert.ChangeType(data, typeof(float))),
-                KNetSerialization.SerializationType.Int => KNetSerialization.SerializeInt(topic, (int)Convert.ChangeType(data, typeof(int))),
+                KNetSerialization.SerializationType.Integer => KNetSerialization.SerializeInt(topic, (int)Convert.ChangeType(data, typeof(int))),
                 KNetSerialization.SerializationType.Long => KNetSerialization.SerializeLong(topic, (long)Convert.ChangeType(data, typeof(long))),
                 KNetSerialization.SerializationType.Short => KNetSerialization.SerializeShort(topic, (short)Convert.ChangeType(data, typeof(short))),
                 KNetSerialization.SerializationType.String => KNetSerialization.SerializeString(topic, data as string),
@@ -140,7 +201,7 @@ namespace MASES.KNet.Serialization
                 _ => default,
             };
         }
-        /// <inheritdoc cref="IKNetSerializer{T}.SerializeWithHeaders(string, Headers, T)"/>
+        /// <inheritdoc cref="IKNetSerializer{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
         public virtual byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
             if (OnSerializeWithHeaders != null)
@@ -150,7 +211,7 @@ namespace MASES.KNet.Serialization
             return Serialize(topic, data);
         }
 
-        /// <inheritdoc cref="IKNetDeserializer{T}.Deserialize(string, byte[])"/>
+        /// <inheritdoc cref="IKNetDeserializer{T, TJVMT}.Deserialize(string, byte[])"/>
         public virtual T Deserialize(string topic, byte[] data)
         {
             if (OnDeserialize != null)
@@ -159,12 +220,13 @@ namespace MASES.KNet.Serialization
             }
             return _SerializationType switch
             {
+                KNetSerialization.SerializationType.Boolean => (T)(object)KNetSerialization.DeserializeBoolean(topic, data),
                 KNetSerialization.SerializationType.ByteArray => (T)(object)KNetSerialization.DeserializeByteArray(topic, data),
                 KNetSerialization.SerializationType.ByteBuffer => (T)(object)KNetSerialization.DeserializeByteBuffer(topic, data),
                 KNetSerialization.SerializationType.Bytes => (T)(object)KNetSerialization.DeserializeBytes(topic, data),
                 KNetSerialization.SerializationType.Double => (T)(object)KNetSerialization.DeserializeDouble(topic, data),
                 KNetSerialization.SerializationType.Float => (T)(object)KNetSerialization.DeserializeFloat(topic, data),
-                KNetSerialization.SerializationType.Int => (T)(object)KNetSerialization.DeserializeInt(topic, data),
+                KNetSerialization.SerializationType.Integer => (T)(object)KNetSerialization.DeserializeInt(topic, data),
                 KNetSerialization.SerializationType.Long => (T)(object)KNetSerialization.DeserializeLong(topic, data),
                 KNetSerialization.SerializationType.String => (T)(object)KNetSerialization.DeserializeString(topic, data),
                 KNetSerialization.SerializationType.Guid => (T)(object)KNetSerialization.DeserializeGuid(topic, data),
@@ -173,7 +235,7 @@ namespace MASES.KNet.Serialization
                 _ => default,
             };
         }
-        /// <inheritdoc cref="IKNetDeserializer{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
+        /// <inheritdoc cref="IKNetDeserializer{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
         public virtual T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
         {
             if (OnDeserializeWithHeaders != null)
@@ -185,4 +247,13 @@ namespace MASES.KNet.Serialization
         }
         #endregion
     }
+
+    /// <summary>
+    /// Common serializer/deserializer
+    /// </summary>
+    /// <typeparam name="T">The type to serialize/deserialize</typeparam>
+    public class KNetSerDes<T> : KNetSerDes<T, byte[]>, IKNetSerDes<T>
+    {
+    }
+
 }
