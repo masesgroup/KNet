@@ -48,12 +48,12 @@ namespace MASES.KNet.Serialization.Protobuf
             {
 
             }
-            /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
+            /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Serialize(string, T)"/>
             public override byte[] Serialize(string topic, T data)
             {
                 return SerializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
+            /// <inheritdoc cref="KNetSerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
             public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
             {
                 headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
@@ -65,12 +65,12 @@ namespace MASES.KNet.Serialization.Protobuf
                     return stream.ToArray();
                 }
             }
-            /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
+            /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Deserialize(string, byte[])"/>
             public override T Deserialize(string topic, byte[] data)
             {
                 return DeserializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
+            /// <inheritdoc cref="KNetSerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
             public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
             {
                 if (data == null) return default;
@@ -96,12 +96,12 @@ namespace MASES.KNet.Serialization.Protobuf
             {
 
             }
-            /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
+            /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Serialize(string, T)"/>
             public override byte[] Serialize(string topic, T data)
             {
                 return SerializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
+            /// <inheritdoc cref="KNetSerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
             public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
             {
                 headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
@@ -113,12 +113,12 @@ namespace MASES.KNet.Serialization.Protobuf
                     return stream.ToArray();
                 }
             }
-            /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
+            /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Deserialize(string, byte[])"/>
             public override T Deserialize(string topic, byte[] data)
             {
                 return DeserializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
+            /// <inheritdoc cref="KNetSerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
             public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
             {
                 if (data == null) return default;
