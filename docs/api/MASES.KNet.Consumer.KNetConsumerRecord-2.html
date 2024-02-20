@@ -98,7 +98,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KNetConsumerRecord&lt;K, V&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class KNetConsumerRecord&lt;K, V&gt; : IGenericSerDesFactoryApplier</code></pre>
   </div>
 
 
@@ -121,6 +121,12 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -159,7 +165,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_DateTime" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.DateTime">
   DateTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> of <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord-2.html#Org_Apache_Kafka_Clients_Consumer_ConsumerRecord_2_Timestamp">Timestamp()</a></p>
@@ -191,7 +197,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_Headers" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.Headers">
   Headers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#headers--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#headers--</a></p>
@@ -224,7 +230,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_Key" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.Key">
   Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#key--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#key--</a></p>
@@ -257,7 +263,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_LeaderEpoch" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.LeaderEpoch">
   LeaderEpoch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#leaderEpoch--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#leaderEpoch--</a></p>
@@ -290,7 +296,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_Offset" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.Offset">
   Offset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#offset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#offset--</a></p>
@@ -323,7 +329,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_Partition" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.Partition">
   Partition
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#partition--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#partition--</a></p>
@@ -356,7 +362,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_SerializedKeySize" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.SerializedKeySize">
   SerializedKeySize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedKeySize--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedKeySize--</a></p>
@@ -389,7 +395,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_SerializedValueSize" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.SerializedValueSize">
   SerializedValueSize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedValueSize--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedValueSize--</a></p>
@@ -422,7 +428,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_Timestamp" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.Timestamp">
   Timestamp
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestamp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestamp--</a></p>
@@ -455,7 +461,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_TimestampType" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.TimestampType">
   TimestampType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestampType--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestampType--</a></p>
@@ -488,7 +494,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_Topic" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.Topic">
   Topic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#topic--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#topic--</a></p>
@@ -521,7 +527,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_Value" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#value--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#value--</a></p>
@@ -558,7 +564,7 @@ Class KNetConsumerRecord&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerRecord_2_ToString" data-uid="MASES.KNet.Consumer.KNetConsumerRecord`2.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumerRecord.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>

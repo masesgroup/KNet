@@ -86,9 +86,8 @@
 <p>For more information related to .NET templates look at <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new-sdk-templates">https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new-sdk-templates</a>.</p>
 <h2 id="installation">Installation</h2>
 <p>To install the templates executes the following command within a command shell:</p>
-<blockquote>
-<p>dotnet new --install MASES.KNet.Templates</p>
-</blockquote>
+<pre><code class="lang-sh">dotnet new --install MASES.KNet.Templates
+</code></pre>
 <p>The command installs the latest version and on success will list all templates added to the list of available templates.
 They are:</p>
 <ol>
@@ -101,9 +100,8 @@ They are:</p>
 <h2 id="simple-usage">Simple usage</h2>
 <p>The first three templates are ready made project with enough code to use them directly.
 To use one of the available templates run the following command:</p>
-<blockquote>
-<p>dotnet new knetConsumerApp</p>
-</blockquote>
+<pre><code class="lang-sh">dotnet new knetConsumerApp
+</code></pre>
 <p>the previous command will create a .NET project for an executable. The user can modify the code or just execute it against an Apache Kafka server.</p>
 <h2 id="sdk-templates">SDK templates</h2>
 <p>The last two templates (knetConnectSink, knetConnectSource) are not ready made project: they are skeletons for Apache Kafka Connect Source/Sink Connector written in .NET.

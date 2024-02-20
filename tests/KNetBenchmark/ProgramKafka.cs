@@ -18,6 +18,7 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KNet.Consumer;
 using MASES.KNet.Producer;
 using Org.Apache.Kafka.Clients.Consumer;
@@ -54,6 +55,7 @@ namespace MASES.KNet.Benchmark
                                                         .WithBufferMemory(128 * 1024 * 1024)
                                                         .WithKeySerializerClass("org.apache.kafka.common.serialization.LongSerializer")
                                                         .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer")
+                                                        .WithPartitionerIgnoreKeys(true)
                                                         .ToProperties();
                 if (UseSerdes)
                 {
@@ -104,6 +106,9 @@ namespace MASES.KNet.Benchmark
                 Stopwatch swCreateRecord = null;
                 Stopwatch swSendRecord = null;
                 Stopwatch stopWatch = null;
+                Stopwatch flushTimeWatch = null;
+                long produceJNICalls = 0;
+
                 try
                 {
                     if (data == null)
@@ -169,12 +174,14 @@ namespace MASES.KNet.Benchmark
                                 record = new ProducerRecord<long, byte[]>(topicName, i, newData);
                                 swCreateRecord.Stop();
                             }
+                            long baseJNICalls = BenchmarkKNetCore.GlobalInstance.CurrentJNICalls;
                             swSendRecord.Start();
                             if (UseCallback)
                                 kafkaproducer.Send(record, kafkaCallback);
                             else
                                 kafkaproducer.Send(record);
                             swSendRecord.Stop();
+                            produceJNICalls += BenchmarkKNetCore.GlobalInstance.CurrentJNICalls - baseJNICalls;
                             if (WithBurst)
                             {
                                 if (i % BurstLength == 0)
@@ -188,10 +195,18 @@ namespace MASES.KNet.Benchmark
                         }
                     }
                 }
-                finally { kafkaproducer.Flush(); stopWatch.Stop(); if (!SharedObjects) kafkaproducer.Dispose(); }
-                if (ShowResults && !ProducePreLoad)
+                finally
                 {
-                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
+                    if (NoFlushTime) stopWatch.Stop();
+                    flushTimeWatch = Stopwatch.StartNew();
+                    kafkaproducer.Flush();
+                    flushTimeWatch.Stop();
+                    stopWatch.Stop();
+                    if (!SharedObjects) { kafkaproducer.Dispose(); kafkaproducer = null; }
+                }
+                if (ShowIntermediateResults && !ProducePreLoad)
+                {
+                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) Flush {flushTimeWatch.ElapsedMicroSeconds()} -> TotalTime {stopWatch.ElapsedMicroSeconds()} BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())} Send JNICalls {produceJNICalls} Mean Send JNICalls {produceJNICalls / numpacket}");
                 }
                 return stopWatch;
             }
@@ -276,13 +291,21 @@ namespace MASES.KNet.Benchmark
                         var records = consumer.Poll(duration);
                         if (!CheckOnConsume)
                         {
-                            counter += records.Count();
+                            if (ReadAllData)
+                            {
+                                foreach (var item in records)
+                                {
+                                    item.Key(); item.Value();
+                                    counter++;
+                                }
+                            }
+                            else counter += records.Count();
                         }
                         else
                         {
                             if (UsePrefetch)
                             {
-                                foreach (var item in records.WithPrefetch().WithConvert((o) => { return (o.Value(), o.Key()); }))
+                                foreach (var item in records.WithPrefetch().WithThread().WithConvert((o) => { return (o.Value(), o.Key()); }))
                                 {
                                     if (!item.Item1.SequenceEqual(data)
                                         || (!SinglePacket && item.Item2 != counter))
@@ -317,7 +340,7 @@ namespace MASES.KNet.Benchmark
                 }
                 finally
                 {
-                    if (!SharedObjects) consumer.Dispose();
+                    if (!SharedObjects) { consumer.Dispose(); consumer = null; }
                     rebalanceListener?.Dispose();
                     duration?.Dispose();
                     topics?.Dispose();
@@ -358,14 +381,14 @@ namespace MASES.KNet.Benchmark
                             }
                         };
 
-                        consumer.Subscribe(topics, rebalanceListener);     
+                        consumer.Subscribe(topics, rebalanceListener);
                         int counter = 0;
                         while (true)
                         {
                             var records = consumer.Poll(duration);
                             if (UsePrefetch)
                             {
-                                foreach (var item in records.WithPrefetch().WithConvert((o) => { return (o.Key(), o.Value()); }))
+                                foreach (var item in records.WithPrefetch().WithThread().WithConvert((o) => { return (o.Key(), o.Value()); }))
                                 {
                                     roundTripTime.Add((double)(DateTime.Now.Ticks - item.Item1) / (TimeSpan.TicksPerMillisecond / 1000));
 
@@ -380,11 +403,16 @@ namespace MASES.KNet.Benchmark
                             {
                                 foreach (var item in records)
                                 {
-                                    roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key()) / (TimeSpan.TicksPerMillisecond / 1000));
-
-                                    if (CheckOnConsume && !item.Value().SequenceEqual(data))
+                                    var key = item.Key();
+                                    roundTripTime.Add((double)(DateTime.Now.Ticks - key) / (TimeSpan.TicksPerMillisecond / 1000));
+                                    byte[] value = Array.Empty<byte>();
+                                    if (ReadAllData)
                                     {
-                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key()}");
+                                        value = item.Value();
+                                    }
+                                    if (CheckOnConsume && !((ReadAllData ? value : item.Value()).SequenceEqual(data)))
+                                    {
+                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {key}");
                                     }
                                     counter++;
                                 }
@@ -404,6 +432,7 @@ namespace MASES.KNet.Benchmark
                         if (!SharedObjects)
                         {
                             consumer.Dispose();
+                            consumer = null;
                         }
                         startEvent.Set();
                         duration?.Dispose();
@@ -464,10 +493,15 @@ namespace MASES.KNet.Benchmark
                         if (ContinuousFlushKNet) producer.Flush();
                     }
                 }
-                finally { producer.Flush(); stopWatch.Stop(); if (!SharedObjects) producer.Dispose(); }
+                finally
+                {
+                    producer.Flush();
+                    stopWatch.Stop();
+                    if (!SharedObjects) { producer.Dispose(); producer = null; }
+                }
                 startEvent.WaitOne();
                 totalExecution.Stop();
-                if (ShowResults)
+                if (ShowIntermediateResults)
                 {
                     Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
                 }

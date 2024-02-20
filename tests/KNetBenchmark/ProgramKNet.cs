@@ -101,6 +101,7 @@ namespace MASES.KNet.Benchmark
                 Stopwatch swCreateRecord = null;
                 Stopwatch swSendRecord = null;
                 Stopwatch stopWatch = null;
+                Stopwatch flushTimeWatch = null;
                 try
                 {
                     if (data == null)
@@ -156,10 +157,18 @@ namespace MASES.KNet.Benchmark
                         }
                     }
                 }
-                finally { knetproducer.Flush(); stopWatch.Stop(); if (!SharedObjects) knetproducer.Dispose(); }
-                if (ShowResults && !ProducePreLoad)
+                finally
                 {
-                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
+                    if (NoFlushTime) stopWatch.Stop();
+                    flushTimeWatch = Stopwatch.StartNew();
+                    knetproducer.Flush();
+                    flushTimeWatch.Stop();
+                    stopWatch.Stop();
+                    if (!SharedObjects) { knetproducer.Dispose(); knetproducer = null; }
+                }
+                if (ShowIntermediateResults && !ProducePreLoad)
+                {
+                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) Flush {flushTimeWatch.ElapsedMicroSeconds()} -> TotalTime {stopWatch.ElapsedMicroSeconds()} BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
                 }
                 return stopWatch;
             }
@@ -265,7 +274,7 @@ namespace MASES.KNet.Benchmark
                 }
                 finally
                 {
-                    if (!SharedObjects) consumer.Dispose();
+                    if (!SharedObjects) { consumer.Dispose(); consumer = null; }
                     rebalanceListener?.Dispose();
                     topics?.Dispose();
                 }
@@ -331,6 +340,8 @@ namespace MASES.KNet.Benchmark
                     {
                         consumer.Dispose();
                         producer.Dispose();
+                        consumer = null;
+                        producer = null;
                     }
                     topics?.Dispose();
                 }
@@ -400,6 +411,7 @@ namespace MASES.KNet.Benchmark
                         if (!SharedObjects)
                         {
                             consumer.Dispose();
+                            consumer = null;
                         }
                         startEvent.Set();
                         topics?.Dispose();
@@ -460,10 +472,11 @@ namespace MASES.KNet.Benchmark
                         if (ContinuousFlushKNet) producer.Flush();
                     }
                 }
-                finally { producer.Flush(); stopWatch.Stop(); if (!SharedObjects) producer.Dispose(); }
+                finally { 
+                    producer.Flush(); stopWatch.Stop(); if (!SharedObjects) producer.Dispose(); }
                 startEvent.WaitOne();
                 totalExecution.Stop();
-                if (ShowResults)
+                if (ShowIntermediateResults)
                 {
                     Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
                 }

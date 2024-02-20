@@ -87,11 +87,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// The <typeparamref name="TKey"/> to check
         /// </summary>
-        public TKey Key { get { return _key; } set { _key = value; updateRemote(); } }
+        public new TKey Key { get { return _key; } set { _key = value; updateRemote(); } }
         /// <summary>
         /// The <typeparamref name="TValue"/> to check
         /// </summary>
-        public TValue Value { get { return _value; } set { _value = value; updateRemote(); } }
+        public new TValue Value { get { return _value; } set { _value = value; updateRemote(); } }
         /// <summary>
         /// Set to <see langword="true"/> to check the <see cref="Key"/>, set to <see langword="false"/> to check the <see cref="Value"/> or leave undefined to check both <see cref="Key"/> and <see cref="Value"/>
         /// </summary>

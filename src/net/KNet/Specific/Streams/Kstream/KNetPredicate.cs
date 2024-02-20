@@ -23,36 +23,54 @@ namespace MASES.KNet.Streams.Kstream
     /// <summary>
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}"/>
     /// </summary>
-    /// <typeparam name="TKey">The key type</typeparam>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetPredicate<TKey, TValue> : Org.Apache.Kafka.Streams.Kstream.Predicate<byte[], byte[]>, IGenericSerDesFactoryApplier
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    public class KNetPredicate<K, V> : Org.Apache.Kafka.Streams.Kstream.Predicate<byte[], byte[]>, IGenericSerDesFactoryApplier
     {
-        IKNetSerDes<TKey> _keySerializer = null;
-        IKNetSerDes<TValue> _valueSerializer = null;
+        byte[] _arg0, _arg1;
+        K _key;
+        bool _keySet;
+        V _value;
+        bool _valueSet;
+        IKNetSerDes<K> _kSerializer = null;
+        IKNetSerDes<V> _vSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
+        /// Default initializer
+        /// </summary>
+        public KNetPredicate()
+        {
+            _kSerializer = _factory.BuildKeySerDes<K>();
+            _vSerializer = _factory.BuildValueSerDes<V>();
+        }
+        /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnTest"/> has a value it takes precedence over corresponding class method</remarks>
-        public new System.Func<TKey, TValue, bool> OnTest { get; set; } = null;
-
+        /// <remarks>If <see cref="OnTest"/> has a value it takes precedence over corresponding <see cref="Test()"/> class method</remarks>
+        public new System.Func<KNetPredicate<K, V>, bool> OnTest { get; set; } = null;
+        /// <summary>
+        /// The <typeparamref name="K"/> content
+        /// </summary>
+        public K Key { get { if (!_keySet) { _kSerializer ??= _factory.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
+        /// <summary>
+        /// The <typeparamref name="V"/> content
+        /// </summary>
+        public V Value { get { if (!_valueSet) { _vSerializer ??= _factory.BuildValueSerDes<V>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
         /// <inheritdoc/>
         public sealed override bool Test(byte[] arg0, byte[] arg1)
         {
-            _keySerializer ??= _factory.BuildKeySerDes<TKey>();
-            _valueSerializer ??= _factory.BuildValueSerDes<TValue>();
+            _keySet = _valueSet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
 
-            var methodToExecute = (OnTest != null) ? OnTest : Test;
-            return methodToExecute(_keySerializer.Deserialize(null, arg0), _valueSerializer.Deserialize(null, arg1));
+            return (OnTest != null) ? OnTest(this) : Test();
         }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <param name="arg0">The key of the record</param>
-        /// <param name="arg1">The value of the record</param>
         /// <returns><see cref="bool"/></returns>
-        public virtual bool Test(TKey arg0, TValue arg1)
+        public virtual bool Test()
         {
             return default;
         }
