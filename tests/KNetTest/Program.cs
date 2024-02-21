@@ -72,12 +72,12 @@ namespace MASES.KNetTest
                 serverToUse = args[0];
             }
 
-            KNetSerDes<TestType> serializer = new KNetSerDes<TestType>()
+            SerDes<TestType> serializer = new SerDes<TestType>()
             {
                 OnSerialize = (topic, type) => { return Array.Empty<byte>(); }
             };
 
-            KNetSerDes<TestType> deserializer = new KNetSerDes<TestType>()
+            SerDes<TestType> deserializer = new SerDes<TestType>()
             {
                 OnDeserialize = (topic, data) => { return new TestType(0); }
             };
@@ -180,7 +180,7 @@ namespace MASES.KNetTest
                                                                    .WithRetries(0)
                                                                    .WithLingerMs(1);
 
-                KNetSerDes<string> keySerializer = new KNetSerDes<string>();
+                SerDes<string> keySerializer = new SerDes<string>();
                 JsonSerDes.Value<TestType> valueSerializer = new JsonSerDes.Value<TestType>();
                 try
                 {
@@ -203,7 +203,7 @@ namespace MASES.KNetTest
                         {
                             while (!resetEvent.WaitOne(0))
                             {
-                                var record = new KNetProducerRecord<string, TestType>(topicToUse, i.ToString(), new TestType(i));
+                                var record = new KNet.Producer.ProducerRecord<string, TestType>(topicToUse, i.ToString(), new TestType(i));
                                 var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
                                 Console.WriteLine($"Producing: {record} with result: {result.Get()}");
                                 producer.Flush();
@@ -247,8 +247,8 @@ namespace MASES.KNetTest
                                                                    .WithEnableAutoCommit(true)
                                                                    .WithAutoCommitIntervalMs(1000);
 
-                KNetSerDes<string> keyDeserializer = new KNetSerDes<string>();
-                KNetSerDes<TestType> valueDeserializer = new JsonSerDes.Value<TestType>();
+                SerDes<string> keyDeserializer = new SerDes<string>();
+                SerDes<TestType> valueDeserializer = new JsonSerDes.Value<TestType>();
                 ConsumerRebalanceListener rebalanceListener = null;
                 KNetConsumer<string, TestType> consumer = null;
 

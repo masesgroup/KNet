@@ -34,11 +34,11 @@ namespace MASES.KNet.Benchmark
 {
     partial class Program
     {
-        static IProducer<long, byte[]> kafkaProducer = null;
+        static Org.Apache.Kafka.Clients.Producer.IProducer<long, byte[]> kafkaProducer = null;
         static Serializer<long> kafkaKeySerializer = null;
         static Serializer<byte[]> kafkaValueSerializer = null;
 
-        static IProducer<long, byte[]> KafkaProducer()
+        static Org.Apache.Kafka.Clients.Producer.IProducer<long, byte[]> KafkaProducer()
         {
             if (kafkaProducer == null || !SharedObjects)
             {
@@ -120,12 +120,12 @@ namespace MASES.KNet.Benchmark
                             data[i] = (byte)rand.Next(0, byte.MaxValue);
                         }
                     }
-                    var record = new ProducerRecord<long, byte[]>(topicName, 42, data);
+                    var record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>(topicName, 42, data);
                     if (ProducePreLoad)
                     {
                         swCreateRecord = new();
                         swSendRecord = new();
-                        System.Collections.Generic.List<ProducerRecord<long, byte[]>> messages = new();
+                        System.Collections.Generic.List<Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>> messages = new();
                         for (int i = 0; i < numpacket; i++)
                         {
                             var rand = new System.Random();
@@ -135,7 +135,7 @@ namespace MASES.KNet.Benchmark
                                 data[ii] = (byte)rand.Next(0, byte.MaxValue);
                             }
                             swCreateRecord.Start();
-                            record = new ProducerRecord<long, byte[]>(topicName, i, data);
+                            record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>(topicName, i, data);
                             swCreateRecord.Stop();
                             messages.Add(record);
                         }
@@ -171,7 +171,7 @@ namespace MASES.KNet.Benchmark
                                 Array.Copy(data, 0, newData, 0, data.Length);
                                 stopWatch.Start();
                                 swCreateRecord.Start();
-                                record = new ProducerRecord<long, byte[]>(topicName, i, newData);
+                                record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>(topicName, i, newData);
                                 swCreateRecord.Stop();
                             }
                             long baseJNICalls = BenchmarkKNetCore.GlobalInstance.CurrentJNICalls;
@@ -218,9 +218,9 @@ namespace MASES.KNet.Benchmark
 
         static Deserializer<long> kafkaKeyDeserializer = null;
         static Deserializer<byte[]> kafkaValueDeserializer = null;
-        static IConsumer<long, byte[]> kafkaConsumer = null;
+        static Org.Apache.Kafka.Clients.Consumer.IConsumer<long, byte[]> kafkaConsumer = null;
 
-        static IConsumer<long, byte[]> KafkaConsumer()
+        static Org.Apache.Kafka.Clients.Consumer.IConsumer<long, byte[]> KafkaConsumer()
         {
             if (kafkaConsumer == null || !SharedObjects)
             {
@@ -459,7 +459,7 @@ namespace MASES.KNet.Benchmark
                             data[i] = (byte)rand.Next(0, byte.MaxValue);
                         }
                     }
-                    var record = new ProducerRecord<long, byte[]>(topicName, 42, data);
+                    var record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>(topicName, 42, data);
                     swCreateRecord = new();
                     swSendRecord = new();
                     stopWatch = Stopwatch.StartNew();
@@ -472,7 +472,7 @@ namespace MASES.KNet.Benchmark
                             Array.Copy(data, 0, newData, 0, data.Length);
                             stopWatch.Start();
                             swCreateRecord.Start();
-                            record = new ProducerRecord<long, byte[]>(topicName, DateTime.Now.Ticks, newData);
+                            record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>(topicName, DateTime.Now.Ticks, newData);
                             swCreateRecord.Stop();
                         }
                         swSendRecord.Start();

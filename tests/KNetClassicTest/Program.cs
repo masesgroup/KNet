@@ -206,7 +206,7 @@ namespace MASES.KNetClassicTest
                         {
                             while (!resetEvent.WaitOne(0))
                             {
-                                var record = new ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
+                                var record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
                                 var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
                                 Console.WriteLine($"Producing: {record} with result: {result.Get()}");
                                 producer.Flush();

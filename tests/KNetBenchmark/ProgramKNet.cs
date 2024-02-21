@@ -17,14 +17,11 @@
 */
 
 using Java.Util;
-using MASES.JCOBridge.C2JBridge;
-using MASES.JNet.Specific.Extensions;
 using MASES.KNet.Consumer;
 using MASES.KNet.Producer;
 using MASES.KNet.Serialization;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
-using Org.Apache.Kafka.Common.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -35,11 +32,11 @@ namespace MASES.KNet.Benchmark
 {
     partial class Program
     {
-        static IKNetProducer<long, byte[]> knetProducer = null;
-        static KNetSerDes<long> knetKeySerializer = null;
-        static KNetSerDes<byte[]> knetValueSerializer = null;
+        static KNet.Producer.IProducer<long, byte[]> knetProducer = null;
+        static SerDes<long> knetKeySerializer = null;
+        static SerDes<byte[]> knetValueSerializer = null;
 
-        static IKNetProducer<long, byte[]> KNetProducer()
+        static KNet.Producer.IProducer<long, byte[]> KNetProducer()
         {
             if (knetProducer == null || !SharedObjects)
             {
@@ -57,7 +54,7 @@ namespace MASES.KNet.Benchmark
                                                                    .WithKeySerializerClass("org.apache.kafka.common.serialization.LongSerializer")
                                                                    .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer");
 
-                knetKeySerializer = new KNetSerDes<long>()
+                knetKeySerializer = new SerDes<long>()
                 {
                     OnSerializeWithHeaders = (topic, headers, data) =>
                     {
@@ -65,7 +62,7 @@ namespace MASES.KNet.Benchmark
                         return key;
                     }
                 };
-                knetValueSerializer = new KNetSerDes<byte[]>()
+                knetValueSerializer = new SerDes<byte[]>()
                 {
                     OnSerializeWithHeaders = (topic, headers, data) =>
                     {
@@ -179,11 +176,11 @@ namespace MASES.KNet.Benchmark
             }
         }
 
-        static KNetSerDes<long> knetKeyDeserializer = null;
-        static KNetSerDes<byte[]> knetValueDeserializer = null;
-        static IKNetConsumer<long, byte[]> knetConsumer = null;
+        static SerDes<long> knetKeyDeserializer = null;
+        static SerDes<byte[]> knetValueDeserializer = null;
+        static KNet.Consumer.IConsumer<long, byte[]> knetConsumer = null;
 
-        static IKNetConsumer<long, byte[]> KNetConsumer()
+        static KNet.Consumer.IConsumer<long, byte[]> KNetConsumer()
         {
             if (knetConsumer == null || !SharedObjects)
             {
@@ -200,7 +197,7 @@ namespace MASES.KNet.Benchmark
                                                                    .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST);
                 if (UseSerdes)
                 {
-                    knetKeyDeserializer = new KNetSerDes<long>()
+                    knetKeyDeserializer = new SerDes<long>()
                     {
                         OnDeserialize = (topic, data) =>
                         {
@@ -208,7 +205,7 @@ namespace MASES.KNet.Benchmark
                             return key;
                         }
                     };
-                    knetValueDeserializer = new KNetSerDes<byte[]>()
+                    knetValueDeserializer = new SerDes<byte[]>()
                     {
                         OnDeserialize = (topic, data) =>
                         {
@@ -320,7 +317,7 @@ namespace MASES.KNet.Benchmark
                             byte[] newVal = new byte[item.Value.Length];
                             Array.Copy(item.Value, newVal, item.Value.Length);
                             stopWatch.Start();
-                            var record = new KNetProducerRecord<long, byte[]>(topicName + "_COPY", item.Key, newVal);
+                            var record = new KNet.Producer.ProducerRecord<long, byte[]>(topicName + "_COPY", item.Key, newVal);
                             producer.Send(record);
                             counter++;
                         }
@@ -438,7 +435,7 @@ namespace MASES.KNet.Benchmark
                             data[i] = (byte)rand.Next(0, byte.MaxValue);
                         }
                     }
-                    var record = new KNetProducerRecord<long, byte[]>(topicName, 42, data);
+                    var record = new KNet.Producer.ProducerRecord<long, byte[]>(topicName, 42, data);
                     swCreateRecord = new();
                     swSendRecord = new();
                     stopWatch = Stopwatch.StartNew();
@@ -451,7 +448,7 @@ namespace MASES.KNet.Benchmark
                             Array.Copy(data, 0, newData, 0, data.Length);
                             stopWatch.Start();
                             swCreateRecord.Start();
-                            record = new KNetProducerRecord<long, byte[]>(topicName, DateTime.Now.Ticks, newData);
+                            record = new KNet.Producer.ProducerRecord<long, byte[]>(topicName, DateTime.Now.Ticks, newData);
                             swCreateRecord.Stop();
                         }
                         swSendRecord.Start();
