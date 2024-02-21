@@ -50,25 +50,25 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.List<string>> Users()
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.List<Java.Lang.String>> Users()
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.List<string>>>("users");
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.List<Java.Lang.String>>>("users");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/DescribeUserScramCredentialsResult.html#all--"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.UserScramCredentialsDescription>> All()
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.UserScramCredentialsDescription>> All()
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.UserScramCredentialsDescription>>>("all");
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.UserScramCredentialsDescription>>>("all");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/DescribeUserScramCredentialsResult.html#description-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.UserScramCredentialsDescription> Description(string arg0)
+        public Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.UserScramCredentialsDescription> Description(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.UserScramCredentialsDescription>>("description", arg0);
         }

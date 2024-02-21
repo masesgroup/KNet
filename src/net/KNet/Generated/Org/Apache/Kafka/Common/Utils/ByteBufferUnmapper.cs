@@ -44,10 +44,10 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/ByteBufferUnmapper.html#unmap-java.lang.String-java.nio.ByteBuffer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <exception cref="Java.Io.IOException"/>
-        public static void Unmap(string arg0, Java.Nio.ByteBuffer arg1)
+        public static void Unmap(Java.Lang.String arg0, Java.Nio.ByteBuffer arg1)
         {
             SExecute(LocalBridgeClazz, "unmap", arg0, arg1);
         }

@@ -76,28 +76,28 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsMetadata.html#host--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Host()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Host()
         {
-            return IExecute<string>("host");
+            return IExecute<Java.Lang.String>("host");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsMetadata.html#standbyStateStoreNames--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<string> StandbyStateStoreNames()
+        public Java.Util.Set<Java.Lang.String> StandbyStateStoreNames()
         {
-            return IExecute<Java.Util.Set<string>>("standbyStateStoreNames");
+            return IExecute<Java.Util.Set<Java.Lang.String>>("standbyStateStoreNames");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsMetadata.html#stateStoreNames--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<string> StateStoreNames()
+        public Java.Util.Set<Java.Lang.String> StateStoreNames()
         {
-            return IExecute<Java.Util.Set<string>>("stateStoreNames");
+            return IExecute<Java.Util.Set<Java.Lang.String>>("stateStoreNames");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsMetadata.html#standbyTopicPartitions--"/>

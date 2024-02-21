@@ -290,7 +290,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>
-        public TContainer WithLoggingEnabled(Java.Util.Map<string, string> arg0)
+        public TContainer WithLoggingEnabled(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             _keyStore?.WithLoggingEnabled(arg0);
             _sessionStore?.WithLoggingEnabled(arg0);

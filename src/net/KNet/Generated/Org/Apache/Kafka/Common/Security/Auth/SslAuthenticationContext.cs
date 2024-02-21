@@ -34,8 +34,8 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Net.Ssl.SSLSession"/></param>
         /// <param name="arg1"><see cref="Java.Net.InetAddress"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        public SslAuthenticationContext(Javax.Net.Ssl.SSLSession arg0, Java.Net.InetAddress arg1, string arg2)
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        public SslAuthenticationContext(Javax.Net.Ssl.SSLSession arg0, Java.Net.InetAddress arg1, Java.Lang.String arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -59,10 +59,10 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#listenerName--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string ListenerName()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String ListenerName()
         {
-            return IExecute<string>("listenerName");
+            return IExecute<Java.Lang.String>("listenerName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#clientAddress--"/>

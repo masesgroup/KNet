@@ -35,9 +35,9 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <param name="arg0"><see cref="Javax.Security.Sasl.SaslServer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></param>
         /// <param name="arg2"><see cref="Java.Net.InetAddress"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <param name="arg4"><see cref="Java.Util.Optional"/></param>
-        public SaslAuthenticationContext(Javax.Security.Sasl.SaslServer arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Net.InetAddress arg2, string arg3, Java.Util.Optional<Javax.Net.Ssl.SSLSession> arg4)
+        public SaslAuthenticationContext(Javax.Security.Sasl.SaslServer arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Net.InetAddress arg2, Java.Lang.String arg3, Java.Util.Optional<Javax.Net.Ssl.SSLSession> arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -47,8 +47,8 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <param name="arg0"><see cref="Javax.Security.Sasl.SaslServer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></param>
         /// <param name="arg2"><see cref="Java.Net.InetAddress"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
-        public SaslAuthenticationContext(Javax.Security.Sasl.SaslServer arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Net.InetAddress arg2, string arg3)
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
+        public SaslAuthenticationContext(Javax.Security.Sasl.SaslServer arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Net.InetAddress arg2, Java.Lang.String arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -72,10 +72,10 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#listenerName--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string ListenerName()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String ListenerName()
         {
-            return IExecute<string>("listenerName");
+            return IExecute<Java.Lang.String>("listenerName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#clientAddress--"/>

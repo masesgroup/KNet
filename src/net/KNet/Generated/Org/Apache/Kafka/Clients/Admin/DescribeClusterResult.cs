@@ -50,9 +50,9 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<string> ClusterId()
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.String> ClusterId()
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<string>>("clusterId");
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.String>>("clusterId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/DescribeClusterResult.html#nodes--"/>

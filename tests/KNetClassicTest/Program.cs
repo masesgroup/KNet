@@ -297,7 +297,7 @@ namespace MASES.KNetClassicTest
                         }
                     };
                 }
-                var topics = Collections.Singleton(topicToUse);
+                var topics = Collections.Singleton((Java.Lang.String)topicToUse);
                 try
                 {
                     using (consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))

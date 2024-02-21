@@ -84,10 +84,10 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/stats/Rate.html#unitName--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string UnitName()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String UnitName()
         {
-            return IExecute<string>("unitName");
+            return IExecute<Java.Lang.String>("unitName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/stats/Rate.html#windowSize-org.apache.kafka.common.metrics.MetricConfig-long-"/>

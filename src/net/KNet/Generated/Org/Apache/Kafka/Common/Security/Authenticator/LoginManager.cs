@@ -45,12 +45,12 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/authenticator/LoginManager.html#acquireLoginManager-org.apache.kafka.common.security.JaasContext-java.lang.String-java.lang.Class-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.JaasContext"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="Java.Lang.Class"/></param>
         /// <param name="arg3"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Authenticator.LoginManager"/></returns>
         /// <exception cref="Javax.Security.Auth.Login.LoginException"/>
-        public static Org.Apache.Kafka.Common.Security.Authenticator.LoginManager AcquireLoginManager(Org.Apache.Kafka.Common.Security.JaasContext arg0, string arg1, Java.Lang.Class arg2, Java.Util.Map<string, object> arg3)
+        public static Org.Apache.Kafka.Common.Security.Authenticator.LoginManager AcquireLoginManager(Org.Apache.Kafka.Common.Security.JaasContext arg0, Java.Lang.String arg1, Java.Lang.Class arg2, Java.Util.Map<Java.Lang.String, object> arg3)
         {
             return SExecute<Org.Apache.Kafka.Common.Security.Authenticator.LoginManager>(LocalBridgeClazz, "acquireLoginManager", arg0, arg1, arg2, arg3);
         }
@@ -69,10 +69,10 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/authenticator/LoginManager.html#serviceName--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string ServiceName()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String ServiceName()
         {
-            return IExecute<string>("serviceName");
+            return IExecute<Java.Lang.String>("serviceName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/authenticator/LoginManager.html#subject--"/>

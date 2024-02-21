@@ -18,6 +18,7 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
+using MASES.JNet.Specific.Extensions;
 using MASES.KNet.Consumer;
 using MASES.KNet.Producer;
 using MASES.KNet.Serialization;
@@ -241,7 +242,7 @@ namespace MASES.KNet.Benchmark
                 };
 
                 var consumer = KNetConsumer();
-                var topics = Collections.Singleton(topicName);
+                var topics = Collections.Singleton((Java.Lang.String)topicName);
                 try
                 {
                     int counter = 0;
@@ -305,7 +306,7 @@ namespace MASES.KNet.Benchmark
 
                 var consumer = KNetConsumer();
                 var producer = KNetProducer();
-                var topics = Collections.Singleton(topicName);
+                var topics = Collections.Singleton((Java.Lang.String)topicName);
                 try
                 {
                     int counter = 0;
@@ -364,7 +365,7 @@ namespace MASES.KNet.Benchmark
                 System.Threading.Thread thread = new System.Threading.Thread(() =>
                 {
                     ConsumerRebalanceListener rebalanceListener = null;
-                    var topics = Collections.Singleton(topicName);
+                    var topics = Collections.Singleton((Java.Lang.String)topicName);
                     try
                     {
                         rebalanceListener = new()
@@ -380,11 +381,10 @@ namespace MASES.KNet.Benchmark
                             }
                         };
                         consumer.Subscribe(topics, rebalanceListener);
-                        Java.Time.Duration duration = TimeSpan.FromSeconds(1);
                         int counter = 0;
                         while (true)
                         {
-                            var records = consumer.Poll(duration);
+                            var records = consumer.Poll(TimeSpan.FromSeconds(1));
                             foreach (var item in records)
                             {
                                 roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key) / (TimeSpan.TicksPerMillisecond / 1000));

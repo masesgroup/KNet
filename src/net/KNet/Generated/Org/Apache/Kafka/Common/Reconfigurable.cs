@@ -68,15 +68,15 @@ namespace Org.Apache.Kafka.Common
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<string> ReconfigurableConfigs()
+        public Java.Util.Set<Java.Lang.String> ReconfigurableConfigs()
         {
-            return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
+            return IExecute<Java.Util.Set<Java.Lang.String>>("reconfigurableConfigs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Reconfigurable.html#reconfigure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Reconfigure(Java.Util.Map<string, object> arg0)
+        public void Reconfigure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("reconfigure", arg0);
         }
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Common
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <exception cref="Org.Apache.Kafka.Common.Config.ConfigException"/>
-        public void ValidateReconfiguration(Java.Util.Map<string, object> arg0)
+        public void ValidateReconfiguration(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("validateReconfiguration", arg0);
         }

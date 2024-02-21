@@ -1527,7 +1527,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serdes.StringSerde.html"/>
         /// </summary>
-        public partial class StringSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<string>
+        public partial class StringSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Lang.String>
         {
             const string _bridgeClassName = "org.apache.kafka.common.serialization.Serdes$StringSerde";
             /// <summary>

@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
-        public TopicAdmin(Java.Util.Map<string, object> arg0, Org.Apache.Kafka.Clients.Admin.Admin arg1)
+        public TopicAdmin(Java.Util.Map<Java.Lang.String, object> arg0, Org.Apache.Kafka.Clients.Admin.Admin arg1)
             : base(arg0, arg1)
         {
         }
@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#org.apache.kafka.connect.util.TopicAdmin(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public TopicAdmin(Java.Util.Map<string, object> arg0)
+        public TopicAdmin(Java.Util.Map<Java.Lang.String, object> arg0)
             : base(arg0)
         {
         }
@@ -79,9 +79,9 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#defineTopic-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder"/></returns>
-        public static Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder DefineTopic(string arg0)
+        public static Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder DefineTopic(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder>(LocalBridgeClazz, "defineTopic", arg0);
         }
@@ -110,31 +110,31 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#verifyTopicCleanupPolicyOnlyCompact-java.lang.String-java.lang.String-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public bool VerifyTopicCleanupPolicyOnlyCompact(string arg0, string arg1, string arg2)
+        public bool VerifyTopicCleanupPolicyOnlyCompact(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         {
             return IExecute<bool>("verifyTopicCleanupPolicyOnlyCompact", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfigs-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.Config> DescribeTopicConfigs(params string[] arg0)
+        public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.Config> DescribeTopicConfigs(params Java.Lang.String[] arg0)
         {
-            if (arg0.Length == 0) return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.Config>>("describeTopicConfigs"); else return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.Config>>("describeTopicConfigs", arg0);
+            if (arg0.Length == 0) return IExecute<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.Config>>("describeTopicConfigs"); else return IExecute<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.Config>>("describeTopicConfigs", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopics-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.TopicDescription> DescribeTopics(params string[] arg0)
+        public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.TopicDescription> DescribeTopics(params Java.Lang.String[] arg0)
         {
-            if (arg0.Length == 0) return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.TopicDescription>>("describeTopics"); else return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.TopicDescription>>("describeTopics", arg0);
+            if (arg0.Length == 0) return IExecute<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.TopicDescription>>("describeTopics"); else return IExecute<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.TopicDescription>>("describeTopics", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#endOffsets-java.util.Set-"/>
@@ -161,9 +161,9 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.NewTopic"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<string> CreateTopics(params Org.Apache.Kafka.Clients.Admin.NewTopic[] arg0)
+        public Java.Util.Set<Java.Lang.String> CreateTopics(params Org.Apache.Kafka.Clients.Admin.NewTopic[] arg0)
         {
-            if (arg0.Length == 0) return IExecute<Java.Util.Set<string>>("createTopics"); else return IExecute<Java.Util.Set<string>>("createTopics", arg0);
+            if (arg0.Length == 0) return IExecute<Java.Util.Set<Java.Lang.String>>("createTopics"); else return IExecute<Java.Util.Set<Java.Lang.String>>("createTopics", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopicsWithRetry-org.apache.kafka.clients.admin.NewTopic-long-long-org.apache.kafka.common.utils.Time-"/>
@@ -173,25 +173,25 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<string> CreateTopicsWithRetry(Org.Apache.Kafka.Clients.Admin.NewTopic arg0, long arg1, long arg2, Org.Apache.Kafka.Common.Utils.Time arg3)
+        public Java.Util.Set<Java.Lang.String> CreateTopicsWithRetry(Org.Apache.Kafka.Clients.Admin.NewTopic arg0, long arg1, long arg2, Org.Apache.Kafka.Common.Utils.Time arg3)
         {
-            return IExecute<Java.Util.Set<string>>("createTopicsWithRetry", arg0, arg1, arg2, arg3);
+            return IExecute<Java.Util.Set<Java.Lang.String>>("createTopicsWithRetry", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#topicCleanupPolicy-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<string> TopicCleanupPolicy(string arg0)
+        public Java.Util.Set<Java.Lang.String> TopicCleanupPolicy(Java.Lang.String arg0)
         {
-            return IExecute<Java.Util.Set<string>>("topicCleanupPolicy", arg0);
+            return IExecute<Java.Util.Set<Java.Lang.String>>("topicCleanupPolicy", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfig-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.Config"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.Config DescribeTopicConfig(string arg0)
+        public Org.Apache.Kafka.Clients.Admin.Config DescribeTopicConfig(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.Config>("describeTopicConfig", arg0);
         }
@@ -266,7 +266,7 @@ namespace Org.Apache.Kafka.Connect.Util
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder"/></returns>
-            public Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder Config(Java.Util.Map<string, object> arg0)
+            public Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder Config(Java.Util.Map<Java.Lang.String, object> arg0)
             {
                 return IExecute<Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder>("config", arg0);
             }
@@ -344,7 +344,7 @@ namespace Org.Apache.Kafka.Connect.Util
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Set"/></param>
             /// <param name="arg1"><see cref="Java.Util.Set"/></param>
-            public TopicCreationResponse(Java.Util.Set<string> arg0, Java.Util.Set<string> arg1)
+            public TopicCreationResponse(Java.Util.Set<Java.Lang.String> arg0, Java.Util.Set<Java.Lang.String> arg1)
                 : base(arg0, arg1)
             {
             }
@@ -367,18 +367,18 @@ namespace Org.Apache.Kafka.Connect.Util
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#isCreated-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="bool"/></returns>
-            public bool IsCreated(string arg0)
+            public bool IsCreated(Java.Lang.String arg0)
             {
                 return IExecute<bool>("isCreated", arg0);
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#isCreatedOrExisting-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="bool"/></returns>
-            public bool IsCreatedOrExisting(string arg0)
+            public bool IsCreatedOrExisting(Java.Lang.String arg0)
             {
                 return IExecute<bool>("isCreatedOrExisting", arg0);
             }
@@ -394,9 +394,9 @@ namespace Org.Apache.Kafka.Connect.Util
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#isExisting-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="bool"/></returns>
-            public bool IsExisting(string arg0)
+            public bool IsExisting(Java.Lang.String arg0)
             {
                 return IExecute<bool>("isExisting", arg0);
             }
@@ -432,18 +432,18 @@ namespace Org.Apache.Kafka.Connect.Util
             /// </summary>
 
             /// <returns><see cref="Java.Util.Set"/></returns>
-            public Java.Util.Set<string> CreatedTopics()
+            public Java.Util.Set<Java.Lang.String> CreatedTopics()
             {
-                return IExecute<Java.Util.Set<string>>("createdTopics");
+                return IExecute<Java.Util.Set<Java.Lang.String>>("createdTopics");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#existingTopics--"/>
             /// </summary>
 
             /// <returns><see cref="Java.Util.Set"/></returns>
-            public Java.Util.Set<string> ExistingTopics()
+            public Java.Util.Set<Java.Lang.String> ExistingTopics()
             {
-                return IExecute<Java.Util.Set<string>>("existingTopics");
+                return IExecute<Java.Util.Set<Java.Lang.String>>("existingTopics");
             }
 
             #endregion

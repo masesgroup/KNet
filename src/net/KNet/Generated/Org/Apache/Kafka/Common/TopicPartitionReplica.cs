@@ -32,10 +32,10 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicPartitionReplica.html#org.apache.kafka.common.TopicPartitionReplica(java.lang.String,int,int)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
         /// <param name="arg2"><see cref="int"/></param>
-        public TopicPartitionReplica(string arg0, int arg1, int arg2)
+        public TopicPartitionReplica(Java.Lang.String arg0, int arg1, int arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -77,10 +77,10 @@ namespace Org.Apache.Kafka.Common
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicPartitionReplica.html#topic--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Topic()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Topic()
         {
-            return IExecute<string>("topic");
+            return IExecute<Java.Lang.String>("topic");
         }
 
         #endregion

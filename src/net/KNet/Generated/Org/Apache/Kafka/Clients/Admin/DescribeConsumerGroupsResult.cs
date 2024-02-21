@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html#org.apache.kafka.clients.admin.DescribeConsumerGroupsResult(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public DescribeConsumerGroupsResult(Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>> arg0)
+        public DescribeConsumerGroupsResult(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>> arg0)
             : base(arg0)
         {
         }
@@ -58,18 +58,18 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>> DescribedGroups()
+        public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>> DescribedGroups()
         {
-            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>>>("describedGroups");
+            return IExecute<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>>>("describedGroups");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html#all--"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>> All()
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>> All()
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>>>("all");
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>>>("all");
         }
 
         #endregion

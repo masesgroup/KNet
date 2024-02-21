@@ -68,9 +68,9 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("partition", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(PartitionEventHandler));
+            AddEventHandler("partition", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(PartitionEventHandler));
             AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ConfigureEventHandler));
+            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
 
         }
 
@@ -78,9 +78,9 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/Partitioner.html#partition-java.lang.String-java.lang.Object-byte[]-java.lang.Object-byte[]-org.apache.kafka.common.Cluster-"/>
         /// </summary>
         /// <remarks>If <see cref="OnPartition"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<string, object, byte[], object, byte[], Org.Apache.Kafka.Common.Cluster, int> OnPartition { get; set; } = null;
+        public System.Func<Java.Lang.String, object, byte[], object, byte[], Org.Apache.Kafka.Common.Cluster, int> OnPartition { get; set; } = null;
 
-        void PartitionEventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        void PartitionEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Lang.String>> data)
         {
             var methodToExecute = (OnPartition != null) ? OnPartition : Partition;
             var executionResult = methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<object>(0), data.EventData.GetAt<byte[]>(1), data.EventData.GetAt<object>(2), data.EventData.GetAt<byte[]>(3), data.EventData.GetAt<Org.Apache.Kafka.Common.Cluster>(4));
@@ -90,14 +90,14 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/producer/Partitioner.html#partition-java.lang.String-java.lang.Object-byte[]-java.lang.Object-byte[]-org.apache.kafka.common.Cluster-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <param name="arg2"><see cref="byte"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="byte"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Cluster"/></param>
         /// <returns><see cref="int"/></returns>
-        public virtual int Partition(string arg0, object arg1, byte[] arg2, object arg3, byte[] arg4, Org.Apache.Kafka.Common.Cluster arg5)
+        public virtual int Partition(Java.Lang.String arg0, object arg1, byte[] arg2, object arg3, byte[] arg4, Org.Apache.Kafka.Common.Cluster arg5)
         {
             return default;
         }
@@ -126,9 +126,9 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<string, object>> OnConfigure { get; set; } = null;
+        public System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
 
-        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
             var methodToExecute = (OnConfigure != null) ? OnConfigure : Configure;
             methodToExecute.Invoke(data.EventData.TypedEventData);
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public virtual void Configure(Java.Util.Map<string, object> arg0)
+        public virtual void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             
         }

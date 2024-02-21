@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="topic">topic associated with the data</param>
         /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
         /// <returns>The deserialized <typeparamref name="T"/></returns>
-        T Deserialize(string topic, byte[] data);
+        T Deserialize(Java.Lang.String topic, byte[] data);
         /// <summary>
         /// Executes the Deserializer action in the CLR
         /// </summary>
@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
         /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
         /// <returns>The deserialized <typeparamref name="T"/></returns>
-        T Deserialize(string topic, Headers headers, byte[] data);
+        T Deserialize(Java.Lang.String topic, Headers headers, byte[] data);
     }
 
     /// <summary>

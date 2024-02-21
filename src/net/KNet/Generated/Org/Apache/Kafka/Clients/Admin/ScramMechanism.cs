@@ -62,9 +62,9 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ScramMechanism.html#fromMechanismName-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ScramMechanism"/></returns>
-        public static Org.Apache.Kafka.Clients.Admin.ScramMechanism FromMechanismName(string arg0)
+        public static Org.Apache.Kafka.Clients.Admin.ScramMechanism FromMechanismName(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Clients.Admin.ScramMechanism>(LocalBridgeClazz, "fromMechanismName", arg0);
         }
@@ -80,9 +80,9 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ScramMechanism.html#valueOf-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ScramMechanism"/></returns>
-        public static Org.Apache.Kafka.Clients.Admin.ScramMechanism ValueOf(string arg0)
+        public static Org.Apache.Kafka.Clients.Admin.ScramMechanism ValueOf(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Clients.Admin.ScramMechanism>(LocalBridgeClazz, "valueOf", arg0);
         }
@@ -112,10 +112,10 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/ScramMechanism.html#mechanismName--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string MechanismName()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String MechanismName()
         {
-            return IExecute<string>("mechanismName");
+            return IExecute<Java.Lang.String>("mechanismName");
         }
 
         #endregion

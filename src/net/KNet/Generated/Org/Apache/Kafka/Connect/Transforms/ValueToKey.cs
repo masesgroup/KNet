@@ -48,14 +48,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/ValueToKey.html#FIELDS_CONFIG"/>
         /// </summary>
-        public static string FIELDS_CONFIG { get { if (!_FIELDS_CONFIGReady) { _FIELDS_CONFIGContent = SGetField<string>(LocalBridgeClazz, "FIELDS_CONFIG"); _FIELDS_CONFIGReady = true; } return _FIELDS_CONFIGContent; } }
-        private static string _FIELDS_CONFIGContent = default;
+        public static Java.Lang.String FIELDS_CONFIG { get { if (!_FIELDS_CONFIGReady) { _FIELDS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELDS_CONFIG"); _FIELDS_CONFIGReady = true; } return _FIELDS_CONFIGContent; } }
+        private static Java.Lang.String _FIELDS_CONFIGContent = default;
         private static bool _FIELDS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/ValueToKey.html#OVERVIEW_DOC"/>
         /// </summary>
-        public static string OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<string>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
-        private static string _OVERVIEW_DOCContent = default;
+        public static Java.Lang.String OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
+        private static Java.Lang.String _OVERVIEW_DOCContent = default;
         private static bool _OVERVIEW_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/ValueToKey.html#CONFIG_DEF"/>
@@ -75,10 +75,10 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/ValueToKey.html#version--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Version()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Version()
         {
-            return IExecute<string>("version");
+            return IExecute<Java.Lang.String>("version");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/ValueToKey.html#config--"/>
@@ -151,14 +151,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/ValueToKey.html#FIELDS_CONFIG"/>
         /// </summary>
-        public static string FIELDS_CONFIG { get { if (!_FIELDS_CONFIGReady) { _FIELDS_CONFIGContent = SGetField<string>(LocalBridgeClazz, "FIELDS_CONFIG"); _FIELDS_CONFIGReady = true; } return _FIELDS_CONFIGContent; } }
-        private static string _FIELDS_CONFIGContent = default;
+        public static Java.Lang.String FIELDS_CONFIG { get { if (!_FIELDS_CONFIGReady) { _FIELDS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELDS_CONFIG"); _FIELDS_CONFIGReady = true; } return _FIELDS_CONFIGContent; } }
+        private static Java.Lang.String _FIELDS_CONFIGContent = default;
         private static bool _FIELDS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/ValueToKey.html#OVERVIEW_DOC"/>
         /// </summary>
-        public static string OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<string>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
-        private static string _OVERVIEW_DOCContent = default;
+        public static Java.Lang.String OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
+        private static Java.Lang.String _OVERVIEW_DOCContent = default;
         private static bool _OVERVIEW_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/ValueToKey.html#CONFIG_DEF"/>
@@ -178,10 +178,10 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/ValueToKey.html#version--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Version()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Version()
         {
-            return IExecute<string>("version");
+            return IExecute<Java.Lang.String>("version");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/ValueToKey.html#config--"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/ValueToKey.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Configure(Java.Util.Map<string, object> arg0)
+        public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("configure", arg0);
         }

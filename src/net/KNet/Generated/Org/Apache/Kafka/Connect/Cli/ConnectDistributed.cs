@@ -32,8 +32,8 @@ namespace Org.Apache.Kafka.Connect.Cli
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/cli/ConnectDistributed.html#org.apache.kafka.connect.cli.ConnectDistributed(java.lang.String[])"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public ConnectDistributed(params string[] arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public ConnectDistributed(params Java.Lang.String[] arg0)
             : base(arg0)
         {
         }
@@ -52,8 +52,8 @@ namespace Org.Apache.Kafka.Connect.Cli
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/cli/ConnectDistributed.html#main-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public static void Main(string[] arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public static void Main(Java.Lang.String[] arg0)
         {
             SExecute(LocalBridgeClazz, "main", new object[] { arg0 });
         }

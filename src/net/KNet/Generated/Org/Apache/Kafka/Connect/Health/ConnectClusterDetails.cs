@@ -67,10 +67,10 @@ namespace Org.Apache.Kafka.Connect.Health
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/health/ConnectClusterDetails.html#kafkaClusterId--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string KafkaClusterId()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String KafkaClusterId()
         {
-            return IExecute<string>("kafkaClusterId");
+            return IExecute<Java.Lang.String>("kafkaClusterId");
         }
 
         #endregion

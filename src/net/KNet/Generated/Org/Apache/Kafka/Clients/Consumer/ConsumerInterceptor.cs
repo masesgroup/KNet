@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             AddEventHandler("onConsume", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>>>(OnConsumeEventHandler));
             AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
             AddEventHandler("onCommit", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>>(OnCommitEventHandler));
-            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ConfigureEventHandler));
+            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
 
         }
 
@@ -270,9 +270,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<string, object>> OnConfigure { get; set; } = null;
+        public System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
 
-        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
             var methodToExecute = (OnConfigure != null) ? OnConfigure : Configure;
             methodToExecute.Invoke(data.EventData.TypedEventData);
@@ -282,7 +282,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public virtual void Configure(Java.Util.Map<string, object> arg0)
+        public virtual void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             
         }

@@ -48,32 +48,32 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG"/>
         /// </summary>
-        public static string FIELD_CONFIG { get { if (!_FIELD_CONFIGReady) { _FIELD_CONFIGContent = SGetField<string>(LocalBridgeClazz, "FIELD_CONFIG"); _FIELD_CONFIGReady = true; } return _FIELD_CONFIGContent; } }
-        private static string _FIELD_CONFIGContent = default;
+        public static Java.Lang.String FIELD_CONFIG { get { if (!_FIELD_CONFIGReady) { _FIELD_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELD_CONFIG"); _FIELD_CONFIGReady = true; } return _FIELD_CONFIGContent; } }
+        private static Java.Lang.String _FIELD_CONFIGContent = default;
         private static bool _FIELD_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG"/>
         /// </summary>
-        public static string FORMAT_CONFIG { get { if (!_FORMAT_CONFIGReady) { _FORMAT_CONFIGContent = SGetField<string>(LocalBridgeClazz, "FORMAT_CONFIG"); _FORMAT_CONFIGReady = true; } return _FORMAT_CONFIGContent; } }
-        private static string _FORMAT_CONFIGContent = default;
+        public static Java.Lang.String FORMAT_CONFIG { get { if (!_FORMAT_CONFIGReady) { _FORMAT_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FORMAT_CONFIG"); _FORMAT_CONFIGReady = true; } return _FORMAT_CONFIGContent; } }
+        private static Java.Lang.String _FORMAT_CONFIGContent = default;
         private static bool _FORMAT_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC"/>
         /// </summary>
-        public static string OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<string>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
-        private static string _OVERVIEW_DOCContent = default;
+        public static Java.Lang.String OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
+        private static Java.Lang.String _OVERVIEW_DOCContent = default;
         private static bool _OVERVIEW_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG"/>
         /// </summary>
-        public static string TARGET_TYPE_CONFIG { get { if (!_TARGET_TYPE_CONFIGReady) { _TARGET_TYPE_CONFIGContent = SGetField<string>(LocalBridgeClazz, "TARGET_TYPE_CONFIG"); _TARGET_TYPE_CONFIGReady = true; } return _TARGET_TYPE_CONFIGContent; } }
-        private static string _TARGET_TYPE_CONFIGContent = default;
+        public static Java.Lang.String TARGET_TYPE_CONFIG { get { if (!_TARGET_TYPE_CONFIGReady) { _TARGET_TYPE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TARGET_TYPE_CONFIG"); _TARGET_TYPE_CONFIGReady = true; } return _TARGET_TYPE_CONFIGContent; } }
+        private static Java.Lang.String _TARGET_TYPE_CONFIGContent = default;
         private static bool _TARGET_TYPE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG"/>
         /// </summary>
-        public static string UNIX_PRECISION_CONFIG { get { if (!_UNIX_PRECISION_CONFIGReady) { _UNIX_PRECISION_CONFIGContent = SGetField<string>(LocalBridgeClazz, "UNIX_PRECISION_CONFIG"); _UNIX_PRECISION_CONFIGReady = true; } return _UNIX_PRECISION_CONFIGContent; } }
-        private static string _UNIX_PRECISION_CONFIGContent = default;
+        public static Java.Lang.String UNIX_PRECISION_CONFIG { get { if (!_UNIX_PRECISION_CONFIGReady) { _UNIX_PRECISION_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "UNIX_PRECISION_CONFIG"); _UNIX_PRECISION_CONFIGReady = true; } return _UNIX_PRECISION_CONFIGContent; } }
+        private static Java.Lang.String _UNIX_PRECISION_CONFIGContent = default;
         private static bool _UNIX_PRECISION_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF"/>
@@ -111,10 +111,10 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Version()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Version()
         {
-            return IExecute<string>("version");
+            return IExecute<Java.Lang.String>("version");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config--"/>
@@ -319,32 +319,32 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG"/>
         /// </summary>
-        public static string FIELD_CONFIG { get { if (!_FIELD_CONFIGReady) { _FIELD_CONFIGContent = SGetField<string>(LocalBridgeClazz, "FIELD_CONFIG"); _FIELD_CONFIGReady = true; } return _FIELD_CONFIGContent; } }
-        private static string _FIELD_CONFIGContent = default;
+        public static Java.Lang.String FIELD_CONFIG { get { if (!_FIELD_CONFIGReady) { _FIELD_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELD_CONFIG"); _FIELD_CONFIGReady = true; } return _FIELD_CONFIGContent; } }
+        private static Java.Lang.String _FIELD_CONFIGContent = default;
         private static bool _FIELD_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG"/>
         /// </summary>
-        public static string FORMAT_CONFIG { get { if (!_FORMAT_CONFIGReady) { _FORMAT_CONFIGContent = SGetField<string>(LocalBridgeClazz, "FORMAT_CONFIG"); _FORMAT_CONFIGReady = true; } return _FORMAT_CONFIGContent; } }
-        private static string _FORMAT_CONFIGContent = default;
+        public static Java.Lang.String FORMAT_CONFIG { get { if (!_FORMAT_CONFIGReady) { _FORMAT_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FORMAT_CONFIG"); _FORMAT_CONFIGReady = true; } return _FORMAT_CONFIGContent; } }
+        private static Java.Lang.String _FORMAT_CONFIGContent = default;
         private static bool _FORMAT_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC"/>
         /// </summary>
-        public static string OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<string>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
-        private static string _OVERVIEW_DOCContent = default;
+        public static Java.Lang.String OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
+        private static Java.Lang.String _OVERVIEW_DOCContent = default;
         private static bool _OVERVIEW_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG"/>
         /// </summary>
-        public static string TARGET_TYPE_CONFIG { get { if (!_TARGET_TYPE_CONFIGReady) { _TARGET_TYPE_CONFIGContent = SGetField<string>(LocalBridgeClazz, "TARGET_TYPE_CONFIG"); _TARGET_TYPE_CONFIGReady = true; } return _TARGET_TYPE_CONFIGContent; } }
-        private static string _TARGET_TYPE_CONFIGContent = default;
+        public static Java.Lang.String TARGET_TYPE_CONFIG { get { if (!_TARGET_TYPE_CONFIGReady) { _TARGET_TYPE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TARGET_TYPE_CONFIG"); _TARGET_TYPE_CONFIGReady = true; } return _TARGET_TYPE_CONFIGContent; } }
+        private static Java.Lang.String _TARGET_TYPE_CONFIGContent = default;
         private static bool _TARGET_TYPE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG"/>
         /// </summary>
-        public static string UNIX_PRECISION_CONFIG { get { if (!_UNIX_PRECISION_CONFIGReady) { _UNIX_PRECISION_CONFIGContent = SGetField<string>(LocalBridgeClazz, "UNIX_PRECISION_CONFIG"); _UNIX_PRECISION_CONFIGReady = true; } return _UNIX_PRECISION_CONFIGContent; } }
-        private static string _UNIX_PRECISION_CONFIGContent = default;
+        public static Java.Lang.String UNIX_PRECISION_CONFIG { get { if (!_UNIX_PRECISION_CONFIGReady) { _UNIX_PRECISION_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "UNIX_PRECISION_CONFIG"); _UNIX_PRECISION_CONFIGReady = true; } return _UNIX_PRECISION_CONFIGContent; } }
+        private static Java.Lang.String _UNIX_PRECISION_CONFIGContent = default;
         private static bool _UNIX_PRECISION_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF"/>
@@ -382,10 +382,10 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Version()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Version()
         {
-            return IExecute<string>("version");
+            return IExecute<Java.Lang.String>("version");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config--"/>
@@ -416,7 +416,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/TimestampConverter.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Configure(Java.Util.Map<string, object> arg0)
+        public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("configure", arg0);
         }

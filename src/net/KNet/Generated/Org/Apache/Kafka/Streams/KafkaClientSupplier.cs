@@ -68,11 +68,11 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("getConsumer", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(GetConsumerEventHandler));
-            AddEventHandler("getGlobalConsumer", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(GetGlobalConsumerEventHandler));
-            AddEventHandler("getRestoreConsumer", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(GetRestoreConsumerEventHandler));
-            AddEventHandler("getProducer", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(GetProducerEventHandler));
-            AddEventHandler("getAdmin", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(GetAdminEventHandler));
+            AddEventHandler("getConsumer", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(GetConsumerEventHandler));
+            AddEventHandler("getGlobalConsumer", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(GetGlobalConsumerEventHandler));
+            AddEventHandler("getRestoreConsumer", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(GetRestoreConsumerEventHandler));
+            AddEventHandler("getProducer", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(GetProducerEventHandler));
+            AddEventHandler("getAdmin", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(GetAdminEventHandler));
 
         }
 
@@ -80,9 +80,9 @@ namespace Org.Apache.Kafka.Streams
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaClientSupplier.html#getConsumer-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnGetConsumer"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Util.Map<string, object>, Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>> OnGetConsumer { get; set; } = null;
+        public System.Func<Java.Util.Map<Java.Lang.String, object>, Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>> OnGetConsumer { get; set; } = null;
 
-        void GetConsumerEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        void GetConsumerEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
             var methodToExecute = (OnGetConsumer != null) ? OnGetConsumer : GetConsumer;
             var executionResult = methodToExecute.Invoke(data.EventData.TypedEventData);
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></returns>
-        public virtual Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetConsumer(Java.Util.Map<string, object> arg0)
+        public virtual Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetConsumer(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return default;
         }
@@ -103,9 +103,9 @@ namespace Org.Apache.Kafka.Streams
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaClientSupplier.html#getGlobalConsumer-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnGetGlobalConsumer"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Util.Map<string, object>, Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>> OnGetGlobalConsumer { get; set; } = null;
+        public System.Func<Java.Util.Map<Java.Lang.String, object>, Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>> OnGetGlobalConsumer { get; set; } = null;
 
-        void GetGlobalConsumerEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        void GetGlobalConsumerEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
             var methodToExecute = (OnGetGlobalConsumer != null) ? OnGetGlobalConsumer : GetGlobalConsumer;
             var executionResult = methodToExecute.Invoke(data.EventData.TypedEventData);
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></returns>
-        public virtual Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetGlobalConsumer(Java.Util.Map<string, object> arg0)
+        public virtual Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetGlobalConsumer(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return default;
         }
@@ -126,9 +126,9 @@ namespace Org.Apache.Kafka.Streams
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaClientSupplier.html#getRestoreConsumer-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnGetRestoreConsumer"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Util.Map<string, object>, Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>> OnGetRestoreConsumer { get; set; } = null;
+        public System.Func<Java.Util.Map<Java.Lang.String, object>, Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>> OnGetRestoreConsumer { get; set; } = null;
 
-        void GetRestoreConsumerEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        void GetRestoreConsumerEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
             var methodToExecute = (OnGetRestoreConsumer != null) ? OnGetRestoreConsumer : GetRestoreConsumer;
             var executionResult = methodToExecute.Invoke(data.EventData.TypedEventData);
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></returns>
-        public virtual Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetRestoreConsumer(Java.Util.Map<string, object> arg0)
+        public virtual Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetRestoreConsumer(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return default;
         }
@@ -149,9 +149,9 @@ namespace Org.Apache.Kafka.Streams
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaClientSupplier.html#getProducer-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnGetProducer"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Util.Map<string, object>, Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]>> OnGetProducer { get; set; } = null;
+        public System.Func<Java.Util.Map<Java.Lang.String, object>, Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]>> OnGetProducer { get; set; } = null;
 
-        void GetProducerEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        void GetProducerEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
             var methodToExecute = (OnGetProducer != null) ? OnGetProducer : GetProducer;
             var executionResult = methodToExecute.Invoke(data.EventData.TypedEventData);
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Producer.Producer"/></returns>
-        public virtual Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]> GetProducer(Java.Util.Map<string, object> arg0)
+        public virtual Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]> GetProducer(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return default;
         }
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Streams
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
-        public Org.Apache.Kafka.Clients.Admin.Admin GetAdminDefault(Java.Util.Map<string, object> arg0)
+        public Org.Apache.Kafka.Clients.Admin.Admin GetAdminDefault(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.Admin>("getAdminDefault", arg0);
         }
@@ -182,9 +182,9 @@ namespace Org.Apache.Kafka.Streams
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaClientSupplier.html#getAdmin-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnGetAdmin"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Util.Map<string, object>, Org.Apache.Kafka.Clients.Admin.Admin> OnGetAdmin { get; set; } = null;
+        public System.Func<Java.Util.Map<Java.Lang.String, object>, Org.Apache.Kafka.Clients.Admin.Admin> OnGetAdmin { get; set; } = null;
 
-        void GetAdminEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        void GetAdminEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
             var methodToExecute = (OnGetAdmin != null) ? OnGetAdmin : GetAdmin;
             var executionResult = methodToExecute.Invoke(data.EventData.TypedEventData);
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Streams
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="GetAdminDefault"/>; override the method to implement a different behavior</remarks>
-        public virtual Org.Apache.Kafka.Clients.Admin.Admin GetAdmin(Java.Util.Map<string, object> arg0)
+        public virtual Org.Apache.Kafka.Clients.Admin.Admin GetAdmin(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return GetAdminDefault(arg0);
         }

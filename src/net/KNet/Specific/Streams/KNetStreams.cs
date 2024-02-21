@@ -200,7 +200,7 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#allLocalStorePartitionLags--"/>
         /// </summary>
-        public Java.Util.Map<string, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>> AllLocalStorePartitionLags => _inner.AllLocalStorePartitionLags();
+        public Java.Util.Map<Java.Lang.String, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>> AllLocalStorePartitionLags => _inner.AllLocalStorePartitionLags();
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metrics--"/>
         /// </summary>
@@ -215,7 +215,7 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#addStreamThread--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional{T}"/></returns>
-        public Java.Util.Optional<string> AddStreamThread()
+        public Java.Util.Optional<Java.Lang.String> AddStreamThread()
         {
             return _inner.AddStreamThread();
         }
@@ -223,7 +223,7 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<string> RemoveStreamThread()
+        public Java.Util.Optional<Java.Lang.String> RemoveStreamThread()
         {
             return _inner.RemoveStreamThread();
         }
@@ -231,8 +231,8 @@ namespace MASES.KNet.Streams
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="TimeSpan"/></param>
-        /// <returns><see cref="string"/></returns>
-        public string RemoveStreamThread(TimeSpan arg0)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String RemoveStreamThread(TimeSpan arg0)
         {
             var res = _inner.RemoveStreamThread(arg0);
             return res.IsPresent() ? res.Get() : null;

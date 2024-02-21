@@ -48,10 +48,10 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/DefaultHostResolver.html#resolve-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Net.InetAddress"/></returns>
         /// <exception cref="Java.Net.UnknownHostException"/>
-        public Java.Net.InetAddress[] Resolve(string arg0)
+        public Java.Net.InetAddress[] Resolve(Java.Lang.String arg0)
         {
             return IExecuteArray<Java.Net.InetAddress>("resolve", arg0);
         }

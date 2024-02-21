@@ -32,8 +32,8 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#org.apache.kafka.common.security.oauthbearer.OAuthBearerValidatorCallback(java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public OAuthBearerValidatorCallback(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public OAuthBearerValidatorCallback(Java.Lang.String arg0)
             : base(arg0)
         {
         }
@@ -57,37 +57,37 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorOpenIDConfiguration--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string ErrorOpenIDConfiguration()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String ErrorOpenIDConfiguration()
         {
-            return IExecute<string>("errorOpenIDConfiguration");
+            return IExecute<Java.Lang.String>("errorOpenIDConfiguration");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorScope--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string ErrorScope()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String ErrorScope()
         {
-            return IExecute<string>("errorScope");
+            return IExecute<Java.Lang.String>("errorScope");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorStatus--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string ErrorStatus()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String ErrorStatus()
         {
-            return IExecute<string>("errorStatus");
+            return IExecute<Java.Lang.String>("errorStatus");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#tokenValue--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string TokenValue()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String TokenValue()
         {
-            return IExecute<string>("tokenValue");
+            return IExecute<Java.Lang.String>("tokenValue");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#token--"/>
@@ -101,10 +101,10 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#error-java.lang.String-java.lang.String-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        public void Error(string arg0, string arg1, string arg2)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        public void Error(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         {
             IExecute("error", arg0, arg1, arg2);
         }

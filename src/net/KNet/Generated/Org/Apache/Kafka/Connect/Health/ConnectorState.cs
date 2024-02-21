@@ -32,10 +32,10 @@ namespace Org.Apache.Kafka.Connect.Health
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/health/ConnectorState.html#org.apache.kafka.connect.health.ConnectorState(java.lang.String,java.lang.String,java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        public ConnectorState(string arg0, string arg1, string arg2)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        public ConnectorState(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
             : base(arg0, arg1, arg2)
         {
         }

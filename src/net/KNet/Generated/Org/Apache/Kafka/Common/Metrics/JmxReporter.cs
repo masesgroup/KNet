@@ -44,44 +44,44 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#DEFAULT_EXCLUDE"/>
         /// </summary>
-        public static string DEFAULT_EXCLUDE { get { if (!_DEFAULT_EXCLUDEReady) { _DEFAULT_EXCLUDEContent = SGetField<string>(LocalBridgeClazz, "DEFAULT_EXCLUDE"); _DEFAULT_EXCLUDEReady = true; } return _DEFAULT_EXCLUDEContent; } }
-        private static string _DEFAULT_EXCLUDEContent = default;
+        public static Java.Lang.String DEFAULT_EXCLUDE { get { if (!_DEFAULT_EXCLUDEReady) { _DEFAULT_EXCLUDEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_EXCLUDE"); _DEFAULT_EXCLUDEReady = true; } return _DEFAULT_EXCLUDEContent; } }
+        private static Java.Lang.String _DEFAULT_EXCLUDEContent = default;
         private static bool _DEFAULT_EXCLUDEReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#DEFAULT_INCLUDE"/>
         /// </summary>
-        public static string DEFAULT_INCLUDE { get { if (!_DEFAULT_INCLUDEReady) { _DEFAULT_INCLUDEContent = SGetField<string>(LocalBridgeClazz, "DEFAULT_INCLUDE"); _DEFAULT_INCLUDEReady = true; } return _DEFAULT_INCLUDEContent; } }
-        private static string _DEFAULT_INCLUDEContent = default;
+        public static Java.Lang.String DEFAULT_INCLUDE { get { if (!_DEFAULT_INCLUDEReady) { _DEFAULT_INCLUDEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_INCLUDE"); _DEFAULT_INCLUDEReady = true; } return _DEFAULT_INCLUDEContent; } }
+        private static Java.Lang.String _DEFAULT_INCLUDEContent = default;
         private static bool _DEFAULT_INCLUDEReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#EXCLUDE_CONFIG"/>
         /// </summary>
-        public static string EXCLUDE_CONFIG { get { if (!_EXCLUDE_CONFIGReady) { _EXCLUDE_CONFIGContent = SGetField<string>(LocalBridgeClazz, "EXCLUDE_CONFIG"); _EXCLUDE_CONFIGReady = true; } return _EXCLUDE_CONFIGContent; } }
-        private static string _EXCLUDE_CONFIGContent = default;
+        public static Java.Lang.String EXCLUDE_CONFIG { get { if (!_EXCLUDE_CONFIGReady) { _EXCLUDE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "EXCLUDE_CONFIG"); _EXCLUDE_CONFIGReady = true; } return _EXCLUDE_CONFIGContent; } }
+        private static Java.Lang.String _EXCLUDE_CONFIGContent = default;
         private static bool _EXCLUDE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#EXCLUDE_CONFIG_ALIAS"/>
         /// </summary>
-        public static string EXCLUDE_CONFIG_ALIAS { get { if (!_EXCLUDE_CONFIG_ALIASReady) { _EXCLUDE_CONFIG_ALIASContent = SGetField<string>(LocalBridgeClazz, "EXCLUDE_CONFIG_ALIAS"); _EXCLUDE_CONFIG_ALIASReady = true; } return _EXCLUDE_CONFIG_ALIASContent; } }
-        private static string _EXCLUDE_CONFIG_ALIASContent = default;
+        public static Java.Lang.String EXCLUDE_CONFIG_ALIAS { get { if (!_EXCLUDE_CONFIG_ALIASReady) { _EXCLUDE_CONFIG_ALIASContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "EXCLUDE_CONFIG_ALIAS"); _EXCLUDE_CONFIG_ALIASReady = true; } return _EXCLUDE_CONFIG_ALIASContent; } }
+        private static Java.Lang.String _EXCLUDE_CONFIG_ALIASContent = default;
         private static bool _EXCLUDE_CONFIG_ALIASReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#INCLUDE_CONFIG"/>
         /// </summary>
-        public static string INCLUDE_CONFIG { get { if (!_INCLUDE_CONFIGReady) { _INCLUDE_CONFIGContent = SGetField<string>(LocalBridgeClazz, "INCLUDE_CONFIG"); _INCLUDE_CONFIGReady = true; } return _INCLUDE_CONFIGContent; } }
-        private static string _INCLUDE_CONFIGContent = default;
+        public static Java.Lang.String INCLUDE_CONFIG { get { if (!_INCLUDE_CONFIGReady) { _INCLUDE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INCLUDE_CONFIG"); _INCLUDE_CONFIGReady = true; } return _INCLUDE_CONFIGContent; } }
+        private static Java.Lang.String _INCLUDE_CONFIGContent = default;
         private static bool _INCLUDE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#INCLUDE_CONFIG_ALIAS"/>
         /// </summary>
-        public static string INCLUDE_CONFIG_ALIAS { get { if (!_INCLUDE_CONFIG_ALIASReady) { _INCLUDE_CONFIG_ALIASContent = SGetField<string>(LocalBridgeClazz, "INCLUDE_CONFIG_ALIAS"); _INCLUDE_CONFIG_ALIASReady = true; } return _INCLUDE_CONFIG_ALIASContent; } }
-        private static string _INCLUDE_CONFIG_ALIASContent = default;
+        public static Java.Lang.String INCLUDE_CONFIG_ALIAS { get { if (!_INCLUDE_CONFIG_ALIASReady) { _INCLUDE_CONFIG_ALIASContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INCLUDE_CONFIG_ALIAS"); _INCLUDE_CONFIG_ALIASReady = true; } return _INCLUDE_CONFIG_ALIASContent; } }
+        private static Java.Lang.String _INCLUDE_CONFIG_ALIASContent = default;
         private static bool _INCLUDE_CONFIG_ALIASReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#METRICS_CONFIG_PREFIX"/>
         /// </summary>
-        public static string METRICS_CONFIG_PREFIX { get { if (!_METRICS_CONFIG_PREFIXReady) { _METRICS_CONFIG_PREFIXContent = SGetField<string>(LocalBridgeClazz, "METRICS_CONFIG_PREFIX"); _METRICS_CONFIG_PREFIXReady = true; } return _METRICS_CONFIG_PREFIXContent; } }
-        private static string _METRICS_CONFIG_PREFIXContent = default;
+        public static Java.Lang.String METRICS_CONFIG_PREFIX { get { if (!_METRICS_CONFIG_PREFIXReady) { _METRICS_CONFIG_PREFIXContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METRICS_CONFIG_PREFIX"); _METRICS_CONFIG_PREFIXReady = true; } return _METRICS_CONFIG_PREFIXContent; } }
+        private static Java.Lang.String _METRICS_CONFIG_PREFIXContent = default;
         private static bool _METRICS_CONFIG_PREFIXReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#RECONFIGURABLE_CONFIGS"/>
@@ -98,9 +98,9 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Function.Predicate"/></returns>
-        public static Java.Util.Function.Predicate<string> CompilePredicate(Java.Util.Map<string, object> arg0)
+        public static Java.Util.Function.Predicate<Java.Lang.String> CompilePredicate(Java.Util.Map<Java.Lang.String, object> arg0)
         {
-            return SExecute<Java.Util.Function.Predicate<string>>(LocalBridgeClazz, "compilePredicate", arg0);
+            return SExecute<Java.Util.Function.Predicate<Java.Lang.String>>(LocalBridgeClazz, "compilePredicate", arg0);
         }
 
         #endregion
@@ -109,9 +109,9 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#containsMbean-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public bool ContainsMbean(string arg0)
+        public bool ContainsMbean(Java.Lang.String arg0)
         {
             return IExecute<bool>("containsMbean", arg0);
         }
@@ -120,9 +120,9 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<string> ReconfigurableConfigs()
+        public Java.Util.Set<Java.Lang.String> ReconfigurableConfigs()
         {
-            return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
+            return IExecute<Java.Util.Set<Java.Lang.String>>("reconfigurableConfigs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#close--"/>
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Configure(Java.Util.Map<string, object> arg0)
+        public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("configure", arg0);
         }
@@ -175,7 +175,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/JmxReporter.html#reconfigure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Reconfigure(Java.Util.Map<string, object> arg0)
+        public void Reconfigure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("reconfigure", arg0);
         }
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <exception cref="Org.Apache.Kafka.Common.Config.ConfigException"/>
-        public void ValidateReconfiguration(Java.Util.Map<string, object> arg0)
+        public void ValidateReconfiguration(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("validateReconfiguration", arg0);
         }

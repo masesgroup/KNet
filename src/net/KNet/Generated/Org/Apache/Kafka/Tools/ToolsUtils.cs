@@ -47,7 +47,7 @@ namespace Org.Apache.Kafka.Tools
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
         /// <param name="arg2"><see cref="Java.Io.PrintStream"/></param>
-        public static void PrettyPrintTable(Java.Util.List<string> arg0, Java.Util.List<Java.Util.List<string>> arg1, Java.Io.PrintStream arg2)
+        public static void PrettyPrintTable(Java.Util.List<Java.Lang.String> arg0, Java.Util.List<Java.Util.List<Java.Lang.String>> arg1, Java.Io.PrintStream arg2)
         {
             SExecute(LocalBridgeClazz, "prettyPrintTable", arg0, arg1, arg2);
         }

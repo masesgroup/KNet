@@ -52,10 +52,10 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.1/org/apache/kafka/connect/json/JsonSerializer.html#serialize-java.lang.String-java.lang.Object-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <returns><see cref="byte"/></returns>
-        public byte[] Serialize(string arg0, object arg1)
+        public byte[] Serialize(Java.Lang.String arg0, object arg1)
         {
             return IExecuteArray<byte>("serialize", arg0, arg1);
         }

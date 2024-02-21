@@ -44,10 +44,10 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/utils/ThreadUtils.html#createThreadFactory-java.lang.String-boolean-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
         /// <returns><see cref="Java.Util.Concurrent.ThreadFactory"/></returns>
-        public static Java.Util.Concurrent.ThreadFactory CreateThreadFactory(string arg0, bool arg1)
+        public static Java.Util.Concurrent.ThreadFactory CreateThreadFactory(Java.Lang.String arg0, bool arg1)
         {
             return SExecute<Java.Util.Concurrent.ThreadFactory>(LocalBridgeClazz, "createThreadFactory", arg0, arg1);
         }

@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public ConfigTransformerResult(Java.Util.Map<string, string> arg0, Java.Util.Map<string, Java.Lang.Long> arg1)
+        public ConfigTransformerResult(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0, Java.Util.Map<Java.Lang.String, Java.Lang.Long> arg1)
             : base(arg0, arg1)
         {
         }
@@ -59,18 +59,18 @@ namespace Org.Apache.Kafka.Common.Config
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Java.Lang.Long> Ttls()
+        public Java.Util.Map<Java.Lang.String, Java.Lang.Long> Ttls()
         {
-            return IExecute<Java.Util.Map<string, Java.Lang.Long>>("ttls");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Lang.Long>>("ttls");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/ConfigTransformerResult.html#data--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, string> Data()
+        public Java.Util.Map<Java.Lang.String, Java.Lang.String> Data()
         {
-            return IExecute<Java.Util.Map<string, string>>("data");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("data");
         }
 
         #endregion

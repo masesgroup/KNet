@@ -33,10 +33,10 @@ namespace Org.Apache.Kafka.Common
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Node.html#org.apache.kafka.common.Node(int,java.lang.String,int,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="int"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
-        public Node(int arg0, string arg1, int arg2, string arg3)
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
+        public Node(int arg0, Java.Lang.String arg1, int arg2, Java.Lang.String arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -44,9 +44,9 @@ namespace Org.Apache.Kafka.Common
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Node.html#org.apache.kafka.common.Node(int,java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="int"/></param>
-        public Node(int arg0, string arg1, int arg2)
+        public Node(int arg0, Java.Lang.String arg1, int arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -115,28 +115,28 @@ namespace Org.Apache.Kafka.Common
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Node.html#host--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Host()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Host()
         {
-            return IExecute<string>("host");
+            return IExecute<Java.Lang.String>("host");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Node.html#idString--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string IdString()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String IdString()
         {
-            return IExecute<string>("idString");
+            return IExecute<Java.Lang.String>("idString");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Node.html#rack--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Rack()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Rack()
         {
-            return IExecute<string>("rack");
+            return IExecute<Java.Lang.String>("rack");
         }
 
         #endregion

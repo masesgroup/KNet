@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.1/org/apache/kafka/connect/json/JsonConverterConfig.html#org.apache.kafka.connect.json.JsonConverterConfig(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public JsonConverterConfig(Java.Util.Map<string, object> arg0)
+        public JsonConverterConfig(Java.Util.Map<Java.Lang.String, object> arg0)
             : base(arg0)
         {
         }
@@ -66,32 +66,32 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.1/org/apache/kafka/connect/json/JsonConverterConfig.html#DECIMAL_FORMAT_CONFIG"/>
         /// </summary>
-        public static string DECIMAL_FORMAT_CONFIG { get { if (!_DECIMAL_FORMAT_CONFIGReady) { _DECIMAL_FORMAT_CONFIGContent = SGetField<string>(LocalBridgeClazz, "DECIMAL_FORMAT_CONFIG"); _DECIMAL_FORMAT_CONFIGReady = true; } return _DECIMAL_FORMAT_CONFIGContent; } }
-        private static string _DECIMAL_FORMAT_CONFIGContent = default;
+        public static Java.Lang.String DECIMAL_FORMAT_CONFIG { get { if (!_DECIMAL_FORMAT_CONFIGReady) { _DECIMAL_FORMAT_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DECIMAL_FORMAT_CONFIG"); _DECIMAL_FORMAT_CONFIGReady = true; } return _DECIMAL_FORMAT_CONFIGContent; } }
+        private static Java.Lang.String _DECIMAL_FORMAT_CONFIGContent = default;
         private static bool _DECIMAL_FORMAT_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.1/org/apache/kafka/connect/json/JsonConverterConfig.html#DECIMAL_FORMAT_DEFAULT"/>
         /// </summary>
-        public static string DECIMAL_FORMAT_DEFAULT { get { if (!_DECIMAL_FORMAT_DEFAULTReady) { _DECIMAL_FORMAT_DEFAULTContent = SGetField<string>(LocalBridgeClazz, "DECIMAL_FORMAT_DEFAULT"); _DECIMAL_FORMAT_DEFAULTReady = true; } return _DECIMAL_FORMAT_DEFAULTContent; } }
-        private static string _DECIMAL_FORMAT_DEFAULTContent = default;
+        public static Java.Lang.String DECIMAL_FORMAT_DEFAULT { get { if (!_DECIMAL_FORMAT_DEFAULTReady) { _DECIMAL_FORMAT_DEFAULTContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DECIMAL_FORMAT_DEFAULT"); _DECIMAL_FORMAT_DEFAULTReady = true; } return _DECIMAL_FORMAT_DEFAULTContent; } }
+        private static Java.Lang.String _DECIMAL_FORMAT_DEFAULTContent = default;
         private static bool _DECIMAL_FORMAT_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.1/org/apache/kafka/connect/json/JsonConverterConfig.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
         /// </summary>
-        public static string REPLACE_NULL_WITH_DEFAULT_CONFIG { get { if (!_REPLACE_NULL_WITH_DEFAULT_CONFIGReady) { _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = SGetField<string>(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_CONFIG"); _REPLACE_NULL_WITH_DEFAULT_CONFIGReady = true; } return _REPLACE_NULL_WITH_DEFAULT_CONFIGContent; } }
-        private static string _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = default;
+        public static Java.Lang.String REPLACE_NULL_WITH_DEFAULT_CONFIG { get { if (!_REPLACE_NULL_WITH_DEFAULT_CONFIGReady) { _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_CONFIG"); _REPLACE_NULL_WITH_DEFAULT_CONFIGReady = true; } return _REPLACE_NULL_WITH_DEFAULT_CONFIGContent; } }
+        private static Java.Lang.String _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = default;
         private static bool _REPLACE_NULL_WITH_DEFAULT_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.1/org/apache/kafka/connect/json/JsonConverterConfig.html#SCHEMAS_CACHE_SIZE_CONFIG"/>
         /// </summary>
-        public static string SCHEMAS_CACHE_SIZE_CONFIG { get { if (!_SCHEMAS_CACHE_SIZE_CONFIGReady) { _SCHEMAS_CACHE_SIZE_CONFIGContent = SGetField<string>(LocalBridgeClazz, "SCHEMAS_CACHE_SIZE_CONFIG"); _SCHEMAS_CACHE_SIZE_CONFIGReady = true; } return _SCHEMAS_CACHE_SIZE_CONFIGContent; } }
-        private static string _SCHEMAS_CACHE_SIZE_CONFIGContent = default;
+        public static Java.Lang.String SCHEMAS_CACHE_SIZE_CONFIG { get { if (!_SCHEMAS_CACHE_SIZE_CONFIGReady) { _SCHEMAS_CACHE_SIZE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SCHEMAS_CACHE_SIZE_CONFIG"); _SCHEMAS_CACHE_SIZE_CONFIGReady = true; } return _SCHEMAS_CACHE_SIZE_CONFIGContent; } }
+        private static Java.Lang.String _SCHEMAS_CACHE_SIZE_CONFIGContent = default;
         private static bool _SCHEMAS_CACHE_SIZE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.1/org/apache/kafka/connect/json/JsonConverterConfig.html#SCHEMAS_ENABLE_CONFIG"/>
         /// </summary>
-        public static string SCHEMAS_ENABLE_CONFIG { get { if (!_SCHEMAS_ENABLE_CONFIGReady) { _SCHEMAS_ENABLE_CONFIGContent = SGetField<string>(LocalBridgeClazz, "SCHEMAS_ENABLE_CONFIG"); _SCHEMAS_ENABLE_CONFIGReady = true; } return _SCHEMAS_ENABLE_CONFIGContent; } }
-        private static string _SCHEMAS_ENABLE_CONFIGContent = default;
+        public static Java.Lang.String SCHEMAS_ENABLE_CONFIG { get { if (!_SCHEMAS_ENABLE_CONFIGReady) { _SCHEMAS_ENABLE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SCHEMAS_ENABLE_CONFIG"); _SCHEMAS_ENABLE_CONFIGReady = true; } return _SCHEMAS_ENABLE_CONFIGContent; } }
+        private static Java.Lang.String _SCHEMAS_ENABLE_CONFIGContent = default;
         private static bool _SCHEMAS_ENABLE_CONFIGReady = false; // this is used because in case of generics 
 
         #endregion

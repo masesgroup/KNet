@@ -89,9 +89,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Iterable"/></returns>
-        public Java.Lang.Iterable Records(string arg0)
+        public Java.Lang.Iterable Records(Java.Lang.String arg0)
         {
             return IExecute<Java.Lang.Iterable>("records", arg0);
         }
@@ -201,9 +201,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Iterable"/></returns>
-        public Java.Lang.Iterable<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> Records(string arg0)
+        public Java.Lang.Iterable<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> Records(Java.Lang.String arg0)
         {
             return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>>("records", arg0);
         }

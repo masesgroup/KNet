@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             AddEventHandler("deserializer", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(DeserializerEventHandler));
             AddEventHandler("serializer", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(SerializerEventHandler));
             AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ConfigureEventHandler));
+            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
 
         }
 
@@ -305,7 +305,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
-        public void ConfigureDefault(Java.Util.Map<string, object> arg0, bool arg1)
+        public void ConfigureDefault(Java.Util.Map<Java.Lang.String, object> arg0, bool arg1)
         {
             IExecute("configureDefault", arg0, arg1);
         }
@@ -314,9 +314,9 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<string, object>, bool> OnConfigure { get; set; } = null;
+        public System.Action<Java.Util.Map<Java.Lang.String, object>, bool> OnConfigure { get; set; } = null;
 
-        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
             var methodToExecute = (OnConfigure != null) ? OnConfigure : Configure;
             methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<bool>(0));
@@ -328,7 +328,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="ConfigureDefault"/>; override the method to implement a different behavior</remarks>
-        public virtual void Configure(Java.Util.Map<string, object> arg0, bool arg1)
+        public virtual void Configure(Java.Util.Map<Java.Lang.String, object> arg0, bool arg1)
         {
             ConfigureDefault(arg0, arg1);
         }

@@ -44,9 +44,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Joined.html#as-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Joined"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Joined As(string arg0)
+        public static Org.Apache.Kafka.Streams.Kstream.Joined As(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Joined>(LocalBridgeClazz, "as", arg0);
         }
@@ -83,10 +83,10 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <param name="arg4"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Joined"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Joined With(Org.Apache.Kafka.Common.Serialization.Serde arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1, Org.Apache.Kafka.Common.Serialization.Serde arg2, string arg3, Java.Time.Duration arg4)
+        public static Org.Apache.Kafka.Streams.Kstream.Joined With(Org.Apache.Kafka.Common.Serialization.Serde arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1, Org.Apache.Kafka.Common.Serialization.Serde arg2, Java.Lang.String arg3, Java.Time.Duration arg4)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Joined>(LocalBridgeClazz, "with", arg0, arg1, arg2, arg3, arg4);
         }
@@ -96,9 +96,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Joined"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Joined With(Org.Apache.Kafka.Common.Serialization.Serde arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1, Org.Apache.Kafka.Common.Serialization.Serde arg2, string arg3)
+        public static Org.Apache.Kafka.Streams.Kstream.Joined With(Org.Apache.Kafka.Common.Serialization.Serde arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1, Org.Apache.Kafka.Common.Serialization.Serde arg2, Java.Lang.String arg3)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Joined>(LocalBridgeClazz, "with", arg0, arg1, arg2, arg3);
         }
@@ -223,9 +223,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Joined.html#as-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Joined"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VO> As(string arg0)
+        public static Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VO> As(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VO>>(LocalBridgeClazz, "as", arg0);
         }
@@ -262,10 +262,10 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <param name="arg4"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Joined"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VO> With(Org.Apache.Kafka.Common.Serialization.Serde<K> arg0, Org.Apache.Kafka.Common.Serialization.Serde<V> arg1, Org.Apache.Kafka.Common.Serialization.Serde<VO> arg2, string arg3, Java.Time.Duration arg4)
+        public static Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VO> With(Org.Apache.Kafka.Common.Serialization.Serde<K> arg0, Org.Apache.Kafka.Common.Serialization.Serde<V> arg1, Org.Apache.Kafka.Common.Serialization.Serde<VO> arg2, Java.Lang.String arg3, Java.Time.Duration arg4)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VO>>(LocalBridgeClazz, "with", arg0, arg1, arg2, arg3, arg4);
         }
@@ -275,9 +275,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Joined"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VO> With(Org.Apache.Kafka.Common.Serialization.Serde<K> arg0, Org.Apache.Kafka.Common.Serialization.Serde<V> arg1, Org.Apache.Kafka.Common.Serialization.Serde<VO> arg2, string arg3)
+        public static Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VO> With(Org.Apache.Kafka.Common.Serialization.Serde<K> arg0, Org.Apache.Kafka.Common.Serialization.Serde<V> arg1, Org.Apache.Kafka.Common.Serialization.Serde<VO> arg2, Java.Lang.String arg3)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VO>>(LocalBridgeClazz, "with", arg0, arg1, arg2, arg3);
         }

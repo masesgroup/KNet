@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></returns>
-        public static Org.Apache.Kafka.Clients.Admin.Admin Create(Java.Util.Map<string, object> arg0)
+        public static Org.Apache.Kafka.Clients.Admin.Admin Create(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return SExecute<Org.Apache.Kafka.Clients.Admin.Admin>(LocalBridgeClazz, "create", arg0);
         }
@@ -124,11 +124,11 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/Admin.html#alterConsumerGroupOffsets-java.lang.String-java.util.Map-org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult AlterConsumerGroupOffsets(string arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg1, Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsOptions arg2)
+        public Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult AlterConsumerGroupOffsets(Java.Lang.String arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg1, Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsOptions arg2)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult>("alterConsumerGroupOffsets", arg0, arg1, arg2);
         }
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult AlterReplicaLogDirs(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, string> arg0, Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult AlterReplicaLogDirs(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult>("alterReplicaLogDirs", arg0, arg1);
         }
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult CreatePartitions(Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.NewPartitions> arg0, Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult CreatePartitions(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.NewPartitions> arg0, Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult>("createPartitions", arg0, arg1);
         }
@@ -214,11 +214,11 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroupOffsets-java.lang.String-java.util.Set-org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult DeleteConsumerGroupOffsets(string arg0, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg1, Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions arg2)
+        public Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult DeleteConsumerGroupOffsets(Java.Lang.String arg0, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg1, Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions arg2)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult>("deleteConsumerGroupOffsets", arg0, arg1, arg2);
         }
@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult DeleteConsumerGroups(Java.Util.Collection<string> arg0, Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult DeleteConsumerGroups(Java.Util.Collection<Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult>("deleteConsumerGroups", arg0, arg1);
         }
@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult DescribeConsumerGroups(Java.Util.Collection<string> arg0, Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult DescribeConsumerGroups(Java.Util.Collection<Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult>("describeConsumerGroups", arg0, arg1);
         }
@@ -374,7 +374,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult DescribeTransactions(Java.Util.Collection<string> arg0, Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult DescribeTransactions(Java.Util.Collection<Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult>("describeTransactions", arg0, arg1);
         }
@@ -384,7 +384,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult DescribeUserScramCredentials(Java.Util.List<string> arg0, Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult DescribeUserScramCredentials(Java.Util.List<Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult>("describeUserScramCredentials", arg0, arg1);
         }
@@ -415,7 +415,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.FenceProducersOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.FenceProducersResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.FenceProducersResult FenceProducers(Java.Util.Collection<string> arg0, Org.Apache.Kafka.Clients.Admin.FenceProducersOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.FenceProducersResult FenceProducers(Java.Util.Collection<Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Admin.FenceProducersOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.FenceProducersResult>("fenceProducers", arg0, arg1);
         }
@@ -425,7 +425,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec> arg0, Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec> arg0, Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", arg0, arg1);
         }
@@ -479,10 +479,10 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/Admin.html#removeMembersFromConsumerGroup-java.lang.String-org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupResult RemoveMembersFromConsumerGroup(string arg0, Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupResult RemoveMembersFromConsumerGroup(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupResult>("removeMembersFromConsumerGroup", arg0, arg1);
         }
@@ -512,7 +512,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.UpdateFeaturesResult UpdateFeatures(Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.FeatureUpdate> arg0, Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.UpdateFeaturesResult UpdateFeatures(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.FeatureUpdate> arg0, Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.UpdateFeaturesResult>("updateFeatures", arg0, arg1);
         }
@@ -554,10 +554,10 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/Admin.html#alterConsumerGroupOffsets-java.lang.String-java.util.Map-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult AlterConsumerGroupOffsets(string arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg1)
+        public Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult AlterConsumerGroupOffsets(Java.Lang.String arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult>("alterConsumerGroupOffsets", arg0, arg1);
         }
@@ -575,7 +575,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult AlterReplicaLogDirs(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, string> arg0)
+        public Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult AlterReplicaLogDirs(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult>("alterReplicaLogDirs", arg0);
         }
@@ -611,7 +611,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult CreatePartitions(Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.NewPartitions> arg0)
+        public Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult CreatePartitions(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.NewPartitions> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult>("createPartitions", arg0);
         }
@@ -636,10 +636,10 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroupOffsets-java.lang.String-java.util.Set-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult DeleteConsumerGroupOffsets(string arg0, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg1)
+        public Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult DeleteConsumerGroupOffsets(Java.Lang.String arg0, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult>("deleteConsumerGroupOffsets", arg0, arg1);
         }
@@ -648,7 +648,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult DeleteConsumerGroups(Java.Util.Collection<string> arg0)
+        public Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult DeleteConsumerGroups(Java.Util.Collection<Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult>("deleteConsumerGroups", arg0);
         }
@@ -667,7 +667,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult DeleteTopics(Java.Util.Collection<string> arg0, Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult DeleteTopics(Java.Util.Collection<Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult>("deleteTopics", arg0, arg1);
         }
@@ -676,7 +676,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult DeleteTopics(Java.Util.Collection<string> arg0)
+        public Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult DeleteTopics(Java.Util.Collection<Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult>("deleteTopics", arg0);
         }
@@ -730,7 +730,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult DescribeConsumerGroups(Java.Util.Collection<string> arg0)
+        public Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult DescribeConsumerGroups(Java.Util.Collection<Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult>("describeConsumerGroups", arg0);
         }
@@ -794,7 +794,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult DescribeTopics(Java.Util.Collection<string> arg0, Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult DescribeTopics(Java.Util.Collection<Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult>("describeTopics", arg0, arg1);
         }
@@ -803,7 +803,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult DescribeTopics(Java.Util.Collection<string> arg0)
+        public Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult DescribeTopics(Java.Util.Collection<Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult>("describeTopics", arg0);
         }
@@ -821,7 +821,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult DescribeTransactions(Java.Util.Collection<string> arg0)
+        public Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult DescribeTransactions(Java.Util.Collection<Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult>("describeTransactions", arg0);
         }
@@ -839,7 +839,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult DescribeUserScramCredentials(Java.Util.List<string> arg0)
+        public Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult DescribeUserScramCredentials(Java.Util.List<Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult>("describeUserScramCredentials", arg0);
         }
@@ -867,26 +867,26 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.FenceProducersResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.FenceProducersResult FenceProducers(Java.Util.Collection<string> arg0)
+        public Org.Apache.Kafka.Clients.Admin.FenceProducersResult FenceProducers(Java.Util.Collection<Java.Lang.String> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.FenceProducersResult>("fenceProducers", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets-java.lang.String-org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(string arg0, Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(string arg0)
+        public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Java.Lang.String arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", arg0);
         }
@@ -895,7 +895,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec> arg0)
+        public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", arg0);
         }

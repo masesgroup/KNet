@@ -202,7 +202,7 @@ namespace MASES.KNet.Replicator
         /// <summary>
         /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in an external thread
         /// </summary>
-        /// <remarks>It is <see langword="true"/> by default if one of <typeparamref name="K"/> or <typeparamref name="V"/> are not <see cref="ValueType"/>, override the value using <see cref="ApplyPrefetch(bool, int)"/></remarks>
+        /// <remarks>It is <see langword="true"/> by default if one of <typeparamref name="TKey"/> or <typeparamref name="TValue"/> are not <see cref="ValueType"/>, override the value using <see cref="ApplyPrefetch(bool, int)"/></remarks>
         bool IsPrefecth { get; }
         /// <summary>
         /// The minimum threshold to activate pretech, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in external thread if <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{K, V}"/> contains more than <see cref="PrefetchThreshold"/> elements
@@ -445,12 +445,11 @@ namespace MASES.KNet.Replicator
             {
                 var topicPartition = new Org.Apache.Kafka.Common.TopicPartition(topic, data.Partition);
                 var topics = Java.Util.Collections.SingletonList(topicPartition);
-                Java.Time.Duration duration = TimeSpan.FromMinutes(1);
                 try
                 {
                     consumer.Assign(topics);
                     consumer.Seek(topicPartition, data.Offset);
-                    var results = consumer.Poll(duration);
+                    var results = consumer.Poll(TimeSpan.FromMinutes(1));
                     if (results == null) throw new InvalidOperationException("Failed to get records from remote.");
                     foreach (var result in results)
                     {
@@ -465,7 +464,6 @@ namespace MASES.KNet.Replicator
                 {
                     topicPartition?.Dispose();
                     topics?.Dispose();
-                    duration?.Dispose();
                 }
             }
         }
@@ -1041,7 +1039,7 @@ namespace MASES.KNet.Replicator
         {
             bool firstExecution = false;
             int index = (int)o;
-            var topics = Java.Util.Collections.Singleton(StateName);
+            var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
             try
             {
                 _consumers[index].Subscribe(topics, _consumerListeners[index]);
@@ -1138,7 +1136,7 @@ namespace MASES.KNet.Replicator
                 }
                 catch (Org.Apache.Kafka.Common.Errors.TopicExistsException)
                 {
-                    var topics = Java.Util.Collections.Singleton(StateName);
+                    var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
                     // recover partitions of the topic
                     try
                     {

@@ -67,10 +67,10 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/token/delegation/DelegationToken.html#hmacAsBase64String--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string HmacAsBase64String()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String HmacAsBase64String()
         {
-            return IExecute<string>("hmacAsBase64String");
+            return IExecute<Java.Lang.String>("hmacAsBase64String");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/security/token/delegation/DelegationToken.html#tokenInfo--"/>

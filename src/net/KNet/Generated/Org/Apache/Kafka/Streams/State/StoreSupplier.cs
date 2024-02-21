@@ -49,19 +49,19 @@ namespace Org.Apache.Kafka.Streams.State
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/StoreSupplier.html#metricsScope--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string MetricsScope()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String MetricsScope()
         {
-            return IExecute<string>("metricsScope");
+            return IExecute<Java.Lang.String>("metricsScope");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/StoreSupplier.html#name--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Name()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Name()
         {
-            return IExecute<string>("name");
+            return IExecute<Java.Lang.String>("name");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/StoreSupplier.html#get--"/>
@@ -129,19 +129,19 @@ namespace Org.Apache.Kafka.Streams.State
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/StoreSupplier.html#metricsScope--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string MetricsScope()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String MetricsScope()
         {
-            return IExecute<string>("metricsScope");
+            return IExecute<Java.Lang.String>("metricsScope");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/StoreSupplier.html#name--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Name()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Name()
         {
-            return IExecute<string>("name");
+            return IExecute<Java.Lang.String>("name");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/StoreSupplier.html#get--"/>

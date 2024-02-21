@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JNet.Specific.Extensions;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Kstream;
 using System;
+using System.Collections;
 
 namespace MASES.KNet.Streams
 {
@@ -148,10 +150,10 @@ namespace MASES.KNet.Streams
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="KNetKStream{K, V}"/></returns>
-        public KNetKStream<K, V> Stream<K, V>(Java.Util.Collection<string> arg0, KNetConsumed<K, V> arg1)
+        public KNetKStream<K, V> Stream<K, V>(System.Collections.Generic.IEnumerable<string> arg0, KNetConsumed<K, V> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetKStream<K, V>(_factory, _builder.Stream<byte[], byte[]>(arg0));
+            return new KNetKStream<K, V>(_factory, _builder.Stream<byte[], byte[]>(arg0.ToJCollection(), arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.Collection-"/>
@@ -160,9 +162,9 @@ namespace MASES.KNet.Streams
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="KNetKStream{K, V}"/></returns>
-        public KNetKStream<K, V> Stream<K, V>(Java.Util.Collection<string> arg0)
+        public KNetKStream<K, V> Stream<K, V>(System.Collections.Generic.IEnumerable<string> arg0)
         {
-            return new KNetKStream<K, V>(_factory, _builder.Stream<byte[], byte[]>(arg0));
+            return new KNetKStream<K, V>(_factory, _builder.Stream<byte[], byte[]>(arg0.ToJCollection()));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.regex.Pattern-KNetConsumed{K, V}-"/>

@@ -99,8 +99,8 @@ namespace Org.Apache.Kafka.Streams.Errors
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#name"/>
             /// </summary>
-            public string name { get { if (!_nameReady) { _nameContent = IGetField<string>("name"); _nameReady = true; } return _nameContent; } }
-            private string _nameContent = default;
+            public Java.Lang.String name { get { if (!_nameReady) { _nameContent = IGetField<Java.Lang.String>("name"); _nameReady = true; } return _nameContent; } }
+            private Java.Lang.String _nameContent = default;
             private bool _nameReady = false; // this is used because in case of generics 
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#CONTINUE"/>
@@ -121,9 +121,9 @@ namespace Org.Apache.Kafka.Streams.Errors
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#valueOf-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse"/></returns>
-            public static Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse ValueOf(string arg0)
+            public static Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse ValueOf(Java.Lang.String arg0)
             {
                 return SExecute<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>(LocalBridgeClazz, "valueOf", arg0);
             }

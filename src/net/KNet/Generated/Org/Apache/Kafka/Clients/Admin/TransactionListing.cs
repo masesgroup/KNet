@@ -32,10 +32,10 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/TransactionListing.html#org.apache.kafka.clients.admin.TransactionListing(java.lang.String,long,org.apache.kafka.clients.admin.TransactionState)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="long"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></param>
-        public TransactionListing(string arg0, long arg1, Org.Apache.Kafka.Clients.Admin.TransactionState arg2)
+        public TransactionListing(Java.Lang.String arg0, long arg1, Org.Apache.Kafka.Clients.Admin.TransactionState arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -59,10 +59,10 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/TransactionListing.html#transactionalId--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string TransactionalId()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String TransactionalId()
         {
-            return IExecute<string>("transactionalId");
+            return IExecute<Java.Lang.String>("transactionalId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/TransactionListing.html#producerId--"/>

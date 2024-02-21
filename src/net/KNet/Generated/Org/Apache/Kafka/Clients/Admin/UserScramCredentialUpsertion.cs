@@ -32,31 +32,31 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#org.apache.kafka.clients.admin.UserScramCredentialUpsertion(java.lang.String,org.apache.kafka.clients.admin.ScramCredentialInfo,byte[],byte[])"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo"/></param>
         /// <param name="arg2"><see cref="byte"/></param>
         /// <param name="arg3"><see cref="byte"/></param>
-        public UserScramCredentialUpsertion(string arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, byte[] arg2, byte[] arg3)
+        public UserScramCredentialUpsertion(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, byte[] arg2, byte[] arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#org.apache.kafka.clients.admin.UserScramCredentialUpsertion(java.lang.String,org.apache.kafka.clients.admin.ScramCredentialInfo,byte[])"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo"/></param>
         /// <param name="arg2"><see cref="byte"/></param>
-        public UserScramCredentialUpsertion(string arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, byte[] arg2)
+        public UserScramCredentialUpsertion(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, byte[] arg2)
             : base(arg0, arg1, arg2)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#org.apache.kafka.clients.admin.UserScramCredentialUpsertion(java.lang.String,org.apache.kafka.clients.admin.ScramCredentialInfo,java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        public UserScramCredentialUpsertion(string arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, string arg2)
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        public UserScramCredentialUpsertion(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, Java.Lang.String arg2)
             : base(arg0, arg1, arg2)
         {
         }

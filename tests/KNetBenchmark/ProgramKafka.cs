@@ -281,7 +281,7 @@ namespace MASES.KNet.Benchmark
 
                 var consumer = KafkaConsumer();
                 Java.Time.Duration duration = TimeSpan.FromMinutes(1);
-                var topics = Collections.Singleton(topicName);
+                var topics = Collections.Singleton((Java.Lang.String)topicName);
                 try
                 {
                     int counter = 0;
@@ -364,7 +364,7 @@ namespace MASES.KNet.Benchmark
                 System.Threading.Thread thread = new System.Threading.Thread(() =>
                 {
                     Java.Time.Duration duration = TimeSpan.FromSeconds(1);
-                    var topics = Collections.Singleton(topicName);
+                    var topics = Collections.Singleton((Java.Lang.String)topicName);
                     ConsumerRebalanceListener rebalanceListener = null;
                     try
                     {

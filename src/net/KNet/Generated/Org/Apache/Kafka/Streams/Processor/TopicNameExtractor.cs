@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<object, object, Org.Apache.Kafka.Streams.Processor.RecordContext, string> OnExtract { get; set; } = null;
+        public System.Func<object, object, Org.Apache.Kafka.Streams.Processor.RecordContext, Java.Lang.String> OnExtract { get; set; } = null;
 
         void ExtractEventHandler(object sender, CLRListenerEventArgs<CLREventData<object>> data)
         {
@@ -73,8 +73,8 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.RecordContext"/></param>
-        /// <returns><see cref="string"/></returns>
-        public virtual string Extract(object arg0, object arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public virtual Java.Lang.String Extract(object arg0, object arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
         {
             return default;
         }
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<K, V, Org.Apache.Kafka.Streams.Processor.RecordContext, string> OnExtract { get; set; } = null;
+        public System.Func<K, V, Org.Apache.Kafka.Streams.Processor.RecordContext, Java.Lang.String> OnExtract { get; set; } = null;
 
         void ExtractEventHandler(object sender, CLRListenerEventArgs<CLREventData<K>> data)
         {
@@ -155,8 +155,8 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.RecordContext"/></param>
-        /// <returns><see cref="string"/></returns>
-        public virtual string Extract(K arg0, V arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public virtual Java.Lang.String Extract(K arg0, V arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
         {
             return default;
         }

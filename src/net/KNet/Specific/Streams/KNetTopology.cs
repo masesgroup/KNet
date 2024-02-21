@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JNet.Specific.Extensions;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
 
@@ -72,7 +73,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSink<K, V>(string arg0, string arg1, IKNetSerializer<K> arg2, IKNetSerializer<V> arg3, params string[] arg4)
         {
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4);
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4.ToArray());
             return new KNetTopology(top, _factory);
         }
         /// <summary>
@@ -92,7 +93,7 @@ namespace MASES.KNet.Streams
         public KNetTopology AddSink<K, V, Arg4objectSuperK, Arg4objectSuperV>(string arg0, string arg1, IKNetSerializer<K> arg2, IKNetSerializer<V> arg3, KNetStreamPartitioner<Arg4objectSuperK, Arg4objectSuperV> arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V
         {
             if (arg4 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5);
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5.ToArray());
             return new KNetTopology(top, _factory);
         }
         /// <summary>
@@ -125,7 +126,7 @@ namespace MASES.KNet.Streams
         public KNetTopology AddSink<K, V>(string arg0, KNetTopicNameExtractor<K, V> arg1, params string[] arg2)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2);
+            var top = _topology.AddSink(arg0, arg1, arg2.ToArray());
             return new KNetTopology(top, _factory);
         }
         /// <summary>
@@ -142,7 +143,7 @@ namespace MASES.KNet.Streams
         public KNetTopology AddSink<K, V>(string arg0, KNetTopicNameExtractor<K, V> arg1, IKNetSerializer<K> arg2, IKNetSerializer<V> arg3, params string[] arg4)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4);
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4.ToArray());
             return new KNetTopology(top, _factory);
         }
         /// <summary>
@@ -162,7 +163,7 @@ namespace MASES.KNet.Streams
         public KNetTopology AddSink<K, V, Arg4objectSuperK, Arg4objectSuperV>(string arg0, KNetTopicNameExtractor<K, V> arg1, IKNetSerializer<K> arg2, IKNetSerializer<V> arg3, KNetStreamPartitioner<Arg4objectSuperK, Arg4objectSuperV> arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5);
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5.ToArray());
             return new KNetTopology(top, _factory);
         }
         /// <summary>
@@ -181,7 +182,7 @@ namespace MASES.KNet.Streams
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2, arg3);
+            var top = _topology.AddSink(arg0, arg1, arg2, arg3.ToArray());
             return new KNetTopology(top, _factory);
         }
         /// <summary>
@@ -193,7 +194,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSink(string arg0, string arg1, params string[] arg2)
         {
-            var top = _topology.AddSink(arg0, arg1, arg2);
+            var top = _topology.AddSink(arg0, arg1, arg2.ToArray());
             return new KNetTopology(top, _factory);
         }
         /// <summary>
@@ -204,7 +205,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(string arg0, params string[] arg1)
         {
-            var top = _topology.AddSource(arg0, arg1);
+            var top = _topology.AddSource(arg0, arg1.ToArray());
             return new KNetTopology(top, _factory);
         }
         /// <summary>
@@ -279,7 +280,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KNetTopology"/></returns>
         public KNetTopology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, params string[] arg2)
         {
-            var top = _topology.AddSource(arg0, arg1, arg2);
+            var top = _topology.AddSource(arg0, arg1, arg2.ToArray());
             return new KNetTopology(top, _factory);
         }
         /// <summary>
@@ -365,7 +366,7 @@ namespace MASES.KNet.Streams
         public KNetTopology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg1, string arg2, params string[] arg3)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSource(arg0, arg1, arg2, arg3);
+            var top = _topology.AddSource(arg0, arg1, arg2, arg3.ToArray());
             return new KNetTopology(top, _factory);
         }
         /// <summary>

@@ -68,9 +68,9 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, string> Configs()
+        public Java.Util.Map<Java.Lang.String, Java.Lang.String> Configs()
         {
-            return IExecute<Java.Util.Map<string, string>>("configs");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("configs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/sink/SinkTaskContext.html#assignment--"/>

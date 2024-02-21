@@ -32,17 +32,17 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/KafkaMetricsContext.html#org.apache.kafka.common.metrics.KafkaMetricsContext(java.lang.String,java.util.Map)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public KafkaMetricsContext(string arg0, Java.Util.Map<string, object> arg1)
+        public KafkaMetricsContext(Java.Lang.String arg0, Java.Util.Map<Java.Lang.String, object> arg1)
             : base(arg0, arg1)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/metrics/KafkaMetricsContext.html#org.apache.kafka.common.metrics.KafkaMetricsContext(java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public KafkaMetricsContext(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public KafkaMetricsContext(Java.Lang.String arg0)
             : base(arg0)
         {
         }
@@ -67,9 +67,9 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, string> ContextLabels()
+        public Java.Util.Map<Java.Lang.String, Java.Lang.String> ContextLabels()
         {
-            return IExecute<Java.Util.Map<string, string>>("contextLabels");
+            return IExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("contextLabels");
         }
 
         #endregion

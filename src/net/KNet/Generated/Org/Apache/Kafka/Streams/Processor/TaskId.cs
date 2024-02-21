@@ -34,8 +34,8 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="int"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        public TaskId(int arg0, int arg1, string arg2)
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        public TaskId(int arg0, int arg1, Java.Lang.String arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -59,8 +59,8 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TaskId.html#NAMED_TOPOLOGY_DELIMITER"/>
         /// </summary>
-        public static string NAMED_TOPOLOGY_DELIMITER { get { if (!_NAMED_TOPOLOGY_DELIMITERReady) { _NAMED_TOPOLOGY_DELIMITERContent = SGetField<string>(LocalBridgeClazz, "NAMED_TOPOLOGY_DELIMITER"); _NAMED_TOPOLOGY_DELIMITERReady = true; } return _NAMED_TOPOLOGY_DELIMITERContent; } }
-        private static string _NAMED_TOPOLOGY_DELIMITERContent = default;
+        public static Java.Lang.String NAMED_TOPOLOGY_DELIMITER { get { if (!_NAMED_TOPOLOGY_DELIMITERReady) { _NAMED_TOPOLOGY_DELIMITERContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "NAMED_TOPOLOGY_DELIMITER"); _NAMED_TOPOLOGY_DELIMITERReady = true; } return _NAMED_TOPOLOGY_DELIMITERContent; } }
+        private static Java.Lang.String _NAMED_TOPOLOGY_DELIMITERContent = default;
         private static bool _NAMED_TOPOLOGY_DELIMITERReady = false; // this is used because in case of generics 
 
         #endregion
@@ -69,9 +69,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TaskId.html#parse-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
-        public static Org.Apache.Kafka.Streams.Processor.TaskId Parse(string arg0)
+        public static Org.Apache.Kafka.Streams.Processor.TaskId Parse(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Processor.TaskId>(LocalBridgeClazz, "parse", arg0);
         }
@@ -119,10 +119,10 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TaskId.html#topologyName--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string TopologyName()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String TopologyName()
         {
-            return IExecute<string>("topologyName");
+            return IExecute<Java.Lang.String>("topologyName");
         }
 
         #endregion

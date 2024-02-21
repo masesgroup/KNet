@@ -40,8 +40,8 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceTask.html#TRANSACTION_BOUNDARY_CONFIG"/>
         /// </summary>
-        public static string TRANSACTION_BOUNDARY_CONFIG { get { if (!_TRANSACTION_BOUNDARY_CONFIGReady) { _TRANSACTION_BOUNDARY_CONFIGContent = SGetField<string>(LocalBridgeClazz, "TRANSACTION_BOUNDARY_CONFIG"); _TRANSACTION_BOUNDARY_CONFIGReady = true; } return _TRANSACTION_BOUNDARY_CONFIGContent; } }
-        private static string _TRANSACTION_BOUNDARY_CONFIGContent = default;
+        public static Java.Lang.String TRANSACTION_BOUNDARY_CONFIG { get { if (!_TRANSACTION_BOUNDARY_CONFIGReady) { _TRANSACTION_BOUNDARY_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TRANSACTION_BOUNDARY_CONFIG"); _TRANSACTION_BOUNDARY_CONFIGReady = true; } return _TRANSACTION_BOUNDARY_CONFIGContent; } }
+        private static Java.Lang.String _TRANSACTION_BOUNDARY_CONFIGContent = default;
         private static bool _TRANSACTION_BOUNDARY_CONFIGReady = false; // this is used because in case of generics 
 
         #endregion
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceTask.html#start-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Start(Java.Util.Map<string, string> arg0)
+        public void Start(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             IExecute("start", arg0);
         }
@@ -150,18 +150,18 @@ namespace Org.Apache.Kafka.Connect.Source
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#fromProperty-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary"/></returns>
-            public static Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary FromProperty(string arg0)
+            public static Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary FromProperty(Java.Lang.String arg0)
             {
                 return SExecute<Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary>(LocalBridgeClazz, "fromProperty", arg0);
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#valueOf-java.lang.String-"/>
             /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary"/></returns>
-            public static Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary ValueOf(string arg0)
+            public static Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary ValueOf(Java.Lang.String arg0)
             {
                 return SExecute<Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary>(LocalBridgeClazz, "valueOf", arg0);
             }

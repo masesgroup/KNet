@@ -32,10 +32,10 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/TopicListing.html#org.apache.kafka.clients.admin.TopicListing(java.lang.String,org.apache.kafka.common.Uuid,boolean)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
         /// <param name="arg2"><see cref="bool"/></param>
-        public TopicListing(string arg0, Org.Apache.Kafka.Common.Uuid arg1, bool arg2)
+        public TopicListing(Java.Lang.String arg0, Org.Apache.Kafka.Common.Uuid arg1, bool arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -68,10 +68,10 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/TopicListing.html#name--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Name()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Name()
         {
-            return IExecute<string>("name");
+            return IExecute<Java.Lang.String>("name");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/TopicListing.html#topicId--"/>

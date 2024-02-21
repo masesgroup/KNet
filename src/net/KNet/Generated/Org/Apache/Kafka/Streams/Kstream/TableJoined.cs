@@ -44,9 +44,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TableJoined.html#as-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.TableJoined As(string arg0)
+        public static Org.Apache.Kafka.Streams.Kstream.TableJoined As(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.TableJoined>(LocalBridgeClazz, "as", arg0);
         }
@@ -116,9 +116,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TableJoined.html#as-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.TableJoined<K, KO> As(string arg0)
+        public static Org.Apache.Kafka.Streams.Kstream.TableJoined<K, KO> As(Java.Lang.String arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.TableJoined<K, KO>>(LocalBridgeClazz, "as", arg0);
         }

@@ -32,19 +32,19 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/ConfigValue.html#org.apache.kafka.common.config.ConfigValue(java.lang.String,java.lang.Object,java.util.List,java.util.List)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
         /// <param name="arg3"><see cref="Java.Util.List"/></param>
-        public ConfigValue(string arg0, object arg1, Java.Util.List<object> arg2, Java.Util.List<string> arg3)
+        public ConfigValue(Java.Lang.String arg0, object arg1, Java.Util.List<object> arg2, Java.Util.List<Java.Lang.String> arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/ConfigValue.html#org.apache.kafka.common.config.ConfigValue(java.lang.String)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public ConfigValue(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public ConfigValue(Java.Lang.String arg0)
             : base(arg0)
         {
         }
@@ -86,10 +86,10 @@ namespace Org.Apache.Kafka.Common.Config
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/ConfigValue.html#name--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Name()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Name()
         {
-            return IExecute<string>("name");
+            return IExecute<Java.Lang.String>("name");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/ConfigValue.html#recommendedValues--"/>
@@ -105,15 +105,15 @@ namespace Org.Apache.Kafka.Common.Config
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List<string> ErrorMessages()
+        public Java.Util.List<Java.Lang.String> ErrorMessages()
         {
-            return IExecute<Java.Util.List<string>>("errorMessages");
+            return IExecute<Java.Util.List<Java.Lang.String>>("errorMessages");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/ConfigValue.html#addErrorMessage-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public void AddErrorMessage(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public void AddErrorMessage(Java.Lang.String arg0)
         {
             IExecute("addErrorMessage", arg0);
         }

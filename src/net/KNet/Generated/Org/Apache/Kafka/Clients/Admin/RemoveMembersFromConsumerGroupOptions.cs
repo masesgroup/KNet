@@ -66,10 +66,10 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html#reason--"/>
         /// </summary>
 
-        /// <returns><see cref="string"/></returns>
-        public string Reason()
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String Reason()
         {
-            return IExecute<string>("reason");
+            return IExecute<Java.Lang.String>("reason");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html#members--"/>
@@ -83,8 +83,8 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html#reason-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        public void Reason(string arg0)
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        public void Reason(Java.Lang.String arg0)
         {
             IExecute("reason", arg0);
         }

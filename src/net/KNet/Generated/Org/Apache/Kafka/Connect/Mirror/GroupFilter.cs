@@ -74,9 +74,9 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/GroupFilter.html#shouldReplicateGroup-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
-        public bool ShouldReplicateGroup(string arg0)
+        public bool ShouldReplicateGroup(Java.Lang.String arg0)
         {
             return IExecute<bool>("shouldReplicateGroup", arg0);
         }
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/GroupFilter.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Configure(Java.Util.Map<string, object> arg0)
+        public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             IExecute("configure", arg0);
         }
