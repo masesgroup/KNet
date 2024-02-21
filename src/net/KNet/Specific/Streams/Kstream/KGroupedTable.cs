@@ -46,10 +46,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
+        /// <param name="arg1"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
+        /// <param name="arg2"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
+        /// <param name="arg3"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
@@ -67,11 +67,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></param>
+        /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
+        /// <param name="arg1"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
+        /// <param name="arg2"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg4"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg4"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
@@ -89,9 +89,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Named-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></param>
+        /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
+        /// <param name="arg1"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
+        /// <param name="arg2"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
@@ -109,9 +109,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Aggregator-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></param>
+        /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
+        /// <param name="arg1"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
+        /// <param name="arg2"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
@@ -136,7 +136,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html#count-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg0"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, long, TJVMK, Java.Lang.Long> Count(CountingMaterialized<K, TJVMK> arg0)
         {
@@ -147,7 +147,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html#count-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, long, TJVMK, Java.Lang.Long> Count(Org.Apache.Kafka.Streams.Kstream.Named arg0, CountingMaterialized<K, TJVMK> arg1)
         {
@@ -166,9 +166,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html#reduce-org.apache.kafka.streams.kstream.Reducer-org.apache.kafka.streams.kstream.Reducer-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Reducer"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Reducer"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg0"><see cref="Reducer{V, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="Reducer{V, TJVMV}"/></param>
+        /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Reduce(Reducer<V, TJVMV> arg0, Reducer<V, TJVMV> arg1, Materialized<K, V, TJVMK, TJVMV> arg2)
         {
@@ -180,10 +180,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html#reduce-org.apache.kafka.streams.kstream.Reducer-org.apache.kafka.streams.kstream.Reducer-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Reducer"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Reducer"/></param>
+        /// <param name="arg0"><see cref="Reducer{V, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="Reducer{V, TJVMV}"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg3"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Reduce(Reducer<V, TJVMV> arg0, Reducer<V, TJVMV> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Materialized<K, V, TJVMK, TJVMV> arg3)
         {
@@ -195,8 +195,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html#reduce-org.apache.kafka.streams.kstream.Reducer-org.apache.kafka.streams.kstream.Reducer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Reducer"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Reducer"/></param>
+        /// <param name="arg0"><see cref="Reducer{V, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="Reducer{V, TJVMV}"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Reduce(Reducer<V, TJVMV> arg0, Reducer<V, TJVMV> arg1)
         {

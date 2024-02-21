@@ -43,6 +43,66 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream<TJVMK, TJVMV>(SessionWindowedCogroupedKStream<K, V, TJVMK, TJVMV> t) => t._inner;
 
-#warning till now it is only an empty class shall be completed with the method of inner class
+        #region Instance methods
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Merger-org.apache.kafka.streams.kstream.Materialized-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>
+        /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
+        /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
+        public KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> Aggregate<Arg1objectSuperK>(Initializer<V, TJVMV> arg0, Merger<Arg1objectSuperK, V, TJVMK, TJVMV> arg1, Materialized<K, V,TJVMK, TJVMV> arg2) where Arg1objectSuperK : K
+        {
+            if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
+            if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
+            return new KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(_factory, _inner.Aggregate(arg0, arg1, arg2));
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Merger-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>
+        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
+        /// <param name="arg3"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
+        /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
+        public KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> Aggregate<Arg1objectSuperK>(Initializer<V, TJVMV> arg0, Merger<Arg1objectSuperK, V, TJVMK, TJVMV> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Materialized<K, V, TJVMK, TJVMV> arg3) where Arg1objectSuperK : K
+        {
+            if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
+            if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
+            return new KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(_factory, _inner.Aggregate(arg0, arg1, arg2, arg3));
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Merger-org.apache.kafka.streams.kstream.Named-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>
+        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
+        /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
+        public KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> Aggregate<Arg1objectSuperK>(Initializer<V, TJVMV> arg0, Merger<Arg1objectSuperK, V, TJVMK, TJVMV> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2) where Arg1objectSuperK : K
+        {
+            if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
+            return new KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(_factory, _inner.Aggregate(arg0, arg1, arg2));
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Merger-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>
+        /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
+        public KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> Aggregate<Arg1objectSuperK>(Initializer<V, TJVMV> arg0, Merger<Arg1objectSuperK, V, TJVMK, TJVMV> arg1) where Arg1objectSuperK : K
+        {
+            if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
+            return new KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(_factory, _inner.Aggregate(arg0, arg1));
+        }
+
+        #endregion
     }
 }

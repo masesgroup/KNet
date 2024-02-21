@@ -112,7 +112,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Windows"/></param>
         /// <typeparam name="W"><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream"/></returns>
+        /// <returns><see cref="TimeWindowedKStream{K, V, TJVMK, TJVMV}"/></returns>
         public TimeWindowedKStream<K, V, TJVMK, TJVMV> WindowedBy<W>(Org.Apache.Kafka.Streams.Kstream.Windows<W> arg0) where W : Org.Apache.Kafka.Streams.Kstream.Window
         {
             return new TimeWindowedKStream<K, V, TJVMK, TJVMV>(_factory, _inner.WindowedBy(arg0));

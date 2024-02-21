@@ -62,7 +62,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch-org.apache.kafka.streams.kstream.Branched-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></param>
+        /// <param name="arg0"><see cref="Branched{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public System.Collections.Generic.IReadOnlyDictionary<string, KStream<K, V, TJVMK, TJVMV>> DefaultBranch(Branched<K, V, TJVMK, TJVMV> arg0)
         {
@@ -96,8 +96,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html#branch-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Branched-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></param>
+        /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="Branched{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream"/></returns>
@@ -110,7 +110,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html#branch-org.apache.kafka.streams.kstream.Predicate-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
+        /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream"/></returns>

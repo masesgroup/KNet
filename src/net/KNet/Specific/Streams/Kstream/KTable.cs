@@ -19,6 +19,7 @@
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Utils;
 using System;
+using System.Reflection;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -125,16 +126,16 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg3"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Join<VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KTable<K, VO, TJVMK, TJVMVO> arg0, ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Materialized<K, VR, TJVMK, TJVMVR> arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -144,15 +145,15 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Join<VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KTable<K, VO, TJVMK, TJVMVO> arg0, ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -161,14 +162,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Join<VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KTable<K, VO, TJVMK, TJVMVO> arg0, ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR> arg1) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -177,15 +178,15 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
+        /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KTable<K, VO, TJVMK, TJVMVO> arg0, ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR> arg1, Materialized<K, VR, TJVMK, TJVMVR> arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -195,16 +196,16 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg3"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KTable<K, VO, TJVMK, TJVMVO> arg0, ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Materialized<K, VR, TJVMK, TJVMVR> arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -214,15 +215,15 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KTable<K, VO, TJVMK, TJVMVO> arg0, ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -231,14 +232,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KTable<K, VO, TJVMK, TJVMVO> arg0, ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR> arg1) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -247,15 +248,15 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
+        /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> OuterJoin<VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KTable<K, VO, TJVMK, TJVMVO> arg0, ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR> arg1, Materialized<K, VR, TJVMK, TJVMVR> arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -265,16 +266,16 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg3"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> OuterJoin<VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KTable<K, VO, TJVMK, TJVMVO> arg0, ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Materialized<K, VR, TJVMK, TJVMVR> arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -284,15 +285,15 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> OuterJoin<VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KTable<K, VO, TJVMK, TJVMVO> arg0, ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -301,14 +302,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> OuterJoin<VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(KTable<K, VO, TJVMK, TJVMVO> arg0, ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR> arg1) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -317,14 +318,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg2"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
+        /// <param name="arg3"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Join<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, Materialized<K, VR, TJVMK, TJVMVR> arg3)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -335,15 +336,15 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></param>
-        /// <param name="arg4"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg2"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
+        /// <param name="arg3"><see cref="TableJoined{K, KO, TJVMK, TJVMKO}"/></param>
+        /// <param name="arg4"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Join<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3, Materialized<K, VR, TJVMK, TJVMVR> arg4)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -355,14 +356,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></param>
+        /// <param name="arg2"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
+        /// <param name="arg3"><see cref="TableJoined{K, KO, TJVMK, TJVMKO}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Join<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -373,9 +374,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
+        /// <param name="arg2"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
@@ -389,14 +390,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg2"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
+        /// <param name="arg3"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, Materialized<K, VR, TJVMK, TJVMVR> arg3)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -407,15 +408,15 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></param>
-        /// <param name="arg4"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg2"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
+        /// <param name="arg3"><see cref="TableJoined{K, KO, TJVMK, TJVMKO}"/></param>
+        /// <param name="arg4"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3, Materialized<K, VR, TJVMK, TJVMVR> arg4)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -427,14 +428,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></param>
+        /// <param name="arg2"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
+        /// <param name="arg3"><see cref="TableJoined{K, KO, TJVMK, TJVMKO}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -445,13 +446,13 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
+        /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></param>
+        /// <param name="arg2"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
@@ -461,12 +462,12 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg0"><see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/></param>
+        /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> MapValues<VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR>(ValueMapper<Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR> arg0, Materialized<K, VR, TJVMK, TJVMVR> arg1) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -476,13 +477,13 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></param>
+        /// <param name="arg0"><see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> MapValues<VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR>(ValueMapper<Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Materialized<K, VR, TJVMK, TJVMVR> arg2) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -492,12 +493,12 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></param>
+        /// <param name="arg0"><see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> MapValues<VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR>(ValueMapper<Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -506,11 +507,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></param>
+        /// <param name="arg0"><see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> MapValues<VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR>(ValueMapper<Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR> arg0) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -519,13 +520,13 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg0"><see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
+        /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> MapValues<VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR> arg0, Materialized<K, VR, TJVMK, TJVMVR> arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -535,14 +536,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></param>
+        /// <param name="arg0"><see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> MapValues<VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Materialized<K, VR, TJVMK, TJVMVR> arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -552,13 +553,13 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></param>
+        /// <param name="arg0"><see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> MapValues<VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -567,12 +568,12 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></param>
+        /// <param name="arg0"><see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> MapValues<VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -586,7 +587,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream--"/>
         /// </summary>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
+        /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
         public KStream<K, V, TJVMK, TJVMV> ToStream()
         {
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _inner.ToStream());
@@ -595,7 +596,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream-org.apache.kafka.streams.kstream.Named-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
+        /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
         public KStream<K, V, TJVMK, TJVMV> ToStream(Org.Apache.Kafka.Streams.Kstream.Named arg0)
         {
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _inner.ToStream(arg0));
@@ -603,11 +604,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Filter<Arg0objectSuperK, Arg0objectSuperV>(Predicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0, Materialized<K, V, TJVMK, TJVMV> arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -617,12 +618,12 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
+        /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Filter<Arg0objectSuperK, Arg0objectSuperV>(Predicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Materialized<K, V, TJVMK, TJVMV> arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -632,11 +633,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
+        /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Filter<Arg0objectSuperK, Arg0objectSuperV>(Predicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -645,10 +646,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
+        /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Filter<Arg0objectSuperK, Arg0objectSuperV>(Predicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -657,11 +658,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
+        /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(Predicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0, Materialized<K, V, TJVMK, TJVMV> arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -671,12 +672,12 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
+        /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
+        /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(Predicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Materialized<K, V, TJVMK, TJVMV> arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -686,11 +687,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
+        /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(Predicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -699,10 +700,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
+        /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(Predicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
@@ -711,9 +712,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#suppress-org.apache.kafka.streams.kstream.Suppressed-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed"/></param>
+        /// <param name="arg0"><see cref="Suppressed{K, TJVMK}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
+        /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Suppress<Arg0objectSuperK>(Suppressed<Arg0objectSuperK, TJVMK> arg0) where Arg0objectSuperK : K
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;

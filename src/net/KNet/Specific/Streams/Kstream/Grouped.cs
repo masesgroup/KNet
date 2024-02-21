@@ -92,7 +92,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Grouped"/></returns>
+        /// <returns><see cref="Grouped{K, V, TJVMK, TJVMV}"/></returns>
         public static Grouped<K, V, TJVMK, TJVMV> With(ISerDes<K, TJVMK> arg0, ISerDes<V, TJVMV> arg1)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Grouped<TJVMK, TJVMV>.With(arg0.KafkaSerde, arg1.KafkaSerde);
