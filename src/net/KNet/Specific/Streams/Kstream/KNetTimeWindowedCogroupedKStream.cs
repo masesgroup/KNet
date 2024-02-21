@@ -25,23 +25,23 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public class KNetTimeWindowedCogroupedKStream<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
+    public class TimeWindowedCogroupedKStream<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
         Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetTimeWindowedCogroupedKStream(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<TJVMK, TJVMV> inner)
+        internal TimeWindowedCogroupedKStream(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<TJVMK, TJVMV> inner)
         {
             _factory = factory;
             _inner = inner;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetTimeWindowedCogroupedKStream{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream{TJVMK, TJVMV}"/>
+        /// Converter from <see cref="TimeWindowedCogroupedKStream{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream{TJVMK, TJVMV}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<TJVMK, TJVMV>(KNetTimeWindowedCogroupedKStream<K, V, TJVMK, TJVMV> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<TJVMK, TJVMV>(TimeWindowedCogroupedKStream<K, V, TJVMK, TJVMV> t) => t._inner;
 
 #warning till now it is only an empty class shall be completed with the method of inner class
     }

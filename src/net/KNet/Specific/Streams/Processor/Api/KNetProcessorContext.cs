@@ -25,9 +25,9 @@ namespace MASES.KNet.Streams.Processor.Api
     /// </summary>
     /// <typeparam name="KForward"></typeparam>
     /// <typeparam name="VForward"></typeparam>
-    public class KNetProcessorContext<KForward, VForward>
+    public class ProcessorContext<KForward, VForward>
     {
-        internal KNetProcessorContext(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]> context)
+        internal ProcessorContext(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]> context)
         {
             _context = context;
         }
@@ -35,9 +35,9 @@ namespace MASES.KNet.Streams.Processor.Api
         readonly Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]> _context;
 
         /// <summary>
-        /// Converter from <see cref="KNetProcessorContext{KForward, VForward}"/> to <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{KForward, VForward}"/>
+        /// Converter from <see cref="ProcessorContext{KForward, VForward}"/> to <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{KForward, VForward}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]>(KNetProcessorContext<KForward, VForward> t) => t._context;
+        public static implicit operator Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]>(ProcessorContext<KForward, VForward> t) => t._context;
 
         #region ProcessorContext
 
@@ -48,7 +48,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <param name="arg1"><see cref="string"/></param>
         /// <typeparam name="K"><typeparamref name="KForward"/></typeparam>
         /// <typeparam name="V"><typeparamref name="VForward"/></typeparam>
-        public void Forward<K, V>(KNetRecord<K, V> arg0, string arg1) where K : KForward where V : VForward
+        public void Forward<K, V>(Record<K, V> arg0, string arg1) where K : KForward where V : VForward
         {
             _context.Forward<byte[], byte[]>(arg0, arg1);
         }
@@ -58,7 +58,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         /// <typeparam name="K"><typeparamref name="KForward"/></typeparam>
         /// <typeparam name="V"><typeparamref name="VForward"/></typeparam>
-        public void Forward<K, V>(KNetRecord<K, V> arg0) where K : KForward where V : VForward
+        public void Forward<K, V>(Record<K, V> arg0) where K : KForward where V : VForward
         {
             _context.Forward<byte[], byte[]>(arg0);
         }

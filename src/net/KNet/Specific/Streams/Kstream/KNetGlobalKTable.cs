@@ -25,23 +25,23 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public class KNetGlobalKTable<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
+    public class GlobalKTable<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
         Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetGlobalKTable(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV> table)
+        internal GlobalKTable(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV> table)
         {
             _factory = factory;
             _inner = table;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetGlobalKTable{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable{TJVMK, TJVMV}"/>
+        /// Converter from <see cref="GlobalKTable{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable{TJVMK, TJVMV}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV>(KNetGlobalKTable<K, V, TJVMK, TJVMV> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV>(GlobalKTable<K, V, TJVMK, TJVMV> t) => t._inner;
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName--"/>

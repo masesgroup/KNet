@@ -25,21 +25,21 @@ namespace MASES.KNet.Consumer
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetConsumerRecord<K, V>: IGenericSerDesFactoryApplier
+    public class ConsumerRecord<K, V>: IGenericSerDesFactoryApplier
     {
-        IKNetDeserializer<K> _keyDeserializer;
-        IKNetDeserializer<V> _valueDeserializer;
+        IDeserializer<K> _keyDeserializer;
+        IDeserializer<V> _valueDeserializer;
         readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> _record;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
-        /// Initialize a new <see cref="KNetConsumerRecord{K, V}"/>
+        /// Initialize a new <see cref="ConsumerRecord{K, V}"/>
         /// </summary>
         /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}"/> to use for initialization</param>
-        /// <param name="keyDeserializer">Key serializer base on <see cref="KNetSerDes{K}"/></param>
-        /// <param name="valueDeserializer">Value serializer base on <see cref="KNetSerDes{K}"/></param>
+        /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K}"/></param>
+        /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{K}"/></param>
         /// <param name="fromPrefetched">True if the initialization comes from the prefetch iterator</param>
-        internal KNetConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> record, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer, bool fromPrefetched)
+        internal ConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> record, IDeserializer<K> keyDeserializer, IDeserializer<V> valueDeserializer, bool fromPrefetched)
         {
             _record = record;
             _keyDeserializer = keyDeserializer;
@@ -52,11 +52,11 @@ namespace MASES.KNet.Consumer
             }
         }
         /// <summary>
-        /// Initialize a new <see cref="KNetConsumerRecord{K, V}"/>
+        /// Initialize a new <see cref="ConsumerRecord{K, V}"/>
         /// </summary>
         /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}"/> to use for initialization</param>
         /// <param name="factory"><see cref="IGenericSerDesFactory"/></param>
-        internal KNetConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> record, IGenericSerDesFactory factory)
+        internal ConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> record, IGenericSerDesFactory factory)
         {
             _record = record;
             _factory = factory;

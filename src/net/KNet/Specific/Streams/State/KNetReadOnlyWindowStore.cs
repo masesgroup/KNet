@@ -25,13 +25,13 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public abstract class KNetReadOnlyWindowStore<TKey, TValue, TJVMKey, TJVMValue> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMKey, TJVMValue>>
+    public abstract class ReadOnlyWindowStore<TKey, TValue, TJVMKey, TJVMValue> : ManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMKey, TJVMValue>>
     {
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all--"/>
         /// </summary>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<TKey, TValue> All { get; }
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<TKey, TValue> All { get; }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
@@ -39,9 +39,9 @@ namespace MASES.KNet.Streams.State
         /// <param name="arg1"><typeparamref name="TKey"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg3"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract KNetWindowedKeyValueIterator<TKey, TValue> Fetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
+        public abstract WindowedKeyValueIterator<TKey, TValue> Fetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll-java.time.Instant-java.time.Instant-"/>
         /// </summary>
@@ -49,16 +49,16 @@ namespace MASES.KNet.Streams.State
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract KNetWindowedKeyValueIterator<TKey, TValue> FetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1);
+        public abstract WindowedKeyValueIterator<TKey, TValue> FetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="TKey"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="KNetWindowStoreIterator{TValue}"/></returns>
+        /// <returns><see cref="WindowStoreIterator{TValue}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract KNetWindowStoreIterator<TValue> Fetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
+        public abstract WindowStoreIterator<TValue> Fetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-long-"/>
         /// </summary>
@@ -69,8 +69,8 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll--"/>
         /// </summary>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<TKey, TValue> BackwardAll { get; }
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<TKey, TValue> BackwardAll { get; }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
@@ -78,9 +78,9 @@ namespace MASES.KNet.Streams.State
         /// <param name="arg1"><typeparamref name="TKey"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg3"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract KNetWindowedKeyValueIterator<TKey, TValue> BackwardFetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
+        public abstract WindowedKeyValueIterator<TKey, TValue> BackwardFetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-"/>
         /// </summary>
@@ -88,50 +88,50 @@ namespace MASES.KNet.Streams.State
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract KNetWindowedKeyValueIterator<TKey, TValue> BackwardFetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1);
+        public abstract WindowedKeyValueIterator<TKey, TValue> BackwardFetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="TKey"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="KNetWindowStoreIterator{TValue}"/></returns>
+        /// <returns><see cref="WindowStoreIterator{TValue}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract KNetWindowStoreIterator<TValue> BackwardFetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
+        public abstract WindowStoreIterator<TValue> BackwardFetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
     }
 
     /// <summary>
-    /// KNet implementation of <see cref="KNetReadOnlyWindowStore{TKey, TValue, TJVMKey, TJVMValue}"/> 
+    /// KNet implementation of <see cref="ReadOnlyWindowStore{TKey, TValue, TJVMKey, TJVMValue}"/> 
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetReadOnlyWindowStore<TKey, TValue> : KNetReadOnlyWindowStore<TKey, TValue, byte[], byte[]>
+    public class ReadOnlyWindowStore<TKey, TValue> : ReadOnlyWindowStore<TKey, TValue, byte[], byte[]>
     {
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<TKey, TValue> All => new KNetWindowedKeyValueIterator<TKey, TValue>(Factory, Store.All());
+        public override WindowedKeyValueIterator<TKey, TValue> All => new WindowedKeyValueIterator<TKey, TValue>(Factory, Store.All());
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<TKey, TValue> Fetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
+        public override WindowedKeyValueIterator<TKey, TValue> Fetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<TKey, TValue>(factory, Store.Fetch(r0, r1, arg2, arg3));
+            return new WindowedKeyValueIterator<TKey, TValue>(factory, Store.Fetch(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<TKey, TValue> FetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
+        public override WindowedKeyValueIterator<TKey, TValue> FetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
         {
-            return new KNetWindowedKeyValueIterator<TKey, TValue>(Factory, Store.FetchAll(arg0, arg1));
+            return new WindowedKeyValueIterator<TKey, TValue>(Factory, Store.FetchAll(arg0, arg1));
         }
         /// <inheritdoc/>
-        public override KNetWindowStoreIterator<TValue> Fetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
+        public override WindowStoreIterator<TValue> Fetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowStoreIterator<TValue>(factory, Store.Fetch(r0, arg1, arg2));
+            return new WindowStoreIterator<TValue>(factory, Store.Fetch(r0, arg1, arg2));
         }
         /// <inheritdoc/>
         public override TValue Fetch(TKey arg0, long arg1)
@@ -145,30 +145,30 @@ namespace MASES.KNet.Streams.State
             return _valueSerDes.Deserialize(null, agg);
         }
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<TKey, TValue> BackwardAll => new KNetWindowedKeyValueIterator<TKey, TValue>(Factory, Store.BackwardAll());
+        public override WindowedKeyValueIterator<TKey, TValue> BackwardAll => new WindowedKeyValueIterator<TKey, TValue>(Factory, Store.BackwardAll());
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<TKey, TValue> BackwardFetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
+        public override WindowedKeyValueIterator<TKey, TValue> BackwardFetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<TKey, TValue>(factory, Store.BackwardFetch(r0, r1, arg2, arg3));
+            return new WindowedKeyValueIterator<TKey, TValue>(factory, Store.BackwardFetch(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<TKey, TValue> BackwardFetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
+        public override WindowedKeyValueIterator<TKey, TValue> BackwardFetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
         {
-            return new KNetWindowedKeyValueIterator<TKey, TValue>(Factory, Store.BackwardFetchAll(arg0, arg1));
+            return new WindowedKeyValueIterator<TKey, TValue>(Factory, Store.BackwardFetchAll(arg0, arg1));
         }
         /// <inheritdoc/>
-        public override KNetWindowStoreIterator<TValue> BackwardFetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
+        public override WindowStoreIterator<TValue> BackwardFetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowStoreIterator<TValue>(factory, Store.BackwardFetch(r0, arg1, arg2));
+            return new WindowStoreIterator<TValue>(factory, Store.BackwardFetch(r0, arg1, arg2));
         }
     }
 }

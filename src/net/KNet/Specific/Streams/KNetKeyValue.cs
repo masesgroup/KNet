@@ -25,7 +25,7 @@ namespace MASES.KNet.Streams
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public sealed class KNetKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
+    public sealed class KeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> _valueInner1 = null;
         readonly Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]> _valueInner2 = null;
@@ -33,15 +33,15 @@ namespace MASES.KNet.Streams
         bool _keyStored;
         TValue _value;
         bool _valueStored;
-        IKNetSerDes<TKey> _keySerDes = null;
-        IKNetSerDes<TValue> _valueSerDes = null;
+        ISerDes<TKey> _keySerDes = null;
+        ISerDes<TValue> _valueSerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetKeyValue(IGenericSerDesFactory factory,
+        internal KeyValue(IGenericSerDesFactory factory,
                               Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> value,
-                              IKNetSerDes<TKey> keySerDes,
-                              IKNetSerDes<TValue> valueSerDes,
+                              ISerDes<TKey> keySerDes,
+                              ISerDes<TValue> valueSerDes,
                               bool fromPrefetched)
         {
             _factory = factory;
@@ -59,10 +59,10 @@ namespace MASES.KNet.Streams
             }
         }
 
-        internal KNetKeyValue(IGenericSerDesFactory factory,
+        internal KeyValue(IGenericSerDesFactory factory,
                               Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, byte[]> value,
-                              IKNetSerDes<TKey> keySerDes,
-                              IKNetSerDes<TValue> valueSerDes,
+                              ISerDes<TKey> keySerDes,
+                              ISerDes<TValue> valueSerDes,
                               bool fromPrefetched)
         {
             _factory = factory;

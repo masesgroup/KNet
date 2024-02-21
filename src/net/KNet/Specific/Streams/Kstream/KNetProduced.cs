@@ -26,9 +26,9 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public class KNetProduced<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
+    public class Produced<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        KNetStreamPartitioner<K, V, TJVMK, TJVMV> _streamPartitioner = null;
+        StreamPartitioner<K, V, TJVMK, TJVMV> _streamPartitioner = null;
         readonly Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory
@@ -41,80 +41,80 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
 
-        protected KNetProduced(Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV> inner, KNetStreamPartitioner<K, V, TJVMK, TJVMV> streamPartitioner = null)
+        protected Produced(Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV> inner, StreamPartitioner<K, V, TJVMK, TJVMV> streamPartitioner = null)
         {
             _inner = inner;
             _streamPartitioner = streamPartitioner;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetProduced{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Produced{TJVMK, TJVMV}"/>
+        /// Converter from <see cref="Produced{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Produced{TJVMK, TJVMV}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV>(KNetProduced<K, V, TJVMK, TJVMV> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV>(Produced<K, V, TJVMK, TJVMV> t) => t._inner;
 
         #region Static methods
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#as-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="KNetProduced{K, V, TJVMK, TJVMV}"/></returns>
-        public static KNetProduced<K, V, TJVMK, TJVMV> As(string arg0)
+        /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
+        public static Produced<K, V, TJVMK, TJVMV> As(string arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV>.As(arg0);
-            return new KNetProduced<K, V, TJVMK, TJVMV>(cons);
+            return new Produced<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#keySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{Kafka, TJVMK}"/></param>
-        /// <returns><see cref="KNetProduced{K, V, TJVMK, TJVMV}"/></returns>
-        public static KNetProduced<K, V, TJVMK, TJVMV> KeySerde(IKNetSerDes<K, TJVMK> arg0)
+        /// <param name="arg0"><see cref="ISerDes{Kafka, TJVMK}"/></param>
+        /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
+        public static Produced<K, V, TJVMK, TJVMV> KeySerde(ISerDes<K, TJVMK> arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV>.KeySerde(arg0.KafkaSerde);
-            return new KNetProduced<K, V, TJVMK, TJVMV>(cons);
+            return new Produced<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#streamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetStreamPartitioner{TKey, TValue}"/></param>
-        /// <returns><see cref="KNetProduced{K, V, TJVMK, TJVMV}"/></returns>
-        public static KNetProduced<K, V, TJVMK, TJVMV> StreamPartitioner(KNetStreamPartitioner<K, V, TJVMK, TJVMV> arg0)
+        /// <param name="arg0"><see cref="StreamPartitioner{TKey, TValue}"/></param>
+        /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
+        public static Produced<K, V, TJVMK, TJVMV> StreamPartitioner(StreamPartitioner<K, V, TJVMK, TJVMV> arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV>.StreamPartitioner(arg0);
-            return new KNetProduced<K, V, TJVMK, TJVMV>(cons, arg0);
+            return new Produced<K, V, TJVMK, TJVMV>(cons, arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#valueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{V, TJVMV}"/></param>
-        /// <returns><see cref="KNetProduced{K, V, TJVMK, TJVMV}"/></returns>
-        public static KNetProduced<K, V, TJVMK, TJVMV> ValueSerde(IKNetSerDes<V, TJVMV> arg0)
+        /// <param name="arg0"><see cref="ISerDes{V, TJVMV}"/></param>
+        /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
+        public static Produced<K, V, TJVMK, TJVMV> ValueSerde(ISerDes<V, TJVMV> arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV>.ValueSerde(arg0.KafkaSerde);
-            return new KNetProduced<K, V, TJVMK, TJVMV>(cons);
+            return new Produced<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{K, TJVMK}"/></param>
-        /// <param name="arg1"><see cref="IKNetSerDes{V, TJVMV}"/></param>
-        /// <param name="arg2"><see cref="KNetStreamPartitioner{TKey, TValue}"/></param>
-        /// <returns><see cref="KNetProduced{K, V, TJVMK, TJVMV}"/></returns>
-        public static KNetProduced<K, V, TJVMK, TJVMV> With(IKNetSerDes<K, TJVMK> arg0, IKNetSerDes<V, TJVMV> arg1, KNetStreamPartitioner<K, V, TJVMK, TJVMV> arg2)
+        /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
+        /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
+        /// <param name="arg2"><see cref="StreamPartitioner{TKey, TValue}"/></param>
+        /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
+        public static Produced<K, V, TJVMK, TJVMV> With(ISerDes<K, TJVMK> arg0, ISerDes<V, TJVMV> arg1, StreamPartitioner<K, V, TJVMK, TJVMV> arg2)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV>.With(arg0.KafkaSerde, arg1.KafkaSerde, arg2);
-            return new KNetProduced<K, V, TJVMK, TJVMV>(cons, arg2);
+            return new Produced<K, V, TJVMK, TJVMV>(cons, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{K, TJVMK}"/></param>
-        /// <param name="arg1"><see cref="IKNetSerDes{V, TJVMV}"/></param>
-        /// <returns><see cref="KNetProduced{K, V, TJVMK, TJVMV}"/></returns>
-        public static KNetProduced<K, V, TJVMK, TJVMV> With(IKNetSerDes<K, TJVMK> arg0, IKNetSerDes<V, TJVMV> arg1)
+        /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
+        /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
+        /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
+        public static Produced<K, V, TJVMK, TJVMV> With(ISerDes<K, TJVMK> arg0, ISerDes<V, TJVMV> arg1)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV>.With(arg0.KafkaSerde, arg1.KafkaSerde);
-            return new KNetProduced<K, V, TJVMK, TJVMV>(cons);
+            return new Produced<K, V, TJVMK, TJVMV>(cons);
         }
 
         #endregion
@@ -123,9 +123,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{K, TJVMK}"/></param>
-        /// <returns><see cref="KNetProduced{K, V, TJVMK, TJVMV}"/></returns>
-        public KNetProduced<K, V, TJVMK, TJVMV> WithKeySerde(IKNetSerDes<K, TJVMK> arg0)
+        /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
+        /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
+        public Produced<K, V, TJVMK, TJVMV> WithKeySerde(ISerDes<K, TJVMK> arg0)
         {
             _inner?.WithKeySerde(arg0.KafkaSerde);
             return this;
@@ -133,9 +133,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#withStreamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetStreamPartitioner{K, V, TJVMK, TJVMV}"/></param>
-        /// <returns><see cref="KNetProduced{K, V, TJVMK, TJVMV}"/></returns>
-        public KNetProduced<K, V, TJVMK, TJVMV> WithStreamPartitioner(KNetStreamPartitioner<K, V, TJVMK, TJVMV> arg0)
+        /// <param name="arg0"><see cref="StreamPartitioner{K, V, TJVMK, TJVMV}"/></param>
+        /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
+        public Produced<K, V, TJVMK, TJVMV> WithStreamPartitioner(StreamPartitioner<K, V, TJVMK, TJVMV> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             _streamPartitioner = arg0;
@@ -145,9 +145,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{V, TJVMV}"/></param>
-        /// <returns><see cref="KNetProduced{K, V, TJVMK, TJVMV}"/></returns>
-        public KNetProduced<K, V, TJVMK, TJVMV> WithValueSerde(IKNetSerDes<V, TJVMV> arg0)
+        /// <param name="arg0"><see cref="ISerDes{V, TJVMV}"/></param>
+        /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
+        public Produced<K, V, TJVMK, TJVMV> WithValueSerde(ISerDes<V, TJVMV> arg0)
         {
             _inner?.WithValueSerde(arg0.KafkaSerde);
             return this;
@@ -156,13 +156,13 @@ namespace MASES.KNet.Streams.Kstream
         #endregion
     }
     /// <summary>
-    /// KNet extension of <see cref="KNetProduced{K, V, TJVMK, TJVMV}"/>
+    /// KNet extension of <see cref="Produced{K, V, TJVMK, TJVMV}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public class KNetProduced<K, V> : KNetProduced<K, V, byte[], byte[]>
+    public class Produced<K, V> : Produced<K, V, byte[], byte[]>
     {
-        KNetProduced(Org.Apache.Kafka.Streams.Kstream.Produced<byte[], byte[]> inner, KNetStreamPartitioner<K, V, byte[], byte[]> streamPartitioner = null)
+        Produced(Org.Apache.Kafka.Streams.Kstream.Produced<byte[], byte[]> inner, StreamPartitioner<K, V, byte[], byte[]> streamPartitioner = null)
             : base(inner, streamPartitioner)
         {
 

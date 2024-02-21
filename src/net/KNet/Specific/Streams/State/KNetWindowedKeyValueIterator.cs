@@ -32,16 +32,16 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public sealed class KNetWindowedKeyValueIterator<TKey, TValue> : CommonIterator<KNetWindowedKeyValue<TKey, TValue>>
+    public sealed class WindowedKeyValueIterator<TKey, TValue> : CommonIterator<WindowedKeyValue<TKey, TValue>>
     {
 #if NET7_0_OR_GREATER
         sealed class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
                                                  IJavaObject obj,
-                                                 IKNetSerDes<TValue> valueSerDes,
+                                                 ISerDes<TValue> valueSerDes,
                                                  bool isAsync, CancellationToken token = default)
-            : JVMBridgeBasePrefetchableEnumerator<KNetWindowedKeyValue<TKey, TValue>>(obj, new PrefetchableEnumeratorSettings()),
+            : JVMBridgeBasePrefetchableEnumerator<WindowedKeyValue<TKey, TValue>>(obj, new PrefetchableEnumeratorSettings()),
               IGenericSerDesFactoryApplier,
-              IAsyncEnumerator<KNetWindowedKeyValue<TKey, TValue>>
+              IAsyncEnumerator<WindowedKeyValue<TKey, TValue>>
         {
             IGenericSerDesFactory _factory = factory;
             IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -50,7 +50,7 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new KNetWindowedKeyValue<TKey, TValue>(_factory,
+                    return new WindowedKeyValue<TKey, TValue>(_factory,
                                                                   JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]>>(obj),
                                                                   valueSerDes, true);
                 }
@@ -62,7 +62,7 @@ namespace MASES.KNet.Streams.State
                 return isAsync ? !token.IsCancellationRequested : base.DoWorkCycle();
             }
 
-            public KNetWindowedKeyValue<TKey, TValue> Current => (this as IEnumerator<KNetWindowedKeyValue<TKey, TValue>>).Current;
+            public WindowedKeyValue<TKey, TValue> Current => (this as IEnumerator<WindowedKeyValue<TKey, TValue>>).Current;
 
             public ValueTask<bool> MoveNextAsync()
             {
@@ -76,15 +76,15 @@ namespace MASES.KNet.Streams.State
             }
         }
 #endif
-        sealed class StandardLocalEnumerator : JVMBridgeBaseEnumerator<KNetWindowedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<KNetWindowedKeyValue<TKey, TValue>>
+        sealed class StandardLocalEnumerator : JVMBridgeBaseEnumerator<WindowedKeyValue<TKey, TValue>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<WindowedKeyValue<TKey, TValue>>
         {
-            IKNetSerDes<TValue> _valueSerDes = null;
+            ISerDes<TValue> _valueSerDes = null;
             IGenericSerDesFactory _factory;
             IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
             public StandardLocalEnumerator(IGenericSerDesFactory factory,
                                            IJavaObject obj,
-                                           IKNetSerDes<TValue> valueSerDes)
+                                           ISerDes<TValue> valueSerDes)
                 : base(obj)
             {
                 _factory = factory;
@@ -95,14 +95,14 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new KNetWindowedKeyValue<TKey, TValue>(_factory,
+                    return new WindowedKeyValue<TKey, TValue>(_factory,
                                                                   JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]>>(obj),
                                                                   _valueSerDes, false);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
 
-            public KNetWindowedKeyValue<TKey, TValue> Current => (this as IEnumerator<KNetWindowedKeyValue<TKey, TValue>>).Current;
+            public WindowedKeyValue<TKey, TValue> Current => (this as IEnumerator<WindowedKeyValue<TKey, TValue>>).Current;
 
             public ValueTask<bool> MoveNextAsync()
             {
@@ -117,9 +117,9 @@ namespace MASES.KNet.Streams.State
         }
 
         readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> _iterator;
-        IKNetSerDes<TValue> _valueSerDes = null;
+        ISerDes<TValue> _valueSerDes = null;
 
-        internal KNetWindowedKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> iterator)
+        internal WindowedKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> iterator)
             :base(factory)
         {
             _iterator = iterator;
@@ -145,13 +145,13 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#next()"/> 
         /// </summary>
-        public KNetWindowedKeyValue<TKey, TValue> Next
+        public WindowedKeyValue<TKey, TValue> Next
         {
             get
             {
                 IGenericSerDesFactory factory = Factory;
                 _valueSerDes ??= factory?.BuildValueSerDes<TValue>();
-                return new KNetWindowedKeyValue<TKey, TValue>(factory, _iterator.Next, _valueSerDes, false);
+                return new WindowedKeyValue<TKey, TValue>(factory, _iterator.Next, _valueSerDes, false);
             }
         }
         /// <summary>
@@ -162,26 +162,26 @@ namespace MASES.KNet.Streams.State
             _iterator.Remove();
         }
         /// <summary>
-        /// Returns an <see cref="IEnumerator{E}"/> of <see cref="KNetWindowedKeyValue{TKey, TValue}"/>
+        /// Returns an <see cref="IEnumerator{E}"/> of <see cref="WindowedKeyValue{TKey, TValue}"/>
         /// </summary>
-        /// <param name="usePrefetch"><see langword="true"/> to return an <see cref="IEnumerator{T}"/> making preparation of <see cref="KNetWindowedKeyValue{TKey, TValue}"/> in parallel</param>
-        /// <returns>An <see cref="IEnumerator{T}"/> of <see cref="KNetWindowedKeyValue{TKey, TValue}"/></returns>
+        /// <param name="usePrefetch"><see langword="true"/> to return an <see cref="IEnumerator{T}"/> making preparation of <see cref="WindowedKeyValue{TKey, TValue}"/> in parallel</param>
+        /// <returns>An <see cref="IEnumerator{T}"/> of <see cref="WindowedKeyValue{TKey, TValue}"/></returns>
         /// <remarks><paramref name="usePrefetch"/> is not considered with .NET 6 and .NET Framework</remarks>
-        public IEnumerator<KNetWindowedKeyValue<TKey, TValue>> ToIEnumerator(bool usePrefetch = true)
+        public IEnumerator<WindowedKeyValue<TKey, TValue>> ToIEnumerator(bool usePrefetch = true)
         {
             UsePrefetch = usePrefetch;
-            return GetEnumerator(false) as IEnumerator<KNetWindowedKeyValue<TKey, TValue>>;
+            return GetEnumerator(false) as IEnumerator<WindowedKeyValue<TKey, TValue>>;
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey--"/>
         /// </summary>
         /// <returns><typeparamref name="TKey"/></returns>
-        public KNetWindowed<TKey> PeekNextKey
+        public Windowed<TKey> PeekNextKey
         {
             get
             {
                 var kk = _iterator.PeekNextKey();
-                return new KNetWindowed<TKey>(Factory, kk);
+                return new Windowed<TKey>(Factory, kk);
             }
         }
         /// <summary>

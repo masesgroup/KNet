@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public class KNetValueMapper<V, VR, TJVMV, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.ValueMapper<TJVMV, TJVMVR>, IGenericSerDesFactoryApplier
+    public class ValueMapper<V, VR, TJVMV, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.ValueMapper<TJVMV, TJVMVR>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -69,10 +69,10 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public class KNetValueMapper<V, VR> : KNetValueMapper<V, VR, byte[], byte[]>
+    public class ValueMapper<V, VR> : ValueMapper<V, VR, byte[], byte[]>
     {
-        IKNetSerDes<V> _vSerializer = null;
-        IKNetSerDes<VR> _vrSerializer = null;
+        ISerDes<V> _vSerializer = null;
+        ISerDes<VR> _vrSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -92,11 +92,11 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="KNetValueMapper{V, VR, TJVMV, TJVMVR}"/>
+    /// KNet extension of <see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/>
     /// </summary>
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public abstract class KNetEnumerableValueMapper<V, VR, TJVMV, TJVMVR> : KNetValueMapper<V, VR, TJVMV, Java.Lang.Iterable<TJVMVR>>
+    public abstract class EnumerableValueMapper<V, VR, TJVMV, TJVMVR> : ValueMapper<V, VR, TJVMV, Java.Lang.Iterable<TJVMVR>>
     {
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
@@ -116,14 +116,14 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="KNetEnumerableValueMapper{V, VR, TJVMV, TJVMVR}"/>
+    /// KNet extension of <see cref="EnumerableValueMapper{V, VR, TJVMV, TJVMVR}"/>
     /// </summary>
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public class KNetEnumerableValueMapper<V, VR> : KNetEnumerableValueMapper<V, VR, byte[], byte[]>
+    public class EnumerableValueMapper<V, VR> : EnumerableValueMapper<V, VR, byte[], byte[]>
     {
-        IKNetSerDes<V> _vSerializer = null;
-        IKNetSerDes<VR> _vrSerializer = null;
+        ISerDes<V> _vSerializer = null;
+        ISerDes<VR> _vrSerializer = null;
 
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>

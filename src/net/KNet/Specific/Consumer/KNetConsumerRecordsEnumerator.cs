@@ -23,16 +23,16 @@ using System.Threading.Tasks;
 
 namespace MASES.KNet.Consumer
 {
-    class KNetConsumerRecordsEnumerator<K, V> : IEnumerator<KNetConsumerRecord<K, V>>, IAsyncEnumerator<KNetConsumerRecord<K, V>>
+    class ConsumerRecordsEnumerator<K, V> : IEnumerator<ConsumerRecord<K, V>>, IAsyncEnumerator<ConsumerRecord<K, V>>
     {
-        readonly IKNetDeserializer<K> _keyDeserializer;
-        readonly IKNetDeserializer<V> _valueDeserializer;
+        readonly IDeserializer<K> _keyDeserializer;
+        readonly IDeserializer<V> _valueDeserializer;
         readonly CancellationToken _cancellationToken;
         readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<byte[], byte[]> _records;
         IEnumerator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>> _recordEnumerator;
         IAsyncEnumerator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>> _recordAsyncEnumerator;
 
-        public KNetConsumerRecordsEnumerator(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<byte[], byte[]> records, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
+        public ConsumerRecordsEnumerator(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<byte[], byte[]> records, IDeserializer<K> keyDeserializer, IDeserializer<V> valueDeserializer)
         {
             _records = records;
             _recordEnumerator = _records.GetEnumerator();
@@ -40,7 +40,7 @@ namespace MASES.KNet.Consumer
             _valueDeserializer = valueDeserializer;
         }
 
-        public KNetConsumerRecordsEnumerator(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<byte[], byte[]> records, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer, CancellationToken cancellationToken)
+        public ConsumerRecordsEnumerator(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<byte[], byte[]> records, IDeserializer<K> keyDeserializer, IDeserializer<V> valueDeserializer, CancellationToken cancellationToken)
         {
             _records = records;
             _recordAsyncEnumerator = _records.GetAsyncEnumerator(cancellationToken);
@@ -49,9 +49,9 @@ namespace MASES.KNet.Consumer
             _cancellationToken = cancellationToken;
         }
 
-        KNetConsumerRecord<K, V> IAsyncEnumerator<KNetConsumerRecord<K, V>>.Current => new KNetConsumerRecord<K, V>(_recordAsyncEnumerator.Current, _keyDeserializer, _valueDeserializer, false);
+        ConsumerRecord<K, V> IAsyncEnumerator<ConsumerRecord<K, V>>.Current => new ConsumerRecord<K, V>(_recordAsyncEnumerator.Current, _keyDeserializer, _valueDeserializer, false);
 
-        KNetConsumerRecord<K, V> IEnumerator<KNetConsumerRecord<K, V>>.Current => new KNetConsumerRecord<K, V>(_recordEnumerator.Current, _keyDeserializer, _valueDeserializer, false);
+        ConsumerRecord<K, V> IEnumerator<ConsumerRecord<K, V>>.Current => new ConsumerRecord<K, V>(_recordEnumerator.Current, _keyDeserializer, _valueDeserializer, false);
 
         object System.Collections.IEnumerator.Current => (_recordEnumerator as System.Collections.IEnumerator)?.Current;
 

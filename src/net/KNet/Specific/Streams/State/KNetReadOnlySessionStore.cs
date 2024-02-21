@@ -25,21 +25,21 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="AGG">The value type</typeparam>
-    public abstract class KNetReadOnlySessionStore<K, AGG, TJVMK, TJVMAGG> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<TJVMK, TJVMAGG>>
+    public abstract class ReadOnlySessionStore<K, AGG, TJVMK, TJVMAGG> : ManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<TJVMK, TJVMAGG>>
     {
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> Fetch(K arg0, K arg1);
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<K, AGG> Fetch(K arg0, K arg1);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> Fetch(K arg0);
+        public abstract WindowedKeyValueIterator<K, AGG> Fetch(K arg0);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
@@ -62,21 +62,21 @@ namespace MASES.KNet.Streams.State
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0, K arg1);
+        public abstract WindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0, K arg1);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0);
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
@@ -84,8 +84,8 @@ namespace MASES.KNet.Streams.State
         /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg3"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-java.lang.Object-long-long-"/>
         /// </summary>
@@ -93,24 +93,24 @@ namespace MASES.KNet.Streams.State
         /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><see cref="long"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, long arg2, long arg3);
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, long arg2, long arg3);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions-java.lang.Object-long-long-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="long"/></param>
         /// <param name="arg2"><see cref="long"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, long arg1, long arg2);
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, long arg1, long arg2);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<K, AGG> FindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
@@ -118,8 +118,8 @@ namespace MASES.KNet.Streams.State
         /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg3"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-java.lang.Object-long-long-"/>
         /// </summary>
@@ -127,43 +127,43 @@ namespace MASES.KNet.Streams.State
         /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><see cref="long"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, long arg2, long arg3);
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, long arg2, long arg3);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions-java.lang.Object-long-long-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="long"/></param>
         /// <param name="arg2"><see cref="long"/></param>
-        /// <returns><see cref="KNetWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, long arg1, long arg2);
+        /// <returns><see cref="WindowedKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract WindowedKeyValueIterator<K, AGG> FindSessions(K arg0, long arg1, long arg2);
     }
 
     /// <summary>
-    /// KNet implementation of <see cref="KNetReadOnlySessionStore{K, AGG, TJVMK, TJVMAGG}"/> 
+    /// KNet implementation of <see cref="ReadOnlySessionStore{K, AGG, TJVMK, TJVMAGG}"/> 
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="AGG">The value type</typeparam>
-    public class KNetReadOnlySessionStore<K, AGG> : KNetReadOnlySessionStore<K, AGG, byte[], byte[]>
+    public class ReadOnlySessionStore<K, AGG> : ReadOnlySessionStore<K, AGG, byte[], byte[]>
     {
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> Fetch(K arg0, K arg1)
+        public override WindowedKeyValueIterator<K, AGG> Fetch(K arg0, K arg1)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.Fetch(r0, r1));
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.Fetch(r0, r1));
         }
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> Fetch(K arg0)
+        public override WindowedKeyValueIterator<K, AGG> Fetch(K arg0)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.Fetch(r0));
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.Fetch(r0));
         }
         /// <inheritdoc/>
         public override AGG FetchSession(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
@@ -188,99 +188,99 @@ namespace MASES.KNet.Streams.State
             return _valueSerDes.Deserialize(null, agg);
         }
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0, K arg1)
+        public override WindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0, K arg1)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFetch(r0, r1));
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFetch(r0, r1));
         }
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0)
+        public override WindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFetch(r0));
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFetch(r0));
         }
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
+        public override WindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
-        {
-            IGenericSerDesFactory factory = Factory;
-            var _keySerDes = factory?.BuildKeySerDes<K>();
-
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
-        }
-        /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, long arg2, long arg3)
+        public override WindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, long arg1, long arg2)
-        {
-            IGenericSerDesFactory factory = Factory;
-            var _keySerDes = factory?.BuildKeySerDes<K>();
-
-            var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
-        }
-        /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
-        {
-            IGenericSerDesFactory factory = Factory;
-            var _keySerDes = factory?.BuildKeySerDes<K>();
-
-            var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
-        }
-        /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
+        public override WindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, long arg2, long arg3)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, long arg2, long arg3)
+        public override WindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, long arg1, long arg2)
+        {
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
+
+            var r0 = _keySerDes.Serialize(null, arg0);
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
+        }
+        /// <inheritdoc/>
+        public override WindowedKeyValueIterator<K, AGG> FindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
+        {
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
+
+            var r0 = _keySerDes.Serialize(null, arg0);
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
+        }
+        /// <inheritdoc/>
+        public override WindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
-        public override KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, long arg1, long arg2)
+        public override WindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, long arg2, long arg3)
         {
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.FindSessions(r0, arg1, arg2));
+            var r1 = _keySerDes.Serialize(null, arg1);
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
+        }
+        /// <inheritdoc/>
+        public override WindowedKeyValueIterator<K, AGG> FindSessions(K arg0, long arg1, long arg2)
+        {
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
+
+            var r0 = _keySerDes.Serialize(null, arg0);
+            return new WindowedKeyValueIterator<K, AGG>(factory, Store.FindSessions(r0, arg1, arg2));
         }
     }
 }

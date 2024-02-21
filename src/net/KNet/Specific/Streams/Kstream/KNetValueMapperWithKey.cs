@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="K">key value type</typeparam>
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public abstract class KNetValueMapperWithKey<K, V, VR, TJVMK, TJVMV, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<TJVMK, TJVMV, TJVMVR>, IGenericSerDesFactoryApplier
+    public abstract class ValueMapperWithKey<K, V, VR, TJVMK, TJVMV, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<TJVMK, TJVMV, TJVMVR>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
-        public new System.Func<KNetValueMapperWithKey<K, V, VR, TJVMK, TJVMV, TJVMVR>, VR> OnApply { get; set; } = null;
+        public new System.Func<ValueMapperWithKey<K, V, VR, TJVMK, TJVMV, TJVMVR>, VR> OnApply { get; set; } = null;
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
@@ -73,27 +73,27 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey{K, V, VR}"/>
+    /// KNet extension of <see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
     /// </summary>
     /// <typeparam name="K">key value type</typeparam>
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public class KNetValueMapperWithKey<K, V, VR> : KNetValueMapperWithKey<K, V, VR, byte[], byte[], byte[]>
+    public class ValueMapperWithKey<K, V, VR> : ValueMapperWithKey<K, V, VR, byte[], byte[], byte[]>
     {
         byte[] _arg0, _arg1;
         K _key;
         bool _keySet = false;
         V _value;
         bool _valueSet = false;
-        IKNetSerDes<K> _kSerializer = null;
-        IKNetSerDes<V> _vSerializer = null;
-        IKNetSerDes<VR> _vrSerializer = null;
+        ISerDes<K> _kSerializer = null;
+        ISerDes<V> _vSerializer = null;
+        ISerDes<VR> _vrSerializer = null;
 
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="KNetValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}.Apply()"/> class method</remarks>
-        public new System.Func<KNetValueMapperWithKey<K, V, VR>, VR> OnApply { get; set; } = null;
+        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}.Apply()"/> class method</remarks>
+        public new System.Func<ValueMapperWithKey<K, V, VR>, VR> OnApply { get; set; } = null;
         /// <inheritdoc/>
         public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
         /// <inheritdoc/>
@@ -112,18 +112,18 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="KNetValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
+    /// KNet extension of <see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
     /// </summary>
     /// <typeparam name="K">key value type</typeparam>
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public abstract class KNetEnumerableValueMapperWithKey<K, V, VR, TJVMK, TJVMV, TJVMVR> : KNetValueMapperWithKey<K, V, VR, TJVMK, TJVMV, Java.Lang.Iterable<TJVMVR>>
+    public abstract class EnumerableValueMapperWithKey<K, V, VR, TJVMK, TJVMV, TJVMVR> : ValueMapperWithKey<K, V, VR, TJVMK, TJVMV, Java.Lang.Iterable<TJVMVR>>
     {
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
-        public new System.Func<KNetEnumerableValueMapperWithKey<K, V, VR>, IEnumerable<VR>> OnApply { get; set; } = null;
+        public new System.Func<EnumerableValueMapperWithKey<K, V, VR>, IEnumerable<VR>> OnApply { get; set; } = null;
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
@@ -136,27 +136,27 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey{K, V, VR}"/>
+    /// KNet extension of <see cref="EnumerableValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
     /// </summary>
     /// <typeparam name="K">key value type</typeparam>
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public class KNetEnumerableValueMapperWithKey<K, V, VR> : KNetEnumerableValueMapperWithKey<K, V, VR, byte[], byte[], byte[]>
+    public class EnumerableValueMapperWithKey<K, V, VR> : EnumerableValueMapperWithKey<K, V, VR, byte[], byte[], byte[]>
     {
         byte[] _arg0, _arg1;
         K _key;
         bool _keySet = false;
         V _value;
         bool _valueSet = false;
-        IKNetSerDes<K> _kSerializer = null;
-        IKNetSerDes<V> _vSerializer = null;
-        IKNetSerDes<VR> _vrSerializer = null;
+        ISerDes<K> _kSerializer = null;
+        ISerDes<V> _vSerializer = null;
+        ISerDes<VR> _vrSerializer = null;
 
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
-        public new System.Func<KNetEnumerableValueMapperWithKey<K, V, VR>, IEnumerable<VR>> OnApply { get; set; } = null;
+        public new System.Func<EnumerableValueMapperWithKey<K, V, VR>, IEnumerable<VR>> OnApply { get; set; } = null;
         /// <inheritdoc/>
         public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
         /// <inheritdoc/>

@@ -23,21 +23,21 @@ using MASES.KNet.Serialization;
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet extension of <see cref="KNetMaterialized{K, V, TJVMK, TJVMV, TContainer}"/>
+    /// KNet extension of <see cref="Materialized{K, V, TJVMK, TJVMV, TContainer}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="TJVMK">Key JVM type</typeparam>
-    public sealed class KNetCountingMaterialized<K, TJVMK> : KNetMaterialized<K, long, TJVMK, Java.Lang.Long, KNetCountingMaterialized<K, TJVMK>>
+    public sealed class CountingMaterialized<K, TJVMK> : Materialized<K, long, TJVMK, Java.Lang.Long, CountingMaterialized<K, TJVMK>>
     {
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{K}"/></param>
-        /// <returns><see cref="KNetMaterialized{K, V, TJVMK}"/></returns>
-        public static KNetCountingMaterialized<K, TJVMK> With(IKNetSerDes<K, TJVMK> arg0)
+        /// <param name="arg0"><see cref="ISerDes{K}"/></param>
+        /// <returns><see cref="Materialized{K, V, TJVMK}"/></returns>
+        public static CountingMaterialized<K, TJVMK> With(ISerDes<K, TJVMK> arg0)
         {
             var mat = Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, Java.Lang.Long, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>.With(arg0.KafkaSerde, Org.Apache.Kafka.Common.Serialization.Serdes.Long());
-            KNetCountingMaterialized<K, TJVMK> cont = new();
+            CountingMaterialized<K, TJVMK> cont = new();
             if (cont is IKNetMaterialized<TJVMK, Java.Lang.Long> setStore)
             {
                 setStore.SetStore(mat.Cast<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, Java.Lang.Long, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
@@ -48,9 +48,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{V}"/></param>
-        /// <returns><see cref="KNetMaterialized{K, V, TJVMK}"/></returns>
-        public KNetCountingMaterialized<K, TJVMK> WithValueSerde(IKNetSerDes<long, Java.Lang.Long> arg0)
+        /// <param name="arg0"><see cref="ISerDes{V}"/></param>
+        /// <returns><see cref="Materialized{K, V, TJVMK}"/></returns>
+        public CountingMaterialized<K, TJVMK> WithValueSerde(ISerDes<long, Java.Lang.Long> arg0)
         {
             _keyStore?.WithValueSerde(arg0.KafkaSerde);
             return this;
@@ -58,24 +58,24 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="KNetMaterialized{K, V, TJVMK, S, TContainer}"/>
+    /// KNet extension of <see cref="Materialized{K, V, TJVMK, S, TContainer}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="TJVMK">Key JVM type</typeparam>
     /// <typeparam name="TJVMV">Value JVM type</typeparam>
-    public sealed class KNetMaterialized<K, V, TJVMK, TJVMV> : KNetMaterialized<K, V, TJVMK, TJVMV, KNetMaterialized<K, V, TJVMK, TJVMV>>
+    public sealed class Materialized<K, V, TJVMK, TJVMV> : Materialized<K, V, TJVMK, TJVMV, Materialized<K, V, TJVMK, TJVMV>>
     {
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{K, TJVMK}"/></param>
-        /// <param name="arg1"><see cref="IKNetSerDes{V, TJVMV}"/></param>
-        /// <returns><see cref="KNetMaterialized{K, V, TJVMK, TJVMV}"/></returns>
-        public static KNetMaterialized<K, V, TJVMK, TJVMV> With(IKNetSerDes<K, TJVMK> arg0, IKNetSerDes<V, TJVMV> arg1)
+        /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
+        /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
+        /// <returns><see cref="Materialized{K, V, TJVMK, TJVMV}"/></returns>
+        public static Materialized<K, V, TJVMK, TJVMV> With(ISerDes<K, TJVMK> arg0, ISerDes<V, TJVMV> arg1)
         {
             var mat = Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>.With(arg0.KafkaSerde, arg1.KafkaSerde);
-            KNetMaterialized<K, V, TJVMK, TJVMV> cont = new();
+            Materialized<K, V, TJVMK, TJVMV> cont = new();
             if (cont is IKNetMaterialized<TJVMK, TJVMV> setStore)
             {
                 setStore.SetStore(mat.Cast<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
@@ -86,9 +86,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{V}"/></param>
-        /// <returns><see cref="KNetMaterialized{K, V, TJVMK}"/></returns>
-        public KNetMaterialized<K, V, TJVMK, TJVMV> WithValueSerde(IKNetSerDes<V, TJVMV> arg0)
+        /// <param name="arg0"><see cref="ISerDes{V}"/></param>
+        /// <returns><see cref="Materialized{K, V, TJVMK}"/></returns>
+        public Materialized<K, V, TJVMK, TJVMV> WithValueSerde(ISerDes<V, TJVMV> arg0)
         {
             _keyStore?.WithValueSerde(arg0.KafkaSerde);
             _sessionStore?.WithValueSerde(arg0.KafkaSerde);
@@ -98,32 +98,32 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="KNetMaterialized{K, V, TJVMK, S, TContainer}"/>
+    /// KNet extension of <see cref="Materialized{K, V, TJVMK, S, TContainer}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="TJVMK">Key JVM type</typeparam>
-    public sealed class KNetMaterialized<K, V, TJVMK> : KNetMaterialized<K, V, TJVMK, byte[], KNetMaterialized<K, V, TJVMK>>
+    public sealed class Materialized<K, V, TJVMK> : Materialized<K, V, TJVMK, byte[], Materialized<K, V, TJVMK>>
     {
 
     }
     /// <summary>
-    /// Supporting interface for <see cref="KNetMaterialized{K, V, TJVMK, TJVMV, TContainer}"/>
+    /// Supporting interface for <see cref="Materialized{K, V, TJVMK, TJVMV, TContainer}"/>
     /// </summary>
     /// <typeparam name="TJVMK">Key JVM type</typeparam>
     /// <typeparam name="TJVMV">Value JVM type</typeparam>
     public interface IKNetMaterialized<TJVMK, TJVMV>
     {
         /// <summary>
-        /// Supporting method for <see cref="KNetMaterialized{K, V, TJVMK, TJVMV, TContainer}"/>
+        /// Supporting method for <see cref="Materialized{K, V, TJVMK, TJVMV, TContainer}"/>
         /// </summary>
         void SetStore(Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> materialized);
         /// <summary>
-        /// Supporting method for <see cref="KNetMaterialized{K, V, TJVMK, TJVMV, TContainer}"/>
+        /// Supporting method for <see cref="Materialized{K, V, TJVMK, TJVMV, TContainer}"/>
         /// </summary>
         void SetStore(Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.SessionStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> materialized);
         /// <summary>
-        /// Supporting method for <see cref="KNetMaterialized{K, V, TJVMK, TJVMV, TContainer}"/>
+        /// Supporting method for <see cref="Materialized{K, V, TJVMK, TJVMV, TContainer}"/>
         /// </summary>
         void SetStore(Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.WindowStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> materialized);
     }
@@ -135,8 +135,8 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V">Value type</typeparam>
     /// <typeparam name="TJVMK">Key JVM type</typeparam>
     /// <typeparam name="TJVMV">Value JVM type</typeparam>
-    /// <typeparam name="TContainer">The implementing class, see <see cref="KNetMaterialized{K, V, TJVMK}"/> or <see cref="KNetCountingMaterialized{K, TJVMK}"/></typeparam>
-    public abstract class KNetMaterialized<K, V, TJVMK, TJVMV, TContainer> : IGenericSerDesFactoryApplier, IKNetMaterialized<TJVMK, TJVMV> where TContainer : class, new()
+    /// <typeparam name="TContainer">The implementing class, see <see cref="Materialized{K, V, TJVMK}"/> or <see cref="CountingMaterialized{K, TJVMK}"/></typeparam>
+    public abstract class Materialized<K, V, TJVMK, TJVMV, TContainer> : IGenericSerDesFactoryApplier, IKNetMaterialized<TJVMK, TJVMV> where TContainer : class, new()
     {
         internal Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> _keyStore;
         internal Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.SessionStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> _sessionStore;
@@ -161,19 +161,19 @@ namespace MASES.KNet.Streams.Kstream
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetMaterialized{K, V, TJVMK, TJVMV, TContainer}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Materialized{TJVMK, TJVMV, S}"/>
+        /// Converter from <see cref="Materialized{K, V, TJVMK, TJVMV, TContainer}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Materialized{TJVMK, TJVMV, S}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>(KNetMaterialized<K, V, TJVMK, TJVMV, TContainer> t) => t._keyStore;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>(Materialized<K, V, TJVMK, TJVMV, TContainer> t) => t._keyStore;
 
         /// <summary>
-        /// Converter from <see cref="KNetMaterialized{K, V, TJVMK, TJVMV, TContainer}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Materialized{TJVMK, TJVMV, S}"/>
+        /// Converter from <see cref="Materialized{K, V, TJVMK, TJVMV, TContainer}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Materialized{TJVMK, TJVMV, S}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.SessionStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>(KNetMaterialized<K, V, TJVMK, TJVMV, TContainer> t) => t._sessionStore;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.SessionStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>(Materialized<K, V, TJVMK, TJVMV, TContainer> t) => t._sessionStore;
 
         /// <summary>
-        /// Converter from <see cref="KNetMaterialized{K, V, TJVMK, TJVMV, TContainer}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Materialized{TJVMK, TJVMV, S}"/>
+        /// Converter from <see cref="Materialized{K, V, TJVMK, TJVMV, TContainer}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Materialized{TJVMK, TJVMV, S}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.WindowStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>(KNetMaterialized<K, V, TJVMK, TJVMV, TContainer> t) => t._windowStore;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.WindowStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>(Materialized<K, V, TJVMK, TJVMV, TContainer> t) => t._windowStore;
 
         #region Static methods
         /// <summary>
@@ -281,9 +281,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{K}"/></param>
+        /// <param name="arg0"><see cref="ISerDes{K}"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>
-        public TContainer WithKeySerde(IKNetSerDes<K, TJVMK> arg0)
+        public TContainer WithKeySerde(ISerDes<K, TJVMK> arg0)
         {
             _keyStore?.WithKeySerde(arg0.KafkaSerde);
             _sessionStore?.WithKeySerde(arg0.KafkaSerde);

@@ -24,15 +24,15 @@ using System;
 namespace MASES.KNet.Streams.Processor
 {
     /// <summary>
-    /// KNet implementation of <see cref="KNetStreamPartitioner{K, V, TJVMK, TJVMV}"/>
+    /// KNet implementation of <see cref="StreamPartitioner{K, V, TJVMK, TJVMV}"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
-    public abstract class KNetStreamPartitionerNoValue<K, TJVMK> : KNetStreamPartitioner<K, string, TJVMK, Java.Lang.Void>
+    public abstract class StreamPartitionerNoValue<K, TJVMK> : StreamPartitioner<K, string, TJVMK, Java.Lang.Void>
     {
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
-        /// <remarks>If <see cref="KNetStreamPartitionerNoValue{K, TJVMK}.OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
+        /// <remarks>If <see cref="StreamPartitionerNoValue{K, TJVMK}.OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<string, K, int, System.Collections.Generic.ICollection<int?>> OnPartitions { get; set; } = null;
 
         /// <summary>
@@ -49,17 +49,17 @@ namespace MASES.KNet.Streams.Processor
     }
 
     /// <summary>
-    /// KNet implementation of <see cref="KNetStreamPartitionerNoValue{K, TJVMK}"/>
+    /// KNet implementation of <see cref="StreamPartitionerNoValue{K, TJVMK}"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
-    public class KNetStreamPartitionerNoValue<K> : KNetStreamPartitionerNoValue<K, byte[]>
+    public class StreamPartitionerNoValue<K> : StreamPartitionerNoValue<K, byte[]>
     {
         string _arg0;
         byte[] _arg1;
         int _arg3;
         K _key;
         bool _keySet = false;
-        IKNetSerDes<K> _kSerializer = null;
+        ISerDes<K> _kSerializer = null;
 
         /// <inheritdoc/>
         public override string Topic => _arg0;

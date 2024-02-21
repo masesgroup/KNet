@@ -24,7 +24,7 @@ namespace MASES.KNet.Streams
     /// <summary>
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.TopologyConfig"/>
     /// </summary>
-    public class KNetTopologyConfig : IGenericSerDesFactoryApplier
+    public class TopologyConfig : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.TopologyConfig _inner;
         IGenericSerDesFactory _factory;
@@ -36,7 +36,7 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="StreamsConfigBuilder"/></param>
         /// <param name="arg2"><see cref="Java.Util.Properties"/></param>
-        public KNetTopologyConfig(string arg0, StreamsConfigBuilder arg1, Java.Util.Properties arg2)
+        public TopologyConfig(string arg0, StreamsConfigBuilder arg1, Java.Util.Properties arg2)
         {
             _inner = new Org.Apache.Kafka.Streams.TopologyConfig(arg0, PrepareProperties(arg1), arg2);
             _factory = arg1;
@@ -45,7 +45,7 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(org.apache.kafka.streams.StreamsConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="StreamsConfigBuilder"/></param>
-        public KNetTopologyConfig(StreamsConfigBuilder arg0)
+        public TopologyConfig(StreamsConfigBuilder arg0)
         {
             _inner = new Org.Apache.Kafka.Streams.TopologyConfig(PrepareProperties(arg0));
             _factory = arg0;
@@ -53,9 +53,9 @@ namespace MASES.KNet.Streams
         #endregion
 
         /// <summary>
-        /// Converter from <see cref="KNetTopologyConfig"/> to <see cref="Org.Apache.Kafka.Streams.TopologyConfig"/>
+        /// Converter from <see cref="TopologyConfig"/> to <see cref="Org.Apache.Kafka.Streams.TopologyConfig"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.TopologyConfig(KNetTopologyConfig t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.TopologyConfig(TopologyConfig t) => t._inner;
         /// <summary>
         /// If set, this <see cref="Func{T, TResult}"/> will be called from <see cref="PrepareProperties(StreamsConfigBuilder)"/>
         /// </summary>

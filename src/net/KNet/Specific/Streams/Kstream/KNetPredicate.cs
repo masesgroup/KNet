@@ -26,7 +26,7 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public abstract class KNetPredicate<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Kstream.Predicate<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
+    public abstract class Predicate<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Kstream.Predicate<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -49,7 +49,7 @@ namespace MASES.KNet.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnTest"/> has a value it takes precedence over corresponding <see cref="Test()"/> class method</remarks>
-        public new System.Func<KNetPredicate<K, V, TJVMK, TJVMV>, bool> OnTest { get; set; } = null;
+        public new System.Func<Predicate<K, V, TJVMK, TJVMV>, bool> OnTest { get; set; } = null;
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
@@ -69,24 +69,24 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet implementation of <see cref="KNetPredicate{K, V, TJVMK, TJVMV}"/>
+    /// KNet implementation of <see cref="Predicate{K, V, TJVMK, TJVMV}"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetPredicate<K, V> : KNetPredicate<K, V, byte[], byte[]>
+    public class Predicate<K, V> : Predicate<K, V, byte[], byte[]>
     {
         byte[] _arg0, _arg1;
         K _key;
         bool _keySet;
         V _value;
         bool _valueSet;
-        IKNetSerDes<K> _kSerializer = null;
-        IKNetSerDes<V> _vSerializer = null;
+        ISerDes<K> _kSerializer = null;
+        ISerDes<V> _vSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnTest"/> has a value it takes precedence over corresponding <see cref="KNetPredicate{K, V, TJVMK, TJVMV}.Test()"/> class method</remarks>
-        public new System.Func<KNetPredicate<K, V>, bool> OnTest { get; set; } = null;
+        /// <remarks>If <see cref="OnTest"/> has a value it takes precedence over corresponding <see cref="Predicate{K, V, TJVMK, TJVMV}.Test()"/> class method</remarks>
+        public new System.Func<Predicate<K, V>, bool> OnTest { get; set; } = null;
         /// <inheritdoc/>
         public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
         /// <inheritdoc/>

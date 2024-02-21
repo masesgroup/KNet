@@ -24,7 +24,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <summary>
     /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}"/> to execute <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}.Test(K, V)"/> directly in the JVM
     /// </summary>
-    public class KNetPredicateEqualityTest<TKey, TValue> : KNetPredicate<TKey, TValue>, IGenericSerDesFactoryApplier
+    public class PredicateEqualityTest<TKey, TValue> : Predicate<TKey, TValue>, IGenericSerDesFactoryApplier
     {
         TKey _key;
         TValue _value;
@@ -52,33 +52,33 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public KNetPredicateEqualityTest() { }
+        public PredicateEqualityTest() { }
         /// <summary>
-        /// Initialize a new <see cref="KNetPredicateEqualityTest{TKey, TValue}"/> only for key comparison
+        /// Initialize a new <see cref="PredicateEqualityTest{TKey, TValue}"/> only for key comparison
         /// </summary>
         /// <param name="key">The key to use in comparison</param>
-        public KNetPredicateEqualityTest(TKey key)
+        public PredicateEqualityTest(TKey key)
         {
             _key = key;
             _isKeyCheck = true;
         }
         /// <summary>
-        /// Initialize a new <see cref="KNetPredicateEqualityTest{TKey, TValue}"/> only for value comparison
+        /// Initialize a new <see cref="PredicateEqualityTest{TKey, TValue}"/> only for value comparison
         /// </summary>
         /// <param name="value">The value to use in comparison</param>
-        public KNetPredicateEqualityTest(TValue value)
+        public PredicateEqualityTest(TValue value)
         {
             _value = value;
             _isKeyCheck = false;
         }
         /// <summary>
-        /// Initialize a new <see cref="KNetPredicateEqualityTest{TKey, TValue}"/> for both key and value comparison
+        /// Initialize a new <see cref="PredicateEqualityTest{TKey, TValue}"/> for both key and value comparison
         /// </summary>
         /// <param name="key">The key to use in comparison</param>
         /// <param name="value">The value to use in comparison</param>
         /// <param name="isKeyCheck">Set to <see langword="true"/> to check the <see cref="Key"/>, set to <see langword="false"/> to check the <see cref="Value"/> or leave undefined to check both <see cref="Key"/> and <see cref="Value"/></param>
         /// <remarks>Both <paramref name="key"/> and <paramref name="value"/> shall be equal to input parameters of <see cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}.Test(K, V)"/> to return <see langword="true"/></remarks>
-        public KNetPredicateEqualityTest(TKey key, TValue value, bool? isKeyCheck = null)
+        public PredicateEqualityTest(TKey key, TValue value, bool? isKeyCheck = null)
         {
             _key = key;
             _value = value;

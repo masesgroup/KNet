@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V1">first value type</typeparam>
     /// <typeparam name="V2">second value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public abstract class KNetValueJoinerWithKey<K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<TJVMK1, TJVMV1, TJVMV2, TJVMVR>, IGenericSerDesFactoryApplier
+    public abstract class ValueJoinerWithKey<K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<TJVMK1, TJVMV1, TJVMV2, TJVMVR>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
-        public new System.Func<KNetValueJoinerWithKey<K1, V1, V2, VR>, VR> OnApply { get; set; } = null;
+        public new System.Func<ValueJoinerWithKey<K1, V1, V2, VR>, VR> OnApply { get; set; } = null;
         /// <summary>
         /// The <typeparamref name="K1"/> content
         /// </summary>
@@ -76,13 +76,13 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="KNetValueJoinerWithKey{K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR}"/>
+    /// KNet extension of <see cref="ValueJoinerWithKey{K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR}"/>
     /// </summary>
     /// <typeparam name="K1">key value type</typeparam>
     /// <typeparam name="V1">first value type</typeparam>
     /// <typeparam name="V2">second value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public class KNetValueJoinerWithKey<K1, V1, V2, VR> : KNetValueJoinerWithKey<K1, V1, V2, VR, byte[], byte[], byte[], byte[]>
+    public class ValueJoinerWithKey<K1, V1, V2, VR> : ValueJoinerWithKey<K1, V1, V2, VR, byte[], byte[], byte[], byte[]>
     {
         byte[] _arg0, _arg1, _arg2;
         K1 _key1;
@@ -91,15 +91,15 @@ namespace MASES.KNet.Streams.Kstream
         bool _value1Set = false;
         V2 _value2;
         bool _value2Set = false;
-        IKNetSerDes<K1> _k1Serializer = null;
-        IKNetSerDes<V1> _v1Serializer = null;
-        IKNetSerDes<V2> _v2Serializer = null;
-        IKNetSerDes<VR> _vrSerializer = null;
+        ISerDes<K1> _k1Serializer = null;
+        ISerDes<V1> _v1Serializer = null;
+        ISerDes<V2> _v2Serializer = null;
+        ISerDes<VR> _vrSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="KNetValueJoinerWithKey{K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR}.Apply()"/> class method</remarks>
-        public new System.Func<KNetValueJoinerWithKey<K1, V1, V2, VR>, VR> OnApply { get; set; } = null;
+        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="ValueJoinerWithKey{K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR}.Apply()"/> class method</remarks>
+        public new System.Func<ValueJoinerWithKey<K1, V1, V2, VR>, VR> OnApply { get; set; } = null;
         /// <inheritdoc/>
         public override K1 Key { get { if (!_key1Set) { _k1Serializer ??= Factory?.BuildKeySerDes<K1>(); _key1 = _k1Serializer.Deserialize(null, _arg0); _key1Set = true; } return _key1; } }
         /// <inheritdoc/>

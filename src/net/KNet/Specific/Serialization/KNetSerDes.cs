@@ -29,7 +29,7 @@ namespace MASES.KNet.Serialization
     /// </summary>
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
     /// <typeparam name="TJVMT">The corresponding JVM type used</typeparam>
-    public interface IKNetSerDes<T, TJVMT> : IKNetSerializer<T, TJVMT>, IKNetDeserializer<T, TJVMT>
+    public interface ISerDes<T, TJVMT> : ISerializer<T, TJVMT>, IDeserializer<T, TJVMT>
     {
         /// <summary>
         /// The <see cref="Serde{T}"/> to use in Apache Kafka
@@ -41,7 +41,7 @@ namespace MASES.KNet.Serialization
     /// KNet common serializer/deserializer based on <see cref="byte"/> array JVM type
     /// </summary>
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
-    public interface IKNetSerDes<T> : IKNetSerDes<T, byte[]>, IKNetSerializer<T>, IKNetDeserializer<T>
+    public interface ISerDes<T> : ISerDes<T, byte[]>, ISerializer<T>, IDeserializer<T>
     {
 
     }
@@ -51,7 +51,7 @@ namespace MASES.KNet.Serialization
     /// </summary>
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
     /// <typeparam name="TJVMT">The corresponding JVM type used</typeparam>
-    public class KNetSerDes<T, TJVMT> : IKNetSerDes<T, TJVMT>
+    public class SerDes<T, TJVMT> : ISerDes<T, TJVMT>
     {
         #region private fields
         readonly KNetSerialization.SerializationType _SerializationType;
@@ -66,7 +66,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Default initializer
         /// </summary>
-        public KNetSerDes()
+        public SerDes()
         {
             _SerializationType = KNetSerialization.InternalSerDesType<T>();
             _JVMSerializationType = KNetSerialization.InternalJVMSerDesType<TJVMT>();
@@ -136,7 +136,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Finalizer
         /// </summary>
-        ~KNetSerDes()
+        ~SerDes()
         {
             Dispose();
         }
@@ -168,15 +168,15 @@ namespace MASES.KNet.Serialization
         /// External deserialization function using <see cref="Headers"/>
         /// </summary>
         public Func<string, Headers, byte[], T> OnDeserializeWithHeaders { get; set; }
-        /// <inheritdoc cref="IKNetSerDes{T, TJVMT}.KafkaSerde"/>
+        /// <inheritdoc cref="ISerDes{T, TJVMT}.KafkaSerde"/>
         public Serde<TJVMT> KafkaSerde => _KafkaSerde;
-        /// <inheritdoc cref="IKNetSerializer{T, TJVMT}.KafkaSerializer"/>
+        /// <inheritdoc cref="ISerializer{T, TJVMT}.KafkaSerializer"/>
         public Serializer<TJVMT> KafkaSerializer => _KafkaSerializer;
-        /// <inheritdoc cref="IKNetDeserializer{T, TJVMT}.KafkaDeserializer"/>
+        /// <inheritdoc cref="IDeserializer{T, TJVMT}.KafkaDeserializer"/>
         public Deserializer<TJVMT> KafkaDeserializer => _KafkaDeserializer;
-        /// <inheritdoc cref="IKNetDeserializer{T, TJVMT}.UseHeaders"/>
+        /// <inheritdoc cref="IDeserializer{T, TJVMT}.UseHeaders"/>
         public virtual bool UseHeaders => false;
-        /// <inheritdoc cref="IKNetSerializer{T, TJVMT}.Serialize(string, T)"/>
+        /// <inheritdoc cref="ISerializer{T, TJVMT}.Serialize(string, T)"/>
         public virtual byte[] Serialize(string topic, T data)
         {
             if (OnSerialize != null)
@@ -201,7 +201,7 @@ namespace MASES.KNet.Serialization
                 _ => default,
             };
         }
-        /// <inheritdoc cref="IKNetSerializer{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
+        /// <inheritdoc cref="ISerializer{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
         public virtual byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
             if (OnSerializeWithHeaders != null)
@@ -211,7 +211,7 @@ namespace MASES.KNet.Serialization
             return Serialize(topic, data);
         }
 
-        /// <inheritdoc cref="IKNetDeserializer{T, TJVMT}.Deserialize(string, byte[])"/>
+        /// <inheritdoc cref="IDeserializer{T, TJVMT}.Deserialize(string, byte[])"/>
         public virtual T Deserialize(string topic, byte[] data)
         {
             if (OnDeserialize != null)
@@ -235,7 +235,7 @@ namespace MASES.KNet.Serialization
                 _ => default,
             };
         }
-        /// <inheritdoc cref="IKNetDeserializer{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
+        /// <inheritdoc cref="IDeserializer{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
         public virtual T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
         {
             if (OnDeserializeWithHeaders != null)
@@ -252,7 +252,7 @@ namespace MASES.KNet.Serialization
     /// Common serializer/deserializer
     /// </summary>
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
-    public class KNetSerDes<T> : KNetSerDes<T, byte[]>, IKNetSerDes<T>
+    public class SerDes<T> : SerDes<T, byte[]>, ISerDes<T>
     {
     }
 

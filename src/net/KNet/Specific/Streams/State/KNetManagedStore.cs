@@ -22,10 +22,10 @@ using System;
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
-    /// Supporting interface for <see cref="KNetManagedStore{TStore}"/>
+    /// Supporting interface for <see cref="ManagedStore{TStore}"/>
     /// </summary>
     /// <typeparam name="TStore">The Apache Kafka store type</typeparam>
-    public interface IKNetManagedStore<TStore> : IGenericSerDesFactoryApplier
+    public interface IManagedStore<TStore> : IGenericSerDesFactoryApplier
     {
         /// <summary>
         /// Sets store data
@@ -39,7 +39,7 @@ namespace MASES.KNet.Streams.State
     /// Base class for stores managed from KNet
     /// </summary>
     /// <typeparam name="TStore">The Apache Kafka store type</typeparam>
-    public class KNetManagedStore<TStore> : IKNetManagedStore<TStore>, IGenericSerDesFactoryApplier
+    public class ManagedStore<TStore> : IManagedStore<TStore>, IGenericSerDesFactoryApplier
     {
         TStore _store;
         /// <summary>
@@ -64,7 +64,7 @@ namespace MASES.KNet.Streams.State
                 return factory;
             }
         }
-        void IKNetManagedStore<TStore>.SetData(IGenericSerDesFactory factory, TStore store)
+        void IManagedStore<TStore>.SetData(IGenericSerDesFactory factory, TStore store)
         {
             _factory = factory;
             _store = store;

@@ -27,7 +27,7 @@ namespace MASES.KNet.Serialization
     /// </summary>
     /// <typeparam name="T">The .NET type</typeparam>
     /// <typeparam name="TJVMT">The JVM type used</typeparam>
-    public interface IKNetSerializer<T, TJVMT> : IDisposable
+    public interface ISerializer<T, TJVMT> : IDisposable
     {
         /// <summary>
         /// The <see cref="Serializer{T}"/> to use in Apache Kafka
@@ -37,9 +37,9 @@ namespace MASES.KNet.Serialization
         /// <see langword="true"/> if <see cref="Headers"/>are used
         /// </summary>
         bool UseHeaders { get; }
-        /// <inheritdoc cref="ISerializer{T}.Serialize(Java.Lang.String, T)"/>
+        /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.ISerializer{T}.Serialize(Java.Lang.String, T)"/>
         byte[] Serialize(string topic, T data);
-        /// <inheritdoc cref="ISerializer{T}.Serialize(Java.Lang.String, Headers, T)"/>
+        /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.ISerializer{T}.Serialize(Java.Lang.String, Headers, T)"/>
         byte[] SerializeWithHeaders(string topic, Headers headers, T data);
     }
 
@@ -47,7 +47,7 @@ namespace MASES.KNet.Serialization
     /// KNet interface for serializers based on <see cref="byte"/> array JVM type
     /// </summary>
     /// <typeparam name="T">The .NET type</typeparam>
-    public interface IKNetSerializer<T> : IKNetSerializer<T, byte[]>
+    public interface ISerializer<T> : ISerializer<T, byte[]>
     {
 
     }

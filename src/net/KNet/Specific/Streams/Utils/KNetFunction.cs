@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams.Utils
     /// <typeparam name="KO">The type of the result of the function</typeparam>
     /// <typeparam name="TJVMV">The JVM type of the input to the function</typeparam>
     /// <typeparam name="TJVMKO">The JVM type of the result of the function</typeparam>
-    public class KNetFunction<V, KO, TJVMV, TJVMKO> : Java.Util.Function.Function<TJVMV, TJVMKO>, IGenericSerDesFactoryApplier
+    public class Function<V, KO, TJVMV, TJVMKO> : Java.Util.Function.Function<TJVMV, TJVMKO>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -45,14 +45,14 @@ namespace MASES.KNet.Streams.Utils
     }
 
     /// <summary>
-    /// KNet implementation of <see cref="KNetFunction{V, KO, TJVMV, TJVMKO}"/>
+    /// KNet implementation of <see cref="Function{V, KO, TJVMV, TJVMKO}"/>
     /// </summary>
     /// <typeparam name="V">The key type</typeparam>
     /// <typeparam name="KO">The value type</typeparam>
-    public class KNetFunction<V, KO> : KNetFunction<V, KO, byte[], byte[]>
+    public class Function<V, KO> : Function<V, KO, byte[], byte[]>
     {
-        IKNetSerDes<KO> _keySerializer = null;
-        IKNetSerDes<V> _valueSerializer = null;
+        ISerDes<KO> _keySerializer = null;
+        ISerDes<V> _valueSerializer = null;
         /// <summary>
         /// The <see cref="Func{V, KO}"/> to be executed
         /// </summary>

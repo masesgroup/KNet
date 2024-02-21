@@ -26,19 +26,19 @@ namespace MASES.KNet.Streams
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public sealed class KNetWindowedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
+    public sealed class WindowedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> _valueInner;
-        KNetWindowed<TKey> _key = null;
+        Windowed<TKey> _key = null;
         TValue _value;
         bool _valueStored;
-        IKNetSerDes<TValue> _valueSerDes = null;
+        ISerDes<TValue> _valueSerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetWindowedKeyValue(IGenericSerDesFactory factory,
+        internal WindowedKeyValue(IGenericSerDesFactory factory,
                                       Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> value,
-                                      IKNetSerDes<TValue> valueSerDes,
+                                      ISerDes<TValue> valueSerDes,
                                       bool fromPrefetched)
         {
             _factory = factory;
@@ -55,11 +55,11 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
-        public KNetWindowed<TKey> Key
+        public Windowed<TKey> Key
         {
             get
             {
-                _key ??= new KNetWindowed<TKey>(_factory, _valueInner.key);
+                _key ??= new Windowed<TKey>(_factory, _valueInner.key);
                 return _key;
             }
         }

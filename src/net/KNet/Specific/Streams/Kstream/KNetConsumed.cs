@@ -26,9 +26,9 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public class KNetConsumed<K, V> : IGenericSerDesFactoryApplier
+    public class Consumed<K, V> : IGenericSerDesFactoryApplier
     {
-        KNetTimestampExtractor<K, V> _timestampExtractor = null;
+        TimestampExtractor<K, V> _timestampExtractor = null;
         readonly Org.Apache.Kafka.Streams.Kstream.Consumed<byte[], byte[]> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory
@@ -41,71 +41,71 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
 
-        KNetConsumed(Org.Apache.Kafka.Streams.Kstream.Consumed<byte[], byte[]> inner, KNetTimestampExtractor<K, V> timestampExtractor = null)
+        Consumed(Org.Apache.Kafka.Streams.Kstream.Consumed<byte[], byte[]> inner, TimestampExtractor<K, V> timestampExtractor = null)
         {
             _inner = inner;
             _timestampExtractor = timestampExtractor;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetConsumed{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Consumed{K, V}"/>
+        /// Converter from <see cref="Consumed{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Consumed{K, V}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Consumed<byte[], byte[]>(KNetConsumed<K, V> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Consumed<byte[], byte[]>(Consumed<K, V> t) => t._inner;
 
         #region Static methods
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html#as-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="KNetConsumed{K, V}"/></returns>
-        public static KNetConsumed<K, V> As(string arg0)
+        /// <returns><see cref="Consumed{K, V}"/></returns>
+        public static Consumed<K, V> As(string arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Consumed<byte[], byte[]>.As(arg0);
-            return new KNetConsumed<K, V>(cons);
+            return new Consumed<K, V>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.streams.processor.TimestampExtractor-org.apache.kafka.streams.Topology.AutoOffsetReset-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{K}"/></param>
-        /// <param name="arg1"><see cref="IKNetSerDes{V}"/></param>
-        /// <param name="arg2"><see cref="KNetTimestampExtractor{K, V}"/></param>
+        /// <param name="arg0"><see cref="ISerDes{K}"/></param>
+        /// <param name="arg1"><see cref="ISerDes{V}"/></param>
+        /// <param name="arg2"><see cref="TimestampExtractor{K, V}"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
-        /// <returns><see cref="KNetConsumed{K, V}"/></returns>
-        public static KNetConsumed<K, V> With(IKNetSerDes<K> arg0, IKNetSerDes<V> arg1, KNetTimestampExtractor<K, V> arg2, Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg3)
+        /// <returns><see cref="Consumed{K, V}"/></returns>
+        public static Consumed<K, V> With(ISerDes<K> arg0, ISerDes<V> arg1, TimestampExtractor<K, V> arg2, Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg3)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Consumed<byte[], byte[]>.With(arg0.KafkaSerde, arg1.KafkaSerde, arg2, arg3);
-            return new KNetConsumed<K, V>(cons, arg2);
+            return new Consumed<K, V>(cons, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{K}"/></param>
-        /// <param name="arg1"><see cref="IKNetSerDes{V}"/></param>
-        /// <returns><see cref="KNetConsumed{K, V}"/></returns>
-        public static KNetConsumed<K, V> With(IKNetSerDes<K> arg0, IKNetSerDes<V> arg1)
+        /// <param name="arg0"><see cref="ISerDes{K}"/></param>
+        /// <param name="arg1"><see cref="ISerDes{V}"/></param>
+        /// <returns><see cref="Consumed{K, V}"/></returns>
+        public static Consumed<K, V> With(ISerDes<K> arg0, ISerDes<V> arg1)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Consumed<byte[], byte[]>.With(arg0.KafkaSerde, arg1.KafkaSerde);
-            return new KNetConsumed<K, V>(cons);
+            return new Consumed<K, V>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html#with-org.apache.kafka.streams.processor.TimestampExtractor-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetTimestampExtractor{K, V}"/></param>
-        /// <returns><see cref="KNetConsumed{K, V}"/></returns>
-        public static KNetConsumed<K, V> With(KNetTimestampExtractor<K, V> arg0)
+        /// <param name="arg0"><see cref="TimestampExtractor{K, V}"/></param>
+        /// <returns><see cref="Consumed{K, V}"/></returns>
+        public static Consumed<K, V> With(TimestampExtractor<K, V> arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Consumed<byte[], byte[]>.With(arg0);
-            return new KNetConsumed<K, V>(cons, arg0);
+            return new Consumed<K, V>(cons, arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html#with-org.apache.kafka.streams.Topology.AutoOffsetReset-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
-        /// <returns><see cref="KNetConsumed{K, V}"/></returns>
-        public static KNetConsumed<K, V> With(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
+        /// <returns><see cref="Consumed{K, V}"/></returns>
+        public static Consumed<K, V> With(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Consumed<byte[], byte[]>.With(arg0);
-            return new KNetConsumed<K, V>(cons);
+            return new Consumed<K, V>(cons);
         }
 
         #endregion
@@ -114,9 +114,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{K}"/></param>
-        /// <returns><see cref="KNetConsumed{K, V}"/></returns>
-        public KNetConsumed<K, V> WithKeySerde(IKNetSerDes<K> arg0)
+        /// <param name="arg0"><see cref="ISerDes{K}"/></param>
+        /// <returns><see cref="Consumed{K, V}"/></returns>
+        public Consumed<K, V> WithKeySerde(ISerDes<K> arg0)
         {
             _inner?.WithKeySerde(arg0.KafkaSerde);
             return this;
@@ -125,8 +125,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html#withOffsetResetPolicy-org.apache.kafka.streams.Topology.AutoOffsetReset-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
-        /// <returns><see cref="KNetConsumed{K, V}"/></returns>
-        public KNetConsumed<K, V> WithOffsetResetPolicy(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
+        /// <returns><see cref="Consumed{K, V}"/></returns>
+        public Consumed<K, V> WithOffsetResetPolicy(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
         {
             _inner?.WithOffsetResetPolicy(arg0);
             return this;
@@ -134,9 +134,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html#withTimestampExtractor-org.apache.kafka.streams.processor.TimestampExtractor-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetTimestampExtractor{K, V}"/></param>
-        /// <returns><see cref="KNetConsumed{K, V}"/></returns>
-        public KNetConsumed<K, V> WithTimestampExtractor(KNetTimestampExtractor<K, V> arg0)
+        /// <param name="arg0"><see cref="TimestampExtractor{K, V}"/></param>
+        /// <returns><see cref="Consumed{K, V}"/></returns>
+        public Consumed<K, V> WithTimestampExtractor(TimestampExtractor<K, V> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             _timestampExtractor = arg0;
@@ -146,9 +146,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{V}"/></param>
-        /// <returns><see cref="KNetConsumed{K, V}"/></returns>
-        public KNetConsumed<K, V> WithValueSerde(IKNetSerDes<V> arg0)
+        /// <param name="arg0"><see cref="ISerDes{V}"/></param>
+        /// <returns><see cref="Consumed{K, V}"/></returns>
+        public Consumed<K, V> WithValueSerde(ISerDes<V> arg0)
         {
             _inner?.WithValueSerde(arg0.KafkaSerde);
             return this;

@@ -25,22 +25,22 @@ namespace MASES.KNet.Streams.State
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.WindowStoreIterator"/> 
     /// </summary>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetWindowStoreIterator<TValue> : IGenericSerDesFactoryApplier
+    public class WindowStoreIterator<TValue> : IGenericSerDesFactoryApplier
     { 
         readonly Org.Apache.Kafka.Streams.State.WindowStoreIterator<byte[]> _iterator;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetWindowStoreIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.WindowStoreIterator<byte[]> iterator)
+        internal WindowStoreIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.WindowStoreIterator<byte[]> iterator)
         {
             _factory = factory;
             _iterator = iterator;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetWindowStoreIterator{TValue}"/> to <see cref="KNetKeyValueIterator{Int64, TValue}"/>
+        /// Converter from <see cref="WindowStoreIterator{TValue}"/> to <see cref="KeyValueIterator{Int64, TValue}"/>
         /// </summary>
-        public static implicit operator KNetKeyValueIterator<long, TValue>(KNetWindowStoreIterator<TValue> t) => new KNetKeyValueIterator<long, TValue>(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, byte[]>>());
+        public static implicit operator KeyValueIterator<long, TValue>(WindowStoreIterator<TValue> t) => new KeyValueIterator<long, TValue>(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, byte[]>>());
 
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#close--"/>

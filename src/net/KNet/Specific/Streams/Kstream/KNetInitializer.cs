@@ -25,7 +25,7 @@ namespace MASES.KNet.Streams.Kstream
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Initializer{TJVMVA}"/>
     /// </summary>
     /// <typeparam name="VA">The key type</typeparam>
-    public class KNetInitializer<VA, TJVMVA> : Org.Apache.Kafka.Streams.Kstream.Initializer<TJVMVA>, IGenericSerDesFactoryApplier
+    public class Initializer<VA, TJVMVA> : Org.Apache.Kafka.Streams.Kstream.Initializer<TJVMVA>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -64,9 +64,9 @@ namespace MASES.KNet.Streams.Kstream
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Initializer{VA}"/>
     /// </summary>
     /// <typeparam name="VA">The key type</typeparam>
-    public class KNetInitializer<VA> : KNetInitializer<VA, byte[]>
+    public class Initializer<VA> : Initializer<VA, byte[]>
     {
-        IKNetSerDes<VA> _valueSerializer = null;
+        ISerDes<VA> _valueSerializer = null;
         /// <inheritdoc/>
         public sealed override byte[] Apply()
         {

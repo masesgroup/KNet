@@ -25,35 +25,35 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public class KNetBranchedKStream<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
+    public class BranchedKStream<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
         Org.Apache.Kafka.Streams.Kstream.BranchedKStream<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetBranchedKStream(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.BranchedKStream<TJVMK, TJVMV> inner)
+        internal BranchedKStream(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.BranchedKStream<TJVMK, TJVMV> inner)
         {
             _factory = factory;
             _inner = inner;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetBranchedKStream{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream{K, V}"/>
+        /// Converter from <see cref="BranchedKStream{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream{K, V}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.BranchedKStream<TJVMK, TJVMV>(KNetBranchedKStream<K, V, TJVMK, TJVMV> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.BranchedKStream<TJVMK, TJVMV>(BranchedKStream<K, V, TJVMK, TJVMV> t) => t._inner;
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch--"/>
         /// </summary>
         /// <returns><see cref="System.Collections.Generic.IReadOnlyDictionary{TKey, TValue}"/></returns>
-        public System.Collections.Generic.IReadOnlyDictionary<string, KNetKStream<K, V, TJVMK, TJVMV>> DefaultBranch()
+        public System.Collections.Generic.IReadOnlyDictionary<string, KStream<K, V, TJVMK, TJVMV>> DefaultBranch()
         {
-            var dict = new System.Collections.Generic.Dictionary<string, KNetKStream<K, V, TJVMK, TJVMV>>();
+            var dict = new System.Collections.Generic.Dictionary<string, KStream<K, V, TJVMK, TJVMV>>();
             var map = _inner.DefaultBranch();
             foreach (var item in map.KeySet())
             {
-                var kStream = new KNetKStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
+                var kStream = new KStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
                 dict.Add(item, kStream);
             }
 
@@ -64,14 +64,14 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public System.Collections.Generic.IReadOnlyDictionary<string, KNetKStream<K, V, TJVMK, TJVMV>> DefaultBranch(KNetBranched<K, V, TJVMK, TJVMV> arg0)
+        public System.Collections.Generic.IReadOnlyDictionary<string, KStream<K, V, TJVMK, TJVMV>> DefaultBranch(Branched<K, V, TJVMK, TJVMV> arg0)
         {
-            var dict = new System.Collections.Generic.Dictionary<string, KNetKStream<K, V, TJVMK, TJVMV>>();
+            var dict = new System.Collections.Generic.Dictionary<string, KStream<K, V, TJVMK, TJVMV>>();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             var map = _inner.DefaultBranch(arg0);
             foreach (var item in map.KeySet())
             {
-                var kStream = new KNetKStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
+                var kStream = new KStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
                 dict.Add(item, kStream);
             }
 
@@ -81,13 +81,13 @@ namespace MASES.KNet.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html#noDefaultBranch--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public System.Collections.Generic.IReadOnlyDictionary<string, KNetKStream<K, V, TJVMK, TJVMV>> NoDefaultBranch()
+        public System.Collections.Generic.IReadOnlyDictionary<string, KStream<K, V, TJVMK, TJVMV>> NoDefaultBranch()
         {
-            var dict = new System.Collections.Generic.Dictionary<string, KNetKStream<K, V, TJVMK, TJVMV>>();
+            var dict = new System.Collections.Generic.Dictionary<string, KStream<K, V, TJVMK, TJVMV>>();
             var map = _inner.NoDefaultBranch();
             foreach (var item in map.KeySet())
             {
-                var kStream = new KNetKStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
+                var kStream = new KStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
                 dict.Add(item, kStream);
             }
 
@@ -101,11 +101,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream"/></returns>
-        public KNetBranchedKStream<K, V, TJVMK, TJVMV> Branch<Arg0objectSuperK, Arg0objectSuperV>(KNetPredicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0, KNetBranched<K, V, TJVMK, TJVMV> arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
+        public BranchedKStream<K, V, TJVMK, TJVMV> Branch<Arg0objectSuperK, Arg0objectSuperV>(Predicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0, Branched<K, V, TJVMK, TJVMV> arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
-            return new KNetBranchedKStream<K, V, TJVMK, TJVMV>(_factory, _inner.Branch<TJVMK, TJVMV>(arg0, arg1));
+            return new BranchedKStream<K, V, TJVMK, TJVMV>(_factory, _inner.Branch<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html#branch-org.apache.kafka.streams.kstream.Predicate-"/>
@@ -114,10 +114,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream"/></returns>
-        public KNetBranchedKStream<K, V, TJVMK, TJVMV> Branch<Arg0objectSuperK, Arg0objectSuperV>(KNetPredicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
+        public BranchedKStream<K, V, TJVMK, TJVMV> Branch<Arg0objectSuperK, Arg0objectSuperV>(Predicate<Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KNetBranchedKStream<K, V, TJVMK, TJVMV>(_factory, _inner.Branch<TJVMK, TJVMV>(arg0));
+            return new BranchedKStream<K, V, TJVMK, TJVMV>(_factory, _inner.Branch<TJVMK, TJVMV>(arg0));
         }
     }
 }

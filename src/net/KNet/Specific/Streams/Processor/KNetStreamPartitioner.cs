@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams.Processor
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public abstract class KNetStreamPartitioner<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Processor.StreamPartitioner<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
+    public abstract class StreamPartitioner<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Processor.StreamPartitioner<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
         /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding <see cref="Partitions()"/> class method</remarks>
-        public new System.Func<KNetStreamPartitioner<K, V, TJVMK, TJVMV>, System.Collections.Generic.ICollection<int?>> OnPartitions { get; set; } = null;
+        public new System.Func<StreamPartitioner<K, V, TJVMK, TJVMV>, System.Collections.Generic.ICollection<int?>> OnPartitions { get; set; } = null;
         /// <summary>
         /// The topic name this record is sent to
         /// </summary>
@@ -79,11 +79,11 @@ namespace MASES.KNet.Streams.Processor
     }
 
     /// <summary>
-    /// KNet implementation of <see cref="KNetStreamPartitioner{K, V, TJVMK, TJVMV}"/>
+    /// KNet implementation of <see cref="StreamPartitioner{K, V, TJVMK, TJVMV}"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetStreamPartitioner<K, V> : KNetStreamPartitioner<K, V, byte[], byte[]>
+    public class StreamPartitioner<K, V> : StreamPartitioner<K, V, byte[], byte[]>
     {
         string _arg0;
         byte[] _arg1, _arg2;
@@ -92,13 +92,13 @@ namespace MASES.KNet.Streams.Processor
         bool _keySet = false;
         V _value;
         bool _valueSet = false;
-        IKNetSerDes<K> _kSerializer = null;
-        IKNetSerDes<V> _vSerializer = null;
+        ISerDes<K> _kSerializer = null;
+        ISerDes<V> _vSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding <see cref="KNetStreamPartitioner{K, V, TJVMK, TJVMV}.Partitions()"/> class method</remarks>
-        public new System.Func<KNetStreamPartitioner<K, V>, System.Collections.Generic.ICollection<int?>> OnPartitions { get; set; } = null;
+        /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding <see cref="StreamPartitioner{K, V, TJVMK, TJVMV}.Partitions()"/> class method</remarks>
+        public new System.Func<StreamPartitioner<K, V>, System.Collections.Generic.ICollection<int?>> OnPartitions { get; set; } = null;
         /// <inheritdoc/>
         public override string Topic => _arg0;
         /// <inheritdoc/>

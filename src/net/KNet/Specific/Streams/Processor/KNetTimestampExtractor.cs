@@ -28,23 +28,23 @@ namespace MASES.KNet.Streams.Processor
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetTimestampExtractor<TKey, TValue> : Org.Apache.Kafka.Streams.Processor.TimestampExtractor, IGenericSerDesFactoryApplier
+    public class TimestampExtractor<TKey, TValue> : Org.Apache.Kafka.Streams.Processor.TimestampExtractor, IGenericSerDesFactoryApplier
     {
-        KNetConsumerRecord<TKey, TValue> _record;
+        ConsumerRecord<TKey, TValue> _record;
         DateTime? _partitionTime;
-        IKNetSerDes<TKey> _keySerializer = null;
-        IKNetSerDes<TValue> _valueSerializer = null;
+        ISerDes<TKey> _keySerializer = null;
+        ISerDes<TValue> _valueSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TimestampExtractor.html#extract-org.apache.kafka.clients.consumer.ConsumerRecord-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
-        public new System.Func<KNetTimestampExtractor<TKey, TValue>, DateTime> OnExtract { get; set; } = null;
+        public new System.Func<TimestampExtractor<TKey, TValue>, DateTime> OnExtract { get; set; } = null;
         /// <summary>
-        /// The <see cref="KNetConsumerRecord{K, V}"/> to be used
+        /// The <see cref="ConsumerRecord{K, V}"/> to be used
         /// </summary>
-        public KNetConsumerRecord<TKey, TValue> Record => _record;
+        public ConsumerRecord<TKey, TValue> Record => _record;
         /// <summary>
         /// The highest extracted valid <see cref="DateTime"/> of the current record's partition˙ (could be <see langword="null"/> if unknown)
         /// </summary>
@@ -56,7 +56,7 @@ namespace MASES.KNet.Streams.Processor
             _valueSerializer ??= _factory?.BuildValueSerDes<TValue>();
             var record = arg0.Cast<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>>(); // KNet consider the data within Apache Kafka Streams defined always as byte[]
 
-            _record = new KNetConsumerRecord<TKey, TValue>(record, _factory);
+            _record = new ConsumerRecord<TKey, TValue>(record, _factory);
             _partitionTime = (arg1 == -1) ? null : DateTimeOffset.FromUnixTimeMilliseconds(arg1).DateTime;
             var res = (OnExtract != null) ? OnExtract(this) : Extract();
             return new DateTimeOffset(res).ToUnixTimeMilliseconds();

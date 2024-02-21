@@ -27,7 +27,7 @@ namespace MASES.KNet.Serialization
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <typeparam name="TJVMT">The JVM type used</typeparam>
-    public interface IKNetDeserializer<T, TJVMT> : IDisposable
+    public interface IDeserializer<T, TJVMT> : IDisposable
     {
         /// <summary>
         /// The <see cref="Deserializer{T}"/> to use in Apache Kafka
@@ -37,9 +37,9 @@ namespace MASES.KNet.Serialization
         /// <see langword="true"/> if <see cref="Headers"/>are used
         /// </summary>
         bool UseHeaders { get; }
-        /// <inheritdoc cref="IDeserializer{T}.Deserialize(Java.Lang.String, byte[])"/>
+        /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.IDeserializer{T}.Deserialize(Java.Lang.String, byte[])"/>
         T Deserialize(string topic, byte[] data);
-        /// <inheritdoc cref="IDeserializer{T}.Deserialize(Java.Lang.String, Headers, byte[])"/>
+        /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.IDeserializer{T}.Deserialize(Java.Lang.String, Headers, byte[])"/>
         T DeserializeWithHeaders(string topic, Headers headers, byte[] data);
     }
 
@@ -47,7 +47,7 @@ namespace MASES.KNet.Serialization
     /// KNet interface for deserializers based on <see cref="byte"/> array JVM type
     /// </summary>
     /// <typeparam name="T">The .NET type</typeparam>
-    public interface IKNetDeserializer<T> : IKNetDeserializer<T, byte[]>
+    public interface IDeserializer<T> : IDeserializer<T, byte[]>
     {
 
     }

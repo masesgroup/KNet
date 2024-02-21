@@ -24,23 +24,23 @@ namespace MASES.KNet.Streams.Kstream
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
-    public class KNetWindowed<TKey> : IGenericSerDesFactoryApplier
+    public class Windowed<TKey> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]> _inner;
-        IKNetSerDes<TKey> _keySerDes = null;
+        ISerDes<TKey> _keySerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetWindowed(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]> windowed)
+        internal Windowed(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]> windowed)
         {
             _factory = factory;
             _inner = windowed;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetWindowed{K}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
+        /// Converter from <see cref="Windowed{K}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>(KNetWindowed<TKey> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>(Windowed<TKey> t) => t._inner;
 
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windowed.html#key--"/>

@@ -27,7 +27,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VA">The key type</typeparam>
-    public abstract class KNetAggregator<K, V, VA, TJVMK, TJVMV, TJVMVA> : Org.Apache.Kafka.Streams.Kstream.Aggregator<TJVMK, TJVMV, TJVMVA>, IGenericSerDesFactoryApplier
+    public abstract class Aggregator<K, V, VA, TJVMK, TJVMV, TJVMVA> : Org.Apache.Kafka.Streams.Kstream.Aggregator<TJVMK, TJVMV, TJVMVA>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -50,7 +50,7 @@ namespace MASES.KNet.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method <see cref="Apply()"/></remarks>
-        public new System.Func<KNetAggregator<K, V, VA>, VA> OnApply { get; set; } = null;
+        public new System.Func<Aggregator<K, V, VA>, VA> OnApply { get; set; } = null;
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
@@ -74,12 +74,12 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet implementation of <see cref="KNetAggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/>
+    /// KNet implementation of <see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VA">The key type</typeparam>
-    public class KNetAggregator<K, V, VA> : KNetAggregator<K, V, VA, byte[], byte[], byte[]>
+    public class Aggregator<K, V, VA> : Aggregator<K, V, VA, byte[], byte[], byte[]>
     {
         byte[] _arg0, _arg1, _arg2;
         K _key;
@@ -88,14 +88,14 @@ namespace MASES.KNet.Streams.Kstream
         bool _valueSet = false;
         VA _aggregate;
         bool _aggregateSet = false;
-        IKNetSerDes<K> _kSerializer = null;
-        IKNetSerDes<V> _vSerializer = null;
-        IKNetSerDes<VA> _vaSerializer = null;
+        ISerDes<K> _kSerializer = null;
+        ISerDes<V> _vSerializer = null;
+        ISerDes<VA> _vaSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method <see cref="KNetAggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}.Apply()"/></remarks>
-        public new System.Func<KNetAggregator<K, V, VA>, VA> OnApply { get; set; } = null;
+        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method <see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}.Apply()"/></remarks>
+        public new System.Func<Aggregator<K, V, VA>, VA> OnApply { get; set; } = null;
         /// <inheritdoc/>
         public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
         /// <inheritdoc/>

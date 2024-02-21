@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams.Processor
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM key type</typeparam>
     /// <typeparam name="TJVMV">The JVM value type</typeparam>
-    public abstract class KNetTopicNameExtractor<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Processor.TopicNameExtractor<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
+    public abstract class TopicNameExtractor<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Processor.TopicNameExtractor<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding <see cref="Extract()"/> class method</remarks>
-        public new System.Func<KNetTopicNameExtractor<K, V>, string> OnExtract { get; set; } = null;
+        public new System.Func<TopicNameExtractor<K, V>, string> OnExtract { get; set; } = null;
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
@@ -79,7 +79,7 @@ namespace MASES.KNet.Streams.Processor
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetTopicNameExtractor<K, V> : KNetTopicNameExtractor<K, V, byte[], byte[]>
+    public class TopicNameExtractor<K, V> : TopicNameExtractor<K, V, byte[], byte[]>
     {
         byte[] _arg0, _arg1;
         K _key;
@@ -87,13 +87,13 @@ namespace MASES.KNet.Streams.Processor
         V _value;
         bool _valueSet = false;
         Org.Apache.Kafka.Streams.Processor.RecordContext _context;
-        IKNetSerDes<K> _kSerializer = null;
-        IKNetSerDes<V> _vSerializer = null;
+        ISerDes<K> _kSerializer = null;
+        ISerDes<V> _vSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding <see cref="KNetTopicNameExtractor{K, V, TJVMK, TJVMV}.Extract()"/> class method</remarks>
-        public new System.Func<KNetTopicNameExtractor<K, V>, string> OnExtract { get; set; } = null;
+        /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding <see cref="TopicNameExtractor{K, V, TJVMK, TJVMV}.Extract()"/> class method</remarks>
+        public new System.Func<TopicNameExtractor<K, V>, string> OnExtract { get; set; } = null;
         /// <inheritdoc/>
         public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
         /// <inheritdoc/>

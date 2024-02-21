@@ -27,12 +27,12 @@ using System;
 namespace MASES.KNet.Consumer
 {
 #if NET7_0_OR_GREATER
-    sealed class KNetConsumerRecordsPrefetchableEnumerator<K, V>(Java.Util.Iterator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>> records,
-                                                                 IKNetSerDes<K> keySerDes,
-                                                                 IKNetSerDes<V> valueSerDes,
-                                                                 bool isAsync, CancellationToken token = default)
-        : JVMBridgeBasePrefetchableEnumerator<KNetConsumerRecord<K, V>>(records.BridgeInstance, new PrefetchableEnumeratorSettings()),
-          IAsyncEnumerator<KNetConsumerRecord<K, V>>
+    sealed class ConsumerRecordsPrefetchableEnumerator<K, V>(Java.Util.Iterator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>> records,
+                                                             ISerDes<K> keySerDes,
+                                                             ISerDes<V> valueSerDes,
+                                                             bool isAsync, CancellationToken token = default)
+        : JVMBridgeBasePrefetchableEnumerator<ConsumerRecord<K, V>>(records.BridgeInstance, new PrefetchableEnumeratorSettings()),
+          IAsyncEnumerator<ConsumerRecord<K, V>>
     {
         Java.Util.Iterator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>> _records = records; // used to do not lost reference
 
@@ -40,7 +40,7 @@ namespace MASES.KNet.Consumer
         {
             if (input is IJavaObject obj)
             {
-                return new KNetConsumerRecord<K, V>(JVMBridgeBase.Wraps<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>>(obj), keySerDes, valueSerDes, true);
+                return new ConsumerRecord<K, V>(JVMBridgeBase.Wraps<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>>(obj), keySerDes, valueSerDes, true);
             }
             throw new InvalidCastException($"input is not a valid IJavaObject");
         }
@@ -50,7 +50,7 @@ namespace MASES.KNet.Consumer
             return isAsync ? !token.IsCancellationRequested : base.DoWorkCycle();
         }
 
-        public KNetConsumerRecord<K, V> Current => (this as IEnumerator<KNetConsumerRecord<K, V>>).Current;
+        public ConsumerRecord<K, V> Current => (this as IEnumerator<ConsumerRecord<K, V>>).Current;
 
         public ValueTask<bool> MoveNextAsync()
         {

@@ -163,7 +163,7 @@ namespace MASES.KNet
                     var keyT = value.GetGenericArguments();
                     if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
                     var t = value.GetGenericTypeDefinition();
-                    if (t.GetInterface(typeof(IKNetSerDes<>).Name) == null)
+                    if (t.GetInterface(typeof(ISerDes<>).Name) == null)
                     {
                         throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
                     }
@@ -190,7 +190,7 @@ namespace MASES.KNet
                     var keyT = value.GetGenericArguments();
                     if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
                     var t = value.GetGenericTypeDefinition();
-                    if (t.GetInterface(typeof(IKNetSerDes<>).Name) == null)
+                    if (t.GetInterface(typeof(ISerDes<>).Name) == null)
                     {
                         throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
                     }
@@ -203,7 +203,7 @@ namespace MASES.KNet
         readonly ConcurrentDictionary<(Type, Type), object> _keySerDesComplete = new();
 
         /// <inheritdoc cref="IGenericSerDesFactory.BuildKeySerDes{TKey, TJVMTKey}"/>
-        public IKNetSerDes<TKey, TJVMTKey> BuildKeySerDes<TKey, TJVMTKey>()
+        public ISerDes<TKey, TJVMTKey> BuildKeySerDes<TKey, TJVMTKey>()
         {
             lock (_keySerDesComplete)
             {
@@ -211,7 +211,7 @@ namespace MASES.KNet
                 {
                     if (KNetSerialization.IsInternalManaged<TKey>())
                     {
-                        serDes = new KNetSerDes<TKey>();
+                        serDes = new SerDes<TKey>();
                     }
                     else
                     {
@@ -221,14 +221,14 @@ namespace MASES.KNet
                     }
                     _keySerDesComplete[(typeof(TKey), typeof(TJVMTKey))] = serDes;
                 }
-                return serDes as IKNetSerDes<TKey, TJVMTKey>;
+                return serDes as ISerDes<TKey, TJVMTKey>;
             }
         }
 
         readonly ConcurrentDictionary<Type, object> _keySerDesSimple = new();
 
         /// <inheritdoc cref="IGenericSerDesFactory.BuildKeySerDes{TKey}"/>
-        public IKNetSerDes<TKey> BuildKeySerDes<TKey>()
+        public ISerDes<TKey> BuildKeySerDes<TKey>()
         {
             lock (_keySerDesSimple)
             {
@@ -236,7 +236,7 @@ namespace MASES.KNet
                 {
                     if (KNetSerialization.IsInternalManaged<TKey>())
                     {
-                        serDes = new KNetSerDes<TKey>();
+                        serDes = new SerDes<TKey>();
                     }
                     else
                     {
@@ -246,14 +246,14 @@ namespace MASES.KNet
                     }
                     _keySerDesSimple[typeof(TKey)] = serDes;
                 }
-                return serDes as IKNetSerDes<TKey>;
+                return serDes as ISerDes<TKey>;
             }
         }
 
         readonly ConcurrentDictionary<(Type, Type), object> _valueSerDesComplete = new();
 
         /// <inheritdoc cref="IGenericSerDesFactory.BuildValueSerDes{TValue, TJVMTValue}"/>
-        public IKNetSerDes<TValue, TJVMTValue> BuildValueSerDes<TValue, TJVMTValue>()
+        public ISerDes<TValue, TJVMTValue> BuildValueSerDes<TValue, TJVMTValue>()
         {
             lock (_valueSerDesComplete)
             {
@@ -261,7 +261,7 @@ namespace MASES.KNet
                 {
                     if (KNetSerialization.IsInternalManaged<TValue>())
                     {
-                        serDes = new KNetSerDes<TValue>();
+                        serDes = new SerDes<TValue>();
                     }
                     else
                     {
@@ -271,14 +271,14 @@ namespace MASES.KNet
                     }
                     _valueSerDesComplete[(typeof(TValue), typeof(TJVMTValue))] = serDes;
                 }
-                return serDes as IKNetSerDes<TValue, TJVMTValue>;
+                return serDes as ISerDes<TValue, TJVMTValue>;
             }
         }
 
         readonly ConcurrentDictionary<Type, object> _valueSerDesSimple = new();
 
         /// <inheritdoc cref="IGenericSerDesFactory.BuildValueSerDes{TValue}"/>
-        public IKNetSerDes<TValue> BuildValueSerDes<TValue>()
+        public ISerDes<TValue> BuildValueSerDes<TValue>()
         {
             lock (_valueSerDesSimple)
             {
@@ -286,7 +286,7 @@ namespace MASES.KNet
                 {
                     if (KNetSerialization.IsInternalManaged<TValue>())
                     {
-                        serDes = new KNetSerDes<TValue>();
+                        serDes = new SerDes<TValue>();
                     }
                     else
                     {
@@ -296,7 +296,7 @@ namespace MASES.KNet
                     }
                     _valueSerDesSimple[typeof(TValue)] = serDes;
                 }
-                return serDes as IKNetSerDes<TValue>;
+                return serDes as ISerDes<TValue>;
             }
         }
         /// <inheritdoc cref="IGenericSerDesFactory.Clear"/>

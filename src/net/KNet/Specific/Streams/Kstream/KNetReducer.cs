@@ -25,7 +25,7 @@ namespace MASES.KNet.Streams.Kstream
     /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.Reducer{TJVMV}"/>
     /// </summary>
     /// <typeparam name="V">value type</typeparam>
-    public abstract class KNetReducer<V, TJVMV> : Org.Apache.Kafka.Streams.Kstream.Reducer<TJVMV>, IGenericSerDesFactoryApplier
+    public abstract class Reducer<V, TJVMV> : Org.Apache.Kafka.Streams.Kstream.Reducer<TJVMV>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -48,7 +48,7 @@ namespace MASES.KNet.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
-        public new System.Func<KNetReducer<V>, V> OnApply { get; set; } = null;
+        public new System.Func<Reducer<V>, V> OnApply { get; set; } = null;
 
         /// <summary>
         /// The <typeparamref name="V"/> content
@@ -72,22 +72,22 @@ namespace MASES.KNet.Streams.Kstream
 
 
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.Reducer{V}"/>
+    /// KNet extension of <see cref="Reducer{V, TJVMV}"/>
     /// </summary>
     /// <typeparam name="V">value type</typeparam>
-    public class KNetReducer<V> : KNetReducer<V, byte[]>
+    public class Reducer<V> : Reducer<V, byte[]>
     {
         byte[] _arg0, _arg1;
         V _value1;
         bool _value1Set;
         V _value2;
         bool _value2Set;
-        IKNetSerDes<V> _vSerializer = null;
+        ISerDes<V> _vSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="KNetReducer{V, TJVMV}.Apply()"/> class method</remarks>
-        public new System.Func<KNetReducer<V>, V> OnApply { get; set; } = null;
+        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Reducer{V, TJVMV}.Apply()"/> class method</remarks>
+        public new System.Func<Reducer<V>, V> OnApply { get; set; } = null;
         /// <inheritdoc/>
         public override  V Value1 { get { if (!_value1Set) { _vSerializer ??= Factory?.BuildValueSerDes<V>(); _value1 = _vSerializer.Deserialize(null, _arg0); _value1Set = true; } return _value1; } }
         /// <inheritdoc/>
