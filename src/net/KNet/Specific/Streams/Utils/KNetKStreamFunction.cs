@@ -27,29 +27,39 @@ namespace MASES.KNet.Streams.Utils
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetKStreamFunction<K, V> : Java.Util.Function.Function<Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]>, Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]>>, IGenericSerDesFactoryApplier
+    public class KNetKStreamFunction<K, V, TJVMK, TJVMV> : Java.Util.Function.Function<Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV>, Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         /// <summary>
-        /// The <see cref="Func{T, TResult}"/> to be executed over <see cref="KNetKStream{K, V}"/>
+        /// The <see cref="Func{T, TResult}"/> to be executed over <see cref="KNetKStream{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public new virtual Func<KNetKStream<K, V>, KNetKStream<K, V>> OnApply { get; set; }
+        public new virtual Func<KNetKStream<K, V, TJVMK, TJVMV>, KNetKStream<K, V, TJVMK, TJVMV>> OnApply { get; set; }
 
         /// <inheritdoc/>
-        public override Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]> Apply(Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]> arg0)
+        public override Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV> Apply(Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV> arg0)
         {
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(new KNetKStream<K, V>(_factory, arg0));
+            var res = methodToExecute(new KNetKStream<K, V, TJVMK, TJVMV>(_factory, arg0));
             return res;
         }
 
         /// <summary>
         /// Executes the Function action in the CLR
         /// </summary>
-        /// <param name="obj">The <see cref="KNetKStream{K, V}"/> object</param>
-        /// <returns>The <see cref="KNetKStream{K, V}"/></returns>
-        public virtual KNetKStream<K, V> Apply(KNetKStream<K, V> obj) { return default; }
+        /// <param name="obj">The <see cref="KNetKStream{K, V, TJVMK, TJVMV}"/> object</param>
+        /// <returns>The <see cref="KNetKStream{K, V, TJVMK, TJVMV}"/></returns>
+        public virtual KNetKStream<K, V, TJVMK, TJVMV> Apply(KNetKStream<K, V, TJVMK, TJVMV> obj) { return default; }
+    }
+
+    /// <summary>
+    /// KNet implementation of <see cref="KNetKStreamFunction{K, V, TJVMK, TJVMV}"/>
+    /// </summary>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    public class KNetKStreamFunction<K, V> : KNetKStreamFunction<K, V, byte[], byte[]>
+    {
+
     }
 }

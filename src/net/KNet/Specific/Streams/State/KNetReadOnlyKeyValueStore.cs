@@ -21,29 +21,62 @@ using MASES.KNet.Serialization;
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
-    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore{K, V}"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore{TJVMTKey, TJVMTValue}"/> 
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
-    public class KNetReadOnlyKeyValueStore<TKey, TValue> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]>>
+    public abstract class KNetReadOnlyKeyValueStore<TKey, TValue, TJVMTKey, TJVMTValue> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMTKey, TJVMTValue>>
     {
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
-        public long ApproximateNumEntries => _store.ApproximateNumEntries();
+        public abstract long ApproximateNumEntries { get; }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all--"/>
         /// </summary>
         /// <returns><see cref="KNetKeyValueIterator{TKey, TValue}"/></returns>
-        public KNetKeyValueIterator<TKey, TValue> All => new(_factory, _store.All());
+        public abstract KNetKeyValueIterator<TKey, TValue> All { get; }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="TKey"/></param>
         /// <param name="arg1"><typeparamref name="TValue"/></param>
         /// <returns><see cref="KNetKeyValueIterator{TKey, TValue}"/></returns>
-        public KNetKeyValueIterator<TKey, TValue> Range(TKey arg0, TKey arg1)
+        public abstract KNetKeyValueIterator<TKey, TValue> Range(TKey arg0, TKey arg1);
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get-java.lang.Object-"/>
+        /// </summary>
+        /// <param name="arg0"><typeparamref name="TKey"/></param>
+        /// <returns><typeparamref name="TValue"/></returns>
+        public abstract TValue Get(TKey arg0);
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll--"/>
+        /// </summary>
+        /// <returns><see cref="KNetKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract KNetKeyValueIterator<TKey, TValue> ReverseAll { get; }
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange-java.lang.Object-java.lang.Object-"/>
+        /// </summary>
+        /// <param name="arg0"><typeparamref name="TKey"/></param>
+        /// <param name="arg1"><typeparamref name="TKey"/></param>
+        /// <returns><see cref="KNetKeyValueIterator{TKey, TValue}"/></returns>
+        public abstract KNetKeyValueIterator<TKey, TValue> ReverseRange(TKey arg0, TKey arg1);
+    }
+
+    /// <summary>
+    /// KNet implementation of <see cref="KNetReadOnlyKeyValueStore{TKey, TValue, TJVMTKey, TJVMTValue}"/> 
+    /// </summary>
+    /// <typeparam name="TKey">The key type</typeparam>
+    /// <typeparam name="TValue">The value type</typeparam>
+    public class KNetReadOnlyKeyValueStore<TKey, TValue> : KNetReadOnlyKeyValueStore<TKey, TValue, byte[], byte[]>
+    {
+        /// <inheritdoc/>
+        public override long ApproximateNumEntries => _store.ApproximateNumEntries();
+        /// <inheritdoc/>
+        public override KNetKeyValueIterator<TKey, TValue> All => new(_factory, _store.All());
+        /// <inheritdoc/>
+        public override KNetKeyValueIterator<TKey, TValue> Range(TKey arg0, TKey arg1)
         {
             var _keySerDes = _factory.BuildKeySerDes<TKey>();
 
@@ -52,12 +85,8 @@ namespace MASES.KNet.Streams.State
 
             return new(_factory, _store.Range(r0, r1));
         }
-        /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get-java.lang.Object-"/>
-        /// </summary>
-        /// <param name="arg0"><typeparamref name="TKey"/></param>
-        /// <returns><typeparamref name="TValue"/></returns>
-        public TValue Get(TKey arg0)
+        /// <inheritdoc/>
+        public override TValue Get(TKey arg0)
         {
             var _keySerDes = _factory.BuildKeySerDes<TKey>();
             var _valueSerDes = _factory.BuildValueSerDes<TValue>();
@@ -66,18 +95,10 @@ namespace MASES.KNet.Streams.State
             var res = _store.Get(r0);
             return _valueSerDes.Deserialize(null, res);
         }
-        /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll--"/>
-        /// </summary>
-        /// <returns><see cref="KNetKeyValueIterator{TKey, TValue}"/></returns>
-        public KNetKeyValueIterator<TKey, TValue> ReverseAll => new(_factory, _store.ReverseAll());
-        /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange-java.lang.Object-java.lang.Object-"/>
-        /// </summary>
-        /// <param name="arg0"><typeparamref name="TKey"/></param>
-        /// <param name="arg1"><typeparamref name="TKey"/></param>
-        /// <returns><see cref="KNetKeyValueIterator{TKey, TValue}"/></returns>
-        public KNetKeyValueIterator<TKey, TValue> ReverseRange(TKey arg0, TKey arg1)
+        /// <inheritdoc/>
+        public override KNetKeyValueIterator<TKey, TValue> ReverseAll => new(_factory, _store.ReverseAll());
+        /// <inheritdoc/>
+        public override KNetKeyValueIterator<TKey, TValue> ReverseRange(TKey arg0, TKey arg1)
         {
             var _keySerDes = _factory.BuildKeySerDes<TKey>();
 

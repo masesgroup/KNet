@@ -22,78 +22,78 @@ using MASES.KNet.Streams.Utils;
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.Branched{K, V}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.Branched{TJVMK, TJVMV}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public class KNetBranched<K, V> : IGenericSerDesFactoryApplier
+    public class KNetBranched<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.Branched<byte[], byte[]> _inner;
+        readonly Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        KNetBranched(Org.Apache.Kafka.Streams.Kstream.Branched<byte[], byte[]> inner)
+        KNetBranched(Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV> inner)
         {
             _inner = inner;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetBranched{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Branched{K, V}"/>
+        /// Converter from <see cref="KNetBranched{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Branched{TJVMK, TJVMV}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Branched<byte[], byte[]>(KNetBranched<K, V> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>(KNetBranched<K, V, TJVMK, TJVMV> t) => t._inner;
 
         #region Static methods
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#as-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="KNetBranched{K, V}"/></returns>
-        public static KNetBranched<K, V> As(string arg0)
+        /// <returns><see cref="KNetBranched{K, V, TJVMK, TJVMV}"/></returns>
+        public static KNetBranched<K, V, TJVMK, TJVMV> As(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<byte[], byte[]>.As(arg0);
-            return new KNetBranched<K, V>(cons);
+            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>.As(arg0);
+            return new KNetBranched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer-java.util.function.Consumer-java.lang.String-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetKStreamConsumer{K, V}"/></param>
+        /// <param name="arg0"><see cref="KNetKStreamConsumer{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="KNetBranched{K, V}"/></returns>
-        public static KNetBranched<K, V> WithConsumer(KNetKStreamConsumer<K, V> arg0, string arg1)
+        /// <returns><see cref="KNetBranched{K, V, TJVMK, TJVMV}"/></returns>
+        public static KNetBranched<K, V, TJVMK, TJVMV> WithConsumer(KNetKStreamConsumer<K, V, TJVMK, TJVMV> arg0, string arg1)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<byte[], byte[]>.WithConsumer(arg0, arg1);
-            return new KNetBranched<K, V>(cons);
+            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>.WithConsumer(arg0, arg1);
+            return new KNetBranched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer-java.util.function.Consumer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="KNetKStreamConsumer{K, V}"/></param>
-        /// <returns><see cref="KNetBranched{K, V}"/></returns>
-        public static KNetBranched<K, V> WithConsumer(KNetKStreamConsumer<K, V> arg0)
+        /// <returns><see cref="KNetBranched{K, V, TJVMK, TJVMV}"/></returns>
+        public static KNetBranched<K, V, TJVMK, TJVMV> WithConsumer(KNetKStreamConsumer<K, V, TJVMK, TJVMV> arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<byte[], byte[]>.WithConsumer(arg0);
-            return new KNetBranched<K, V>(cons);
+            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>.WithConsumer(arg0);
+            return new KNetBranched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withFunction-java.util.function.Function-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="KNetKStreamFunction{K, V}"/></param>
         /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="KNetBranched{K, V}"/></returns>
-        public static KNetBranched<K, V> WithFunction(KNetKStreamFunction<K, V> arg0, string arg1)
+        /// <returns><see cref="KNetBranched{K, V, TJVMK, TJVMV}"/></returns>
+        public static KNetBranched<K, V, TJVMK, TJVMV> WithFunction(KNetKStreamFunction<K, V, TJVMK, TJVMV> arg0, string arg1)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<byte[], byte[]>.WithFunction(arg0, arg1);
-            return new KNetBranched<K, V>(cons);
+            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>.WithFunction(arg0, arg1);
+            return new KNetBranched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withFunction-java.util.function.Function-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetKStreamFunction{K, V}"/></param>
-        /// <returns><see cref="KNetBranched{K, V}"/></returns>
-        public static KNetBranched<K, V> WithFunction(KNetKStreamFunction<K, V> arg0)
+        /// <param name="arg0"><see cref="KNetKStreamFunction{K, V, TJVMK, TJVMV}"/></param>
+        /// <returns><see cref="KNetBranched{K, V, TJVMK, TJVMV}"/></returns>
+        public static KNetBranched<K, V, TJVMK, TJVMV> WithFunction(KNetKStreamFunction<K, V, TJVMK, TJVMV> arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<byte[], byte[]>.WithFunction(arg0);
-            return new KNetBranched<K, V>(cons);
+            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>.WithFunction(arg0);
+            return new KNetBranched<K, V, TJVMK, TJVMV>(cons);
         }
 
         #endregion

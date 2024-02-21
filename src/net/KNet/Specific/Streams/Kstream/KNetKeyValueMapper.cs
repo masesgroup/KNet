@@ -31,12 +31,12 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMK">JVM key value type</typeparam>
     /// <typeparam name="TJVMV">JVM first value type</typeparam>
     /// <typeparam name="TJVMVR">The return JVM type to be managed</typeparam>
-    public abstract class KNetKeyValueMapperGeneric<K, V, VR, TJVMK, TJVMV, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<TJVMK, TJVMV, TJVMVR>, IGenericSerDesFactoryApplier
+    public abstract class KNetKeyValueMapper<K, V, VR, TJVMK, TJVMV, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<TJVMK, TJVMV, TJVMVR>, IGenericSerDesFactoryApplier
     {
         IKNetSerDes<K> _kSerializer = null;
         IKNetSerDes<V> _vSerializer = null;
         /// <summary>
-        /// <see cref="IGenericSerDesFactory"/> can be used from any class inherited from <see cref="KNetKeyValueMapperGeneric{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
+        /// <see cref="IGenericSerDesFactory"/> can be used from any class inherited from <see cref="KNetKeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
         /// </summary>
         protected IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -60,12 +60,12 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="KNetKeyValueMapperGeneric{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
+    /// KNet extension of <see cref="KNetKeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
     /// </summary>
     /// <typeparam name="K">key value type</typeparam>
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public class KNetKeyValueMapper<K, V, VR> : KNetKeyValueMapperGeneric<K, V, VR, byte[], byte[], byte[]>
+    public class KNetKeyValueMapper<K, V, VR> : KNetKeyValueMapper<K, V, VR, byte[], byte[], byte[]>
     {
         IKNetSerDes<K> _kSerializer = null;
         IKNetSerDes<V> _vSerializer = null;
@@ -83,16 +83,16 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="KNetKeyValueMapperGeneric{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
+    /// KNet extension of <see cref="KNetKeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
     /// </summary>
     /// <typeparam name="K">key value type</typeparam>
     /// <typeparam name="V">first value type</typeparam>
-    public class KNetKeyValueMapperForString<K, V> : KNetKeyValueMapperGeneric<K, V, string, byte[], byte[], string>
+    public class KNetKeyValueMapperForString<K, V> : KNetKeyValueMapper<K, V, string, byte[], byte[], Java.Lang.String>
     {
         IKNetSerDes<K> _kSerializer = null;
         IKNetSerDes<V> _vSerializer = null;
         /// <inheritdoc/>
-        public override string Apply(byte[] arg0, byte[] arg1)
+        public override Java.Lang.String Apply(byte[] arg0, byte[] arg1)
         {
             _kSerializer ??= _factory.BuildKeySerDes<K>();
             _vSerializer ??= _factory.BuildValueSerDes<V>();
@@ -103,13 +103,39 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper{K, V, VR}"/>
+    /// KNet extension of <see cref="KNetKeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
     /// </summary>
     /// <typeparam name="K">key value type</typeparam>
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="KR">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public class KNetKeyValueKeyValueMapper<K, V, KR, VR> : KNetKeyValueMapperGeneric<K, V, VR, byte[], byte[], Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>
+    public abstract class KNetKeyValueKeyValueMapper<K, V, KR, VR, TJVMK, TJVMV, TJVMKR, TJVMVR> : KNetKeyValueMapper<K, V, VR, TJVMK, TJVMV, Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>
+    {
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// </summary>
+        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
+        public new System.Func<K, V, (KR, VR)> OnApply { get; set; } = null;
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// </summary>
+        /// <param name="arg0"><typeparamref name="K"/></param>
+        /// <param name="arg1"><typeparamref name="V"/></param>
+        /// <returns><typeparamref name="VR"/></returns>
+        public new virtual (KR, VR) Apply(K arg0, V arg1)
+        {
+            return default;
+        }
+    }
+
+    /// <summary>
+    /// KNet extension of <see cref="KNetKeyValueKeyValueMapper{K, V, KR, VR, TJVMK, TJVMV, TJVMKR, TJVMVR}"/>
+    /// </summary>
+    /// <typeparam name="K">key value type</typeparam>
+    /// <typeparam name="V">first value type</typeparam>
+    /// <typeparam name="KR">first value type</typeparam>
+    /// <typeparam name="VR">joined value type</typeparam>
+    public class KNetKeyValueKeyValueMapper<K, V, KR, VR> : KNetKeyValueKeyValueMapper<K, V, KR, VR, byte[], byte[], byte[], byte[]>
     {
         IKNetSerDes<K> _kSerializer = null;
         IKNetSerDes<V> _vSerializer = null;
@@ -145,13 +171,34 @@ namespace MASES.KNet.Streams.Kstream
     }
 
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper{K, V, VR}"/>
+    /// KNet extension of <see cref="KNetKeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
     /// </summary>
     /// <typeparam name="K">key value type</typeparam>
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="KR">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
-    public class KNetEnumerableKeyValueMapper<K, V, KR, VR> : KNetKeyValueMapperGeneric<K, V, VR, byte[], byte[], Java.Lang.Iterable<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>>
+    public abstract class KNetEnumerableKeyValueMapper<K, V, KR, VR, TJVMK, TJVMV, TJVMKR, TJVMVR> : KNetKeyValueMapper<K, V, VR, TJVMK, TJVMV, Java.Lang.Iterable<Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>>
+    {
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// </summary>
+        /// <param name="arg0"><typeparamref name="K"/></param>
+        /// <param name="arg1"><typeparamref name="V"/></param>
+        /// <returns><typeparamref name="VR"/></returns>
+        public new virtual IEnumerable<(KR, VR)> Apply(K arg0, V arg1)
+        {
+            return default;
+        }
+    }
+
+    /// <summary>
+    /// KNet extension of <see cref="KNetEnumerableKeyValueMapper{K, V, KR, VR, TJVMK, TJVMV, TJVMKR, TJVMVR}"/>
+    /// </summary>
+    /// <typeparam name="K">key value type</typeparam>
+    /// <typeparam name="V">first value type</typeparam>
+    /// <typeparam name="KR">first value type</typeparam>
+    /// <typeparam name="VR">joined value type</typeparam>
+    public class KNetEnumerableKeyValueMapper<K, V, KR, VR> : KNetEnumerableKeyValueMapper<K, V, KR, VR, byte[], byte[], byte[], byte[]>
     {
         IKNetSerDes<K> _kSerializer = null;
         IKNetSerDes<V> _vSerializer = null;

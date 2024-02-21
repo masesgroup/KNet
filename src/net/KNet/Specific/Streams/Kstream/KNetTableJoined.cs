@@ -22,36 +22,36 @@ using MASES.KNet.Streams.Processor;
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined{K, KO}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined{TJVMK, TJVMKO}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="KO"></typeparam>
-    public class KNetTableJoined<K, KO> : IGenericSerDesFactoryApplier
+    public class KNetTableJoined<K, KO, TJVMK, TJVMKO> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.TableJoined<byte[], byte[]> _inner;
+        readonly Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        KNetTableJoined(Org.Apache.Kafka.Streams.Kstream.TableJoined<byte[], byte[]> inner)
+        protected KNetTableJoined(Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO> inner)
         {
             _inner = inner;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetTableJoined{K, KO}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined{K, KO}"/>
+        /// Converter from <see cref="KNetTableJoined{K, KO, TJVMK, TJVMKO}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined{TJVMK, TJVMKO}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.TableJoined<byte[], byte[]>(KNetTableJoined<K, KO> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO>(KNetTableJoined<K, KO, TJVMK, TJVMKO> t) => t._inner;
 
         #region Static methods
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TableJoined.html#as-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="KNetTableJoined{K, KO}"/></returns>
-        public static KNetTableJoined<K, KO> As(string arg0)
+        /// <returns><see cref="KNetTableJoined{K, KO, TJVMK, TJVMKO}"/></returns>
+        public static KNetTableJoined<K, KO, TJVMK, TJVMKO> As(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.TableJoined<byte[], byte[]>.As(arg0);
-            return new KNetTableJoined<K, KO>(cons);
+            var cons = Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO>.As(arg0);
+            return new KNetTableJoined<K, KO, TJVMK, TJVMKO>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TableJoined.html#with-org.apache.kafka.streams.processor.StreamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
@@ -59,10 +59,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="KNetStreamPartitionerNoValue{K}"/></param>
         /// <param name="arg1"><see cref="KNetStreamPartitionerNoValue{KO}"/></param>
         /// <returns><see cref="KNetTableJoined{K, KO}"/></returns>
-        public static KNetTableJoined<K, KO> With(KNetStreamPartitionerNoValue<K> arg0, KNetStreamPartitionerNoValue<KO> arg1)
+        public static KNetTableJoined<K, KO, TJVMK, TJVMKO> With(KNetStreamPartitionerNoValue<K, TJVMK> arg0, KNetStreamPartitionerNoValue<KO, TJVMKO> arg1)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.TableJoined<byte[], byte[]>.With(arg0, arg1);
-            return new KNetTableJoined<K, KO>(cons);
+            var cons = Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO>.With(arg0, arg1);
+            return new KNetTableJoined<K, KO, TJVMK, TJVMKO>(cons);
         }
 
         #endregion
@@ -71,9 +71,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TableJoined.html#withOtherPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetStreamPartitionerNoValue{KO}"/></param>
-        /// <returns><see cref="KNetTableJoined{K, KO}"/></returns>
-        public KNetTableJoined<K, KO> WithOtherPartitioner(KNetStreamPartitionerNoValue<KO> arg0)
+        /// <param name="arg0"><see cref="KNetStreamPartitionerNoValue{KO, TJVMKO}"/></param>
+        /// <returns><see cref="KNetTableJoined{K, KO, TJVMK, TJVMKO}"/></returns>
+        public KNetTableJoined<K, KO, TJVMK, TJVMKO> WithOtherPartitioner(KNetStreamPartitionerNoValue<KO, TJVMKO> arg0)
         {
             _inner?.WithOtherPartitioner(arg0);
             return this;
@@ -81,14 +81,25 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TableJoined.html#withPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetStreamPartitionerNoValue{K}"/></param>
-        /// <returns><see cref="KNetTableJoined{K, KO}"/></returns>
-        public KNetTableJoined<K, KO> WithPartitioner(KNetStreamPartitionerNoValue<K> arg0)
+        /// <param name="arg0"><see cref="KNetStreamPartitionerNoValue{K, TJVMK}"/></param>
+        /// <returns><see cref="KNetTableJoined{K, KO, TJVMK, TJVMKO}"/></returns>
+        public KNetTableJoined<K, KO, TJVMK, TJVMKO> WithPartitioner(KNetStreamPartitionerNoValue<K, TJVMK> arg0)
         {
             _inner?.WithPartitioner(arg0);
             return this;
         }
 
         #endregion
+    }
+
+    /// <summary>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined{K, KO}"/>
+    /// </summary>
+    /// <typeparam name="K"></typeparam>
+    /// <typeparam name="KO"></typeparam>
+    public class KNetTableJoined<K, KO> : KNetTableJoined<K, KO, byte[], byte[]>
+    {
+        KNetTableJoined(Org.Apache.Kafka.Streams.Kstream.TableJoined<byte[], byte[]> inner) : base(inner) { }
+
     }
 }

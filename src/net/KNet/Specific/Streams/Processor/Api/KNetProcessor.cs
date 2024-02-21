@@ -21,34 +21,26 @@ using MASES.KNet.Serialization;
 namespace MASES.KNet.Streams.Processor.Api
 {
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Processor.Api.Processor{KIn, VIn, KOut, VOut}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Processor.Api.Processor{TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut}"/>
     /// </summary>
     /// <typeparam name="KIn">The input key type</typeparam>
     /// <typeparam name="VIn">The input key type</typeparam>
     /// <typeparam name="KOut">The output key type</typeparam>
     /// <typeparam name="VOut">The output value type</typeparam>
-    public class KNetProcessor<KIn, VIn, KOut, VOut> : Org.Apache.Kafka.Streams.Processor.Api.Processor<byte[], byte[], byte[], byte[]>, IGenericSerDesFactoryApplier
+    public abstract class KNetProcessor<KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut> : Org.Apache.Kafka.Streams.Processor.Api.Processor<TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut>, IGenericSerDesFactoryApplier
     {
-        KNetProcessorContext<KOut, VOut> _processorContext = null;
-        IGenericSerDesFactory _factory;
+        protected IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
         /// <see cref="KNetProcessorContext{KOut, VOut}"/> received from the init
         /// </summary>
-        public KNetProcessorContext<KOut, VOut> Context => _processorContext;
+        public abstract KNetProcessorContext<KOut, VOut> Context { get; }
 
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Processor.html#process-org.apache.kafka.streams.processor.api.Record-"/>
         /// </summary>
         /// <remarks>If <see cref="OnProcess"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Action<KNetRecord<KIn, VIn>> OnProcess { get; set; } = null;
-
-        /// <inheritdoc/>
-        public sealed override void Process(Org.Apache.Kafka.Streams.Processor.Api.Record<byte[], byte[]> arg0)
-        {
-            var methodToExecute = OnProcess ?? Process;
-            methodToExecute(new KNetRecord<KIn, VIn>(_factory, arg0, Context.RecordMetadata));
-        }
 
         /// <summary>
         /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.Api.Processor{KIn, VIn, KOut, VOut}.Process(Org.Apache.Kafka.Streams.Processor.Api.Record{KIn, VIn})"/>
@@ -65,15 +57,6 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Action<KNetProcessorContext<KOut, VOut>> OnInit { get; set; } = null;
 
-        /// <inheritdoc/>
-        public sealed override void Init(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]> arg0)
-        {
-            _processorContext = new KNetProcessorContext<KOut, VOut>(arg0);
-
-            var methodToExecute = OnInit ?? Init;
-            methodToExecute(_processorContext);
-        }
-
         /// <summary>
         /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.Api.Processor{KIn, VIn, KOut, VOut}.Init(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{KOut, VOut})"/>
         /// </summary>
@@ -81,6 +64,47 @@ namespace MASES.KNet.Streams.Processor.Api
         public virtual void Init(KNetProcessorContext<KOut, VOut> arg0)
         {
 
+        }
+    }
+
+    /// <summary>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Processor.Api.Processor{KIn, VIn, KOut, VOut}"/>
+    /// </summary>
+    /// <typeparam name="KIn">The input key type</typeparam>
+    /// <typeparam name="VIn">The input key type</typeparam>
+    /// <typeparam name="KOut">The output key type</typeparam>
+    /// <typeparam name="VOut">The output value type</typeparam>
+    public class KNetProcessor<KIn, VIn, KOut, VOut> : KNetProcessor<KIn, VIn, KOut, VOut, byte[], byte[], byte[], byte[]>
+    {
+        KNetProcessorContext<KOut, VOut> _processorContext = null;
+        /// <inheritdoc/>
+        public override KNetProcessorContext<KOut, VOut> Context => _processorContext;
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Processor.html#process-org.apache.kafka.streams.processor.api.Record-"/>
+        /// </summary>
+        /// <remarks>If <see cref="OnProcess"/> has a value it takes precedence over corresponding class method</remarks>
+        public new System.Action<KNetRecord<KIn, VIn>> OnProcess { get; set; } = null;
+
+        /// <inheritdoc/>
+        public sealed override void Process(Org.Apache.Kafka.Streams.Processor.Api.Record<byte[], byte[]> arg0)
+        {
+            var methodToExecute = OnProcess ?? Process;
+            methodToExecute(new KNetRecord<KIn, VIn>(_factory, arg0, Context.RecordMetadata));
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Processor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-"/>
+        /// </summary>
+        /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
+        public new System.Action<KNetProcessorContext<KOut, VOut>> OnInit { get; set; } = null;
+
+        /// <inheritdoc/>
+        public sealed override void Init(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]> arg0)
+        {
+            _processorContext = new KNetProcessorContext<KOut, VOut>(arg0);
+
+            var methodToExecute = OnInit ?? Init;
+            methodToExecute(_processorContext);
         }
     }
 }

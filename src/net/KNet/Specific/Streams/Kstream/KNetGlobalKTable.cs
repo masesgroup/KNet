@@ -21,27 +21,27 @@ using MASES.KNet.Serialization;
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable{K, V}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable{TJVMK, TJVMV}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public class KNetGlobalKTable<K, V> : IGenericSerDesFactoryApplier
+    public class KNetGlobalKTable<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        Org.Apache.Kafka.Streams.Kstream.GlobalKTable<byte[], byte[]> _inner;
+        Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetGlobalKTable(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.GlobalKTable<byte[], byte[]> table)
+        internal KNetGlobalKTable(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV> table)
         {
             _factory = factory;
             _inner = table;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetGlobalKTable{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable{K, V}"/>
+        /// Converter from <see cref="KNetGlobalKTable{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable{TJVMK, TJVMV}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.GlobalKTable<byte[], byte[]>(KNetGlobalKTable<K, V> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV>(KNetGlobalKTable<K, V, TJVMK, TJVMV> t) => t._inner;
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName--"/>

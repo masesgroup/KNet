@@ -21,27 +21,27 @@ using MASES.KNet.Serialization;
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream{K, V}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream{TJVMK, TJVMV}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public class KNetTimeWindowedKStream<K, V> : IGenericSerDesFactoryApplier
+    public class KNetTimeWindowedKStream<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream<byte[], byte[]> _inner;
+        Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal KNetTimeWindowedKStream(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream<byte[], byte[]> inner)
+        internal KNetTimeWindowedKStream(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream<TJVMK, TJVMV> inner)
         {
             _factory = factory;
             _inner = inner;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetTimeWindowedKStream{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream{K, V}"/>
+        /// Converter from <see cref="KNetTimeWindowedKStream{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream{TJVMK, TJVMV}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream<byte[], byte[]>(KNetTimeWindowedKStream<K, V> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream<TJVMK, TJVMV>(KNetTimeWindowedKStream<K, V, TJVMK, TJVMV> t) => t._inner;
 
 #warning till now it is only an empty class shall be completed with the method of inner class
     }

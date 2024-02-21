@@ -27,10 +27,10 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public class KNetRepartitioned<K, V> : IGenericSerDesFactoryApplier
+    public class KNetRepartitioned<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        KNetStreamPartitioner<K, V> _streamPartitioner = null;
-        readonly Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]> _inner;
+        KNetStreamPartitioner<K, V, TJVMK, TJVMV> _streamPartitioner = null;
+        readonly Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory
         {
@@ -42,58 +42,58 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
 
-        KNetRepartitioned(Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]> inner, KNetStreamPartitioner<K, V> streamPartitioner = null)
+        KNetRepartitioned(Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV> inner, KNetStreamPartitioner<K, V, TJVMK, TJVMV> streamPartitioner = null)
         {
             _inner = inner;
             _streamPartitioner = streamPartitioner;
         }
 
         /// <summary>
-        /// Converter from <see cref="KNetRepartitioned{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned{K, V}"/>
+        /// Converter from <see cref="KNetRepartitioned{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned{TJVMK, TJVMV}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]>(KNetRepartitioned<K, V> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV>(KNetRepartitioned<K, V, TJVMK, TJVMV> t) => t._inner;
 
         #region Static methods
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#as-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="KNetRepartitioned{K, V}"/></returns>
-        public static KNetRepartitioned<K, V> As(string arg0)
+        /// <returns><see cref="KNetRepartitioned{K, V, TJVMK, TJVMV}"/></returns>
+        public static KNetRepartitioned<K, V, TJVMK, TJVMV> As(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]>.As(arg0);
-            return new KNetRepartitioned<K, V>(cons);
+            var cons = Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV>.As(arg0);
+            return new KNetRepartitioned<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#numberOfPartitions-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
-        /// <returns><see cref="KNetRepartitioned{K, V}"/></returns>
-        public static KNetRepartitioned<K, V> NumberOfPartitions(int arg0)
+        /// <returns><see cref="KNetRepartitioned{K, V, TJVMK, TJVMV}"/></returns>
+        public static KNetRepartitioned<K, V, TJVMK, TJVMV> NumberOfPartitions(int arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]>.NumberOfPartitions(arg0);
-            return new KNetRepartitioned<K, V>(cons);
+            var cons = Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV>.NumberOfPartitions(arg0);
+            return new KNetRepartitioned<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#streamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetStreamPartitioner{TKey, TValue}"/></param>
-        /// <returns><see cref="KNetRepartitioned{K, V}"/></returns>
-        public static KNetRepartitioned<K, V> StreamPartitioner(KNetStreamPartitioner<K, V> arg0)
+        /// <param name="arg0"><see cref="KNetStreamPartitioner{K, V, TJVMK, TJVMV}"/></param>
+        /// <returns><see cref="KNetRepartitioned{K, V, TJVMK, TJVMV}"/></returns>
+        public static KNetRepartitioned<K, V, TJVMK, TJVMV> StreamPartitioner(KNetStreamPartitioner<K, V, TJVMK, TJVMV> arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]>.StreamPartitioner(arg0);
-            return new KNetRepartitioned<K, V>(cons, arg0);
+            var cons = Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV>.StreamPartitioner(arg0);
+            return new KNetRepartitioned<K, V, TJVMK, TJVMV>(cons, arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{T}"/></param>
-        /// <param name="arg1"><see cref="IKNetSerDes{T}"/></param>
-        /// <returns><see cref="KNetRepartitioned{K, V}"/></returns>
-        public static KNetRepartitioned<K, V> With(IKNetSerDes<K> arg0, IKNetSerDes<V> arg1)
+        /// <param name="arg0"><see cref="IKNetSerDes{K, TJVMK}"/></param>
+        /// <param name="arg1"><see cref="IKNetSerDes{V, TJVMV}"/></param>
+        /// <returns><see cref="KNetRepartitioned{K, V, TJVMK, TJVMV}"/></returns>
+        public static KNetRepartitioned<K, V, TJVMK, TJVMV> With(IKNetSerDes<K, TJVMK> arg0, IKNetSerDes<V, TJVMV> arg1)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Repartitioned<byte[], byte[]>.With(arg0.KafkaSerde, arg1.KafkaSerde);
-            return new KNetRepartitioned<K, V>(cons);
+            var cons = Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV>.With(arg0.KafkaSerde, arg1.KafkaSerde);
+            return new KNetRepartitioned<K, V, TJVMK, TJVMV>(cons);
         }
 
         #endregion
@@ -102,9 +102,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{T}"/></param>
-        /// <returns><see cref="KNetRepartitioned{K, V}"/></returns>
-        public KNetRepartitioned<K, V> WithKeySerde(IKNetSerDes<K> arg0)
+        /// <param name="arg0"><see cref="IKNetSerDes{K, TJVMK}"/></param>
+        /// <returns><see cref="KNetRepartitioned{K, V, TJVMK, TJVMV}"/></returns>
+        public KNetRepartitioned<K, V, TJVMK, TJVMV> WithKeySerde(IKNetSerDes<K, TJVMK> arg0)
         {
             _inner?.WithKeySerde(arg0.KafkaSerde);
             return this;
@@ -113,8 +113,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#withNumberOfPartitions-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
-        /// <returns><see cref="KNetRepartitioned{K, V}"/></returns>
-        public KNetRepartitioned<K, V> WithNumberOfPartitions(int arg0)
+        /// <returns><see cref="KNetRepartitioned{K, V, TJVMK, TJVMV}"/></returns>
+        public KNetRepartitioned<K, V, TJVMK, TJVMV> WithNumberOfPartitions(int arg0)
         {
             _inner?.WithNumberOfPartitions(arg0);
             return this;
@@ -122,9 +122,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#withStreamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetStreamPartitioner{TKey, TValue}"/></param>
-        /// <returns><see cref="KNetRepartitioned{K, V}"/></returns>
-        public KNetRepartitioned<K, V> WithStreamPartitioner(KNetStreamPartitioner<K, V> arg0)
+        /// <param name="arg0"><see cref="KNetStreamPartitioner{K, V, TJVMK, TJVMV}"/></param>
+        /// <returns><see cref="KNetRepartitioned{K, V, TJVMK, TJVMV}"/></returns>
+        public KNetRepartitioned<K, V, TJVMK, TJVMV> WithStreamPartitioner(KNetStreamPartitioner<K, V, TJVMK, TJVMV> arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             _streamPartitioner = arg0;
@@ -134,9 +134,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="IKNetSerDes{T}"/></param>
-        /// <returns><see cref="KNetRepartitioned{K, V}"/></returns>
-        public KNetRepartitioned<K, V> WithValueSerde(IKNetSerDes<V> arg0)
+        /// <param name="arg0"><see cref="IKNetSerDes{V, TJVMV}"/></param>
+        /// <returns><see cref="KNetRepartitioned{K, V, TJVMK, TJVMV}"/></returns>
+        public KNetRepartitioned<K, V, TJVMK, TJVMV> WithValueSerde(IKNetSerDes<V, TJVMV> arg0)
         {
             _inner?.WithValueSerde(arg0.KafkaSerde);
             return this;

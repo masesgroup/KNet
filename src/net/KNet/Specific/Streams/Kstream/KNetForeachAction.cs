@@ -25,7 +25,39 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K">key value type</typeparam>
     /// <typeparam name="V">first value type</typeparam>
-    public class KNetForeachAction<K, V> : Org.Apache.Kafka.Streams.Kstream.ForeachAction<byte[], byte[]>, IGenericSerDesFactoryApplier
+    public abstract class KNetForeachAction<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Kstream.ForeachAction<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
+    {
+        protected IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// </summary>
+        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
+        public new System.Action<KNetForeachAction<K, V>> OnApply { get; set; } = null;
+        /// <summary>
+        /// The <typeparamref name="K"/> content
+        /// </summary>
+        public abstract K Key { get; }
+        /// <summary>
+        /// The <typeparamref name="V"/> content
+        /// </summary>
+        public abstract V Value { get; }
+
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// </summary>
+        public virtual void Apply()
+        {
+
+        }
+    }
+
+    /// <summary>
+    /// KNet extension of <see cref="KNetForeachAction{K, V, TJVMK, TJVMV}"/>
+    /// </summary>
+    /// <typeparam name="K">key value type</typeparam>
+    /// <typeparam name="V">first value type</typeparam>
+    public class KNetForeachAction<K, V> : KNetForeachAction<K, V, byte[], byte[]>
     {
         byte[] _arg0, _arg1;
         K _key;
@@ -34,8 +66,6 @@ namespace MASES.KNet.Streams.Kstream
         bool _valueSet = false;
         IKNetSerDes<K> _kSerializer = null;
         IKNetSerDes<V> _vSerializer = null;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
         /// Default initializer
         /// </summary>
@@ -48,34 +78,22 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
+        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="KNetForeachAction{K, V, TJVMK, TJVMV}.Apply()"/> class method</remarks>
         public new System.Action<KNetForeachAction<K, V>> OnApply { get; set; } = null;
-
-        /// <summary>
-        /// The <typeparamref name="K"/> content
-        /// </summary>
-        public K Key { get { if (!_keySet) { _kSerializer ??= _factory.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
-        /// <summary>
-        /// The <typeparamref name="V"/> content
-        /// </summary>
-        public V Value { get { if (!_valueSet) { _vSerializer ??= _factory.BuildValueSerDes<V>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
-
+        /// <inheritdoc/>
+        public override K Key { get { if (!_keySet) { _kSerializer ??= _factory.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
+        /// <inheritdoc/>
+        public override V Value { get { if (!_valueSet) { _vSerializer ??= _factory.BuildValueSerDes<V>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
         /// <inheritdoc/>
         public sealed override void Apply(byte[] arg0, byte[] arg1)
         {
+            _kSerializer ??= _factory.BuildKeySerDes<K>();
+            _vSerializer ??= _factory.BuildValueSerDes<V>();
             _keySet = _valueSet = false;
             _arg0 = arg0;
             _arg1 = arg1;
 
             if (OnApply != null) OnApply(this); else Apply();
-        }
-
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-"/>
-        /// </summary>
-        public virtual void Apply()
-        {
-
         }
     }
 }

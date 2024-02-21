@@ -21,13 +21,12 @@ using MASES.KNet.Serialization;
 namespace MASES.KNet.Streams.Kstream
 {
     /// <summary>
-    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Initializer{VA}"/>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Initializer{TJVMVA}"/>
     /// </summary>
     /// <typeparam name="VA">The key type</typeparam>
-    public class KNetInitializer<VA> : Org.Apache.Kafka.Streams.Kstream.Initializer<byte[]>, IGenericSerDesFactoryApplier
+    public class KNetInitializer<VA, TJVMVA> : Org.Apache.Kafka.Streams.Kstream.Initializer<TJVMVA>, IGenericSerDesFactoryApplier
     {
-        IKNetSerDes<VA> _valueSerializer = null;
-        IGenericSerDesFactory _factory;
+        protected IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         /// <summary>
@@ -35,15 +34,6 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <remarks>If <see cref="OnApply2"/> has a value it takes precedence over corresponding class method</remarks>
         public System.Func<VA> OnApply2 { get; set; } = null;
-        /// <inheritdoc/>
-        public sealed override byte[] Apply()
-        {
-            _valueSerializer ??= _factory.BuildValueSerDes<VA>();
-
-            var methodToExecute = (OnApply2 != null) ? OnApply2 : Apply2;
-            var res = methodToExecute();
-            return _valueSerializer.Serialize(null, res);
-        }
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Initializer.html#apply--"/>
@@ -52,6 +42,24 @@ namespace MASES.KNet.Streams.Kstream
         public virtual VA Apply2()
         {
             return default;
+        }
+    }
+
+    /// <summary>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Initializer{VA}"/>
+    /// </summary>
+    /// <typeparam name="VA">The key type</typeparam>
+    public class KNetInitializer<VA> : KNetInitializer<VA, byte[]>
+    {
+        IKNetSerDes<VA> _valueSerializer = null;
+        /// <inheritdoc/>
+        public sealed override byte[] Apply()
+        {
+            _valueSerializer ??= _factory.BuildValueSerDes<VA>();
+
+            var methodToExecute = (OnApply2 != null) ? OnApply2 : Apply2;
+            var res = methodToExecute();
+            return _valueSerializer.Serialize(null, res);
         }
     }
 }

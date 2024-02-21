@@ -22,17 +22,35 @@ using System;
 namespace MASES.KNet.Streams.Utils
 {
     /// <summary>
-    /// KNet implementation of <see cref="Java.Util.Function.Function{TObject, TReturn}"/>
+    /// KNet implementation of <see cref="Java.Util.Function.Function{TJVMV, TJVMKO}"/>
     /// </summary>
     /// <typeparam name="V">The key type</typeparam>
     /// <typeparam name="KO">The value type</typeparam>
-    public class KNetFunction<V, KO> : Java.Util.Function.Function<byte[], byte[]>, IGenericSerDesFactoryApplier
+    public class KNetFunction<V, KO, TJVMV, TJVMKO> : Java.Util.Function.Function<TJVMV, TJVMKO>, IGenericSerDesFactoryApplier
+    {
+        protected IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        /// <summary>
+        /// The <see cref="Func{V, KO}"/> to be executed
+        /// </summary>
+        public new virtual Func<V, KO> OnApply { get; set; }
+        /// <summary>
+        /// Executes the Function action in the CLR
+        /// </summary>
+        /// <param name="obj">The <typeparamref name="V"/> object</param>
+        /// <returns>The apply <typeparamref name="KO"/></returns>
+        public virtual KO Apply(V obj) { return default; }
+    }
+
+    /// <summary>
+    /// KNet implementation of <see cref="KNetFunction{V, KO, TJVMV, TJVMKO}"/>
+    /// </summary>
+    /// <typeparam name="V">The key type</typeparam>
+    /// <typeparam name="KO">The value type</typeparam>
+    public class KNetFunction<V, KO> : KNetFunction<V, KO, byte[], byte[]>
     {
         IKNetSerDes<KO> _keySerializer = null;
         IKNetSerDes<V> _valueSerializer = null;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
-
         /// <summary>
         /// The <see cref="Func{V, KO}"/> to be executed
         /// </summary>
@@ -48,12 +66,5 @@ namespace MASES.KNet.Streams.Utils
 
             return _keySerializer.Serialize(null, res);
         }
-
-        /// <summary>
-        /// Executes the Function action in the CLR
-        /// </summary>
-        /// <param name="obj">The <typeparamref name="V"/> object</param>
-        /// <returns>The apply <typeparamref name="KO"/></returns>
-        public virtual KO Apply(V obj) { return default; }
     }
 }

@@ -27,7 +27,7 @@ namespace MASES.KNet.Streams.Utils
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetKStreamConsumer<K, V> : Java.Util.Function.Consumer<Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]>>, IGenericSerDesFactoryApplier
+    public class KNetKStreamConsumer<K, V, TJVMK, TJVMV> : Java.Util.Function.Consumer<Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier
     {
         IKNetSerDes<V> _valueSerializer = null;
         IGenericSerDesFactory _factory;
@@ -36,19 +36,28 @@ namespace MASES.KNet.Streams.Utils
         /// <summary>
         /// The <see cref="Func{V, KO}"/> to be executed
         /// </summary>
-        public new virtual Action<KNetKStream<K, V>> OnAccept { get; set; }
+        public new virtual Action<KNetKStream<K, V, TJVMK, TJVMV>> OnAccept { get; set; }
 
         /// <inheritdoc/>
-        public override void Accept(Org.Apache.Kafka.Streams.Kstream.KStream<byte[], byte[]> arg0)
+        public override void Accept(Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV> arg0)
         {
             var methodToExecute = (OnAccept != null) ? OnAccept : Accept;
-            methodToExecute(new KNetKStream<K, V>(_factory, arg0));
+            methodToExecute(new KNetKStream<K, V, TJVMK, TJVMV>(_factory, arg0));
         }
 
         /// <summary>
         /// Executes the Function action in the CLR
         /// </summary>
-        /// <param name="obj">The <see cref="KNetKStream{K, V}"/> object</param>
-        public virtual void Accept(KNetKStream<K, V> obj) { }
+        /// <param name="obj">The <see cref="KNetKStream{K, V, TJVMK, TJVMV}"/> object</param>
+        public virtual void Accept(KNetKStream<K, V, TJVMK, TJVMV> obj) { }
+    }
+
+    /// <summary>
+    /// KNet implementation of <see cref="KNetKStreamConsumer{K, V, TJVMK, TJVMV}"/>
+    /// </summary>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    public class KNetKStreamConsumer<K, V> : KNetKStreamConsumer<K, V, byte[], byte[]>
+    {
     }
 }
