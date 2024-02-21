@@ -56,7 +56,7 @@ namespace MASES.KNet.Streams.State
         {
             get
             {
-                _valueSerDes ??= _factory.BuildKeySerDes<TValue>();
+                _valueSerDes ??= _factory?.BuildKeySerDes<TValue>();
                 var vv = _valueAndTimestamp.Value();
                 return _valueSerDes.Deserialize(null, vv);
             }

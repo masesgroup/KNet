@@ -49,7 +49,7 @@ namespace MASES.KNet.Streams.Processor
     }
 
     /// <summary>
-    /// KNet implementation of <see cref="KNetStreamPartitioner{K, V, TJVMK, TJVMV}"/>
+    /// KNet implementation of <see cref="KNetStreamPartitionerNoValue{K, TJVMK}"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     public class KNetStreamPartitionerNoValue<K> : KNetStreamPartitionerNoValue<K, byte[]>
@@ -64,7 +64,7 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public override string Topic => _arg0;
         /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= _factory.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
+        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
         /// <inheritdoc/>
         public override string Value { get { throw new InvalidOperationException("Value type is Java.Lang.Void"); } }
         /// <inheritdoc/>
@@ -73,7 +73,7 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public sealed override Optional<Set<Integer>> Partitions(Java.Lang.String arg0, byte[] arg1, Java.Lang.Void arg2, int arg3)
         {
-            _kSerializer ??= _factory.BuildKeySerDes<K>();
+            _kSerializer ??= Factory?.BuildKeySerDes<K>();
             _keySet = false;
             _arg0 = arg0;
             _arg1 = arg1;

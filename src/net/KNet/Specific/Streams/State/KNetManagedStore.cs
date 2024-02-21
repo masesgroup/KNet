@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.State
 {
@@ -40,10 +41,29 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="TStore">The Apache Kafka store type</typeparam>
     public class KNetManagedStore<TStore> : IKNetManagedStore<TStore>, IGenericSerDesFactoryApplier
     {
-        internal TStore _store;
-        internal IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        TStore _store;
+        /// <summary>
+        /// Returns the current <typeparamref name="TStore"/> instance
+        /// </summary>
+        protected TStore Store => _store ?? throw new InvalidOperationException($"The {typeof(TStore).FullName} instance was not set.");
 
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        /// <summary>
+        /// Returns the current <see cref="IGenericSerDesFactory"/>
+        /// </summary>
+        protected IGenericSerDesFactory Factory
+        {
+            get
+            {
+                IGenericSerDesFactory factory = null;
+                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+                {
+                    throw new InvalidOperationException("The serialization factory instance was not set.");
+                }
+                return factory;
+            }
+        }
         void IKNetManagedStore<TStore>.SetData(IGenericSerDesFactory factory, TStore store)
         {
             _factory = factory;

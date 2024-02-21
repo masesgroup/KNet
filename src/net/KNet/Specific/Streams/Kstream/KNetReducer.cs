@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -26,8 +27,23 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V">value type</typeparam>
     public abstract class KNetReducer<V, TJVMV> : Org.Apache.Kafka.Streams.Kstream.Reducer<TJVMV>, IGenericSerDesFactoryApplier
     {
-        protected IGenericSerDesFactory _factory;
+        IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        /// <summary>
+        /// Returns the current <see cref="IGenericSerDesFactory"/>
+        /// </summary>
+        protected IGenericSerDesFactory Factory
+        {
+            get
+            {
+                IGenericSerDesFactory factory = null;
+                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+                {
+                    throw new InvalidOperationException("The serialization factory instance was not set.");
+                }
+                return factory;
+            }
+        }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -68,22 +84,14 @@ namespace MASES.KNet.Streams.Kstream
         bool _value2Set;
         IKNetSerDes<V> _vSerializer = null;
         /// <summary>
-        /// Default initializer
-        /// </summary>
-        public KNetReducer()
-        {
-            _vSerializer = _factory.BuildValueSerDes<V>();
-        }
-
-        /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="KNetReducer{V, TJVMV}.Apply()"/> class method</remarks>
         public new System.Func<KNetReducer<V>, V> OnApply { get; set; } = null;
         /// <inheritdoc/>
-        public override  V Value1 { get { if (!_value1Set) { _value1 = _vSerializer.Deserialize(null, _arg0); _value1Set = true; } return _value1; } }
+        public override  V Value1 { get { if (!_value1Set) { _vSerializer ??= Factory?.BuildValueSerDes<V>(); _value1 = _vSerializer.Deserialize(null, _arg0); _value1Set = true; } return _value1; } }
         /// <inheritdoc/>
-        public override V Value2 { get { if (!_value2Set) { _value2 = _vSerializer.Deserialize(null, _arg1); _value2Set = true; } return _value2; } }
+        public override V Value2 { get { if (!_value2Set) { _vSerializer ??= Factory?.BuildValueSerDes<V>(); _value2 = _vSerializer.Deserialize(null, _arg1); _value2Set = true; } return _value2; } }
         /// <inheritdoc/>
         public sealed override byte[] Apply(byte[] arg0, byte[] arg1)
         {
@@ -92,7 +100,7 @@ namespace MASES.KNet.Streams.Kstream
             _arg1 = arg1;
 
             V res = (OnApply != null) ? OnApply(this) : Apply();
-            _vSerializer ??= _factory.BuildValueSerDes<V>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V>();
             return _vSerializer.Serialize(null, res);
         }
     }

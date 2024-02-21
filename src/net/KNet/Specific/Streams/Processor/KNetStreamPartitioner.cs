@@ -19,6 +19,7 @@
 using Java.Lang;
 using Java.Util;
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.Processor
 {
@@ -29,8 +30,23 @@ namespace MASES.KNet.Streams.Processor
     /// <typeparam name="V">The value type</typeparam>
     public abstract class KNetStreamPartitioner<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Processor.StreamPartitioner<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
     {
-        protected IGenericSerDesFactory _factory;
+        IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        /// <summary>
+        /// Returns the current <see cref="IGenericSerDesFactory"/>
+        /// </summary>
+        protected IGenericSerDesFactory Factory
+        {
+            get
+            {
+                IGenericSerDesFactory factory = null;
+                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+                {
+                    throw new InvalidOperationException("The serialization factory instance was not set.");
+                }
+                return factory;
+            }
+        }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
@@ -81,14 +97,14 @@ namespace MASES.KNet.Streams.Processor
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding <see cref="Partitions()"/> class method</remarks>
+        /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding <see cref="KNetStreamPartitioner{K, V, TJVMK, TJVMV}.Partitions()"/> class method</remarks>
         public new System.Func<KNetStreamPartitioner<K, V>, System.Collections.Generic.ICollection<int?>> OnPartitions { get; set; } = null;
         /// <inheritdoc/>
         public override string Topic => _arg0;
         /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= _factory.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
+        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
         /// <inheritdoc/>
-        public override V Value { get { if (!_valueSet) { _vSerializer ??= _factory.BuildValueSerDes<V>(); _value = _vSerializer.Deserialize(null, _arg2); _valueSet = true; } return _value; } }
+        public override V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V>(); _value = _vSerializer.Deserialize(null, _arg2); _valueSet = true; } return _value; } }
         /// <inheritdoc/>
         public override int NumPartitions => _arg3;
         /// <inheritdoc/>

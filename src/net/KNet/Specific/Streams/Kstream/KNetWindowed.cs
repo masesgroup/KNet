@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.Kstream
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windowed.html#key--"/>
         /// </summary>
         /// <returns><typeparamref name="TKey"/></returns>
-        public TKey Key { get { _keySerDes ??= _factory.BuildKeySerDes<TKey>(); return _keySerDes.Deserialize(null, _inner.Key()); } }
+        public TKey Key { get { _keySerDes ??= _factory?.BuildKeySerDes<TKey>(); return _keySerDes.Deserialize(null, _inner.Key()); } }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windowed.html#window--"/>
         /// </summary>

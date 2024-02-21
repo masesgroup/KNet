@@ -52,8 +52,8 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public sealed override long Extract(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object> arg0, long arg1)
         {
-            _keySerializer ??= _factory.BuildKeySerDes<TKey>();
-            _valueSerializer ??= _factory.BuildValueSerDes<TValue>();
+            _keySerializer ??= _factory?.BuildKeySerDes<TKey>();
+            _valueSerializer ??= _factory?.BuildValueSerDes<TValue>();
             var record = arg0.Cast<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>>(); // KNet consider the data within Apache Kafka Streams defined always as byte[]
 
             _record = new KNetConsumerRecord<TKey, TValue>(record, _factory);

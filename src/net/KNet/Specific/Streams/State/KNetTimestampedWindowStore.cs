@@ -108,64 +108,69 @@ namespace MASES.KNet.Streams.State
     public class KNetTimestampedWindowStore<TKey, TValue> : KNetTimestampedWindowStore<TKey, TValue, byte[], byte[]>
     {
         /// <inheritdoc/>
-        public override KNetTimestampedWindowedKeyValueIterator<TKey, TValue> All => new KNetTimestampedWindowedKeyValueIterator<TKey, TValue>(_factory, _store.All());
+        public override KNetTimestampedWindowedKeyValueIterator<TKey, TValue> All => new KNetTimestampedWindowedKeyValueIterator<TKey, TValue>(Factory, Store.All());
         /// <inheritdoc/>
         public override KNetTimestampedWindowedKeyValueIterator<TKey, TValue> Fetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
-            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
 
-            return new(_factory, _store.Fetch(r0, r1, arg2, arg3));
+            return new(factory, Store.Fetch(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
         public override KNetTimestampedWindowedKeyValueIterator<TKey, TValue> FetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
         {
-            return new(_factory, _store.FetchAll(arg0, arg1));
+            return new(Factory, Store.FetchAll(arg0, arg1));
         }
         /// <inheritdoc/>
         public override KNetTimestampedWindowStoreIterator<TValue> Fetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
-            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new(_factory, _store.Fetch(r0, arg1, arg2));
+            return new(factory, Store.Fetch(r0, arg1, arg2));
         }
         /// <inheritdoc/>
         public override KNetValueAndTimestamp<TValue> Fetch(TKey arg0, long arg1)
         {
-            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            var agg = _store.Fetch(r0, arg1);
-            return new KNetValueAndTimestamp<TValue>(_factory, agg);
+            var agg = Store.Fetch(r0, arg1);
+            return new KNetValueAndTimestamp<TValue>(factory, agg);
         }
         /// <inheritdoc/>
-        public override KNetTimestampedWindowedKeyValueIterator<TKey, TValue> BackwardAll => new(_factory, _store.BackwardAll());
+        public override KNetTimestampedWindowedKeyValueIterator<TKey, TValue> BackwardAll => new(Factory, Store.BackwardAll());
         /// <inheritdoc/>
         public override KNetTimestampedWindowedKeyValueIterator<TKey, TValue> BackwardFetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
-            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
 
-            return new(_factory, _store.BackwardFetch(r0, r1, arg2, arg3));
+            return new(factory, Store.BackwardFetch(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
         public override KNetTimestampedWindowedKeyValueIterator<TKey, TValue> BackwardFetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
         {
-            return new(_factory, _store.BackwardFetchAll(arg0, arg1));
+            return new(Factory, Store.BackwardFetchAll(arg0, arg1));
         }
         /// <inheritdoc/>
         public override KNetTimestampedWindowStoreIterator<TValue> BackwardFetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
-            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
 
-            return new(_factory, _store.BackwardFetch(r0, arg1, arg2));
+            return new(factory, Store.BackwardFetch(r0, arg1, arg2));
         }
     }
 }

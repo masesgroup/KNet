@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet.Serialization;
+
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
@@ -70,39 +72,42 @@ namespace MASES.KNet.Streams.State
     public class KNetTimestampedKeyValueStore<TKey, TValue> : KNetTimestampedKeyValueStore<TKey, TValue, byte[], byte[]>
     {
         /// <inheritdoc/>
-        public override long ApproximateNumEntries => _store.ApproximateNumEntries();
+        public override long ApproximateNumEntries => Store.ApproximateNumEntries();
         /// <inheritdoc/>
-        public override KNetTimestampedKeyValueIterator<TKey, TValue> All => new(_factory, _store.All());
+        public override KNetTimestampedKeyValueIterator<TKey, TValue> All => new(Factory, Store.All());
         /// <inheritdoc/>
         public override KNetTimestampedKeyValueIterator<TKey, TValue> Range(TKey arg0, TKey arg1)
         {
-            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
 
-            return new(_factory, _store.Range(r0, r1));
+            return new(factory, Store.Range(r0, r1));
         }
         /// <inheritdoc/>
         public override KNetValueAndTimestamp<TValue> Get(TKey arg0)
         {
-            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            var res = _store.Get(r0);
-            return new KNetValueAndTimestamp<TValue>(_factory, res);
+            var res = Store.Get(r0);
+            return new KNetValueAndTimestamp<TValue>(factory, res);
         }
         /// <inheritdoc/>
-        public override KNetTimestampedKeyValueIterator<TKey, TValue> ReverseAll => new(_factory, _store.ReverseAll());
+        public override KNetTimestampedKeyValueIterator<TKey, TValue> ReverseAll => new(Factory, Store.ReverseAll());
         /// <inheritdoc/>
         public override KNetTimestampedKeyValueIterator<TKey, TValue> ReverseRange(TKey arg0, TKey arg1)
         {
-            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
 
-            return new(_factory, _store.ReverseRange(r0, r1));
+            return new(factory, Store.ReverseRange(r0, r1));
         }
     }
 }

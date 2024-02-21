@@ -128,7 +128,7 @@ namespace MASES.KNet.Streams
         public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<TKey>(string arg0, TKey arg1, KNetStreamPartitioner<TKey, object> arg2)
         {
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var keySerDes = _factory.BuildKeySerDes<TKey>();
+            var keySerDes = _factory?.BuildKeySerDes<TKey>();
             return _inner.IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", arg0, keySerDes.Serialize(null, arg1), arg2);
         }
         /// <summary>

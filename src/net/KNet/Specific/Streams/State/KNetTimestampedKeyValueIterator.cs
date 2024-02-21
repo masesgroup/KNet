@@ -144,16 +144,17 @@ namespace MASES.KNet.Streams.State
         /// <inheritdoc/>
         protected sealed override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
         {
-            _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+            IGenericSerDesFactory factory = Factory;
+            _keySerDes ??= factory?.BuildKeySerDes<TKey>();
 #if NET7_0_OR_GREATER
             if (UsePrefetch)
             {
-                return _iterator != null ? new PrefetchableLocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes, isAsync, cancellationToken)
-                                         : new PrefetchableLocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes, isAsync, cancellationToken);
+                return _iterator != null ? new PrefetchableLocalEnumerator(false, factory, _iterator.BridgeInstance, _keySerDes, isAsync, cancellationToken)
+                                         : new PrefetchableLocalEnumerator(true, factory, _iterator2.BridgeInstance, _keySerDes, isAsync, cancellationToken);
             }
 #endif
-            return _iterator != null ? new StandardLocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes)
-                                     : new StandardLocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes);
+            return _iterator != null ? new StandardLocalEnumerator(false, factory, _iterator.BridgeInstance, _keySerDes)
+                                     : new StandardLocalEnumerator(true, factory, _iterator2.BridgeInstance, _keySerDes);
         }
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()"/> 
@@ -166,8 +167,9 @@ namespace MASES.KNet.Streams.State
         {
             get
             {
-                _keySerDes ??= _factory.BuildKeySerDes<TKey>();
-                return new KNetTimestampedKeyValue<TKey, TValue>(_factory, _iterator.Next, _keySerDes, false);
+                IGenericSerDesFactory factory = Factory;
+                _keySerDes ??= factory?.BuildKeySerDes<TKey>();
+                return new KNetTimestampedKeyValue<TKey, TValue>(factory, _iterator.Next, _keySerDes, false);
             }
         }
         /// <summary>
@@ -196,7 +198,7 @@ namespace MASES.KNet.Streams.State
         {
             get
             {
-                _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+                _keySerDes ??= Factory?.BuildKeySerDes<TKey>();
                 var kk = _iterator.PeekNextKey();
                 return _keySerDes.Deserialize(null, kk);
             }

@@ -153,17 +153,18 @@ namespace MASES.KNet.Streams.State
         /// <inheritdoc/>
         protected sealed override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
         {
-            _keySerDes ??= _factory.BuildKeySerDes<TKey>();
-            _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+            IGenericSerDesFactory factory = Factory;
+            _keySerDes ??= factory?.BuildKeySerDes<TKey>();
+            _valueSerDes ??= factory?.BuildValueSerDes<TValue>();
 #if NET7_0_OR_GREATER
             if (UsePrefetch)
             {
-                return _iterator != null ? new PrefetchableLocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes, isAsync, cancellationToken)
-                                         : new PrefetchableLocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes, _valueSerDes, isAsync, cancellationToken);
+                return _iterator != null ? new PrefetchableLocalEnumerator(false, factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes, isAsync, cancellationToken)
+                                         : new PrefetchableLocalEnumerator(true, factory, _iterator2.BridgeInstance, _keySerDes, _valueSerDes, isAsync, cancellationToken);
             }
 #endif
-            return _iterator != null ? new StandardLocalEnumerator(false, _factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes)
-                                     : new StandardLocalEnumerator(true, _factory, _iterator2.BridgeInstance, _keySerDes, _valueSerDes);
+            return _iterator != null ? new StandardLocalEnumerator(false, factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes)
+                                     : new StandardLocalEnumerator(true, factory, _iterator2.BridgeInstance, _keySerDes, _valueSerDes);
         }
 
         /// <summary>
@@ -177,10 +178,11 @@ namespace MASES.KNet.Streams.State
         {
             get
             {
-                _keySerDes ??= _factory.BuildKeySerDes<TKey>();
-                _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
-                return _iterator != null ? new KNetKeyValue<TKey, TValue>(_factory, _iterator.Next, _keySerDes, _valueSerDes, false)
-                                         : new KNetKeyValue<TKey, TValue>(_factory, _iterator2.Next, _keySerDes, _valueSerDes, false);
+                IGenericSerDesFactory factory = Factory;
+                _keySerDes ??= factory?.BuildKeySerDes<TKey>();
+                _valueSerDes ??= factory?.BuildValueSerDes<TValue>();
+                return _iterator != null ? new KNetKeyValue<TKey, TValue>(factory, _iterator.Next, _keySerDes, _valueSerDes, false)
+                                         : new KNetKeyValue<TKey, TValue>(factory, _iterator2.Next, _keySerDes, _valueSerDes, false);
             }
         }
         /// <summary>
@@ -210,7 +212,7 @@ namespace MASES.KNet.Streams.State
             get
             {
                 if (_iterator2 != null) return (TKey)(object)_iterator2.PeekNextKey();
-                _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+                _keySerDes ??= Factory?.BuildKeySerDes<TKey>();
                 var kk = _iterator.PeekNextKey();
                 return _keySerDes.Deserialize(null, kk);
             }

@@ -118,13 +118,14 @@ namespace MASES.KNet.Streams.State
         /// <inheritdoc/>
         protected sealed override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
         {
+            IGenericSerDesFactory factory = Factory;
 #if NET7_0_OR_GREATER
             if (UsePrefetch)
             {
-                return new PrefetchableLocalEnumerator(_factory, _iterator.BridgeInstance, isAsync, cancellationToken);
+                return new PrefetchableLocalEnumerator(factory, _iterator.BridgeInstance, isAsync, cancellationToken);
             }
 #endif
-            return new StandardLocalEnumerator(_factory, _iterator.BridgeInstance);
+            return new StandardLocalEnumerator(factory, _iterator.BridgeInstance);
         }
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()"/> 
@@ -135,7 +136,7 @@ namespace MASES.KNet.Streams.State
         /// </summary>
         public KNetTimestampedWindowedKeyValue<TKey, TValue> Next
         {
-            get { return new KNetTimestampedWindowedKeyValue<TKey, TValue>(_factory, _iterator.Next); }
+            get { return new KNetTimestampedWindowedKeyValue<TKey, TValue>(Factory, _iterator.Next); }
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
@@ -164,7 +165,7 @@ namespace MASES.KNet.Streams.State
             get
             {
                 var kk = _iterator.PeekNextKey();
-                return new KNetWindowed<TKey>(_factory, kk);
+                return new KNetWindowed<TKey>(Factory, kk);
             }
         }
         /// <summary>

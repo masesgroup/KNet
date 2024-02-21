@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet.Serialization;
+
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
@@ -147,124 +149,138 @@ namespace MASES.KNet.Streams.State
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> Fetch(K arg0, K arg1)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.Fetch(r0, r1));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.Fetch(r0, r1));
         }
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> Fetch(K arg0)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.Fetch(r0));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.Fetch(r0));
         }
         /// <inheritdoc/>
         public override AGG FetchSession(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
-            var _valueSerDes = _factory.BuildValueSerDes<AGG>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
+            var _valueSerDes = factory?.BuildValueSerDes<AGG>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            var agg = _store.FetchSession(r0, arg1, arg2);
+            var agg = Store.FetchSession(r0, arg1, arg2);
             return _valueSerDes.Deserialize(null, agg);
         }
         /// <inheritdoc/>
         public override AGG FetchSession(K arg0, long arg1, long arg2)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
-            var _valueSerDes = _factory.BuildValueSerDes<AGG>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
+            var _valueSerDes = factory?.BuildValueSerDes<AGG>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            var agg = _store.FetchSession(r0, arg1, arg2);
+            var agg = Store.FetchSession(r0, arg1, arg2);
             return _valueSerDes.Deserialize(null, agg);
         }
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0, K arg1)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFetch(r0, r1));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFetch(r0, r1));
         }
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> BackwardFetch(K arg0)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFetch(r0));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFetch(r0));
         }
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFindSessions(r0, arg1, arg2));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFindSessions(r0, r1, arg2, arg3));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, K arg1, long arg2, long arg3)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFindSessions(r0, r1, arg2, arg3));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> BackwardFindSessions(K arg0, long arg1, long arg2)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFindSessions(r0, arg1, arg2));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.BackwardFindSessions(r0, arg1, arg2));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.FindSessions(r0, r1, arg2, arg3));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, K arg1, long arg2, long arg3)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.FindSessions(r0, r1, arg2, arg3));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
         public override KNetWindowedKeyValueIterator<K, AGG> FindSessions(K arg0, long arg1, long arg2)
         {
-            var _keySerDes = _factory.BuildKeySerDes<K>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            return new KNetWindowedKeyValueIterator<K, AGG>(_factory, _store.FindSessions(r0, arg1, arg2));
+            return new KNetWindowedKeyValueIterator<K, AGG>(factory, Store.FindSessions(r0, arg1, arg2));
         }
     }
 }

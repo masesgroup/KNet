@@ -25,6 +25,8 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="TKey">The key type</typeparam>
     /// <typeparam name="TValue">The value type</typeparam>
+    /// <typeparam name="TJVMTKey">The JVM key type</typeparam>
+    /// <typeparam name="TJVMTValue">The JVM value type</typeparam>
     public abstract class KNetReadOnlyKeyValueStore<TKey, TValue, TJVMTKey, TJVMTValue> : KNetManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMTKey, TJVMTValue>>
     {
         /// <summary>
@@ -72,40 +74,43 @@ namespace MASES.KNet.Streams.State
     public class KNetReadOnlyKeyValueStore<TKey, TValue> : KNetReadOnlyKeyValueStore<TKey, TValue, byte[], byte[]>
     {
         /// <inheritdoc/>
-        public override long ApproximateNumEntries => _store.ApproximateNumEntries();
+        public override long ApproximateNumEntries => Store.ApproximateNumEntries();
         /// <inheritdoc/>
-        public override KNetKeyValueIterator<TKey, TValue> All => new(_factory, _store.All());
+        public override KNetKeyValueIterator<TKey, TValue> All => new(Factory, Store.All());
         /// <inheritdoc/>
         public override KNetKeyValueIterator<TKey, TValue> Range(TKey arg0, TKey arg1)
         {
-            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
 
-            return new(_factory, _store.Range(r0, r1));
+            return new(factory, Store.Range(r0, r1));
         }
         /// <inheritdoc/>
         public override TValue Get(TKey arg0)
         {
-            var _keySerDes = _factory.BuildKeySerDes<TKey>();
-            var _valueSerDes = _factory.BuildValueSerDes<TValue>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<TKey>();
+            var _valueSerDes = factory?.BuildValueSerDes<TValue>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            var res = _store.Get(r0);
+            var res = Store.Get(r0);
             return _valueSerDes.Deserialize(null, res);
         }
         /// <inheritdoc/>
-        public override KNetKeyValueIterator<TKey, TValue> ReverseAll => new(_factory, _store.ReverseAll());
+        public override KNetKeyValueIterator<TKey, TValue> ReverseAll => new(Factory, Store.ReverseAll());
         /// <inheritdoc/>
         public override KNetKeyValueIterator<TKey, TValue> ReverseRange(TKey arg0, TKey arg1)
         {
-            var _keySerDes = _factory.BuildKeySerDes<TKey>();
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<TKey>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
 
-            return new(_factory, _store.ReverseRange(r0, r1));
+            return new(factory, Store.ReverseRange(r0, r1));
         }
     }
 }

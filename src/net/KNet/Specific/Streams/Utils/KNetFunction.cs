@@ -24,11 +24,13 @@ namespace MASES.KNet.Streams.Utils
     /// <summary>
     /// KNet implementation of <see cref="Java.Util.Function.Function{TJVMV, TJVMKO}"/>
     /// </summary>
-    /// <typeparam name="V">The key type</typeparam>
-    /// <typeparam name="KO">The value type</typeparam>
+    /// <typeparam name="V">The type of the input to the function</typeparam>
+    /// <typeparam name="KO">The type of the result of the function</typeparam>
+    /// <typeparam name="TJVMV">The JVM type of the input to the function</typeparam>
+    /// <typeparam name="TJVMKO">The JVM type of the result of the function</typeparam>
     public class KNetFunction<V, KO, TJVMV, TJVMKO> : Java.Util.Function.Function<TJVMV, TJVMKO>, IGenericSerDesFactoryApplier
     {
-        protected IGenericSerDesFactory _factory;
+        IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
         /// The <see cref="Func{V, KO}"/> to be executed
@@ -59,8 +61,13 @@ namespace MASES.KNet.Streams.Utils
         /// <inheritdoc/>
         public override byte[] Apply(byte[] arg0)
         {
-            _keySerializer ??= _factory.BuildKeySerDes<KO>();
-            _valueSerializer ??= _factory.BuildValueSerDes<V>();
+            IGenericSerDesFactory factory = null;
+            if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+            {
+                throw new InvalidOperationException("The serialization factory instance was not set.");
+            }
+            _keySerializer ??= factory?.BuildKeySerDes<KO>();
+            _valueSerializer ??= factory?.BuildValueSerDes<V>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_valueSerializer.Deserialize(null, arg0));
 

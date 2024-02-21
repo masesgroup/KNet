@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -28,9 +29,23 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VR">joined value type</typeparam>
     public abstract class KNetValueJoiner<V1, V2, VR, TJVMV1, TJVMV2, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.ValueJoiner<TJVMV1, TJVMV2, TJVMVR>, IGenericSerDesFactoryApplier
     {
-        protected IGenericSerDesFactory _factory;
+        IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
-
+        /// <summary>
+        /// Returns the current <see cref="IGenericSerDesFactory"/>
+        /// </summary>
+        protected IGenericSerDesFactory Factory
+        {
+            get
+            {
+                IGenericSerDesFactory factory = null;
+                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+                {
+                    throw new InvalidOperationException("The serialization factory instance was not set.");
+                }
+                return factory;
+            }
+        }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -74,12 +89,12 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
+        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="KNetValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}.Apply()"/> class method</remarks>
         public new System.Func<KNetValueJoiner<V1, V2, VR>, VR> OnApply { get; set; } = null;
         /// <inheritdoc/>
-        public override V1 Value1 { get { if (!_value1Set) { _v1Serializer ??= _factory.BuildValueSerDes<V1>(); _value1 = _v1Serializer.Deserialize(null, _arg0); _value1Set = true; } return _value1; } }
+        public override V1 Value1 { get { if (!_value1Set) { _v1Serializer ??= Factory?.BuildValueSerDes<V1>(); _value1 = _v1Serializer.Deserialize(null, _arg0); _value1Set = true; } return _value1; } }
         /// <inheritdoc/>
-        public override V2 Value2 { get { if (!_value2Set) { _v2Serializer ??= _factory.BuildValueSerDes<V2>(); _value2 = _v2Serializer.Deserialize(null, _arg1); _value2Set = true; } return _value2; } }
+        public override V2 Value2 { get { if (!_value2Set) { _v2Serializer ??= Factory?.BuildValueSerDes<V2>(); _value2 = _v2Serializer.Deserialize(null, _arg1); _value2Set = true; } return _value2; } }
         /// <inheritdoc/>
         public sealed override byte[] Apply(byte[] arg0, byte[] arg1)
         {
@@ -88,7 +103,7 @@ namespace MASES.KNet.Streams.Kstream
             _arg1 = arg1;
 
             VR res = (OnApply != null) ? OnApply(this) : Apply();
-            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR>();
             return _vrSerializer.Serialize(null, res);
         }
     }

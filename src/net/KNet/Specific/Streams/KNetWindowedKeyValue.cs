@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams
             _valueSerDes = valueSerDes;
             if (fromPrefetched)
             {
-                _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+                _valueSerDes ??= _factory?.BuildValueSerDes<TValue>();
                 _value = _valueSerDes.Deserialize(null, _valueInner.value);
                 _valueStored = true;
             }
@@ -72,7 +72,7 @@ namespace MASES.KNet.Streams
             {
                 if (!_valueStored)
                 {
-                    _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+                    _valueSerDes ??= _factory?.BuildValueSerDes<TValue>();
                     var kk = _valueInner.value;
                     _value = _valueSerDes.Deserialize(null, kk);
                     _valueStored = true;

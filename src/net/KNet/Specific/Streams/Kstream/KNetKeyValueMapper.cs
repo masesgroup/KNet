@@ -18,6 +18,7 @@
 
 using Java.Util;
 using MASES.KNet.Serialization;
+using System;
 using System.Collections.Generic;
 
 namespace MASES.KNet.Streams.Kstream
@@ -40,6 +41,21 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         protected IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        /// <summary>
+        /// Returns the current <see cref="IGenericSerDesFactory"/>
+        /// </summary>
+        protected IGenericSerDesFactory Factory
+        {
+            get
+            {
+                IGenericSerDesFactory factory = null;
+                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+                {
+                    throw new InvalidOperationException("The serialization factory instance was not set.");
+                }
+                return factory;
+            }
+        }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -73,9 +89,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public override byte[] Apply(byte[] arg0, byte[] arg1)
         {
-            _kSerializer ??= _factory.BuildKeySerDes<K>();
-            _vSerializer ??= _factory.BuildValueSerDes<V>();
-            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
+            _kSerializer ??= Factory?.BuildKeySerDes<K>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V>();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
             return _vrSerializer.Serialize(null, res);
@@ -94,8 +110,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public override Java.Lang.String Apply(byte[] arg0, byte[] arg1)
         {
-            _kSerializer ??= _factory.BuildKeySerDes<K>();
-            _vSerializer ??= _factory.BuildValueSerDes<V>();
+            _kSerializer ??= Factory?.BuildKeySerDes<K>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
             return res;
@@ -149,10 +165,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> Apply(byte[] arg0, byte[] arg1)
         {
-            _kSerializer ??= _factory.BuildKeySerDes<K>();
-            _vSerializer ??= _factory.BuildValueSerDes<V>();
-            _krSerializer ??= _factory.BuildValueSerDes<KR>();
-            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
+            _kSerializer ??= Factory?.BuildKeySerDes<K>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V>();
+            _krSerializer ??= Factory?.BuildValueSerDes<KR>();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
@@ -212,10 +228,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override Java.Lang.Iterable<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>> Apply(byte[] arg0, byte[] arg1)
         {
-            _kSerializer ??= _factory.BuildKeySerDes<K>();
-            _vSerializer ??= _factory.BuildValueSerDes<V>();
-            _krSerializer ??= _factory.BuildValueSerDes<KR>();
-            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
+            _kSerializer ??= Factory?.BuildKeySerDes<K>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V>();
+            _krSerializer ??= Factory?.BuildValueSerDes<KR>();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));

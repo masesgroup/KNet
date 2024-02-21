@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.Processor.Api
 {
@@ -29,8 +30,23 @@ namespace MASES.KNet.Streams.Processor.Api
     /// <typeparam name="VOut">The output value type</typeparam>
     public abstract class KNetProcessor<KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut> : Org.Apache.Kafka.Streams.Processor.Api.Processor<TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut>, IGenericSerDesFactoryApplier
     {
-        protected IGenericSerDesFactory _factory;
+        IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        /// <summary>
+        /// Returns the current <see cref="IGenericSerDesFactory"/>
+        /// </summary>
+        protected IGenericSerDesFactory Factory
+        {
+            get
+            {
+                IGenericSerDesFactory factory = null;
+                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+                {
+                    throw new InvalidOperationException("The serialization factory instance was not set.");
+                }
+                return factory;
+            }
+        }
         /// <summary>
         /// <see cref="KNetProcessorContext{KOut, VOut}"/> received from the init
         /// </summary>
@@ -89,7 +105,7 @@ namespace MASES.KNet.Streams.Processor.Api
         public sealed override void Process(Org.Apache.Kafka.Streams.Processor.Api.Record<byte[], byte[]> arg0)
         {
             var methodToExecute = OnProcess ?? Process;
-            methodToExecute(new KNetRecord<KIn, VIn>(_factory, arg0, Context.RecordMetadata));
+            methodToExecute(new KNetRecord<KIn, VIn>(Factory, arg0, Context.RecordMetadata));
         }
 
         /// <summary>

@@ -18,6 +18,7 @@
 
 using Java.Util;
 using MASES.KNet.Serialization;
+using System;
 using System.Collections.Generic;
 
 namespace MASES.KNet.Streams.Kstream
@@ -29,9 +30,23 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VR">joined value type</typeparam>
     public class KNetValueMapper<V, VR, TJVMV, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.ValueMapper<TJVMV, TJVMVR>, IGenericSerDesFactoryApplier
     {
-        protected IGenericSerDesFactory _factory;
+        IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
-
+        /// <summary>
+        /// Returns the current <see cref="IGenericSerDesFactory"/>
+        /// </summary>
+        protected IGenericSerDesFactory Factory
+        {
+            get
+            {
+                IGenericSerDesFactory factory = null;
+                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+                {
+                    throw new InvalidOperationException("The serialization factory instance was not set.");
+                }
+                return factory;
+            }
+        }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -67,8 +82,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override byte[] Apply(byte[] arg0)
         {
-            _vSerializer ??= _factory.BuildValueSerDes<V>();
-            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V>();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_vSerializer.Deserialize(null, arg0));
@@ -118,8 +133,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override Java.Lang.Iterable<byte[]> Apply(byte[] arg0)
         {
-            _vSerializer ??= _factory.BuildValueSerDes<V>();
-            _vrSerializer ??= _factory.BuildValueSerDes<VR>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V>();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_vSerializer.Deserialize(null, arg0));

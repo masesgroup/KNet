@@ -23,10 +23,12 @@ using System;
 namespace MASES.KNet.Streams.Utils
 {
     /// <summary>
-    /// KNet implementation of <see cref="Java.Util.Function.Function{TObject, TReturn}"/> over <see cref="Org.Apache.Kafka.Streams.Kstream.KStream{K, V}"/>
+    /// KNet implementation of <see cref="Java.Util.Function.Function{TObject, TReturn}"/> over <see cref="Org.Apache.Kafka.Streams.Kstream.KStream{TJVMK, TJVMV}"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
+    /// <typeparam name="TJVMK">The JVM key type</typeparam>
+    /// <typeparam name="TJVMV">The JVM value type</typeparam>
     public class KNetKStreamFunction<K, V, TJVMK, TJVMV> : Java.Util.Function.Function<Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV>, Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;

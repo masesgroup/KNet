@@ -50,10 +50,10 @@ namespace MASES.KNet.Streams
             _valueSerDes = valueSerDes;
             if (fromPrefetched)
             {
-                _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+                _keySerDes ??= _factory?.BuildKeySerDes<TKey>();
                 _key = _keySerDes.Deserialize(null, _valueInner1.key);
                 _keyStored = true;
-                _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+                _valueSerDes ??= _factory?.BuildValueSerDes<TValue>();
                 _value = _valueSerDes.Deserialize(null, _valueInner1.value);
                 _valueStored = true;
             }
@@ -71,10 +71,10 @@ namespace MASES.KNet.Streams
             _valueSerDes = valueSerDes;
             if (fromPrefetched)
             {
-                _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+                _keySerDes ??= _factory?.BuildKeySerDes<TKey>();
                 _key = (TKey)(object)_valueInner2.key.LongValue();
                 _keyStored = true;
-                _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+                _valueSerDes ??= _factory?.BuildValueSerDes<TValue>();
                 _value = _valueSerDes.Deserialize(null, _valueInner1.value);
                 _valueStored = true;
             }
@@ -96,7 +96,7 @@ namespace MASES.KNet.Streams
                     }
                     else
                     {
-                        _keySerDes ??= _factory.BuildKeySerDes<TKey>();
+                        _keySerDes ??= _factory?.BuildKeySerDes<TKey>();
                         _key = _keySerDes.Deserialize(null, _valueInner1.key);
                     }
                     _keyStored = true;
@@ -113,7 +113,7 @@ namespace MASES.KNet.Streams
             {
                 if (!_valueStored)
                 {
-                    _valueSerDes ??= _factory.BuildValueSerDes<TValue>();
+                    _valueSerDes ??= _factory?.BuildValueSerDes<TValue>();
                     _value = _valueSerDes.Deserialize(null, _valueInner1 != null ? _valueInner1.value : _valueInner2.value);
                     _valueStored = true;
                 }
