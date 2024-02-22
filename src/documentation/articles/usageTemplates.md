@@ -11,9 +11,9 @@ For more information related to .NET templates look at https://docs.microsoft.co
 
 To install the templates executes the following command within a command shell:
 
->
-> dotnet new --install MASES.KNet.Templates
->
+```sh
+dotnet new --install MASES.KNet.Templates
+```
 
 The command installs the latest version and on success will list all templates added to the list of available templates.
 They are:
@@ -28,9 +28,9 @@ They are:
 The first three templates are ready made project with enough code to use them directly.
 To use one of the available templates run the following command:
 
->
-> dotnet new knetConsumerApp
->
+```sh
+dotnet new knetConsumerApp
+```
 
 the previous command will create a .NET project for an executable. The user can modify the code or just execute it against an Apache Kafka server.
 

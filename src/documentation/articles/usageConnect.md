@@ -9,8 +9,11 @@ _description: Describes how to use Kafka Connect SDK of .NET suite for Apache Ka
 
 KNet Connect is available in two different formats:
 
-- dotnet tool hosted on NuGet.org: check https://www.nuget.org/packages/MASES.KNetConnect/ and https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools for installation deep instructions.
-- Docker image hosted on [GitHub](https://github.com/masesgroup/KNet/pkgs/container/knetconnect) or [Docker Hub](https://hub.docker.com/repository/docker/masesgroup/knetconnect/general): follow instruction within the page and general instruction on https://docs.docker.com
+- **dotnet tool** hosted on [NuGet](https://www.nuget.org/packages/MASES.KNetConnect/): check https://www.nuget.org/packages/MASES.KNetConnect/ and https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools for installation deep instructions.
+- **Docker image** hosted on [GitHub](https://github.com/masesgroup/KNet/pkgs/container/knetconnect) or [Docker Hub](https://hub.docker.com/repository/docker/masesgroup/knetconnect/general): follow instruction within the page and general instruction on https://docs.docker.com
+
+> [!IMPORTANT]
+> The **dotnet tool** needs a JRE/JDK installed within the system
 
 ## Usage
 
@@ -18,19 +21,31 @@ To use the Connect interface (KNetConnect) runs a command like the following:
 
 - **dotnet tool**
 
-> knetconnect -s connect-standalone.properties specific-connector.properties
+```sh
+knetconnect -s connect-standalone.properties specific-connector.properties
+```
 
-> knetconnect -d connect-distributed.properties
+```sh
+knetconnect -d connect-distributed.properties
+```
 
 - **Docker image**
 
-> docker run ghcr.io/masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
+```sh
+docker run ghcr.io/masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
+```
 
-> docker run masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
+```sh
+docker run masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
+```
 
-> docker run ghcr.io/masesgroup/knetconnect -d connect-distributed.properties
+```sh
+docker run ghcr.io/masesgroup/knetconnect -d connect-distributed.properties
+```
 
-> docker run masesgroup/knetconnect -d connect-distributed.properties
+```sh
+docker run masesgroup/knetconnect -d connect-distributed.properties
+```
 
 ### Command line switch available
 

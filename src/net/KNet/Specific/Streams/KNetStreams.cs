@@ -41,10 +41,10 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetTopology"/></param>
+        /// <param name="arg0"><see cref="Topology"/></param>
         /// <param name="arg1"><see cref="Java.Util.Properties"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        public KNetStreams(KNetTopology arg0, StreamsConfigBuilder arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
+        public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         {
             _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, PrepareProperties(arg1), arg2);
             _factory = arg1;
@@ -52,11 +52,11 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties,KNetClientSupplier,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetTopology"/></param>
+        /// <param name="arg0"><see cref="Topology"/></param>
         /// <param name="arg1"><see cref="Java.Util.Properties"/></param>
         /// <param name="arg2"><see cref="KNetClientSupplier"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        public KNetStreams(KNetTopology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2, Org.Apache.Kafka.Common.Utils.Time arg3)
+        public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2, Org.Apache.Kafka.Common.Utils.Time arg3)
         {
             _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, PrepareProperties(arg1), arg2, arg3);
             _factory = arg1;
@@ -65,10 +65,10 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties,KNetClientSupplier)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetTopology"/></param>
+        /// <param name="arg0"><see cref="Topology"/></param>
         /// <param name="arg1"><see cref="Java.Util.Properties"/></param>
         /// <param name="arg2"><see cref="KNetClientSupplier"/></param>
-        public KNetStreams(KNetTopology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2)
+        public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2)
         {
             _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, PrepareProperties(arg1), arg2);
             _factory = arg1;
@@ -77,9 +77,9 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(KNetTopology,java.util.Properties)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="KNetTopology"/></param>
+        /// <param name="arg0"><see cref="Topology"/></param>
         /// <param name="arg1"><see cref="Java.Util.Properties"/></param>
-        public KNetStreams(KNetTopology arg0, StreamsConfigBuilder arg1)
+        public KNetStreams(Topology arg0, StreamsConfigBuilder arg1)
         {
             _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, PrepareProperties(arg1));
             _factory = arg1;
@@ -110,10 +110,10 @@ namespace MASES.KNet.Streams
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><typeparamref name="TKey"/></param>
-        /// <param name="arg2"><see cref="IKNetSerializer{T}"/></param>
+        /// <param name="arg2"><see cref="ISerializer{T}"/></param>
         /// <typeparam name="TKey"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.KeyQueryMetadata"/></returns>
-        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<TKey>(string arg0, TKey arg1, IKNetSerializer<TKey> arg2)
+        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<TKey>(string arg0, TKey arg1, ISerializer<TKey> arg2)
         {
             return _inner.QueryMetadataForKey<byte[]>(arg0, arg2.Serialize(null, arg1), arg2.KafkaSerializer);
         }
@@ -125,10 +125,10 @@ namespace MASES.KNet.Streams
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <typeparam name="TKey">The key type</typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.KeyQueryMetadata"/></returns>
-        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<TKey>(string arg0, TKey arg1, KNetStreamPartitioner<TKey, object> arg2)
+        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<TKey>(string arg0, TKey arg1, StreamPartitioner<TKey, object> arg2)
         {
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var keySerDes = _factory.BuildKeySerDes<TKey>();
+            var keySerDes = _factory?.BuildKeySerDes<TKey>();
             return _inner.IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", arg0, keySerDes.Serialize(null, arg1), arg2);
         }
         /// <summary>
@@ -149,11 +149,11 @@ namespace MASES.KNet.Streams
         /// <typeparam name="TStore"></typeparam>
         /// <returns><typeparamref name="TKNetManagedStore"/></returns>
         public TKNetManagedStore Store<TKNetManagedStore, TStore>(Org.Apache.Kafka.Streams.StoreQueryParameters<TStore> arg0)
-            where TKNetManagedStore : KNetManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
+            where TKNetManagedStore : ManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
         {
             TKNetManagedStore store = new();
             var substore = _inner.Store<TStore>(arg0);
-            if (store is IKNetManagedStore<TStore> knetManagedStore)
+            if (store is IManagedStore<TStore> knetManagedStore)
             {
                 knetManagedStore.SetData(_factory, substore);
             }
@@ -168,13 +168,13 @@ namespace MASES.KNet.Streams
         /// <typeparam name="TKNetManagedStore"></typeparam>
         /// <typeparam name="TStore"></typeparam>
         /// <returns><typeparamref name="TKNetManagedStore"/></returns>
-        public TKNetManagedStore Store<TKNetManagedStore, TStore>(string storageId, KNetQueryableStoreTypes.StoreType<TKNetManagedStore, TStore> storeType)
-            where TKNetManagedStore : KNetManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
+        public TKNetManagedStore Store<TKNetManagedStore, TStore>(string storageId, QueryableStoreTypes.StoreType<TKNetManagedStore, TStore> storeType)
+            where TKNetManagedStore : ManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
         {
             var sqp = Org.Apache.Kafka.Streams.StoreQueryParameters<TStore>.FromNameAndType(storageId, storeType.Store);
             TKNetManagedStore store = new();
             var substore = _inner.Store<TStore>(sqp);
-            if (store is IKNetManagedStore<TStore> knetManagedStore)
+            if (store is IManagedStore<TStore> knetManagedStore)
             {
                 knetManagedStore.SetData(_factory, substore);
             }
@@ -200,7 +200,7 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#allLocalStorePartitionLags--"/>
         /// </summary>
-        public Java.Util.Map<string, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>> AllLocalStorePartitionLags => _inner.AllLocalStorePartitionLags();
+        public Java.Util.Map<Java.Lang.String, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>> AllLocalStorePartitionLags => _inner.AllLocalStorePartitionLags();
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#metrics--"/>
         /// </summary>
@@ -215,7 +215,7 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#addStreamThread--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional{T}"/></returns>
-        public Java.Util.Optional<string> AddStreamThread()
+        public Java.Util.Optional<Java.Lang.String> AddStreamThread()
         {
             return _inner.AddStreamThread();
         }
@@ -223,7 +223,7 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<string> RemoveStreamThread()
+        public Java.Util.Optional<Java.Lang.String> RemoveStreamThread()
         {
             return _inner.RemoveStreamThread();
         }
@@ -231,8 +231,8 @@ namespace MASES.KNet.Streams
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="TimeSpan"/></param>
-        /// <returns><see cref="string"/></returns>
-        public string RemoveStreamThread(TimeSpan arg0)
+        /// <returns><see cref="Java.Lang.String"/></returns>
+        public Java.Lang.String RemoveStreamThread(TimeSpan arg0)
         {
             var res = _inner.RemoveStreamThread(arg0);
             return res.IsPresent() ? res.Get() : null;

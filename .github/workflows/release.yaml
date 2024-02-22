@@ -8,7 +8,7 @@ on:
   release:
     types: 
       - published
-      - edited
+#      - edited
 
 jobs:
   build_container_knet:
@@ -210,7 +210,7 @@ jobs:
       - name: Compile KNetPS
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNetPS\KNetPS.csproj
 
-      - uses: nuget/setup-nuget@v1.2.0
+      - uses: nuget/setup-nuget@v2.0.0
         with:
           nuget-version: '5.x'
           

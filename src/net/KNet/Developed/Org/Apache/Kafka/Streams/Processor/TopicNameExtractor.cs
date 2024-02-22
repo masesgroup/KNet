@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="value">the record value</param>
         /// <param name="recordContext">current context metadata of the record</param>
         /// <returns>the topic name this record should be sent to</returns>
-        string Extract(K key, V value, RecordContext recordContext);
+        Java.Lang.String Extract(K key, V value, RecordContext recordContext);
     }
 
     /// <summary>

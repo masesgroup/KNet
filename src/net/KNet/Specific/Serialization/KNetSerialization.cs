@@ -70,6 +70,10 @@ namespace MASES.KNet.Serialization
             /// </summary>
             External,
             /// <summary>
+            /// <see cref="bool"/>
+            /// </summary>
+            Boolean,
+            /// <summary>
             /// Array of <see cref="byte"/>
             /// </summary>
             ByteArray,
@@ -92,7 +96,7 @@ namespace MASES.KNet.Serialization
             /// <summary>
             /// <see cref="int"/>
             /// </summary>
-            Int,
+            Integer,
             /// <summary>
             /// <see cref="long"/>
             /// </summary>
@@ -130,9 +134,35 @@ namespace MASES.KNet.Serialization
         /// <returns><see langword="true"/> if managed</returns>
         public static bool IsInternalManaged(Type type)
         {
-            if (type == typeof(byte[]) || type == typeof(ByteBuffer) || type == typeof(Bytes)
+            if (type == typeof(bool) || type == typeof(byte[]) || type == typeof(ByteBuffer) || type == typeof(Bytes)
                 || type == typeof(double) || type == typeof(float) || type == typeof(int) || type == typeof(long) || type == typeof(short) || type == typeof(string)
                 || type == typeof(Guid) || type == typeof(void))
+            {
+                return true;
+            }
+
+            return false;
+        }
+        /// <summary>
+        /// Check if a JVM serializer is available for <typeparamref name="TData"/>
+        /// </summary>
+        /// <typeparam name="TData">The type to check</typeparam>
+        /// <returns><see langword="true"/> if managed</returns>
+        public static bool IsJVMInternalManaged<TData>()
+        {
+            return IsJVMInternalManaged(typeof(TData));
+        }
+        /// <summary>
+        /// Check if a JVM serializer is available for <paramref name="type"/>
+        /// </summary>
+        /// <param name="type">The <see cref="Type"/> to check</param>
+        /// <returns><see langword="true"/> if managed</returns>
+        public static bool IsJVMInternalManaged(Type type)
+        {
+            if (type == typeof(Java.Lang.Boolean) || type == typeof(byte[]) || type == typeof(ByteBuffer) || type == typeof(Bytes)
+                || type == typeof(Java.Lang.Double) || type == typeof(Java.Lang.Float) || type == typeof(Java.Lang.Integer) || type == typeof(Java.Lang.Long) 
+                || type == typeof(Java.Lang.Short) || type == typeof(Java.Lang.String)
+                || type == typeof(Java.Util.UUID) || type == typeof(Java.Lang.Void))
             {
                 return true;
             }
@@ -155,12 +185,13 @@ namespace MASES.KNet.Serialization
         /// <returns><see cref="SerializationType"/></returns>
         public static SerializationType InternalSerDesType(Type type)
         {
-            if (type == typeof(byte[])) return SerializationType.ByteArray;
+            if (type == typeof(bool)) return SerializationType.Boolean;
+            else if (type == typeof(byte[])) return SerializationType.ByteArray;
             else if (type == typeof(ByteBuffer)) return SerializationType.ByteBuffer;
             else if (type == typeof(Bytes)) return SerializationType.Bytes;
             else if (type == typeof(double)) return SerializationType.Double;
             else if (type == typeof(float)) return SerializationType.Float;
-            else if (type == typeof(int)) return SerializationType.Int;
+            else if (type == typeof(int)) return SerializationType.Integer;
             else if (type == typeof(long)) return SerializationType.Long;
             else if (type == typeof(short)) return SerializationType.Short;
             else if (type == typeof(string)) return SerializationType.String;
@@ -168,6 +199,47 @@ namespace MASES.KNet.Serialization
             else if (type == typeof(void)) return SerializationType.Void;
 
             return SerializationType.External;
+        }
+
+        /// <summary>
+        /// Returns the JVM serializer <see cref="SerializationType"/> for <typeparamref name="TData"/>
+        /// </summary>
+        /// <typeparam name="TData">The type to check</typeparam>
+        /// <returns><see cref="SerializationType"/></returns>
+        public static SerializationType InternalJVMSerDesType<TData>()
+        {
+            return InternalJVMSerDesType(typeof(TData));
+        }
+        /// <summary>
+        /// Returns the JVM serializer <see cref="SerializationType"/> for <paramref name="type"/>
+        /// </summary>
+        /// <param name="type">The <see cref="Type"/> to check</param>
+        /// <returns><see cref="SerializationType"/></returns>
+        public static SerializationType InternalJVMSerDesType(Type type)
+        {
+            if (type == typeof(Java.Lang.Boolean)) return SerializationType.Boolean;
+            else if (type == typeof(byte[])) return SerializationType.ByteArray;
+            else if (type == typeof(ByteBuffer)) return SerializationType.ByteBuffer;
+            else if (type == typeof(Bytes)) return SerializationType.Bytes;
+            else if (type == typeof(Java.Lang.Double)) return SerializationType.Double;
+            else if (type == typeof(Java.Lang.Float)) return SerializationType.Float;
+            else if (type == typeof(Java.Lang.Integer)) return SerializationType.Integer;
+            else if (type == typeof(Java.Lang.Long)) return SerializationType.Long;
+            else if (type == typeof(Java.Lang.Short)) return SerializationType.Short;
+            else if (type == typeof(Java.Lang.String)) return SerializationType.String;
+            else if (type == typeof(Java.Util.UUID)) return SerializationType.Guid;
+            else if (type == typeof(Java.Lang.Void)) return SerializationType.Void;
+
+            return SerializationType.External;
+        }
+
+        static readonly BooleanSerializer _BooleanSerializer = new BooleanSerializer();
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.Boolean"/>
+        /// </summary>
+        public static byte[] SerializeBoolean(string topic, bool data)
+        {
+            return _BooleanSerializer.Serialize(topic, data);
         }
 
         /// <summary>
@@ -216,7 +288,7 @@ namespace MASES.KNet.Serialization
 
         static readonly IntegerSerializer _IntSerializer = new IntegerSerializer();
         /// <summary>
-        /// Serialize a <see cref="SerializationType.Int"/>
+        /// Serialize a <see cref="SerializationType.Integer"/>
         /// </summary>
         public static byte[] SerializeInt(string topic, int data)
         {
@@ -267,6 +339,21 @@ namespace MASES.KNet.Serialization
         {
             return null;
         }
+
+        static readonly BooleanDeserializer _BooleanDeserializer = new BooleanDeserializer();
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.Boolean"/>
+        /// </summary>
+        public static bool DeserializeBoolean(string topic, byte[] data)
+        {
+            var result = _BooleanDeserializer.Deserialize(topic, data);
+            if (result is IJavaObject ijo)
+            {
+                return JVMBridgeBase.Wraps<Java.Lang.Boolean>(ijo);
+            }
+            return (bool)result;
+        }
+
         /// <summary>
         /// Deserialize a <see cref="SerializationType.ByteArray"/>
         /// </summary>
@@ -323,7 +410,7 @@ namespace MASES.KNet.Serialization
 
         static readonly IntegerDeserializer _IntDeserializer = new IntegerDeserializer();
         /// <summary>
-        /// Deserialize a <see cref="SerializationType.Int"/>
+        /// Deserialize a <see cref="SerializationType.Integer"/>
         /// </summary>
         public static int DeserializeInt(string topic, byte[] data)
         {

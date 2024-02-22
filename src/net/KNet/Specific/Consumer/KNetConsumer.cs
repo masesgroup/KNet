@@ -21,6 +21,7 @@ using Java.Util;
 using System;
 using System.Collections.Concurrent;
 using MASES.KNet.Serialization;
+using System.Threading;
 
 namespace MASES.KNet.Consumer
 {
@@ -29,35 +30,35 @@ namespace MASES.KNet.Consumer
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public interface IKNetConsumer<K, V> : Org.Apache.Kafka.Clients.Consumer.IConsumer<byte[], byte[]>
+    public interface IConsumer<K, V> : Org.Apache.Kafka.Clients.Consumer.IConsumer<byte[], byte[]>
     {
 #if NET7_0_OR_GREATER
         /// <summary>
-        /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in an external thread
+        /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="ConsumerRecord{K, V}"/> happens in an external thread
         /// </summary>
         /// <remarks>It is <see langword="true"/> by default if one of <typeparamref name="K"/> or <typeparamref name="V"/> are not <see cref="ValueType"/>, override the value using <see cref="ApplyPrefetch(bool, int)"/></remarks>
         bool IsPrefecth { get; }
         /// <summary>
-        /// The minimum threshold to activate pretech, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in external thread if <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{K, V}"/> contains more than <see cref="PrefetchThreshold"/> elements
+        /// The minimum threshold to activate pretech, i.e. the preparation of <see cref="ConsumerRecord{K, V}"/> happens in external thread if <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{K, V}"/> contains more than <see cref="PrefetchThreshold"/> elements
         /// </summary>
         /// <remarks>The default value is 10, however it shall be chosen by the developer and in the decision shall be verified if external thread activation costs more than inline execution</remarks>
         int PrefetchThreshold { get; }
 #endif
         /// <summary>
-        /// <see langword="true"/> if the <see cref="IKNetConsumer{K, V}"/> instance is completing async operation
+        /// <see langword="true"/> if the <see cref="IConsumer{K, V}"/> instance is completing async operation
         /// </summary>
         bool IsCompleting { get; }
         /// <summary>
-        /// <see langword="true"/> if the <see cref="IKNetConsumer{K, V}"/> instance has an empty set of items in async operation
+        /// <see langword="true"/> if the <see cref="IConsumer{K, V}"/> instance has an empty set of items in async operation
         /// </summary>
         bool IsEmpty { get; }
         /// <summary>
-        /// Number of messages in the <see cref="IKNetConsumer{K, V}"/> instance waiting to be processed in async operation
+        /// Number of messages in the <see cref="IConsumer{K, V}"/> instance waiting to be processed in async operation
         /// </summary>
         int WaitingMessages { get; }
 #if NET7_0_OR_GREATER
         /// <summary>
-        /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="KNetConsumerRecord{K, V}"/> in external thread 
+        /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="ConsumerRecord{K, V}"/> in external thread 
         /// </summary>
         /// <param name="enablePrefetch"><see langword="true"/> to enable prefetch. See <see cref="IsPrefecth"/></param>
         /// <param name="prefetchThreshold">The minimum threshold to activate pretech, default is 10. See <see cref="PrefetchThreshold"/></param>
@@ -65,22 +66,22 @@ namespace MASES.KNet.Consumer
         void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10);
 #endif
         /// <summary>
-        /// Sets the <see cref="Action{T}"/> to use to receive <see cref="KNetConsumerRecord{K, V}"/>
+        /// Sets the <see cref="Action{T}"/> to use to receive <see cref="ConsumerRecord{K, V}"/>
         /// </summary>
         /// <param name="cb">The callback <see cref="Action{T}"/></param>
-        void SetCallback(Action<KNetConsumerRecord<K, V>> cb);
+        void SetCallback(Action<ConsumerRecord<K, V>> cb);
         /// <summary>
         /// KNet extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
         /// <param name="timeoutMs">Timeout in milliseconds</param>
-        /// <returns><see cref="KNetConsumerRecords{K, V}"/></returns>
-        KNetConsumerRecords<K, V> Poll(long timeoutMs);
+        /// <returns><see cref="ConsumerRecords{K, V}"/></returns>
+        ConsumerRecords<K, V> Poll(long timeoutMs);
         /// <summary>
         /// KNet extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
-        /// <param name="timeout">Timeout expressed as <see cref="Duration"/></param>
-        /// <returns><see cref="KNetConsumerRecords{K, V}"/></returns>
-        new KNetConsumerRecords<K, V> Poll(Duration timeout);
+        /// <param name="timeout">Timeout expressed as <see cref="TimeSpan"/></param>
+        /// <returns><see cref="ConsumerRecords{K, V}"/></returns>
+        ConsumerRecords<K, V> Poll(TimeSpan timeout);
         /// <summary>
         /// KNet async extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
@@ -91,24 +92,24 @@ namespace MASES.KNet.Consumer
         /// KNet sync extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
         /// <param name="timeoutMs">Timeout in milliseconds</param>
-        /// <param name="callback">The <see cref="Action{T}"/> where receives <see cref="KNetConsumerRecord{K, V}"/></param>
-        void Consume(long timeoutMs, Action<KNetConsumerRecord<K, V>> callback);
+        /// <param name="callback">The <see cref="Action{T}"/> where receives <see cref="ConsumerRecord{K, V}"/></param>
+        void Consume(long timeoutMs, Action<ConsumerRecord<K, V>> callback);
     }
     /// <summary>
     /// KNet extension of <see cref="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer{K, V}"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetConsumer<K, V> : Org.Apache.Kafka.Clients.Consumer.KafkaConsumer<byte[], byte[]>, IKNetConsumer<K, V>
+    public class KNetConsumer<K, V> : Org.Apache.Kafka.Clients.Consumer.KafkaConsumer<byte[], byte[]>, IConsumer<K, V>
     {
         readonly bool _autoCreateSerDes = false;
         bool _threadRunning = false;
         long _dequeing = 0;
         readonly System.Threading.Thread _consumeThread = null;
-        readonly ConcurrentQueue<KNetConsumerRecords<K, V>> _consumedRecords = null;
+        readonly ConcurrentQueue<ConsumerRecords<K, V>> _consumedRecords = null;
         readonly KNetConsumerCallback<K, V> _consumerCallback = null;
-        readonly IKNetSerDes<K> _keyDeserializer;
-        readonly IKNetSerDes<V> _valueDeserializer;
+        readonly ISerDes<K> _keyDeserializer;
+        readonly ISerDes<V> _valueDeserializer;
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
         /// </summary>
@@ -129,10 +130,10 @@ namespace MASES.KNet.Consumer
         /// Initialize a new instance of <see cref="KNetConsumer{K, V}"/>
         /// </summary>
         /// <param name="props">The properties to use, see <see cref="ConsumerConfigBuilder"/></param>
-        /// <param name="keyDeserializer">Key serializer base on <see cref="KNetSerDes{K}"/></param>
-        /// <param name="valueDeserializer">Value serializer base on <see cref="KNetSerDes{K}"/></param>
+        /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K}"/></param>
+        /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{K}"/></param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
-        public KNetConsumer(ConsumerConfigBuilder props, IKNetSerDes<K> keyDeserializer, IKNetSerDes<V> valueDeserializer, bool useJVMCallback = false)
+        public KNetConsumer(ConsumerConfigBuilder props, ISerDes<K> keyDeserializer, ISerDes<V> valueDeserializer, bool useJVMCallback = false)
             : base(CheckProperties(props), keyDeserializer.KafkaDeserializer, valueDeserializer.KafkaDeserializer)
         {
             _keyDeserializer = keyDeserializer;
@@ -176,22 +177,27 @@ namespace MASES.KNet.Consumer
             this.Dispose();
         }
 
-        /// <inheritdoc cref="IKNetConsumer{K, V}.Poll(long)"/>
-        public new KNetConsumerRecords<K, V> Poll(long timeoutMs)
+        /// <inheritdoc cref="IConsumer{K, V}.Poll(long)"/>
+        public new ConsumerRecords<K, V> Poll(long timeoutMs)
         {
-            var records = IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<byte[], byte[]>>("poll", timeoutMs);
-            return new KNetConsumerRecords<K, V>(records, _keyDeserializer, _valueDeserializer);
+            var records = base.Poll(timeoutMs);
+            return new ConsumerRecords<K, V>(records, _keyDeserializer, _valueDeserializer);
         }
-        /// <inheritdoc cref="IKNetConsumer{K, V}.Poll(Duration)"/>
-        public new KNetConsumerRecords<K, V> Poll(Duration timeout)
+        /// <inheritdoc cref="IConsumer{K, V}.Poll(TimeSpan)"/>
+        public ConsumerRecords<K, V> Poll(TimeSpan timeout)
         {
-            var records = IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<byte[], byte[]>>("poll", timeout);
-            return new KNetConsumerRecords<K, V>(records, _keyDeserializer, _valueDeserializer);
+            Duration duration = timeout;
+            try
+            {
+                var records = base.Poll(duration);
+                return new ConsumerRecords<K, V>(records, _keyDeserializer, _valueDeserializer);
+            }
+            finally { duration?.Dispose(); }
         }
 
-        Action<KNetConsumerRecord<K, V>> actionCallback = null;
+        Action<ConsumerRecord<K, V>> actionCallback = null;
 
-        void CallbackMessage(KNetConsumerRecord<K, V> message)
+        void CallbackMessage(ConsumerRecord<K, V> message)
         {
             actionCallback?.Invoke(message);
         }
@@ -221,15 +227,15 @@ namespace MASES.KNet.Consumer
             base.Dispose();
         }
 #if NET7_0_OR_GREATER
-        /// <inheritdoc cref="IKNetConsumer{K, V}.ApplyPrefetch(bool, int)"/>
+        /// <inheritdoc cref="IConsumer{K, V}.ApplyPrefetch(bool, int)"/>
         public void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10)
         {
             IsPrefecth = enablePrefetch;
             PrefetchThreshold = IsPrefecth ? prefetchThreshold : 10;
         }
 #endif
-        /// <inheritdoc cref="IKNetConsumer{K, V}.SetCallback(Action{KNetConsumerRecord{K, V}})"/>
-        public void SetCallback(Action<KNetConsumerRecord<K, V>> cb)
+        /// <inheritdoc cref="IConsumer{K, V}.SetCallback(Action{ConsumerRecord{K, V}})"/>
+        public void SetCallback(Action<ConsumerRecord<K, V>> cb)
         {
             actionCallback = cb;
         }
@@ -240,7 +246,7 @@ namespace MASES.KNet.Consumer
             {
                 while (_threadRunning)
                 {
-                    if (_consumedRecords.TryDequeue(out KNetConsumerRecords<K, V> records))
+                    if (_consumedRecords.TryDequeue(out ConsumerRecords<K, V> records))
                     {
                         System.Threading.Interlocked.Increment(ref _dequeing);
                         try
@@ -268,48 +274,40 @@ namespace MASES.KNet.Consumer
             catch { }
         }
 #if NET7_0_OR_GREATER
-        /// <inheritdoc cref="IKNetConsumer{K, V}.IsPrefecth"/>
+        /// <inheritdoc cref="IConsumer{K, V}.IsPrefecth"/>
         public bool IsPrefecth { get; private set; } = !(typeof(K).IsValueType && typeof(V).IsValueType);
-        /// <inheritdoc cref="IKNetConsumer{K, V}.PrefetchThreshold"/>
+        /// <inheritdoc cref="IConsumer{K, V}.PrefetchThreshold"/>
         public int PrefetchThreshold { get; private set; } = 10;
 #endif
-        /// <inheritdoc cref="IKNetConsumer{K, V}.IsCompleting"/>
+        /// <inheritdoc cref="IConsumer{K, V}.IsCompleting"/>
         public bool IsCompleting => !_consumedRecords.IsEmpty || System.Threading.Interlocked.Read(ref _dequeing) != 0;
-        /// <inheritdoc cref="IKNetConsumer{K, V}.IsEmpty"/>
+        /// <inheritdoc cref="IConsumer{K, V}.IsEmpty"/>
         public bool IsEmpty => _consumedRecords.IsEmpty;
-        /// <inheritdoc cref="IKNetConsumer{K, V}.WaitingMessages"/>
+        /// <inheritdoc cref="IConsumer{K, V}.WaitingMessages"/>
         public int WaitingMessages => _consumedRecords.Count;
-        /// <inheritdoc cref="IKNetConsumer{K, V}.ConsumeAsync(long)"/>
+        /// <inheritdoc cref="IConsumer{K, V}.ConsumeAsync(long)"/>
         public bool ConsumeAsync(long timeoutMs)
         {
-            Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
             if (_consumedRecords == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to true.");
             if (!_threadRunning) throw new InvalidOperationException("Dispatching thread is not running.");
-            try
+            var results = this.Poll(TimeSpan.FromMilliseconds(timeoutMs));
+            bool isEmpty = results.IsEmpty;
+            if (!isEmpty)
             {
-                var results = this.Poll(duration);
-                bool isEmpty = results.IsEmpty;
-                if (!isEmpty)
-                {
 #if NET7_0_OR_GREATER
-                    _consumedRecords.Enqueue(results.ApplyPrefetch(IsPrefecth, PrefetchThreshold));
+                _consumedRecords.Enqueue(results.ApplyPrefetch(IsPrefecth, PrefetchThreshold));
 #else
-                    _consumedRecords.Enqueue(results);
+                _consumedRecords.Enqueue(results);
 #endif
-                    lock (_consumedRecords)
-                    {
-                        System.Threading.Monitor.Pulse(_consumedRecords);
-                    }
+                lock (_consumedRecords)
+                {
+                    System.Threading.Monitor.Pulse(_consumedRecords);
                 }
-                return !isEmpty;
             }
-            finally
-            {
-                duration?.Dispose();
-            }
+            return !isEmpty;
         }
-        /// <inheritdoc cref="IKNetConsumer{K, V}.Consume(long, Action{KNetConsumerRecord{K, V}})"/>
-        public void Consume(long timeoutMs, Action<KNetConsumerRecord<K, V>> callback)
+        /// <inheritdoc cref="IConsumer{K, V}.Consume(long, Action{ConsumerRecord{K, V}})"/>
+        public void Consume(long timeoutMs, Action<ConsumerRecord<K, V>> callback)
         {
             Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
             if (_consumerCallback == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to false.");

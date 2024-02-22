@@ -25,21 +25,21 @@ namespace MASES.KNet.Consumer
 {
     interface IKNetConsumerCallback<K, V> : IJVMBridgeBase
     {
-        void RecordReady(KNetConsumerRecord<K, V> message);
+        void RecordReady(ConsumerRecord<K, V> message);
     }
 
     class KNetConsumerCallback<K, V> : JVMBridgeListener, IKNetConsumerCallback<K, V>
     {
-        readonly IKNetDeserializer<K> _keyDeserializer;
-        readonly IKNetDeserializer<V> _valueDeserializer;
+        readonly IDeserializer<K> _keyDeserializer;
+        readonly IDeserializer<V> _valueDeserializer;
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
         /// </summary>
         public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.KNetConsumerCallback";
 
-        readonly Action<KNetConsumerRecord<K, V>> recordReadyFunction = null;
-        public virtual Action<KNetConsumerRecord<K, V>> OnRecordReady { get { return recordReadyFunction; } }
-        public KNetConsumerCallback(Action<KNetConsumerRecord<K, V>> recordReady, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
+        readonly Action<ConsumerRecord<K, V>> recordReadyFunction = null;
+        public virtual Action<ConsumerRecord<K, V>> OnRecordReady { get { return recordReadyFunction; } }
+        public KNetConsumerCallback(Action<ConsumerRecord<K, V>> recordReady, IDeserializer<K> keyDeserializer, IDeserializer<V> valueDeserializer)
         {
             if (recordReady != null) recordReadyFunction = recordReady;
             else recordReadyFunction = RecordReady;
@@ -52,10 +52,10 @@ namespace MASES.KNet.Consumer
 
         void OnRecordReadyEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
-            var record = this.BridgeInstance.Invoke<ConsumerRecord<byte[], byte[]>>("getRecord");
-            recordReadyFunction(new KNetConsumerRecord<K, V>(record, _keyDeserializer, _valueDeserializer, false));
+            var record = this.BridgeInstance.Invoke<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>>("getRecord");
+            recordReadyFunction(new ConsumerRecord<K, V>(record, _keyDeserializer, _valueDeserializer, false));
         }
 
-        public virtual void RecordReady(KNetConsumerRecord<K, V> message) { }
+        public virtual void RecordReady(ConsumerRecord<K, V> message) { }
     }
 }

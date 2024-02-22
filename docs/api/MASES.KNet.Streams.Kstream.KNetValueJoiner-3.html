@@ -465,7 +465,7 @@ Class KNetValueJoiner&lt;V1, V2, VR&gt;  <a class="header-action link-secondary"
 
   <h3 id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_OnApply" data-uid="MASES.KNet.Streams.Kstream.KNetValueJoiner`3.OnApply">
   OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetValueJoiner.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetValueJoiner.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
@@ -473,7 +473,7 @@ Class KNetValueJoiner&lt;V1, V2, VR&gt;  <a class="header-action link-secondary"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;V1, V2, VR&gt; OnApply { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;KNetValueJoiner&lt;V1, V2, VR&gt;, VR&gt; OnApply { get; set; }</code></pre>
   </div>
 
 
@@ -482,7 +482,7 @@ Class KNetValueJoiner&lt;V1, V2, VR&gt;  <a class="header-action link-secondary"
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;V1, V2, VR&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="MASES.KNet.Streams.Kstream.KNetValueJoiner-3.html">KNetValueJoiner</a>&lt;V1, V2, VR&gt;, VR&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -490,8 +490,72 @@ Class KNetValueJoiner&lt;V1, V2, VR&gt;  <a class="header-action link-secondary"
 
 
   <h4 class="section" id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_OnApply_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="MASES.KNet.Streams.Kstream.KNetValueJoiner-3.html#MASES_KNet_Streams_Kstream_KNetValueJoiner_3_OnApply">OnApply</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="MASES.KNet.Streams.Kstream.KNetValueJoiner-3.html#MASES_KNet_Streams_Kstream_KNetValueJoiner_3_OnApply">OnApply</a> has a value it takes precedence over corresponding <a class="xref" href="MASES.KNet.Streams.Kstream.KNetValueJoiner-3.html#MASES_KNet_Streams_Kstream_KNetValueJoiner_3_Apply">Apply()</a> class method</p>
 </div>
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_Value1_" data-uid="MASES.KNet.Streams.Kstream.KNetValueJoiner`3.Value1*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_Value1" data-uid="MASES.KNet.Streams.Kstream.KNetValueJoiner`3.Value1">
+  Value1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetValueJoiner.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code class="typeparamref">V1</code> content</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public V1 Value1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">V1</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_Value2_" data-uid="MASES.KNet.Streams.Kstream.KNetValueJoiner`3.Value2*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_Value2" data-uid="MASES.KNet.Streams.Kstream.KNetValueJoiner`3.Value2">
+  Value2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetValueJoiner.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code class="typeparamref">V2</code> content</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public V2 Value2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">V2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
 
 
 
@@ -502,9 +566,42 @@ Class KNetValueJoiner&lt;V1, V2, VR&gt;  <a class="header-action link-secondary"
 
   <a id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_Apply_" data-uid="MASES.KNet.Streams.Kstream.KNetValueJoiner`3.Apply*"></a>
 
+  <h3 id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_Apply" data-uid="MASES.KNet.Streams.Kstream.KNetValueJoiner`3.Apply">
+  Apply()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetValueJoiner.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual VR Apply()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">VR</span></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_Apply_" data-uid="MASES.KNet.Streams.Kstream.KNetValueJoiner`3.Apply*"></a>
+
   <h3 id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_Apply_System_Byte___System_Byte___" data-uid="MASES.KNet.Streams.Kstream.KNetValueJoiner`3.Apply(System.Byte[],System.Byte[])">
   Apply(byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetValueJoiner.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetValueJoiner.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoiner.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoiner.html#apply-java.lang.Object-java.lang.Object-</a></p>
@@ -529,48 +626,6 @@ Class KNetValueJoiner&lt;V1, V2, VR&gt;  <a class="header-action link-secondary"
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
     <dd><p><see></see></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_Apply_" data-uid="MASES.KNet.Streams.Kstream.KNetValueJoiner`3.Apply*"></a>
-
-  <h3 id="MASES_KNet_Streams_Kstream_KNetValueJoiner_3_Apply__0__1_" data-uid="MASES.KNet.Streams.Kstream.KNetValueJoiner`3.Apply(`0,`1)">
-  Apply(V1, V2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetValueJoiner.cs/#L60"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual VR Apply(V1 arg0, V2 arg1)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>arg0</code> <span class="xref">V1</span></dt>
-    <dd><p><code class="typeparamref">V1</code></p>
-</dd>
-    <dt><code>arg1</code> <span class="xref">V2</span></dt>
-    <dd><p><code class="typeparamref">V2</code></p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">VR</span></dt>
-    <dd><p><code class="typeparamref">VR</code></p>
 </dd>
   </dl>
 
