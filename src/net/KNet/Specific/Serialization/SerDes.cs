@@ -255,5 +255,63 @@ namespace MASES.KNet.Serialization
     public class SerDes<T> : SerDes<T, byte[]>, ISerDes<T>
     {
     }
+    /// <summary>
+    /// Sets of predefined <see cref="SerDes{T, TJVMT}"/> between specific types
+    /// </summary>
+    public static class SerDes
+    {
+        static SerDes<bool, Java.Lang.Boolean> _boolSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="bool"/> and <see cref="Java.Lang.Boolean"/>
+        /// </summary>
+        public static SerDes<bool, Java.Lang.Boolean> Bool => _boolSerDes ?? new SerDes<bool, Java.Lang.Boolean>();
 
+        static SerDes<short, Java.Lang.Short> _shortSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="short"/> and <see cref="Java.Lang.Short"/>
+        /// </summary>
+        public static SerDes<short, Java.Lang.Short> Short => _shortSerDes ?? new SerDes<short, Java.Lang.Short>();
+
+        static SerDes<int, Java.Lang.Integer> _intSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="int"/> and <see cref="Java.Lang.Integer"/>
+        /// </summary>
+        public static SerDes<int, Java.Lang.Integer> Integer => _intSerDes ?? new SerDes<int, Java.Lang.Integer>();
+
+        static SerDes<long, Java.Lang.Long> _longSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="long"/> and <see cref="Java.Lang.Long"/>
+        /// </summary>
+        public static SerDes<long, Java.Lang.Long> Long => _longSerDes ?? new SerDes<long, Java.Lang.Long>();
+
+        static SerDes<float, Java.Lang.Float> _floatSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="float"/> and <see cref="Java.Lang.Float"/>
+        /// </summary>
+        public static SerDes<float, Java.Lang.Float> Float => _floatSerDes ?? new SerDes<float, Java.Lang.Float>();
+
+        static SerDes<double, Java.Lang.Double> _doubleSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="double"/> and <see cref="Java.Lang.Double"/>
+        /// </summary>
+        public static SerDes<double, Java.Lang.Double> Double => _doubleSerDes ?? new SerDes<double, Java.Lang.Double>();
+
+        static SerDes<string, byte[]> _stringSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="string"/> and <see cref="byte"/> array
+        /// </summary>
+        public static SerDes<string, byte[]> String => _stringSerDes ?? new SerDes<string, byte[]>();
+
+        static SerDes<Guid, Java.Util.UUID> _GuidSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="Guid"/> and <see cref="Java.Util.UUID"/>
+        /// </summary>
+        public static SerDes<Guid, Java.Util.UUID> Guid => _GuidSerDes ?? new SerDes<Guid, Java.Util.UUID>();
+
+        static SerDes<object, Java.Lang.Void> _voidSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="object"/> and <see cref="Java.Lang.Void"/>
+        /// </summary>
+        public static SerDes<object, Java.Lang.Void> Void => _voidSerDes ?? new SerDes<object, Java.Lang.Void>();
+    }
 }

@@ -18,18 +18,17 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Common.Serialization;
-using Org.Apache.Kafka.Streams;
-using Org.Apache.Kafka.Streams.Errors;
-using Org.Apache.Kafka.Streams.Kstream;
+
 using MASES.KNet.TestCommon;
 using System;
 using System.Text.RegularExpressions;
 using System.Threading;
+using MASES.KNet.Streams;
+using MASES.KNet.Streams.Kstream;
+using Org.Apache.Kafka.Streams.Errors;
+using MASES.KNet.Serialization;
 
-namespace MASES.KNetTestStreams
+namespace MASES.KNetTestKNetStreams
 {
     class Program
     {
@@ -78,26 +77,20 @@ namespace MASES.KNetTestStreams
         {
             try
             {
-                var props = new Properties();
+                StreamsConfigBuilder configBuilder = StreamsConfigBuilder.Create()
+                                                                         .WithApplicationId("streams-pipe")
+                                                                         .WithBootstrapServers(serverToUse);
 
-                props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
-                props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
-                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
-
-                // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
-                props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-
-                var builder = new StreamsBuilder();
+                var builder = new StreamsBuilder(configBuilder);
 
                 builder.Stream<string, string>(topicToUse).To("streams-pipe-output");
 
-                using (var streams = new KafkaStreams(builder.Build(), props))
+                var streams = new KNetStreams(builder.Build(), configBuilder));
                 {
                     streams.Start();
                     while (!resetEvent.WaitOne(1000))
                     {
-                        var state = streams.StateMethod();
+                        var state = streams.State;
                         Console.WriteLine($"KafkaStreams state: {state}");
                     }
                 }
@@ -116,44 +109,30 @@ namespace MASES.KNetTestStreams
         {
             try
             {
-                var props = new Properties();
+                StreamsConfigBuilder configBuilder = StreamsConfigBuilder.Create()
+                                                                         .WithApplicationId("WordCountDemo")
+                                                                         .WithBootstrapServers(serverToUse);
 
-                props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "WordCountDemo");
-                props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
-                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
-
-                // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
-                props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-
-                ValueMapper<string, Java.Lang.Iterable<Java.Lang.String>> valueMapper = null;
-                KeyValueMapper<string, Java.Lang.String, Java.Lang.String> keyValuemapper = null;
+                EnumerableValueMapper<string, string> valueMapper = null;
+                KeyValueMapper<string, string, string> keyValuemapper = null;
                 StreamsUncaughtExceptionHandler errorHandler = null;
 
                 try
                 {
-                    var builder = new StreamsBuilder();
+                    var builder = new StreamsBuilder(configBuilder);
 
-                    KStream<string, string> source = builder.Stream<string, string>(topicToUse);
+                    var source = builder.Stream<string, string>(topicToUse);
 
-                    valueMapper = new ValueMapper<string, Java.Lang.Iterable<Java.Lang.String>>()
+                    valueMapper = new EnumerableValueMapper<string, string>()
                     {
                         OnApply = (value) =>
                         {
                             Regex regex = new("\\W+");
-
-                            ArrayList<Java.Lang.String> arrayList = new();
-
-                            foreach (var item in regex.Split(value))
-                            {
-                                arrayList.Add(item);
-                            }
-
-                            return arrayList; // value->Arrays.asList(value.toLowerCase(Locale.getDefault()).split("\\W+"))
+                            return regex.Split(value); // value->Arrays.asList(value.toLowerCase(Locale.getDefault()).split("\\W+"))
                         }
                     };
 
-                    keyValuemapper = new KeyValueMapper<string, Java.Lang.String, Java.Lang.String>()
+                    keyValuemapper = new KeyValueMapper<string, string, string>()
                     {
                         OnApply = (key, value) =>
                         {
@@ -161,9 +140,9 @@ namespace MASES.KNetTestStreams
                         }
                     };
 
-                    KTable<Java.Lang.String, Java.Lang.Long> counts = source.FlatMapValues<Java.Lang.String, string, Java.Lang.Iterable<Java.Lang.String>, Java.Lang.String>(valueMapper)
-                                                                            .GroupBy(keyValuemapper)
-                                                                            .Count();
+                    var counts = source.FlatMapValues<string, byte[], string, string>(valueMapper)
+                                       .GroupBy(keyValuemapper)
+                                       .Count();
 
                     /***** version using Dynamic engine ******
                     
@@ -173,10 +152,12 @@ namespace MASES.KNetTestStreams
                         .count() as IJavaObject);
                     ******************************************/
 
+                    var keySerDes = ;
+                    var valueSerDes = new SerDes<long, Java.Lang.Long>();
                     // need to override value serde to Long type
-                    counts.ToStream().To(OUTPUT_TOPIC, Produced<Java.Lang.String, Java.Lang.Long>.With(Serdes.String(), Serdes.Long()));
+                    counts.ToStream().To(OUTPUT_TOPIC, Produced<string, long, byte[], Java.Lang.Long>.With(SerDes.String, SerDes.Long));
 
-                    using (var streams = new KafkaStreams(builder.Build(), props))
+                    var streams = new KNetStreams(builder.Build(), configBuilder));
                     {
                         errorHandler = new StreamsUncaughtExceptionHandler()
                         {
@@ -190,7 +171,7 @@ namespace MASES.KNetTestStreams
                         streams.Start();
                         while (!resetEvent.WaitOne(1000))
                         {
-                            var state = streams.StateMethod();
+                            var state = streams.State;
                             Console.WriteLine($"KafkaStreams state: {state}");
                         }
                     }

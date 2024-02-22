@@ -3,9 +3,9 @@
 	<PropertyGroup>
 		<AssemblyName>KNetTestStreams</AssemblyName>
 		<OutputType>Exe</OutputType>
-		<RootNamespace>MASES.KNetTest</RootNamespace>
-		<Title>KNetTest - a test tool for KNet</Title>
-		<Description>KNetTest - a test tool for KNet</Description>
+		<RootNamespace>MASES.KNetTestStreams</RootNamespace>
+		<Title>KNetTestStreams - a test tool for KNet Streams</Title>
+		<Description>KNetTestStreams - a test tool for KNet Streams</Description>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Include="..\Common\SharedKNetCore.cs" Link="SharedKNetCore.cs" />
