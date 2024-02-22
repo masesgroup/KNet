@@ -85,7 +85,7 @@ namespace MASES.KNetTestKNetStreams
 
                 builder.Stream<string, string>(topicToUse).To("streams-pipe-output");
 
-                var streams = new KNetStreams(builder.Build(), configBuilder));
+                var streams = new KNetStreams(builder.Build(), configBuilder);
                 {
                     streams.Start();
                     while (!resetEvent.WaitOne(1000))
@@ -152,12 +152,10 @@ namespace MASES.KNetTestKNetStreams
                         .count() as IJavaObject);
                     ******************************************/
 
-                    var keySerDes = ;
-                    var valueSerDes = new SerDes<long, Java.Lang.Long>();
                     // need to override value serde to Long type
                     counts.ToStream().To(OUTPUT_TOPIC, Produced<string, long, byte[], Java.Lang.Long>.With(SerDes.String, SerDes.Long));
 
-                    var streams = new KNetStreams(builder.Build(), configBuilder));
+                    var streams = new KNetStreams(builder.Build(), configBuilder);
                     {
                         errorHandler = new StreamsUncaughtExceptionHandler()
                         {
