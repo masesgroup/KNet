@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetTest", "KNetTest\KNetTest.csproj", "{C556E8A0-8B06-4D5B-AEAD-B318B48DF150}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet", "..\src\net\KNet\KNet.csproj", "{14871D50-7E4E-4BAE-8005-CA86E891F602}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet", "..\..\src\net\KNet\KNet.csproj", "{14871D50-7E4E-4BAE-8005-CA86E891F602}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetTestStreams", "KNetTestStreams\KNetTestStreams.csproj", "{17E101E1-A0F8-44F0-929C-498E4A41F551}"
 EndProject
@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Connect", "Test Connec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetConnectTest", "KNetConnectTest\KNetConnectTest.csproj", "{7F3A2CE5-ADEE-426F-BE99-D899D87EFF2F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetConnect", "..\src\net\KNetConnect\KNetConnect.csproj", "{969D44CC-1EE3-4176-B139-9B6860D88602}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetConnect", "..\..\src\net\KNetConnect\KNetConnect.csproj", "{969D44CC-1EE3-4176-B139-9B6860D88602}"
 	ProjectSection(ProjectDependencies) = postProject
 		{7F3A2CE5-ADEE-426F-BE99-D899D87EFF2F} = {7F3A2CE5-ADEE-426F-BE99-D899D87EFF2F}
 	EndProjectSection
@@ -32,29 +32,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetRoundTripBenchmark", "K
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{345DA483-99E7-4FA0-A5D5-5EE62E49E668}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.Json", "..\src\net\KNet.Serialization.Json\KNet.Serialization.Json.csproj", "{64C1B6AC-F7D8-43FD-BA1F-584EF5B5934A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.Json", "..\..\src\net\KNet.Serialization.Json\KNet.Serialization.Json.csproj", "{64C1B6AC-F7D8-43FD-BA1F-584EF5B5934A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.Protobuf", "..\src\net\KNet.Serialization.Protobuf\KNet.Serialization.Protobuf.csproj", "{0580E90D-271D-46B0-8274-EB29D521F399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.Protobuf", "..\..\src\net\KNet.Serialization.Protobuf\KNet.Serialization.Protobuf.csproj", "{0580E90D-271D-46B0-8274-EB29D521F399}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.Avro", "..\src\net\KNet.Serialization.Avro\KNet.Serialization.Avro.csproj", "{2C02FC8F-FF75-4963-8545-EE58C105025D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.Avro", "..\..\src\net\KNet.Serialization.Avro\KNet.Serialization.Avro.csproj", "{2C02FC8F-FF75-4963-8545-EE58C105025D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetClassicTest", "KNetClassicTest\KNetClassicTest.csproj", "{F915A488-956C-4B31-89FC-EB5DBC4AC73E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetCompactedReplicatorTest", "KNetCompactedReplicatorTest\KNetCompactedReplicatorTest.csproj", "{245DDDD6-022A-4C2F-8769-FBB6CFDEC585}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.MessagePack", "..\src\net\KNet.Serialization.MessagePack\KNet.Serialization.MessagePack.csproj", "{D39E1D83-C3FC-4482-83F5-DDE89B53BEA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.MessagePack", "..\..\src\net\KNet.Serialization.MessagePack\KNet.Serialization.MessagePack.csproj", "{D39E1D83-C3FC-4482-83F5-DDE89B53BEA8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{68128D24-3F72-4A25-A876-509F12F38E73}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConnectSink", "..\src\net\templates\templates\knetConnectSink\knetConnectSink.csproj", "{FC459C7B-5111-4FF7-A93A-5A02B48AA3B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConnectSink", "..\..\src\net\templates\templates\knetConnectSink\knetConnectSink.csproj", "{FC459C7B-5111-4FF7-A93A-5A02B48AA3B7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConnectSource", "..\src\net\templates\templates\knetConnectSource\knetConnectSource.csproj", "{5A3184EF-56BC-4AEA-95C4-8595FC5B1992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConnectSource", "..\..\src\net\templates\templates\knetConnectSource\knetConnectSource.csproj", "{5A3184EF-56BC-4AEA-95C4-8595FC5B1992}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConsumerApp", "..\src\net\templates\templates\knetConsumerApp\knetConsumerApp.csproj", "{A40B1EE0-7407-47CB-B0FB-EE65A955A559}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConsumerApp", "..\..\src\net\templates\templates\knetConsumerApp\knetConsumerApp.csproj", "{A40B1EE0-7407-47CB-B0FB-EE65A955A559}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetPipeStreamApp", "..\src\net\templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj", "{363CC373-CF04-4204-A44A-C96AB1B1085E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetPipeStreamApp", "..\..\src\net\templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj", "{363CC373-CF04-4204-A44A-C96AB1B1085E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetProducerApp", "..\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj", "{8E8EB519-70A3-487A-BB71-096988CCA6A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetProducerApp", "..\..\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj", "{8E8EB519-70A3-487A-BB71-096988CCA6A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
