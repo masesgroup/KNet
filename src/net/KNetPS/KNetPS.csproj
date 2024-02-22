@@ -8,12 +8,12 @@
 		<Description>PowerShell command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
 		<Product>KNetPS</Product>
 		<OutputPath>..\..\..\MASES.KNetPS\</OutputPath>
-		<TargetFrameworks>net462;net6.0</TargetFrameworks>
+		<TargetFrameworks>net462;net8.0</TargetFrameworks>
 		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
 		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
 		<OutputType>Exe</OutputType>
 	</PropertyGroup>
 	
@@ -56,7 +56,7 @@
 	  <None Update="MASES.KNetPSFramework.psd1" Condition="'$(TargetFramework)' == 'net462'">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="MASES.KNetPSCore.psd1" Condition="'$(TargetFramework)' == 'net6.0'">
+	  <None Update="MASES.KNetPSCore.psd1" Condition="'$(TargetFramework)' == 'net8.0'">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>

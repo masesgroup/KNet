@@ -12,7 +12,7 @@ $binaryModuleRoot = $PSModuleRoot
 
 if (($PSVersionTable.Keys -contains "PSEdition") -and ($PSVersionTable.PSEdition -ne 'Desktop')) {
    $binaryModuleFileName = 'MASES.KNetPSCore.psd1'
-   $binaryModuleRoot = Join-Path -Path $PSModuleRoot -ChildPath 'net6.0'
+   $binaryModuleRoot = Join-Path -Path $PSModuleRoot -ChildPath 'net8.0'
 }
 else {
    $binaryModuleFileName = 'MASES.KNetPSFramework.psd1'
