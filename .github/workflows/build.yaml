@@ -31,18 +31,23 @@ jobs:
                 echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
               fi
-              if [[ $added_modified_file == "src/"* ]]; then
+              if [[ $added_modified_file == "src/container/"* ]]; then
                 echo "$added_modified_file file is under the directory 'src/'."
                 echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
               fi
-              if [[ $added_modified_file == "src/container/DockerfileKNet.linux"* ]]; then
-                echo "$added_modified_file file changed"
+              if [[ $added_modified_file == "src/jvm/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
                 echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
               fi
-              if [[ $added_modified_file == "src/container/DockerfileKNetConnect.linux"* ]]; then
-                echo "$added_modified_file file changed"
+              if [[ $added_modified_file == "src/net/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "tests/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
                 echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
               fi
@@ -132,7 +137,7 @@ jobs:
           submodules: 'true'
 
       - name: Pre compile tests
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\KNetTest.sln
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj

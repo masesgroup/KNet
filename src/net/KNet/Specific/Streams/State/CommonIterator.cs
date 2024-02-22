@@ -35,15 +35,27 @@ namespace MASES.KNet.Streams.State
         /// Initialize a new instance of <see cref="CommonIterator{TIteratorType}"/>
         /// </summary>
         /// <param name="factory">The <see cref="IGenericSerDesFactory"/> associated to this instance</param>
-        public CommonIterator(IGenericSerDesFactory factory)
+        protected CommonIterator(IGenericSerDesFactory factory)
         {
             _factory = factory;
         }
-        /// <summary>
-        /// The <see cref="IGenericSerDesFactory"/> associated to this instance
-        /// </summary>
-        protected IGenericSerDesFactory _factory;
+        IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        /// <summary>
+        /// Returns the current <see cref="IGenericSerDesFactory"/>
+        /// </summary>
+        protected IGenericSerDesFactory Factory
+        {
+            get
+            {
+                IGenericSerDesFactory factory = null;
+                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+                {
+                    throw new InvalidOperationException("The serialization factory instance was not set.");
+                }
+                return factory;
+            }
+        }
         /// <summary>
         /// Used to get or set the type of enumerator to retrieve, default is with prefetch if the platform accept it
         /// </summary>

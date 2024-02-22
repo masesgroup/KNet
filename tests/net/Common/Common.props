@@ -1,0 +1,16 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="..\..\..\src\net\Common\Common.props" />
+	<PropertyGroup>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<AssemblyOriginatorKeyFile>..\..\..\src\net\Common\KNet.snk</AssemblyOriginatorKeyFile>
+		<OutputPath>..\..\..\bin\</OutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
+		<None Include="..\..\..\src\net\Common\JCOB128x128.png" Pack="true" PackagePath="" />
+		<None Include="..\..\..\src\net\Common\KNet.snk" Link="KNet.snk" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\src\net\KNet\KNet.csproj" />
+	</ItemGroup>
+</Project>

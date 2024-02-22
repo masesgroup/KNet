@@ -37,7 +37,17 @@ jobs:
         run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do
-              if [[ $added_modified_file == "src/"* ]]; then
+              if [[ $added_modified_file == "src/jvm/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "src/net/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "tests/"* ]]; then
                 echo "$added_modified_file file is under the directory 'src/'."
                 echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break

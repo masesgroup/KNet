@@ -27,7 +27,7 @@ using System.Text;
 namespace MASES.KNet.Serialization.Avro
 {
     /// <summary>
-    /// Base class to define extensions of <see cref="KNetSerDes{T}"/> for Avro, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+    /// Base class to define extensions of <see cref="SerDes{T}"/> for Avro, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
     /// </summary>
     public static class AvroSerDes
     {
@@ -70,15 +70,15 @@ namespace MASES.KNet.Serialization.Avro
         }
 
         /// <summary>
-        /// Base class to define Key extensions of <see cref="KNetSerDes{T}"/>, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// Base class to define Key extensions of <see cref="SerDes{T}"/>, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         public static class Key
         {
             /// <summary>
-            /// Avro Key extension of <see cref="KNetSerDes{T}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+            /// Avro Key extension of <see cref="SerDes{T}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Binary<T> : KNetSerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class Binary<T> : SerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -110,12 +110,12 @@ namespace MASES.KNet.Serialization.Avro
                     var tRecord = new T();
                     Schema = tRecord.Schema;
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Serialize(string, T)"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.Serialize(string, T)"/>
                 public override byte[] Serialize(string topic, T data)
                 {
                     return SerializeWithHeaders(topic, null, data);
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                 public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
                 {
                     headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
@@ -126,12 +126,12 @@ namespace MASES.KNet.Serialization.Avro
                     SpecificWriter.Write(data, encoder);
                     return memStream.ToArray();
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Deserialize(string, byte[])"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, byte[])"/>
                 public override T Deserialize(string topic, byte[] data)
                 {
                     return DeserializeWithHeaders(topic, null, data);
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
                 public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
                     if (data == null) return default;
@@ -144,10 +144,10 @@ namespace MASES.KNet.Serialization.Avro
                 }
             }
             /// <summary>
-            /// Avro Key extension of <see cref="KNetSerDes{T}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+            /// Avro Key extension of <see cref="SerDes{T}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Json<T> : KNetSerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class Json<T> : SerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -179,12 +179,12 @@ namespace MASES.KNet.Serialization.Avro
                     var tRecord = new T();
                     Schema = tRecord.Schema;
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Serialize(string, T)"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.Serialize(string, T)"/>
                 public override byte[] Serialize(string topic, T data)
                 {
                     return SerializeWithHeaders(topic, null, data);
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                 public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
                 {
                     headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
@@ -195,12 +195,12 @@ namespace MASES.KNet.Serialization.Avro
                     SpecificWriter.Write(data, encoder);
                     return memStream.ToArray();
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Deserialize(string, byte[])"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, byte[])"/>
                 public override T Deserialize(string topic, byte[] data)
                 {
                     return DeserializeWithHeaders(topic, null, data);
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
                 public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
                     if (data == null) return default;
@@ -215,15 +215,15 @@ namespace MASES.KNet.Serialization.Avro
         }
 
         /// <summary>
-        /// Base class to define Value extensions of <see cref="KNetSerDes{T}"/>, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// Base class to define Value extensions of <see cref="SerDes{T}"/>, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         public static class Value
         {
             /// <summary>
-            /// Avro Value extension of <see cref="KNetSerDes{T}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+            /// Avro Value extension of <see cref="SerDes{T}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Binary<T> : KNetSerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class Binary<T> : SerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -255,12 +255,12 @@ namespace MASES.KNet.Serialization.Avro
                     var tRecord = new T();
                     Schema = tRecord.Schema;
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Serialize(string, T)"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.Serialize(string, T)"/>
                 public override byte[] Serialize(string topic, T data)
                 {
                     return SerializeWithHeaders(topic, null, data);
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                 public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
                 {
                     headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
@@ -271,12 +271,12 @@ namespace MASES.KNet.Serialization.Avro
                     SpecificWriter.Write(data, encoder);
                     return memStream.ToArray();
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Deserialize(string, byte[])"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, byte[])"/>
                 public override T Deserialize(string topic, byte[] data)
                 {
                     return DeserializeWithHeaders(topic, null, data);
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
                 public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
                     if (data == null) return default;
@@ -289,10 +289,10 @@ namespace MASES.KNet.Serialization.Avro
                 }
             }
             /// <summary>
-            /// Avro Value extension of <see cref="KNetSerDes{T}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+            /// Avro Value extension of <see cref="SerDes{T}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class Json<T> : KNetSerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class Json<T> : SerDes<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -324,12 +324,12 @@ namespace MASES.KNet.Serialization.Avro
                     var tRecord = new T();
                     Schema = tRecord.Schema;
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Serialize(string, T)"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.Serialize(string, T)"/>
                 public override byte[] Serialize(string topic, T data)
                 {
                     return SerializeWithHeaders(topic, null, data);
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                 public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
                 {
                     headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
@@ -340,12 +340,12 @@ namespace MASES.KNet.Serialization.Avro
                     SpecificWriter.Write(data, encoder);
                     return memStream.ToArray();
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.Deserialize(string, byte[])"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, byte[])"/>
                 public override T Deserialize(string topic, byte[] data)
                 {
                     return DeserializeWithHeaders(topic, null, data);
                 }
-                /// <inheritdoc cref="KNetSerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
+                /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
                 public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
                     if (data == null) return default;
