@@ -554,7 +554,7 @@ Class ConsumerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;Map&lt;string, object&gt;&gt; OnConfigure { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Action&lt;Map&lt;String, object&gt;&gt; OnConfigure { get; set; }</code></pre>
   </div>
 
 
@@ -563,7 +563,7 @@ Class ConsumerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -680,6 +680,39 @@ Class ConsumerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
 
   <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerInterceptor_2_Configure_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptor`2.Configure*"></a>
 
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerInterceptor_2_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptor`2.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
+  Configure(Map&lt;String, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerInterceptor.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Configure(Map&lt;String, object&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerInterceptor_2_Configure_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptor`2.Configure*"></a>
+
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerInterceptor_2_Configure_Java_Util_Map_System_String_Java_Lang_Object__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptor`2.Configure(Java.Util.Map{System.String,Java.Lang.Object})">
   Configure(Map&lt;string, Object&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Consumer/ConsumerInterceptor.cs/#L60"><i class="bi bi-code-slash"></i></a>
@@ -697,39 +730,6 @@ Class ConsumerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
   <dl class="parameters">
     <dt><code>configs</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Object.html">Object</a>&gt;</dt>
     <dd><p>The configuration <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerInterceptor_2_Configure_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptor`2.Configure*"></a>
-
-  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerInterceptor_2_Configure_Java_Util_Map_System_String_System_Object__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptor`2.Configure(Java.Util.Map{System.String,System.Object})">
-  Configure(Map&lt;string, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerInterceptor.cs/#L285"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Configure(Map&lt;string, object&gt; arg0)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 

@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ISerDes&lt;T, TJVMT&gt; | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ISerDes&lt;T, TJVMT&gt; | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="KNet common serializer/deserializer">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Serialization_ISerDes_2.md&amp;value=---%0Auid%3A%20MASES.KNet.Serialization.ISerDes%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.Serialization.ISerDes`2">
+
+
+
+  <h1 id="MASES_KNet_Serialization_ISerDes_2" data-uid="MASES.KNet.Serialization.ISerDes`2" class="text-break">
+Interface ISerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Serialization.html">Serialization</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>KNet common serializer/deserializer</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ISerDes&lt;T, TJVMT&gt; : ISerializer&lt;T, TJVMT&gt;, IDeserializer&lt;T, TJVMT&gt;, IDisposable</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type to serialize/deserialize</p>
+</dd>
+    <dt><code>TJVMT</code></dt>
+    <dd><p>The corresponding JVM type used</p>
+</dd>
+  </dl>
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html#MASES_KNet_Serialization_ISerializer_2_KafkaSerializer">ISerializer&lt;T, TJVMT&gt;.KafkaSerializer</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html#MASES_KNet_Serialization_ISerializer_2_UseHeaders">ISerializer&lt;T, TJVMT&gt;.UseHeaders</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html#MASES_KNet_Serialization_ISerializer_2_Serialize_System_String__0_">ISerializer&lt;T, TJVMT&gt;.Serialize(string, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html#MASES_KNet_Serialization_ISerializer_2_SerializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers__0_">ISerializer&lt;T, TJVMT&gt;.SerializeWithHeaders(string, Headers, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html#MASES_KNet_Serialization_IDeserializer_2_KafkaDeserializer">IDeserializer&lt;T, TJVMT&gt;.KafkaDeserializer</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html#MASES_KNet_Serialization_IDeserializer_2_UseHeaders">IDeserializer&lt;T, TJVMT&gt;.UseHeaders</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html#MASES_KNet_Serialization_IDeserializer_2_Deserialize_System_String_System_Byte___">IDeserializer&lt;T, TJVMT&gt;.Deserialize(string, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html#MASES_KNet_Serialization_IDeserializer_2_DeserializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers_System_Byte___">IDeserializer&lt;T, TJVMT&gt;.DeserializeWithHeaders(string, Headers, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Serialization_ISerDes_2_KafkaSerde_" data-uid="MASES.KNet.Serialization.ISerDes`2.KafkaSerde*"></a>
+
+  <h3 id="MASES_KNet_Serialization_ISerDes_2_KafkaSerde" data-uid="MASES.KNet.Serialization.ISerDes`2.KafkaSerde">
+  KafkaSerde
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde&lt;T&gt;</a> to use in Apache Kafka</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Serde&lt;TJVMT&gt; KafkaSerde { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;TJVMT&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L32" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
