@@ -252,7 +252,7 @@ Interface IKNetCompactedReplicator&lt;TKey, TValue&gt;  <a class="header-action 
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get or set the poll timeout to be used for <a class="xref" href="MASES.KNet.Consumer.IKNetConsumer-2.html#MASES_KNet_Consumer_IKNetConsumer_2_ConsumeAsync_System_Int64_">ConsumeAsync(long)</a></p>
+  <div class="markdown level1 summary"><p>Get or set the poll timeout to be used for <a class="xref" href="MASES.KNet.Consumer.IConsumer-2.html#MASES_KNet_Consumer_IConsumer_2_ConsumeAsync_System_Int64_">ConsumeAsync(long)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -578,12 +578,12 @@ Interface IKNetCompactedReplicator&lt;TKey, TValue&gt;  <a class="header-action 
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get or set an instance of <a class="xref" href="MASES.KNet.Serialization.IKNetSerDes-1.html">IKNetSerDes&lt;T&gt;</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a>, by default it creates a default one based on <code class="typeparamref">TKey</code></p>
+  <div class="markdown level1 summary"><p>Get or set an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a>, by default it creates a default one based on <code class="typeparamref">TKey</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IKNetSerDes&lt;TKey&gt; KeySerDes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">ISerDes&lt;TKey&gt; KeySerDes { get; }</code></pre>
   </div>
 
 
@@ -592,7 +592,7 @@ Interface IKNetCompactedReplicator&lt;TKey, TValue&gt;  <a class="header-action 
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Serialization.IKNetSerDes-1.html">IKNetSerDes</a>&lt;TKey&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes</a>&lt;TKey&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -837,12 +837,12 @@ Interface IKNetCompactedReplicator&lt;TKey, TValue&gt;  <a class="header-action 
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get or set an instance of <a class="xref" href="MASES.KNet.Serialization.IKNetSerDes-1.html">IKNetSerDes&lt;T&gt;</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a>, by default it creates a default one based on <code class="typeparamref">TValue</code></p>
+  <div class="markdown level1 summary"><p>Get or set an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a>, by default it creates a default one based on <code class="typeparamref">TValue</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IKNetSerDes&lt;TValue&gt; ValueSerDes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">ISerDes&lt;TValue&gt; ValueSerDes { get; }</code></pre>
   </div>
 
 
@@ -851,7 +851,7 @@ Interface IKNetCompactedReplicator&lt;TKey, TValue&gt;  <a class="header-action 
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Serialization.IKNetSerDes-1.html">IKNetSerDes</a>&lt;TValue&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes</a>&lt;TValue&gt;</dt>
     <dd></dd>
   </dl>
 

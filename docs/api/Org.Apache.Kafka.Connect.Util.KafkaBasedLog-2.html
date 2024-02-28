@@ -445,6 +445,57 @@ Class KafkaBasedLog&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <a id="Org_Apache_Kafka_Connect_Util_KafkaBasedLog_2__ctor_" data-uid="Org.Apache.Kafka.Connect.Util.KafkaBasedLog`2.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Connect_Util_KafkaBasedLog_2__ctor_Java_Lang_String_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Function_Supplier_Org_Apache_Kafka_Connect_Util_TopicAdmin__Org_Apache_Kafka_Connect_Util_Callback_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1___Org_Apache_Kafka_Common_Utils_Time_Java_Util_Function_Consumer_Org_Apache_Kafka_Connect_Util_TopicAdmin__" data-uid="Org.Apache.Kafka.Connect.Util.KafkaBasedLog`2.#ctor(Java.Lang.String,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Function.Supplier{Org.Apache.Kafka.Connect.Util.TopicAdmin},Org.Apache.Kafka.Connect.Util.Callback{Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{`0,`1}},Org.Apache.Kafka.Common.Utils.Time,Java.Util.Function.Consumer{Org.Apache.Kafka.Connect.Util.TopicAdmin})">
+  KafkaBasedLog(String, Map&lt;String, object&gt;, Map&lt;String, object&gt;, Supplier&lt;TopicAdmin&gt;, Callback&lt;ConsumerRecord&lt;K, V&gt;&gt;, Time, Consumer&lt;TopicAdmin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/KafkaBasedLog.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/KafkaBasedLog.html#org.apache.kafka.connect.util.KafkaBasedLog(java.lang.String,java.util.Map,java.util.Map,java.util.function.Supplier,org.apache.kafka.connect.util.Callback,org.apache.kafka.common.utils.Time,java.util.function.Consumer)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/KafkaBasedLog.html#org.apache.kafka.connect.util.KafkaBasedLog(java.lang.String,java.util.Map,java.util.Map,java.util.function.Supplier,org.apache.kafka.connect.util.Callback,org.apache.kafka.common.utils.Time,java.util.function.Consumer)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaBasedLog(String arg0, Map&lt;String, object&gt; arg1, Map&lt;String, object&gt; arg2, Supplier&lt;TopicAdmin&gt; arg3, Callback&lt;ConsumerRecord&lt;K, V&gt;&gt; arg4, Time arg5, Consumer&lt;TopicAdmin&gt; arg6)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Supplier-1.html">Supplier</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Util.TopicAdmin.html">TopicAdmin</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Supplier.html">Supplier</a></p>
+</dd>
+    <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Connect.Util.Callback-1.html">Callback</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord-2.html">ConsumerRecord</a>&lt;K, V&gt;&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Util.Callback.html">Callback</a></p>
+</dd>
+    <dt><code>arg5</code> <a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></p>
+</dd>
+    <dt><code>arg6</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Consumer-1.html">Consumer</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Util.TopicAdmin.html">TopicAdmin</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Consumer.html">Consumer</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Connect_Util_KafkaBasedLog_2__ctor_" data-uid="Org.Apache.Kafka.Connect.Util.KafkaBasedLog`2.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Connect_Util_KafkaBasedLog_2__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Util.KafkaBasedLog`2.#ctor(System.Object[])">
   KafkaBasedLog(params object[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L497"><i class="bi bi-code-slash"></i></a>
@@ -462,57 +513,6 @@ Class KafkaBasedLog&lt;K, V&gt;  <a class="header-action link-secondary" title="
   <dl class="parameters">
     <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
     <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Apache_Kafka_Connect_Util_KafkaBasedLog_2__ctor_" data-uid="Org.Apache.Kafka.Connect.Util.KafkaBasedLog`2.#ctor*"></a>
-
-  <h3 id="Org_Apache_Kafka_Connect_Util_KafkaBasedLog_2__ctor_System_String_Java_Util_Map_System_String_System_Object__Java_Util_Map_System_String_System_Object__Java_Util_Function_Supplier_Org_Apache_Kafka_Connect_Util_TopicAdmin__Org_Apache_Kafka_Connect_Util_Callback_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1___Org_Apache_Kafka_Common_Utils_Time_Java_Util_Function_Consumer_Org_Apache_Kafka_Connect_Util_TopicAdmin__" data-uid="Org.Apache.Kafka.Connect.Util.KafkaBasedLog`2.#ctor(System.String,Java.Util.Map{System.String,System.Object},Java.Util.Map{System.String,System.Object},Java.Util.Function.Supplier{Org.Apache.Kafka.Connect.Util.TopicAdmin},Org.Apache.Kafka.Connect.Util.Callback{Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{`0,`1}},Org.Apache.Kafka.Common.Utils.Time,Java.Util.Function.Consumer{Org.Apache.Kafka.Connect.Util.TopicAdmin})">
-  KafkaBasedLog(string, Map&lt;string, object&gt;, Map&lt;string, object&gt;, Supplier&lt;TopicAdmin&gt;, Callback&lt;ConsumerRecord&lt;K, V&gt;&gt;, Time, Consumer&lt;TopicAdmin&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/KafkaBasedLog.cs/#L189"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/KafkaBasedLog.html#org.apache.kafka.connect.util.KafkaBasedLog(java.lang.String,java.util.Map,java.util.Map,java.util.function.Supplier,org.apache.kafka.connect.util.Callback,org.apache.kafka.common.utils.Time,java.util.function.Consumer)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/KafkaBasedLog.html#org.apache.kafka.connect.util.KafkaBasedLog(java.lang.String,java.util.Map,java.util.Map,java.util.function.Supplier,org.apache.kafka.connect.util.Callback,org.apache.kafka.common.utils.Time,java.util.function.Consumer)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KafkaBasedLog(string arg0, Map&lt;string, object&gt; arg1, Map&lt;string, object&gt; arg2, Supplier&lt;TopicAdmin&gt; arg3, Callback&lt;ConsumerRecord&lt;K, V&gt;&gt; arg4, Time arg5, Consumer&lt;TopicAdmin&gt; arg6)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
-</dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
-</dd>
-    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
-</dd>
-    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Supplier-1.html">Supplier</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Util.TopicAdmin.html">TopicAdmin</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Supplier.html">Supplier</a></p>
-</dd>
-    <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Connect.Util.Callback-1.html">Callback</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord-2.html">ConsumerRecord</a>&lt;K, V&gt;&gt;</dt>
-    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Util.Callback.html">Callback</a></p>
-</dd>
-    <dt><code>arg5</code> <a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></dt>
-    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></p>
-</dd>
-    <dt><code>arg6</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Consumer-1.html">Consumer</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Util.TopicAdmin.html">TopicAdmin</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Consumer.html">Consumer</a></p>
-</dd>
   </dl>
 
 
@@ -1038,8 +1038,8 @@ Class KafkaBasedLog&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <a id="Org_Apache_Kafka_Connect_Util_KafkaBasedLog_2_WithExistingClients_" data-uid="Org.Apache.Kafka.Connect.Util.KafkaBasedLog`2.WithExistingClients*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Util_KafkaBasedLog_2_WithExistingClients_System_String_Org_Apache_Kafka_Clients_Consumer_Consumer__0__1__Org_Apache_Kafka_Clients_Producer_Producer__0__1__Org_Apache_Kafka_Connect_Util_TopicAdmin_Org_Apache_Kafka_Connect_Util_Callback_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1___Org_Apache_Kafka_Common_Utils_Time_Java_Util_Function_Consumer_Org_Apache_Kafka_Connect_Util_TopicAdmin__" data-uid="Org.Apache.Kafka.Connect.Util.KafkaBasedLog`2.WithExistingClients(System.String,Org.Apache.Kafka.Clients.Consumer.Consumer{`0,`1},Org.Apache.Kafka.Clients.Producer.Producer{`0,`1},Org.Apache.Kafka.Connect.Util.TopicAdmin,Org.Apache.Kafka.Connect.Util.Callback{Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{`0,`1}},Org.Apache.Kafka.Common.Utils.Time,Java.Util.Function.Consumer{Org.Apache.Kafka.Connect.Util.TopicAdmin})">
-  WithExistingClients(string, Consumer&lt;K, V&gt;, Producer&lt;K, V&gt;, TopicAdmin, Callback&lt;ConsumerRecord&lt;K, V&gt;&gt;, Time, Consumer&lt;TopicAdmin&gt;)
+  <h3 id="Org_Apache_Kafka_Connect_Util_KafkaBasedLog_2_WithExistingClients_Java_Lang_String_Org_Apache_Kafka_Clients_Consumer_Consumer__0__1__Org_Apache_Kafka_Clients_Producer_Producer__0__1__Org_Apache_Kafka_Connect_Util_TopicAdmin_Org_Apache_Kafka_Connect_Util_Callback_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1___Org_Apache_Kafka_Common_Utils_Time_Java_Util_Function_Consumer_Org_Apache_Kafka_Connect_Util_TopicAdmin__" data-uid="Org.Apache.Kafka.Connect.Util.KafkaBasedLog`2.WithExistingClients(Java.Lang.String,Org.Apache.Kafka.Clients.Consumer.Consumer{`0,`1},Org.Apache.Kafka.Clients.Producer.Producer{`0,`1},Org.Apache.Kafka.Connect.Util.TopicAdmin,Org.Apache.Kafka.Connect.Util.Callback{Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{`0,`1}},Org.Apache.Kafka.Common.Utils.Time,Java.Util.Function.Consumer{Org.Apache.Kafka.Connect.Util.TopicAdmin})">
+  WithExistingClients(String, Consumer&lt;K, V&gt;, Producer&lt;K, V&gt;, TopicAdmin, Callback&lt;ConsumerRecord&lt;K, V&gt;&gt;, Time, Consumer&lt;TopicAdmin&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/KafkaBasedLog.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1048,13 +1048,13 @@ Class KafkaBasedLog&lt;K, V&gt;  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static KafkaBasedLog&lt;K, V&gt; WithExistingClients(string arg0, Consumer&lt;K, V&gt; arg1, Producer&lt;K, V&gt; arg2, TopicAdmin arg3, Callback&lt;ConsumerRecord&lt;K, V&gt;&gt; arg4, Time arg5, Consumer&lt;TopicAdmin&gt; arg6)</code></pre>
+    <pre><code class="lang-csharp hljs">public static KafkaBasedLog&lt;K, V&gt; WithExistingClients(String arg0, Consumer&lt;K, V&gt; arg1, Producer&lt;K, V&gt; arg2, TopicAdmin arg3, Callback&lt;ConsumerRecord&lt;K, V&gt;&gt; arg4, Time arg5, Consumer&lt;TopicAdmin&gt; arg6)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer-2.html">Consumer</a>&lt;K, V&gt;</dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer.html">Consumer</a></p>
