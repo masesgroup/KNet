@@ -40,7 +40,7 @@ namespace MASES.KNet.Connect
         /// Start task
         /// </summary>
         /// <param name="props"><see cref="Map{K, V}"/> of preperties to use</param>
-        void Start(Map<string, string> props);
+        void Start(Map<Java.Lang.String, Java.Lang.String> props);
         /// <summary>
         /// Stop task
         /// </summary>
@@ -160,15 +160,15 @@ namespace MASES.KNet.Connect
         /// </summary>
         public void StartInternal()
         {
-            Map<string, string> props = DataToExchange<Map<string, string>>();
-            Properties = props.ToDictiony();
+            Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+            Properties = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
             Start(Properties);
         }
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Local version with a different signature</exception>
-        public void Start(Map<string, string> props) => throw new NotImplementedException("Local version with a different signature");
+        public void Start(Map<Java.Lang.String, Java.Lang.String> props) => throw new NotImplementedException("Local version with a different signature");
 
         /// <inheritdoc cref="IKNetTask.Start(IReadOnlyDictionary{string, string})"/>
         public abstract void Start(IReadOnlyDictionary<string, string> props);

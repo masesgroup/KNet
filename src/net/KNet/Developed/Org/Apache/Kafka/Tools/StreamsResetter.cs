@@ -68,7 +68,9 @@ namespace Org.Apache.Kafka.Tools
             }
             if (force) strings.Add("--force");
 
-            return new StreamsResetter().Execute(((IEnumerable<string>)strings).ToArray()) == 0;
+            string[] parameters = strings.ToArray();
+
+            return new StreamsResetter().Execute(parameters.ToJVMArray<Java.Lang.String, string>()) == 0;
         }
     }
     #endregion

@@ -46,20 +46,20 @@ namespace MASES.KNet.Connect
     {
         /// <inheritdoc cref="Connector.Initialize(ConnectorContext)"/>
         void Initialize(ConnectorContext ctx);
-        /// <inheritdoc cref="Connector.Initialize(ConnectorContext, Java.Util.List{Map{string, string}})"/>
-        void Initialize(ConnectorContext ctx, Java.Util.List<Map<string, string>> taskConfigs);
-        /// <inheritdoc cref="Connector.Start(Map{string, string})"/>
-        void Start(Map<string, string> props);
-        /// <inheritdoc cref="Connector.Reconfigure(Map{string, string})"/>
-        void Reconfigure(Map<string, string> props);
+        /// <inheritdoc cref="Connector.Initialize(ConnectorContext, Java.Util.List{Map{Java.Lang.String, Java.Lang.String}})"/>
+        void Initialize(ConnectorContext ctx, Java.Util.List<Map<Java.Lang.String, Java.Lang.String>> taskConfigs);
+        /// <inheritdoc cref="Connector.Start(Map{Java.Lang.String, Java.Lang.String})"/>
+        void Start(Map<Java.Lang.String, Java.Lang.String> props);
+        /// <inheritdoc cref="Connector.Reconfigure(Map{Java.Lang.String, Java.Lang.String})"/>
+        void Reconfigure(Map<Java.Lang.String, Java.Lang.String> props);
         /// <inheritdoc cref="Connector.TaskClass{ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task}"/>
         Class TaskClass();
         /// <inheritdoc cref="Connector.TaskConfigs(int)"/>
-        Java.Util.List<Map<string, string>> TaskConfigs(int maxTasks);
+        Java.Util.List<Map<Java.Lang.String, Java.Lang.String>> TaskConfigs(int maxTasks);
         /// <inheritdoc cref="Connector.Stop"/>
         void Stop();
-        /// <inheritdoc cref="Connector.Validate(Map{string, string})"/>
-        Config Validate(Map<string, string> connectorConfigs);
+        /// <inheritdoc cref="Connector.Validate(Map{Java.Lang.String, Java.Lang.String})"/>
+        Config Validate(Map<Java.Lang.String, Java.Lang.String> connectorConfigs);
         /// <inheritdoc cref="Connector.Config"/>
         ConfigDef Config();
     }
@@ -214,21 +214,21 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
-        public void Initialize(ConnectorContext ctx, Java.Util.List<Map<string, string>> taskConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
+        public void Initialize(ConnectorContext ctx, Java.Util.List<Map<Java.Lang.String, Java.Lang.String>> taskConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
-        /// Public method used from Java to trigger <see cref="Start(Map{string, string})"/>
+        /// Public method used from Java to trigger <see cref="Start(Map{Java.Lang.String, Java.Lang.String})"/>
         /// </summary>
         public void StartInternal()
         {
-            Map<string, string> props = DataToExchange<Map<string, string>>();
-            Properties = props.ToDictiony();
+            Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+            Properties = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
             Start(Properties);
         }
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Local version with a different signature</exception>
-        public void Start(Map<string, string> props) => throw new NotImplementedException("Local version with a different signature");
+        public void Start(Map<Java.Lang.String, Java.Lang.String> props) => throw new NotImplementedException("Local version with a different signature");
 
         /// <inheritdoc cref="IKNetConnector.Start(IReadOnlyDictionary{string, string})"/>
         public abstract void Start(IReadOnlyDictionary<string, string> props);
@@ -236,7 +236,7 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException"></exception>
-        public void Reconfigure(Map<string, string> props) => throw new NotImplementedException("Invoked in Java before any initialization.");
+        public void Reconfigure(Map<Java.Lang.String, Java.Lang.String> props) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
@@ -247,8 +247,8 @@ namespace MASES.KNet.Connect
         /// </summary>
         public void TaskConfigsInternal(int index)
         {
-            Map<string, string> props = DataToExchange<Map<string, string>>();
-            System.Collections.Generic.Dictionary<string, string> dict = new System.Collections.Generic.Dictionary<string, string>(props.ToDictiony());
+            Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+            System.Collections.Generic.Dictionary<string, string> dict = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
             TaskConfigs(index, dict);
             props.Clear();
             foreach (var item in dict)
@@ -262,7 +262,7 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked using the other signature</exception>
-        public Java.Util.List<Map<string, string>> TaskConfigs(int maxTasks) => throw new NotImplementedException("Invoked using the other signature.");
+        public Java.Util.List<Map<Java.Lang.String, Java.Lang.String>> TaskConfigs(int maxTasks) => throw new NotImplementedException("Invoked using the other signature.");
         /// <summary>
         /// Public method used from Java to trigger <see cref="Stop"/>
         /// </summary>
@@ -278,7 +278,7 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
-        public Config Validate(Map<string, string> connectorConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
+        public Config Validate(Map<Java.Lang.String, Java.Lang.String> connectorConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
