@@ -2,6 +2,7 @@
   "RelativeDestinationCSharpClassPath": "net\\KNet\\Generated",
   "RelativeDestinationJavaListenerPath": "jvm\\knet\\src\\main\\java",
   "JavaListenerBasePackage": "org.mases.knet.generated",
+  "PreferMethodWithSignature": true,
   "OnlyPropertiesForGetterSetter": true,
   "DisableInterfaceMethodGeneration": true,
   "CreateInterfaceInheritance": true,
