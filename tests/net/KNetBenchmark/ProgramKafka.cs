@@ -88,8 +88,9 @@ namespace MASES.KNet.Benchmark
         {
             try
             {
+                Java.Lang.String jTopicName = topicName;
                 var kafkaproducer = KafkaProducer();
-                kafkaproducer.PartitionsFor(topicName); // used to get metadata before do the test
+                kafkaproducer.PartitionsFor(jTopicName); // used to get metadata before do the test
 
                 if (UseCallback && kafkaCallback == null)
                 {
@@ -107,7 +108,10 @@ namespace MASES.KNet.Benchmark
                 Stopwatch swSendRecord = null;
                 Stopwatch stopWatch = null;
                 Stopwatch flushTimeWatch = null;
-                long produceJNICalls = 0;
+                long testJNICalls = 0;
+                TimeSpan testConsumedTime;
+                long initialJNICalls = BenchmarkKNetCore.GlobalInstance.CurrentJNICalls;
+                TimeSpan initialConsumedTime = BenchmarkKNetCore.GlobalInstance.CurrentTimeSpentInJNICalls;
 
                 try
                 {
@@ -120,7 +124,7 @@ namespace MASES.KNet.Benchmark
                             data[i] = (byte)rand.Next(0, byte.MaxValue);
                         }
                     }
-                    var record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>(topicName, 42, data);
+                    var record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>(jTopicName, 42, data);
                     if (ProducePreLoad)
                     {
                         swCreateRecord = new();
@@ -135,7 +139,7 @@ namespace MASES.KNet.Benchmark
                                 data[ii] = (byte)rand.Next(0, byte.MaxValue);
                             }
                             swCreateRecord.Start();
-                            record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>(topicName, i, data);
+                            record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>(jTopicName, i, data);
                             swCreateRecord.Stop();
                             messages.Add(record);
                         }
@@ -169,19 +173,22 @@ namespace MASES.KNet.Benchmark
                                 stopWatch.Stop();
                                 byte[] newData = new byte[data.Length];
                                 Array.Copy(data, 0, newData, 0, data.Length);
+                                var startTimeRecordJniCalls = BenchmarkKNetCore.GlobalInstance.CurrentTimeSpentInJNICalls;
+                                var startKRecordJniCalls = BenchmarkKNetCore.GlobalInstance.CurrentJNICalls;
                                 stopWatch.Start();
                                 swCreateRecord.Start();
-                                record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>(topicName, i, newData);
+                                record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<long, byte[]>(jTopicName, i, newData);
                                 swCreateRecord.Stop();
+                                var deltaKRecordJniCalls = BenchmarkKNetCore.GlobalInstance.CurrentJNICalls - startKRecordJniCalls;
+                                var deltaTimeJniCalls = BenchmarkKNetCore.GlobalInstance.CurrentTimeSpentInJNICalls - startTimeRecordJniCalls;
+                                var singleJniTime = TimeSpan.FromTicks(deltaTimeJniCalls.Ticks / deltaKRecordJniCalls);
                             }
-                            long baseJNICalls = BenchmarkKNetCore.GlobalInstance.CurrentJNICalls;
                             swSendRecord.Start();
                             if (UseCallback)
                                 kafkaproducer.Send(record, kafkaCallback);
                             else
                                 kafkaproducer.Send(record);
                             swSendRecord.Stop();
-                            produceJNICalls += BenchmarkKNetCore.GlobalInstance.CurrentJNICalls - baseJNICalls;
                             if (WithBurst)
                             {
                                 if (i % BurstLength == 0)
@@ -203,10 +210,13 @@ namespace MASES.KNet.Benchmark
                     flushTimeWatch.Stop();
                     stopWatch.Stop();
                     if (!SharedObjects) { kafkaproducer.Dispose(); kafkaproducer = null; }
+                    testJNICalls = BenchmarkKNetCore.GlobalInstance.CurrentJNICalls - initialJNICalls;
+                    testConsumedTime = BenchmarkKNetCore.GlobalInstance.CurrentTimeSpentInJNICalls - initialConsumedTime;
                 }
                 if (ShowIntermediateResults && !ProducePreLoad)
                 {
-                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) Flush {flushTimeWatch.ElapsedMicroSeconds()} -> TotalTime {stopWatch.ElapsedMicroSeconds()} BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())} Send JNICalls {produceJNICalls} Mean Send JNICalls {produceJNICalls / numpacket}");
+                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) Flush {flushTimeWatch.ElapsedMicroSeconds()} -> TotalTime {stopWatch.ElapsedMicroSeconds()} BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
+                    Console.WriteLine($"KNET: Test JNICalls {testJNICalls} Mean JNICalls {testJNICalls / numpacket} Test JNI time: {testConsumedTime} Mean packet JNI Time {TimeSpan.FromTicks(testConsumedTime.Ticks / numpacket)}");
                 }
                 return stopWatch;
             }

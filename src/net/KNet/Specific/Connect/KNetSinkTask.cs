@@ -44,8 +44,9 @@ namespace MASES.KNet.Connect
         public void PutInternal()
         {
             Collection<SinkRecord> collection = DataToExchange<Collection<SinkRecord>>();
-            var list = collection.ToList();
-            Put(list);
+            System.Collections.Generic.List<SinkRecord> coll = new System.Collections.Generic.List<SinkRecord>();
+            foreach (var record in collection) { coll.Add(record); }
+            Put(coll);
         }
         /// <summary>
         /// Implement the method to execute the Put action

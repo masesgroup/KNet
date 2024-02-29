@@ -153,7 +153,7 @@ namespace MASES.KNet.Streams
         public KStream<K, V, byte[], byte[]> Stream<K, V>(System.Collections.Generic.IEnumerable<string> arg0, Consumed<K, V> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0.ToJCollection(), arg1));
+            return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0.ToJVMCollection<Java.Lang.String, string>(), arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.Collection-"/>
@@ -164,7 +164,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
         public KStream<K, V, byte[], byte[]> Stream<K, V>(System.Collections.Generic.IEnumerable<string> arg0)
         {
-            return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0.ToJCollection()));
+            return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0.ToJVMCollection<Java.Lang.String, string>()));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.regex.Pattern-KNetConsumed{K, V}-"/>

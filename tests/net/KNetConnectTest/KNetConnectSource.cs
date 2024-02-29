@@ -68,7 +68,7 @@ namespace MASES.KNetConnectTest
             var lines = File.ReadAllLines(_filename);
             if (useSourceOffset)
             {
-                Map<string, long> offset = OffsetAt<string, long>(FILENAME_FIELD, _filename);
+                Map<Java.Lang.String, long> offset = OffsetAt<Java.Lang.String, long>(FILENAME_FIELD, _filename);
                 if (offset != null)
                 {
                     long lastRecordedOffset = 0;
@@ -90,7 +90,7 @@ namespace MASES.KNetConnectTest
             {
                 if (useSourceOffset)
                 {
-                    var record = CreateRecord(OffsetForKey(FILENAME_FIELD, _filename), OffsetForKey(POSITION_FIELD, i), _topic, Schema.STRING_SCHEMA, lines[i], DateTime.Now);
+                    var record = CreateRecord(OffsetForKey((Java.Lang.String)FILENAME_FIELD, _filename), OffsetForKey((Java.Lang.String)POSITION_FIELD, i), _topic, Schema.STRING_SCHEMA, lines[i], DateTime.Now);
                     records.Add(record);
                 }
                 else
