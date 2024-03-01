@@ -13,71 +13,72 @@ The configuration is:
   "RelativeDestinationCSharpClassPath": "net\\KNet\\Generated",
   "RelativeDestinationJavaListenerPath": "jvm\\knet\\src\\main\\java",
   "JavaListenerBasePackage": "org.mases.knet.generated",
+  "PreferMethodWithSignature": true,
   "OnlyPropertiesForGetterSetter": true,
   "DisableInterfaceMethodGeneration": true,
   "CreateInterfaceInheritance": true,
   "JarList": [
-    "kafka_2.13-3.6.1.jar",
-    "kafka-clients-3.6.1.jar",
-    "kafka-streams-3.6.1.jar",
-    "kafka-tools-3.6.1.jar",
-    "kafka-raft-3.6.1.jar",
-    "connect-api-3.6.1.jar",
-    "connect-basic-auth-extension-3.6.1.jar",
-    "connect-json-3.6.1.jar",
-    "connect-mirror-3.6.1.jar",
-    "connect-mirror-client-3.6.1.jar",
-    "connect-runtime-3.6.1.jar",
-    "connect-transforms-3.6.1.jar"
+    "kafka_2.13-3.7.0.jar",
+    "kafka-clients-3.7.0.jar",
+    "kafka-streams-3.7.0.jar",
+    "kafka-tools-3.7.0.jar",
+    "kafka-raft-3.7.0.jar",
+    "connect-api-3.7.0.jar",
+    "connect-basic-auth-extension-3.7.0.jar",
+    "connect-json-3.7.0.jar",
+    "connect-mirror-3.7.0.jar",
+    "connect-mirror-client-3.7.0.jar",
+    "connect-runtime-3.7.0.jar",
+    "connect-transforms-3.7.0.jar"
   ],
   "OriginJavadocJARVersionAndUrls": [
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.7.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.7.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/"
     }
   ],
   "NamespacesToAvoid": [
@@ -93,6 +94,7 @@ The configuration is:
     "kafka.consumer",
     "kafka.controller",
     "kafka.coordinator",
+    "kafka.docker",
     "kafka.internals",
     "kafka.log",
     "kafka.message",
@@ -124,13 +126,15 @@ The configuration is:
     "org.apache.kafka.common.security.oauthbearer.internals",
     "org.apache.kafka.common.security.scram.internals",
     "org.apache.kafka.common.security.token.delegation.internals",
+    "org.apache.kafka.common.telemetry.internals",
     "org.apache.kafka.connect.connector.policy",
     "org.apache.kafka.connect.mirror.rest",
     "org.apache.kafka.connect.runtime",
     "org.apache.kafka.connect.storage",
     "org.apache.kafka.connect.tools",
-	"org.apache.kafka.raft.internals",
+    "org.apache.kafka.raft.internals",
     "org.apache.kafka.server",
+    "org.apache.kafka.shaded",
     "org.apache.kafka.streams.internals",
     "org.apache.kafka.streams.processor.internals",
     "org.apache.kafka.streams.state.internals",
@@ -206,6 +210,7 @@ The configuration is:
     "org.apache.kafka.common.record.PartialDefaultRecord",
     "org.apache.kafka.common.record.Records",
     "org.apache.kafka.common.record.RecordsSend",
+    "org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter",
     "org.apache.kafka.connect.cli.AbstractConnectCli",
     "org.apache.kafka.connect.rest.ConnectRestExtensionContext",
     "org.apache.kafka.connect.rest.ConnectRestExtension",
