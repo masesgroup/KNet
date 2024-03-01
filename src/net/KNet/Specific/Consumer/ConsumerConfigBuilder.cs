@@ -172,6 +172,32 @@ namespace MASES.KNet.Consumer
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="ConsumerConfig.GROUP_PROTOCOL_CONFIG"/>
+        /// </summary>
+        public string GroupProtocol { get { return GetProperty<string>(ConsumerConfig.GROUP_PROTOCOL_CONFIG); } set { SetProperty(ConsumerConfig.GROUP_PROTOCOL_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.GROUP_PROTOCOL_CONFIG"/>
+        /// </summary>
+        public ConsumerConfigBuilder WithGroupProtocol(string groupProtocol)
+        {
+            var clone = Clone();
+            clone.GroupProtocol = groupProtocol;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.GROUP_REMOTE_ASSIGNOR_CONFIG"/>
+        /// </summary>
+        public string GroupRemoteAssignor { get { return GetProperty<string>(ConsumerConfig.GROUP_REMOTE_ASSIGNOR_CONFIG); } set { SetProperty(ConsumerConfig.GROUP_REMOTE_ASSIGNOR_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.GROUP_REMOTE_ASSIGNOR_CONFIG"/>
+        /// </summary>
+        public ConsumerConfigBuilder WithGroupRemoteAssignor(string groupRemoteAssignor)
+        {
+            var clone = Clone();
+            clone.GroupRemoteAssignor = groupRemoteAssignor;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="ConsumerConfig.MAX_PARTITION_FETCH_BYTES_CONFIG"/>
         /// </summary>
         public int MaxPartitionFetchBytes { get { return GetProperty<int>(ConsumerConfig.MAX_PARTITION_FETCH_BYTES_CONFIG); } set { SetProperty(ConsumerConfig.MAX_PARTITION_FETCH_BYTES_CONFIG, value); } }

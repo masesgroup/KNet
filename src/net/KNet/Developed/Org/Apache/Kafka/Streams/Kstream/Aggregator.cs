@@ -26,8 +26,8 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
-    /// <typeparam name="VA">Aggregated value</typeparam>
-    public partial interface IAggregator<K, V, VA> : IJVMBridgeBase
+    /// <typeparam name="VAgg">Aggregated value</typeparam>
+    public partial interface IAggregator<K, V, VAgg> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Aggregator action in the CLR
@@ -36,14 +36,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="o2">The Aggregator object</param>
         /// <param name="aggregate">The current aggregate value</param>
         /// <returns>The <typeparamref name="VA"/> apply evaluation</returns>
-        VA Apply(K o1, V o2, VA aggregate);
+        VAgg Apply(K o1, V o2, VAgg aggregate);
     }
 
     /// <summary>
-    /// Listener for Kafka Aggregator. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IAggregator{K, V, VA}"/>
+    /// Listener for Kafka Aggregator. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IAggregator{K, V, VAgg}"/>
     /// </summary>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public partial class Aggregator<K, V, VA> : IAggregator<K, V, VA>
+    public partial class Aggregator<K, V, VAgg> : IAggregator<K, V, VAgg>
     {
 
     }

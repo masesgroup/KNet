@@ -24,21 +24,21 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <summary>
     /// Listener for Kafka Initializer. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    /// <typeparam name="VA">The Initialized data associated to the event</typeparam>
-    public partial interface IInitializer<VA> : IJVMBridgeBase
+    /// <typeparam name="VAgg">The Initialized data associated to the event</typeparam>
+    public partial interface IInitializer<VAgg> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Initializer action in the CLR
         /// </summary>
         /// <returns>The <typeparamref name="VA"/> apply evaluation</returns>
-        VA Apply();
+        VAgg Apply();
     }
 
     /// <summary>
     /// Listener for Kafka Initializer. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IInitializer{VA}"/>
     /// </summary>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public partial class Initializer<VA> : IInitializer<VA>
+    public partial class Initializer<VAgg> : IInitializer<VAgg>
     {
 
     }

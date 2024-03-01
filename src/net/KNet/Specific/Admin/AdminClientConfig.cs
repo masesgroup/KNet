@@ -26,6 +26,20 @@ namespace MASES.KNet.Admin
     public class AdminClientConfigBuilder : CommonClientConfigsBuilder<AdminClientConfigBuilder>
     {
         /// <summary>
+        /// Manages <see cref="AdminClientConfig.BOOTSTRAP_CONTROLLERS_CONFIG"/>
+        /// </summary>
+        public string BootstrapControllers { get { return GetProperty<string>(AdminClientConfig.BOOTSTRAP_CONTROLLERS_CONFIG); } set { SetProperty(AdminClientConfig.BOOTSTRAP_CONTROLLERS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="AdminClientConfig.BOOTSTRAP_CONTROLLERS_CONFIG"/>
+        /// </summary>
+        public AdminClientConfigBuilder WithBootstrapControllers(string bootstrapControllers)
+        {
+            var clone = Clone();
+            clone.BootstrapControllers = bootstrapControllers;
+            return clone;
+        }
+
+        /// <summary>
         /// Manages <see cref="AdminClientConfig.SECURITY_PROVIDERS_CONFIG"/>
         /// </summary>
         public string SecurityProviders { get { return GetProperty<string>(AdminClientConfig.SECURITY_PROVIDERS_CONFIG); } set { SetProperty(AdminClientConfig.SECURITY_PROVIDERS_CONFIG, value); } }

@@ -34,6 +34,7 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         Org.Apache.Kafka.Streams.Processor.StateRestoreListener _stateRestoreListener; // used to avoid GC recall
+        Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener _standbyUpdateListener; // used to avoid GC recall
         Org.Apache.Kafka.Streams.KafkaStreams.StateListener _stateListener; // used to avoid GC recall
         Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler _streamsUncaughtExceptionHandler; // used to avoid GC recall
 
@@ -277,6 +278,15 @@ namespace MASES.KNet.Streams
             return _inner.Close(arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#clientInstanceIds-java.time.Duration-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.ClientInstanceIds"/></returns>
+        public Org.Apache.Kafka.Streams.ClientInstanceIds ClientInstanceIds(Java.Time.Duration arg0)
+        {
+            return _inner.ClientInstanceIds(arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#start--"/>
         /// </summary>
         /// <exception cref="Java.Lang.IllegalStateException"/>
@@ -321,6 +331,15 @@ namespace MASES.KNet.Streams
         {
             _inner.SetGlobalStateRestoreListener(arg0);
             _stateRestoreListener = arg0;
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#setStandbyUpdateListener-org.apache.kafka.streams.processor.StandbyUpdateListener-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener"/></param>
+        public void SetStandbyUpdateListener(Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener arg0)
+        {
+            _inner.SetStandbyUpdateListener(arg0);
+            _standbyUpdateListener = arg0;
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#setStateListener-org.apache.kafka.streams.KafkaStreams.StateListener-"/>

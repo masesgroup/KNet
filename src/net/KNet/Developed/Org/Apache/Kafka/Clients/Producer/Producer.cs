@@ -45,6 +45,8 @@ namespace Org.Apache.Kafka.Clients.Producer
         List<PartitionInfo> PartitionsFor(Java.Lang.String topic);
         /// <inheritdoc cref="Producer.Metrics"/>
         Map<MetricName, T> Metrics<T>() where T : Metric;
+        /// <inheritdoc cref="Producer.ClientInstanceId(Java.Time.Duration)"/>
+        Org.Apache.Kafka.Common.Uuid ClientInstanceId(Java.Time.Duration arg0);
     }
 
     public partial interface IProducer<K, V> : IProducer

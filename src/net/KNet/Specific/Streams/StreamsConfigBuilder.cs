@@ -16,7 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Lang;
 using Org.Apache.Kafka.Streams;
+using Org.Apache.Kafka.Streams.State;
 
 namespace MASES.KNet.Streams
 {
@@ -364,16 +366,16 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_DSL_STORE_CONFIG"/>: use <see cref="StreamsConfig.ROCKS_DB"/> or <see cref="StreamsConfig.IN_MEMORY"/>
+        /// Manages <see cref="StreamsConfig.DSL_STORE_SUPPLIERS_CLASS_CONFIG"/>: use <see cref="BuiltInDslStoreSuppliers.ROCKS_DB"/> or <see cref="BuiltInDslStoreSuppliers.IN_MEMORY"/>
         /// </summary>
-        public string DefaultDSLStore { get { return GetProperty<string>(StreamsConfig.DEFAULT_DSL_STORE_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_DSL_STORE_CONFIG, value); } }
+        public Class DSLStoreSuppliersClass { get { return GetProperty<Class>(StreamsConfig.DSL_STORE_SUPPLIERS_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DSL_STORE_SUPPLIERS_CLASS_CONFIG, value); } }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_DSL_STORE_CONFIG"/>: use <see cref="StreamsConfig.ROCKS_DB"/> or <see cref="StreamsConfig.IN_MEMORY"/>
+        /// Manages <see cref="StreamsConfig.DSL_STORE_SUPPLIERS_CLASS_CONFIG"/>: use <see cref="BuiltInDslStoreSuppliers.ROCKS_DB"/> or <see cref="BuiltInDslStoreSuppliers.IN_MEMORY"/>
         /// </summary>
-        public StreamsConfigBuilder WithDefaultDSLStore(string defaultDSLStore)
+        public StreamsConfigBuilder WithDSLStoreSuppliersClass(Class dSLStoreSuppliersClass)
         {
             var clone = Clone();
-            clone.DefaultDSLStore = defaultDSLStore;
+            clone.DSLStoreSuppliersClass = dSLStoreSuppliersClass;
             return clone;
         }
         /// <summary>

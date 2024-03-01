@@ -66,6 +66,16 @@ namespace MASES.KNet.Streams.Kstream
             return new StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2>(cons);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html#with-org.apache.kafka.streams.state.DslStoreSuppliers-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
+        /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
+        public static StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> With(Org.Apache.Kafka.Streams.State.DslStoreSuppliers arg0)
+        {
+            var cons = Org.Apache.Kafka.Streams.Kstream.StreamJoined<TJVMK, TJVMV1, TJVMV2>.With(arg0);
+            return new StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2>(cons);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html#with-org.apache.kafka.streams.state.WindowBytesStoreSupplier-org.apache.kafka.streams.state.WindowBytesStoreSupplier-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
@@ -80,6 +90,16 @@ namespace MASES.KNet.Streams.Kstream
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html#withDslStoreSuppliers-org.apache.kafka.streams.state.DslStoreSuppliers-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
+        /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
+        public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithDslStoreSuppliers(Org.Apache.Kafka.Streams.State.DslStoreSuppliers arg0)
+        {
+            _inner?.WithDslStoreSuppliers(arg0);
+            return this;
+        }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
