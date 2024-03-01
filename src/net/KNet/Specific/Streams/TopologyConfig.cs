@@ -130,7 +130,7 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#parseStoreType--"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType ParseStoreType => _inner.ParseStoreType();
+        public Org.Apache.Kafka.Streams.State.DslStoreSuppliers ResolveDslStoreSuppliers { get { var opt = _inner.ResolveDslStoreSuppliers(); return opt.IsPresent() ? opt.Get() : null; } }
 
         #endregion
     }

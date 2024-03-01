@@ -41,6 +41,8 @@ namespace Org.Apache.Kafka.Clients.Consumer
         void Subscribe(Collection<Java.Lang.String> topics);
         /// <inheritdoc cref="Consumer.Subscribe(Collection, ConsumerRebalanceListener)"/>
         void Subscribe(Collection<Java.Lang.String> topics, ConsumerRebalanceListener listener);
+        /// <inheritdoc cref="Consumer.ClientInstanceId(Duration)"/>
+        Org.Apache.Kafka.Common.Uuid ClientInstanceId(Java.Time.Duration arg0);
         /// <inheritdoc cref="Consumer.Assign(Collection)"/>
         void Assign(Collection<TopicPartition> partitions);
         /// <inheritdoc cref="Consumer.Subscribe(Pattern, ConsumerRebalanceListener)"/>
