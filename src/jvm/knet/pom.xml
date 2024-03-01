@@ -281,5 +281,10 @@
             <artifactId>connect-basic-auth-extension</artifactId>
             <version>${kafkaVersion}</version>
         </dependency>
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-proto</artifactId>
+            <version>1.0.0-alpha</version>
+        </dependency>
     </dependencies>
 </project>
