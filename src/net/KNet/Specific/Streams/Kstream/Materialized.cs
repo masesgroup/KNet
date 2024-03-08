@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="ISerDes{K}"/></param>
+        /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <returns><see cref="Materialized{K, V, TJVMK}"/></returns>
         public static CountingMaterialized<K, TJVMK> With(ISerDes<K, TJVMK> arg0)
         {
@@ -48,7 +48,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="ISerDes{V}"/></param>
+        /// <param name="arg0"><see cref="ISerDes{V, TJVMK}"/></param>
         /// <returns><see cref="Materialized{K, V, TJVMK}"/></returns>
         public CountingMaterialized<K, TJVMK> WithValueSerde(ISerDes<long, Java.Lang.Long> arg0)
         {
@@ -86,7 +86,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="ISerDes{V}"/></param>
+        /// <param name="arg0"><see cref="ISerDes{V, TJVMV}"/></param>
         /// <returns><see cref="Materialized{K, V, TJVMK}"/></returns>
         public Materialized<K, V, TJVMK, TJVMV> WithValueSerde(ISerDes<V, TJVMV> arg0)
         {
@@ -281,7 +281,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="ISerDes{K}"/></param>
+        /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>
         public TContainer WithKeySerde(ISerDes<K, TJVMK> arg0)
         {

@@ -23,20 +23,22 @@ using MASES.KNet.Streams.State;
 namespace MASES.KNet.Streams
 {
     /// <summary>
-    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.KeyValue{TJVMK, TJVMV}"/> 
     /// </summary>
-    /// <typeparam name="TKey">The key type</typeparam>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public sealed class TimestampedWindowedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    public sealed class TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _valueInner;
-        Windowed<TKey> _key = null;
-        ValueAndTimestamp<TValue> _value = null;
+        readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _valueInner;
+        Windowed<K, TJVMK> _key = null;
+        ValueAndTimestamp<V, TJVMV> _value = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         internal TimestampedWindowedKeyValue(IGenericSerDesFactory factory,
-                                                 Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> value)
+                                                 Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value)
         {
             _factory = factory;
             _valueInner = value;
@@ -45,22 +47,22 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
-        public Windowed<TKey> Key
+        public Windowed<K, TJVMK> Key
         {
             get
             {
-                _key ??= new Windowed<TKey>(_factory, _valueInner.key);
+                _key ??= new Windowed<K, TJVMK>(_factory, _valueInner.key);
                 return _key;
             }
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
-        public ValueAndTimestamp<TValue> Value
+        public ValueAndTimestamp<V, TJVMV> Value
         {
             get
             {
-                _value ??= new ValueAndTimestamp<TValue>(_factory, _valueInner.value);
+                _value ??= new ValueAndTimestamp<V, TJVMV>(_factory, _valueInner.value);
                 return _value;
             }
         }

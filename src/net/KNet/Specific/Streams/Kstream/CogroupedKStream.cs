@@ -25,6 +25,8 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="VOut"></typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMVOut">The JVM type of <typeparamref name="VOut"/></typeparam>
     public class CogroupedKStream<K, VOut, TJVMK, TJVMVOut> : IGenericSerDesFactoryApplier
     {
         Org.Apache.Kafka.Streams.Kstream.CogroupedKStream<TJVMK, TJVMVOut> _inner;
@@ -50,6 +52,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="KGroupedStream{K, V, TJVMK, TJVMVIn}"/></param>
         /// <param name="arg1"><see cref="Aggregator{K, V, VA}"/></param>
         /// <typeparam name="VIn"></typeparam>
+        /// <typeparam name="TJVMVIn">The JVM type of <typeparamref name="VIn"/></typeparam>
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperVIn"><typeparamref name="VIn"/></typeparam>
         /// <returns><see cref="CogroupedKStream{K, VOut, TJVMK, TJVMVOut}"/></returns>

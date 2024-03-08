@@ -70,12 +70,12 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetConsumed{K, V}-KNetMaterialized{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Consumed{K, V}"/></param>
+        /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="GlobalKTable{K, V, TJVMK, TJVMV}"/></returns>
-        public GlobalKTable<K, V, byte[], byte[]> GlobalTable<K, V>(string arg0, Consumed<K, V> arg1, Materialized<K, V, byte[], byte[]> arg2)
+        public GlobalKTable<K, V, byte[], byte[]> GlobalTable<K, V>(string arg0, Consumed<K, V, byte[], byte[]> arg1, Materialized<K, V, byte[], byte[]> arg2)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
@@ -85,11 +85,11 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetConsumed{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Consumed{K, V}"/></param>
+        /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="GlobalKTable{K, V, TJVMK, TJVMV}"/></returns>
-        public GlobalKTable<K, V, byte[], byte[]> GlobalTable<K, V>(string arg0, Consumed<K, V> arg1)
+        public GlobalKTable<K, V, byte[], byte[]> GlobalTable<K, V>(string arg0, Consumed<K, V, byte[], byte[]> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new GlobalKTable<K, V, byte[], byte[]>(_factory, _builder.GlobalTable<byte[], byte[]>(arg0, arg1));
@@ -122,11 +122,11 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.lang.String-KNetConsumed{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Consumed{K, V}"/></param>
+        /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
-        public KStream<K, V, byte[], byte[]> Stream<K, V>(string arg0, Consumed<K, V> arg1)
+        public KStream<K, V, byte[], byte[]> Stream<K, V>(string arg0, Consumed<K, V, byte[], byte[]> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0));
@@ -146,11 +146,11 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.Collection-KNetConsumed{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
-        /// <param name="arg1"><see cref="Consumed{K, V}"/></param>
+        /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
-        public KStream<K, V, byte[], byte[]> Stream<K, V>(System.Collections.Generic.IEnumerable<string> arg0, Consumed<K, V> arg1)
+        public KStream<K, V, byte[], byte[]> Stream<K, V>(System.Collections.Generic.IEnumerable<string> arg0, Consumed<K, V, byte[], byte[]> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0.ToJVMCollection<Java.Lang.String, string>(), arg1));
@@ -170,11 +170,11 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.regex.Pattern-KNetConsumed{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Regex.Pattern"/></param>
-        /// <param name="arg1"><see cref="Consumed{K, V}"/></param>
+        /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
-        public KStream<K, V, byte[], byte[]> Stream<K, V>(Java.Util.Regex.Pattern arg0, Consumed<K, V> arg1)
+        public KStream<K, V, byte[], byte[]> Stream<K, V>(Java.Util.Regex.Pattern arg0, Consumed<K, V, byte[], byte[]> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0));
@@ -194,12 +194,12 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetConsumed{K, V}-KNetMaterialized{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Consumed{K, V}"/></param>
+        /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public KTable<K, V, byte[], byte[]> Table<K, V>(string arg0, Consumed<K, V> arg1, Materialized<K, V, byte[], byte[]> arg2)
+        public KTable<K, V, byte[], byte[]> Table<K, V>(string arg0, Consumed<K, V, byte[], byte[]> arg1, Materialized<K, V, byte[], byte[]> arg2)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
@@ -209,11 +209,11 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetConsumed{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Consumed{K, V}"/></param>
+        /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
-        public KTable<K, V, byte[], byte[]> Table<K, V>(string arg0, Consumed<K, V> arg1)
+        public KTable<K, V, byte[], byte[]> Table<K, V>(string arg0, Consumed<K, V, byte[], byte[]> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new KTable<K, V, byte[], byte[]>(_factory, _builder.Table<byte[], byte[]>(arg0, arg1));

@@ -21,23 +21,25 @@ using System;
 namespace MASES.KNet.Streams.Processor.Api
 {
     /// <summary>
-    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{KForward, VForward}"/>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{TJVMKForward, TJVMVForward}"/>
     /// </summary>
     /// <typeparam name="KForward"></typeparam>
     /// <typeparam name="VForward"></typeparam>
-    public class ProcessorContext<KForward, VForward>
+    /// <typeparam name="TJVMKForward">The JVM type of <typeparamref name="KForward"/></typeparam>
+    /// <typeparam name="TJVMVForward">The JVM type of <typeparamref name="VForward"/></typeparam>
+    public class ProcessorContext<KForward, VForward, TJVMKForward, TJVMVForward>
     {
-        internal ProcessorContext(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]> context)
+        internal ProcessorContext(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<TJVMKForward, TJVMVForward> context)
         {
             _context = context;
         }
 
-        readonly Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]> _context;
+        readonly Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<TJVMKForward, TJVMVForward> _context;
 
         /// <summary>
-        /// Converter from <see cref="ProcessorContext{KForward, VForward}"/> to <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{KForward, VForward}"/>
+        /// Converter from <see cref="ProcessorContext{KForward, VForward, TJVMKForward, TJVMVForward}"/> to <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{KForward, VForward}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<byte[], byte[]>(ProcessorContext<KForward, VForward> t) => t._context;
+        public static implicit operator Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<TJVMKForward, TJVMVForward>(ProcessorContext<KForward, VForward, TJVMKForward, TJVMVForward> t) => t._context;
 
         #region ProcessorContext
 
@@ -48,9 +50,11 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <param name="arg1"><see cref="string"/></param>
         /// <typeparam name="K"><typeparamref name="KForward"/></typeparam>
         /// <typeparam name="V"><typeparamref name="VForward"/></typeparam>
-        public void Forward<K, V>(Record<K, V> arg0, string arg1) where K : KForward where V : VForward
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        public void Forward<K, V, TJVMK, TJVMV>(Record<K, V, TJVMK, TJVMV> arg0, string arg1) where K : KForward where V : VForward where TJVMK : TJVMKForward where TJVMV : TJVMVForward
         {
-            _context.Forward<byte[], byte[]>(arg0, arg1);
+            _context.Forward<TJVMK, TJVMV>(arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward-org.apache.kafka.streams.processor.api.Record-"/>
@@ -58,9 +62,11 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         /// <typeparam name="K"><typeparamref name="KForward"/></typeparam>
         /// <typeparam name="V"><typeparamref name="VForward"/></typeparam>
-        public void Forward<K, V>(Record<K, V> arg0) where K : KForward where V : VForward
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        public void Forward<K, V, TJVMK, TJVMV>(Record<K, V, TJVMK, TJVMV> arg0) where K : KForward where V : VForward where TJVMK : TJVMKForward where TJVMV : TJVMVForward
         {
-            _context.Forward<byte[], byte[]>(arg0);
+            _context.Forward<TJVMK, TJVMV>(arg0);
         }
 
         #endregion

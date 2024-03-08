@@ -25,13 +25,14 @@ namespace MASES.KNet.Streams.Kstream
     /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed{TJVMK}"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     public class Suppressed<K, TJVMK> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.Kstream.Suppressed<TJVMK> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        protected Suppressed(Org.Apache.Kafka.Streams.Kstream.Suppressed<TJVMK> inner)
+        internal Suppressed(Org.Apache.Kafka.Streams.Kstream.Suppressed<TJVMK> inner)
         {
             _inner = inner;
         }

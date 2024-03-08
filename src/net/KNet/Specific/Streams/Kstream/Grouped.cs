@@ -34,7 +34,7 @@ namespace MASES.KNet.Streams.Kstream
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        protected Grouped(Org.Apache.Kafka.Streams.Kstream.Grouped<TJVMK, TJVMV> inner)
+        internal Grouped(Org.Apache.Kafka.Streams.Kstream.Grouped<TJVMK, TJVMV> inner)
         {
             _inner = inner;
         }
@@ -58,7 +58,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Grouped.html#keySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="ISerDes{K}"/></param>
+        /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <returns><see cref="Grouped{K, V, TJVMK, TJVMV}"/></returns>
         public static Grouped<K, V, TJVMK, TJVMV> KeySerde(ISerDes<K, TJVMK> arg0)
         {
@@ -68,7 +68,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Grouped.html#valueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="ISerDes{V}"/></param>
+        /// <param name="arg0"><see cref="ISerDes{V, TJVMV}"/></param>
         /// <returns><see cref="Grouped{K, V, TJVMK, TJVMV}"/></returns>
         public static Grouped<K, V, TJVMK, TJVMV> ValueSerde(ISerDes<V, TJVMV> arg0)
         {

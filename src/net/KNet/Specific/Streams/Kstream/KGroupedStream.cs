@@ -25,6 +25,8 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class KGroupedStream<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
         Org.Apache.Kafka.Streams.Kstream.KGroupedStream<TJVMK, TJVMV> _inner;
@@ -49,6 +51,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
         /// <typeparam name="VOut"></typeparam>
+        /// <typeparam name="TJVMVOut">The JVM type of <typeparamref name="VOut"/></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="CogroupedKStream{K, V, TJVMK, TJVMVOut}"/></returns>
@@ -64,6 +67,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg1"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
         /// <param name="arg2"><see cref="Materialized{K, VR, TJVMK, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="KTable{K, VR, TJVMK, TJVMVR}"/></returns>
@@ -82,6 +86,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="arg3"><see cref="Materialized{K, VR, TJVMK, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="KTable{K, VR, TJVMK, TJVMVR}"/></returns>
@@ -98,6 +103,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
         /// <param name="arg1"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="KTable{K, VR, TJVMK, TJVMVR}"/></returns>

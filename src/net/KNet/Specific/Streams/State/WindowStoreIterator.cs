@@ -22,25 +22,26 @@ using MASES.KNet.Serialization;
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
-    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.WindowStoreIterator"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.WindowStoreIterator{V}"/> 
     /// </summary>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public class WindowStoreIterator<TValue> : IGenericSerDesFactoryApplier
+    /// <typeparam name="V">The value type</typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    public class WindowStoreIterator<V, TJVMV> : IGenericSerDesFactoryApplier
     { 
-        readonly Org.Apache.Kafka.Streams.State.WindowStoreIterator<byte[]> _iterator;
+        readonly Org.Apache.Kafka.Streams.State.WindowStoreIterator<TJVMV> _iterator;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal WindowStoreIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.WindowStoreIterator<byte[]> iterator)
+        internal WindowStoreIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.WindowStoreIterator<TJVMV> iterator)
         {
             _factory = factory;
             _iterator = iterator;
         }
 
         /// <summary>
-        /// Converter from <see cref="WindowStoreIterator{TValue}"/> to <see cref="KeyValueIterator{Int64, TValue}"/>
+        /// Converter from <see cref="WindowStoreIterator{V, TJVMV}"/> to <see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public static implicit operator KeyValueIterator<long, TValue>(WindowStoreIterator<TValue> t) => new KeyValueIterator<long, TValue>(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, byte[]>>());
+        public static implicit operator KeyValueIterator<long, V, Java.Lang.Long, TJVMV>(WindowStoreIterator<V, TJVMV> t) => new KeyValueIterator<long, V, Java.Lang.Long, TJVMV>(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, TJVMV>>());
 
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#close--"/>

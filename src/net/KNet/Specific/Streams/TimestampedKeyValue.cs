@@ -24,47 +24,33 @@ namespace MASES.KNet.Streams
     /// <summary>
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.ValueAndTimestamp{V}"/> 
     /// </summary>
-    /// <typeparam name="TKey">The key type</typeparam>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public sealed class TimestampedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    public sealed class TimestampedKeyValue<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.KeyValue<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _valueInner1 = null;
-        readonly Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _valueInner2 = null;
-        TKey _key;
+        readonly Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _inner = null;
+
+        K _key;
         bool _keyStored = false;
-        ValueAndTimestamp<TValue> _value = null;
-        ISerDes<TKey> _keySerDes = null;
+        ValueAndTimestamp<V, TJVMV> _value = null;
+        ISerDes<K, TJVMK> _keySerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         internal TimestampedKeyValue(IGenericSerDesFactory factory,
-                                         Org.Apache.Kafka.Streams.KeyValue<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> value,
-                                         ISerDes<TKey> keySerDes,
+                                         Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value,
+                                         ISerDes<K, TJVMK> keySerDes,
                                          bool fromPrefetched)
         {
             _factory = factory;
-            _valueInner1 = value;
+            _inner = value;
             _keySerDes = keySerDes;
             if (fromPrefetched)
             {
-                _keySerDes ??= _factory?.BuildKeySerDes<TKey>();
-                _key = _keySerDes.Deserialize(null, _valueInner1.key);
-                _keyStored = true;
-            }
-        }
-
-        internal TimestampedKeyValue(IGenericSerDesFactory factory,
-                                         Org.Apache.Kafka.Streams.KeyValue<Java.Lang.Long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> value,
-                                         ISerDes<TKey> keySerDes,
-                                         bool fromPrefetched)
-        {
-            _factory = factory;
-            _valueInner2 = value;
-            _keySerDes = keySerDes;
-            if (fromPrefetched)
-            {
-                _keySerDes ??= _factory?.BuildKeySerDes<TKey>();
-                _key = (TKey)(object)_valueInner2.key.LongValue();
+                _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
+                _key = _keySerDes.Deserialize(null, _inner.key);
                 _keyStored = true;
             }
         }
@@ -72,21 +58,14 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
-        public TKey Key
+        public K Key
         {
             get
             {
                 if (!_keyStored)
                 {
-                    if (_valueInner2 != null && _valueInner2.key != null)
-                    {
-                        var ll = _valueInner2.key; _key = (TKey)(object)ll.LongValue();
-                    }
-                    else
-                    {
-                        _keySerDes ??= _factory?.BuildKeySerDes<TKey>();
-                        _key = _keySerDes.Deserialize(null, _valueInner1.key);
-                    }
+                    _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
+                    _key = _keySerDes.Deserialize(null, _inner.key);
                     _keyStored = true;
                 }
                 return _key;
@@ -95,11 +74,11 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
-        public ValueAndTimestamp<TValue> Value
+        public ValueAndTimestamp<V, TJVMV> Value
         {
             get
             {
-                _value ??= new ValueAndTimestamp<TValue>(_factory, _valueInner1 != null ? _valueInner1.value : _valueInner2.value);
+                _value ??= new ValueAndTimestamp<V, TJVMV>(_factory, _inner.value);
                 return _value;
             }
         }

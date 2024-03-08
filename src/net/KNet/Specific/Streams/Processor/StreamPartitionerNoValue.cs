@@ -27,6 +27,7 @@ namespace MASES.KNet.Streams.Processor
     /// KNet implementation of <see cref="StreamPartitioner{K, V, TJVMK, TJVMV}"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     public abstract class StreamPartitionerNoValue<K, TJVMK> : StreamPartitioner<K, string, TJVMK, Java.Lang.Void>
     {
         /// <summary>
@@ -59,12 +60,12 @@ namespace MASES.KNet.Streams.Processor
         int _arg3;
         K _key;
         bool _keySet = false;
-        ISerDes<K> _kSerializer = null;
+        ISerDes<K, byte[]> _kSerializer = null;
 
         /// <inheritdoc/>
         public override string Topic => _arg0;
         /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
+        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
         /// <inheritdoc/>
         public override string Value { get { throw new InvalidOperationException("Value type is Java.Lang.Void"); } }
         /// <inheritdoc/>
@@ -73,7 +74,7 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public sealed override Optional<Set<Integer>> Partitions(Java.Lang.String arg0, byte[] arg1, Java.Lang.Void arg2, int arg3)
         {
-            _kSerializer ??= Factory?.BuildKeySerDes<K>();
+            _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>();
             _keySet = false;
             _arg0 = arg0;
             _arg1 = arg1;

@@ -24,15 +24,16 @@ namespace MASES.KNet.Streams.State
     /// <summary>
     /// KNet Implementation of <see cref="Org.Apache.Kafka.Streams.State.ValueAndTimestamp{V}"/>
     /// </summary>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public class ValueAndTimestamp<TValue> : IGenericSerDesFactoryApplier
+    /// <typeparam name="V">The value type</typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    public class ValueAndTimestamp<V, TJVMV> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]> _valueAndTimestamp;
-        ISerDes<TValue> _valueSerDes;
+        readonly Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> _valueAndTimestamp;
+        ISerDes<V, TJVMV> _valueSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal ValueAndTimestamp(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]> valueAndTimestamp)
+        internal ValueAndTimestamp(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> valueAndTimestamp)
         {
             _factory = factory;
             _valueAndTimestamp = valueAndTimestamp;
@@ -51,12 +52,12 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ValueAndTimestamp.html#value--"/>
         /// </summary>
-        /// <returns><typeparamref name="TValue"/></returns>
-        public TValue Value
+        /// <returns><typeparamref name="V"/></returns>
+        public V Value
         {
             get
             {
-                _valueSerDes ??= _factory?.BuildKeySerDes<TValue>();
+                _valueSerDes ??= _factory?.BuildKeySerDes<V, TJVMV>();
                 var vv = _valueAndTimestamp.Value();
                 return _valueSerDes.Deserialize(null, vv);
             }
