@@ -26,6 +26,8 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public abstract class Predicate<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Kstream.Predicate<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
@@ -80,17 +82,17 @@ namespace MASES.KNet.Streams.Kstream
         bool _keySet;
         V _value;
         bool _valueSet;
-        ISerDes<K> _kSerializer = null;
-        ISerDes<V> _vSerializer = null;
+        ISerDes<K, byte[]> _kSerializer = null;
+        ISerDes<V, byte[]> _vSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnTest"/> has a value it takes precedence over corresponding <see cref="Predicate{K, V, TJVMK, TJVMV}.Test()"/> class method</remarks>
         public new System.Func<Predicate<K, V>, bool> OnTest { get; set; } = null;
         /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
+        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
         /// <inheritdoc/>
-        public override V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
+        public override V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
         /// <inheritdoc/>
         public sealed override bool Test(byte[] arg0, byte[] arg1)
         {

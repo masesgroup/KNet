@@ -41,8 +41,8 @@ namespace MASES.KNet.Streams.Kstream
         void updateRemote()
         {
             if (_factory == null) return;
-            var keySerDes = _factory?.BuildKeySerDes<TKey>();
-            var valueSerDes = _factory?.BuildValueSerDes<TValue>();
+            var keySerDes = _factory?.BuildKeySerDes<TKey, byte[]>();
+            var valueSerDes = _factory?.BuildValueSerDes<TValue, byte[]>();
             byte[] key = !_isKeyCheck.HasValue || _isKeyCheck.Value ? keySerDes.Serialize(null, _key): null;
             byte[] value = !_isKeyCheck.HasValue || !_isKeyCheck.Value ? valueSerDes.Serialize(null, _value) : null;
 

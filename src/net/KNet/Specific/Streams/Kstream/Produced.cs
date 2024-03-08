@@ -26,6 +26,8 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class Produced<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
         StreamPartitioner<K, V, TJVMK, TJVMV> _streamPartitioner = null;
@@ -41,7 +43,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
 
-        protected Produced(Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV> inner, StreamPartitioner<K, V, TJVMK, TJVMV> streamPartitioner = null)
+        internal Produced(Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV> inner, StreamPartitioner<K, V, TJVMK, TJVMV> streamPartitioner = null)
         {
             _inner = inner;
             _streamPartitioner = streamPartitioner;

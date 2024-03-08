@@ -18,8 +18,6 @@
 
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Utils;
-using System;
-using System.Reflection;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -28,9 +26,11 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class KTable<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        Org.Apache.Kafka.Streams.Kstream.KTable<TJVMK, TJVMV> _inner;
+        readonly Org.Apache.Kafka.Streams.Kstream.KTable<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
@@ -53,6 +53,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg1"><see cref="Grouped{KR, VR, TJVMK, TJVMV}"/></param>
         /// <typeparam name="KR"></typeparam>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMKR">The JVM type of <typeparamref name="KR"/></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="KGroupedTable{K, V, TJVMK, TJVMV}"/></returns>
@@ -68,6 +70,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="KeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <typeparam name="KR"></typeparam>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMKR">The JVM type of <typeparamref name="KR"/></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="KGroupedTable{K, V, TJVMK, TJVMV}"/></returns>
@@ -82,6 +86,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="KeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="KR"></typeparam>
+        /// <typeparam name="TJVMKR">The JVM type of <typeparamref name="KR"/></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsKR"><typeparamref name="KR"/></typeparam>
@@ -96,6 +101,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></param>
         /// <typeparam name="KR"></typeparam>
+        /// <typeparam name="TJVMKR">The JVM type of <typeparamref name="KR"/></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsKR"><typeparamref name="KR"/></typeparam>
@@ -113,6 +119,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -132,6 +140,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg3"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -150,6 +160,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -166,6 +178,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -183,6 +197,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -202,6 +218,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg3"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -220,6 +238,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -236,6 +256,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -253,6 +275,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -272,6 +296,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg3"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -290,6 +316,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -306,6 +334,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -325,6 +355,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Join<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, Materialized<K, VR, TJVMK, TJVMVR> arg3)
         {
@@ -344,6 +377,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Join<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3, Materialized<K, VR, TJVMK, TJVMVR> arg4)
         {
@@ -363,6 +399,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Join<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3)
         {
@@ -380,6 +419,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Join<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2)
         {
@@ -397,6 +439,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, Materialized<K, VR, TJVMK, TJVMVR> arg3)
         {
@@ -416,6 +461,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3, Materialized<K, VR, TJVMK, TJVMVR> arg4)
         {
@@ -435,6 +483,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3)
         {
@@ -452,6 +503,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="VR"></typeparam>
         /// <typeparam name="KO"></typeparam>
         /// <typeparam name="VO"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
+        /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
+        /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2)
         {
@@ -465,6 +519,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
@@ -481,6 +536,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
@@ -496,6 +552,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
@@ -509,6 +566,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
@@ -523,6 +581,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -540,6 +599,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -556,6 +616,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="arg0"><see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
@@ -570,6 +631,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
+        /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>

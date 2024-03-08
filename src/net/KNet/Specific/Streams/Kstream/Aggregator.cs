@@ -27,6 +27,9 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VA">The key type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    /// <typeparam name="TJVMVA">The JVM type of <typeparamref name="VA"/></typeparam>
     public abstract class Aggregator<K, V, VA, TJVMK, TJVMV, TJVMVA> : Org.Apache.Kafka.Streams.Kstream.Aggregator<TJVMK, TJVMV, TJVMVA>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
@@ -88,20 +91,20 @@ namespace MASES.KNet.Streams.Kstream
         bool _valueSet = false;
         VA _aggregate;
         bool _aggregateSet = false;
-        ISerDes<K> _kSerializer = null;
-        ISerDes<V> _vSerializer = null;
-        ISerDes<VA> _vaSerializer = null;
+        ISerDes<K, byte[]> _kSerializer = null;
+        ISerDes<V, byte[]> _vSerializer = null;
+        ISerDes<VA, byte[]> _vaSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method <see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}.Apply()"/></remarks>
         public new System.Func<Aggregator<K, V, VA>, VA> OnApply { get; set; } = null;
         /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
+        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
         /// <inheritdoc/>
-        public override V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
+        public override V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
         /// <inheritdoc/>
-        public override VA Aggregate { get { if (!_aggregateSet) { _vaSerializer ??= Factory?.BuildValueSerDes<VA>(); _aggregate = _vaSerializer.Deserialize(null, _arg2); _aggregateSet = true; } return _aggregate; } }
+        public override VA Aggregate { get { if (!_aggregateSet) { _vaSerializer ??= Factory?.BuildValueSerDes<VA, byte[]>(); _aggregate = _vaSerializer.Deserialize(null, _arg2); _aggregateSet = true; } return _aggregate; } }
         /// <inheritdoc/>
         public sealed override byte[] Apply(byte[] arg0, byte[] arg1, byte[] arg2)
         {       
@@ -111,7 +114,7 @@ namespace MASES.KNet.Streams.Kstream
             _arg2 = arg2;
 
             VA res = (OnApply != null) ? OnApply(this) : Apply();
-            _vaSerializer ??= Factory?.BuildValueSerDes<VA>();
+            _vaSerializer ??= Factory?.BuildValueSerDes<VA, byte[]>();
             return _vaSerializer.Serialize(null, res);
         }
     }
