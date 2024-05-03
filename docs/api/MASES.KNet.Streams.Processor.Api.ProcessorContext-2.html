@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -177,8 +177,8 @@ Class ProcessorContext&lt;KForward, VForward&gt;  <a class="header-action link-s
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -442,7 +442,7 @@ Class ProcessorContext&lt;KForward, VForward&gt;  <a class="header-action link-s
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata.html">RecordMetadata</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
+    <dd><p><a class="xref" href="api/Java.Util.Optional.html">Optional</a></p>
 </dd>
   </dl>
 
@@ -474,8 +474,8 @@ Class ProcessorContext&lt;KForward, VForward&gt;  <a class="header-action link-s
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.File.html">File</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.File.html">File</a></p>
+    <dt><a class="xref" href="api/Java.Io.File.html">File</a></dt>
+    <dd><p><a class="xref" href="api/Java.Io.File.html">File</a></p>
 </dd>
   </dl>
 
@@ -580,8 +580,8 @@ Class ProcessorContext&lt;KForward, VForward&gt;  <a class="header-action link-s
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -771,8 +771,8 @@ Class ProcessorContext&lt;KForward, VForward&gt;  <a class="header-action link-s
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.PunctuationType.html">PunctuationType</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.PunctuationType.html">PunctuationType</a></p>

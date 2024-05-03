@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -112,8 +112,8 @@ public class MirrorMakerCmdletCommand : KafkaClassToRunCmdletCommandBase&lt;Mirr
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.internal.internalcommand">InternalCommand</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet">Cmdlet</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet">PSCmdlet</a></div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html">JNetPSExternalizableCmdlet</a>&lt;<a class="xref" href="MASES.KNetPS.ToolsCmdlet.MirrorMakerCmdletCommand.html">MirrorMakerCmdletCommand</a>&gt;</div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html">StartJNetPSCmdletCommandBase</a>&lt;<a class="xref" href="MASES.KNetPS.ToolsCmdlet.MirrorMakerCmdletCommand.html">MirrorMakerCmdletCommand</a>, <a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
+      <div><a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html">JNetPSExternalizableCmdlet</a>&lt;<a class="xref" href="MASES.KNetPS.ToolsCmdlet.MirrorMakerCmdletCommand.html">MirrorMakerCmdletCommand</a>&gt;</div>
+      <div><a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html">StartJNetPSCmdletCommandBase</a>&lt;<a class="xref" href="MASES.KNetPS.ToolsCmdlet.MirrorMakerCmdletCommand.html">MirrorMakerCmdletCommand</a>, <a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
       <div><a class="xref" href="MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommandBase-1.html">StartKNetPSCmdletCommandBase</a>&lt;<a class="xref" href="MASES.KNetPS.ToolsCmdlet.MirrorMakerCmdletCommand.html">MirrorMakerCmdletCommand</a>&gt;</div>
       <div><a class="xref" href="MASES.KNetPS.Cmdlet.KafkaClassToRunCmdletCommandBase-1.html">KafkaClassToRunCmdletCommandBase</a>&lt;<a class="xref" href="MASES.KNetPS.ToolsCmdlet.MirrorMakerCmdletCommand.html">MirrorMakerCmdletCommand</a>&gt;</div>
       <div><span class="xref">MirrorMakerCmdletCommand</span></div>
@@ -150,76 +150,76 @@ public class MirrorMakerCmdletCommand : KafkaClassToRunCmdletCommandBase&lt;Mirr
       <a class="xref" href="MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommandBase-1.html#MASES_KNetPS_Cmdlet_StartKNetPSCmdletCommandBase_1_DisableJMX">StartKNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand&gt;.DisableJMX</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_ProcessCommand">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.ProcessCommand()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_ProcessCommand">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.ProcessCommand()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_OnBeforeCreateGlobalInstance">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.OnBeforeCreateGlobalInstance()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_OnBeforeCreateGlobalInstance">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.OnBeforeCreateGlobalInstance()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_CreateGlobalInstance">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.CreateGlobalInstance()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_CreateGlobalInstance">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.CreateGlobalInstance()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_OnAfterCreateGlobalInstance">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.OnAfterCreateGlobalInstance()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_OnAfterCreateGlobalInstance">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.OnAfterCreateGlobalInstance()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_LicensePath">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.LicensePath</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_LicensePath">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.LicensePath</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JDKHome">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JDKHome</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JDKHome">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JDKHome</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JVMPath">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JVMPath</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JVMPath">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JVMPath</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JNIVerbosity">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JNIVerbosity</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JNIVerbosity">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JNIVerbosity</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JNIOutputFile">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JNIOutputFile</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JNIOutputFile">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JNIOutputFile</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JmxPort">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JmxPort</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JmxPort">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JmxPort</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_EnableDebug">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.EnableDebug</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_EnableDebug">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.EnableDebug</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JavaDebugPort">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JavaDebugPort</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JavaDebugPort">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JavaDebugPort</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_DebugSuspendFlag">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.DebugSuspendFlag</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_DebugSuspendFlag">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.DebugSuspendFlag</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JavaDebugOpts">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JavaDebugOpts</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_JavaDebugOpts">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.JavaDebugOpts</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_HeapSize">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.HeapSize</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_HeapSize">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.HeapSize</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_InitialHeapSize">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.InitialHeapSize</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_InitialHeapSize">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.InitialHeapSize</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_LogClassPath">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.LogClassPath</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_StartJNetPSCmdletCommandBase_2_LogClassPath">StartJNetPSCmdletCommandBase&lt;MirrorMakerCmdletCommand, KNetPSCore&gt;.LogClassPath</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_BeginProcessing">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.BeginProcessing()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_BeginProcessing">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.BeginProcessing()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_ProcessRecord">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.ProcessRecord()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_ProcessRecord">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.ProcessRecord()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_ProcessCommand">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.ProcessCommand()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_ProcessCommand">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.ProcessCommand()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_EndProcessing">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.EndProcessing()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_EndProcessing">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.EndProcessing()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_JNetPSCmdletDetached">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.JNetPSCmdletDetached</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_JNetPSCmdletDetached">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.JNetPSCmdletDetached</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_BypassJNetPSExternalize">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.BypassJNetPSExternalize</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_BypassJNetPSExternalize">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.BypassJNetPSExternalize</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_ForceJNetPSExternalize">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.ForceJNetPSExternalize</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSExternalizableCmdlet_1_ForceJNetPSExternalize">JNetPSExternalizableCmdlet&lt;MirrorMakerCmdletCommand&gt;.ForceJNetPSExternalize</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.currentproviderlocation">PSCmdlet.CurrentProviderLocation(string)</a>

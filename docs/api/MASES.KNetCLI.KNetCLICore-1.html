@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -106,7 +106,7 @@ Class KNetCLICore&lt;T&gt;  <a class="header-action link-secondary" title="View 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd>Overridable implementation of</dd>
+    <dd></dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -115,8 +115,8 @@ Class KNetCLICore&lt;T&gt;  <a class="header-action link-secondary" title="View 
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><span class="xref">SetupJVMWrapper</span></div>
       <div><span class="xref">SetupJVMWrapper</span>&lt;T&gt;</div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html">JNetCoreBase</a>&lt;T&gt;</div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCore-1.html">JNetCore</a>&lt;T&gt;</div>
+      <div><a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html">JNetCoreBase</a>&lt;T&gt;</div>
+      <div><a class="xref" href="api/MASES.JNet.JNetCore-1.html">JNetCore</a>&lt;T&gt;</div>
       <div><a class="xref" href="MASES.KNet.KNetCore-1.html">KNetCore</a>&lt;T&gt;</div>
       <div><span class="xref">KNetCLICore&lt;T&gt;</span></div>
     </dd>
@@ -195,16 +195,16 @@ Class KNetCLICore&lt;T&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_Options">KNetCore&lt;T&gt;.Options</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JARsSubFolder">JNetCoreBase&lt;T&gt;.JARsSubFolder</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JARsSubFolder">JNetCoreBase&lt;T&gt;.JARsSubFolder</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_Parser">JNetCoreBase&lt;T&gt;.Parser</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_Parser">JNetCoreBase&lt;T&gt;.Parser</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">JNetCoreBase&lt;T&gt;.HelpInfo(int?)</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_Class__1">JNetCoreBase&lt;T&gt;.Class&lt;TClass&gt;()</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_Class__1">JNetCoreBase&lt;T&gt;.Class&lt;TClass&gt;()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;T&gt;.New(string)</a>
@@ -213,91 +213,91 @@ Class KNetCLICore&lt;T&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;T&gt;.New(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationLicensePath">JNetCoreBase&lt;T&gt;.ApplicationLicensePath</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationLicensePath">JNetCoreBase&lt;T&gt;.ApplicationLicensePath</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJDKHome">JNetCoreBase&lt;T&gt;.ApplicationJDKHome</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJDKHome">JNetCoreBase&lt;T&gt;.ApplicationJDKHome</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJVMPath">JNetCoreBase&lt;T&gt;.ApplicationJVMPath</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJVMPath">JNetCoreBase&lt;T&gt;.ApplicationJVMPath</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJNIVerbosity">JNetCoreBase&lt;T&gt;.ApplicationJNIVerbosity</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJNIVerbosity">JNetCoreBase&lt;T&gt;.ApplicationJNIVerbosity</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJNIOutputFile">JNetCoreBase&lt;T&gt;.ApplicationJNIOutputFile</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJNIOutputFile">JNetCoreBase&lt;T&gt;.ApplicationJNIOutputFile</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJmxPort">JNetCoreBase&lt;T&gt;.ApplicationJmxPort</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJmxPort">JNetCoreBase&lt;T&gt;.ApplicationJmxPort</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationEnableDebug">JNetCoreBase&lt;T&gt;.ApplicationEnableDebug</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationEnableDebug">JNetCoreBase&lt;T&gt;.ApplicationEnableDebug</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJavaDebugPort">JNetCoreBase&lt;T&gt;.ApplicationJavaDebugPort</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJavaDebugPort">JNetCoreBase&lt;T&gt;.ApplicationJavaDebugPort</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationDebugSuspendFlag">JNetCoreBase&lt;T&gt;.ApplicationDebugSuspendFlag</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationDebugSuspendFlag">JNetCoreBase&lt;T&gt;.ApplicationDebugSuspendFlag</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJavaDebugOpts">JNetCoreBase&lt;T&gt;.ApplicationJavaDebugOpts</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJavaDebugOpts">JNetCoreBase&lt;T&gt;.ApplicationJavaDebugOpts</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationHeapSize">JNetCoreBase&lt;T&gt;.ApplicationHeapSize</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationHeapSize">JNetCoreBase&lt;T&gt;.ApplicationHeapSize</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationInitialHeapSize">JNetCoreBase&lt;T&gt;.ApplicationInitialHeapSize</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationInitialHeapSize">JNetCoreBase&lt;T&gt;.ApplicationInitialHeapSize</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationLogClassPath">JNetCoreBase&lt;T&gt;.ApplicationLogClassPath</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationLogClassPath">JNetCoreBase&lt;T&gt;.ApplicationLogClassPath</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_LicensePath">JNetCoreBase&lt;T&gt;.LicensePath</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_LicensePath">JNetCoreBase&lt;T&gt;.LicensePath</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JDKHome">JNetCoreBase&lt;T&gt;.JDKHome</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JDKHome">JNetCoreBase&lt;T&gt;.JDKHome</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JVMPath">JNetCoreBase&lt;T&gt;.JVMPath</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JVMPath">JNetCoreBase&lt;T&gt;.JVMPath</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JNIVerbosity">JNetCoreBase&lt;T&gt;.JNIVerbosity</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JNIVerbosity">JNetCoreBase&lt;T&gt;.JNIVerbosity</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JNIOutputFile">JNetCoreBase&lt;T&gt;.JNIOutputFile</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JNIOutputFile">JNetCoreBase&lt;T&gt;.JNIOutputFile</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JmxPort">JNetCoreBase&lt;T&gt;.JmxPort</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JmxPort">JNetCoreBase&lt;T&gt;.JmxPort</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_EnableDebug">JNetCoreBase&lt;T&gt;.EnableDebug</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_EnableDebug">JNetCoreBase&lt;T&gt;.EnableDebug</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JavaDebugPort">JNetCoreBase&lt;T&gt;.JavaDebugPort</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JavaDebugPort">JNetCoreBase&lt;T&gt;.JavaDebugPort</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_DebugSuspendFlag">JNetCoreBase&lt;T&gt;.DebugSuspendFlag</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_DebugSuspendFlag">JNetCoreBase&lt;T&gt;.DebugSuspendFlag</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JavaDebugOpts">JNetCoreBase&lt;T&gt;.JavaDebugOpts</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JavaDebugOpts">JNetCoreBase&lt;T&gt;.JavaDebugOpts</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_GlobalHeapSize">JNetCoreBase&lt;T&gt;.GlobalHeapSize</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_GlobalHeapSize">JNetCoreBase&lt;T&gt;.GlobalHeapSize</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_InitialHeapSize">JNetCoreBase&lt;T&gt;.InitialHeapSize</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_InitialHeapSize">JNetCoreBase&lt;T&gt;.InitialHeapSize</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_LogClassPath">JNetCoreBase&lt;T&gt;.LogClassPath</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_LogClassPath">JNetCoreBase&lt;T&gt;.LogClassPath</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ParsedArgs">JNetCoreBase&lt;T&gt;.ParsedArgs</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ParsedArgs">JNetCoreBase&lt;T&gt;.ParsedArgs</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JVMOptions">JNetCoreBase&lt;T&gt;.JVMOptions</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JVMOptions">JNetCoreBase&lt;T&gt;.JVMOptions</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ClassPath">JNetCoreBase&lt;T&gt;.ClassPath</a>
+      <a class="xref" href="api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ClassPath">JNetCoreBase&lt;T&gt;.ClassPath</a>
     </div>
     <div>
       <span class="xref">SetupJVMWrapper&lt;T&gt;.CreateGlobalInstance()</span>
@@ -388,6 +388,18 @@ Class KNetCLICore&lt;T&gt;  <a class="header-action link-secondary" title="View 
     </div>
     <div>
       <span class="xref">SetupJVMWrapper.EnableCriticalMethods</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.EnableCriticalMethodsOnGetThreshold</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.EnableCriticalMethodsOnGet</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.EnableCriticalMethodsOnSetThreshold</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.EnableCriticalMethodsOnSet</span>
     </div>
     <div>
       <span class="xref">SetupJVMWrapper.JVM</span>
@@ -506,7 +518,7 @@ Class KNetCLICore&lt;T&gt;  <a class="header-action link-secondary" title="View 
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://cliparser.masesgroup.com/api/MASES.CLIParser.IArgumentMetadata.html">IArgumentMetadata</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="api/MASES.CLIParser.IArgumentMetadata.html">IArgumentMetadata</a>&gt;</dt>
     <dd></dd>
   </dl>
 

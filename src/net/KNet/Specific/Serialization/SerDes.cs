@@ -155,19 +155,19 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// External serialization function
         /// </summary>
-        public Func<string, T, byte[]> OnSerialize { get; set; }
+        public Func<string, T, TJVMT> OnSerialize { get; set; }
         /// <summary>
         /// External serialization function using <see cref="Headers"/>
         /// </summary>
-        public Func<string, Headers, T, byte[]> OnSerializeWithHeaders { get; set; }
+        public Func<string, Headers, T, TJVMT> OnSerializeWithHeaders { get; set; }
         /// <summary>
         /// External deserialization function
         /// </summary>
-        public Func<string, byte[], T> OnDeserialize { get; set; }
+        public Func<string, TJVMT, T> OnDeserialize { get; set; }
         /// <summary>
         /// External deserialization function using <see cref="Headers"/>
         /// </summary>
-        public Func<string, Headers, byte[], T> OnDeserializeWithHeaders { get; set; }
+        public Func<string, Headers, TJVMT, T> OnDeserializeWithHeaders { get; set; }
         /// <inheritdoc cref="ISerDes{T, TJVMT}.KafkaSerde"/>
         public Serde<TJVMT> KafkaSerde => _KafkaSerde;
         /// <inheritdoc cref="ISerializer{T, TJVMT}.KafkaSerializer"/>
@@ -175,34 +175,37 @@ namespace MASES.KNet.Serialization
         /// <inheritdoc cref="IDeserializer{T, TJVMT}.KafkaDeserializer"/>
         public Deserializer<TJVMT> KafkaDeserializer => _KafkaDeserializer;
         /// <inheritdoc cref="IDeserializer{T, TJVMT}.UseHeaders"/>
-        public virtual bool UseHeaders => false;
+        public virtual bool UseHeaders { get; set; } = false;
+        /// <inheritdoc cref="IDeserializer{T, TJVMT}.UseKafkaClassForSupportedTypes"/>
+        public virtual bool UseKafkaClassForSupportedTypes { get; set; } = false;
         /// <inheritdoc cref="ISerializer{T, TJVMT}.Serialize(string, T)"/>
-        public virtual byte[] Serialize(string topic, T data)
+        public virtual TJVMT Serialize(string topic, T data)
         {
             if (OnSerialize != null)
             {
                 return OnSerialize.Invoke(topic, data);
             }
-            return _SerializationType switch
+            var newData = _SerializationType switch
             {
-                KNetSerialization.SerializationType.Boolean => KNetSerialization.SerializeBoolean(topic, (bool)Convert.ChangeType(data, typeof(bool))),
-                KNetSerialization.SerializationType.ByteArray => KNetSerialization.SerializeByteArray(topic, data as byte[]),
-                KNetSerialization.SerializationType.ByteBuffer => KNetSerialization.SerializeByteBuffer(topic, data as ByteBuffer),
-                KNetSerialization.SerializationType.Bytes => KNetSerialization.SerializeBytes(topic, data as Org.Apache.Kafka.Common.Utils.Bytes),
-                KNetSerialization.SerializationType.Double => KNetSerialization.SerializeDouble(topic, (double)Convert.ChangeType(data, typeof(double))),
-                KNetSerialization.SerializationType.Float => KNetSerialization.SerializeFloat(topic, (float)Convert.ChangeType(data, typeof(float))),
-                KNetSerialization.SerializationType.Integer => KNetSerialization.SerializeInt(topic, (int)Convert.ChangeType(data, typeof(int))),
-                KNetSerialization.SerializationType.Long => KNetSerialization.SerializeLong(topic, (long)Convert.ChangeType(data, typeof(long))),
-                KNetSerialization.SerializationType.Short => KNetSerialization.SerializeShort(topic, (short)Convert.ChangeType(data, typeof(short))),
-                KNetSerialization.SerializationType.String => KNetSerialization.SerializeString(topic, data as string),
-                KNetSerialization.SerializationType.Guid => KNetSerialization.SerializeGuid(topic, (Guid)Convert.ChangeType(data, typeof(Guid))),
-                KNetSerialization.SerializationType.Void => KNetSerialization.SerializeVoid(topic, data as Java.Lang.Void),
+                KNetSerialization.SerializationType.Boolean => KNetSerialization.SerializeBoolean(UseKafkaClassForSupportedTypes, topic, (bool)Convert.ChangeType(data, typeof(bool))),
+                KNetSerialization.SerializationType.ByteArray => KNetSerialization.SerializeByteArray(UseKafkaClassForSupportedTypes, topic, data as byte[]),
+                KNetSerialization.SerializationType.ByteBuffer => KNetSerialization.SerializeByteBuffer(UseKafkaClassForSupportedTypes, topic, data as ByteBuffer),
+                KNetSerialization.SerializationType.Bytes => KNetSerialization.SerializeBytes(UseKafkaClassForSupportedTypes, topic, data as Org.Apache.Kafka.Common.Utils.Bytes),
+                KNetSerialization.SerializationType.Double => KNetSerialization.SerializeDouble(UseKafkaClassForSupportedTypes, topic, (double)Convert.ChangeType(data, typeof(double))),
+                KNetSerialization.SerializationType.Float => KNetSerialization.SerializeFloat(UseKafkaClassForSupportedTypes, topic, (float)Convert.ChangeType(data, typeof(float))),
+                KNetSerialization.SerializationType.Integer => KNetSerialization.SerializeInt(UseKafkaClassForSupportedTypes, topic, (int)Convert.ChangeType(data, typeof(int))),
+                KNetSerialization.SerializationType.Long => KNetSerialization.SerializeLong(UseKafkaClassForSupportedTypes, topic, (long)Convert.ChangeType(data, typeof(long))),
+                KNetSerialization.SerializationType.Short => KNetSerialization.SerializeShort(UseKafkaClassForSupportedTypes, topic, (short)Convert.ChangeType(data, typeof(short))),
+                KNetSerialization.SerializationType.String => KNetSerialization.SerializeString(UseKafkaClassForSupportedTypes, topic, data as string),
+                KNetSerialization.SerializationType.Guid => KNetSerialization.SerializeGuid(UseKafkaClassForSupportedTypes, topic, (Guid)Convert.ChangeType(data, typeof(Guid))),
+                KNetSerialization.SerializationType.Void => KNetSerialization.SerializeVoid(UseKafkaClassForSupportedTypes, topic, data as Java.Lang.Void),
                 KNetSerialization.SerializationType.External => throw new InvalidOperationException($"{typeof(T)} needs an external serializer: set {nameof(OnSerialize)} or {nameof(OnSerializeWithHeaders)}."),
                 _ => default,
             };
+            return (TJVMT)(object)newData;
         }
         /// <inheritdoc cref="ISerializer{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
-        public virtual byte[] SerializeWithHeaders(string topic, Headers headers, T data)
+        public virtual TJVMT SerializeWithHeaders(string topic, Headers headers, T data)
         {
             if (OnSerializeWithHeaders != null)
             {
@@ -211,8 +214,8 @@ namespace MASES.KNet.Serialization
             return Serialize(topic, data);
         }
 
-        /// <inheritdoc cref="IDeserializer{T, TJVMT}.Deserialize(string, byte[])"/>
-        public virtual T Deserialize(string topic, byte[] data)
+        /// <inheritdoc cref="IDeserializer{T, TJVMT}.Deserialize(string, TJVMT)"/>
+        public virtual T Deserialize(string topic, TJVMT data)
         {
             if (OnDeserialize != null)
             {
@@ -220,23 +223,23 @@ namespace MASES.KNet.Serialization
             }
             return _SerializationType switch
             {
-                KNetSerialization.SerializationType.Boolean => (T)(object)KNetSerialization.DeserializeBoolean(topic, data),
-                KNetSerialization.SerializationType.ByteArray => (T)(object)KNetSerialization.DeserializeByteArray(topic, data),
-                KNetSerialization.SerializationType.ByteBuffer => (T)(object)KNetSerialization.DeserializeByteBuffer(topic, data),
-                KNetSerialization.SerializationType.Bytes => (T)(object)KNetSerialization.DeserializeBytes(topic, data),
-                KNetSerialization.SerializationType.Double => (T)(object)KNetSerialization.DeserializeDouble(topic, data),
-                KNetSerialization.SerializationType.Float => (T)(object)KNetSerialization.DeserializeFloat(topic, data),
-                KNetSerialization.SerializationType.Integer => (T)(object)KNetSerialization.DeserializeInt(topic, data),
-                KNetSerialization.SerializationType.Long => (T)(object)KNetSerialization.DeserializeLong(topic, data),
-                KNetSerialization.SerializationType.String => (T)(object)KNetSerialization.DeserializeString(topic, data),
-                KNetSerialization.SerializationType.Guid => (T)(object)KNetSerialization.DeserializeGuid(topic, data),
-                KNetSerialization.SerializationType.Void => (T)(object)KNetSerialization.DeserializeVoid(topic, data),
+                KNetSerialization.SerializationType.Boolean => (T)(object)KNetSerialization.DeserializeBoolean(UseKafkaClassForSupportedTypes, topic, data as byte[]),
+                KNetSerialization.SerializationType.ByteArray => (T)(object)KNetSerialization.DeserializeByteArray(UseKafkaClassForSupportedTypes, topic, data as byte[]),
+                KNetSerialization.SerializationType.ByteBuffer => (T)(object)KNetSerialization.DeserializeByteBuffer(UseKafkaClassForSupportedTypes, topic, data as byte[]),
+                KNetSerialization.SerializationType.Bytes => (T)(object)KNetSerialization.DeserializeBytes(UseKafkaClassForSupportedTypes, topic, data as byte[]),
+                KNetSerialization.SerializationType.Double => (T)(object)KNetSerialization.DeserializeDouble(UseKafkaClassForSupportedTypes, topic, data as byte[]),
+                KNetSerialization.SerializationType.Float => (T)(object)KNetSerialization.DeserializeFloat(UseKafkaClassForSupportedTypes, topic, data as byte[]),
+                KNetSerialization.SerializationType.Integer => (T)(object)KNetSerialization.DeserializeInt(UseKafkaClassForSupportedTypes, topic, data as byte[]),
+                KNetSerialization.SerializationType.Long => (T)(object)KNetSerialization.DeserializeLong(UseKafkaClassForSupportedTypes, topic, data as byte[]),
+                KNetSerialization.SerializationType.String => (T)(object)KNetSerialization.DeserializeString(UseKafkaClassForSupportedTypes, topic, data as byte[]),
+                KNetSerialization.SerializationType.Guid => (T)(object)KNetSerialization.DeserializeGuid(UseKafkaClassForSupportedTypes, topic, data as byte[]),
+                KNetSerialization.SerializationType.Void => (T)(object)KNetSerialization.DeserializeVoid(UseKafkaClassForSupportedTypes, topic, data as byte[]),
                 KNetSerialization.SerializationType.External => throw new InvalidOperationException($"{typeof(T)} needs an external deserializer: set {nameof(OnDeserialize)} or {nameof(OnDeserializeWithHeaders)}."),
                 _ => default,
             };
         }
-        /// <inheritdoc cref="IDeserializer{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
-        public virtual T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
+        /// <inheritdoc cref="IDeserializer{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
+        public virtual T DeserializeWithHeaders(string topic, Headers headers, TJVMT data)
         {
             if (OnDeserializeWithHeaders != null)
             {

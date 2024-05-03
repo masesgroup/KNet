@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -92,42 +92,42 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.HasHeaderKey.html">HasHeaderKey</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/HasHeaderKey.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/HasHeaderKey.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/HasHeaderKey.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/HasHeaderKey.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.HasHeaderKey-1.html">HasHeaderKey&lt;R&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/HasHeaderKey.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/HasHeaderKey.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/HasHeaderKey.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/HasHeaderKey.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate.html">Predicate</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/transforms/predicates/Predicate.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/transforms/predicates/Predicate.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/transforms/predicates/Predicate.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/transforms/predicates/Predicate.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate-1.html">Predicate&lt;R&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/transforms/predicates/Predicate.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/transforms/predicates/Predicate.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/transforms/predicates/Predicate.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/transforms/predicates/Predicate.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.RecordIsTombstone.html">RecordIsTombstone</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.RecordIsTombstone-1.html">RecordIsTombstone&lt;R&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.TopicNameMatches.html">TopicNameMatches</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/TopicNameMatches.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/TopicNameMatches.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/TopicNameMatches.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/TopicNameMatches.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.TopicNameMatches-1.html">TopicNameMatches&lt;R&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/TopicNameMatches.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/org/apache/kafka/connect/transforms/predicates/TopicNameMatches.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/TopicNameMatches.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/predicates/TopicNameMatches.html</a></p>
 </dd>
     </dl>
     <h3 id="interfaces">

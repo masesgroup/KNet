@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -92,132 +92,132 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.ClientCompatibilityTest.html">ClientCompatibilityTest</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ClientCompatibilityTest.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ClientCompatibilityTest.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ClientCompatibilityTest.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ClientCompatibilityTest.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.ClusterTool.html">ClusterTool</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ClusterTool.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ClusterTool.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ClusterTool.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ClusterTool.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.ConnectPluginPath.html">ConnectPluginPath</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ConnectPluginPath.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ConnectPluginPath.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ConnectPluginPath.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ConnectPluginPath.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.ConsumerPerformance.html">ConsumerPerformance</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ConsumerPerformance.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ConsumerPerformance.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ConsumerPerformance.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ConsumerPerformance.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.DelegationTokenCommand.html">DelegationTokenCommand</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/DelegationTokenCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/DelegationTokenCommand.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/DelegationTokenCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/DelegationTokenCommand.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.DeleteRecordsCommand.html">DeleteRecordsCommand</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/DeleteRecordsCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/DeleteRecordsCommand.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/DeleteRecordsCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/DeleteRecordsCommand.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.EndToEndLatency.html">EndToEndLatency</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/EndToEndLatency.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/EndToEndLatency.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/EndToEndLatency.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/EndToEndLatency.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.FeatureCommand.html">FeatureCommand</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/FeatureCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/FeatureCommand.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/FeatureCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/FeatureCommand.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.JmxTool.html">JmxTool</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/JmxTool.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/JmxTool.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/JmxTool.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/JmxTool.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.LogDirsCommand.html">LogDirsCommand</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/LogDirsCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/LogDirsCommand.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/LogDirsCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/LogDirsCommand.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.ManifestWorkspace.html">ManifestWorkspace</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ManifestWorkspace.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ManifestWorkspace.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ManifestWorkspace.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ManifestWorkspace.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.ManifestWorkspace.SourceWorkspace.html">ManifestWorkspace.SourceWorkspace</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.ManifestWorkspace.SourceWorkspace-1.html">ManifestWorkspace.SourceWorkspace&lt;T&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.MetadataQuorumCommand.html">MetadataQuorumCommand</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/MetadataQuorumCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/MetadataQuorumCommand.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/MetadataQuorumCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/MetadataQuorumCommand.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.OAuthCompatibilityTool.html">OAuthCompatibilityTool</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/OAuthCompatibilityTool.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/OAuthCompatibilityTool.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/OAuthCompatibilityTool.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/OAuthCompatibilityTool.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.ProducerPerformance.html">ProducerPerformance</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ProducerPerformance.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ProducerPerformance.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ProducerPerformance.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ProducerPerformance.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.PushHttpMetricsReporter.html">PushHttpMetricsReporter</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/PushHttpMetricsReporter.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/PushHttpMetricsReporter.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/PushHttpMetricsReporter.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/PushHttpMetricsReporter.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.ReplicaVerificationTool.html">ReplicaVerificationTool</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ReplicaVerificationTool.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ReplicaVerificationTool.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ReplicaVerificationTool.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ReplicaVerificationTool.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.StreamsResetter.html">StreamsResetter</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/StreamsResetter.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/StreamsResetter.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/StreamsResetter.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/StreamsResetter.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.TerseException.html">TerseException</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/TerseException.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/TerseException.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/TerseException.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/TerseException.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.ToolsUtils.html">ToolsUtils</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ToolsUtils.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/ToolsUtils.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ToolsUtils.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ToolsUtils.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.TransactionalMessageCopier.html">TransactionalMessageCopier</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/TransactionalMessageCopier.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/TransactionalMessageCopier.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/TransactionalMessageCopier.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/TransactionalMessageCopier.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.TransactionsCommand.html">TransactionsCommand</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/TransactionsCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/TransactionsCommand.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/TransactionsCommand.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/TransactionsCommand.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.VerifiableConsumer.html">VerifiableConsumer</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/VerifiableConsumer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/VerifiableConsumer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/VerifiableConsumer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/VerifiableConsumer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.VerifiableLog4jAppender.html">VerifiableLog4jAppender</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/VerifiableLog4jAppender.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/VerifiableLog4jAppender.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/VerifiableLog4jAppender.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/VerifiableLog4jAppender.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Tools.VerifiableProducer.html">VerifiableProducer</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/VerifiableProducer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/org/apache/kafka/tools/VerifiableProducer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/VerifiableProducer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/VerifiableProducer.html</a></p>
 </dd>
     </dl>
 

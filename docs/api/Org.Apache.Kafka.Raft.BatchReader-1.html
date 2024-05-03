@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class BatchReader&lt;T&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/raft/BatchReader.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/BatchReader.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -93,7 +93,7 @@ Class BatchReader&lt;T&gt;  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/raft/BatchReader.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/raft/BatchReader.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/BatchReader.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/BatchReader.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -115,8 +115,8 @@ Class BatchReader&lt;T&gt;  <a class="header-action link-secondary" title="View 
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Iterator-1.html">Iterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Raft.Batch-1.html">Batch</a>&lt;T&gt;&gt;&gt;</div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Iterator-1.html">Iterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Raft.Batch-1.html">Batch</a>&lt;T&gt;&gt;</div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="api/Java.Util.Iterator-1.html">Iterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Raft.Batch-1.html">Batch</a>&lt;T&gt;&gt;&gt;</div>
+      <div><a class="xref" href="api/Java.Util.Iterator-1.html">Iterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Raft.Batch-1.html">Batch</a>&lt;T&gt;&gt;</div>
       <div><span class="xref">BatchReader&lt;T&gt;</span></div>
     </dd>
   </dl>
@@ -131,8 +131,8 @@ Class BatchReader&lt;T&gt;  <a class="header-action link-secondary" title="View 
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="Org.Apache.Kafka.Raft.IBatchReader-1.html">IBatchReader</a>&lt;T&gt;</div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.IIterator-1.html">IIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Raft.Batch-1.html">Batch</a>&lt;T&gt;&gt;</div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="api/Java.Util.IIterator-1.html">IIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Raft.Batch-1.html">Batch</a>&lt;T&gt;&gt;</div>
+      <div><a class="xref" href="api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
   </dl>
 
@@ -141,67 +141,115 @@ Class BatchReader&lt;T&gt;  <a class="header-action link-secondary" title="View 
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Iterator-1.html#Java_Util_Iterator_1_ToIEnumerator">Iterator&lt;Batch&lt;T&gt;&gt;.ToIEnumerator()</a>
+      <a class="xref" href="api/Java.Util.Iterator-1.html#Java_Util_Iterator_1_ToIEnumerator">Iterator&lt;Batch&lt;T&gt;&gt;.ToIEnumerator()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Iterator-1.html#Java_Util_Iterator_1_ForEachRemaining__1_Java_Util_Function_Consumer___0__">Iterator&lt;Batch&lt;T&gt;&gt;.ForEachRemaining&lt;Arg0objectSuperE&gt;(Consumer&lt;Arg0objectSuperE&gt;)</a>
+      <a class="xref" href="api/Java.Util.Iterator-1.html#Java_Util_Iterator_1_ForEachRemaining__1_Java_Util_Function_Consumer___0__">Iterator&lt;Batch&lt;T&gt;&gt;.ForEachRemaining&lt;Arg0objectSuperE&gt;(Consumer&lt;Arg0objectSuperE&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Iterator-1.html#Java_Util_Iterator_1_Remove">Iterator&lt;Batch&lt;T&gt;&gt;.Remove()</a>
+      <a class="xref" href="api/Java.Util.Iterator-1.html#Java_Util_Iterator_1_Remove">Iterator&lt;Batch&lt;T&gt;&gt;.Remove()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Iterator-1.html#Java_Util_Iterator_1_HasNext">Iterator&lt;Batch&lt;T&gt;&gt;.HasNext</a>
+      <a class="xref" href="api/Java.Util.Iterator-1.html#Java_Util_Iterator_1_HasNext">Iterator&lt;Batch&lt;T&gt;&gt;.HasNext</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Iterator-1.html#Java_Util_Iterator_1_Next">Iterator&lt;Batch&lt;T&gt;&gt;.Next</a>
+      <a class="xref" href="api/Java.Util.Iterator-1.html#Java_Util_Iterator_1_Next">Iterator&lt;Batch&lt;T&gt;&gt;.Next</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.SGetField(IJavaType, string)</a>
@@ -244,6 +292,9 @@ Class BatchReader&lt;T&gt;  <a class="header-action link-secondary" title="View 
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
       <span class="xref">JVMBridgeBase&lt;Iterator&lt;Batch&lt;T&gt;&gt;&gt;.Execute&lt;T&gt;(params T[])</span>
@@ -333,16 +384,31 @@ Class BatchReader&lt;T&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -669,7 +735,7 @@ public BatchReader(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/BatchReader.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/raft/BatchReader.html#baseOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/raft/BatchReader.html#baseOffset--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/BatchReader.html#baseOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/BatchReader.html#baseOffset--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -702,7 +768,7 @@ public BatchReader(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/BatchReader.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/raft/BatchReader.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/raft/BatchReader.html#close--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/BatchReader.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/BatchReader.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -729,7 +795,7 @@ public BatchReader(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/BatchReader.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/raft/BatchReader.html#lastOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/org/apache/kafka/raft/BatchReader.html#lastOffset--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/BatchReader.html#lastOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/BatchReader.html#lastOffset--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -740,8 +806,8 @@ public BatchReader(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.OptionalLong.html">OptionalLong</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.OptionalLong.html">OptionalLong</a></p>
+    <dt><a class="xref" href="api/Java.Util.OptionalLong.html">OptionalLong</a></dt>
+    <dd><p><a class="xref" href="api/Java.Util.OptionalLong.html">OptionalLong</a></p>
 </dd>
   </dl>
 
@@ -766,7 +832,7 @@ public BatchReader(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/BatchReader.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Raft.BatchReader-1.html">BatchReader&lt;T&gt;</a> to <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></p>
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Raft.BatchReader-1.html">BatchReader&lt;T&gt;</a> to <a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -782,7 +848,7 @@ public BatchReader(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></dt>
+    <dt><a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a></dt>
     <dd></dd>
   </dl>
 
