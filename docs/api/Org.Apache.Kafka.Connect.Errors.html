@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -92,42 +92,42 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Errors.AlreadyExistsException.html">AlreadyExistsException</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/AlreadyExistsException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/AlreadyExistsException.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/AlreadyExistsException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/AlreadyExistsException.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Errors.ConnectException.html">ConnectException</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/ConnectException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/ConnectException.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/ConnectException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/ConnectException.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Errors.DataException.html">DataException</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/DataException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/DataException.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/DataException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/DataException.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Errors.IllegalWorkerStateException.html">IllegalWorkerStateException</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/IllegalWorkerStateException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/IllegalWorkerStateException.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/IllegalWorkerStateException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/IllegalWorkerStateException.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Errors.NotFoundException.html">NotFoundException</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/NotFoundException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/NotFoundException.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/NotFoundException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/NotFoundException.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Errors.RetriableException.html">RetriableException</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/RetriableException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/RetriableException.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/RetriableException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/RetriableException.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Errors.SchemaBuilderException.html">SchemaBuilderException</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/SchemaBuilderException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/SchemaBuilderException.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/SchemaBuilderException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/SchemaBuilderException.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Connect.Errors.SchemaProjectorException.html">SchemaProjectorException</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/SchemaProjectorException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/errors/SchemaProjectorException.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/SchemaProjectorException.html">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/errors/SchemaProjectorException.html</a></p>
 </dd>
     </dl>
 

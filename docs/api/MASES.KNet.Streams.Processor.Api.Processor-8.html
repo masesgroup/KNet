@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -118,13 +118,13 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
     <dd><p>The output value type</p>
 </dd>
     <dt><code>TJVMKIn</code></dt>
-    <dd>KNet extension of</dd>
+    <dd></dd>
     <dt><code>TJVMVIn</code></dt>
-    <dd>KNet extension of</dd>
+    <dd></dd>
     <dt><code>TJVMKOut</code></dt>
-    <dd>KNet extension of</dd>
+    <dd></dd>
     <dt><code>TJVMVOut</code></dt>
-    <dd>KNet extension of</dd>
+    <dd></dd>
   </dl>
 
   <dl class="typelist inheritance">

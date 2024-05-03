@@ -5434,10 +5434,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Clients.MetadataCache.yml",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.MetadataSnapshot.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Clients.MetadataCache.html"
+          "relative_path": "api/Org.Apache.Kafka.Clients.MetadataSnapshot.html"
         }
       },
       "version": ""
@@ -12118,6 +12118,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Connect.Mirror.MirrorHeartbeatTask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Connect.Mirror.MirrorHerder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Connect.Mirror.MirrorHerder.html"
         }
       },
       "version": ""

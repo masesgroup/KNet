@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -688,7 +688,7 @@ Class KNetCompactedReplicator&lt;TKey, TValue&gt;  <a class="header-action link-
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L644"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get or set an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a>, by default it creates a default one based on TKey</p>
+  <div class="markdown level1 summary"><p>Get or set an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a>, by default it creates a default one based on <code class="typeparamref">TKey</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -759,7 +759,7 @@ Class KNetCompactedReplicator&lt;TKey, TValue&gt;  <a class="header-action link-
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L571"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>It is called to request if the [TKey, TValue] can be stored in the <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a> instance.</p>
+  <div class="markdown level1 summary"><p>It is called to request if the [<code class="typeparamref">TKey</code>, <code class="typeparamref">TValue</code>] can be stored in the <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a> instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -986,7 +986,7 @@ Class KNetCompactedReplicator&lt;TKey, TValue&gt;  <a class="header-action link-
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L674"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get or set an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a>, by default it creates a default one based on TValue</p>
+  <div class="markdown level1 summary"><p>Get or set an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a>, by default it creates a default one based on <code class="typeparamref">TValue</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1192,8 +1192,8 @@ Class KNetCompactedReplicator&lt;TKey, TValue&gt;  <a class="header-action link-
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, TMetric&gt;&gt;</dt>
-    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> where the key is the current allocated <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-2.html">KNetConsumer&lt;K, V&gt;</a> and value is a <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a> of <a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a> and TMetric</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, TMetric&gt;&gt;</dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> where the key is the current allocated <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-2.html">KNetConsumer&lt;K, V&gt;</a> and value is a <a class="xref" href="api/Java.Util.Map.html">Map</a> of <a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a> and <code class="typeparamref">TMetric</code></p>
 </dd>
   </dl>
 
@@ -1474,8 +1474,8 @@ from this <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, TMetric&gt;</dt>
-    <dd><p>A <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a> of <a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a> and TMetric</p>
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, TMetric&gt;</dt>
+    <dd><p>A <a class="xref" href="api/Java.Util.Map.html">Map</a> of <a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a> and <code class="typeparamref">TMetric</code></p>
 </dd>
   </dl>
 
@@ -1855,7 +1855,7 @@ that has the specified <code class="paramref">key</code>, or the default value o
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L562"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called when a [TKey, TValue] is added on this <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">TKey</code>, <code class="typeparamref">TValue</code>] is added on this <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1886,7 +1886,7 @@ that has the specified <code class="paramref">key</code>, or the default value o
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L568"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called when a [TKey, TValue] is removed from this <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">TKey</code>, <code class="typeparamref">TValue</code>] is removed from this <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1917,7 +1917,7 @@ that has the specified <code class="paramref">key</code>, or the default value o
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L565"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called when a [TKey, TValue] is updated on this <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">TKey</code>, <code class="typeparamref">TValue</code>] is updated on this <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1948,7 +1948,7 @@ that has the specified <code class="paramref">key</code>, or the default value o
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L553"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called when a [TKey, TValue] is added by consuming data from the others <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">TKey</code>, <code class="typeparamref">TValue</code>] is added by consuming data from the others <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1979,7 +1979,7 @@ that has the specified <code class="paramref">key</code>, or the default value o
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L559"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called when a [TKey, TValue] is removed by consuming data from the others <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">TKey</code>, <code class="typeparamref">TValue</code>] is removed by consuming data from the others <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2010,7 +2010,7 @@ that has the specified <code class="paramref">key</code>, or the default value o
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L556"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called when a [TKey, TValue] is updated by consuming data from the others <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">TKey</code>, <code class="typeparamref">TValue</code>] is updated by consuming data from the others <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
