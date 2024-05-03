@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -532,8 +532,8 @@ Class Materialized&lt;K, V, TJVMK, TJVMV, TContainer&gt;  <a class="header-actio
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -571,8 +571,8 @@ Class Materialized&lt;K, V, TJVMK, TJVMV, TContainer&gt;  <a class="header-actio
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
@@ -592,7 +592,7 @@ Class Materialized&lt;K, V, TJVMK, TJVMV, TContainer&gt;  <a class="header-actio
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -636,7 +636,7 @@ Class Materialized&lt;K, V, TJVMK, TJVMV, TContainer&gt;  <a class="header-actio
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 

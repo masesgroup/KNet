@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -192,7 +192,7 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html#Java_Io_ICloseable_Close">ICloseable.Close()</a>
+      <a class="xref" href="api/Java.Io.ICloseable.html#Java_Io_ICloseable_Close">ICloseable.Close()</a>
     </div>
   </dd></dl>
 
@@ -279,7 +279,7 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
+    <dt><a class="xref" href="api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -360,7 +360,7 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
+    <dt><a class="xref" href="api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -449,7 +449,7 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
+    <dt><a class="xref" href="api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -536,7 +536,7 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
+    <dt><a class="xref" href="api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -619,7 +619,7 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
+    <dt><a class="xref" href="api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -1111,7 +1111,7 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
+    <dt><a class="xref" href="api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -1150,7 +1150,7 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
+    <dt><a class="xref" href="api/Java.Util.Concurrent.Future-1.html">Future</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
     <dd></dd>
   </dl>
 

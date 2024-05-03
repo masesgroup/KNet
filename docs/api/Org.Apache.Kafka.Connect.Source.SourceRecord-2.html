@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -574,10 +574,10 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -625,10 +625,10 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -670,10 +670,10 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -724,10 +724,10 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -781,10 +781,10 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -841,10 +841,10 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>

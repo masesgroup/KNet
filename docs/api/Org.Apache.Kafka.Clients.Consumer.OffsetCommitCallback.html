@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -571,7 +571,7 @@ Class OffsetCommitCallback  <a class="header-action link-secondary" title="View 
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/OffsetCommitCallback.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -585,7 +585,7 @@ Class OffsetCommitCallback  <a class="header-action link-secondary" title="View 
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;, <span class="xref">JVMBridgeException</span>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;, <span class="xref">JVMBridgeException</span>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -637,7 +637,7 @@ Class OffsetCommitCallback  <a class="header-action link-secondary" title="View 
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/OffsetCommitCallback.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -647,11 +647,11 @@ Class OffsetCommitCallback  <a class="header-action link-secondary" title="View 
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <span class="xref">JVMBridgeException</span></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Exception.html">Exception</a></p>
+    <dd><p><a class="xref" href="api/Java.Lang.Exception.html">Exception</a></p>
 </dd>
   </dl>
 

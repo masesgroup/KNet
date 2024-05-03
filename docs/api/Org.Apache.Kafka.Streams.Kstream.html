@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -92,7 +92,7 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Aggregator.html">Aggregator</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Aggregator.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Aggregator.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -102,57 +102,57 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Branched.html">Branched</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Branched.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Branched.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.BranchedKStream.html">BranchedKStream</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/BranchedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/BranchedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.BranchedKStream-2.html">BranchedKStream&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/BranchedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/BranchedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/BranchedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Branched-2.html">Branched&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Branched.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Branched.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.CogroupedKStream.html">CogroupedKStream</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/CogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/CogroupedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/CogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/CogroupedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.CogroupedKStream-2.html">CogroupedKStream&lt;K, VOut&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/CogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/CogroupedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/CogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/CogroupedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Consumed.html">Consumed</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Consumed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Consumed.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Consumed-2.html">Consumed&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Consumed.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Consumed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Consumed.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.EmitStrategy.html">EmitStrategy</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/EmitStrategy.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/EmitStrategy.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/EmitStrategy.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/EmitStrategy.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType.html">EmitStrategy.StrategyType</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachAction.html">ForeachAction</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ForeachAction.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ForeachAction.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -162,37 +162,37 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor.html">ForeachProcessor</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachProcessor.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachProcessor.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ForeachProcessor.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ForeachProcessor.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor-2.html">ForeachProcessor&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachProcessor.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachProcessor.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ForeachProcessor.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ForeachProcessor.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.GlobalKTable.html">GlobalKTable</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/GlobalKTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/GlobalKTable.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/GlobalKTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/GlobalKTable.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.GlobalKTable-2.html">GlobalKTable&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/GlobalKTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/GlobalKTable.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/GlobalKTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/GlobalKTable.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Grouped.html">Grouped</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Grouped.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Grouped.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Grouped.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Grouped.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Grouped-2.html">Grouped&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Grouped.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Grouped.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Grouped.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Grouped.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Initializer.html">Initializer</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Initializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Initializer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Initializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Initializer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -202,62 +202,62 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.JoinWindows.html">JoinWindows</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/JoinWindows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/JoinWindows.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/JoinWindows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/JoinWindows.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined.html">Joined</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Joined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Joined.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Joined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Joined.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined&lt;K, V, VO&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Joined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Joined.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Joined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Joined.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KGroupedStream.html">KGroupedStream</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KGroupedStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KGroupedStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KGroupedStream-2.html">KGroupedStream&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KGroupedStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KGroupedStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KGroupedTable.html">KGroupedTable</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KGroupedTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KGroupedTable.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KGroupedTable-2.html">KGroupedTable&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KGroupedTable.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KGroupedTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KGroupedTable.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream.html">KStream</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KTable.html">KTable</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KTable.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KTable-2.html">KTable&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KTable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KTable.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper.html">KeyValueMapper</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KeyValueMapper.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KeyValueMapper.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -267,22 +267,22 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized.html">Materialized</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType.html">Materialized.StoreType</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.StoreType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.StoreType.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized-3.html">Materialized&lt;K, V, S&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Materialized.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Merger.html">Merger</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Merger.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Merger.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Merger.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Merger.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -292,7 +292,7 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Named.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Named.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Named.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Named.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -307,7 +307,7 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Predicate.html">Predicate</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Predicate.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Predicate.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -317,27 +317,27 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Printed.html">Printed</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Printed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Printed.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Printed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Printed.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Printed-2.html">Printed&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Printed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Printed.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Printed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Printed.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Produced.html">Produced</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Produced.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Produced.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Produced-2.html">Produced&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Produced.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Produced.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Produced.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Reducer.html">Reducer</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Reducer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Reducer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Reducer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Reducer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -347,162 +347,162 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Repartitioned.html">Repartitioned</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Repartitioned.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Repartitioned.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Repartitioned-2.html">Repartitioned&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Repartitioned.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Repartitioned.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream.html">SessionWindowedCogroupedKStream</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream-2.html">SessionWindowedCogroupedKStream&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SessionWindowedDeserializer.html">SessionWindowedDeserializer</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SessionWindowedDeserializer-1.html">SessionWindowedDeserializer&lt;T&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream.html">SessionWindowedKStream</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream-2.html">SessionWindowedKStream&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SessionWindowedSerializer.html">SessionWindowedSerializer</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SessionWindowedSerializer-1.html">SessionWindowedSerializer&lt;T&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SessionWindows.html">SessionWindows</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SessionWindows.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SessionWindows.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SlidingWindows.html">SlidingWindows</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SlidingWindows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/SlidingWindows.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SlidingWindows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/SlidingWindows.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.StreamJoined.html">StreamJoined</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.StreamJoined-3.html">StreamJoined&lt;K, V1, V2&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/StreamJoined.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Suppressed.html">Suppressed</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig.html">Suppressed.BufferConfig</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig-1.html">Suppressed.BufferConfig&lt;BC&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig.html">Suppressed.EagerBufferConfig</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.EagerBufferConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.EagerBufferConfig.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.EagerBufferConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.EagerBufferConfig.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig.html">Suppressed.StrictBufferConfig</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.StrictBufferConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.StrictBufferConfig.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.StrictBufferConfig.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.StrictBufferConfig.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Suppressed-1.html">Suppressed&lt;K&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Suppressed.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Suppressed.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TableJoined.html">TableJoined</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TableJoined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TableJoined.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TableJoined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TableJoined.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TableJoined-2.html">TableJoined&lt;K, KO&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TableJoined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TableJoined.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TableJoined.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TableJoined.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream.html">TimeWindowedCogroupedKStream</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream-2.html">TimeWindowedCogroupedKStream&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TimeWindowedDeserializer.html">TimeWindowedDeserializer</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TimeWindowedDeserializer-1.html">TimeWindowedDeserializer&lt;T&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream.html">TimeWindowedKStream</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream-2.html">TimeWindowedKStream&lt;K, V&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedKStream.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedKStream.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedKStream.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TimeWindowedSerializer.html">TimeWindowedSerializer</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TimeWindowedSerializer-1.html">TimeWindowedSerializer&lt;T&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TimeWindows.html">TimeWindows</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/TimeWindows.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/TimeWindows.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Transformer.html">Transformer</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Transformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Transformer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Transformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Transformer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -512,22 +512,22 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Transformer-3.html">Transformer&lt;K, V, R&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Transformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Transformer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Transformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Transformer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.UnlimitedWindows.html">UnlimitedWindows</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/UnlimitedWindows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/UnlimitedWindows.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/UnlimitedWindows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/UnlimitedWindows.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueJoiner.html">ValueJoiner</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoiner.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoiner.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueJoiner.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueJoiner.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey.html">ValueJoinerWithKey</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -542,12 +542,12 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueMapper.html">ValueMapper</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapper.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapper.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueMapper.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueMapper.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey.html">ValueMapperWithKey</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueMapperWithKey.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueMapperWithKey.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -562,7 +562,7 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueTransformer.html">ValueTransformer</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -572,7 +572,7 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKey.html">ValueTransformerWithKey</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -582,62 +582,62 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKey-3.html">ValueTransformerWithKey&lt;K, V, VR&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueTransformer-2.html">ValueTransformer&lt;V, VR&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Window.html">Window</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Window.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Window.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Window.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Window.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed.html">Windowed</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windowed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windowed.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Windowed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Windowed.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.WindowedSerdes.html">WindowedSerdes</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/WindowedSerdes.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/WindowedSerdes.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/WindowedSerdes.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/WindowedSerdes.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.WindowedSerdes.SessionWindowedSerde.html">WindowedSerdes.SessionWindowedSerde</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.WindowedSerdes.SessionWindowedSerde-1.html">WindowedSerdes.SessionWindowedSerde&lt;T&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.WindowedSerdes.TimeWindowedSerde.html">WindowedSerdes.TimeWindowedSerde</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.WindowedSerdes.TimeWindowedSerde-1.html">WindowedSerdes.TimeWindowedSerde&lt;T&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed&lt;K&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windowed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windowed.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Windowed.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Windowed.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windows.html">Windows</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windows.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Windows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Windows.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windows-1.html">Windows&lt;W&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windows.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Windows.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Windows.html</a></p>
 </dd>
     </dl>
     <h3 id="interfaces">
@@ -755,7 +755,7 @@ Interfaces
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ITransformer-3.html">ITransformer&lt;K, V, R&gt;</a></dt>
-      <dd><p>.NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.Transformer implementing <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Transformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Transformer.html</a></p>
+      <dd><p>.NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.Transformer implementing <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Transformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Transformer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -790,12 +790,12 @@ Interfaces
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.IValueTransformerWithKey-3.html">IValueTransformerWithKey&lt;K, V, VR&gt;</a></dt>
-      <dd><p>.NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueTransformerWithKey implementing <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html</a></p>
+      <dd><p>.NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueTransformerWithKey implementing <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.IValueTransformer-2.html">IValueTransformer&lt;V, VR&gt;</a></dt>
-      <dd><p>.NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueTransformer implementing <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueTransformer.html</a></p>
+      <dd><p>.NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueTransformer implementing <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html</a></p>
 </dd>
     </dl>
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ConsumerRecords | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -93,7 +93,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -110,9 +110,9 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable.html">Iterable</a>&gt;</div>
-      <div><span class="xref">JVMBridgeBaseEnumerable</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable.html">Iterable</a>&gt;</div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable.html">Iterable</a></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="api/Java.Lang.Iterable.html">Iterable</a>&gt;</div>
+      <div><span class="xref">JVMBridgeBaseEnumerable</span>&lt;<a class="xref" href="api/Java.Lang.Iterable.html">Iterable</a>&gt;</div>
+      <div><a class="xref" href="api/Java.Lang.Iterable.html">Iterable</a></div>
       <div><span class="xref">ConsumerRecords</span></div>
     </dd>
   </dl>
@@ -516,7 +516,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRecords.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#org.apache.kafka.clients.consumer.ConsumerRecords(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#org.apache.kafka.clients.consumer.ConsumerRecords(java.util.Map)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#org.apache.kafka.clients.consumer.ConsumerRecords(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#org.apache.kafka.clients.consumer.ConsumerRecords(java.util.Map)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -526,8 +526,8 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map.html">Map</a></dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -617,7 +617,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRecords.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#EMPTY">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#EMPTY</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#EMPTY">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#EMPTY</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -781,7 +781,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRecords.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#count--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#count--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#count--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#count--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -814,7 +814,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRecords.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -847,7 +847,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRecords.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -880,7 +880,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRecords.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -891,8 +891,8 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Iterator.html">Iterator</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Iterator.html">Iterator</a></p>
+    <dt><a class="xref" href="api/Java.Util.Iterator.html">Iterator</a></dt>
+    <dd><p><a class="xref" href="api/Java.Util.Iterator.html">Iterator</a></p>
 </dd>
   </dl>
 
@@ -913,7 +913,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRecords.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -924,8 +924,8 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
+    <dt><a class="xref" href="api/Java.Util.Set.html">Set</a></dt>
+    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -946,7 +946,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRecords.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-java.lang.String-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -956,15 +956,15 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable.html">Iterable</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable.html">Iterable</a></p>
+    <dt><a class="xref" href="api/Java.Lang.Iterable.html">Iterable</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Iterable.html">Iterable</a></p>
 </dd>
   </dl>
 
@@ -985,7 +985,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRecords.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-org.apache.kafka.common.TopicPartition-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-org.apache.kafka.common.TopicPartition-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1002,8 +1002,8 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
+    <dt><a class="xref" href="api/Java.Util.List.html">List</a></dt>
+    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
 </dd>
   </dl>
 

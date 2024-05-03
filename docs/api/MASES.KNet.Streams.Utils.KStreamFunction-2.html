@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -121,8 +121,8 @@ Class KStreamFunction&lt;K, V&gt;  <a class="header-action link-secondary" title
       <div><span class="xref">JVMBridgeBase</span></div>
       <div><span class="xref">JVMBridgeBase</span>&lt;<span class="xref">JVMBridgeListener</span>&gt;</div>
       <div><span class="xref">JVMBridgeListener</span></div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function.html">Function</a></div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function-2.html">Function</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</div>
+      <div><a class="xref" href="api/Java.Util.Function.Function.html">Function</a></div>
+      <div><a class="xref" href="api/Java.Util.Function.Function-2.html">Function</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</div>
       <div><a class="xref" href="MASES.KNet.Streams.Utils.KStreamFunction-4.html">KStreamFunction</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
       <div><span class="xref">KStreamFunction&lt;K, V&gt;</span></div>
     </dd>
@@ -135,7 +135,7 @@ Class KStreamFunction&lt;K, V&gt;  <a class="header-action link-secondary" title
       <div><span class="xref">IJVMBridgeCore</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><span class="xref">IJVMBridgeBaseStatic</span></div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.IFunction-2.html">IFunction</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</div>
+      <div><a class="xref" href="api/Java.Util.Function.IFunction-2.html">IFunction</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</div>
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
@@ -156,13 +156,13 @@ Class KStreamFunction&lt;K, V&gt;  <a class="header-action link-secondary" title
       <a class="xref" href="MASES.KNet.Streams.Utils.KStreamFunction-4.html#MASES_KNet_Streams_Utils_KStreamFunction_4_Apply_MASES_KNet_Streams_Kstream_KStream__0__1__2__3__">KStreamFunction&lt;K, V, byte[], byte[]&gt;.Apply(KStream&lt;K, V, byte[], byte[]&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function-2.html#Java_Util_Function_Function_2_Apply__0_">Function&lt;KStream&lt;byte[], byte[]&gt;, KStream&lt;byte[], byte[]&gt;&gt;.Apply(KStream&lt;byte[], byte[]&gt;)</a>
+      <a class="xref" href="api/Java.Util.Function.Function-2.html#Java_Util_Function_Function_2_Apply__0_">Function&lt;KStream&lt;byte[], byte[]&gt;, KStream&lt;byte[], byte[]&gt;&gt;.Apply(KStream&lt;byte[], byte[]&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function-2.html#Java_Util_Function_Function_2_OnApply">Function&lt;KStream&lt;byte[], byte[]&gt;, KStream&lt;byte[], byte[]&gt;&gt;.OnApply</a>
+      <a class="xref" href="api/Java.Util.Function.Function-2.html#Java_Util_Function_Function_2_OnApply">Function&lt;KStream&lt;byte[], byte[]&gt;, KStream&lt;byte[], byte[]&gt;&gt;.OnApply</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function.html#Java_Util_Function_Function_BridgeClassName">Function.BridgeClassName</a>
+      <a class="xref" href="api/Java.Util.Function.Function.html#Java_Util_Function_Function_BridgeClassName">Function.BridgeClassName</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler(string, EventHandler)</a>

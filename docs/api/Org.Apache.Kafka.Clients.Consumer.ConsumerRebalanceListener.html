@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -571,7 +571,7 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRebalanceListener.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -585,7 +585,7 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -606,7 +606,7 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRebalanceListener.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -620,7 +620,7 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -641,7 +641,7 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRebalanceListener.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -655,7 +655,7 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -707,7 +707,7 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRebalanceListener.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -717,8 +717,8 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
@@ -740,7 +740,7 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRebalanceListener.cs/#L145"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -750,8 +750,8 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
@@ -776,7 +776,7 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRebalanceListener.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -786,8 +786,8 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
@@ -812,7 +812,7 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerRebalanceListener.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -822,8 +822,8 @@ Class ConsumerRebalanceListener  <a class="header-action link-secondary" title="
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
