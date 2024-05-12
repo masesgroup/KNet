@@ -146,7 +146,6 @@ namespace MASES.KNet.Serialization
             _KafkaSerde = null;
             _KafkaSerializer = null;
             _KafkaDeserializer = null;
-            _KafkaWrapperSerde = null;
         }
         #endregion
 
