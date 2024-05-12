@@ -61,4 +61,21 @@ namespace Org.Apache.Kafka.Common.Serialization
     {
 
     }
+
+    /// <summary>
+    /// Listener for Kafka Deserializer. Extends <see cref="IDeserializer{E}"/>
+    /// </summary>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
+    public class DeserializerDirect<T> : Deserializer<T>
+    {
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_AutoInit.htm"/>
+        /// </summary>
+        public override bool AutoInit => false;
+
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.Deserializer";
+    }
 }
