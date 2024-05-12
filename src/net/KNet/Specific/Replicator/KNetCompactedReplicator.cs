@@ -35,21 +35,21 @@ namespace MASES.KNet.Replicator
 {
     #region AccessRightsType
     /// <summary>
-    /// <see cref="KNetCompactedReplicator{TKey, TValue}"/> access rights to data
+    /// <see cref="KNetCompactedReplicator{K, V}"/> access rights to data
     /// </summary>
     [Flags]
     public enum AccessRightsType
     {
         /// <summary>
-        /// Data are readable, i.e. aligned with the others <see cref="KNetCompactedReplicator{TKey, TValue}"/> and accessible from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Data are readable, i.e. aligned with the others <see cref="KNetCompactedReplicator{K, V}"/> and accessible from this <see cref="KNetCompactedReplicator{K, V}"/>
         /// </summary>
         Read = 1,
         /// <summary>
-        /// Data are writable, i.e. updates can be produced, but this <see cref="KNetCompactedReplicator{TKey, TValue}"/> is not accessible and not aligned with the others <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Data are writable, i.e. updates can be produced, but this <see cref="KNetCompactedReplicator{K, V}"/> is not accessible and not aligned with the others <see cref="KNetCompactedReplicator{K, V}"/>
         /// </summary>
         Write = 2,
         /// <summary>
-        /// Data are readable and writable, i.e. updates can be produced, and data are aligned with the others <see cref="KNetCompactedReplicator{TKey, TValue}"/> and accessible from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Data are readable and writable, i.e. updates can be produced, and data are aligned with the others <see cref="KNetCompactedReplicator{K, V}"/> and accessible from this <see cref="KNetCompactedReplicator{K, V}"/>
         /// </summary>
         ReadWrite = Read | Write,
     }
@@ -59,77 +59,79 @@ namespace MASES.KNet.Replicator
     #region UpdateModeTypes
 
     /// <summary>
-    /// <see cref="KNetCompactedReplicator{TKey, TValue}"/> update modes
+    /// <see cref="KNetCompactedReplicator{K, V}"/> update modes
     /// </summary>
     [Flags()]
     public enum UpdateModeTypes
     {
         /// <summary>
-        /// The <see cref="KNetCompactedReplicator{TKey, TValue}"/> is updated as soon as an update is delivered to Kafka by the current application
+        /// The <see cref="KNetCompactedReplicator{K, V}"/> is updated as soon as an update is delivered to Kafka by the current application
         /// </summary>
         OnDelivery = 1,
         /// <summary>
-        /// The <see cref="KNetCompactedReplicator{TKey, TValue}"/> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance
+        /// The <see cref="KNetCompactedReplicator{K, V}"/> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance
         /// </summary>
         OnConsume = 2,
         /// <summary>
-        /// The <see cref="KNetCompactedReplicator{TKey, TValue}"/> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance. Plus the update waits the consume of the data before unlock
+        /// The <see cref="KNetCompactedReplicator{K, V}"/> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance. Plus the update waits the consume of the data before unlock
         /// </summary>
         OnConsumeSync = 3,
         /// <summary>
-        /// The value is stored in <see cref="KNetCompactedReplicator{TKey, TValue}"/> only upon a request, otherwise only the key is stored
+        /// The value is stored in <see cref="KNetCompactedReplicator{K, V}"/> only upon a request, otherwise only the key is stored
         /// </summary>
         Delayed = 0x1000
     }
 
     #endregion
 
-    #region IKNetCompactedReplicator<TKey, TValue>
+    #region IKNetCompactedReplicator<K, V, TJVMK, TJVMV>
     /// <summary>
-    /// Public interface for <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+    /// Public interface for <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
     /// </summary>
-    /// <typeparam name="TKey">The type of keys in the dictionary</typeparam>
-    /// <typeparam name="TValue">The type of values in the dictionary. Must be a nullable type</typeparam>
-    public interface IKNetCompactedReplicator<TKey, TValue> : IDictionary<TKey, TValue>, IDisposable
-        where TValue : class
+    /// <typeparam name="K">The type of keys in the dictionary</typeparam>
+    /// <typeparam name="V">The type of values in the dictionary. Must be a nullable type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    public interface IKNetCompactedReplicator<K, V, TJVMK, TJVMV> : IDictionary<K, V>, IDisposable
+        where V : class
     {
         #region Events
 
         /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is added by consuming data from the others <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
+        /// Called when a [<typeparamref name="K"/>, <typeparamref name="V"/>] is added by consuming data from the others <see cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteAdd;
+        event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnRemoteAdd;
 
         /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated by consuming data from the others <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
+        /// Called when a [<typeparamref name="K"/>, <typeparamref name="V"/>] is updated by consuming data from the others <see cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteUpdate;
+        event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnRemoteUpdate;
 
         /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is removed by consuming data from the others <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
+        /// Called when a [<typeparamref name="K"/>, <typeparamref name="V"/>] is removed by consuming data from the others <see cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteRemove;
+        event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnRemoteRemove;
 
         /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is added on this <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
+        /// Called when a [<typeparamref name="K"/>, <typeparamref name="V"/>] is added on this <see cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalAdd;
+        event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnLocalAdd;
 
         /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated on this <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
+        /// Called when a [<typeparamref name="K"/>, <typeparamref name="V"/>] is updated on this <see cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalUpdate;
+        event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnLocalUpdate;
 
         /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is removed from this <see cref="IKNetCompactedReplicator{TKey, TValue}"/>
+        /// Called when a [<typeparamref name="K"/>, <typeparamref name="V"/>] is removed from this <see cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalRemove;
+        event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnLocalRemove;
 
         /// <summary>
-        /// It is called to request if the [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] can be stored in the <see cref="IKNetCompactedReplicator{TKey, TValue}"/> instance.
+        /// It is called to request if the [<typeparamref name="K"/>, <typeparamref name="V"/>] can be stored in the <see cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> instance.
         /// </summary>
         /// <remarks>The second parameter reports the current value that depends on values set to <see cref="UpdateMode"/> and if it contains the <see cref="UpdateModeTypes.Delayed"/></remarks>
-        Func<IKNetCompactedReplicator<TKey, TValue>, bool, KeyValuePair<TKey, TValue>, bool> OnDelayedStore { get; }
+        Func<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, bool, KeyValuePair<K, V>, bool> OnDelayedStore { get; }
 
         #endregion
 
@@ -159,7 +161,7 @@ namespace MASES.KNet.Replicator
         /// </summary>
         int Partitions { get; }
         /// <summary>
-        /// Get or set the number of <see cref="KNetConsumer{K, V}"/> instances to be used, null to allocate <see cref="KNetConsumer{K, V}"/> based on <see cref="Partitions"/>
+        /// Get or set the number of <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> instances to be used, null to allocate <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> based on <see cref="Partitions"/>
         /// </summary>
         int? ConsumerInstances { get; }
         /// <summary>
@@ -167,7 +169,7 @@ namespace MASES.KNet.Replicator
         /// </summary>
         short ReplicationFactor { get; }
         /// <summary>
-        /// Get or set the poll timeout to be used for <see cref="IConsumer{K, V}.ConsumeAsync(long)"/>
+        /// Get or set the poll timeout to be used for <see cref="IConsumer{K, V, TJVMK, TJVMV}.ConsumeAsync(long)"/>
         /// </summary>
         long ConsumePollTimeout { get; }
         /// <summary>
@@ -175,11 +177,11 @@ namespace MASES.KNet.Replicator
         /// </summary>
         TopicConfigBuilder TopicConfig { get; }
         /// <summary>
-        /// Get or set <see cref="ConsumerConfigBuilder"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Get or set <see cref="ConsumerConfigBuilder"/> to use in <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         ConsumerConfigBuilder ConsumerConfig { get; }
         /// <summary>
-        /// Get or set <see cref="ProducerConfigBuilder"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Get or set <see cref="ProducerConfigBuilder"/> to use in <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         ProducerConfigBuilder ProducerConfig { get; }
         /// <summary>
@@ -187,25 +189,25 @@ namespace MASES.KNet.Replicator
         /// </summary>
         Type KNetKeySerDes { get; }
         /// <summary>
-        /// Get or set an instance of <see cref="ISerDes{TKey}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TKey"/>
+        /// Get or set an instance of <see cref="ISerDes{K, TJVMK}"/> to use in <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>, by default it creates a default one based on <typeparamref name="K"/>
         /// </summary>
-        ISerDes<TKey> KeySerDes { get; }
+        ISerDes<K, TJVMK> KeySerDes { get; }
         /// <summary>
         /// The <see cref="Type"/> used to create an instance of <see cref="ValueSerDes"/>"/>
         /// </summary>
         Type KNetValueSerDes { get; }
         /// <summary>
-        /// Get or set an instance of <see cref="ISerDes{TValue}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TValue"/>
+        /// Get or set an instance of <see cref="ISerDes{V, TJVMV}"/> to use in <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>, by default it creates a default one based on <typeparamref name="V"/>
         /// </summary>
-        ISerDes<TValue> ValueSerDes { get; }
+        ISerDes<V, TJVMV> ValueSerDes { get; }
 #if NET7_0_OR_GREATER
         /// <summary>
-        /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="ConsumerRecord{K, V}"/> happens in an external thread
+        /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/> happens in an external thread
         /// </summary>
-        /// <remarks>It is <see langword="true"/> by default if one of <typeparamref name="TKey"/> or <typeparamref name="TValue"/> are not <see cref="ValueType"/>, override the value using <see cref="ApplyPrefetch(bool, int)"/></remarks>
+        /// <remarks>It is <see langword="true"/> by default if one of <typeparamref name="K"/> or <typeparamref name="V"/> are not <see cref="ValueType"/>, override the value using <see cref="ApplyPrefetch(bool, int)"/></remarks>
         bool IsPrefecth { get; }
         /// <summary>
-        /// The minimum threshold to activate pretech, i.e. the preparation of <see cref="ConsumerRecord{K, V}"/> happens in external thread if <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{K, V}"/> contains more than <see cref="PrefetchThreshold"/> elements
+        /// The minimum threshold to activate pretech, i.e. the preparation of <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/> happens in external thread if <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{TJVMK, TJVMV}"/> contains more than <see cref="PrefetchThreshold"/> elements
         /// </summary>
         /// <remarks>The default value is 10, however it shall be chosen by the developer and in the decision shall be verified if external thread activation costs more than inline execution</remarks>
         int PrefetchThreshold { get; }
@@ -233,7 +235,7 @@ namespace MASES.KNet.Replicator
         #region Public methods
 #if NET7_0_OR_GREATER
         /// <summary>
-        /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="ConsumerRecord{K, V}"/> in external thread 
+        /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/> in external thread 
         /// </summary>
         /// <param name="enablePrefetch"><see langword="true"/> to enable prefetch. See <see cref="IsPrefecth"/></param>
         /// <param name="prefetchThreshold">The minimum threshold to activate pretech, default is 10. See <see cref="PrefetchThreshold"/></param>
@@ -241,12 +243,12 @@ namespace MASES.KNet.Replicator
         void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10);
 #endif
         /// <summary>
-        /// Start this <see cref="KNetCompactedReplicator{TKey, TValue}"/>: create the <see cref="StateName"/> topic if not available, allocates Producer and Consumer, sets serializer/deserializer
+        /// Start this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>: create the <see cref="StateName"/> topic if not available, allocates Producer and Consumer, sets serializer/deserializer
         /// </summary>
         /// <exception cref="InvalidOperationException">Some errors occurred</exception>
         void Start();
         /// <summary>
-        /// Start this <see cref="KNetCompactedReplicator{TKey, TValue}"/>: create the <see cref="StateName"/> topic if not available, allocates Producer and Consumers, sets serializer/deserializer
+        /// Start this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>: create the <see cref="StateName"/> topic if not available, allocates Producer and Consumers, sets serializer/deserializer
         /// Then waits its synchronization with <see cref="StateName"/> topic which stores dictionary data
         /// </summary>
         /// <param name="timeout">The number of milliseconds to wait, or <see cref="Timeout.Infinite"/> to wait indefinitely</param>
@@ -261,7 +263,7 @@ namespace MASES.KNet.Replicator
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         bool WaitForStateAssignment(int timeout = Timeout.Infinite);
         /// <summary>
-        /// Waits that <see cref="KNetCompactedReplicator{TKey, TValue}"/> is synchronized to the <see cref="StateName"/> topic which stores dictionary data
+        /// Waits that <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> is synchronized to the <see cref="StateName"/> topic which stores dictionary data
         /// </summary>
         /// <param name="timeout">The number of milliseconds to wait, or <see cref="Timeout.Infinite"/> to wait indefinitely</param>
         /// <returns><see langword="true"/> if the current instance synchronize within the given <paramref name="timeout"/>; otherwise, <see langword="false"/></returns>
@@ -272,30 +274,32 @@ namespace MASES.KNet.Replicator
         /// </summary>
         void Flush();
         /// <summary>
-        /// Reports the <see cref="KNetProducer{TKey, TValue}"/> metrics. <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--"/>
+        /// Reports the <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/> metrics. <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--"/>
         /// </summary>
         /// <typeparam name="TMetric">Extends <see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
         /// <returns>A <see cref="Java.Util.Map"/> of <see cref="Org.Apache.Kafka.Common.MetricName"/> and <typeparamref name="TMetric"/></returns>
         Java.Util.Map<Org.Apache.Kafka.Common.MetricName, TMetric> ProducerMetrics<TMetric>() where TMetric : Org.Apache.Kafka.Common.Metric;
         /// <summary>
-        /// Reports the <see cref="KNetConsumer{TKey, TValue}"/> metrics. <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--"/>
+        /// Reports the <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> metrics. <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--"/>
         /// </summary>
         /// <typeparam name="TMetric">Extends <see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
-        /// <returns>An <see cref="IReadOnlyDictionary{T, V}"/> where the key is the current allocated <see cref="KNetConsumer{TKey, TValue}"/> and value is a <see cref="Java.Util.Map"/> of <see cref="Org.Apache.Kafka.Common.MetricName"/> and <typeparamref name="TMetric"/></returns>
+        /// <returns>An <see cref="IReadOnlyDictionary{T, V}"/> where the key is the current allocated <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> and value is a <see cref="Java.Util.Map"/> of <see cref="Org.Apache.Kafka.Common.MetricName"/> and <typeparamref name="TMetric"/></returns>
         IReadOnlyDictionary<int, Java.Util.Map<Org.Apache.Kafka.Common.MetricName, TMetric>> ConsumerMetrics<TMetric>() where TMetric : Org.Apache.Kafka.Common.Metric;
         #endregion
     }
 
     #endregion
 
-    #region KNetCompactedReplicator<TKey, TValue>
+    #region KNetCompactedReplicator<K, V, TJVMK, TJVMV>
     /// <summary>
     /// Provides a reliable dictionary, persisted in a COMPACTED Kafka topic and shared among applications
     /// </summary>
-    /// <typeparam name="TKey">The type of keys in the dictionary</typeparam>
-    /// <typeparam name="TValue">The type of values in the dictionary. Must be a nullable type</typeparam>
-    public class KNetCompactedReplicator<TKey, TValue> : IKNetCompactedReplicator<TKey, TValue>
-        where TValue : class
+    /// <typeparam name="K">The type of keys in the dictionary</typeparam>
+    /// <typeparam name="V">The type of values in the dictionary. Must be a nullable type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    public class KNetCompactedReplicator<K, V, TJVMK, TJVMV> : IKNetCompactedReplicator<K, V, TJVMK, TJVMV>
+        where V : class
     {
         const long InitialLagState = -2;
         const long NotPresentLagState = -1;
@@ -310,7 +314,7 @@ namespace MASES.KNet.Replicator
             bool HasOffset { get; set; }
             Int64 Offset { get; set; }
             bool HasValue { get; set; }
-            TValue Value { get; set; }
+            V Value { get; set; }
         }
 
         struct LocalDataStorage : ILocalDataStorage
@@ -328,20 +332,20 @@ namespace MASES.KNet.Replicator
             public bool HasOffset { get; set; }
             public long Offset { get; set; }
             public bool HasValue { get; set; }
-            public TValue Value { get; set; }
+            public V Value { get; set; }
         }
 
         #endregion
 
         #region Local Enumerator
 
-        class LocalDataStorageEnumerator : IEnumerator<KeyValuePair<TKey, TValue>>
+        class LocalDataStorageEnumerator : IEnumerator<KeyValuePair<K, V>>
         {
-            private IEnumerator<KeyValuePair<TKey, ILocalDataStorage>> _enumerator;
-            private readonly ConcurrentDictionary<TKey, ILocalDataStorage> _dictionary;
-            private readonly IConsumer<TKey, TValue> _consumer = null;
+            private IEnumerator<KeyValuePair<K, ILocalDataStorage>> _enumerator;
+            private readonly ConcurrentDictionary<K, ILocalDataStorage> _dictionary;
+            private readonly IConsumer<K, V, TJVMK, TJVMV> _consumer = null;
             private readonly string _topic;
-            public LocalDataStorageEnumerator(ConcurrentDictionary<TKey, ILocalDataStorage> dictionary, IConsumer<TKey, TValue> consumer, string topic)
+            public LocalDataStorageEnumerator(ConcurrentDictionary<K, ILocalDataStorage> dictionary, IConsumer<K, V, TJVMK, TJVMV> consumer, string topic)
             {
                 _dictionary = dictionary;
                 _consumer = consumer;
@@ -349,8 +353,8 @@ namespace MASES.KNet.Replicator
                 _enumerator = _dictionary.GetEnumerator();
             }
 
-            KeyValuePair<TKey, TValue>? _current = null;
-            public KeyValuePair<TKey, TValue> Current
+            KeyValuePair<K, V>? _current = null;
+            public KeyValuePair<K, V> Current
             {
                 get
                 {
@@ -366,7 +370,7 @@ namespace MASES.KNet.Replicator
                                 {
                                     OnDemandRetrieve(_consumer, _topic, localCurrent.Key, data);
                                 }
-                                _current = new KeyValuePair<TKey, TValue>(localCurrent.Key, localCurrent.Value.Value);
+                                _current = new KeyValuePair<K, V>(localCurrent.Key, localCurrent.Value.Value);
                             }
                         }
                         return _current.Value;
@@ -395,9 +399,9 @@ namespace MASES.KNet.Replicator
                 _enumerator.Reset();
             }
 
-            public System.Collections.Generic.ICollection<TValue> Values()
+            public System.Collections.Generic.ICollection<V> Values()
             {
-                System.Collections.Generic.List<TValue> values = new System.Collections.Generic.List<TValue>();
+                System.Collections.Generic.List<V> values = new System.Collections.Generic.List<V>();
                 while (this.MoveNext())
                 {
                     values.Add(this.Current.Value);
@@ -405,7 +409,7 @@ namespace MASES.KNet.Replicator
                 return values;
             }
 
-            public bool TryGetValue(TKey key, out TValue value)
+            public bool TryGetValue(K key, out V value)
             {
                 value = default;
                 if (_dictionary.TryGetValue(key, out var data))
@@ -420,7 +424,7 @@ namespace MASES.KNet.Replicator
                 return false;
             }
 
-            public bool Contains(KeyValuePair<TKey, TValue> item)
+            public bool Contains(KeyValuePair<K, V> item)
             {
                 if (this.TryGetValue(item.Key, out var data))
                 {
@@ -429,19 +433,19 @@ namespace MASES.KNet.Replicator
                 return false;
             }
 
-            public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
+            public void CopyTo(KeyValuePair<K, V>[] array, int arrayIndex)
             {
-                var values = new System.Collections.Generic.List<KeyValuePair<TKey, TValue>>();
+                var values = new System.Collections.Generic.List<KeyValuePair<K, V>>();
                 while (this.MoveNext())
                 {
-                    values.Add(new KeyValuePair<TKey, TValue>(this.Current.Key, this.Current.Value));
+                    values.Add(new KeyValuePair<K, V>(this.Current.Key, this.Current.Value));
                 }
 
                 Array.Copy(values.ToArray(), 0, array, arrayIndex, values.Count);
             }
 
             [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-            static void OnDemandRetrieve(IConsumer<TKey, TValue> consumer, string topic, TKey key, ILocalDataStorage data)
+            static void OnDemandRetrieve(IConsumer<K, V, TJVMK, TJVMV> consumer, string topic, K key, ILocalDataStorage data)
             {
                 var topicPartition = new Org.Apache.Kafka.Common.TopicPartition(topic, data.Partition);
                 var topics = Java.Util.Collections.SingletonList(topicPartition);
@@ -512,11 +516,11 @@ namespace MASES.KNet.Replicator
         private bool _consumerPollRun = false;
         private Thread[] _consumerPollThreads = null;
         private ManualResetEvent[] _consumerPollThreadWaiter = null;
-        private ConcurrentDictionary<TKey, ILocalDataStorage> _dictionary = new ConcurrentDictionary<TKey, ILocalDataStorage>();
+        private ConcurrentDictionary<K, ILocalDataStorage> _dictionary = new ConcurrentDictionary<K, ILocalDataStorage>();
         private KNetCompactedConsumerRebalanceListener[] _consumerListeners = null;
-        private IConsumer<TKey, TValue>[] _consumers = null;
-        private IConsumer<TKey, TValue> _onTheFlyConsumer = null;
-        private IProducer<TKey, TValue> _producer = null;
+        private IConsumer<K, V, TJVMK, TJVMV>[] _consumers = null;
+        private IConsumer<K, V, TJVMK, TJVMV> _onTheFlyConsumer = null;
+        private IProducer<K, V, TJVMK, TJVMV> _producer = null;
         private string _bootstrapServers = null;
         private string _stateName = string.Empty;
         private string _groupId = Guid.NewGuid().ToString();
@@ -527,20 +531,20 @@ namespace MASES.KNet.Replicator
         private TopicConfigBuilder _topicConfig = null;
         private ConsumerConfigBuilder _consumerConfig = null;
         private ProducerConfigBuilder _producerConfig = null;
-        private Func<IKNetCompactedReplicator<TKey, TValue>, bool, KeyValuePair<TKey, TValue>, bool> _onDelayedStore = null;
+        private Func<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, bool, KeyValuePair<K, V>, bool> _onDelayedStore = null;
         private AccessRightsType _accessrights = AccessRightsType.ReadWrite;
         private UpdateModeTypes _updateMode = UpdateModeTypes.OnDelivery;
-        private Tuple<TKey, ManualResetEvent> _OnConsumeSyncWaiter = null;
+        private Tuple<K, ManualResetEvent> _OnConsumeSyncWaiter = null;
         private System.Collections.Generic.Dictionary<int, System.Collections.Generic.IList<int>> _consumerAssociatedPartition = new();
         private ManualResetEvent[] _assignmentWaiters;
         private bool[] _assignmentWaitersStatus;
         private long[] _lastPartitionLags = null;
 
         private Type _KNetKeySerDes = null;
-        private ISerDes<TKey> _keySerDes = null;
+        private ISerDes<K, TJVMK> _keySerDes = null;
         private bool _disposeKeySerDes = false;
         private Type _KNetValueSerDes = null;
-        private ISerDes<TValue> _valueSerDes = null;
+        private ISerDes<V, TJVMV> _valueSerDes = null;
         private bool _disposeValueSerDes = false;
 
         private bool _started = false;
@@ -549,26 +553,26 @@ namespace MASES.KNet.Replicator
 
         #region Events
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnRemoteAdd"/>
-        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteAdd;
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.OnRemoteAdd"/>
+        public event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnRemoteAdd;
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnRemoteUpdate"/>
-        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteUpdate;
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.OnRemoteUpdate"/>
+        public event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnRemoteUpdate;
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnRemoteRemove"/>
-        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteRemove;
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.OnRemoteRemove"/>
+        public event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnRemoteRemove;
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnLocalAdd"/>
-        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalAdd;
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.OnLocalAdd"/>
+        public event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnLocalAdd;
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnLocalUpdate"/>
-        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalUpdate;
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.OnLocalUpdate"/>
+        public event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnLocalUpdate;
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnLocalRemove"/>
-        public event Action<IKNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalRemove;
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.OnLocalRemove"/>
+        public event Action<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, KeyValuePair<K, V>> OnLocalRemove;
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.OnDelayedStore"/>
-        public Func<IKNetCompactedReplicator<TKey, TValue>, bool, KeyValuePair<TKey, TValue>, bool> OnDelayedStore
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.OnDelayedStore"/>
+        public Func<IKNetCompactedReplicator<K, V, TJVMK, TJVMV>, bool, KeyValuePair<K, V>, bool> OnDelayedStore
         {
             get { return _onDelayedStore; }
             set { CheckStarted(); _onDelayedStore = value; }
@@ -577,43 +581,43 @@ namespace MASES.KNet.Replicator
         #endregion
 
         #region Public Properties
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.AccessRights"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.AccessRights"/>
         public AccessRightsType AccessRights { get { return _accessrights; } set { CheckStarted(); _accessrights = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.UpdateMode"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.UpdateMode"/>
         public UpdateModeTypes UpdateMode { get { return _updateMode; } set { CheckStarted(); _updateMode = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.BootstrapServers"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.BootstrapServers"/>
         public string BootstrapServers { get { return _bootstrapServers; } set { CheckStarted(); _bootstrapServers = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.StateName"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.StateName"/>
         public string StateName { get { return _stateName; } set { CheckStarted(); _stateName = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.GroupId"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.GroupId"/>
         public string GroupId { get { return _groupId; } set { CheckStarted(); _groupId = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.Partitions"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.Partitions"/>
         public int Partitions { get { return _partitions; } set { CheckStarted(); _partitions = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ConsumerInstances"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.ConsumerInstances"/>
         public int? ConsumerInstances { get { return _consumerInstances.HasValue ? _consumerInstances.Value : _partitions; } set { CheckStarted(); _consumerInstances = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ReplicationFactor"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.ReplicationFactor"/>
         public short ReplicationFactor { get { return _replicationFactor; } set { CheckStarted(); _replicationFactor = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ConsumePollTimeout"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.ConsumePollTimeout"/>
         public long ConsumePollTimeout { get { return _consumePollTimeout; } set { CheckStarted(); _consumePollTimeout = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.TopicConfig"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.TopicConfig"/>
         public TopicConfigBuilder TopicConfig { get { return _topicConfig; } set { CheckStarted(); _topicConfig = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ConsumerConfig"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.ConsumerConfig"/>
         public ConsumerConfigBuilder ConsumerConfig { get { return _consumerConfig; } set { CheckStarted(); _consumerConfig = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ProducerConfig"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.ProducerConfig"/>
         public ProducerConfigBuilder ProducerConfig { get { return _producerConfig; } set { CheckStarted(); _producerConfig = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.KNetKeySerDes"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.KNetKeySerDes"/>
         public Type KNetKeySerDes
         {
             get { return _KNetKeySerDes; }
@@ -630,7 +634,7 @@ namespace MASES.KNet.Replicator
                     var keyT = value.GetGenericArguments();
                     if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
                     var t = value.GetGenericTypeDefinition();
-                    if (t.GetInterface(typeof(ISerDes<>).Name) == null)
+                    if (t.GetInterface(typeof(ISerDes<,>).Name) == null)
                     {
                         throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
                     }
@@ -640,10 +644,10 @@ namespace MASES.KNet.Replicator
             }
         }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.KeySerDes"/>
-        public ISerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.KeySerDes"/>
+        public ISerDes<K, TJVMK> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.KNetValueSerDes"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.KNetValueSerDes"/>
         public Type KNetValueSerDes
         {
             get { return _KNetValueSerDes; }
@@ -660,7 +664,7 @@ namespace MASES.KNet.Replicator
                     var keyT = value.GetGenericArguments();
                     if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
                     var t = value.GetGenericTypeDefinition();
-                    if (t.GetInterface(typeof(ISerDes<>).Name) == null)
+                    if (t.GetInterface(typeof(ISerDes<,>).Name) == null)
                     {
                         throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
                     }
@@ -670,22 +674,22 @@ namespace MASES.KNet.Replicator
             }
         }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ValueSerDes"/>
-        public ISerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.ValueSerDes"/>
+        public ISerDes<V, TJVMV> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
 #if NET7_0_OR_GREATER
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsPrefecth"/>
-        public bool IsPrefecth { get; private set; } = !(typeof(TKey).IsValueType && typeof(TValue).IsValueType);
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.IsPrefecth"/>
+        public bool IsPrefecth { get; private set; } = !(typeof(K).IsValueType && typeof(V).IsValueType);
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.PrefetchThreshold"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.PrefetchThreshold"/>
         public int PrefetchThreshold { get; private set; } = 10;
 #endif
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsStarted"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.IsStarted"/>
         public bool IsStarted => _started;
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsAssigned"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.IsAssigned"/>
         public bool IsAssigned => _assignmentWaiters.All((o) => o.WaitOne(0));
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.CurrentPartitionLags"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.CurrentPartitionLags"/>
         public IReadOnlyDictionary<int, long> CurrentPartitionLags
         {
             get
@@ -700,7 +704,7 @@ namespace MASES.KNet.Replicator
             }
         }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.CurrentConsumersSyncState"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.CurrentConsumersSyncState"/>
         public IReadOnlyDictionary<int, bool> CurrentConsumersSyncState
         {
             get
@@ -738,12 +742,12 @@ namespace MASES.KNet.Replicator
 
         bool UpdateModeDelayed => UpdateMode.HasFlag(UpdateModeTypes.Delayed);
 
-        private void OnMessage(ConsumerRecord<TKey, TValue> record)
+        private void OnMessage(ConsumerRecord<K, V, TJVMK, TJVMV> record)
         {
             if (record.Value == null)
             {
                 _dictionary.TryRemove(record.Key, out var data);
-                OnRemoteRemove?.Invoke(this, new KeyValuePair<TKey, TValue>(record.Key, data.Value));
+                OnRemoteRemove?.Invoke(this, new KeyValuePair<K, V>(record.Key, data.Value));
             }
             else
             {
@@ -763,7 +767,7 @@ namespace MASES.KNet.Replicator
                     bool storeValue = UpdateModeDelayed ? false : true;
                     if (OnDelayedStore != null)
                     {
-                        storeValue = OnDelayedStore.Invoke(this, storeValue, new KeyValuePair<TKey, TValue>(record.Key, record.Value));
+                        storeValue = OnDelayedStore.Invoke(this, storeValue, new KeyValuePair<K, V>(record.Key, record.Value));
                     }
                     if (storeValue)
                     {
@@ -773,11 +777,11 @@ namespace MASES.KNet.Replicator
                 }
                 if (containsKey)
                 {
-                    OnRemoteUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(record.Key, record.Value));
+                    OnRemoteUpdate?.Invoke(this, new KeyValuePair<K, V>(record.Key, record.Value));
                 }
                 else
                 {
-                    OnRemoteAdd?.Invoke(this, new KeyValuePair<TKey, TValue>(record.Key, record.Value));
+                    OnRemoteAdd?.Invoke(this, new KeyValuePair<K, V>(record.Key, record.Value));
                 }
             }
 
@@ -842,7 +846,7 @@ namespace MASES.KNet.Replicator
         }
 
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        private void AddOrUpdate(TKey key, TValue value)
+        private void AddOrUpdate(K key, V value)
         {
             ValidateAccessRights(AccessRightsType.Write);
             ValidateStarted();
@@ -873,7 +877,7 @@ namespace MASES.KNet.Replicator
                         }
                     })
                     {
-                        _producer.Produce(new ProducerRecord<TKey, TValue>(_stateName, key, value), cb);
+                        _producer.Produce(new ProducerRecord<K, V, TJVMK, TJVMV>(_stateName, key, value), cb);
                         deliverySemaphore.WaitOne();
                         if (exception != null) throw exception;
                     }
@@ -882,7 +886,7 @@ namespace MASES.KNet.Replicator
                 if (value == null)
                 {
                     _dictionary.TryRemove(key, out var data);
-                    OnLocalRemove?.Invoke(this, new KeyValuePair<TKey, TValue>(key, data.Value));
+                    OnLocalRemove?.Invoke(this, new KeyValuePair<K, V>(key, data.Value));
                 }
                 else
                 {
@@ -902,7 +906,7 @@ namespace MASES.KNet.Replicator
                         bool storeValue = UpdateModeDelayed ? false : true;
                         if (OnDelayedStore != null)
                         {
-                            storeValue = OnDelayedStore.Invoke(this, storeValue, new KeyValuePair<TKey, TValue>(key, value));
+                            storeValue = OnDelayedStore.Invoke(this, storeValue, new KeyValuePair<K, V>(key, value));
                         }
                         if (storeValue)
                         {
@@ -912,11 +916,11 @@ namespace MASES.KNet.Replicator
                     }
                     if (containsKey)
                     {
-                        OnLocalUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(key, value));
+                        OnLocalUpdate?.Invoke(this, new KeyValuePair<K, V>(key, value));
                     }
                     else
                     {
-                        OnLocalAdd?.Invoke(this, new KeyValuePair<TKey, TValue>(key, value));
+                        OnLocalAdd?.Invoke(this, new KeyValuePair<K, V>(key, value));
                     }
                 }
             }
@@ -925,7 +929,7 @@ namespace MASES.KNet.Replicator
                 _producer.Produce(StateName, key, value, (Org.Apache.Kafka.Clients.Producer.Callback)null);
                 if (UpdateModeOnConsumeSync)
                 {
-                    _OnConsumeSyncWaiter = new Tuple<TKey, ManualResetEvent>(key, new ManualResetEvent(false));
+                    _OnConsumeSyncWaiter = new Tuple<K, ManualResetEvent>(key, new ManualResetEvent(false));
                     _OnConsumeSyncWaiter.Item2.WaitOne();
                     _OnConsumeSyncWaiter.Item2.Dispose();
                 }
@@ -962,18 +966,18 @@ namespace MASES.KNet.Replicator
             {
                 ConsumerConfig.KNetKeySerDes = KNetKeySerDes;
             }
-            else if (KeySerDes == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external deserializer, set KNetKeySerDes or KeySerDes.");
+            else if (KeySerDes == null) throw new InvalidOperationException($"{typeof(K)} needs an external deserializer, set KNetKeySerDes or KeySerDes.");
 
             if (KNetValueSerDes != null)
             {
                 ConsumerConfig.KNetValueSerDes = KNetValueSerDes;
             }
-            else if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external deserializer, set KNetValueSerDes or ValueSerDes.");
+            else if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(V)} needs an external deserializer, set KNetValueSerDes or ValueSerDes.");
 
             _assignmentWaiters = new ManualResetEvent[Partitions];
             _assignmentWaitersStatus = new bool[Partitions];
             _lastPartitionLags = new long[Partitions];
-            _consumers = new KNetConsumer<TKey, TValue>[ConsumersToAllocate()];
+            _consumers = new KNetConsumer<K, V, TJVMK, TJVMV>[ConsumersToAllocate()];
             _consumerListeners = new KNetCompactedConsumerRebalanceListener[ConsumersToAllocate()];
 
             for (int i = 0; i < Partitions; i++)
@@ -986,7 +990,8 @@ namespace MASES.KNet.Replicator
             for (int i = 0; i < ConsumersToAllocate(); i++)
             {
                 _consumerAssociatedPartition.Add(i, new System.Collections.Generic.List<int>());
-                _consumers[i] = (KNetKeySerDes != null || KNetValueSerDes != null) ? new KNetConsumer<TKey, TValue>(ConsumerConfig) : new KNetConsumer<TKey, TValue>(ConsumerConfig, KeySerDes, ValueSerDes);
+                _consumers[i] = (KNetKeySerDes != null || KNetValueSerDes != null) ? new KNetConsumer<K, V, TJVMK, TJVMV>(ConsumerConfig)
+                                                                                   : new KNetConsumer<K, V, TJVMK, TJVMV>(ConsumerConfig, KeySerDes, ValueSerDes);
 #if NET7_0_OR_GREATER
                 _consumers[i].ApplyPrefetch(IsPrefecth, PrefetchThreshold);
 #endif
@@ -1008,7 +1013,8 @@ namespace MASES.KNet.Replicator
                 ConsumerConfigBuilder consumerConfigBuilder = ConsumerConfigBuilder.CreateFrom(_consumerConfig);
                 consumerConfigBuilder.WithEnableAutoCommit(false).WithGroupId(Guid.NewGuid().ToString());
 
-                _onTheFlyConsumer = (KNetKeySerDes != null || KNetValueSerDes != null) ? new KNetConsumer<TKey, TValue>(consumerConfigBuilder) : new KNetConsumer<TKey, TValue>(consumerConfigBuilder, KeySerDes, ValueSerDes);
+                _onTheFlyConsumer = (KNetKeySerDes != null || KNetValueSerDes != null) ? new KNetConsumer<K, V, TJVMK, TJVMV>(consumerConfigBuilder)
+                                                                                       : new KNetConsumer<K, V, TJVMK, TJVMV>(consumerConfigBuilder, KeySerDes, ValueSerDes);
             }
         }
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -1024,15 +1030,16 @@ namespace MASES.KNet.Replicator
             {
                 ProducerConfig.KNetKeySerDes = KNetKeySerDes;
             }
-            else if (KeySerDes == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external serializer, set KNetKeySerDes or KeySerDes.");
+            else if (KeySerDes == null) throw new InvalidOperationException($"{typeof(K)} needs an external serializer, set KNetKeySerDes or KeySerDes.");
 
             if (KNetValueSerDes != null)
             {
                 ProducerConfig.KNetValueSerDes = KNetValueSerDes;
             }
-            else if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external serializer, set KNetValueSerDes or ValueSerDes.");
+            else if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(V)} needs an external serializer, set KNetValueSerDes or ValueSerDes.");
 
-            _producer = (KNetKeySerDes != null || KNetValueSerDes != null) ? new KNetProducer<TKey, TValue>(ProducerConfig) : new KNetProducer<TKey, TValue>(ProducerConfig, KeySerDes, ValueSerDes);
+            _producer = (KNetKeySerDes != null || KNetValueSerDes != null) ? new KNetProducer<K, V, TJVMK, TJVMV>(ProducerConfig)
+                                                                           : new KNetProducer<K, V, TJVMK, TJVMV>(ProducerConfig, KeySerDes, ValueSerDes);
         }
 
         void ConsumerPollHandler(object o)
@@ -1095,18 +1102,18 @@ namespace MASES.KNet.Replicator
             return _consumers[index].IsEmpty && !_consumers[index].IsCompleting && lagInSync;
         }
 
-#endregion
+        #endregion
 
         #region Public methods
 #if NET7_0_OR_GREATER
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ApplyPrefetch(bool, int)"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.ApplyPrefetch(bool, int)"/>
         public void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10)
         {
             IsPrefecth = enablePrefetch;
             PrefetchThreshold = IsPrefecth ? prefetchThreshold : 10;
         }
 #endif
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.Start"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.Start"/>
         public void Start()
         {
             if (string.IsNullOrWhiteSpace(BootstrapServers)) throw new InvalidOperationException("BootstrapServers must be set before start.");
@@ -1157,15 +1164,15 @@ namespace MASES.KNet.Replicator
                 finally { topic?.Dispose(); }
             }
             _disposeKeySerDes = false;
-            if (KNetKeySerDes == null && KeySerDes == null && KNetSerialization.IsInternalManaged<TKey>())
+            if (KNetKeySerDes == null && KeySerDes == null && KNetSerialization.IsInternalManaged<K>())
             {
-                KeySerDes = new SerDes<TKey>();
+                KeySerDes = new SerDes<K, TJVMK>();
                 _disposeKeySerDes = true;
             }
             _disposeValueSerDes = false;
-            if (KNetValueSerDes == null && ValueSerDes == null && KNetSerialization.IsInternalManaged<TValue>())
+            if (KNetValueSerDes == null && ValueSerDes == null && KNetSerialization.IsInternalManaged<V>())
             {
-                ValueSerDes = new SerDes<TValue>();
+                ValueSerDes = new SerDes<V, TJVMV>();
                 _disposeValueSerDes = true;
             }
 
@@ -1204,7 +1211,7 @@ namespace MASES.KNet.Replicator
             _started = true;
         }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.StartAndWait(int)"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.StartAndWait(int)"/>
         public bool StartAndWait(int timeout = Timeout.Infinite)
         {
             ValidateAccessRights(AccessRightsType.Read);
@@ -1213,7 +1220,7 @@ namespace MASES.KNet.Replicator
             return SyncWait(timeout);
         }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.WaitForStateAssignment(int)"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.WaitForStateAssignment(int)"/>
         public bool WaitForStateAssignment(int timeout = Timeout.Infinite)
         {
             ValidateAccessRights(AccessRightsType.Read);
@@ -1231,7 +1238,7 @@ namespace MASES.KNet.Replicator
             return status;
         }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.SyncWait(int)"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.SyncWait(int)"/>
         public bool SyncWait(int timeout = Timeout.Infinite)
         {
             ValidateAccessRights(AccessRightsType.Read);
@@ -1250,7 +1257,7 @@ namespace MASES.KNet.Replicator
             return sync;
         }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.Flush"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.Flush"/>
         public void Flush()
         {
             ValidateAccessRights(AccessRightsType.Write);
@@ -1258,13 +1265,13 @@ namespace MASES.KNet.Replicator
             _producer?.Flush();
         }
 
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ProducerMetrics{TMetric}"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.ProducerMetrics{TMetric}"/>
         public Java.Util.Map<Org.Apache.Kafka.Common.MetricName, TMetric> ProducerMetrics<TMetric>() where TMetric : Org.Apache.Kafka.Common.Metric
         {
             ValidateStarted();
             return _producer.Metrics<TMetric>();
         }
-        /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ConsumerMetrics{TMetric}"/>
+        /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.ConsumerMetrics{TMetric}"/>
         public IReadOnlyDictionary<int, Java.Util.Map<Org.Apache.Kafka.Common.MetricName, TMetric>> ConsumerMetrics<TMetric>() where TMetric : Org.Apache.Kafka.Common.Metric
         {
             ValidateStarted();
@@ -1280,7 +1287,7 @@ namespace MASES.KNet.Replicator
 
         #endregion
 
-        #region IDictionary<TKey, TValue>
+        #region IDictionary<K, V>
 
         /// <summary>
         /// Gets or sets the element with the specified keyy. <see langword="null"/> value removes the specified key
@@ -1291,7 +1298,7 @@ namespace MASES.KNet.Replicator
         /// <exception cref="InvalidOperationException">The call is set, and the provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Write"/> flag</exception>
         /// <exception cref="ArgumentNullException"><paramref name="key"/> is null</exception>
         /// <exception cref="KeyNotFoundException">The call is get and <paramref name="key"/> is not found</exception>
-        public TValue this[TKey key]
+        public V this[K key]
         {
             get
             {
@@ -1308,11 +1315,11 @@ namespace MASES.KNet.Replicator
         }
 
         /// <summary>
-        /// Gets an <see cref="System.Collections.Generic.ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Gets an <see cref="System.Collections.Generic.ICollection{K}"/> containing the keys of this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        /// <returns><see cref="System.Collections.Generic.ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <returns><see cref="System.Collections.Generic.ICollection{K}"/> containing the keys of this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/></returns>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        public System.Collections.Generic.ICollection<TKey> Keys
+        public System.Collections.Generic.ICollection<K> Keys
         {
             get
             {
@@ -1323,11 +1330,11 @@ namespace MASES.KNet.Replicator
         }
 
         /// <summary>
-        /// Gets an <see cref="System.Collections.Generic.ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Gets an <see cref="System.Collections.Generic.ICollection{V}"/> containing the values of this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        /// <returns><see cref="System.Collections.Generic.ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <returns><see cref="System.Collections.Generic.ICollection{V}"/> containing the values of this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/></returns>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        public System.Collections.Generic.ICollection<TValue> Values
+        public System.Collections.Generic.ICollection<V> Values
         {
             get
             {
@@ -1339,9 +1346,9 @@ namespace MASES.KNet.Replicator
         }
 
         /// <summary>
-        /// Gets the number of elements contained in this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Gets the number of elements contained in this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        /// <returns>The number of elements contained in this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <returns>The number of elements contained in this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/></returns>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public int Count
         {
@@ -1362,30 +1369,30 @@ namespace MASES.KNet.Replicator
         }
 
         /// <summary>
-        /// Adds or updates the <paramref name="key"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
+        /// Adds or updates the <paramref name="key"/> in this and others <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="key">The object to use as the key of the element to add</param>
         /// <param name="value">The object to use as the value of the element to add. null means remove <paramref name="key"/></param>
         /// <exception cref="ArgumentNullException"><paramref name="key"/> is null</exception>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Write"/> flag</exception>
-        public void Add(TKey key, TValue value)
+        public void Add(K key, V value)
         {
             AddOrUpdate(key, value);
         }
 
         /// <summary>
-        /// Adds or updates the <paramref name="item"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
+        /// Adds or updates the <paramref name="item"/> in this and others <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="item">The item to add or updates. Value == null means remove key</param>
         /// <exception cref="ArgumentNullException"><paramref name="item"/>.Key is null</exception>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Write"/> flag</exception>
-        public void Add(KeyValuePair<TKey, TValue> item)
+        public void Add(KeyValuePair<K, V> item)
         {
             AddOrUpdate(item.Key, item.Value);
         }
 
         /// <summary>
-        /// Clears this <see cref="KNetCompactedReplicator{TKey, TValue}"/>, resetting all partitions' sync
+        /// Clears this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>, resetting all partitions' sync
         /// </summary>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public void Clear()
@@ -1396,13 +1403,13 @@ namespace MASES.KNet.Replicator
         }
 
         /// <summary>
-        /// Determines whether this <see cref="KNetCompactedReplicator{TKey, TValue}"/> contains the specified item
+        /// Determines whether this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> contains the specified item
         /// </summary>
-        /// <param name="item">The item to locate in this <see cref="KNetCompactedReplicator{TKey, TValue}"/></param>
-        /// <returns><see langword="true"/> if this <see cref="KNetCompactedReplicator{TKey, TValue}"/> contains an element <paramref name="item"/>; otherwise, <see langword="false"/></returns>
+        /// <param name="item">The item to locate in this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/></param>
+        /// <returns><see langword="true"/> if this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> contains an element <paramref name="item"/>; otherwise, <see langword="false"/></returns>
         /// <exception cref="ArgumentNullException"><paramref name="item"/>.Key is <see langword="null"/></exception>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        public bool Contains(KeyValuePair<TKey, TValue> item)
+        public bool Contains(KeyValuePair<K, V> item)
         {
             ValidateAccessRights(AccessRightsType.Read);
             ValidateStarted();
@@ -1411,13 +1418,13 @@ namespace MASES.KNet.Replicator
         }
 
         /// <summary>
-        /// Determines whether this <see cref="KNetCompactedReplicator{TKey, TValue}"/> contains an element with the specified key
+        /// Determines whether this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> contains an element with the specified key
         /// </summary>
-        /// <param name="key">The key to locate in this <see cref="KNetCompactedReplicator{TKey, TValue}"/></param>
-        /// <returns><see langword="true"/> if this <see cref="KNetCompactedReplicator{TKey, TValue}"/> contains an element with <paramref name="key"/>; otherwise, <see langword="false"/></returns>
+        /// <param name="key">The key to locate in this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/></param>
+        /// <returns><see langword="true"/> if this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> contains an element with <paramref name="key"/>; otherwise, <see langword="false"/></returns>
         /// <exception cref="ArgumentNullException"><paramref name="key"/> is <see langword="null"/></exception>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        public bool ContainsKey(TKey key)
+        public bool ContainsKey(K key)
         {
             ValidateAccessRights(AccessRightsType.Read);
             ValidateStarted();
@@ -1425,18 +1432,18 @@ namespace MASES.KNet.Replicator
         }
 
         /// <summary>
-        /// Copies the elements of this <see cref="KNetCompactedReplicator{TKey, TValue}"/> to an <see cref="Array"/>, starting at a particular <see cref="Array"/> index
+        /// Copies the elements of this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> to an <see cref="Array"/>, starting at a particular <see cref="Array"/> index
         /// </summary>
         /// <param name="array">The one-dimensional <see cref="Array"/> that is the destination of the elements copied 
-        /// from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>. The <see cref="Array"/> must have zero-based indexing</param>
+        /// from this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>. The <see cref="Array"/> must have zero-based indexing</param>
         /// <param name="arrayIndex">The zero-based index in array at which copying begins</param>ù
         /// <exception cref="ArgumentNullException"><paramref name="array"/> is null</exception>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="arrayIndex"/> is less than zero</exception>
         /// <exception cref="ArgumentException"><paramref name="array"/> is multidimensional. 
-        /// -or- The number of elements in the source <see cref="KNetCompactedReplicator{TKey, TValue}"/> is greater than the available space from <paramref name="arrayIndex"/> to the end of the destination <paramref name="array"/>. 
-        /// -or- The type of the source <see cref="KNetCompactedReplicator{TKey, TValue}"/> cannot be cast automatically to the type of the destination <paramref name="array"/></exception>
+        /// -or- The number of elements in the source <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> is greater than the available space from <paramref name="arrayIndex"/> to the end of the destination <paramref name="array"/>. 
+        /// -or- The type of the source <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> cannot be cast automatically to the type of the destination <paramref name="array"/></exception>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
+        public void CopyTo(KeyValuePair<K, V>[] array, int arrayIndex)
         {
             ValidateAccessRights(AccessRightsType.Read);
             ValidateStarted();
@@ -1445,11 +1452,11 @@ namespace MASES.KNet.Replicator
         }
 
         /// <summary>
-        /// Returns an enumerator that iterates through this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Returns an enumerator that iterates through this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        /// <returns>An enumerator for this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <returns>An enumerator for this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/></returns>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
+        public IEnumerator<KeyValuePair<K, V>> GetEnumerator()
         {
             ValidateAccessRights(AccessRightsType.Read);
             ValidateStarted();
@@ -1458,13 +1465,13 @@ namespace MASES.KNet.Replicator
         }
 
         /// <summary>
-        /// Removes the <paramref name="key"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
+        /// Removes the <paramref name="key"/> from this and others <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="key">The key of the element to remove</param>
-        /// <returns><see langword="true"/> if the removal request is delivered to the others <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <returns><see langword="true"/> if the removal request is delivered to the others <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/></returns>
         /// <exception cref="ArgumentNullException"><paramref name="key"/> is <see langword="null"/></exception>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Write"/> flag</exception>
-        public bool Remove(TKey key)
+        public bool Remove(K key)
         {
             AddOrUpdate(key, null);
 
@@ -1472,13 +1479,13 @@ namespace MASES.KNet.Replicator
         }
 
         /// <summary>
-        /// Removes the <paramref name="item"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
+        /// Removes the <paramref name="item"/> from this and others <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="item">Item to be removed</param>
-        /// <returns><see langword="true"/> if the removal request is delivered to the others <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <returns><see langword="true"/> if the removal request is delivered to the others <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/></returns>
         /// <exception cref="ArgumentNullException"><paramref name="item"/>.Key is <see langword="null"/></exception>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Write"/> flag</exception>
-        public bool Remove(KeyValuePair<TKey, TValue> item)
+        public bool Remove(KeyValuePair<K, V> item)
         {
             AddOrUpdate(item.Key, null);
 
@@ -1486,15 +1493,15 @@ namespace MASES.KNet.Replicator
         }
 
         /// <summary>
-        /// Attempts to get the value associated with the specified <paramref name="key"/> from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Attempts to get the value associated with the specified <paramref name="key"/> from this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="key">The key of the value to get</param>
-        /// <param name="value">When this method returns, contains the object from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// <param name="value">When this method returns, contains the object from this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>
         /// that has the specified <paramref name="key"/>, or the default value of the type if the operation failed</param>
-        /// <returns><see langword="true"/> if the <paramref name="key"/> was found in this <see cref="KNetCompactedReplicator{TKey, TValue}"/>; otherwise, <see langword="false"/></returns>
+        /// <returns><see langword="true"/> if the <paramref name="key"/> was found in this <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/>; otherwise, <see langword="false"/></returns>
         /// <exception cref="ArgumentNullException"><paramref name="key"/> is <see langword="null"/></exception>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        public bool TryGetValue(TKey key, out TValue value)
+        public bool TryGetValue(K key, out V value)
         {
             ValidateAccessRights(AccessRightsType.Read);
             ValidateStarted();
@@ -1583,5 +1590,17 @@ namespace MASES.KNet.Replicator
 
         #endregion
     }
-#endregion
+    #endregion
+
+    #region KNetCompactedReplicator<K, V>
+    /// <summary>
+    /// Provides a reliable dictionary, persisted in a COMPACTED Kafka topic and shared among applications, extends <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> using array of <see cref="byte"/>
+    /// </summary>
+    /// <typeparam name="K">The type of keys in the dictionary</typeparam>
+    /// <typeparam name="V">The type of values in the dictionary. Must be a nullable type</typeparam>
+    public class KNetCompactedReplicator<K, V> : KNetCompactedReplicator<K, V, byte[], byte[]>
+        where V : class
+    {
+    }
+    #endregion
 }

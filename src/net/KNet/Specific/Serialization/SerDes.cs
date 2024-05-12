@@ -255,7 +255,7 @@ namespace MASES.KNet.Serialization
     /// Common serializer/deserializer
     /// </summary>
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
-    public class SerDes<T> : SerDes<T, byte[]>, ISerDes<T>
+    public class SerDes<T> : SerDes<T, byte[]>, ISerDes<T, byte[]>
     {
     }
     /// <summary>

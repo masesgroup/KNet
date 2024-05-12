@@ -21,25 +21,27 @@ using MASES.KNet.Serialization;
 namespace MASES.KNet.Consumer
 {
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{TJVMK, TJVMV}"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class ConsumerRecord<K, V>: IGenericSerDesFactoryApplier
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    public class ConsumerRecord<K, V, TJVMK, TJVMV>: IGenericSerDesFactoryApplier
     {
-        IDeserializer<K> _keyDeserializer;
-        IDeserializer<V> _valueDeserializer;
-        readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> _record;
+        IDeserializer<K, TJVMK> _keyDeserializer;
+        IDeserializer<V, TJVMV> _valueDeserializer;
+        readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> _record;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
-        /// Initialize a new <see cref="ConsumerRecord{K, V}"/>
+        /// Initialize a new <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}"/> to use for initialization</param>
-        /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K}"/></param>
-        /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{K}"/></param>
+        /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{TJVMK, TJVMV}"/> to use for initialization</param>
+        /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
+        /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{V, TJVMV}"/></param>
         /// <param name="fromPrefetched">True if the initialization comes from the prefetch iterator</param>
-        internal ConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> record, IDeserializer<K> keyDeserializer, IDeserializer<V> valueDeserializer, bool fromPrefetched)
+        internal ConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, bool fromPrefetched)
         {
             _record = record;
             _keyDeserializer = keyDeserializer;
@@ -52,11 +54,11 @@ namespace MASES.KNet.Consumer
             }
         }
         /// <summary>
-        /// Initialize a new <see cref="ConsumerRecord{K, V}"/>
+        /// Initialize a new <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}"/> to use for initialization</param>
+        /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{TJVMK, TJVMV}"/> to use for initialization</param>
         /// <param name="factory"><see cref="IGenericSerDesFactory"/></param>
-        internal ConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> record, IGenericSerDesFactory factory)
+        internal ConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory)
         {
             _record = record;
             _factory = factory;
@@ -100,7 +102,7 @@ namespace MASES.KNet.Consumer
             {
                 if (!_localKeyDes)
                 {
-                    _keyDeserializer ??= _factory?.BuildKeySerDes<K>();
+                    _keyDeserializer ??= _factory?.BuildKeySerDes<K, TJVMK>();
                     _localKey = _keyDeserializer.UseHeaders ? _keyDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Key()) : _keyDeserializer.Deserialize(Topic, _record.Key());
                     _localKeyDes = true;
                 }
@@ -117,7 +119,7 @@ namespace MASES.KNet.Consumer
             {
                 if (!_localValueDes)
                 {
-                    _valueDeserializer ??= _factory?.BuildKeySerDes<V>();
+                    _valueDeserializer ??= _factory?.BuildKeySerDes<V, TJVMV>();
                     _localValue = _valueDeserializer.UseHeaders ? _valueDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Value()) : _valueDeserializer.Deserialize(Topic, _record.Value());
                     _localValueDes = true;
                 }
