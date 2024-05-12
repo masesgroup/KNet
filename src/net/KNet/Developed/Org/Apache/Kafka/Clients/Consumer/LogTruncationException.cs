@@ -29,6 +29,6 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/latest/org/apache/kafka/clients/consumer/LogTruncationException.html#divergentOffsets--"/>
         /// </summary>
-        public Map<TopicPartition, OffsetAndMetadata> DivergentOffsets => JVMBridgeBase.Wraps<Map<TopicPartition, OffsetAndMetadata>>(BridgeInstance.Invoke("divergentOffsets") as IJavaObject);
+        public Map<TopicPartition, OffsetAndMetadata> DivergentOffsets => JVMBridgeBase.WrapsDirect<Map<TopicPartition, OffsetAndMetadata>>(BridgeInstance.Invoke("divergentOffsets") as IJavaObject);
     }
 }

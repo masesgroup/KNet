@@ -20,7 +20,6 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using Org.Apache.Kafka.Common;
 using Java.Util;
-using static System.Net.WebRequestMethods;
 
 namespace Org.Apache.Kafka.Clients.Consumer
 {
@@ -29,6 +28,6 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/latest/org/apache/kafka/clients/consumer/InvalidOffsetException.html#partitions--"/>
         /// </summary>
-        public Set<TopicPartition> Partitions => JVMBridgeBase.Wraps<Set<TopicPartition>>(BridgeInstance.Invoke("partitions") as IJavaObject);
+        public Set<TopicPartition> Partitions => JVMBridgeBase.WrapsDirect<Set<TopicPartition>>(BridgeInstance.Invoke("partitions") as IJavaObject);
     }
 }

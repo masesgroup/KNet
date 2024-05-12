@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Header
         public static Headers Create()
         {
             var obj = MASES.JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeaders") as IJavaObject;
-            return Wraps<Headers>(obj);
+            return WrapsDirect<Headers>(obj);
         }
         /// <summary>
         /// Helper to create <see cref="Headers"/>
@@ -37,7 +37,7 @@ namespace Org.Apache.Kafka.Common.Header
         public static Headers Create(Header[] headers)
         {
             var obj = MASES.JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeaders", headers) as IJavaObject;
-            return Wraps<Headers>(obj);
+            return WrapsDirect<Headers>(obj);
         }
         /// <summary>
         /// Helper to create <see cref="Headers"/>
@@ -45,7 +45,7 @@ namespace Org.Apache.Kafka.Common.Header
         public static Headers Create(Iterable<Header> headers)
         {
             var obj = MASES.JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeaders", headers) as IJavaObject;
-            return Wraps<Headers>(obj);
+            return WrapsDirect<Headers>(obj);
         }
     }
 }

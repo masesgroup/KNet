@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Header
         public static Header Create(string key, byte[] value)
         {
             var obj = MASES.JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeader", key, value) as IJavaObject;
-            return Wraps<Header>(obj);
+            return WrapsDirect<Header>(obj);
         }
         /// <summary>
         /// Helper to create <see cref="Header"/>
@@ -37,7 +37,7 @@ namespace Org.Apache.Kafka.Common.Header
         public static Header Create(ByteBuffer keyBuffer, ByteBuffer valueBuffer)
         {
             var obj = MASES.JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeader", keyBuffer, valueBuffer) as IJavaObject;
-            return Wraps<Header>(obj);
+            return WrapsDirect<Header>(obj);
         }
     }
 }
