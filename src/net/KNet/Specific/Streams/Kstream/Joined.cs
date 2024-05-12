@@ -27,13 +27,16 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VO"></typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
     public class Joined<K, V, VO, TJVMK, TJVMV, TJVMVO> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        protected Joined(Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO> inner)
+        internal Joined(Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO> inner)
         {
             _inner = inner;
         }
@@ -87,9 +90,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-java.time.Duration-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="ISerDes{K}"/></param>
-        /// <param name="arg1"><see cref="ISerDes{V}"/></param>
-        /// <param name="arg2"><see cref="ISerDes{VO}"/></param>
+        /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
+        /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
+        /// <param name="arg2"><see cref="ISerDes{VO, TJVMVO}"/></param>
         /// <param name="arg3"><see cref="string"/></param>
         /// <param name="arg4"><see cref="System.TimeSpan"/></param>
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
@@ -145,7 +148,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Joined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="ISerDes{K}"/></param>
+        /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
         public Joined<K, V, VO, TJVMK, TJVMV, TJVMVO> WithKeySerde(ISerDes<K, TJVMK> arg0)
         {

@@ -25,6 +25,7 @@ namespace MASES.KNet.Streams.Kstream
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Initializer{TJVMVA}"/>
     /// </summary>
     /// <typeparam name="VA">The key type</typeparam>
+    /// <typeparam name="TJVMVA">The JVM type of <typeparamref name="VA"/></typeparam>
     public class Initializer<VA, TJVMVA> : Org.Apache.Kafka.Streams.Kstream.Initializer<TJVMVA>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
@@ -66,11 +67,11 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VA">The key type</typeparam>
     public class Initializer<VA> : Initializer<VA, byte[]>
     {
-        ISerDes<VA> _valueSerializer = null;
+        ISerDes<VA, byte[]> _valueSerializer = null;
         /// <inheritdoc/>
         public sealed override byte[] Apply()
         {
-            _valueSerializer ??= Factory?.BuildValueSerDes<VA>();
+            _valueSerializer ??= Factory?.BuildValueSerDes<VA, byte[]>();
 
             var methodToExecute = (OnApply2 != null) ? OnApply2 : Apply2;
             var res = methodToExecute();

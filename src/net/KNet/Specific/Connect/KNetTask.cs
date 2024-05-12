@@ -156,7 +156,7 @@ namespace MASES.KNet.Connect
         /// </summary>
         public abstract string ReflectedTaskClassName { get; }
         /// <summary>
-        /// Public method used from Java to trigger <see cref="Start(Map{string, string})"/>
+        /// Public method used from Java to trigger <see cref="Start(Map{Java.Lang.String, Java.Lang.String})"/>
         /// </summary>
         public void StartInternal()
         {

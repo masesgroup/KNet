@@ -257,7 +257,8 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static byte[] SerializeByteBuffer(bool fallbackToKafka, string topic, ByteBuffer data)
         {
-            return _ByteBufferSerializer.Serialize(topic, data);
+            if (fallbackToKafka) return _ByteBufferSerializer.Serialize(topic, data);
+            return (byte[])data.Array();
         }
 
         static readonly BytesSerializer _BytesSerializer = new BytesSerializer();

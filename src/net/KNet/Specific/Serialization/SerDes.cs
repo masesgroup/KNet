@@ -56,7 +56,6 @@ namespace MASES.KNet.Serialization
         #region private fields
         readonly KNetSerialization.SerializationType _SerializationType;
         readonly KNetSerialization.SerializationType _JVMSerializationType;
-        Serdes.WrapperSerde<TJVMT> _KafkaWrapperSerde;
         Serde<TJVMT> _KafkaSerde;
         Serializer<TJVMT> _KafkaSerializer;
         Deserializer<TJVMT> _KafkaDeserializer;
@@ -147,7 +146,6 @@ namespace MASES.KNet.Serialization
             _KafkaSerde = null;
             _KafkaSerializer = null;
             _KafkaDeserializer = null;
-            _KafkaWrapperSerde = null;
         }
         #endregion
 
@@ -255,7 +253,7 @@ namespace MASES.KNet.Serialization
     /// Common serializer/deserializer
     /// </summary>
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
-    public class SerDes<T> : SerDes<T, byte[]>, ISerDes<T>
+    public class SerDes<T> : SerDes<T, byte[]>, ISerDes<T, byte[]>
     {
     }
     /// <summary>

@@ -31,7 +31,6 @@ namespace MASES.KNet.Streams.Utils
     /// <typeparam name="TJVMV">The JVM value type</typeparam>
     public class KStreamConsumer<K, V, TJVMK, TJVMV> : Java.Util.Function.Consumer<Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier
     {
-        ISerDes<V> _valueSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 

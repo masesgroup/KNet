@@ -23,30 +23,31 @@ namespace MASES.KNet.Streams.Kstream
     /// <summary>
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
     /// </summary>
-    /// <typeparam name="TKey">The key type</typeparam>
-    public class Windowed<TKey> : IGenericSerDesFactoryApplier
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    public class Windowed<K, TJVMK> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]> _inner;
-        ISerDes<TKey> _keySerDes = null;
+        readonly Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> _inner;
+        ISerDes<K, TJVMK> _keySerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal Windowed(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]> windowed)
+        internal Windowed(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> windowed)
         {
             _factory = factory;
             _inner = windowed;
         }
 
         /// <summary>
-        /// Converter from <see cref="Windowed{K}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
+        /// Converter from <see cref="Windowed{K, TJVMK}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>(Windowed<TKey> t) => t._inner;
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>(Windowed<K, TJVMK> t) => t._inner;
 
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windowed.html#key--"/>
         /// </summary>
-        /// <returns><typeparamref name="TKey"/></returns>
-        public TKey Key { get { _keySerDes ??= _factory?.BuildKeySerDes<TKey>(); return _keySerDes.Deserialize(null, _inner.Key()); } }
+        /// <returns><typeparamref name="K"/></returns>
+        public K Key { get { _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>(); return _keySerDes.Deserialize(null, _inner.Key()); } }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Windowed.html#window--"/>
         /// </summary>

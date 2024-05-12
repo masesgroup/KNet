@@ -26,43 +26,29 @@ namespace MASES.KNet.Serialization
     public interface IGenericSerDesFactory
     {
         /// <summary>
-        /// The <see cref="Type"/> used to create an instance of <see cref="ISerDes{T}"/> for keys with <see cref="BuildKeySerDes{TKey}"/>
+        /// The <see cref="Type"/> used to create an instance of <see cref="ISerDes{T, TJVMT}"/> for keys with <see cref="BuildKeySerDes{TKey, TJVMTKey}"/>
         /// </summary>
         Type KNetKeySerDes { get; }
         /// <summary>
-        /// The <see cref="Type"/> used to create an instance of <see cref="ISerDes{T}"/> for values with <see cref="BuildValueSerDes{TValue}"/>
+        /// The <see cref="Type"/> used to create an instance of <see cref="ISerDes{T, TJVMT}"/> for values with <see cref="BuildValueSerDes{TValue, TJVMTValue}"/>
         /// </summary>
         Type KNetValueSerDes { get; }
         /// <summary>
-        /// Builds an instance of <see cref="ISerDes{TKey}"/> using the <see cref="Type"/> defined in <see cref="KNetKeySerDes"/>
+        /// Builds an instance of <see cref="ISerDes{TKey, TJVMKey}"/> using the <see cref="Type"/> defined in <see cref="KNetKeySerDes"/>
         /// </summary>
         /// <typeparam name="TKey">The type of the key</typeparam>
         /// <typeparam name="TJVMTKey">The JVM type of the key</typeparam>
-        /// <returns>An instance of <see cref="ISerDes{TKey}"/></returns>
+        /// <returns>An instance of <see cref="ISerDes{TKey, TJVMKey}"/></returns>
         /// <exception cref="InvalidOperationException">If <see cref="KNetKeySerDes"/> is <see langword="null"/></exception>
         ISerDes<TKey, TJVMTKey> BuildKeySerDes<TKey, TJVMTKey>();
         /// <summary>
-        /// Builds an instance of <see cref="ISerDes{TKey}"/> using the <see cref="Type"/> defined in <see cref="KNetKeySerDes"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key</typeparam>
-        /// <returns>An instance of <see cref="ISerDes{TKey}"/></returns>
-        /// <exception cref="InvalidOperationException">If <see cref="KNetKeySerDes"/> is <see langword="null"/></exception>
-        ISerDes<TKey> BuildKeySerDes<TKey>();
-        /// <summary>
-        /// Builds an instance of <see cref="ISerDes{TValue}"/> using the <see cref="Type"/> defined in <see cref="KNetValueSerDes"/>
+        /// Builds an instance of <see cref="ISerDes{TValue, TJVMTValue}"/> using the <see cref="Type"/> defined in <see cref="KNetValueSerDes"/>
         /// </summary>
         /// <typeparam name="TValue">The type of the key</typeparam>
         /// <typeparam name="TJVMTValue">The JVM type of the key</typeparam>
-        /// <returns>An instance of <see cref="ISerDes{TValue}"/></returns>
+        /// <returns>An instance of <see cref="ISerDes{TValue, TJVMTValue}"/></returns>
         /// <exception cref="InvalidOperationException">If <see cref="KNetValueSerDes"/> is <see langword="null"/></exception>
         ISerDes<TValue, TJVMTValue> BuildValueSerDes<TValue, TJVMTValue>();
-        /// <summary>
-        /// Builds an instance of <see cref="ISerDes{TValue}"/> using the <see cref="Type"/> defined in <see cref="KNetValueSerDes"/>
-        /// </summary>
-        /// <typeparam name="TValue">The type of the key</typeparam>
-        /// <returns>An instance of <see cref="ISerDes{TValue}"/></returns>
-        /// <exception cref="InvalidOperationException">If <see cref="KNetValueSerDes"/> is <see langword="null"/></exception>
-        ISerDes<TValue> BuildValueSerDes<TValue>();
         /// <summary>
         /// Clear the current factory
         /// </summary>

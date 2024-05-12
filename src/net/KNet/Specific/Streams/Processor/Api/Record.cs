@@ -24,11 +24,13 @@ namespace MASES.KNet.Streams.Processor.Api
     /// <summary>
     /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Processor.Api.Record{K, V}"/>
     /// </summary>
-    /// <typeparam name="TKey">The key type</typeparam>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public class Record<TKey, TValue>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    public class Record<K, V, TJVMK, TJVMV>
     {
-        internal Record(IGenericSerDesFactory builder, Org.Apache.Kafka.Streams.Processor.Api.Record<byte[], byte[]> record, Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata metadata)
+        internal Record(IGenericSerDesFactory builder, Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV> record, Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata metadata)
         {
             _builder = builder;
             _record = record;
@@ -36,59 +38,61 @@ namespace MASES.KNet.Streams.Processor.Api
         }
 
         readonly IGenericSerDesFactory _builder;
-        readonly Org.Apache.Kafka.Streams.Processor.Api.Record<byte[], byte[]> _record;
+        readonly Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV> _record;
         readonly Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata _metadata;
 
         /// <summary>
-        /// Converter from <see cref="Record{TKey, TValue}"/> to <see cref="Org.Apache.Kafka.Streams.Processor.Api.Record{K, V}"/>
+        /// Converter from <see cref="Record{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Processor.Api.Record{K, V}"/>
         /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Processor.Api.Record<byte[], byte[]>(Record<TKey, TValue> t) => t._record;
+        public static implicit operator Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV>(Record<K, V, TJVMK, TJVMV> t) => t._record;
 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Record.html#withKey-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="NewK"/></param>
         /// <typeparam name="NewK"></typeparam>
-        /// <returns><see cref="Record{NewK, TValue}"/></returns>
-        public Record<NewK, TValue> WithKey<NewK>(NewK arg0)
+        /// <typeparam name="TJVMNewK">The JVM type of <typeparamref name="NewK"/></typeparam>
+        /// <returns><see cref="Record{NewK, V, TJVMNewK, TJVMV}"/></returns>
+        public Record<NewK, V, TJVMNewK, TJVMV> WithKey<NewK, TJVMNewK>(NewK arg0)
         {
-            var serDes = _builder.BuildKeySerDes<NewK>();
+            var serDes = _builder.BuildKeySerDes<NewK, TJVMNewK>();
             var record = _record.WithKey(serDes.SerializeWithHeaders(_metadata?.Topic(), _record.Headers(), arg0));
-            return new Record<NewK, TValue>(_builder, record, _metadata);
+            return new Record<NewK, V, TJVMNewK, TJVMV>(_builder, record, _metadata);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Record.html#withValue-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="NewV"/></param>
         /// <typeparam name="NewV"></typeparam>
-        /// <returns><see cref="Record{TKey, NewV}"/></returns>
-        public Record<TKey, NewV> WithValue<NewV>(NewV arg0)
+        /// <typeparam name="TJVMNewV">The JVM type of <typeparamref name="NewV"/></typeparam>
+        /// <returns><see cref="Record{K, NewV, TJVMK, TJVMNewV}"/></returns>
+        public Record<K, NewV, TJVMK, TJVMNewV> WithValue<NewV, TJVMNewV>(NewV arg0)
         {
-            var serDes = _builder.BuildValueSerDes<NewV>();
+            var serDes = _builder.BuildValueSerDes<NewV, TJVMNewV>();
             var record = _record.WithValue(serDes.SerializeWithHeaders(_metadata?.Topic(), _record.Headers(), arg0));
-            return new Record<TKey, NewV>(_builder, record, _metadata);
+            return new Record<K, NewV, TJVMK, TJVMNewV>(_builder, record, _metadata);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Record.html#key--"/>
         /// </summary>
-        /// <returns><typeparamref name="TKey"/></returns>
-        public TKey Key
+        /// <returns><typeparamref name="K"/></returns>
+        public K Key
         {
             get
             {
-                var serDes = _builder.BuildKeySerDes<TKey>();
+                var serDes = _builder.BuildKeySerDes<K, TJVMK>();
                 return serDes.DeserializeWithHeaders(_metadata?.Topic(), _record.Headers(), _record.Key());
             }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Record.html#value--"/>
         /// </summary>
-        /// <returns><typeparamref name="TValue"/></returns>
-        public TValue Value
+        /// <returns><typeparamref name="V"/></returns>
+        public V Value
         {
             get
             {
-                var serDes = _builder.BuildValueSerDes<TValue>();
+                var serDes = _builder.BuildValueSerDes<V, TJVMV>();
                 return serDes.DeserializeWithHeaders(_metadata?.Topic(), _record.Headers(), _record.Value());
             }
         }
@@ -109,28 +113,28 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Record.html#withHeaders-org.apache.kafka.common.header.Headers-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
-        /// <returns><see cref="Record{TKey, TValue}"/></returns>
-        public Record<TKey, TValue> WithHeaders(Org.Apache.Kafka.Common.Header.Headers arg0)
+        /// <returns><see cref="Record{K, V, TJVMK, TJVMV}"/></returns>
+        public Record<K, V, TJVMK, TJVMV> WithHeaders(Org.Apache.Kafka.Common.Header.Headers arg0)
         {
             var record = _record.WithHeaders(arg0);
-            return new Record<TKey, TValue>(_builder, record, _metadata);
+            return new Record<K, V, TJVMK, TJVMV>(_builder, record, _metadata);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Record.html#withTimestamp-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
-        /// <returns><see cref="Record{TKey, TValue}"/></returns>
-        public Record<TKey, TValue> WithTimestamp(long arg0)
+        /// <returns><see cref="Record{K, V, TJVMK, TJVMV}"/></returns>
+        public Record<K, V, TJVMK, TJVMV> WithTimestamp(long arg0)
         {
             var record = _record.WithTimestamp(arg0);
-            return new Record<TKey, TValue>(_builder, record, _metadata);
+            return new Record<K, V, TJVMK, TJVMV>(_builder, record, _metadata);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Record.html#withTimestamp-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
-        /// <returns><see cref="Record{TKey, TValue}"/></returns>
-        public Record<TKey, TValue> WithDateTime(DateTime arg0)
+        /// <returns><see cref="Record{K, V, TJVMK, TJVMV}"/></returns>
+        public Record<K, V, TJVMK, TJVMV> WithDateTime(DateTime arg0)
         {
             return WithTimestamp(new DateTimeOffset(arg0).ToUnixTimeMilliseconds());
         }

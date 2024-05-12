@@ -34,8 +34,6 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMVR">The return JVM type to be managed</typeparam>
     public abstract class KeyValueMapper<K, V, VR, TJVMK, TJVMV, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<TJVMK, TJVMV, TJVMVR>, IGenericSerDesFactoryApplier
     {
-        ISerDes<K> _kSerializer = null;
-        ISerDes<V> _vSerializer = null;
         /// <summary>
         /// <see cref="IGenericSerDesFactory"/> can be used from any class inherited from <see cref="KeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
         /// </summary>
@@ -83,15 +81,15 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VR">joined value type</typeparam>
     public class KeyValueMapper<K, V, VR> : KeyValueMapper<K, V, VR, byte[], byte[], byte[]>
     {
-        ISerDes<K> _kSerializer = null;
-        ISerDes<V> _vSerializer = null;
-        ISerDes<VR> _vrSerializer = null;
+        ISerDes<K, byte[]> _kSerializer = null;
+        ISerDes<V, byte[]> _vSerializer = null;
+        ISerDes<VR, byte[]> _vrSerializer = null;
         /// <inheritdoc/>
         public override byte[] Apply(byte[] arg0, byte[] arg1)
         {
-            _kSerializer ??= Factory?.BuildKeySerDes<K>();
-            _vSerializer ??= Factory?.BuildValueSerDes<V>();
-            _vrSerializer ??= Factory?.BuildValueSerDes<VR>();
+            _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR, byte[]>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
             return _vrSerializer.Serialize(null, res);
@@ -105,13 +103,13 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V">first value type</typeparam>
     public class KeyValueMapperForString<K, V> : KeyValueMapper<K, V, string, byte[], byte[], Java.Lang.String>
     {
-        ISerDes<K> _kSerializer = null;
-        ISerDes<V> _vSerializer = null;
+        ISerDes<K, byte[]> _kSerializer = null;
+        ISerDes<V, byte[]> _vSerializer = null;
         /// <inheritdoc/>
         public override Java.Lang.String Apply(byte[] arg0, byte[] arg1)
         {
-            _kSerializer ??= Factory?.BuildKeySerDes<K>();
-            _vSerializer ??= Factory?.BuildValueSerDes<V>();
+            _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
             return res;
@@ -125,6 +123,10 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="KR">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    /// <typeparam name="TJVMKR">The JVM type of <typeparamref name="KR"/></typeparam>
+    /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
     public abstract class KeyValueKeyValueMapper<K, V, KR, VR, TJVMK, TJVMV, TJVMKR, TJVMVR> : KeyValueMapper<K, V, VR, TJVMK, TJVMV, Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>
     {
         /// <summary>
@@ -153,10 +155,10 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VR">joined value type</typeparam>
     public class KeyValueKeyValueMapper<K, V, KR, VR> : KeyValueKeyValueMapper<K, V, KR, VR, byte[], byte[], byte[], byte[]>
     {
-        ISerDes<K> _kSerializer = null;
-        ISerDes<V> _vSerializer = null;
-        ISerDes<KR> _krSerializer = null;
-        ISerDes<VR> _vrSerializer = null;
+        ISerDes<K, byte[]> _kSerializer = null;
+        ISerDes<V, byte[]> _vSerializer = null;
+        ISerDes<KR, byte[]> _krSerializer = null;
+        ISerDes<VR, byte[]> _vrSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -165,10 +167,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]> Apply(byte[] arg0, byte[] arg1)
         {
-            _kSerializer ??= Factory?.BuildKeySerDes<K>();
-            _vSerializer ??= Factory?.BuildValueSerDes<V>();
-            _krSerializer ??= Factory?.BuildValueSerDes<KR>();
-            _vrSerializer ??= Factory?.BuildValueSerDes<VR>();
+            _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>();
+            _krSerializer ??= Factory?.BuildValueSerDes<KR, byte[]>();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR, byte[]>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
@@ -193,6 +195,10 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="KR">first value type</typeparam>
     /// <typeparam name="VR">joined value type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    /// <typeparam name="TJVMKR">The JVM type of <typeparamref name="KR"/></typeparam>
+    /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
     public abstract class EnumerableKeyValueMapper<K, V, KR, VR, TJVMK, TJVMV, TJVMKR, TJVMVR> : KeyValueMapper<K, V, VR, TJVMK, TJVMV, Java.Lang.Iterable<Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>>
     {
         /// <summary>
@@ -216,10 +222,10 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VR">joined value type</typeparam>
     public class EnumerableKeyValueMapper<K, V, KR, VR> : EnumerableKeyValueMapper<K, V, KR, VR, byte[], byte[], byte[], byte[]>
     {
-        ISerDes<K> _kSerializer = null;
-        ISerDes<V> _vSerializer = null;
-        ISerDes<KR> _krSerializer = null;
-        ISerDes<VR> _vrSerializer = null;
+        ISerDes<K, byte[]> _kSerializer = null;
+        ISerDes<V, byte[]> _vSerializer = null;
+        ISerDes<KR, byte[]> _krSerializer = null;
+        ISerDes<VR, byte[]> _vrSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -228,10 +234,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override Java.Lang.Iterable<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>> Apply(byte[] arg0, byte[] arg1)
         {
-            _kSerializer ??= Factory?.BuildKeySerDes<K>();
-            _vSerializer ??= Factory?.BuildValueSerDes<V>();
-            _krSerializer ??= Factory?.BuildValueSerDes<KR>();
-            _vrSerializer ??= Factory?.BuildValueSerDes<VR>();
+            _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>();
+            _krSerializer ??= Factory?.BuildValueSerDes<KR, byte[]>();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR, byte[]>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
