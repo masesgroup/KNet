@@ -32,11 +32,11 @@ namespace MASES.KNet.Benchmark
 {
     partial class Program
     {
-        static KNet.Producer.IProducer<long, byte[]> knetProducer = null;
-        static SerDes<long> knetKeySerializer = null;
-        static SerDes<byte[]> knetValueSerializer = null;
+        static KNet.Producer.IProducer<long, byte[], byte[], byte[]> knetProducer = null;
+        static SerDes<long, byte[]> knetKeySerializer = null;
+        static SerDes<byte[], byte[]> knetValueSerializer = null;
 
-        static KNet.Producer.IProducer<long, byte[]> KNetProducer()
+        static KNet.Producer.IProducer<long, byte[], byte[], byte[]> KNetProducer()
         {
             if (knetProducer == null || !SharedObjects)
             {
@@ -54,7 +54,7 @@ namespace MASES.KNet.Benchmark
                                                                    .WithKeySerializerClass("org.apache.kafka.common.serialization.LongSerializer")
                                                                    .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer");
 
-                knetKeySerializer = new SerDes<long>()
+                knetKeySerializer = new SerDes<long, byte[]>()
                 {
                     OnSerializeWithHeaders = (topic, headers, data) =>
                     {
@@ -62,7 +62,7 @@ namespace MASES.KNet.Benchmark
                         return key;
                     }
                 };
-                knetValueSerializer = new SerDes<byte[]>()
+                knetValueSerializer = new SerDes<byte[], byte[]>()
                 {
                     OnSerializeWithHeaders = (topic, headers, data) =>
                     {
@@ -176,11 +176,11 @@ namespace MASES.KNet.Benchmark
             }
         }
 
-        static SerDes<long> knetKeyDeserializer = null;
-        static SerDes<byte[]> knetValueDeserializer = null;
-        static KNet.Consumer.IConsumer<long, byte[]> knetConsumer = null;
+        static SerDes<long, byte[]> knetKeyDeserializer = null;
+        static SerDes<byte[], byte[]> knetValueDeserializer = null;
+        static KNet.Consumer.IConsumer<long, byte[], byte[], byte[]> knetConsumer = null;
 
-        static KNet.Consumer.IConsumer<long, byte[]> KNetConsumer()
+        static KNet.Consumer.IConsumer<long, byte[], byte[], byte[]> KNetConsumer()
         {
             if (knetConsumer == null || !SharedObjects)
             {
@@ -197,7 +197,7 @@ namespace MASES.KNet.Benchmark
                                                                    .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST);
                 if (UseSerdes)
                 {
-                    knetKeyDeserializer = new SerDes<long>()
+                    knetKeyDeserializer = new SerDes<long, byte[]>()
                     {
                         OnDeserialize = (topic, data) =>
                         {
@@ -205,7 +205,7 @@ namespace MASES.KNet.Benchmark
                             return key;
                         }
                     };
-                    knetValueDeserializer = new SerDes<byte[]>()
+                    knetValueDeserializer = new SerDes<byte[], byte[]>()
                     {
                         OnDeserialize = (topic, data) =>
                         {
