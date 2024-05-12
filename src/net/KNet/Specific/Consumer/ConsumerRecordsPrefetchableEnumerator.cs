@@ -40,7 +40,7 @@ namespace MASES.KNet.Consumer
         {
             if (input is IJavaObject obj)
             {
-                return new ConsumerRecord<K, V, TJVMK, TJVMV>(JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>(obj), keySerDes, valueSerDes, true);
+                return new ConsumerRecord<K, V, TJVMK, TJVMV>(JVMBridgeBase.Wraps<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>(obj), keySerDes, valueSerDes, true);
             }
             throw new InvalidCastException($"input is not a valid IJavaObject");
         }

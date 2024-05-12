@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new WindowedKeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                                  JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
+                                                                  JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
                                                                   valueSerDes, true);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
@@ -98,7 +98,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new WindowedKeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                                  JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
+                                                                  JVMBridgeBase.Wraps<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
                                                                   _valueSerDes, false);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");

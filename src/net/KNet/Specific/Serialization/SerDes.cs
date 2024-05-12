@@ -56,7 +56,6 @@ namespace MASES.KNet.Serialization
         #region private fields
         readonly KNetSerialization.SerializationType _SerializationType;
         readonly KNetSerialization.SerializationType _JVMSerializationType;
-        Serdes.WrapperSerde<TJVMT> _KafkaWrapperSerde;
         Serde<TJVMT> _KafkaSerde;
         Serializer<TJVMT> _KafkaSerializer;
         Deserializer<TJVMT> _KafkaDeserializer;
