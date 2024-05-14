@@ -1,23 +1,26 @@
-﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+﻿FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+ARG TARGETARCH
 WORKDIR /app
 
 # Copy everything
 COPY ./src/net ./
 ENV KNET_DOCKER_BUILD_ACTIONS=true
 # Restore as distinct layers
-RUN dotnet restore KNetDocker.sln
+RUN dotnet restore KNetDocker.sln -a $TARGETARCH
 # Build and publish a release
-RUN dotnet publish ./KNetCLI/KNetCLI.csproj --framework net8.0 -c Release -o out
+RUN dotnet publish ./KNetCLI/KNetCLI.csproj --framework net8.0 -c Release -o out -a $TARGETARCH
 
 # Build runtime image
-FROM mcr.microsoft.com/dotnet/runtime:6.0
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/runtime:8.0-jammy
 
 # Add JRE
-RUN apt update
-RUN apt install -y openjdk-11-jre-headless
+RUN apt-get update && apt-get install -y --no-install-recommends openjdk-17-jre-headless && rm -rf /var/lib/apt/lists/*
 
 ADD ./jars /app/jars
 ADD ./src/config /app/config
+
+ENV JCOBRIDGE_JVMPath=/usr/lib/jvm/java-17-openjdk-amd64/lib/server/libjvm.so
+ENV JCOBRIDGE_LicensePath=
 
 WORKDIR /app
 COPY --from=build-env /app/out .
