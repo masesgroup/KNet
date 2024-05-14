@@ -167,7 +167,7 @@ namespace MASES.KNet.Replicator
         /// </summary>
         short ReplicationFactor { get; }
         /// <summary>
-        /// Get or set the poll timeout to be used for <see cref="IKNetConsumer{K, V}.ConsumeAsync(long)"/>
+        /// Get or set the poll timeout to be used for <see cref="IConsumer{K, V}.ConsumeAsync(long)"/>
         /// </summary>
         long ConsumePollTimeout { get; }
         /// <summary>
@@ -187,25 +187,25 @@ namespace MASES.KNet.Replicator
         /// </summary>
         Type KNetKeySerDes { get; }
         /// <summary>
-        /// Get or set an instance of <see cref="IKNetSerDes{TKey}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TKey"/>
+        /// Get or set an instance of <see cref="ISerDes{TKey}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TKey"/>
         /// </summary>
-        IKNetSerDes<TKey> KeySerDes { get; }
+        ISerDes<TKey> KeySerDes { get; }
         /// <summary>
         /// The <see cref="Type"/> used to create an instance of <see cref="ValueSerDes"/>"/>
         /// </summary>
         Type KNetValueSerDes { get; }
         /// <summary>
-        /// Get or set an instance of <see cref="IKNetSerDes{TValue}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TValue"/>
+        /// Get or set an instance of <see cref="ISerDes{TValue}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TValue"/>
         /// </summary>
-        IKNetSerDes<TValue> ValueSerDes { get; }
+        ISerDes<TValue> ValueSerDes { get; }
 #if NET7_0_OR_GREATER
         /// <summary>
-        /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in an external thread
+        /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="ConsumerRecord{K, V}"/> happens in an external thread
         /// </summary>
-        /// <remarks>It is <see langword="true"/> by default if one of <typeparamref name="K"/> or <typeparamref name="V"/> are not <see cref="ValueType"/>, override the value using <see cref="ApplyPrefetch(bool, int)"/></remarks>
+        /// <remarks>It is <see langword="true"/> by default if one of <typeparamref name="TKey"/> or <typeparamref name="TValue"/> are not <see cref="ValueType"/>, override the value using <see cref="ApplyPrefetch(bool, int)"/></remarks>
         bool IsPrefecth { get; }
         /// <summary>
-        /// The minimum threshold to activate pretech, i.e. the preparation of <see cref="KNetConsumerRecord{K, V}"/> happens in external thread if <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{K, V}"/> contains more than <see cref="PrefetchThreshold"/> elements
+        /// The minimum threshold to activate pretech, i.e. the preparation of <see cref="ConsumerRecord{K, V}"/> happens in external thread if <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{K, V}"/> contains more than <see cref="PrefetchThreshold"/> elements
         /// </summary>
         /// <remarks>The default value is 10, however it shall be chosen by the developer and in the decision shall be verified if external thread activation costs more than inline execution</remarks>
         int PrefetchThreshold { get; }
@@ -233,7 +233,7 @@ namespace MASES.KNet.Replicator
         #region Public methods
 #if NET7_0_OR_GREATER
         /// <summary>
-        /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="KNetConsumerRecord{K, V}"/> in external thread 
+        /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="ConsumerRecord{K, V}"/> in external thread 
         /// </summary>
         /// <param name="enablePrefetch"><see langword="true"/> to enable prefetch. See <see cref="IsPrefecth"/></param>
         /// <param name="prefetchThreshold">The minimum threshold to activate pretech, default is 10. See <see cref="PrefetchThreshold"/></param>
@@ -339,9 +339,9 @@ namespace MASES.KNet.Replicator
         {
             private IEnumerator<KeyValuePair<TKey, ILocalDataStorage>> _enumerator;
             private readonly ConcurrentDictionary<TKey, ILocalDataStorage> _dictionary;
-            private readonly IKNetConsumer<TKey, TValue> _consumer = null;
+            private readonly IConsumer<TKey, TValue> _consumer = null;
             private readonly string _topic;
-            public LocalDataStorageEnumerator(ConcurrentDictionary<TKey, ILocalDataStorage> dictionary, IKNetConsumer<TKey, TValue> consumer, string topic)
+            public LocalDataStorageEnumerator(ConcurrentDictionary<TKey, ILocalDataStorage> dictionary, IConsumer<TKey, TValue> consumer, string topic)
             {
                 _dictionary = dictionary;
                 _consumer = consumer;
@@ -441,16 +441,15 @@ namespace MASES.KNet.Replicator
             }
 
             [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-            static void OnDemandRetrieve(IKNetConsumer<TKey, TValue> consumer, string topic, TKey key, ILocalDataStorage data)
+            static void OnDemandRetrieve(IConsumer<TKey, TValue> consumer, string topic, TKey key, ILocalDataStorage data)
             {
                 var topicPartition = new Org.Apache.Kafka.Common.TopicPartition(topic, data.Partition);
                 var topics = Java.Util.Collections.SingletonList(topicPartition);
-                Java.Time.Duration duration = TimeSpan.FromMinutes(1);
                 try
                 {
                     consumer.Assign(topics);
                     consumer.Seek(topicPartition, data.Offset);
-                    var results = consumer.Poll(duration);
+                    var results = consumer.Poll(TimeSpan.FromMinutes(1));
                     if (results == null) throw new InvalidOperationException("Failed to get records from remote.");
                     foreach (var result in results)
                     {
@@ -465,7 +464,6 @@ namespace MASES.KNet.Replicator
                 {
                     topicPartition?.Dispose();
                     topics?.Dispose();
-                    duration?.Dispose();
                 }
             }
         }
@@ -516,9 +514,9 @@ namespace MASES.KNet.Replicator
         private ManualResetEvent[] _consumerPollThreadWaiter = null;
         private ConcurrentDictionary<TKey, ILocalDataStorage> _dictionary = new ConcurrentDictionary<TKey, ILocalDataStorage>();
         private KNetCompactedConsumerRebalanceListener[] _consumerListeners = null;
-        private IKNetConsumer<TKey, TValue>[] _consumers = null;
-        private IKNetConsumer<TKey, TValue> _onTheFlyConsumer = null;
-        private IKNetProducer<TKey, TValue> _producer = null;
+        private IConsumer<TKey, TValue>[] _consumers = null;
+        private IConsumer<TKey, TValue> _onTheFlyConsumer = null;
+        private IProducer<TKey, TValue> _producer = null;
         private string _bootstrapServers = null;
         private string _stateName = string.Empty;
         private string _groupId = Guid.NewGuid().ToString();
@@ -539,10 +537,10 @@ namespace MASES.KNet.Replicator
         private long[] _lastPartitionLags = null;
 
         private Type _KNetKeySerDes = null;
-        private IKNetSerDes<TKey> _keySerDes = null;
+        private ISerDes<TKey> _keySerDes = null;
         private bool _disposeKeySerDes = false;
         private Type _KNetValueSerDes = null;
-        private IKNetSerDes<TValue> _valueSerDes = null;
+        private ISerDes<TValue> _valueSerDes = null;
         private bool _disposeValueSerDes = false;
 
         private bool _started = false;
@@ -632,7 +630,7 @@ namespace MASES.KNet.Replicator
                     var keyT = value.GetGenericArguments();
                     if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
                     var t = value.GetGenericTypeDefinition();
-                    if (t.GetInterface(typeof(IKNetSerDes<>).Name) == null)
+                    if (t.GetInterface(typeof(ISerDes<>).Name) == null)
                     {
                         throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
                     }
@@ -643,7 +641,7 @@ namespace MASES.KNet.Replicator
         }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.KeySerDes"/>
-        public IKNetSerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
+        public ISerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.KNetValueSerDes"/>
         public Type KNetValueSerDes
@@ -662,7 +660,7 @@ namespace MASES.KNet.Replicator
                     var keyT = value.GetGenericArguments();
                     if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
                     var t = value.GetGenericTypeDefinition();
-                    if (t.GetInterface(typeof(IKNetSerDes<>).Name) == null)
+                    if (t.GetInterface(typeof(ISerDes<>).Name) == null)
                     {
                         throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
                     }
@@ -673,7 +671,7 @@ namespace MASES.KNet.Replicator
         }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.ValueSerDes"/>
-        public IKNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
+        public ISerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
 #if NET7_0_OR_GREATER
         /// <inheritdoc cref="IKNetCompactedReplicator{TKey, TValue}.IsPrefecth"/>
         public bool IsPrefecth { get; private set; } = !(typeof(TKey).IsValueType && typeof(TValue).IsValueType);
@@ -740,7 +738,7 @@ namespace MASES.KNet.Replicator
 
         bool UpdateModeDelayed => UpdateMode.HasFlag(UpdateModeTypes.Delayed);
 
-        private void OnMessage(KNetConsumerRecord<TKey, TValue> record)
+        private void OnMessage(ConsumerRecord<TKey, TValue> record)
         {
             if (record.Value == null)
             {
@@ -875,7 +873,7 @@ namespace MASES.KNet.Replicator
                         }
                     })
                     {
-                        _producer.Produce(new KNetProducerRecord<TKey, TValue>(_stateName, key, value), cb);
+                        _producer.Produce(new ProducerRecord<TKey, TValue>(_stateName, key, value), cb);
                         deliverySemaphore.WaitOne();
                         if (exception != null) throw exception;
                     }
@@ -1041,7 +1039,7 @@ namespace MASES.KNet.Replicator
         {
             bool firstExecution = false;
             int index = (int)o;
-            var topics = Java.Util.Collections.Singleton(StateName);
+            var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
             try
             {
                 _consumers[index].Subscribe(topics, _consumerListeners[index]);
@@ -1138,7 +1136,7 @@ namespace MASES.KNet.Replicator
                 }
                 catch (Org.Apache.Kafka.Common.Errors.TopicExistsException)
                 {
-                    var topics = Java.Util.Collections.Singleton(StateName);
+                    var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
                     // recover partitions of the topic
                     try
                     {
@@ -1161,13 +1159,13 @@ namespace MASES.KNet.Replicator
             _disposeKeySerDes = false;
             if (KNetKeySerDes == null && KeySerDes == null && KNetSerialization.IsInternalManaged<TKey>())
             {
-                KeySerDes = new KNetSerDes<TKey>();
+                KeySerDes = new SerDes<TKey>();
                 _disposeKeySerDes = true;
             }
             _disposeValueSerDes = false;
             if (KNetValueSerDes == null && ValueSerDes == null && KNetSerialization.IsInternalManaged<TValue>())
             {
-                ValueSerDes = new KNetSerDes<TValue>();
+                ValueSerDes = new SerDes<TValue>();
                 _disposeValueSerDes = true;
             }
 

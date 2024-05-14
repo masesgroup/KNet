@@ -25,15 +25,15 @@ using System;
 namespace MASES.KNet.Serialization.MessagePack
 {
     /// <summary>
-    /// Base class to define extensions of <see cref="KNetSerDes{T}"/> for MessagePack, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+    /// Base class to define extensions of <see cref="SerDes{T}"/> for MessagePack, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
     /// </summary>
     public static class MessagePackSerDes
     {
         /// <summary>
-        /// MessagePack extension of <see cref="KNetSerDes{T}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// MessagePack extension of <see cref="SerDes{T}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class Key<T> : KNetSerDes<T>
+        public class Key<T> : SerDes<T>
         {
             readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(Key<>).ToAssemblyQualified());
             readonly byte[] keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
@@ -53,12 +53,12 @@ namespace MASES.KNet.Serialization.MessagePack
                     throw new InvalidOperationException($"{typeof(T).Name} is a type managed from basic serializer, do not use {typeof(Key<T>).FullName}");
                 }
             }
-            /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Serialize(string, T)"/>
             public override byte[] Serialize(string topic, T data)
             {
                 return SerializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
             public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
             {
                 headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
@@ -66,12 +66,12 @@ namespace MASES.KNet.Serialization.MessagePack
 
                 return MessagePackSerializer.Serialize(data, MessagePackSerializerOptions);
             }
-            /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, byte[])"/>
             public override T Deserialize(string topic, byte[] data)
             {
                 return DeserializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
             public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
             {
                 if (data == null) return default;
@@ -83,10 +83,10 @@ namespace MASES.KNet.Serialization.MessagePack
         }
 
         /// <summary>
-        /// MessagePack extension of <see cref="KNetSerDes{T}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// MessagePack extension of <see cref="SerDes{T}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class Value<T> : KNetSerDes<T>
+        public class Value<T> : SerDes<T>
         {
             readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(Value<>).ToAssemblyQualified());
             readonly byte[] valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
@@ -106,12 +106,12 @@ namespace MASES.KNet.Serialization.MessagePack
                     throw new InvalidOperationException($"{typeof(T).Name} is a type managed from basic serializer, do not use {typeof(Key<T>).FullName}");
                 }
             }
-            /// <inheritdoc cref="KNetSerDes{T}.Serialize(string, T)"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Serialize(string, T)"/>
             public override byte[] Serialize(string topic, T data)
             {
                 return SerializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
             public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
             {
                 headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
@@ -119,12 +119,12 @@ namespace MASES.KNet.Serialization.MessagePack
 
                 return MessagePackSerializer.Serialize(data, MessagePackSerializerOptions);
             }
-            /// <inheritdoc cref="KNetSerDes{T}.Deserialize(string, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, byte[])"/>
             public override T Deserialize(string topic, byte[] data)
             {
                 return DeserializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
             public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
             {
                 if (data == null) return default;

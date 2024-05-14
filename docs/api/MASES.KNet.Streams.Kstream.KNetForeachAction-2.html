@@ -454,23 +454,54 @@ Class KNetForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" tit
 
 
 
-  <h2 class="section" id="properties">Properties
+  <h2 class="section" id="constructors">Constructors
 </h2>
 
 
-  <a id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_OnApply_" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.OnApply*"></a>
+  <a id="MASES_KNet_Streams_Kstream_KNetForeachAction_2__ctor_" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.#ctor*"></a>
 
-  <h3 id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_OnApply" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.OnApply">
-  OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetForeachAction.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_Kstream_KNetForeachAction_2__ctor" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.#ctor">
+  KNetForeachAction()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetForeachAction.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p>Default initializer</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;K, V&gt; OnApply { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public KNetForeachAction()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_Key_" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.Key*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_Key" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.Key">
+  Key
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetForeachAction.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code class="typeparamref">K</code> content</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public K Key { get; }</code></pre>
   </div>
 
 
@@ -479,7 +510,39 @@ Class KNetForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" tit
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;K, V&gt;</dt>
+    <dt><span class="xref">K</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_OnApply_" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.OnApply*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_OnApply" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.OnApply">
+  OnApply
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetForeachAction.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;KNetForeachAction&lt;K, V&gt;&gt; OnApply { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Streams.Kstream.KNetForeachAction-2.html">KNetForeachAction</a>&lt;K, V&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -487,8 +550,40 @@ Class KNetForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" tit
 
 
   <h4 class="section" id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_OnApply_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="MASES.KNet.Streams.Kstream.KNetForeachAction-2.html#MASES_KNet_Streams_Kstream_KNetForeachAction_2_OnApply">OnApply</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="MASES.KNet.Streams.Kstream.KNetForeachAction-2.html#MASES_KNet_Streams_Kstream_KNetForeachAction_2_OnApply">OnApply</a> has a value it takes precedence over corresponding <a class="xref" href="MASES.KNet.Streams.Kstream.KNetForeachAction-2.html#MASES_KNet_Streams_Kstream_KNetForeachAction_2_Apply">Apply()</a> class method</p>
 </div>
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_Value_" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.Value*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_Value" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetForeachAction.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code class="typeparamref">V</code> content</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public V Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">V</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
 
 
 
@@ -499,9 +594,36 @@ Class KNetForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" tit
 
   <a id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_Apply_" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.Apply*"></a>
 
+  <h3 id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_Apply" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.Apply">
+  Apply()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetForeachAction.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Apply()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_Apply_" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.Apply*"></a>
+
   <h3 id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_Apply_System_Byte___System_Byte___" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.Apply(System.Byte[],System.Byte[])">
   Apply(byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetForeachAction.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetForeachAction.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-</a></p>
@@ -519,42 +641,6 @@ Class KNetForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" tit
 </dd>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
     <dd><p><see></see></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_Apply_" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.Apply*"></a>
-
-  <h3 id="MASES_KNet_Streams_Kstream_KNetForeachAction_2_Apply__0__1_" data-uid="MASES.KNet.Streams.Kstream.KNetForeachAction`2.Apply(`0,`1)">
-  Apply(K, V)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KNetForeachAction.cs/#L56"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Apply(K arg0, V arg1)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>arg0</code> <span class="xref">K</span></dt>
-    <dd><p><code class="typeparamref">K</code></p>
-</dd>
-    <dt><code>arg1</code> <span class="xref">V</span></dt>
-    <dd><p><code class="typeparamref">V</code></p>
 </dd>
   </dl>
 

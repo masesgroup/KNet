@@ -47,19 +47,19 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs--"/>
         /// </summary>
-        Set<string> ReconfigurableConfigs();
+        Set<Java.Lang.String> ReconfigurableConfigs();
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
-        void Configure(Map<string, object> configs);
+        void Configure(Map<Java.Lang.String, object> configs);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure-java.util.Map-"/>
         /// </summary>
-        void Reconfigure(Map<string, object> configs);
+        void Reconfigure(Map<Java.Lang.String, object> configs);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration-java.util.Map-"/>
         /// </summary>
-        void ValidateReconfiguration(Map<string, object> configs);
+        void ValidateReconfiguration(Map<Java.Lang.String, object> configs);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange-org.apache.kafka.common.metrics.MetricsContext-"/>
         /// </summary>

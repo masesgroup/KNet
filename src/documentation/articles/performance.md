@@ -10,9 +10,6 @@ The benchmarks are:
 1. [Produce and Consume Benchmark](#produce-and-consume-benchmark)
 2. [Roundtrip benchmark](#roundtrip-benchmark)
 
-> [!IMPORTANT]
-> Following applies to an older version: latests JNet(2.2.1+)/JCOBridge(2.5.10+) contain performance improvements shall be tested again.
-
 ## Initial considerations
 
 Apache Kafka is a client-server architecture which relies on the network for communication. 
@@ -51,6 +48,7 @@ The tests:
 - uses their own topic to avoid impacts from the previous tests: schema is {TopicPrefix}__{testName}__{length}__{testNum} where 
   - **TopicPrefix** is an user definible string (default is _testTopic_)
   - **testName** is KNET or CONF
+  - **packets** is the number of packets
   - **length** is the payload length
   - **testNum** is the actual execution repetition
 - to reduce impacts from different implementations of serializer/deserializer the most simple data types are used in the messages:
@@ -99,8 +97,8 @@ The most important are Average, Standard deviation and Coefficient of Variation.
 ### Benchmark results
 
 The tests was done with:
-- different messages length varying the payload length: from 10 bytes to 100 kbytes
-- different number of messages for each benchmark execution: from 10 to 10000 messages;
+- different payload length: from 100 bytes to 100 kbytes
+- a set of 1000/10000 messages to have enough statistics data; we cannot go over: using 100000 messages Confluent.Kafka reports the same error of https://github.com/confluentinc/confluent-kafka-dotnet/issues/703 and KNet uses a lot of memeory;
 - for each benchmark execution the tests are repeated at least 20 times.
 
 The configuration is:
@@ -112,37 +110,30 @@ The configuration is:
 - ReceiveBuffer: 32 Mb
 - FetchMinBytes: 100000
 
-Here below a set of results, in bold the results which are better using KNet (the table reports the changes from previous tests and current tests done with JNet 1.5.2 and JCOBridge 2.5.3):
+Here below a set of results using 1000/10000 messages, in bold the results which are better using KNet 2.4.3:
 
 - KNet/Confluent.Kafka Produce Average ratio percentage (SD ratio percentage):
 
-|  | 10 bytes | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
-|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|
-| 10 messages | **9,04 (4,34)** -> **4,26 (0,57)** | **5,47 (3,1)** -> **6,94 (0,8)** | **15,45 (5,29)** -> **10,9 (2,27)** | **7,54 (4,38)** -> **2,78 (0,55)** | **19,73 (4,23)** -> **13,81 (4,07)** |
-| 100 messages | **18,9 (6,29)** -> **11,58 (1,43)** | **38,1 (8,1)** -> **11,23 (1,7)** | **30,34 (5,44)** -> **15,22 (3,69)** | **26 (3,04)** -> **13,69 (1,64)** | **69,4 (13,09)** -> **41,13 (12,36)** |
-| 1000 messages | 197,73 (10,54) -> **33,69 (3,6)** | 109,92 (6,13) -> **48,05 (6,08)** | **57,6 (7,32)** -> **25,03 (3,66)** | **52,71 (8,17)** -> **34,57 (16,43)** | **75,76 (43,7)** -> **74,46 (43,53)** |
-| 10000 messages | 2102,28 (736,54) -> 1172,54 (534,18) | 796,84 (514,28) -> 545,73 (356,43) | 173,39 (401,76) -> 100,34 (289,93) | 123,62 (620,46) ->  **88,14 (150,15)** | **99,5 (108,3)** -> **91,52 (88,36)** |
+|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
+|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 1000 messages | 217,8 (193,16) | **82,5 (158,72)** | **84,45 (65,53)** | **86,78 (115,88)** |
+| 10000 messages | 251,97 (357,5) | **73,4 (164,51)** | 104,41 (32,73) | **90,28 (155,2)** |
 
 - KNet/Confluent.Kafka Consume Average ratio percentage (SD ratio percentage):
 
-|  | 10 bytes | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
-|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|
-| 10 messages | **85,93 (399,84)** -> **84,38 (160,69)** | **85,41 (282,85)** -> **83,68 (25,15)** | **85,14 (297,98)** -> **83,79 (106,68)** | **24,07 (229,23)** -> **13,69 (36,18)** | **36,23 (285,77)** -> **29,18 (137,24)** |
-| 100 messages | **94,54 (479,13)** -> **85,32 (265,09)** | **94,7 (287,78)** -> **85,56 (432,38)** | **68,49 (389,25)** -> **17,63 (30,98)** | **71,97 (276,56)** -> **33,44 (150,89)** | 108,57 (89,45) -> 144,57 (133,34) |
-| 1000 messages | 192,27 (906,94) -> **92,3 (237,25)** | 521,86 (867,93) -> **87,52 (668,81)** | 103,62 (1854,84) -> **16,54 (232,94)** | 255,52 (287,33) -> 183,56 (146,66) | 163,24 (124,23) -> 154,91 (246,38) |
-| 10000 messages | 9153,56 (77543,04) -> 654,7 (962) | 7948,76 (69701,75) -> 641,17 (1653,94) | 3848,12 (23910,64) -> 401,69 (485,42) | 706,83 (3905,89) -> 186,48 (187,41) | 213,46 (1013,16) -> 147,41 (197,52) |
+|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
+|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 1000 messages | **22,09 (263,38)** | **6,39 (547,69)** | **67,44 (22,85)** | 122,77 (270,27) |
+| 10000 messages | **30,51 (203,03)** | **17,88 (9,14)** | 117,37 (281,25) | 135,35 (828,3) |
 
-#### Average ratio percentage 
+#### Analysis
 
-Looking at the above table KNet performs better than Confluent.Kafka with burst of few messages (10/100 messages); if the number of messages is higher (e.g. 1000/10000) KNet performs better when the size of the messages is large.
-The best produce performance was obtained with 10 messages of 100, or 10000, bytes: KNet is 20 times fast than Confluent.Kafka.
-The best consume performance was obtained with 10 messages of 10000 bytes: KNet is 4 times fast than Confluent.Kafka.
+KNet Produce is more efficient when the length of packets is high: this is related to the overhead introduced from JVM method invocations. With 10000 messages and 10000 bytes the result is better with Confluent.Kafka, we have not yet identified if some parameters are limiting KNet or really Conflent.Kafka is more efficient.
 
-#### SD ratio percentage
+KNet Consume is more efficient when the length of packets is small; when the length of packets is higher Confluent.Kafka becomes more efficient, however less are the packets better KNet performs, so there is a kind of bottleneck to be identified which limits KNet efficency.
 
-Looking at value within the brackets, that represents the ratio of the SD, it is possible to highlight that:
-- in produce KNet has more stable measures except when the number of messages is high (10000 messages);
-- in consume KNet has less stable measures.
+> [!NOTE]
+> These are results from some tests done using the configuration reported in previous chapter. With different combination of parameters Confluent.Kafka can perform better than KNet in all tests. 
 
 ## Roundtrip Benchmark
 
@@ -158,6 +149,7 @@ The tests:
 - uses their own topic to avoid impacts from the previous tests: schema is {TopicPrefix}__{testName}__{length}__{testNum} where 
   - **TopicPrefix** is an user definible string (default is _testTopic_)
   - **testName** is KNET or CONF
+  - **packets** is the number of packets
   - **length** is the payload length
   - **testNum** is the actual execution repetition
 - to reduce impacts from different implementations of serializer/deserializer the most simple data types are used in the messages:
@@ -211,8 +203,8 @@ The most important are Average, Standard deviation and Coefficient of Variation.
 ### Benchmark results
 
 The tests was done with:
-- different messages length varying the payload length: from 10 bytes to 100 kbytes
-- a set of 10000 messages to have enough statistics data;
+- different payload length: from 100 bytes to 100 kbytes
+- a set of 1000/10000 messages to have enough statistics data; we cannot go over: using 100000 messages Confluent.Kafka reports the same error of https://github.com/confluentinc/confluent-kafka-dotnet/issues/703 and KNet uses a lot of memeory;
 - for each benchmark execution the tests are repeated at least 20 times.
 
 The configuration is:
@@ -224,27 +216,38 @@ The configuration is:
 - ReceiveBuffer: 32 Mb
 - FetchMinBytes: 100000
 
-Here below a set of results, in bold the results which are better using KNet:
+Here below a set of results using 1000/10000 messages, in bold the results which are better using KNet 2.4.3:
 
 - KNet/Confluent.Kafka Roundtrip Average ratio percentage (SD ratio percentage):
 
-|  | 10 bytes | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
-|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|
-| 10000 messages | **61,35 (54,26)** | **56,73 (120,86)** | **36,18 (39,18)** | **27,77 (15,69)** | **46,61 (28,11)** |
+|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
+|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 1000 messages | **3,82 (6,86)** | **4,37 (7,34)** | **9,08 (12,33)** | **26,68 (20,42)** |
+| 10000 messages | **18,49 (21,33)** | **16,78 (33,28)** | **32,28 (34,64)** | **48,28 (53,39)** |
 
-
-#### Average ratio percentage 
+#### Analysis
 
 Looking at the above table KNet performs better than Confluent.Kafka.
 
-#### SD ratio percentage
-
-Looking at value within the brackets, that represents the ratio of the SD, it is possible to highlight that the more stable values are available with packet size higher than 100 bytes.
+> [!NOTE]
+> These are results from some tests done using the configuration reported in previous chapter. With different combination of parameters Confluent.Kafka can perform better than KNet in all tests. 
 
 ## Final considerations
 
 The KNet library performs better when the massages are larger; when the messages are small Confluent.Kafka performs better.
-From some measurement done KNet suffers the JNI interface overhead needed to performs the operations (the user can activate JNI calls measurement): the evidence comes from the difference between KNetProducer and KafkaProducer (without _UseKNetProducer_ command-line switch).
+KNet suffers the JNI interface overhead needed to performs the operations (the user can activate JNI calls measurement): the evidence comes from the difference between KNetProducer and KafkaProducer (without _UseKNetProducer_ command-line switch).
 Using KNetProducer the numbers of JNI invocation are less than using KafkaProducer, so reducing the number of JNI calls have a great impact on overall performance.
 The same consideration can be applied on the consume side: KNetConsumer does not reduce the impact of JNI interface and it does not give any great improvement.
 The JNI interface has an impact even when the number of messages is high because during processing the Garbage Collector is activated many times increasing the JNI overhead.
+
+Another option to be considered in consumption is related to _UsePrefetch_: it activates an external thread to execute the methods on JVM while the main thread iterates over records; this behavior helps to reduce the impact on main iterator coming from the JVM invocations:
+```C#
+var records = consumer.Poll(duration);
+if (UsePrefetch)
+{
+    foreach (var item in records.WithPrefetch().WithThread())
+    {
+        // executes stuff on item
+    }
+}
+```

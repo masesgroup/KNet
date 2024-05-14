@@ -86,29 +86,33 @@
 <h2 id="installation">Installation</h2>
 <p>KNet Connect is available in two different formats:</p>
 <ul>
-<li>dotnet tool hosted on NuGet.org: check <a href="https://www.nuget.org/packages/MASES.KNetConnect/">https://www.nuget.org/packages/MASES.KNetConnect/</a> and <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools</a> for installation deep instructions.</li>
-<li>Docker image hosted on <a href="https://github.com/masesgroup/KNet/pkgs/container/mases.knetconnect">https://github.com/masesgroup/KNet/pkgs/container/mases.knetconnect</a>: follow instruction within the page and general instruction on <a href="https://docs.docker.com">https://docs.docker.com</a></li>
+<li><strong>dotnet tool</strong> hosted on <a href="https://www.nuget.org/packages/MASES.KNetConnect/">NuGet</a>: check <a href="https://www.nuget.org/packages/MASES.KNetConnect/">https://www.nuget.org/packages/MASES.KNetConnect/</a> and <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools</a> for installation deep instructions.</li>
+<li><strong>Docker image</strong> hosted on <a href="https://github.com/masesgroup/KNet/pkgs/container/knetconnect">GitHub</a> or <a href="https://hub.docker.com/repository/docker/masesgroup/knetconnect/general">Docker Hub</a>: follow instruction within the page and general instruction on <a href="https://docs.docker.com">https://docs.docker.com</a></li>
 </ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The <strong>dotnet tool</strong> needs a JRE/JDK installed within the system</p>
+</div>
 <h2 id="usage">Usage</h2>
 <p>To use the Connect interface (KNetConnect) runs a command like the following:</p>
 <ul>
 <li><strong>dotnet tool</strong></li>
 </ul>
-<blockquote>
-<p>knetconnect -s connect-standalone.properties specific-connector.properties</p>
-</blockquote>
-<blockquote>
-<p>knetconnect -d connect-distributed.properties</p>
-</blockquote>
+<pre><code class="lang-sh">knetconnect -s connect-standalone.properties specific-connector.properties
+</code></pre>
+<pre><code class="lang-sh">knetconnect -d connect-distributed.properties
+</code></pre>
 <ul>
 <li><strong>Docker image</strong></li>
 </ul>
-<blockquote>
-<p>docker run ghcr.io/masesgroup/mases.knetconnect -s connect-standalone.properties specific-connector.properties</p>
-</blockquote>
-<blockquote>
-<p>docker run ghcr.io/masesgroup/mases.knetconnect -d connect-distributed.properties</p>
-</blockquote>
+<pre><code class="lang-sh">docker run ghcr.io/masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
+</code></pre>
+<pre><code class="lang-sh">docker run masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
+</code></pre>
+<pre><code class="lang-sh">docker run ghcr.io/masesgroup/knetconnect -d connect-distributed.properties
+</code></pre>
+<pre><code class="lang-sh">docker run masesgroup/knetconnect -d connect-distributed.properties
+</code></pre>
 <h3 id="command-line-switch-available">Command line switch available</h3>
 <p><em>knetconnect</em> accepts the following command-line switch to identify its behavior:</p>
 <ul>

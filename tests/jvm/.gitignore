@@ -1,0 +1,21 @@
+# Compiled source #
+###################
+*.class
+
+# Intermediate files #
+###################
+*.classpath
+*.filelist
+*.manifest
+
+###############
+#    folder   #
+###############
+/**/.idea/
+/**/target/
+/**/DROP/
+/**/TEMP/
+/**/packages/
+/**/bin/
+/**/obj/
+_site
