@@ -21,99 +21,101 @@ using MASES.KNet.Serialization;
 namespace MASES.KNet.Streams.State
 {
     /// <summary>
-    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore{TJVMKey, TJVMValue}"/> 
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore{TJVMK, TJVMV}"/> 
     /// </summary>
-    /// <typeparam name="TKey">The key type</typeparam>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public abstract class TimestampedWindowStore<TKey, TValue, TJVMKey, TJVMValue> : ManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMKey, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMValue>>>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    public abstract class TimestampedWindowStore<K, V, TJVMK, TJVMV> : ManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>
     {
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all--"/>
         /// </summary>
-        /// <returns><see cref="TimestampedWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract TimestampedWindowedKeyValueIterator<TKey, TValue> All { get; }
+        /// <returns><see cref="TimestampedWindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
+        public abstract TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> All { get; }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="TKey"/></param>
-        /// <param name="arg1"><typeparamref name="TKey"/></param>
+        /// <param name="arg0"><typeparamref name="K"/></param>
+        /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg3"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="TimestampedWindowedKeyValueIterator{TKey, TValue}"/></returns>
+        /// <returns><see cref="TimestampedWindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract TimestampedWindowedKeyValueIterator<TKey, TValue> Fetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
+        public abstract TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> Fetch(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll-java.time.Instant-java.time.Instant-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="TimestampedWindowedKeyValueIterator{TKey, TValue}"/></returns>
+        /// <returns><see cref="TimestampedWindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract TimestampedWindowedKeyValueIterator<TKey, TValue> FetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1);
+        public abstract TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> FetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="TKey"/></param>
+        /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="TimestampedWindowStoreIterator{TValue}"/></returns>
+        /// <returns><see cref="TimestampedWindowStoreIterator{V, TJVMV}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract TimestampedWindowStoreIterator<TValue> Fetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
+        public abstract TimestampedWindowStoreIterator<V, TJVMV> Fetch(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-long-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="TKey"/></param>
+        /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="long"/></param>
-        /// <returns><see cref="ValueAndTimestamp{TValue}"/></returns>
-        public abstract ValueAndTimestamp<TValue> Fetch(TKey arg0, long arg1);
+        /// <returns><see cref="ValueAndTimestamp{V, TJVMV}"/></returns>
+        public abstract ValueAndTimestamp<V, TJVMV> Fetch(K arg0, long arg1);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll--"/>
         /// </summary>
-        /// <returns><see cref="TimestampedWindowedKeyValueIterator{TKey, TValue}"/></returns>
-        public abstract TimestampedWindowedKeyValueIterator<TKey, TValue> BackwardAll { get; }
+        /// <returns><see cref="TimestampedWindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
+        public abstract TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> BackwardAll { get; }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="TKey"/></param>
-        /// <param name="arg1"><typeparamref name="TKey"/></param>
+        /// <param name="arg0"><typeparamref name="K"/></param>
+        /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg3"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="TimestampedWindowedKeyValueIterator{TKey, TValue}"/></returns>
+        /// <returns><see cref="TimestampedWindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract TimestampedWindowedKeyValueIterator<TKey, TValue> BackwardFetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
+        public abstract TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> BackwardFetch(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="TimestampedWindowedKeyValueIterator{TKey, TValue}"/></returns>
+        /// <returns><see cref="TimestampedWindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract TimestampedWindowedKeyValueIterator<TKey, TValue> BackwardFetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1);
+        public abstract TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> BackwardFetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1);
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
-        /// <param name="arg0"><typeparamref name="TKey"/></param>
+        /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg2"><see cref="Java.Time.Instant"/></param>
-        /// <returns><see cref="TimestampedWindowStoreIterator{TValue}"/></returns>
+        /// <returns><see cref="TimestampedWindowStoreIterator{V, TJVMV}"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        public abstract TimestampedWindowStoreIterator<TValue> BackwardFetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
+        public abstract TimestampedWindowStoreIterator<V, TJVMV> BackwardFetch(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2);
     }
 
     /// <summary>
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore{K, V}"/> 
     /// </summary>
-    /// <typeparam name="TKey">The key type</typeparam>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public class TimestampedWindowStore<TKey, TValue> : TimestampedWindowStore<TKey, TValue, byte[], byte[]>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    public class TimestampedWindowStore<K, V> : TimestampedWindowStore<K, V, byte[], byte[]>
     {
         /// <inheritdoc/>
-        public override TimestampedWindowedKeyValueIterator<TKey, TValue> All => new TimestampedWindowedKeyValueIterator<TKey, TValue>(Factory, Store.All());
+        public override TimestampedWindowedKeyValueIterator<K, V, byte[], byte[]> All => new TimestampedWindowedKeyValueIterator<K, V, byte[], byte[]>(Factory, Store.All());
         /// <inheritdoc/>
-        public override TimestampedWindowedKeyValueIterator<TKey, TValue> Fetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
+        public override TimestampedWindowedKeyValueIterator<K, V, byte[], byte[]> Fetch(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
             IGenericSerDesFactory factory = Factory;
-            var _keySerDes = factory?.BuildKeySerDes<TKey>();
+            var _keySerDes = factory?.BuildKeySerDes<K, byte[]>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
@@ -121,36 +123,36 @@ namespace MASES.KNet.Streams.State
             return new(factory, Store.Fetch(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
-        public override TimestampedWindowedKeyValueIterator<TKey, TValue> FetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
+        public override TimestampedWindowedKeyValueIterator<K, V, byte[], byte[]> FetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
         {
             return new(Factory, Store.FetchAll(arg0, arg1));
         }
         /// <inheritdoc/>
-        public override TimestampedWindowStoreIterator<TValue> Fetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
+        public override TimestampedWindowStoreIterator<V, byte[]> Fetch(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
             IGenericSerDesFactory factory = Factory;
-            var _keySerDes = factory?.BuildKeySerDes<TKey>();
+            var _keySerDes = factory?.BuildKeySerDes<K, byte[]>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             return new(factory, Store.Fetch(r0, arg1, arg2));
         }
         /// <inheritdoc/>
-        public override ValueAndTimestamp<TValue> Fetch(TKey arg0, long arg1)
+        public override ValueAndTimestamp<V, byte[]> Fetch(K arg0, long arg1)
         {
             IGenericSerDesFactory factory = Factory;
-            var _keySerDes = factory?.BuildKeySerDes<TKey>();
+            var _keySerDes = factory?.BuildKeySerDes<K, byte[]>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var agg = Store.Fetch(r0, arg1);
-            return new ValueAndTimestamp<TValue>(factory, agg);
+            return new ValueAndTimestamp<V, byte[]>(factory, agg);
         }
         /// <inheritdoc/>
-        public override TimestampedWindowedKeyValueIterator<TKey, TValue> BackwardAll => new(Factory, Store.BackwardAll());
+        public override TimestampedWindowedKeyValueIterator<K, V, byte[], byte[]> BackwardAll => new(Factory, Store.BackwardAll());
         /// <inheritdoc/>
-        public override TimestampedWindowedKeyValueIterator<TKey, TValue> BackwardFetch(TKey arg0, TKey arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
+        public override TimestampedWindowedKeyValueIterator<K, V, byte[], byte[]> BackwardFetch(K arg0, K arg1, Java.Time.Instant arg2, Java.Time.Instant arg3)
         {
             IGenericSerDesFactory factory = Factory;
-            var _keySerDes = factory?.BuildKeySerDes<TKey>();
+            var _keySerDes = factory?.BuildKeySerDes<K, byte[]>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
@@ -158,15 +160,15 @@ namespace MASES.KNet.Streams.State
             return new(factory, Store.BackwardFetch(r0, r1, arg2, arg3));
         }
         /// <inheritdoc/>
-        public override TimestampedWindowedKeyValueIterator<TKey, TValue> BackwardFetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
+        public override TimestampedWindowedKeyValueIterator<K, V, byte[], byte[]> BackwardFetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
         {
             return new(Factory, Store.BackwardFetchAll(arg0, arg1));
         }
         /// <inheritdoc/>
-        public override TimestampedWindowStoreIterator<TValue> BackwardFetch(TKey arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
+        public override TimestampedWindowStoreIterator<V, byte[]> BackwardFetch(K arg0, Java.Time.Instant arg1, Java.Time.Instant arg2)
         {
             IGenericSerDesFactory factory = Factory;
-            var _keySerDes = factory?.BuildKeySerDes<TKey>();
+            var _keySerDes = factory?.BuildKeySerDes<K, byte[]>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
 

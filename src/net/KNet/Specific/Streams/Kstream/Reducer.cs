@@ -25,6 +25,7 @@ namespace MASES.KNet.Streams.Kstream
     /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.Reducer{TJVMV}"/>
     /// </summary>
     /// <typeparam name="V">value type</typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public abstract class Reducer<V, TJVMV> : Org.Apache.Kafka.Streams.Kstream.Reducer<TJVMV>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
@@ -82,16 +83,16 @@ namespace MASES.KNet.Streams.Kstream
         bool _value1Set;
         V _value2;
         bool _value2Set;
-        ISerDes<V> _vSerializer = null;
+        ISerDes<V, byte[]> _vSerializer = null;
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Reducer{V, TJVMV}.Apply()"/> class method</remarks>
         public new System.Func<Reducer<V>, V> OnApply { get; set; } = null;
         /// <inheritdoc/>
-        public override  V Value1 { get { if (!_value1Set) { _vSerializer ??= Factory?.BuildValueSerDes<V>(); _value1 = _vSerializer.Deserialize(null, _arg0); _value1Set = true; } return _value1; } }
+        public override  V Value1 { get { if (!_value1Set) { _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>(); _value1 = _vSerializer.Deserialize(null, _arg0); _value1Set = true; } return _value1; } }
         /// <inheritdoc/>
-        public override V Value2 { get { if (!_value2Set) { _vSerializer ??= Factory?.BuildValueSerDes<V>(); _value2 = _vSerializer.Deserialize(null, _arg1); _value2Set = true; } return _value2; } }
+        public override V Value2 { get { if (!_value2Set) { _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>(); _value2 = _vSerializer.Deserialize(null, _arg1); _value2Set = true; } return _value2; } }
         /// <inheritdoc/>
         public sealed override byte[] Apply(byte[] arg0, byte[] arg1)
         {
@@ -100,7 +101,7 @@ namespace MASES.KNet.Streams.Kstream
             _arg1 = arg1;
 
             V res = (OnApply != null) ? OnApply(this) : Apply();
-            _vSerializer ??= Factory?.BuildValueSerDes<V>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>();
             return _vSerializer.Serialize(null, res);
         }
     }

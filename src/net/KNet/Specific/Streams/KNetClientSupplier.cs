@@ -26,7 +26,7 @@ namespace MASES.KNet.Streams
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.KafkaClientSupplier"/>
     /// </summary>
     /// <remarks>The default <see cref="Org.Apache.Kafka.Streams.KafkaClientSupplier"/> used from <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/> allocates both <see cref="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer"/> and <see cref="Org.Apache.Kafka.Clients.Producer.KafkaProducer"/>. 
-    /// <see cref="KNetClientSupplier"/> uses <see cref="KNetConsumer{K, V}"/> and <see cref="KNetProducer{K, V}"/>, the instance shall be disposed when no more in use, but still be alive still <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/> is alive.</remarks>
+    /// <see cref="KNetClientSupplier"/> uses <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> and <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/>, the instance shall be disposed when no more in use, but still be alive still <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/> is alive.</remarks>
     public class KNetClientSupplier : Org.Apache.Kafka.Streams.KafkaClientSupplier
     {
         private readonly System.Collections.Generic.List<Org.Apache.Kafka.Clients.Admin.Admin> _admins = new();
@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams
             Properties properties = new();
             properties.PutAll(arg0);
 
-            var consumer =  new KNetConsumer<byte[], byte[]>(properties);
+            var consumer =  new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
             _consumers.Add(consumer);
             return consumer;
         }
@@ -61,7 +61,7 @@ namespace MASES.KNet.Streams
             Properties properties = new();
             properties.PutAll(arg0);
 
-            var consumer = new KNetConsumer<byte[], byte[]>(properties);
+            var consumer = new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
             _consumers.Add(consumer);
             return consumer;
         }
@@ -71,7 +71,7 @@ namespace MASES.KNet.Streams
             Properties properties = new();
             properties.PutAll(arg0);
 
-            var producer = new KNetProducer<byte[], byte[]>(properties);
+            var producer = new KNetProducer<byte[], byte[], byte[], byte[]>(properties);
             _producers.Add(producer);
             return producer;
         }
@@ -81,7 +81,7 @@ namespace MASES.KNet.Streams
             Properties properties = new();
             properties.PutAll(arg0);
 
-            var consumer = new KNetConsumer<byte[], byte[]>(properties);
+            var consumer = new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
             _consumers.Add(consumer);
             return consumer;
         }

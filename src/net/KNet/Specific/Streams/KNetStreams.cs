@@ -111,10 +111,10 @@ namespace MASES.KNet.Streams
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><typeparamref name="TKey"/></param>
-        /// <param name="arg2"><see cref="ISerializer{T}"/></param>
+        /// <param name="arg2"><see cref="ISerializer{T, TJVMK}"/></param>
         /// <typeparam name="TKey"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.KeyQueryMetadata"/></returns>
-        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<TKey>(string arg0, TKey arg1, ISerializer<TKey> arg2)
+        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<TKey>(string arg0, TKey arg1, ISerializer<TKey, byte[]> arg2)
         {
             return _inner.QueryMetadataForKey<byte[]>(arg0, arg2.Serialize(null, arg1), arg2.KafkaSerializer);
         }
@@ -129,7 +129,7 @@ namespace MASES.KNet.Streams
         public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<TKey>(string arg0, TKey arg1, StreamPartitioner<TKey, object> arg2)
         {
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var keySerDes = _factory?.BuildKeySerDes<TKey>();
+            var keySerDes = _factory?.BuildKeySerDes<TKey, byte[]>();
             return _inner.IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", arg0, keySerDes.Serialize(null, arg1), arg2);
         }
         /// <summary>

@@ -26,6 +26,9 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V1"></typeparam>
     /// <typeparam name="V2"></typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV1">The JVM type of <typeparamref name="V1"/></typeparam>
+    /// <typeparam name="TJVMV2">The JVM type of <typeparamref name="V2"/></typeparam>
     public class StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.Kstream.StreamJoined<TJVMK, TJVMV1, TJVMV2> _inner;

@@ -24,23 +24,24 @@ namespace MASES.KNet.Streams.State
     /// <summary>
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.WindowStoreIterator"/> 
     /// </summary>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public sealed class TimestampedWindowStoreIterator<TValue> : IGenericSerDesFactoryApplier
+    /// <typeparam name="V">The value type</typeparam>
+    /// <typeparam name="TJVMV">The JVM value type</typeparam>
+    public sealed class TimestampedWindowStoreIterator<V, TJVMV> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.State.WindowStoreIterator<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> _iterator;
+        readonly Org.Apache.Kafka.Streams.State.WindowStoreIterator<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _iterator;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        internal TimestampedWindowStoreIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.WindowStoreIterator<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>> iterator)
+        internal TimestampedWindowStoreIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.WindowStoreIterator<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> iterator)
         {
             _factory = factory;
             _iterator = iterator;
         }
 
         /// <summary>
-        /// Converter from <see cref="TimestampedWindowStoreIterator{TValue}"/> to <see cref="KeyValueIterator{Int64, TValue}"/>
+        /// Converter from <see cref="TimestampedWindowStoreIterator{V, TJVMV}"/> to <see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public static implicit operator TimestampedKeyValueIterator<long, TValue>(TimestampedWindowStoreIterator<TValue> t) => new TimestampedKeyValueIterator<long, TValue>(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>());
+        public static implicit operator TimestampedKeyValueIterator<long, V, Java.Lang.Long, TJVMV>(TimestampedWindowStoreIterator<V, TJVMV> t) => new TimestampedKeyValueIterator<long, V, Java.Lang.Long, TJVMV>(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>());
 
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#close--"/>

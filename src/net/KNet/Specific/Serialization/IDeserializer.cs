@@ -48,12 +48,12 @@ namespace MASES.KNet.Serialization
         T DeserializeWithHeaders(string topic, Headers headers, TJVMT data);
     }
 
-    /// <summary>
-    /// KNet interface for deserializers based on <see cref="byte"/> array JVM type
-    /// </summary>
-    /// <typeparam name="T">The .NET type</typeparam>
-    public interface IDeserializer<T> : IDeserializer<T, byte[]>
-    {
+    ///// <summary>
+    ///// KNet interface for deserializers based on <see cref="byte"/> array JVM type
+    ///// </summary>
+    ///// <typeparam name="T">The .NET type</typeparam>
+    //public interface IDeserializer<T> : IDeserializer<T, byte[]>
+    //{
 
-    }
+    //}
 }

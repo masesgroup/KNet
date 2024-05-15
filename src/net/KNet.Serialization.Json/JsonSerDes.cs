@@ -35,7 +35,7 @@ namespace MASES.KNet.Serialization.Json
         {
             readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(Key<>).ToAssemblyQualified());
             readonly byte[] keyTypeName = null;
-            readonly ISerDes<T> _defaultSerDes = default!;
+            readonly ISerDes<T, byte[]> _defaultSerDes = default!;
             /// <inheritdoc/>
             public override bool UseHeaders => true;
             /// <summary>
@@ -101,7 +101,7 @@ namespace MASES.KNet.Serialization.Json
         {
             readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(Value<>).ToAssemblyQualified());
             readonly byte[] valueTypeName = null!;
-            readonly ISerDes<T> _defaultSerDes = default!;
+            readonly ISerDes<T, byte[]> _defaultSerDes = default;
             /// <inheritdoc/>
             public override bool UseHeaders => true;
             /// <summary>
