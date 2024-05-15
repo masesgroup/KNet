@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -93,7 +93,7 @@ Class Function&lt;V, KO, TJVMV, TJVMKO&gt;  <a class="header-action link-seconda
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>KNet implementation of <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function-2.html">Function&lt;TObject, TReturn&gt;</a></p>
+  <div class="markdown summary"><p>KNet implementation of <a class="xref" href="api/Java.Util.Function.Function-2.html">Function&lt;TObject, TReturn&gt;</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -127,8 +127,8 @@ Class Function&lt;V, KO, TJVMV, TJVMKO&gt;  <a class="header-action link-seconda
       <div><span class="xref">JVMBridgeBase</span></div>
       <div><span class="xref">JVMBridgeBase</span>&lt;<span class="xref">JVMBridgeListener</span>&gt;</div>
       <div><span class="xref">JVMBridgeListener</span></div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function.html">Function</a></div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function-2.html">Function</a>&lt;TJVMV, TJVMKO&gt;</div>
+      <div><a class="xref" href="api/Java.Util.Function.Function.html">Function</a></div>
+      <div><a class="xref" href="api/Java.Util.Function.Function-2.html">Function</a>&lt;TJVMV, TJVMKO&gt;</div>
       <div><span class="xref">Function&lt;V, KO, TJVMV, TJVMKO&gt;</span></div>
     </dd>
   </dl>
@@ -140,7 +140,7 @@ Class Function&lt;V, KO, TJVMV, TJVMKO&gt;  <a class="header-action link-seconda
       <div><span class="xref">IJVMBridgeCore</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><span class="xref">IJVMBridgeBaseStatic</span></div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.IFunction-2.html">IFunction</a>&lt;TJVMV, TJVMKO&gt;</div>
+      <div><a class="xref" href="api/Java.Util.Function.IFunction-2.html">IFunction</a>&lt;TJVMV, TJVMKO&gt;</div>
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
@@ -158,13 +158,13 @@ Class Function&lt;V, KO, TJVMV, TJVMKO&gt;  <a class="header-action link-seconda
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function-2.html#Java_Util_Function_Function_2_Apply__0_">Function&lt;TJVMV, TJVMKO&gt;.Apply(TJVMV)</a>
+      <a class="xref" href="api/Java.Util.Function.Function-2.html#Java_Util_Function_Function_2_Apply__0_">Function&lt;TJVMV, TJVMKO&gt;.Apply(TJVMV)</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function-2.html#Java_Util_Function_Function_2_OnApply">Function&lt;TJVMV, TJVMKO&gt;.OnApply</a>
+      <a class="xref" href="api/Java.Util.Function.Function-2.html#Java_Util_Function_Function_2_OnApply">Function&lt;TJVMV, TJVMKO&gt;.OnApply</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function.html#Java_Util_Function_Function_BridgeClassName">Function.BridgeClassName</a>
+      <a class="xref" href="api/Java.Util.Function.Function.html#Java_Util_Function_Function_BridgeClassName">Function.BridgeClassName</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler(string, EventHandler)</a>

@@ -1592,7 +1592,7 @@ namespace MASES.KNet.Replicator
     }
     #endregion
 
-    #region KNetCompactedReplicatorBuffered<K, V>
+    #region KNetCompactedReplicator<K, V>
     /// <summary>
     /// Provides a reliable dictionary, persisted in a COMPACTED Kafka topic and shared among applications, extends <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> using array of <see cref="byte"/>
     /// </summary>

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -111,8 +111,8 @@ public class NewObjectCmdletCommand : NewObjectCmdletCommandBase&lt;NewObjectCmd
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.internal.internalcommand">InternalCommand</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet">Cmdlet</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet">PSCmdlet</a></div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSCmdlet-1.html">JNetPSCmdlet</a>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.NewObjectCmdletCommandBase-2.html">NewObjectCmdletCommandBase</a>&lt;<a class="xref" href="MASES.KNetPS.Cmdlet.NewObjectCmdletCommand.html">NewObjectCmdletCommand</a>, <a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
+      <div><a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSCmdlet-1.html">JNetPSCmdlet</a>&lt;<a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
+      <div><a class="xref" href="api/MASES.JNetPSCore.Cmdlet.NewObjectCmdletCommandBase-2.html">NewObjectCmdletCommandBase</a>&lt;<a class="xref" href="MASES.KNetPS.Cmdlet.NewObjectCmdletCommand.html">NewObjectCmdletCommand</a>, <a class="xref" href="MASES.KNetPS.KNetPSCore.html">KNetPSCore</a>&gt;</div>
       <div><span class="xref">NewObjectCmdletCommand</span></div>
     </dd>
   </dl>
@@ -123,25 +123,25 @@ public class NewObjectCmdletCommand : NewObjectCmdletCommandBase&lt;NewObjectCmd
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.NewObjectCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_NewObjectCmdletCommandBase_2_ProcessCommand">NewObjectCmdletCommandBase&lt;NewObjectCmdletCommand, KNetPSCore&gt;.ProcessCommand()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.NewObjectCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_NewObjectCmdletCommandBase_2_ProcessCommand">NewObjectCmdletCommandBase&lt;NewObjectCmdletCommand, KNetPSCore&gt;.ProcessCommand()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.NewObjectCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_NewObjectCmdletCommandBase_2_Class">NewObjectCmdletCommandBase&lt;NewObjectCmdletCommand, KNetPSCore&gt;.Class</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.NewObjectCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_NewObjectCmdletCommandBase_2_Class">NewObjectCmdletCommandBase&lt;NewObjectCmdletCommand, KNetPSCore&gt;.Class</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.NewObjectCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_NewObjectCmdletCommandBase_2_Arguments">NewObjectCmdletCommandBase&lt;NewObjectCmdletCommand, KNetPSCore&gt;.Arguments</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.NewObjectCmdletCommandBase-2.html#MASES_JNetPSCore_Cmdlet_NewObjectCmdletCommandBase_2_Arguments">NewObjectCmdletCommandBase&lt;NewObjectCmdletCommand, KNetPSCore&gt;.Arguments</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSCmdlet_1_BeginProcessing">JNetPSCmdlet&lt;KNetPSCore&gt;.BeginProcessing()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSCmdlet_1_BeginProcessing">JNetPSCmdlet&lt;KNetPSCore&gt;.BeginProcessing()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSCmdlet_1_ProcessRecord">JNetPSCmdlet&lt;KNetPSCore&gt;.ProcessRecord()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSCmdlet_1_ProcessRecord">JNetPSCmdlet&lt;KNetPSCore&gt;.ProcessRecord()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSCmdlet_1_ProcessCommand">JNetPSCmdlet&lt;KNetPSCore&gt;.ProcessCommand()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSCmdlet_1_ProcessCommand">JNetPSCmdlet&lt;KNetPSCore&gt;.ProcessCommand()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNetPSCore.Cmdlet.JNetPSCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSCmdlet_1_EndProcessing">JNetPSCmdlet&lt;KNetPSCore&gt;.EndProcessing()</a>
+      <a class="xref" href="api/MASES.JNetPSCore.Cmdlet.JNetPSCmdlet-1.html#MASES_JNetPSCore_Cmdlet_JNetPSCmdlet_1_EndProcessing">JNetPSCmdlet&lt;KNetPSCore&gt;.EndProcessing()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.currentproviderlocation">PSCmdlet.CurrentProviderLocation(string)</a>

@@ -36,7 +36,12 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// <see langword="true"/> if <see cref="Headers"/> are used
         /// </summary>
-        bool UseHeaders { get; }
+        bool UseHeaders { get; set; }
+        /// <summary>
+        /// Set to <see langword="true"/> in implementing class if the implementation shall use the serializer of Apache Kafka, default is <see langword="false"/>
+        /// </summary>
+        /// <remarks>When this option is set to <see langword="true"/> there is better compatibility with data managed from Apache Kafka, but there is a performance impact</remarks>
+        bool UseKafkaClassForSupportedTypes { get; set; }
         /// <summary>
         /// Set to <see langword="true"/> in implementing class if the implementation shall use the support of direct buffer exchange
         /// </summary>

@@ -7,67 +7,67 @@
   "DisableInterfaceMethodGeneration": true,
   "CreateInterfaceInheritance": true,
   "JarList": [
-    "kafka_2.13-3.6.1.jar",
-    "kafka-clients-3.6.1.jar",
-    "kafka-streams-3.6.1.jar",
-    "kafka-tools-3.6.1.jar",
-    "kafka-raft-3.6.1.jar",
-    "connect-api-3.6.1.jar",
-    "connect-basic-auth-extension-3.6.1.jar",
-    "connect-json-3.6.1.jar",
-    "connect-mirror-3.6.1.jar",
-    "connect-mirror-client-3.6.1.jar",
-    "connect-runtime-3.6.1.jar",
-    "connect-transforms-3.6.1.jar"
+    "kafka_2.13-3.6.2.jar",
+    "kafka-clients-3.6.2.jar",
+    "kafka-streams-3.6.2.jar",
+    "kafka-tools-3.6.2.jar",
+    "kafka-raft-3.6.2.jar",
+    "connect-api-3.6.2.jar",
+    "connect-basic-auth-extension-3.6.2.jar",
+    "connect-json-3.6.2.jar",
+    "connect-mirror-3.6.2.jar",
+    "connect-mirror-client-3.6.2.jar",
+    "connect-runtime-3.6.2.jar",
+    "connect-transforms-3.6.2.jar"
   ],
   "OriginJavadocJARVersionAndUrls": [
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.6.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.6.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.6.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.6.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/"
     }
   ],
   "NamespacesToAvoid": [

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class WindowStore&lt;K, V&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -93,7 +93,7 @@ Class WindowStore&lt;K, V&gt;  <a class="header-action link-secondary" title="Vi
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -727,7 +727,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L386"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -740,11 +740,11 @@ public WindowStore(params object[] args)</code></pre>
     <dt><code>arg0</code> <span class="xref">K</span></dt>
     <dd><p><code class="typeparamref">K</code></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -764,7 +764,7 @@ public WindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -777,7 +777,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L397"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-long-long-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-long-long-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -822,7 +822,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L317"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -838,11 +838,11 @@ public WindowStore(params object[] args)</code></pre>
     <dt><code>arg1</code> <span class="xref">K</span></dt>
     <dd><p><code class="typeparamref">K</code></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg3</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -862,7 +862,7 @@ public WindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -875,7 +875,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L329"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-long-long-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-long-long-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -923,7 +923,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L340"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -933,11 +933,11 @@ public WindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -957,7 +957,7 @@ public WindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -970,7 +970,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L350"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-long-long-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#backwardFetchAll-long-long-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1012,7 +1012,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L409"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1025,11 +1025,11 @@ public WindowStore(params object[] args)</code></pre>
     <dt><code>arg0</code> <span class="xref">K</span></dt>
     <dd><p><code class="typeparamref">K</code></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -1049,7 +1049,7 @@ public WindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1062,7 +1062,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L294"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-long-long-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-long-long-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1107,7 +1107,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L363"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1123,11 +1123,11 @@ public WindowStore(params object[] args)</code></pre>
     <dt><code>arg1</code> <span class="xref">K</span></dt>
     <dd><p><code class="typeparamref">K</code></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg3</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -1147,7 +1147,7 @@ public WindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1160,7 +1160,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L273"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-long-long-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetch-java.lang.Object-java.lang.Object-long-long-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1208,7 +1208,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L374"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetchAll-java.time.Instant-java.time.Instant-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetchAll-java.time.Instant-java.time.Instant-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1218,11 +1218,11 @@ public WindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -1242,7 +1242,7 @@ public WindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1255,7 +1255,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetchAll-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#fetchAll-long-long-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetchAll-long-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#fetchAll-long-long-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1297,7 +1297,7 @@ public WindowStore(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/WindowStore.cs/#L304"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#put-java.lang.Object-java.lang.Object-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/WindowStore.html#put-java.lang.Object-java.lang.Object-long-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#put-java.lang.Object-java.lang.Object-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/WindowStore.html#put-java.lang.Object-java.lang.Object-long-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

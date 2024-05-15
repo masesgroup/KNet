@@ -231,7 +231,9 @@ namespace MASES.KNet.Serialization
         /// <inheritdoc cref="IDeserializer{T, TJVMT}.KafkaDeserializer"/>
         public Deserializer<TJVMT> KafkaDeserializer => _KafkaDeserializer;
         /// <inheritdoc cref="IDeserializer{T, TJVMT}.UseHeaders"/>
-        public virtual bool UseHeaders => false;
+        public virtual bool UseHeaders { get; set; } = false;
+        /// <inheritdoc cref="IDeserializer{T, TJVMT}.UseKafkaClassForSupportedTypes"/>
+        public virtual bool UseKafkaClassForSupportedTypes { get; set; } = false;
         /// <inheritdoc cref="IDeserializer{T, TJVMT}.IsDirectBuffered"/>
         public virtual bool IsDirectBuffered => false;
         /// <inheritdoc cref="IDeserializer{T, TJVMT}.IsDirectBuffered"/>

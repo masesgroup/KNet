@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -92,157 +92,157 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.Cluster.html">Cluster</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Cluster.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Cluster.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Cluster.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Cluster.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.ClusterResource.html">ClusterResource</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/ClusterResource.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/ClusterResource.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/ClusterResource.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/ClusterResource.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.ClusterResourceListener.html">ClusterResourceListener</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/ClusterResourceListener.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/ClusterResourceListener.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/ClusterResourceListener.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/ClusterResourceListener.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.Configurable.html">Configurable</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Configurable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Configurable.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Configurable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Configurable.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.ConsumerGroupState.html">ConsumerGroupState</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/ConsumerGroupState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/ConsumerGroupState.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/ConsumerGroupState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/ConsumerGroupState.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.ElectionType.html">ElectionType</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/ElectionType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/ElectionType.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/ElectionType.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/ElectionType.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.Endpoint.html">Endpoint</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Endpoint.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Endpoint.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Endpoint.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Endpoint.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.InvalidRecordException.html">InvalidRecordException</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/InvalidRecordException.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/InvalidRecordException.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/InvalidRecordException.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/InvalidRecordException.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.IsolationLevel.html">IsolationLevel</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/IsolationLevel.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/IsolationLevel.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/IsolationLevel.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/IsolationLevel.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.KafkaException.html">KafkaException</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaException.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaException.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaException.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaException.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.KafkaFuture.html">KafkaFuture</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.KafkaFuture.BaseFunction.html">KafkaFuture.BaseFunction</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.BaseFunction.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.BaseFunction.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.BaseFunction.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.BaseFunction.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.KafkaFuture.BaseFunction-2.html">KafkaFuture.BaseFunction&lt;A, B&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.BaseFunction.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.BaseFunction.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.BaseFunction.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.BaseFunction.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.KafkaFuture.BiConsumer.html">KafkaFuture.BiConsumer</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.BiConsumer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.BiConsumer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.BiConsumer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.BiConsumer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.KafkaFuture.BiConsumer-2.html">KafkaFuture.BiConsumer&lt;A, B&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.BiConsumer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.BiConsumer.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.BiConsumer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.BiConsumer.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.KafkaFuture-1.html">KafkaFuture&lt;T&gt;</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/KafkaFuture.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.MessageFormatter.html">MessageFormatter</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/MessageFormatter.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/MessageFormatter.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/MessageFormatter.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/MessageFormatter.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.Metric.html">Metric</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Metric.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Metric.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Metric.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Metric.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/MetricName.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/MetricName.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/MetricName.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/MetricName.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.MetricNameTemplate.html">MetricNameTemplate</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/MetricNameTemplate.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/MetricNameTemplate.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/MetricNameTemplate.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/MetricNameTemplate.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Node.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Node.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Node.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Node.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/PartitionInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/PartitionInfo.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/PartitionInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/PartitionInfo.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.Reconfigurable.html">Reconfigurable</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Reconfigurable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Reconfigurable.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Reconfigurable.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Reconfigurable.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.TopicCollection.html">TopicCollection</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicCollection.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicCollection.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicCollection.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicCollection.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.TopicCollection.TopicIdCollection.html">TopicCollection.TopicIdCollection</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicCollection.TopicIdCollection.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicCollection.TopicIdCollection.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicCollection.TopicIdCollection.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicCollection.TopicIdCollection.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.TopicCollection.TopicNameCollection.html">TopicCollection.TopicNameCollection</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicCollection.TopicNameCollection.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicCollection.TopicNameCollection.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicCollection.TopicNameCollection.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicCollection.TopicNameCollection.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.TopicIdPartition.html">TopicIdPartition</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicIdPartition.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicIdPartition.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicIdPartition.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicIdPartition.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicPartition.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicPartition.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicPartition.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicPartition.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.TopicPartitionInfo.html">TopicPartitionInfo</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicPartitionInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicPartitionInfo.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicPartitionInfo.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicPartitionInfo.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.TopicPartitionReplica.html">TopicPartitionReplica</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicPartitionReplica.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/TopicPartitionReplica.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicPartitionReplica.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/TopicPartitionReplica.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></dt>
-      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Uuid.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/Uuid.html</a></p>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Uuid.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Uuid.html</a></p>
 </dd>
     </dl>
     <h3 id="interfaces">
@@ -250,7 +250,7 @@ Interfaces
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Org.Apache.Kafka.Common.IClusterResourceListener.html">IClusterResourceListener</a></dt>
-      <dd><p>.NET interface for org.mases.knet.generated.org.apache.kafka.common.ClusterResourceListener implementing <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/ClusterResourceListener.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/ClusterResourceListener.html</a></p>
+      <dd><p>.NET interface for org.mases.knet.generated.org.apache.kafka.common.ClusterResourceListener implementing <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/ClusterResourceListener.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/ClusterResourceListener.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">

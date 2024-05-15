@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -544,7 +544,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -554,17 +554,17 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></p>
+    <dt><code>arg3</code> <a class="xref" href="api/Java.Lang.Integer.html">Integer</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Integer.html">Integer</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -592,7 +592,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -602,17 +602,17 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></p>
+    <dt><code>arg3</code> <a class="xref" href="api/Java.Lang.Integer.html">Integer</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Integer.html">Integer</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -646,7 +646,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -656,17 +656,17 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></p>
+    <dt><code>arg3</code> <a class="xref" href="api/Java.Lang.Integer.html">Integer</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Integer.html">Integer</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -680,8 +680,8 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
     <dt><code>arg7</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></p>
 </dd>
-    <dt><code>arg8</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a></p>
+    <dt><code>arg8</code> <a class="xref" href="api/Java.Lang.Long.html">Long</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Long.html">Long</a></p>
 </dd>
   </dl>
 
@@ -703,7 +703,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -713,17 +713,17 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></p>
+    <dt><code>arg3</code> <a class="xref" href="api/Java.Lang.Integer.html">Integer</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Integer.html">Integer</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -737,11 +737,11 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
     <dt><code>arg7</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></p>
 </dd>
-    <dt><code>arg8</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a></p>
+    <dt><code>arg8</code> <a class="xref" href="api/Java.Lang.Long.html">Long</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Long.html">Long</a></p>
 </dd>
-    <dt><code>arg9</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable.html">Iterable</a></p>
+    <dt><code>arg9</code> <a class="xref" href="api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Iterable.html">Iterable</a></p>
 </dd>
   </dl>
 
@@ -763,7 +763,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -773,14 +773,14 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -808,7 +808,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -818,14 +818,14 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -1151,10 +1151,10 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1184,10 +1184,10 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1225,10 +1225,10 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1252,10 +1252,10 @@ For example, a database connector might specify the <code class="paramref">sourc
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1293,10 +1293,10 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1329,10 +1329,10 @@ For example, a database connector might specify the <code class="paramref">sourc
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1370,10 +1370,10 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1409,10 +1409,10 @@ For example, a database connector might specify the <code class="paramref">sourc
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1450,10 +1450,10 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1492,10 +1492,10 @@ For example, a database connector might specify the <code class="paramref">sourc
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1533,10 +1533,10 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1563,10 +1563,10 @@ For example, a database connector might specify the <code class="paramref">sourc
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1594,7 +1594,7 @@ For example, a database connector might specify the <code class="paramref">sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1605,8 +1605,8 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1627,7 +1627,7 @@ For example, a database connector might specify the <code class="paramref">sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1638,8 +1638,8 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
