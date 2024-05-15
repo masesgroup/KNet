@@ -102,7 +102,7 @@ namespace MASES.KNetTest
                 UpdateMode = type,
                 BootstrapServers = serverToUse,
                 StateName = topicName,
-                KNetValueSerDes = typeof(JsonSerDes.Value<>),
+                KNetValueSerDes = typeof(JsonSerDes.ValueRaw<>),
                 //ValueSerDes = new JsonSerDes.Value<TestType>(),
             })
             {
@@ -131,7 +131,7 @@ namespace MASES.KNetTest
                 UpdateMode = type,
                 BootstrapServers = serverToUse,
                 StateName = topicName,
-                KNetValueSerDes = typeof(JsonSerDes.Value<>),
+                KNetValueSerDes = typeof(JsonSerDes.ValueRaw<>),
             //  ValueSerDes = new JsonSerDes.Value<TestType>(),
             })
             {
@@ -160,7 +160,7 @@ namespace MASES.KNetTest
                 UpdateMode = type,
                 BootstrapServers = serverToUse,
                 StateName = topicName,
-                ValueSerDes = new JsonSerDes.Value<TestType>(),
+                ValueSerDes = new JsonSerDes.ValueRaw<TestType>(),
             })
             {
                 replicator.StartAndWait();
