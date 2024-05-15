@@ -43,21 +43,4 @@ namespace Org.Apache.Kafka.Common.Serialization
             return new SerializerDirect<T>();
         }
     }
-
-    /// <summary>
-    /// Listener for Kafka Serializer. Extends <see cref="JVMBridgeListener"/>. Implements <see cref="ISerializer{T}"/>
-    /// </summary>
-    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class SerdeDirect<T> : Serde<T>
-    {
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_AutoInit.htm"/>
-        /// </summary>
-        public override bool AutoInit => false;
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.common.serialization.Serde";
-    }
 }
