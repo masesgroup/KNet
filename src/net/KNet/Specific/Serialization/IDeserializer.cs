@@ -46,23 +46,9 @@ namespace MASES.KNet.Serialization
         /// Set to <see langword="true"/> in implementing class if the implementation shall use the support of direct buffer exchange
         /// </summary>
         bool IsDirectBuffered { get; }
-        /// <summary>
-        /// Set to <see langword="true"/> in implementing class if the implementation shall use the deserializer of Apache Kafka, default is <see langword="false"/>
-        /// </summary>
-        /// <remarks>When this option is set to <see langword="true"/> there is better compatibility with data managed from Apache Kafka, but there is a performance impact</remarks>
-        bool UseKafkaClassForSupportedTypes { get; set; }
         /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.IDeserializer{T}.Deserialize(Java.Lang.String, byte[])"/>
         T Deserialize(string topic, TJVMT data);
         /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.IDeserializer{T}.Deserialize(Java.Lang.String, Headers, byte[])"/>
         T DeserializeWithHeaders(string topic, Headers headers, TJVMT data);
     }
-
-    ///// <summary>
-    ///// KNet interface for deserializers based on <see cref="byte"/> array JVM type
-    ///// </summary>
-    ///// <typeparam name="T">The .NET type</typeparam>
-    //public interface IDeserializer<T> : IDeserializer<T, byte[]>
-    //{
-
-    //}
 }

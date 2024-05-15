@@ -236,8 +236,6 @@ namespace MASES.KNet.Serialization
         public virtual bool UseKafkaClassForSupportedTypes { get; set; } = false;
         /// <inheritdoc cref="IDeserializer{T, TJVMT}.IsDirectBuffered"/>
         public virtual bool IsDirectBuffered => false;
-        /// <inheritdoc cref="IDeserializer{T, TJVMT}.IsDirectBuffered"/>
-        public virtual bool UseKafkaClassForSupportedTypes { get; set; } = false;
         /// <inheritdoc cref="ISerializer{T, TJVMT}.Serialize(string, T)"/>
         public virtual TJVMT Serialize(string topic, T data)
         {
