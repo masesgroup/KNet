@@ -25,13 +25,15 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class Printed<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
         readonly Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
-        protected Printed(Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV> inner)
+        internal Printed(Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV> inner)
         {
             _inner = inner;
         }

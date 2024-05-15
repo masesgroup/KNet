@@ -24,6 +24,8 @@ namespace MASES.KNet.Benchmark
 {
     class CLIParam
     {
+        public const string EnableCriticalMethods = "EnableCriticalMethods";
+
         // CommonArgs
         public const string ShowLogs = "ShowLogs";
         public const string ShowIntermediateResults = "ShowIntermediateResults";
@@ -89,6 +91,8 @@ namespace MASES.KNet.Benchmark
 
         public long CurrentJNICalls => JVMStats.TotalJNICalls;
 
+        public TimeSpan CurrentTimeSpentInJNICalls => JVMStats.TotalTimeInJNICalls;
+
 #if DEBUG
         public override bool EnableDebug => true;
 #endif
@@ -100,6 +104,12 @@ namespace MASES.KNet.Benchmark
                 var lst = new System.Collections.Generic.List<IArgumentMetadata>(base.CommandLineArguments);
                 lst.AddRange(new IArgumentMetadata[]
                 {
+                   new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.EnableCriticalMethods,
+                        Type = ArgumentType.Single,
+                        Help = "Show intermediate logs.",
+                    },
                     new ArgumentMetadata<object>()
                     {
                         Name = CLIParam.ShowLogs,
@@ -354,6 +364,13 @@ namespace MASES.KNet.Benchmark
                 });
                 return lst;
             }
+        }
+
+        protected override string[] ProcessCommandLine()
+        {
+            var ret = base.ProcessCommandLine();
+            EnableCriticalMethods = ParsedArgs.Exist(CLIParam.EnableCriticalMethods);
+            return ret;
         }
     }
 

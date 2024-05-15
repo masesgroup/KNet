@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -91,8 +91,33 @@
 Classes
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Utils.KNetFunction-2.html">KNetFunction&lt;V, KO&gt;</a></dt>
-      <dd><p>KNet implementation of <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.Function-2.html">Function&lt;TObject, TReturn&gt;</a></p>
+      <dt><a class="xref" href="MASES.KNet.Streams.Utils.Function-2.html">Function&lt;V, KO&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="MASES.KNet.Streams.Utils.Function-4.html">Function&lt;V, KO, TJVMV, TJVMKO&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Utils.Function-4.html">Function&lt;V, KO, TJVMV, TJVMKO&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="api/Java.Util.Function.Function-2.html">Function&lt;TObject, TReturn&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Utils.KStreamConsumer-2.html">KStreamConsumer&lt;K, V&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="MASES.KNet.Streams.Utils.KStreamConsumer-4.html">KStreamConsumer&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Utils.KStreamConsumer-4.html">KStreamConsumer&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="api/Java.Util.Function.Consumer-1.html">Consumer&lt;TObject&gt;</a> over <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream&lt;K, V&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Utils.KStreamFunction-2.html">KStreamFunction&lt;K, V&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="MASES.KNet.Streams.Utils.KStreamFunction-4.html">KStreamFunction&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Utils.KStreamFunction-4.html">KStreamFunction&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="api/Java.Util.Function.Function-2.html">Function&lt;TObject, TReturn&gt;</a> over <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream&lt;K, V&gt;</a></p>
 </dd>
     </dl>
 

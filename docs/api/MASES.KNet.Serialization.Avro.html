@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -92,7 +92,7 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.html">AvroSerDes</a></dt>
-      <dd><p>Base class to define extensions of <a class="xref" href="MASES.KNet.Serialization.KNetSerDes-1.html">KNetSerDes&lt;T&gt;</a> for Avro, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
+      <dd><p>Base class to define extensions of <a class="xref" href="MASES.KNet.Serialization.SerDes-1.html">SerDes&lt;T&gt;</a> for Avro, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -102,32 +102,32 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Key.html">AvroSerDes.Key</a></dt>
-      <dd><p>Base class to define Key extensions of <a class="xref" href="MASES.KNet.Serialization.KNetSerDes-1.html">KNetSerDes&lt;T&gt;</a>, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
+      <dd><p>Base class to define Key extensions of <a class="xref" href="MASES.KNet.Serialization.SerDes-1.html">SerDes&lt;T&gt;</a>, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Key.Binary-1.html">AvroSerDes.Key.Binary&lt;T&gt;</a></dt>
-      <dd><p>Avro Key extension of <a class="xref" href="MASES.KNet.Serialization.KNetSerDes-1.html">KNetSerDes&lt;T&gt;</a> for Binary encoding, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
+      <dd><p>Avro Key extension of <a class="xref" href="MASES.KNet.Serialization.SerDes-1.html">SerDes&lt;T&gt;</a> for Binary encoding, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Key.Json-1.html">AvroSerDes.Key.Json&lt;T&gt;</a></dt>
-      <dd><p>Avro Key extension of <a class="xref" href="MASES.KNet.Serialization.KNetSerDes-1.html">KNetSerDes&lt;T&gt;</a> for Json encoding, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
+      <dd><p>Avro Key extension of <a class="xref" href="MASES.KNet.Serialization.SerDes-1.html">SerDes&lt;T&gt;</a> for Json encoding, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Value.html">AvroSerDes.Value</a></dt>
-      <dd><p>Base class to define Value extensions of <a class="xref" href="MASES.KNet.Serialization.KNetSerDes-1.html">KNetSerDes&lt;T&gt;</a>, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
+      <dd><p>Base class to define Value extensions of <a class="xref" href="MASES.KNet.Serialization.SerDes-1.html">SerDes&lt;T&gt;</a>, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Value.Binary-1.html">AvroSerDes.Value.Binary&lt;T&gt;</a></dt>
-      <dd><p>Avro Value extension of <a class="xref" href="MASES.KNet.Serialization.KNetSerDes-1.html">KNetSerDes&lt;T&gt;</a> for Binary encoding, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
+      <dd><p>Avro Value extension of <a class="xref" href="MASES.KNet.Serialization.SerDes-1.html">SerDes&lt;T&gt;</a> for Binary encoding, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Value.Json-1.html">AvroSerDes.Value.Json&lt;T&gt;</a></dt>
-      <dd><p>Avro Value extension of <a class="xref" href="MASES.KNet.Serialization.KNetSerDes-1.html">KNetSerDes&lt;T&gt;</a> for Json encoding, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
+      <dd><p>Avro Value extension of <a class="xref" href="MASES.KNet.Serialization.SerDes-1.html">SerDes&lt;T&gt;</a> for Json encoding, for example <a href="https://masesgroup.github.io/KNet/articles/usageSerDes.html">https://masesgroup.github.io/KNet/articles/usageSerDes.html</a></p>
 </dd>
     </dl>
 

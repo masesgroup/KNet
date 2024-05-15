@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -106,9 +106,9 @@ Interface IConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd>.NET interface for TO BE DEFINED FROM USER</dd>
+    <dd></dd>
     <dt><code>V</code></dt>
-    <dd>.NET interface for TO BE DEFINED FROM USER</dd>
+    <dd></dd>
   </dl>
 
 
@@ -130,10 +130,10 @@ Interface IConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Metrics__1">IConsumer.Metrics&lt;T&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Subscribe_Java_Util_Collection_System_String__">IConsumer.Subscribe(Collection&lt;string&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Subscribe_Java_Util_Collection_Java_Lang_String__">IConsumer.Subscribe(Collection&lt;String&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Subscribe_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_">IConsumer.Subscribe(Collection&lt;string&gt;, ConsumerRebalanceListener)</a>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Subscribe_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_">IConsumer.Subscribe(Collection&lt;String&gt;, ConsumerRebalanceListener)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Assign_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">IConsumer.Assign(Collection&lt;TopicPartition&gt;)</a>
@@ -193,10 +193,10 @@ Interface IConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Committed_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Java_Time_Duration_">IConsumer.Committed(Set&lt;TopicPartition&gt;, Duration)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_PartitionsFor_System_String_">IConsumer.PartitionsFor(string)</a>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_PartitionsFor_Java_Lang_String_">IConsumer.PartitionsFor(String)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_PartitionsFor_System_String_Java_Time_Duration_">IConsumer.PartitionsFor(string, Duration)</a>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_PartitionsFor_Java_Lang_String_Java_Time_Duration_">IConsumer.PartitionsFor(String, Duration)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_ListTopics">IConsumer.ListTopics()</a>
@@ -238,7 +238,7 @@ Interface IConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_EnforceRebalance">IConsumer.EnforceRebalance()</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_EnforceRebalance_System_String_">IConsumer.EnforceRebalance(string)</a>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_EnforceRebalance_Java_Lang_String_">IConsumer.EnforceRebalance(String)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Wakeup">IConsumer.Wakeup()</a>
@@ -286,7 +286,7 @@ Interface IConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html#Java_Io_ICloseable_Close">ICloseable.Close()</a>
+      <a class="xref" href="api/Java.Io.ICloseable.html#Java_Io_ICloseable_Close">ICloseable.Close()</a>
     </div>
   </dd></dl>
 
@@ -316,7 +316,7 @@ Interface IConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/Consumer.html#poll-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/clients/consumer/Consumer.html#poll-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#poll-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#poll-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -326,7 +326,7 @@ Interface IConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>timeout</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dt><code>timeout</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
     <dd></dd>
   </dl>
 

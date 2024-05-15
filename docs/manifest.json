@@ -884,10 +884,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Consumer.IKNetConsumer-2.yml",
+      "source_relative_path": "api/MASES.KNet.Consumer.ConsumerRecord-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Consumer.IKNetConsumer-2.html"
+          "relative_path": "api/MASES.KNet.Consumer.ConsumerRecord-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Consumer.ConsumerRecords-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Consumer.ConsumerRecords-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Consumer.IConsumer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Consumer.IConsumer-2.html"
         }
       },
       "version": ""
@@ -898,26 +918,6 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Consumer.KNetConsumer-2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Consumer.KNetConsumerRecord-2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Consumer.KNetConsumerRecord-2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Consumer.KNetConsumerRecords-2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Consumer.KNetConsumerRecords-2.html"
         }
       },
       "version": ""
@@ -1024,10 +1024,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Producer.IKNetProducer-2.yml",
+      "source_relative_path": "api/MASES.KNet.Producer.IProducer-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Producer.IKNetProducer-2.html"
+          "relative_path": "api/MASES.KNet.Producer.IProducer-2.html"
         }
       },
       "version": ""
@@ -1038,16 +1038,6 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Producer.KNetProducer-2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Producer.KNetProducerRecord-2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Producer.KNetProducerRecord-2.html"
         }
       },
       "version": ""
@@ -1078,6 +1068,16 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Producer.ProducerConfigBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Producer.ProducerRecord-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Producer.ProducerRecord-2.html"
         }
       },
       "version": ""
@@ -1234,6 +1234,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.IDeserializer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.IDeserializer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.IDeserializer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.IDeserializer-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Serialization.IGenericSerDesFactory.yml",
       "output": {
         ".html": {
@@ -1254,30 +1274,40 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Serialization.IKNetDeserializer-1.yml",
+      "source_relative_path": "api/MASES.KNet.Serialization.ISerDes-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Serialization.IKNetDeserializer-1.html"
+          "relative_path": "api/MASES.KNet.Serialization.ISerDes-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Serialization.IKNetSerDes-1.yml",
+      "source_relative_path": "api/MASES.KNet.Serialization.ISerDes-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Serialization.IKNetSerDes-1.html"
+          "relative_path": "api/MASES.KNet.Serialization.ISerDes-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Serialization.IKNetSerializer-1.yml",
+      "source_relative_path": "api/MASES.KNet.Serialization.ISerializer-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Serialization.IKNetSerializer-1.html"
+          "relative_path": "api/MASES.KNet.Serialization.ISerializer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.ISerializer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.ISerializer-2.html"
         }
       },
       "version": ""
@@ -1318,16 +1348,6 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.Json.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Serialization.KNetSerDes-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Serialization.KNetSerDes-1.html"
         }
       },
       "version": ""
@@ -1434,6 +1454,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.SerDes-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.SerDes-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.SerDes-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.SerDes-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.SerDes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.SerDes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Serialization.yml",
       "output": {
         ".html": {
@@ -1454,16 +1504,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.KNetKeyValue-2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Streams.KNetKeyValue-2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Streams.KNetStreams.yml",
       "output": {
         ".html": {
@@ -1474,420 +1514,660 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.KNetStreamsBuilder.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.KeyValue-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.KNetStreamsBuilder.html"
+          "relative_path": "api/MASES.KNet.Streams.KeyValue-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.KNetTimestampedKeyValue-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Aggregator-3.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.KNetTimestampedKeyValue-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Aggregator-3.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.KNetTimestampedWindowedKeyValue-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Aggregator-6.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.KNetTimestampedWindowedKeyValue-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Aggregator-6.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.KNetTopology.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Branched-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.KNetTopology.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Branched-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.KNetTopologyConfig.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.BranchedKStream-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.KNetTopologyConfig.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.BranchedKStream-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.KNetWindowedKeyValue-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.CogroupedKStream-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.KNetWindowedKeyValue-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.CogroupedKStream-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.IKNetMaterialized-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Consumed-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.IKNetMaterialized-1.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Consumed-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetAggregator-3.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.CountingMaterialized-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetAggregator-3.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.CountingMaterialized-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetBranched-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetBranched-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetBranchedKStream-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper-8.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetBranchedKStream-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper-8.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetConsumed-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableValueMapper-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetConsumed-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableValueMapper-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetCountingMaterialized-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableValueMapper-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetCountingMaterialized-1.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableValueMapper-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetEnumerableKeyValueMapper-4.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableValueMapperWithKey-3.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetEnumerableKeyValueMapper-4.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableValueMapperWithKey-3.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetEnumerableValueMapper-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableValueMapperWithKey-6.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetEnumerableValueMapper-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.EnumerableValueMapperWithKey-6.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetEnumerableValueMapperWithKey-3.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.ForeachAction-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetEnumerableValueMapperWithKey-3.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.ForeachAction-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetForeachAction-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.ForeachAction-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetForeachAction-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.ForeachAction-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetGlobalKTable-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.GlobalKTable-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetGlobalKTable-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.GlobalKTable-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetGrouped-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Grouped-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetGrouped-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Grouped-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetInitializer-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Grouped-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetInitializer-1.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Grouped-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetJoined-3.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.IKNetMaterialized-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetJoined-3.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.IKNetMaterialized-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetKGroupedStream-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Initializer-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetKGroupedStream-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Initializer-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetKGroupedTable-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Initializer-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetKGroupedTable-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Initializer-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetKStream-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Joined-3.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetKStream-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Joined-3.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetKTable-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Joined-6.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetKTable-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Joined-6.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetKeyValueKeyValueMapper-4.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KGroupedStream-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetKeyValueKeyValueMapper-4.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.KGroupedStream-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetKeyValueMapper-3.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KGroupedTable-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetKeyValueMapper-3.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.KGroupedTable-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetMaterialized-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KStream-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetMaterialized-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.KStream-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetMaterialized-4.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KTable-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetMaterialized-4.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.KTable-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetPredicate-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueKeyValueMapper-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetPredicate-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueKeyValueMapper-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetPredicateEqualityTest-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueKeyValueMapper-8.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetPredicateEqualityTest-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueKeyValueMapper-8.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetPrinted-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueMapper-3.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetPrinted-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueMapper-3.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetProduced-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueMapper-6.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetProduced-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueMapper-6.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetReducer-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueMapperForString-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetReducer-1.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueMapperForString-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetRepartitioned-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Materialized-3.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetRepartitioned-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Materialized-3.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetStreamJoined-3.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Materialized-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetStreamJoined-3.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Materialized-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetSuppressed-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Materialized-5.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetSuppressed-1.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Materialized-5.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetTableJoined-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Merger-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetTableJoined-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Merger-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetValueJoiner-3.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Merger-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetValueJoiner-3.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Merger-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetValueJoinerWithKey-4.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Predicate-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetValueJoinerWithKey-4.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Predicate-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetValueMapper-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Predicate-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetValueMapper-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Predicate-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetValueMapperWithKey-3.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.PredicateEqualityTest-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetValueMapperWithKey-3.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.PredicateEqualityTest-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KNetWindowed-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Printed-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Kstream.KNetWindowed-1.html"
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Printed-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Printed-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Printed-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Produced-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Produced-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Produced-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Produced-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Reducer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Reducer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Reducer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Reducer-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Repartitioned-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Repartitioned-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.SessionWindowedCogroupedKStream-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.SessionWindowedCogroupedKStream-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.SessionWindowedKStream-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.SessionWindowedKStream-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.StreamJoined-6.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.StreamJoined-6.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Suppressed-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Suppressed-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Suppressed-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Suppressed-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.TableJoined-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.TableJoined-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.TableJoined-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.TableJoined-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.TimeWindowedCogroupedKStream-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.TimeWindowedCogroupedKStream-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.TimeWindowedKStream-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.TimeWindowedKStream-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.ValueJoiner-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.ValueJoiner-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.ValueJoiner-6.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.ValueJoiner-6.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.ValueJoinerWithKey-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.ValueJoinerWithKey-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.ValueJoinerWithKey-8.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.ValueJoinerWithKey-8.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.ValueMapper-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.ValueMapper-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.ValueMapper-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.ValueMapper-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.ValueMapperWithKey-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.ValueMapperWithKey-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.Windowed-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.Windowed-1.html"
         }
       },
       "version": ""
@@ -1904,30 +2184,40 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Processor.Api.KNetProcessor-4.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Processor.Api.Processor-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Processor.Api.KNetProcessor-4.html"
+          "relative_path": "api/MASES.KNet.Streams.Processor.Api.Processor-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Processor.Api.KNetProcessorContext-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Processor.Api.Processor-8.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Processor.Api.KNetProcessorContext-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Processor.Api.Processor-8.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Processor.Api.KNetRecord-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Processor.Api.ProcessorContext-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Processor.Api.KNetRecord-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Processor.Api.ProcessorContext-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Processor.Api.Record-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Processor.Api.Record-2.html"
         }
       },
       "version": ""
@@ -1944,30 +2234,70 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Processor.KNetStreamPartitioner-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Processor.StreamPartitioner-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Processor.KNetStreamPartitioner-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Processor.StreamPartitioner-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Processor.KNetTimestampExtractor-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Processor.StreamPartitioner-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Processor.KNetTimestampExtractor-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Processor.StreamPartitioner-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Processor.KNetTopicNameExtractor-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.Processor.StreamPartitionerNoValue-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Processor.KNetTopicNameExtractor-2.html"
+          "relative_path": "api/MASES.KNet.Streams.Processor.StreamPartitionerNoValue-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Processor.StreamPartitionerNoValue-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Processor.StreamPartitionerNoValue-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Processor.TimestampExtractor-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Processor.TimestampExtractor-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Processor.TopicNameExtractor-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Processor.TopicNameExtractor-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Processor.TopicNameExtractor-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Processor.TopicNameExtractor-4.html"
         }
       },
       "version": ""
@@ -1994,160 +2324,210 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.IKNetManagedStore-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.IManagedStore-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.IKNetManagedStore-1.html"
+          "relative_path": "api/MASES.KNet.Streams.State.IManagedStore-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetKeyValueIterator-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.KeyValueIterator-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetKeyValueIterator-2.html"
+          "relative_path": "api/MASES.KNet.Streams.State.KeyValueIterator-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetManagedStore-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.ManagedStore-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetManagedStore-1.html"
+          "relative_path": "api/MASES.KNet.Streams.State.ManagedStore-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetQueryableStoreTypes.StoreType-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetQueryableStoreTypes.StoreType-2.html"
+          "relative_path": "api/MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetQueryableStoreTypes.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.QueryableStoreTypes.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetQueryableStoreTypes.html"
+          "relative_path": "api/MASES.KNet.Streams.State.QueryableStoreTypes.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetReadOnlyKeyValueStore-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.ReadOnlyKeyValueStore-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetReadOnlyKeyValueStore-2.html"
+          "relative_path": "api/MASES.KNet.Streams.State.ReadOnlyKeyValueStore-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetReadOnlySessionStore-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.ReadOnlyKeyValueStore-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetReadOnlySessionStore-2.html"
+          "relative_path": "api/MASES.KNet.Streams.State.ReadOnlyKeyValueStore-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetReadOnlyWindowStore-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.ReadOnlySessionStore-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetReadOnlyWindowStore-2.html"
+          "relative_path": "api/MASES.KNet.Streams.State.ReadOnlySessionStore-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetTimestampedKeyValueIterator-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.ReadOnlySessionStore-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetTimestampedKeyValueIterator-2.html"
+          "relative_path": "api/MASES.KNet.Streams.State.ReadOnlySessionStore-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetTimestampedKeyValueStore-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.ReadOnlyWindowStore-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetTimestampedKeyValueStore-2.html"
+          "relative_path": "api/MASES.KNet.Streams.State.ReadOnlyWindowStore-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetTimestampedWindowStore-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.ReadOnlyWindowStore-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetTimestampedWindowStore-2.html"
+          "relative_path": "api/MASES.KNet.Streams.State.ReadOnlyWindowStore-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetTimestampedWindowStoreIterator-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.TimestampedKeyValueIterator-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetTimestampedWindowStoreIterator-1.html"
+          "relative_path": "api/MASES.KNet.Streams.State.TimestampedKeyValueIterator-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetTimestampedWindowedKeyValueIterator-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.TimestampedKeyValueStore-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetTimestampedWindowedKeyValueIterator-2.html"
+          "relative_path": "api/MASES.KNet.Streams.State.TimestampedKeyValueStore-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetValueAndTimestamp-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.TimestampedKeyValueStore-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetValueAndTimestamp-1.html"
+          "relative_path": "api/MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetWindowStoreIterator-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.TimestampedWindowStore-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetWindowStoreIterator-1.html"
+          "relative_path": "api/MASES.KNet.Streams.State.TimestampedWindowStore-2.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.TimestampedWindowStore-4.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.KNetWindowedKeyValueIterator-2.html"
+          "relative_path": "api/MASES.KNet.Streams.State.TimestampedWindowStore-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.State.TimestampedWindowStoreIterator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.State.TimestampedWindowStoreIterator-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.State.ValueAndTimestamp-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.State.ValueAndTimestamp-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.State.WindowStoreIterator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.State.WindowStoreIterator-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.State.WindowedKeyValueIterator-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.State.WindowedKeyValueIterator-2.html"
         }
       },
       "version": ""
@@ -2164,6 +2544,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.StreamsBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.StreamsBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Streams.StreamsConfigBuilder.yml",
       "output": {
         ".html": {
@@ -2174,10 +2564,100 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.Utils.KNetFunction-2.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.TimestampedKeyValue-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.Utils.KNetFunction-2.html"
+          "relative_path": "api/MASES.KNet.Streams.TimestampedKeyValue-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.TimestampedWindowedKeyValue-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.TimestampedWindowedKeyValue-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Topology.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Topology.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.TopologyConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.TopologyConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Utils.Function-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Utils.Function-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Utils.Function-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Utils.Function-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Utils.KStreamConsumer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Utils.KStreamConsumer-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Utils.KStreamConsumer-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Utils.KStreamConsumer-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Utils.KStreamFunction-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Utils.KStreamFunction-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Utils.KStreamFunction-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Utils.KStreamFunction-4.html"
         }
       },
       "version": ""
@@ -2188,6 +2668,16 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Streams.Utils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.WindowedKeyValue-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.WindowedKeyValue-2.html"
         }
       },
       "version": ""
@@ -4944,10 +5434,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Clients.MetadataCache.yml",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.MetadataSnapshot.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Clients.MetadataCache.html"
+          "relative_path": "api/Org.Apache.Kafka.Clients.MetadataSnapshot.html"
         }
       },
       "version": ""
@@ -11628,6 +12118,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Connect.Mirror.MirrorHeartbeatTask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Connect.Mirror.MirrorHerder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Connect.Mirror.MirrorHerder.html"
         }
       },
       "version": ""

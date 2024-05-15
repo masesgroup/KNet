@@ -17,23 +17,23 @@
 */
 
 using Org.Apache.Kafka.Common.Header;
-using Org.Apache.Kafka.Clients.Producer;
 
 namespace MASES.KNet.Producer
 {
+    #region ProducerRecord<K, V, TJVMK, TJVMV>
     /// <summary>
     /// KNet extension of <see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}"/>
     /// </summary>
-    public class ProducerRecord<K, V>
+    public class ProducerRecord<K, V, TJVMK, TJVMV>
     {
         /// <summary>
-        /// Initialize a new <see cref="ProducerRecord{K, V}"/>
+        /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         public ProducerRecord()
         {
         }
         /// <summary>
-        /// Initialize a new <see cref="ProducerRecord{K, V}"/>
+        /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         public ProducerRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)
         {
@@ -45,7 +45,7 @@ namespace MASES.KNet.Producer
             Headers = headers;
         }
         /// <summary>
-        /// Initialize a new <see cref="ProducerRecord{K, V}"/>
+        /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
         {
@@ -57,7 +57,7 @@ namespace MASES.KNet.Producer
             Headers = headers;
         }
         /// <summary>
-        /// Initialize a new <see cref="ProducerRecord{K, V}"/>
+        /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         public ProducerRecord(string topic, int partition, long timestamp, K key, V value)
         {
@@ -68,7 +68,7 @@ namespace MASES.KNet.Producer
             Value = value;
         }
         /// <summary>
-        /// Initialize a new <see cref="ProducerRecord{K, V}"/>
+        /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value)
         {
@@ -79,7 +79,7 @@ namespace MASES.KNet.Producer
             Value = value;
         }
         /// <summary>
-        /// Initialize a new <see cref="ProducerRecord{K, V}"/>
+        /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         public ProducerRecord(string topic, int partition, K key, V value, Headers headers)
         {
@@ -90,7 +90,7 @@ namespace MASES.KNet.Producer
             Headers = headers;
         }
         /// <summary>
-        /// Initialize a new <see cref="ProducerRecord{K, V}"/>
+        /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         public ProducerRecord(string topic, int partition, K key, V value)
         {
@@ -100,7 +100,7 @@ namespace MASES.KNet.Producer
             Value = value;
         }
         /// <summary>
-        /// Initialize a new <see cref="ProducerRecord{K, V}"/>
+        /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         public ProducerRecord(string topic, K key, V value)
         {
@@ -109,7 +109,7 @@ namespace MASES.KNet.Producer
             Value = value;
         }
         /// <summary>
-        /// Initialize a new <see cref="ProducerRecord{K, V}"/>
+        /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         public ProducerRecord(string topic, V value)
         {
@@ -136,4 +136,117 @@ namespace MASES.KNet.Producer
             return $"Topic: {Topic} - Partition {Partition} - Key {Key} - Value {Value}";
         }
     }
+
+    #endregion
+
+    #region ProducerRecord<K, V>
+    /// <summary>
+    /// Extends <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/> using array of <see cref="byte"/>
+    /// </summary>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    public class ProducerRecord<K, V> : ProducerRecord<K, V, byte[], byte[]>
+    {
+        /// <inheritdoc/>
+        public ProducerRecord()
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)
+            : base(topic, partition, timestamp, key, value, headers)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
+            : base(topic, partition, timestamp, key, value, headers)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecord(string topic, int partition, long timestamp, K key, V value)
+            : base(topic, partition, timestamp, key, value)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value)
+            : base(topic, partition, timestamp, key, value)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecord(string topic, int partition, K key, V value, Headers headers)
+            : base(topic, partition, key, value, headers)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecord(string topic, int partition, K key, V value)
+            : base(topic, partition, key, value)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecord(string topic, K key, V value)
+            : base(topic, key, value)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecord(string topic, V value)
+            :base(topic, value)
+        {
+        }
+    }
+
+    #endregion
+
+    #region ProducerRecordBuffered<K, V>
+    /// <summary>
+    /// Extends <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/> using <see cref="Java.Nio.ByteBuffer"/>
+    /// </summary>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    public class ProducerRecordBuffered<K, V> : ProducerRecord<K, V, Java.Nio.ByteBuffer, Java.Nio.ByteBuffer>
+    {
+        /// <inheritdoc/>
+        public ProducerRecordBuffered()
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecordBuffered(string topic, int partition, long timestamp, K key, V value, Headers headers)
+            : base(topic, partition, timestamp, key, value, headers)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecordBuffered(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
+            : base(topic, partition, timestamp, key, value, headers)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecordBuffered(string topic, int partition, long timestamp, K key, V value)
+            : base(topic, partition, timestamp, key, value)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecordBuffered(string topic, int partition, System.DateTime timestamp, K key, V value)
+            : base(topic, partition, timestamp, key, value)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecordBuffered(string topic, int partition, K key, V value, Headers headers)
+            : base(topic, partition, key, value, headers)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecordBuffered(string topic, int partition, K key, V value)
+            : base(topic, partition, key, value)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecordBuffered(string topic, K key, V value)
+            : base(topic, key, value)
+        {
+        }
+        /// <inheritdoc/>
+        public ProducerRecordBuffered(string topic, V value)
+            : base(topic, value)
+        {
+        }
+    }
+    #endregion
 }

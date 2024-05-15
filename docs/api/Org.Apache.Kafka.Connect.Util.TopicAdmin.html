@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class TopicAdmin | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -93,7 +93,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -110,8 +110,8 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
+      <div><a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
       <div><span class="xref">TopicAdmin</span></div>
     </dd>
   </dl>
@@ -125,7 +125,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
       <div><span class="xref">IJVMBridgeBaseStatic</span></div>
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
   </dl>
 
@@ -137,49 +137,97 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
@@ -222,6 +270,9 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AutoCloseable&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
       <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</span>
@@ -311,16 +362,31 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -440,23 +506,23 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <a id="Org_Apache_Kafka_Connect_Util_TopicAdmin__ctor_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin__ctor_Java_Util_Map_System_String_System_Object__" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.#ctor(Java.Util.Map{System.String,System.Object})">
-  TopicAdmin(Map&lt;string, object&gt;)
+  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin__ctor_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.#ctor(Java.Util.Map{Java.Lang.String,System.Object})">
+  TopicAdmin(Map&lt;String, object&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#org.apache.kafka.connect.util.TopicAdmin(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#org.apache.kafka.connect.util.TopicAdmin(java.util.Map)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#org.apache.kafka.connect.util.TopicAdmin(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#org.apache.kafka.connect.util.TopicAdmin(java.util.Map)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicAdmin(Map&lt;string, object&gt; arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicAdmin(Map&lt;String, object&gt; arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -473,23 +539,23 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <a id="Org_Apache_Kafka_Connect_Util_TopicAdmin__ctor_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin__ctor_Java_Util_Map_System_String_System_Object__Org_Apache_Kafka_Clients_Admin_Admin_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.#ctor(Java.Util.Map{System.String,System.Object},Org.Apache.Kafka.Clients.Admin.Admin)">
-  TopicAdmin(Map&lt;string, object&gt;, Admin)
+  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin__ctor_Java_Util_Map_Java_Lang_String_System_Object__Org_Apache_Kafka_Clients_Admin_Admin_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.#ctor(Java.Util.Map{Java.Lang.String,System.Object},Org.Apache.Kafka.Clients.Admin.Admin)">
+  TopicAdmin(Map&lt;String, object&gt;, Admin)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#org.apache.kafka.connect.util.TopicAdmin(java.util.Map,org.apache.kafka.clients.admin.Admin)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#org.apache.kafka.connect.util.TopicAdmin(java.util.Map,org.apache.kafka.clients.admin.Admin)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#org.apache.kafka.connect.util.TopicAdmin(java.util.Map,org.apache.kafka.clients.admin.Admin)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#org.apache.kafka.connect.util.TopicAdmin(java.util.Map,org.apache.kafka.clients.admin.Admin)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicAdmin(Map&lt;string, object&gt; arg0, Admin arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicAdmin(Map&lt;String, object&gt; arg0, Admin arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html">Admin</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html">Admin</a></p>
@@ -582,7 +648,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#EMPTY_CREATION">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#EMPTY_CREATION</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#EMPTY_CREATION">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#EMPTY_CREATION</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -742,7 +808,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#NO_PARTITIONS">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#NO_PARTITIONS</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#NO_PARTITIONS">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#NO_PARTITIONS</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -774,7 +840,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#NO_REPLICATION_FACTOR">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#NO_REPLICATION_FACTOR</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#NO_REPLICATION_FACTOR">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#NO_REPLICATION_FACTOR</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -810,7 +876,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#close--">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#close--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#close--">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -837,7 +903,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#close-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#close-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -847,8 +913,8 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
@@ -870,7 +936,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopic-org.apache.kafka.clients.admin.NewTopic-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopic-org.apache.kafka.clients.admin.NewTopic-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopic-org.apache.kafka.clients.admin.NewTopic-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopic-org.apache.kafka.clients.admin.NewTopic-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -909,7 +975,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L203"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopics-org.apache.kafka.clients.admin.NewTopic[]-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopics-org.apache.kafka.clients.admin.NewTopic[]-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopics-org.apache.kafka.clients.admin.NewTopic[]-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopics-org.apache.kafka.clients.admin.NewTopic[]-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -948,7 +1014,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopic-org.apache.kafka.clients.admin.NewTopic-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopic-org.apache.kafka.clients.admin.NewTopic-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#createTopic-org.apache.kafka.clients.admin.NewTopic-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#createTopic-org.apache.kafka.clients.admin.NewTopic-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -987,12 +1053,12 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopics-org.apache.kafka.clients.admin.NewTopic[]-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopics-org.apache.kafka.clients.admin.NewTopic[]-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#createTopics-org.apache.kafka.clients.admin.NewTopic[]-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#createTopics-org.apache.kafka.clients.admin.NewTopic[]-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Set&lt;string&gt; CreateTopics(params NewTopic[] arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public Set&lt;String&gt; CreateTopics(params NewTopic[] arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1004,8 +1070,8 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
+    <dt><a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -1026,12 +1092,12 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopicsWithRetry-org.apache.kafka.clients.admin.NewTopic-long-long-org.apache.kafka.common.utils.Time-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopicsWithRetry-org.apache.kafka.clients.admin.NewTopic-long-long-org.apache.kafka.common.utils.Time-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#createTopicsWithRetry-org.apache.kafka.clients.admin.NewTopic-long-long-org.apache.kafka.common.utils.Time-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#createTopicsWithRetry-org.apache.kafka.clients.admin.NewTopic-long-long-org.apache.kafka.common.utils.Time-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Set&lt;string&gt; CreateTopicsWithRetry(NewTopic arg0, long arg1, long arg2, Time arg3)</code></pre>
+    <pre><code class="lang-csharp hljs">public Set&lt;String&gt; CreateTopicsWithRetry(NewTopic arg0, long arg1, long arg2, Time arg3)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1052,8 +1118,8 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
+    <dt><a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -1069,23 +1135,23 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <a id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DefineTopic_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DefineTopic*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DefineTopic_System_String_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DefineTopic(System.String)">
-  DefineTopic(string)
+  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DefineTopic_Java_Lang_String_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DefineTopic(Java.Lang.String)">
+  DefineTopic(String)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#defineTopic-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#defineTopic-java.lang.String-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#defineTopic-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#defineTopic-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TopicAdmin.NewTopicBuilder DefineTopic(string arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public static TopicAdmin.NewTopicBuilder DefineTopic(String arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1108,23 +1174,23 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <a id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DescribeTopicConfig_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DescribeTopicConfig*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DescribeTopicConfig_System_String_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DescribeTopicConfig(System.String)">
-  DescribeTopicConfig(string)
+  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DescribeTopicConfig_Java_Lang_String_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DescribeTopicConfig(Java.Lang.String)">
+  DescribeTopicConfig(String)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfig-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfig-java.lang.String-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfig-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfig-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Config DescribeTopicConfig(string arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public Config DescribeTopicConfig(String arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1147,30 +1213,30 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <a id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DescribeTopicConfigs_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DescribeTopicConfigs*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DescribeTopicConfigs_System_String___" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DescribeTopicConfigs(System.String[])">
-  DescribeTopicConfigs(params string[])
+  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DescribeTopicConfigs_Java_Lang_String___" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DescribeTopicConfigs(Java.Lang.String[])">
+  DescribeTopicConfigs(params String[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfigs-java.lang.String[]-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfigs-java.lang.String[]-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfigs-java.lang.String[]-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfigs-java.lang.String[]-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Map&lt;string, Config&gt; DescribeTopicConfigs(params string[] arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public Map&lt;String, Config&gt; DescribeTopicConfigs(params String[] arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a>[]</dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Config.html">Config</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Config.html">Config</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1186,30 +1252,30 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <a id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DescribeTopics_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DescribeTopics*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DescribeTopics_System_String___" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DescribeTopics(System.String[])">
-  DescribeTopics(params string[])
+  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_DescribeTopics_Java_Lang_String___" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.DescribeTopics(Java.Lang.String[])">
+  DescribeTopics(params String[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopics-java.lang.String[]-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopics-java.lang.String[]-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#describeTopics-java.lang.String[]-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#describeTopics-java.lang.String[]-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Map&lt;string, TopicDescription&gt; DescribeTopics(params string[] arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public Map&lt;String, TopicDescription&gt; DescribeTopics(params String[] arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a>[]</dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.TopicDescription.html">TopicDescription</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.TopicDescription.html">TopicDescription</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1230,7 +1296,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#endOffsets-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#endOffsets-java.util.Set-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#endOffsets-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#endOffsets-java.util.Set-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1240,15 +1306,15 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="api/Java.Lang.Long.html">Long</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1269,7 +1335,7 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#retryEndOffsets-java.util.Set-java.time.Duration-long-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#retryEndOffsets-java.util.Set-java.time.Duration-long-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#retryEndOffsets-java.util.Set-java.time.Duration-long-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#retryEndOffsets-java.util.Set-java.time.Duration-long-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1279,11 +1345,11 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
@@ -1292,8 +1358,8 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="api/Java.Lang.Long.html">Long</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1309,30 +1375,30 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <a id="Org_Apache_Kafka_Connect_Util_TopicAdmin_TopicCleanupPolicy_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCleanupPolicy*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_TopicCleanupPolicy_System_String_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCleanupPolicy(System.String)">
-  TopicCleanupPolicy(string)
+  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_TopicCleanupPolicy_Java_Lang_String_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCleanupPolicy(Java.Lang.String)">
+  TopicCleanupPolicy(String)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#topicCleanupPolicy-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#topicCleanupPolicy-java.lang.String-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#topicCleanupPolicy-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#topicCleanupPolicy-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Set&lt;string&gt; TopicCleanupPolicy(string arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public Set&lt;String&gt; TopicCleanupPolicy(String arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
+    <dt><a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -1348,29 +1414,29 @@ Class TopicAdmin  <a class="header-action link-secondary" title="View source" hr
 
   <a id="Org_Apache_Kafka_Connect_Util_TopicAdmin_VerifyTopicCleanupPolicyOnlyCompact_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.VerifyTopicCleanupPolicyOnlyCompact*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_VerifyTopicCleanupPolicyOnlyCompact_System_String_System_String_System_String_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.VerifyTopicCleanupPolicyOnlyCompact(System.String,System.String,System.String)">
-  VerifyTopicCleanupPolicyOnlyCompact(string, string, string)
+  <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_VerifyTopicCleanupPolicyOnlyCompact_Java_Lang_String_Java_Lang_String_Java_Lang_String_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.VerifyTopicCleanupPolicyOnlyCompact(Java.Lang.String,Java.Lang.String,Java.Lang.String)">
+  VerifyTopicCleanupPolicyOnlyCompact(String, String, String)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#verifyTopicCleanupPolicyOnlyCompact-java.lang.String-java.lang.String-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.1/org/apache/kafka/connect/util/TopicAdmin.html#verifyTopicCleanupPolicyOnlyCompact-java.lang.String-java.lang.String-java.lang.String-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#verifyTopicCleanupPolicyOnlyCompact-java.lang.String-java.lang.String-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.html#verifyTopicCleanupPolicyOnlyCompact-java.lang.String-java.lang.String-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool VerifyTopicCleanupPolicyOnlyCompact(string arg0, string arg1, string arg2)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool VerifyTopicCleanupPolicyOnlyCompact(String arg0, String arg1, String arg2)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 

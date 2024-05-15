@@ -230,7 +230,7 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static async Task<DeleteTopicsResult> DeleteTopicsAsync(this IAdmin admin, IEnumerable<string> topics)
         {
-            return await Execute(admin.DeleteTopics, topics.ToJCollection());
+            return await Execute(admin.DeleteTopics, topics.ToJVMCollection<Java.Lang.String, string>());
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.DeleteTopics(Collection{Java.Lang.String})"/>
@@ -244,7 +244,7 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static async Task<DeleteTopicsResult> DeleteTopicsAsync(this IAdmin admin, IEnumerable<string> topics, DeleteTopicsOptions options)
         {
-            return await Execute(admin.DeleteTopics, topics.ToJCollection(), options);
+            return await Execute(admin.DeleteTopics, topics.ToJVMCollection<Java.Lang.String, string>(), options);
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.DeleteTopics(TopicCollection)"/>
@@ -279,7 +279,7 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static async Task<DescribeTopicsResult> DescribeTopicsAsync(this IAdmin admin, IEnumerable<string> topicNames)
         {
-            return await Execute(admin.DescribeTopics, topicNames.ToJCollection());
+            return await Execute(admin.DescribeTopics, topicNames.ToJVMCollection<Java.Lang.String, string>());
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.DescribeTopics(Collection{Java.Lang.String})"/>
@@ -293,7 +293,7 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static async Task<DescribeTopicsResult> DescribeTopicsAsync(this IAdmin admin, IEnumerable<string> topicNames, DescribeTopicsOptions options)
         {
-            return await Execute(admin.DescribeTopics, topicNames.ToJCollection(), options);
+            return await Execute(admin.DescribeTopics, topicNames.ToJVMCollection<Java.Lang.String, string>(), options);
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.DescribeCluster()"/>
@@ -510,14 +510,14 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static async Task<DescribeConsumerGroupsResult> DescribeConsumerGroupsAsync(this IAdmin admin, IEnumerable<string> groupIds, DescribeConsumerGroupsOptions options)
         {
-            return await Execute(admin.DescribeConsumerGroups, groupIds.ToJCollection(), options);
+            return await Execute(admin.DescribeConsumerGroups, groupIds.ToJVMCollection<Java.Lang.String, string>(), options);
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.DescribeConsumerGroups(Collection{Java.Lang.String}, DescribeConsumerGroupsOptions)"/>
         /// </summary>
         public static async Task<DescribeConsumerGroupsResult> DescribeConsumerGroupsAsync(this IAdmin admin, IEnumerable<string> groupIds)
         {
-            return await Execute(admin.DescribeConsumerGroups, groupIds.ToJCollection());
+            return await Execute(admin.DescribeConsumerGroups, groupIds.ToJVMCollection<Java.Lang.String, string>());
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.ListConsumerGroups(ListConsumerGroupsOptions)"/>
@@ -552,14 +552,14 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static async Task<DeleteConsumerGroupsResult> DeleteConsumerGroupsAsync(this IAdmin admin, IEnumerable<string> groupIds, DeleteConsumerGroupsOptions options)
         {
-            return await Execute(admin.DeleteConsumerGroups, groupIds.ToJCollection(), options);
+            return await Execute(admin.DeleteConsumerGroups, groupIds.ToJVMCollection<Java.Lang.String, string>(), options);
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.DeleteConsumerGroups(Collection{Java.Lang.String})"/>
         /// </summary>
         public static async Task<DeleteConsumerGroupsResult> DeleteConsumerGroupsAsync(this IAdmin admin, IEnumerable<string> groupIds)
         {
-            return await Execute(admin.DeleteConsumerGroups, groupIds.ToJCollection());
+            return await Execute(admin.DeleteConsumerGroups, groupIds.ToJVMCollection<Java.Lang.String, string>());
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.DeleteConsumerGroupOffsets(Java.Lang.String, Set{TopicPartition}, DeleteConsumerGroupOffsetsOptions)"/>
@@ -790,14 +790,14 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static async Task<DescribeTransactionsResult> DescribeTransactionsAsync(this IAdmin admin, IEnumerable<string> transactionalIds)
         {
-            return await Execute(admin.DescribeTransactions, transactionalIds.ToJCollection());
+            return await Execute(admin.DescribeTransactions, transactionalIds.ToJVMCollection<Java.Lang.String, string>());
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.DescribeTransactions(Collection{Java.Lang.String}, DescribeTransactionsOptions)"/>
         /// </summary>
         public static async Task<DescribeTransactionsResult> DescribeTransactionsAsync(this IAdmin admin, IEnumerable<string> transactionalIds, DescribeTransactionsOptions options)
         {
-            return await Execute(admin.DescribeTransactions, transactionalIds.ToJCollection(), options);
+            return await Execute(admin.DescribeTransactions, transactionalIds.ToJVMCollection<Java.Lang.String, string>(), options);
         }
         /// <summary>
         /// Async version of <see cref="IAdmin.AbortTransaction(AbortTransactionSpec)"/>

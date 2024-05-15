@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -137,10 +137,10 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
       <a class="xref" href="Org.Apache.Kafka.Connect.Connector.ConnectRecord-1.html#Org_Apache_Kafka_Connect_Connector_ConnectRecord_1_DateTime">ConnectRecord&lt;SourceRecord&gt;.DateTime</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.ConnectRecord-1.html#Org_Apache_Kafka_Connect_Connector_ConnectRecord_1_NewRecord_System_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Java_Lang_Long_Java_Lang_Iterable_Org_Apache_Kafka_Connect_Header_Header__">ConnectRecord&lt;SourceRecord&gt;.NewRecord(string, Integer, Schema, object, Schema, object, Long, Iterable&lt;Header&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.ConnectRecord-1.html#Org_Apache_Kafka_Connect_Connector_ConnectRecord_1_NewRecord_Java_Lang_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Java_Lang_Long_Java_Lang_Iterable_Org_Apache_Kafka_Connect_Header_Header__">ConnectRecord&lt;SourceRecord&gt;.NewRecord(String, Integer, Schema, object, Schema, object, Long, Iterable&lt;Header&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.ConnectRecord-1.html#Org_Apache_Kafka_Connect_Connector_ConnectRecord_1_NewRecord_System_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Java_Lang_Long_">ConnectRecord&lt;SourceRecord&gt;.NewRecord(string, Integer, Schema, object, Schema, object, Long)</a>
+      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.ConnectRecord-1.html#Org_Apache_Kafka_Connect_Connector_ConnectRecord_1_NewRecord_Java_Lang_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Java_Lang_Long_">ConnectRecord&lt;SourceRecord&gt;.NewRecord(String, Integer, Schema, object, Schema, object, Long)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Connect.Connector.ConnectRecord-1.html#Org_Apache_Kafka_Connect_Connector_ConnectRecord_1_KafkaPartition">ConnectRecord&lt;SourceRecord&gt;.KafkaPartition()</a>
@@ -170,49 +170,97 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.SGetField(IJavaType, string)</a>
@@ -255,6 +303,9 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
       <span class="xref">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&gt;&gt;.Execute&lt;T&gt;(params T[])</span>
@@ -344,16 +395,31 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -473,32 +539,32 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_System_String_System_Object__Java_Util_Map_System_String_System_Object__System_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{System.String,System.Object},Java.Util.Map{System.String,System.Object},System.String,Java.Lang.Integer,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">
-  SourceRecord(Map&lt;string, object&gt;, Map&lt;string, object&gt;, string, Integer, Schema, object)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__Java_Lang_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object},Java.Lang.String,Java.Lang.Integer,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">
+  SourceRecord(Map&lt;String, object&gt;, Map&lt;String, object&gt;, String, Integer, Schema, object)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;string, object&gt; arg0, Map&lt;string, object&gt; arg1, string arg2, Integer arg3, Schema arg4, object arg5)</code></pre>
+    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;String, object&gt; arg0, Map&lt;String, object&gt; arg1, String arg2, Integer arg3, Schema arg4, object arg5)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></p>
+    <dt><code>arg3</code> <a class="xref" href="api/Java.Lang.Integer.html">Integer</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Integer.html">Integer</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -521,32 +587,32 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_System_String_System_Object__Java_Util_Map_System_String_System_Object__System_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{System.String,System.Object},Java.Util.Map{System.String,System.Object},System.String,Java.Lang.Integer,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">
-  SourceRecord(Map&lt;string, object&gt;, Map&lt;string, object&gt;, string, Integer, Schema, object, Schema, object)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__Java_Lang_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object},Java.Lang.String,Java.Lang.Integer,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">
+  SourceRecord(Map&lt;String, object&gt;, Map&lt;String, object&gt;, String, Integer, Schema, object, Schema, object)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;string, object&gt; arg0, Map&lt;string, object&gt; arg1, string arg2, Integer arg3, Schema arg4, object arg5, Schema arg6, object arg7)</code></pre>
+    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;String, object&gt; arg0, Map&lt;String, object&gt; arg1, String arg2, Integer arg3, Schema arg4, object arg5, Schema arg6, object arg7)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></p>
+    <dt><code>arg3</code> <a class="xref" href="api/Java.Lang.Integer.html">Integer</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Integer.html">Integer</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -575,32 +641,32 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_System_String_System_Object__Java_Util_Map_System_String_System_Object__System_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Java_Lang_Long_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{System.String,System.Object},Java.Util.Map{System.String,System.Object},System.String,Java.Lang.Integer,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Java.Lang.Long)">
-  SourceRecord(Map&lt;string, object&gt;, Map&lt;string, object&gt;, string, Integer, Schema, object, Schema, object, Long)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__Java_Lang_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Java_Lang_Long_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object},Java.Lang.String,Java.Lang.Integer,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Java.Lang.Long)">
+  SourceRecord(Map&lt;String, object&gt;, Map&lt;String, object&gt;, String, Integer, Schema, object, Schema, object, Long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;string, object&gt; arg0, Map&lt;string, object&gt; arg1, string arg2, Integer arg3, Schema arg4, object arg5, Schema arg6, object arg7, Long arg8)</code></pre>
+    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;String, object&gt; arg0, Map&lt;String, object&gt; arg1, String arg2, Integer arg3, Schema arg4, object arg5, Schema arg6, object arg7, Long arg8)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></p>
+    <dt><code>arg3</code> <a class="xref" href="api/Java.Lang.Integer.html">Integer</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Integer.html">Integer</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -614,8 +680,8 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
     <dt><code>arg7</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></p>
 </dd>
-    <dt><code>arg8</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a></p>
+    <dt><code>arg8</code> <a class="xref" href="api/Java.Lang.Long.html">Long</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Long.html">Long</a></p>
 </dd>
   </dl>
 
@@ -632,32 +698,32 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_System_String_System_Object__Java_Util_Map_System_String_System_Object__System_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Java_Lang_Long_Java_Lang_Iterable_Org_Apache_Kafka_Connect_Header_Header__" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{System.String,System.Object},Java.Util.Map{System.String,System.Object},System.String,Java.Lang.Integer,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Java.Lang.Long,Java.Lang.Iterable{Org.Apache.Kafka.Connect.Header.Header})">
-  SourceRecord(Map&lt;string, object&gt;, Map&lt;string, object&gt;, string, Integer, Schema, object, Schema, object, Long, Iterable&lt;Header&gt;)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__Java_Lang_String_Java_Lang_Integer_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Java_Lang_Long_Java_Lang_Iterable_Org_Apache_Kafka_Connect_Header_Header__" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object},Java.Lang.String,Java.Lang.Integer,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Java.Lang.Long,Java.Lang.Iterable{Org.Apache.Kafka.Connect.Header.Header})">
+  SourceRecord(Map&lt;String, object&gt;, Map&lt;String, object&gt;, String, Integer, Schema, object, Schema, object, Long, Iterable&lt;Header&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;string, object&gt; arg0, Map&lt;string, object&gt; arg1, string arg2, Integer arg3, Schema arg4, object arg5, Schema arg6, object arg7, Long arg8, Iterable&lt;Header&gt; arg9)</code></pre>
+    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;String, object&gt; arg0, Map&lt;String, object&gt; arg1, String arg2, Integer arg3, Schema arg4, object arg5, Schema arg6, object arg7, Long arg8, Iterable&lt;Header&gt; arg9)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></p>
+    <dt><code>arg3</code> <a class="xref" href="api/Java.Lang.Integer.html">Integer</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Integer.html">Integer</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -671,11 +737,11 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
     <dt><code>arg7</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></p>
 </dd>
-    <dt><code>arg8</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a></dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a></p>
+    <dt><code>arg8</code> <a class="xref" href="api/Java.Lang.Long.html">Long</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Long.html">Long</a></p>
 </dd>
-    <dt><code>arg9</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable.html">Iterable</a></p>
+    <dt><code>arg9</code> <a class="xref" href="api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Lang.Iterable.html">Iterable</a></p>
 </dd>
   </dl>
 
@@ -692,29 +758,29 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_System_String_System_Object__Java_Util_Map_System_String_System_Object__System_String_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{System.String,System.Object},Java.Util.Map{System.String,System.Object},System.String,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">
-  SourceRecord(Map&lt;string, object&gt;, Map&lt;string, object&gt;, string, Schema, object)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__Java_Lang_String_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object},Java.Lang.String,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">
+  SourceRecord(Map&lt;String, object&gt;, Map&lt;String, object&gt;, String, Schema, object)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;string, object&gt; arg0, Map&lt;string, object&gt; arg1, string arg2, Schema arg3, object arg4)</code></pre>
+    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;String, object&gt; arg0, Map&lt;String, object&gt; arg1, String arg2, Schema arg3, object arg4)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -737,29 +803,29 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_System_String_System_Object__Java_Util_Map_System_String_System_Object__System_String_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{System.String,System.Object},Java.Util.Map{System.String,System.Object},System.String,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">
-  SourceRecord(Map&lt;string, object&gt;, Map&lt;string, object&gt;, string, Schema, object, Schema, object)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord__ctor_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__Java_Lang_String_Org_Apache_Kafka_Connect_Data_Schema_System_Object_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.#ctor(Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object},Java.Lang.String,Org.Apache.Kafka.Connect.Data.Schema,System.Object,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">
+  SourceRecord(Map&lt;String, object&gt;, Map&lt;String, object&gt;, String, Schema, object, Schema, object)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#org.apache.kafka.connect.source.SourceRecord(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;string, object&gt; arg0, Map&lt;string, object&gt; arg1, string arg2, Schema arg3, object arg4, Schema arg5, object arg6)</code></pre>
+    <pre><code class="lang-csharp hljs">public SourceRecord(Map&lt;String, object&gt; arg0, Map&lt;String, object&gt; arg1, String arg2, Schema arg3, object arg4, Schema arg5, object arg6)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></p>
@@ -1070,8 +1136,8 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord_New_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{System.String,``0},Java.Util.Map{System.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
-  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt;, Map&lt;string, TOffset&gt;, string, Schema, TKey?, Schema, TValue?)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
+  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TKey?, Schema, TValue?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1080,15 +1146,15 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt; sourcePartition, Map&lt;string, TOffset&gt; sourceOffset, string topic, Schema keySchema, TKey? key, Schema valueSchema, TValue? value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, Schema keySchema, TKey? key, Schema valueSchema, TValue? value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1118,10 +1184,10 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1134,7 +1200,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
 
 
-  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
+  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
 For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
 </div>
@@ -1144,8 +1210,8 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord_New_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{System.String,``0},Java.Util.Map{System.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``3)">
-  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt;, Map&lt;string, TOffset&gt;, string, Schema, TValue?)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``3)">
+  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1154,15 +1220,15 @@ For example, a database connector might specify the <code class="paramref">sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt; sourcePartition, Map&lt;string, TOffset&gt; sourceOffset, string topic, Schema valueSchema, TValue? value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, Schema valueSchema, TValue? value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1186,10 +1252,10 @@ For example, a database connector might specify the <code class="paramref">sourc
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1202,7 +1268,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
 
 
-  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
+  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
 For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
 </div>
@@ -1212,8 +1278,8 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord_New_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{System.String,``0},Java.Util.Map{System.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
-  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt;, Map&lt;string, TOffset&gt;, string, int?, Schema, TKey?, Schema, TValue?)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
+  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey?, Schema, TValue?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1222,15 +1288,15 @@ For example, a database connector might specify the <code class="paramref">sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt; sourcePartition, Map&lt;string, TOffset&gt; sourceOffset, string topic, int? partition, Schema keySchema, TKey? key, Schema valueSchema, TValue? value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, int? partition, Schema keySchema, TKey? key, Schema valueSchema, TValue? value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1263,10 +1329,10 @@ For example, a database connector might specify the <code class="paramref">sourc
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1279,7 +1345,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
 
 
-  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
+  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
 For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
 </div>
@@ -1289,8 +1355,8 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord_New_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{System.String,``0},Java.Util.Map{System.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime)">
-  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt;, Map&lt;string, TOffset&gt;, string, int?, Schema, TKey?, Schema, TValue?, DateTime)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime)">
+  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey?, Schema, TValue?, DateTime)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1299,15 +1365,15 @@ For example, a database connector might specify the <code class="paramref">sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt; sourcePartition, Map&lt;string, TOffset&gt; sourceOffset, string topic, int? partition, Schema keySchema, TKey? key, Schema valueSchema, TValue? value, DateTime timestamp)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, int? partition, Schema keySchema, TKey? key, Schema valueSchema, TValue? value, DateTime timestamp)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1343,10 +1409,10 @@ For example, a database connector might specify the <code class="paramref">sourc
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1359,7 +1425,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
 
 
-  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime__remarks">Remarks</h4>
+  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
 For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
 </div>
@@ -1369,8 +1435,8 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord_New_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{System.String,``0},Java.Util.Map{System.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">
-  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt;, Map&lt;string, TOffset&gt;, string, int?, Schema, TKey?, Schema, TValue?, DateTime, Headers)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">
+  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey?, Schema, TValue?, DateTime, Headers)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1379,15 +1445,15 @@ For example, a database connector might specify the <code class="paramref">sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt; sourcePartition, Map&lt;string, TOffset&gt; sourceOffset, string topic, int? partition, Schema keySchema, TKey? key, Schema valueSchema, TValue? value, DateTime timestamp, Headers headers)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, int? partition, Schema keySchema, TKey? key, Schema valueSchema, TValue? value, DateTime timestamp, Headers headers)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1426,10 +1492,10 @@ For example, a database connector might specify the <code class="paramref">sourc
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1442,7 +1508,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
 
 
-  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers__remarks">Remarks</h4>
+  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
 For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
 </div>
@@ -1452,8 +1518,8 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord_New_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{System.String,``0},Java.Util.Map{System.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``3)">
-  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt;, Map&lt;string, TOffset&gt;, string, int?, Schema, TValue?)
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord.New``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``3)">
+  New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1462,15 +1528,15 @@ For example, a database connector might specify the <code class="paramref">sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;string, TKeySource&gt; sourcePartition, Map&lt;string, TOffset&gt; sourceOffset, string topic, int? partition, Schema valueSchema, TValue? value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt; New&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, int? partition, Schema valueSchema, TValue? value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TKeySource&gt;</dt>
+    <dt><code>sourcePartition</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
     <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
 </dd>
-    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, TOffset&gt;</dt>
+    <dt><code>sourceOffset</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
     <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
 </dd>
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
@@ -1497,10 +1563,10 @@ For example, a database connector might specify the <code class="paramref">sourc
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKeySource</code></dt>
-    <dd><p>The value type of source partition <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
+    <dd><p>The value type of source partition <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourcePartition</code></p>
 </dd>
     <dt><code>TOffset</code></dt>
-    <dd><p>The value type of source offset <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
+    <dd><p>The value type of source offset <a class="xref" href="api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> in <code class="paramref">sourceOffset</code></p>
 </dd>
     <dt><code>TKey</code></dt>
     <dd></dd>
@@ -1513,7 +1579,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
 
 
-  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_System_String___0__Java_Util_Map_System_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
+  <h4 class="section" id="Org_Apache_Kafka_Connect_Source_SourceRecord_New__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
 For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
 </div>
@@ -1528,19 +1594,19 @@ For example, a database connector might specify the <code class="paramref">sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Map&lt;string, object&gt; SourceOffset()</code></pre>
+    <pre><code class="lang-csharp hljs">public Map&lt;String, object&gt; SourceOffset()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1561,19 +1627,19 @@ For example, a database connector might specify the <code class="paramref">sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.1/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Map&lt;string, object&gt; SourcePartition()</code></pre>
+    <pre><code class="lang-csharp hljs">public Map&lt;String, object&gt; SourcePartition()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 

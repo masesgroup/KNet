@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
@@ -122,11 +122,11 @@ Starting from the previous sentence, it works well using native types (bool, str
 </ul>
 <p>All KNet Streams SDK APIs starts with the KNet prefix to avoid confusion during development; some examples are:</p>
 <ul>
-<li><em>org.apache.kafka.streams.KafkaStreams</em> is managed from <strong>MASES.KNet.Streams.KNetStreams</strong></li>
-<li><em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em> is managed from <strong>MASES.KNet.Streams.State.KNetStreamsKNetKeyValueIterator&lt;TKey, TValue&gt;</strong> applying byte[] on both K and V on <em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em>; there are special cases for this, and other classes, to manage different JVM types:
+<li><em>org.apache.kafka.streams.KafkaStreams</em> is managed from <strong>MASES.KNet.Streams.Streams</strong></li>
+<li><em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em> is managed from <strong>MASES.KNet.Streams.State.KeyValueIterator&lt;TKey, TValue&gt;</strong> applying byte[] on both K and V on <em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em>; there are special cases for this, and other classes, to manage different JVM types:
 <ul>
-<li><strong>MASES.KNet.Streams.State.KNetTimestampedKeyValueIterator&lt;TKey, TValue&gt;</strong> uses an <em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em> applying byte[] on K and <em>org.apache.kafka.streams.state.ValueAndTimestamp&lt;byte[]&gt;</em> on V;</li>
-<li><strong>MASES.KNet.Streams.State.KNetTimestampedWindowedKeyValueIterator&lt;TKey, TValue&gt;</strong> uses an <em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em> applying <em>org.apache.kafka.streams.kstream.Windowed&lt;byte[]&gt;</em> on K and <em>org.apache.kafka.streams.state.ValueAndTimestamp&lt;byte[]&gt;</em> on V;</li>
+<li><strong>MASES.KNet.Streams.State.TimestampedKeyValueIterator&lt;TKey, TValue&gt;</strong> uses an <em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em> applying byte[] on K and <em>org.apache.kafka.streams.state.ValueAndTimestamp&lt;byte[]&gt;</em> on V;</li>
+<li><strong>MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator&lt;TKey, TValue&gt;</strong> uses an <em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em> applying <em>org.apache.kafka.streams.kstream.Windowed&lt;byte[]&gt;</em> on K and <em>org.apache.kafka.streams.state.ValueAndTimestamp&lt;byte[]&gt;</em> on V;</li>
 </ul>
 </li>
 </ul>
@@ -139,22 +139,22 @@ Starting from the previous sentence, it works well using native types (bool, str
 string storageId = &quot;myStorage&quot;;
 
 StreamsConfigBuilder streamsConfig = StreamsConfigBuilder.Create();
-KNetStreamsBuilder builder = new KNetStreamsBuilder(streamsConfig);
+StreamsBuilder builder = new StreamsBuilder(streamsConfig);
 
 Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka.Streams.State.Stores.InMemoryKeyValueStore(storageId);
-KNetMaterialized&lt;string, string&gt; materialized = KNetMaterialized&lt;string, string&gt;.As(storeSupplier);
-KNetGlobalKTable&lt;string, string&gt; globalTable = builder.GlobalTable(topicName, materialized);
-KNetTopology topology = builder.Build();
-KNetStreams streams = new KNetStreams(topology, streamsConfig);
+Materialized&lt;string, string&gt; materialized = Materialized&lt;string, string&gt;.As(storeSupplier);
+GlobalKTable&lt;string, string&gt; globalTable = builder.GlobalTable(topicName, materialized);
+Topology topology = builder.Build();
+Streams streams = new Streams(topology, streamsConfig);
 
 streams.Start();
 
-KNetReadOnlyKeyValueStore&lt;string, string&gt; keyValueStore = streams.Store(storageId, KNetQueryableStoreTypes.KeyValueStore&lt;string, string&gt;());
-KNetKeyValueIterator&lt;string, string&gt; keyValueIterator = keyValueStore.All;
+ReadOnlyKeyValueStore&lt;string, string&gt; keyValueStore = streams.Store(storageId, QueryableStoreTypes.KeyValueStore&lt;string, string&gt;());
+KeyValueIterator&lt;string, string&gt; keyValueIterator = keyValueStore.All;
 
 while (keyValueIterator.HasNext)
 {
-    KNetKeyValue&lt;string, string&gt; kv = keyValueIterator.Next;
+    KeyValue&lt;string, string&gt; kv = keyValueIterator.Next;
 
 }
 
@@ -187,18 +187,18 @@ StreamsConfigBuilder streamsConfig = StreamsConfigBuilder.Create();
 // streamsConfig.KNetKeySerDes = typeof(JsonSerDes.Key&lt;&gt;); // needed for complex keys
 streamsConfig.KNetValueSerDes = typeof(JsonSerDes.Value&lt;&gt;);
 
-KNetStreamsBuilder builder = new KNetStreamsBuilder(streamsConfig);
+StreamsBuilder builder = new StreamsBuilder(streamsConfig);
 
 Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka.Streams.State.Stores.InMemoryKeyValueStore(storageId);
-KNetMaterialized&lt;int, TestType&gt; materialized = KNetMaterialized&lt;int, TestType&gt;.As(storeSupplier);
-KNetGlobalKTable&lt;int, TestType&gt; globalTable = builder.GlobalTable(topicName, materialized);
-KNetTopology topology = builder.Build();
-KNetStreams streams = new KNetStreams(topology, streamsConfig);
+Materialized&lt;int, TestType&gt; materialized = Materialized&lt;int, TestType&gt;.As(storeSupplier);
+GlobalKTable&lt;int, TestType&gt; globalTable = builder.GlobalTable(topicName, materialized);
+Topology topology = builder.Build();
+Streams streams = new Streams(topology, streamsConfig);
 
 streams.Start();
 
-KNetReadOnlyKeyValueStore&lt;int, TestType&gt; keyValueStore = streams.Store(storageId, KNetQueryableStoreTypes.KeyValueStore&lt;int, TestType&gt;());
-KNetKeyValueIterator&lt;int, TestType&gt; keyValueIterator = keyValueStore.All;
+ReadOnlyKeyValueStore&lt;int, TestType&gt; keyValueStore = streams.Store(storageId, QueryableStoreTypes.KeyValueStore&lt;int, TestType&gt;());
+KeyValueIterator&lt;int, TestType&gt; keyValueIterator = keyValueStore.All;
 
 while (keyValueIterator.HasNext)
 {
@@ -211,11 +211,11 @@ while (keyValueIterator.HasNext)
 If even the key needs a complex type just uncomment the line with <code>streamsConfig.KNetKeySerDes = typeof(JsonSerDes.Key&lt;&gt;);</code> and replace the key type with your custom key type.
 Other ready made serializers can be found on <a href="usageSerDes.html">KNet serializers</a>.</p>
 <h2 id="performance-consideration">Performance consideration</h2>
-<p>In the previous examples data retrieve use a <code>KNetKeyValueIterator&lt;TKey, TValue&gt;</code> obtained from a <code>KNetReadOnlyKeyValueStore&lt;TKey, TValue&gt;</code>.
-In KNet Streams SDK the serializer is used only when the specifc field is requested, so the following cycle can traverse the full <code>KNetKeyValueIterator&lt;TKey, TValue&gt;</code> content searching a specifc key, then the value is returned:</p>
+<p>In the previous examples data retrieve use a <code>KeyValueIterator&lt;TKey, TValue&gt;</code> obtained from a <code>ReadOnlyKeyValueStore&lt;TKey, TValue&gt;</code>.
+In KNet Streams SDK the serializer is used only when the specifc field is requested, so the following cycle can traverse the full <code>KeyValueIterator&lt;TKey, TValue&gt;</code> content searching a specifc key, then the value is returned:</p>
 <pre><code class="lang-C#">while (keyValueIterator.HasNext)
 {
-    KNetKeyValue&lt;int, TestType&gt; kv = keyValueIterator.Next;
+    KeyValue&lt;int, TestType&gt; kv = keyValueIterator.Next;
     if (kv.Key == 100) // key deserialization happens here
     {
         return kv.Value; // value deserialization happens here
@@ -227,7 +227,7 @@ In KNet Streams SDK the serializer is used only when the specifc field is reques
 However there are conditions which needs to avoid the deserialization to be made in sync. Consider a condition where there is a lot of work done on key and/or value returned, the serialization can impact the whole cycle:</p>
 <pre><code class="lang-C#">while (keyValueIterator.HasNext)
 {
-    KNetKeyValue&lt;int, TestType&gt; kv = keyValueIterator.Next;
+    KeyValue&lt;int, TestType&gt; kv = keyValueIterator.Next;
     longFunction(kv.Key, kv.Value); // key and value deserialization happens here before invocation of longFunction
 }
 
@@ -237,12 +237,12 @@ void longFunction(int key, TestType value)
 }
 
 </code></pre>
-<p>To solve this problem KNet Streams SDK comes with a feature to deserialize in parallel while <code>longFunction</code> do its work; <code>KNetKeyValueIterator&lt;TKey, TValue&gt;</code> can return a special <code>IEnumerator&lt;TKeyValue&gt;</code> which deserialize in parallel:</p>
-<pre><code class="lang-C#">IEnumerator&lt;KNetKeyValue&lt;int, TestType&gt;&gt; enumerator = keyValueIterator.ToIEnumerator(); // it was used the default, i.e. with prefetch feature
+<p>To solve this problem KNet Streams SDK comes with a feature to deserialize in parallel while <code>longFunction</code> do its work; <code>KeyValueIterator&lt;TKey, TValue&gt;</code> can return a special <code>IEnumerator&lt;TKeyValue&gt;</code> which deserialize in parallel:</p>
+<pre><code class="lang-C#">IEnumerator&lt;KeyValue&lt;int, TestType&gt;&gt; enumerator = keyValueIterator.ToIEnumerator(); // it was used the default, i.e. with prefetch feature
 // key and value deserialization happens behind the scene
 while (enumerator.MoveNext())
 {
-    KNetKeyValue&lt;int, TestType&gt; kv = keyValueIterator.Current; 
+    KeyValue&lt;int, TestType&gt; kv = keyValueIterator.Current; 
     longFunction(kv.Key, kv.Value); // key and value are already ready before invocation of longFunction
 }
 
@@ -257,7 +257,7 @@ void longFunction(int key, TestType value)
 <p>This feature uses an external thread and cannot be stopped; upon executed <code>ToIEnumerator</code> function, the thread starts and continues till the end of the available data.</p>
 </div>
 <p>The previous point can be mitigated using the <code>foreach</code> statement since iterators implements both <code>IEnumerable&lt;T&gt;</code> and <code>IAsyncEnumerable&lt;T&gt;</code>:</p>
-<pre><code class="lang-C#">foreach (KNetKeyValue&lt;int, TestType&gt; kv in keyValueIterator) 
+<pre><code class="lang-C#">foreach (KeyValue&lt;int, TestType&gt; kv in keyValueIterator) 
 {
     if (kv.Key == 100) break; // when iteration breaks, keyValueIterator is Disposed and the external thread exit
     longFunction(kv.Key, kv.Value); // key and value are already ready before invocation of longFunction
@@ -270,7 +270,7 @@ void longFunction(int key, TestType value)
 
 </code></pre>
 <p>or</p>
-<pre><code class="lang-C#">await foreach (KNetKeyValue&lt;int, TestType&gt; kv in keyValueIterator) 
+<pre><code class="lang-C#">await foreach (KeyValue&lt;int, TestType&gt; kv in keyValueIterator) 
 {
     if (kv.Key == 100) break; // when iteration breaks, keyValueIterator is Disposed and the external thread exit
     longFunction(kv.Key, kv.Value); // key and value are already ready before invocation of longFunction

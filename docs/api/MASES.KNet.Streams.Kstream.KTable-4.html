@@ -1,0 +1,2760 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class KTable&lt;K, V, TJVMK, TJVMV&gt; | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KTable&lt;K, V, TJVMK, TJVMV&gt; | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="KNet extension of">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_Kstream_KTable_4.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.Kstream.KTable%604%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.Streams.Kstream.KTable`4">
+
+
+
+  <h1 id="MASES_KNet_Streams_Kstream_KTable_4" data-uid="MASES.KNet.Streams.Kstream.KTable`4" class="text-break">
+Class KTable&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Streams.html">Streams</a>.<a class="xref" href="MASES.KNet.Streams.Kstream.html">Kstream</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KTable-2.html">KTable&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KTable&lt;K, V, TJVMK, TJVMV&gt; : IGenericSerDesFactoryApplier</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd></dd>
+    <dt><code>V</code></dt>
+    <dd></dd>
+    <dt><code>TJVMK</code></dt>
+    <dd></dd>
+    <dt><code>TJVMV</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">KTable&lt;K, V, TJVMK, TJVMV&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_QueryableStoreName_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.QueryableStoreName*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_QueryableStoreName" data-uid="MASES.KNet.Streams.Kstream.KTable`4.QueryableStoreName">
+  QueryableStoreName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string QueryableStoreName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_FilterNot_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.FilterNot*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_FilterNot__2_MASES_KNet_Streams_Kstream_Predicate___0___1__2__3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.FilterNot``2(MASES.KNet.Streams.Kstream.Predicate{``0,``1,`2,`3})">
+  FilterNot&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L707"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; FilterNot&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt; arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate</a>&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_FilterNot_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.FilterNot*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_FilterNot__2_MASES_KNet_Streams_Kstream_Predicate___0___1__2__3__MASES_KNet_Streams_Kstream_Materialized__0__1__2__3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.FilterNot``2(MASES.KNet.Streams.Kstream.Predicate{``0,``1,`2,`3},MASES.KNet.Streams.Kstream.Materialized{`0,`1,`2,`3})">
+  FilterNot&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;, Materialized&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L666"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; FilterNot&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt; arg0, Materialized&lt;K, V, TJVMK, TJVMV&gt; arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate</a>&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_FilterNot_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.FilterNot*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_FilterNot__2_MASES_KNet_Streams_Kstream_Predicate___0___1__2__3__Org_Apache_Kafka_Streams_Kstream_Named_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.FilterNot``2(MASES.KNet.Streams.Kstream.Predicate{``0,``1,`2,`3},Org.Apache.Kafka.Streams.Kstream.Named)">
+  FilterNot&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;, Named)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L695"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; FilterNot&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt; arg0, Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate</a>&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_FilterNot_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.FilterNot*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_FilterNot__2_MASES_KNet_Streams_Kstream_Predicate___0___1__2__3__Org_Apache_Kafka_Streams_Kstream_Named_MASES_KNet_Streams_Kstream_Materialized__0__1__2__3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.FilterNot``2(MASES.KNet.Streams.Kstream.Predicate{``0,``1,`2,`3},Org.Apache.Kafka.Streams.Kstream.Named,MASES.KNet.Streams.Kstream.Materialized{`0,`1,`2,`3})">
+  FilterNot&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;, Named, Materialized&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L681"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; FilterNot&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt; arg0, Named arg1, Materialized&lt;K, V, TJVMK, TJVMV&gt; arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate</a>&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Filter_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Filter*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Filter__2_MASES_KNet_Streams_Kstream_Predicate___0___1__2__3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Filter``2(MASES.KNet.Streams.Kstream.Predicate{``0,``1,`2,`3})">
+  Filter&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L653"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; Filter&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt; arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate</a>&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Filter_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Filter*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Filter__2_MASES_KNet_Streams_Kstream_Predicate___0___1__2__3__MASES_KNet_Streams_Kstream_Materialized__0__1__2__3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Filter``2(MASES.KNet.Streams.Kstream.Predicate{``0,``1,`2,`3},MASES.KNet.Streams.Kstream.Materialized{`0,`1,`2,`3})">
+  Filter&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;, Materialized&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L612"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; Filter&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt; arg0, Materialized&lt;K, V, TJVMK, TJVMV&gt; arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate</a>&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Filter_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Filter*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Filter__2_MASES_KNet_Streams_Kstream_Predicate___0___1__2__3__Org_Apache_Kafka_Streams_Kstream_Named_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Filter``2(MASES.KNet.Streams.Kstream.Predicate{``0,``1,`2,`3},Org.Apache.Kafka.Streams.Kstream.Named)">
+  Filter&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;, Named)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L641"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; Filter&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt; arg0, Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate</a>&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Filter_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Filter*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Filter__2_MASES_KNet_Streams_Kstream_Predicate___0___1__2__3__Org_Apache_Kafka_Streams_Kstream_Named_MASES_KNet_Streams_Kstream_Materialized__0__1__2__3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Filter``2(MASES.KNet.Streams.Kstream.Predicate{``0,``1,`2,`3},Org.Apache.Kafka.Streams.Kstream.Named,MASES.KNet.Streams.Kstream.Materialized{`0,`1,`2,`3})">
+  Filter&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;, Named, Materialized&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L627"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; Filter&lt;Arg0objectSuperK, Arg0objectSuperV&gt;(Predicate&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt; arg0, Named arg1, Materialized&lt;K, V, TJVMK, TJVMV&gt; arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate</a>&lt;Arg0objectSuperK, Arg0objectSuperV, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_GroupBy_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.GroupBy*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_GroupBy__6_MASES_KNet_Streams_Kstream_KeyValueMapper___4___5___2__2__3_Org_Apache_Kafka_Streams_KeyValue___1___3___" data-uid="MASES.KNet.Streams.Kstream.KTable`4.GroupBy``6(MASES.KNet.Streams.Kstream.KeyValueMapper{``4,``5,``2,`2,`3,Org.Apache.Kafka.Streams.KeyValue{``1,``3}})">
+  GroupBy&lt;KR, TJVMKR, VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV&gt;(KeyValueMapper&lt;Arg0objectSuperK, Arg0objectSuperV, VR, TJVMK, TJVMV, KeyValue&lt;TJVMKR, TJVMVR&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#groupBy-org.apache.kafka.streams.kstream.KeyValueMapper-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#groupBy-org.apache.kafka.streams.kstream.KeyValueMapper-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KGroupedTable&lt;KR, VR, TJVMKR, TJVMVR&gt; GroupBy&lt;KR, TJVMKR, VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV&gt;(KeyValueMapper&lt;Arg0objectSuperK, Arg0objectSuperV, VR, TJVMK, TJVMV, KeyValue&lt;TJVMKR, TJVMVR&gt;&gt; arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper</a>&lt;Arg0objectSuperK, Arg0objectSuperV, VR, TJVMK, TJVMV, <a class="xref" href="Org.Apache.Kafka.Streams.KeyValue-2.html">KeyValue</a>&lt;TJVMKR, TJVMVR&gt;&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KGroupedTable-4.html">KGroupedTable</a>&lt;KR, VR, TJVMKR, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KGroupedTable-4.html">KGroupedTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKR</code></dt>
+    <dd></dd>
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_GroupBy_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.GroupBy*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_GroupBy__6_MASES_KNet_Streams_Kstream_KeyValueMapper___4___5___2__2__3_Org_Apache_Kafka_Streams_KeyValue___1___3___MASES_KNet_Streams_Kstream_Grouped___0___2___1___3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.GroupBy``6(MASES.KNet.Streams.Kstream.KeyValueMapper{``4,``5,``2,`2,`3,Org.Apache.Kafka.Streams.KeyValue{``1,``3}},MASES.KNet.Streams.Kstream.Grouped{``0,``2,``1,``3})">
+  GroupBy&lt;KR, TJVMKR, VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV&gt;(KeyValueMapper&lt;Arg0objectSuperK, Arg0objectSuperV, VR, TJVMK, TJVMV, KeyValue&lt;TJVMKR, TJVMVR&gt;&gt;, Grouped&lt;KR, VR, TJVMKR, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#groupBy-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.Grouped-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#groupBy-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.Grouped-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KGroupedTable&lt;KR, VR, TJVMKR, TJVMVR&gt; GroupBy&lt;KR, TJVMKR, VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV&gt;(KeyValueMapper&lt;Arg0objectSuperK, Arg0objectSuperV, VR, TJVMK, TJVMV, KeyValue&lt;TJVMKR, TJVMVR&gt;&gt; arg0, Grouped&lt;KR, VR, TJVMKR, TJVMVR&gt; arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper</a>&lt;Arg0objectSuperK, Arg0objectSuperV, VR, TJVMK, TJVMV, <a class="xref" href="Org.Apache.Kafka.Streams.KeyValue-2.html">KeyValue</a>&lt;TJVMKR, TJVMVR&gt;&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Grouped-4.html">Grouped</a>&lt;KR, VR, TJVMKR, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Grouped-4.html">Grouped&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KGroupedTable-4.html">KGroupedTable</a>&lt;KR, VR, TJVMKR, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KGroupedTable-4.html">KGroupedTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKR</code></dt>
+    <dd></dd>
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Join_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Join__6_MASES_KNet_Streams_Kstream_KTable___1___2___4___5__MASES_KNet_Streams_Utils_Function__1___1__3___4__MASES_KNet_Streams_Kstream_ValueJoiner__1___2___0__3___5___3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join``6(MASES.KNet.Streams.Kstream.KTable{``1,``2,``4,``5},MASES.KNet.Streams.Utils.Function{`1,``1,`3,``4},MASES.KNet.Streams.Kstream.ValueJoiner{`1,``2,``0,`3,``5,``3})">
+  Join&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt;, Function&lt;V, KO, TJVMV, TJVMKO&gt;, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; Join&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt; arg0, Function&lt;V, KO, TJVMV, TJVMKO&gt; arg1, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt; arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;KO, VO, TJVMKO, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Utils.Function-4.html">Function</a>&lt;V, KO, TJVMV, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Function.Function.html">Function</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>KO</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Join_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Join__6_MASES_KNet_Streams_Kstream_KTable___1___2___4___5__MASES_KNet_Streams_Utils_Function__1___1__3___4__MASES_KNet_Streams_Kstream_ValueJoiner__1___2___0__3___5___3__MASES_KNet_Streams_Kstream_Materialized__0___0__2___3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join``6(MASES.KNet.Streams.Kstream.KTable{``1,``2,``4,``5},MASES.KNet.Streams.Utils.Function{`1,``1,`3,``4},MASES.KNet.Streams.Kstream.ValueJoiner{`1,``2,``0,`3,``5,``3},MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``3})">
+  Join&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt;, Function&lt;V, KO, TJVMV, TJVMKO&gt;, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; Join&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt; arg0, Function&lt;V, KO, TJVMV, TJVMKO&gt; arg1, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt; arg2, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;KO, VO, TJVMKO, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Utils.Function-4.html">Function</a>&lt;V, KO, TJVMV, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Function.Function.html">Function</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>KO</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Join_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Join__6_MASES_KNet_Streams_Kstream_KTable___1___2___4___5__MASES_KNet_Streams_Utils_Function__1___1__3___4__MASES_KNet_Streams_Kstream_ValueJoiner__1___2___0__3___5___3__MASES_KNet_Streams_Kstream_TableJoined__0___1__2___4__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join``6(MASES.KNet.Streams.Kstream.KTable{``1,``2,``4,``5},MASES.KNet.Streams.Utils.Function{`1,``1,`3,``4},MASES.KNet.Streams.Kstream.ValueJoiner{`1,``2,``0,`3,``5,``3},MASES.KNet.Streams.Kstream.TableJoined{`0,``1,`2,``4})">
+  Join&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt;, Function&lt;V, KO, TJVMV, TJVMKO&gt;, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;, TableJoined&lt;K, KO, TJVMK, TJVMKO&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; Join&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt; arg0, Function&lt;V, KO, TJVMV, TJVMKO&gt; arg1, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt; arg2, TableJoined&lt;K, KO, TJVMK, TJVMKO&gt; arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;KO, VO, TJVMKO, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Utils.Function-4.html">Function</a>&lt;V, KO, TJVMV, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Function.Function.html">Function</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html">TableJoined</a>&lt;K, KO, TJVMK, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html">TableJoined&lt;K, KO, TJVMK, TJVMKO&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>KO</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Join_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Join__6_MASES_KNet_Streams_Kstream_KTable___1___2___4___5__MASES_KNet_Streams_Utils_Function__1___1__3___4__MASES_KNet_Streams_Kstream_ValueJoiner__1___2___0__3___5___3__MASES_KNet_Streams_Kstream_TableJoined__0___1__2___4__MASES_KNet_Streams_Kstream_Materialized__0___0__2___3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join``6(MASES.KNet.Streams.Kstream.KTable{``1,``2,``4,``5},MASES.KNet.Streams.Utils.Function{`1,``1,`3,``4},MASES.KNet.Streams.Kstream.ValueJoiner{`1,``2,``0,`3,``5,``3},MASES.KNet.Streams.Kstream.TableJoined{`0,``1,`2,``4},MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``3})">
+  Join&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt;, Function&lt;V, KO, TJVMV, TJVMKO&gt;, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;, TableJoined&lt;K, KO, TJVMK, TJVMKO&gt;, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L348"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; Join&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt; arg0, Function&lt;V, KO, TJVMV, TJVMKO&gt; arg1, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt; arg2, TableJoined&lt;K, KO, TJVMK, TJVMKO&gt; arg3, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg4)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;KO, VO, TJVMKO, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Utils.Function-4.html">Function</a>&lt;V, KO, TJVMV, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Function.Function.html">Function</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html">TableJoined</a>&lt;K, KO, TJVMK, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html">TableJoined&lt;K, KO, TJVMK, TJVMKO&gt;</a></p>
+</dd>
+    <dt><code>arg4</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>KO</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Join_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Join__7_MASES_KNet_Streams_Kstream_KTable__0___2__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join``7(MASES.KNet.Streams.Kstream.KTable{`0,``2,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``1})">
+  Join&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; Join&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Join_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Join__7_MASES_KNet_Streams_Kstream_KTable__0___2__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___1__MASES_KNet_Streams_Kstream_Materialized__0___0__2___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join``7(MASES.KNet.Streams.Kstream.KTable{`0,``2,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``1},MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``1})">
+  Join&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; Join&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-3.html">ValueJoiner&lt;V1, V2, VR&gt;</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Join_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Join__7_MASES_KNet_Streams_Kstream_KTable__0___2__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___1__Org_Apache_Kafka_Streams_Kstream_Named_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join``7(MASES.KNet.Streams.Kstream.KTable{`0,``2,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``1},Org.Apache.Kafka.Streams.Kstream.Named)">
+  Join&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;, Named)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; Join&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1, Named arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Join_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Join__7_MASES_KNet_Streams_Kstream_KTable__0___2__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___1__Org_Apache_Kafka_Streams_Kstream_Named_MASES_KNet_Streams_Kstream_Materialized__0___0__2___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Join``7(MASES.KNet.Streams.Kstream.KTable{`0,``2,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``1},Org.Apache.Kafka.Streams.Kstream.Named,MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``1})">
+  Join&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;, Named, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; Join&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1, Named arg2, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin__6_MASES_KNet_Streams_Kstream_KTable___1___2___4___5__MASES_KNet_Streams_Utils_Function__1___1__3___4__MASES_KNet_Streams_Kstream_ValueJoiner__1___2___0__3___5___3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin``6(MASES.KNet.Streams.Kstream.KTable{``1,``2,``4,``5},MASES.KNet.Streams.Utils.Function{`1,``1,`3,``4},MASES.KNet.Streams.Kstream.ValueJoiner{`1,``2,``0,`3,``5,``3})">
+  LeftJoin&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt;, Function&lt;V, KO, TJVMV, TJVMKO&gt;, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L456"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; LeftJoin&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt; arg0, Function&lt;V, KO, TJVMV, TJVMKO&gt; arg1, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt; arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;KO, VO, TJVMKO, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Utils.Function-4.html">Function</a>&lt;V, KO, TJVMV, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Function.Function.html">Function</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>KO</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin__6_MASES_KNet_Streams_Kstream_KTable___1___2___4___5__MASES_KNet_Streams_Utils_Function__1___1__3___4__MASES_KNet_Streams_Kstream_ValueJoiner__1___2___0__3___5___3__MASES_KNet_Streams_Kstream_Materialized__0___0__2___3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin``6(MASES.KNet.Streams.Kstream.KTable{``1,``2,``4,``5},MASES.KNet.Streams.Utils.Function{`1,``1,`3,``4},MASES.KNet.Streams.Kstream.ValueJoiner{`1,``2,``0,`3,``5,``3},MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``3})">
+  LeftJoin&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt;, Function&lt;V, KO, TJVMV, TJVMKO&gt;, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; LeftJoin&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt; arg0, Function&lt;V, KO, TJVMV, TJVMKO&gt; arg1, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt; arg2, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;KO, VO, TJVMKO, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Utils.Function-4.html">Function</a>&lt;V, KO, TJVMV, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Function.Function.html">Function</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>KO</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin__6_MASES_KNet_Streams_Kstream_KTable___1___2___4___5__MASES_KNet_Streams_Utils_Function__1___1__3___4__MASES_KNet_Streams_Kstream_ValueJoiner__1___2___0__3___5___3__MASES_KNet_Streams_Kstream_TableJoined__0___1__2___4__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin``6(MASES.KNet.Streams.Kstream.KTable{``1,``2,``4,``5},MASES.KNet.Streams.Utils.Function{`1,``1,`3,``4},MASES.KNet.Streams.Kstream.ValueJoiner{`1,``2,``0,`3,``5,``3},MASES.KNet.Streams.Kstream.TableJoined{`0,``1,`2,``4})">
+  LeftJoin&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt;, Function&lt;V, KO, TJVMV, TJVMKO&gt;, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;, TableJoined&lt;K, KO, TJVMK, TJVMKO&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L439"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; LeftJoin&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt; arg0, Function&lt;V, KO, TJVMV, TJVMKO&gt; arg1, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt; arg2, TableJoined&lt;K, KO, TJVMK, TJVMKO&gt; arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;KO, VO, TJVMKO, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Utils.Function-4.html">Function</a>&lt;V, KO, TJVMV, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Function.Function.html">Function</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html">TableJoined</a>&lt;K, KO, TJVMK, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html">TableJoined&lt;K, KO, TJVMK, TJVMKO&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>KO</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin__6_MASES_KNet_Streams_Kstream_KTable___1___2___4___5__MASES_KNet_Streams_Utils_Function__1___1__3___4__MASES_KNet_Streams_Kstream_ValueJoiner__1___2___0__3___5___3__MASES_KNet_Streams_Kstream_TableJoined__0___1__2___4__MASES_KNet_Streams_Kstream_Materialized__0___0__2___3__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin``6(MASES.KNet.Streams.Kstream.KTable{``1,``2,``4,``5},MASES.KNet.Streams.Utils.Function{`1,``1,`3,``4},MASES.KNet.Streams.Kstream.ValueJoiner{`1,``2,``0,`3,``5,``3},MASES.KNet.Streams.Kstream.TableJoined{`0,``1,`2,``4},MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``3})">
+  LeftJoin&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt;, Function&lt;V, KO, TJVMV, TJVMKO&gt;, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;, TableJoined&lt;K, KO, TJVMK, TJVMKO&gt;, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; LeftJoin&lt;VR, KO, VO, TJVMVR, TJVMKO, TJVMVO&gt;(KTable&lt;KO, VO, TJVMKO, TJVMVO&gt; arg0, Function&lt;V, KO, TJVMV, TJVMKO&gt; arg1, ValueJoiner&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt; arg2, TableJoined&lt;K, KO, TJVMK, TJVMKO&gt; arg3, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg4)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;KO, VO, TJVMKO, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Utils.Function-4.html">Function</a>&lt;V, KO, TJVMV, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Function.Function.html">Function</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;V, VO, VR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html">TableJoined</a>&lt;K, KO, TJVMK, TJVMKO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html">TableJoined&lt;K, KO, TJVMK, TJVMKO&gt;</a></p>
+</dd>
+    <dt><code>arg4</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>KO</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin__7_MASES_KNet_Streams_Kstream_KTable__0___1__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___2__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin``7(MASES.KNet.Streams.Kstream.KTable{`0,``1,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``2})">
+  LeftJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; LeftJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin__7_MASES_KNet_Streams_Kstream_KTable__0___1__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___2__Org_Apache_Kafka_Streams_Kstream_Named_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin``7(MASES.KNet.Streams.Kstream.KTable{`0,``1,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``2},Org.Apache.Kafka.Streams.Kstream.Named)">
+  LeftJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;, Named)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; LeftJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1, Named arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin__7_MASES_KNet_Streams_Kstream_KTable__0___2__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___1__MASES_KNet_Streams_Kstream_Materialized__0___0__2___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin``7(MASES.KNet.Streams.Kstream.KTable{`0,``2,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``1},MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``1})">
+  LeftJoin&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; LeftJoin&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_LeftJoin__7_MASES_KNet_Streams_Kstream_KTable__0___2__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___1__Org_Apache_Kafka_Streams_Kstream_Named_MASES_KNet_Streams_Kstream_Materialized__0___0__2___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.LeftJoin``7(MASES.KNet.Streams.Kstream.KTable{`0,``2,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``1},Org.Apache.Kafka.Streams.Kstream.Named,MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``1})">
+  LeftJoin&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;, Named, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; LeftJoin&lt;VR, TJVMVR, VO, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1, Named arg2, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_MapValues_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_MapValues__4_MASES_KNet_Streams_Kstream_ValueMapper___2___3__3___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues``4(MASES.KNet.Streams.Kstream.ValueMapper{``2,``3,`3,``1})">
+  MapValues&lt;VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapper&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L515"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; MapValues&lt;VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapper&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt; arg0) where Arg0objectSuperV : V where Arg0ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-4.html">ValueMapper</a>&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-4.html">ValueMapper&lt;V, VR, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg0ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_MapValues_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_MapValues__4_MASES_KNet_Streams_Kstream_ValueMapper___2___3__3___1__MASES_KNet_Streams_Kstream_Materialized__0___0__2___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues``4(MASES.KNet.Streams.Kstream.ValueMapper{``2,``3,`3,``1},MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``1})">
+  MapValues&lt;VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapper&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt;, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L471"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; MapValues&lt;VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapper&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt; arg0, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg1) where Arg0objectSuperV : V where Arg0ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-4.html">ValueMapper</a>&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-4.html">ValueMapper&lt;V, VR, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg0ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_MapValues_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_MapValues__4_MASES_KNet_Streams_Kstream_ValueMapper___2___3__3___1__Org_Apache_Kafka_Streams_Kstream_Named_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues``4(MASES.KNet.Streams.Kstream.ValueMapper{``2,``3,`3,``1},Org.Apache.Kafka.Streams.Kstream.Named)">
+  MapValues&lt;VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapper&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt;, Named)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L502"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; MapValues&lt;VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapper&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt; arg0, Named arg1) where Arg0objectSuperV : V where Arg0ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-4.html">ValueMapper</a>&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-4.html">ValueMapper&lt;V, VR, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg0ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_MapValues_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_MapValues__4_MASES_KNet_Streams_Kstream_ValueMapper___2___3__3___1__Org_Apache_Kafka_Streams_Kstream_Named_MASES_KNet_Streams_Kstream_Materialized__0___0__2___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues``4(MASES.KNet.Streams.Kstream.ValueMapper{``2,``3,`3,``1},Org.Apache.Kafka.Streams.Kstream.Named,MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``1})">
+  MapValues&lt;VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapper&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt;, Named, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L487"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; MapValues&lt;VR, TJVMVR, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapper&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt; arg0, Named arg1, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg2) where Arg0objectSuperV : V where Arg0ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-4.html">ValueMapper</a>&lt;Arg0objectSuperV, Arg0ExtendsVR, TJVMV, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-4.html">ValueMapper&lt;V, VR, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg0ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_MapValues_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_MapValues__5_MASES_KNet_Streams_Kstream_ValueMapperWithKey___2___3___4__2__3___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues``5(MASES.KNet.Streams.Kstream.ValueMapperWithKey{``2,``3,``4,`2,`3,``1})">
+  MapValues&lt;VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapperWithKey&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L577"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; MapValues&lt;VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapperWithKey&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt; arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html">ValueMapperWithKey</a>&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html">ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg0ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_MapValues_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_MapValues__5_MASES_KNet_Streams_Kstream_ValueMapperWithKey___2___3___4__2__3___1__MASES_KNet_Streams_Kstream_Materialized__0___0__2___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues``5(MASES.KNet.Streams.Kstream.ValueMapperWithKey{``2,``3,``4,`2,`3,``1},MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``1})">
+  MapValues&lt;VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapperWithKey&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt;, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L530"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; MapValues&lt;VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapperWithKey&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt; arg0, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html">ValueMapperWithKey</a>&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html">ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg0ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_MapValues_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_MapValues__5_MASES_KNet_Streams_Kstream_ValueMapperWithKey___2___3___4__2__3___1__Org_Apache_Kafka_Streams_Kstream_Named_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues``5(MASES.KNet.Streams.Kstream.ValueMapperWithKey{``2,``3,``4,`2,`3,``1},Org.Apache.Kafka.Streams.Kstream.Named)">
+  MapValues&lt;VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapperWithKey&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt;, Named)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L563"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; MapValues&lt;VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapperWithKey&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt; arg0, Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html">ValueMapperWithKey</a>&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html">ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg0ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_MapValues_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_MapValues__5_MASES_KNet_Streams_Kstream_ValueMapperWithKey___2___3___4__2__3___1__Org_Apache_Kafka_Streams_Kstream_Named_MASES_KNet_Streams_Kstream_Materialized__0___0__2___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.MapValues``5(MASES.KNet.Streams.Kstream.ValueMapperWithKey{``2,``3,``4,`2,`3,``1},Org.Apache.Kafka.Streams.Kstream.Named,MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``1})">
+  MapValues&lt;VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapperWithKey&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt;, Named, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L547"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; MapValues&lt;VR, TJVMVR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR&gt;(ValueMapperWithKey&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt; arg0, Named arg1, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html">ValueMapperWithKey</a>&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR, TJVMK, TJVMV, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html">ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg0ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_OuterJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.OuterJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_OuterJoin__7_MASES_KNet_Streams_Kstream_KTable__0___1__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___2__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.OuterJoin``7(MASES.KNet.Streams.Kstream.KTable{`0,``1,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``2})">
+  OuterJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; OuterJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_OuterJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.OuterJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_OuterJoin__7_MASES_KNet_Streams_Kstream_KTable__0___1__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___2__MASES_KNet_Streams_Kstream_Materialized__0___0__2___2__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.OuterJoin``7(MASES.KNet.Streams.Kstream.KTable{`0,``1,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``2},MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``2})">
+  OuterJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; OuterJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_OuterJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.OuterJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_OuterJoin__7_MASES_KNet_Streams_Kstream_KTable__0___1__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___2__Org_Apache_Kafka_Streams_Kstream_Named_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.OuterJoin``7(MASES.KNet.Streams.Kstream.KTable{`0,``1,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``2},Org.Apache.Kafka.Streams.Kstream.Named)">
+  OuterJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;, Named)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; OuterJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1, Named arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_OuterJoin_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.OuterJoin*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_OuterJoin__7_MASES_KNet_Streams_Kstream_KTable__0___1__2___3__MASES_KNet_Streams_Kstream_ValueJoiner___4___5___6__3___3___2__Org_Apache_Kafka_Streams_Kstream_Named_MASES_KNet_Streams_Kstream_Materialized__0___0__2___2__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.OuterJoin``7(MASES.KNet.Streams.Kstream.KTable{`0,``1,`2,``3},MASES.KNet.Streams.Kstream.ValueJoiner{``4,``5,``6,`3,``3,``2},Org.Apache.Kafka.Streams.Kstream.Named,MASES.KNet.Streams.Kstream.Materialized{`0,``0,`2,``2})">
+  OuterJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt;, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;, Named, Materialized&lt;K, VR, TJVMK, TJVMVR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, VR, TJVMK, TJVMVR&gt; OuterJoin&lt;VR, VO, TJVMVR, TJVMVO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR&gt;(KTable&lt;K, VO, TJVMK, TJVMVO&gt; arg0, ValueJoiner&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt; arg1, Named arg2, Materialized&lt;K, VR, TJVMK, TJVMVR&gt; arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VO, TJVMK, TJVMVO&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner</a>&lt;Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR, TJVMV, TJVMVO, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, VR, TJVMK, TJVMVR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>VR</code></dt>
+    <dd></dd>
+    <dt><code>VO</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMVO</code></dt>
+    <dd></dd>
+    <dt><code>Arg1objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg1objectSuperVO</code></dt>
+    <dd><p><code class="typeparamref">VO</code></p>
+</dd>
+    <dt><code>Arg1ExtendsVR</code></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_Suppress_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Suppress*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_Suppress__1_MASES_KNet_Streams_Kstream_Suppressed___0__2__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.Suppress``1(MASES.KNet.Streams.Kstream.Suppressed{``0,`2})">
+  Suppress&lt;Arg0objectSuperK&gt;(Suppressed&lt;Arg0objectSuperK, TJVMK&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L718"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#suppress-org.apache.kafka.streams.kstream.Suppressed-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#suppress-org.apache.kafka.streams.kstream.Suppressed-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; Suppress&lt;Arg0objectSuperK&gt;(Suppressed&lt;Arg0objectSuperK, TJVMK&gt; arg0) where Arg0objectSuperK : K</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Suppressed-2.html">Suppressed</a>&lt;Arg0objectSuperK, TJVMK&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Suppressed-2.html">Suppressed&lt;K, TJVMK&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_ToStream_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.ToStream*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_ToStream" data-uid="MASES.KNet.Streams.Kstream.KTable`4.ToStream">
+  ToStream()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L591"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, TJVMK, TJVMV&gt; ToStream()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_ToStream_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.ToStream*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_ToStream_Org_Apache_Kafka_Streams_Kstream_Named_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.ToStream(Org.Apache.Kafka.Streams.Kstream.Named)">
+  ToStream(Named)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L600"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream-org.apache.kafka.streams.kstream.Named-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream-org.apache.kafka.streams.kstream.Named-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, TJVMK, TJVMV&gt; ToStream(Named arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_ToStream_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.ToStream*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_ToStream__5_MASES_KNet_Streams_Kstream_KeyValueMapper___2___3___4__2__3___1__" data-uid="MASES.KNet.Streams.Kstream.KTable`4.ToStream``5(MASES.KNet.Streams.Kstream.KeyValueMapper{``2,``3,``4,`2,`3,``1})">
+  ToStream&lt;KR, TJVMKR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR&gt;(KeyValueMapper&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, TJVMK, TJVMV, TJVMKR&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream-org.apache.kafka.streams.kstream.KeyValueMapper-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream-org.apache.kafka.streams.kstream.KeyValueMapper-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KStream&lt;KR, V, TJVMKR, TJVMV&gt; ToStream&lt;KR, TJVMKR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR&gt;(KeyValueMapper&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, TJVMK, TJVMV, TJVMKR&gt; arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsKR : KR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper</a>&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, TJVMK, TJVMV, TJVMKR&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper.html">KeyValueMapper</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;KR, V, TJVMKR, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg0ExtendsKR</code></dt>
+    <dd><p><code class="typeparamref">KR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_ToStream_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.ToStream*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_ToStream__5_MASES_KNet_Streams_Kstream_KeyValueMapper___2___3___4__2__3___1__Org_Apache_Kafka_Streams_Kstream_Named_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.ToStream``5(MASES.KNet.Streams.Kstream.KeyValueMapper{``2,``3,``4,`2,`3,``1},Org.Apache.Kafka.Streams.Kstream.Named)">
+  ToStream&lt;KR, TJVMKR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR&gt;(KeyValueMapper&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, TJVMK, TJVMV, TJVMKR&gt;, Named)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.Named-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KTable.html#toStream-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.Named-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KStream&lt;KR, V, TJVMKR, TJVMV&gt; ToStream&lt;KR, TJVMKR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR&gt;(KeyValueMapper&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, TJVMK, TJVMV, TJVMKR&gt; arg0, Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsKR : KR</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper</a>&lt;Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR, TJVMK, TJVMV, TJVMKR&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Named.html">Named</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;KR, V, TJVMKR, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KR</code></dt>
+    <dd></dd>
+    <dt><code>TJVMKR</code></dt>
+    <dd></dd>
+    <dt><code>Arg0objectSuperK</code></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>Arg0objectSuperV</code></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>Arg0ExtendsKR</code></dt>
+    <dd><p><code class="typeparamref">KR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="MASES_KNet_Streams_Kstream_KTable_4_op_Implicit_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.op_Implicit*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_KTable_4_op_Implicit_MASES_KNet_Streams_Kstream_KTable__0__1__2__3___Org_Apache_Kafka_Streams_Kstream_KTable__2__3_" data-uid="MASES.KNet.Streams.Kstream.KTable`4.op_Implicit(MASES.KNet.Streams.Kstream.KTable{`0,`1,`2,`3})~Org.Apache.Kafka.Streams.Kstream.KTable{`2,`3}">
+  implicit operator KTable&lt;TJVMK, TJVMV&gt;(KTable&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KTable-2.html">KTable&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator KTable&lt;TJVMK, TJVMV&gt;(KTable&lt;K, V, TJVMK, TJVMV&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KTable-2.html">KTable</a>&lt;TJVMK, TJVMV&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KTable.cs/#L31" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

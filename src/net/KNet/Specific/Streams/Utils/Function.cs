@@ -51,8 +51,8 @@ namespace MASES.KNet.Streams.Utils
     /// <typeparam name="KO">The value type</typeparam>
     public class Function<V, KO> : Function<V, KO, byte[], byte[]>
     {
-        ISerDes<KO> _keySerializer = null;
-        ISerDes<V> _valueSerializer = null;
+        ISerDes<KO, byte[]> _keySerializer = null;
+        ISerDes<V, byte[]> _valueSerializer = null;
         /// <summary>
         /// The <see cref="Func{V, KO}"/> to be executed
         /// </summary>
@@ -66,8 +66,8 @@ namespace MASES.KNet.Streams.Utils
             {
                 throw new InvalidOperationException("The serialization factory instance was not set.");
             }
-            _keySerializer ??= factory?.BuildKeySerDes<KO>();
-            _valueSerializer ??= factory?.BuildValueSerDes<V>();
+            _keySerializer ??= factory?.BuildKeySerDes<KO, byte[]>();
+            _valueSerializer ??= factory?.BuildValueSerDes<V, byte[]>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_valueSerializer.Deserialize(null, arg0));
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class EnvVarConfigProvider | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -93,7 +93,7 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -125,8 +125,8 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
       <div><span class="xref">IJVMBridgeBaseStatic</span></div>
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html">ICloseable</a></div>
-      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="api/Java.Io.ICloseable.html">ICloseable</a></div>
+      <div><a class="xref" href="api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.Config.Provider.IConfigProvider.html">IConfigProvider</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.IConfigurable.html">IConfigurable</a></div>
     </dd>
@@ -137,10 +137,10 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.Provider.ConfigProvider.html#Org_Apache_Kafka_Common_Config_Provider_ConfigProvider_Subscribe_System_String_Java_Util_Set_System_String__Org_Apache_Kafka_Common_Config_ConfigChangeCallback_">ConfigProvider.Subscribe(string, Set&lt;string&gt;, ConfigChangeCallback)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.Provider.ConfigProvider.html#Org_Apache_Kafka_Common_Config_Provider_ConfigProvider_Subscribe_Java_Lang_String_Java_Util_Set_Java_Lang_String__Org_Apache_Kafka_Common_Config_ConfigChangeCallback_">ConfigProvider.Subscribe(String, Set&lt;String&gt;, ConfigChangeCallback)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Common.Config.Provider.ConfigProvider.html#Org_Apache_Kafka_Common_Config_Provider_ConfigProvider_Unsubscribe_System_String_Java_Util_Set_System_String__Org_Apache_Kafka_Common_Config_ConfigChangeCallback_">ConfigProvider.Unsubscribe(string, Set&lt;string&gt;, ConfigChangeCallback)</a>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.Provider.ConfigProvider.html#Org_Apache_Kafka_Common_Config_Provider_ConfigProvider_Unsubscribe_Java_Lang_String_Java_Util_Set_Java_Lang_String__Org_Apache_Kafka_Common_Config_ConfigChangeCallback_">ConfigProvider.Unsubscribe(String, Set&lt;String&gt;, ConfigChangeCallback)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Common.Config.Provider.ConfigProvider.html#Org_Apache_Kafka_Common_Config_Provider_ConfigProvider_UnsubscribeAll">ConfigProvider.UnsubscribeAll()</a>
@@ -149,49 +149,97 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.SGetField(IJavaType, string)</a>
@@ -234,6 +282,9 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;ConfigProvider&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigProvider&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
       <span class="xref">JVMBridgeBase&lt;ConfigProvider&gt;.Execute&lt;T&gt;(params T[])</span>
@@ -323,16 +374,31 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -452,23 +518,23 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
 
   <a id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider__ctor_" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider__ctor_Java_Util_Map_System_String_System_String__" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.#ctor(Java.Util.Map{System.String,System.String})">
-  EnvVarConfigProvider(Map&lt;string, string&gt;)
+  <h3 id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider__ctor_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.#ctor(Java.Util.Map{Java.Lang.String,Java.Lang.String})">
+  EnvVarConfigProvider(Map&lt;String, String&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/Provider/EnvVarConfigProvider.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#org.apache.kafka.common.config.provider.EnvVarConfigProvider(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#org.apache.kafka.common.config.provider.EnvVarConfigProvider(java.util.Map)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#org.apache.kafka.common.config.provider.EnvVarConfigProvider(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#org.apache.kafka.common.config.provider.EnvVarConfigProvider(java.util.Map)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EnvVarConfigProvider(Map&lt;string, string&gt; arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public EnvVarConfigProvider(Map&lt;String, String&gt; arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -526,12 +592,12 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/Provider/EnvVarConfigProvider.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#ALLOWLIST_PATTERN_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#ALLOWLIST_PATTERN_CONFIG</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#ALLOWLIST_PATTERN_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#ALLOWLIST_PATTERN_CONFIG</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ALLOWLIST_PATTERN_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String ALLOWLIST_PATTERN_CONFIG { get; }</code></pre>
   </div>
 
 
@@ -540,7 +606,7 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -558,12 +624,12 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/Provider/EnvVarConfigProvider.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#ALLOWLIST_PATTERN_CONFIG_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#ALLOWLIST_PATTERN_CONFIG_DOC</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#ALLOWLIST_PATTERN_CONFIG_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#ALLOWLIST_PATTERN_CONFIG_DOC</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ALLOWLIST_PATTERN_CONFIG_DOC { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String ALLOWLIST_PATTERN_CONFIG_DOC { get; }</code></pre>
   </div>
 
 
@@ -572,7 +638,7 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -754,7 +820,7 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/Provider/EnvVarConfigProvider.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#close--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -773,7 +839,7 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.IOException.html">IOException</a></dt>
+    <dt><a class="xref" href="api/Java.Io.IOException.html">IOException</a></dt>
     <dd></dd>
   </dl>
 
@@ -781,23 +847,23 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
 
   <a id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider_Configure_" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.Configure*"></a>
 
-  <h3 id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider_Configure_Java_Util_Map_System_String_System_Object__" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.Configure(Java.Util.Map{System.String,System.Object})">
-  Configure(Map&lt;string, object&gt;)
+  <h3 id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
+  Configure(Map&lt;String, object&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/Provider/EnvVarConfigProvider.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#configure-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#configure-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Configure(Map&lt;string, object&gt; arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Configure(Map&lt;String, object&gt; arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -814,23 +880,23 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
 
   <a id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider_Get_" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.Get*"></a>
 
-  <h3 id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider_Get_System_String_" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.Get(System.String)">
-  Get(string)
+  <h3 id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider_Get_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.Get(Java.Lang.String)">
+  Get(String)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/Provider/EnvVarConfigProvider.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get-java.lang.String-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConfigData Get(string arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public ConfigData Get(String arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -853,26 +919,26 @@ Class EnvVarConfigProvider  <a class="header-action link-secondary" title="View 
 
   <a id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider_Get_" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.Get*"></a>
 
-  <h3 id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider_Get_System_String_Java_Util_Set_System_String__" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.Get(System.String,Java.Util.Set{System.String})">
-  Get(string, Set&lt;string&gt;)
+  <h3 id="Org_Apache_Kafka_Common_Config_Provider_EnvVarConfigProvider_Get_Java_Lang_String_Java_Util_Set_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Config.Provider.EnvVarConfigProvider.Get(Java.Lang.String,Java.Util.Set{Java.Lang.String})">
+  Get(String, Set&lt;String&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/Provider/EnvVarConfigProvider.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get-java.lang.String-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get-java.lang.String-java.util.Set-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get-java.lang.String-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get-java.lang.String-java.util.Set-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConfigData Get(string arg0, Set&lt;string&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public ConfigData Get(String arg0, Set&lt;String&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
+    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 

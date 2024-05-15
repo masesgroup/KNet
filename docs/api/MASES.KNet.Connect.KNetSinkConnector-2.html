@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -174,19 +174,19 @@ Class KNetSinkConnector&lt;TSinkConnector, TTask&gt;  <a class="header-action li
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_">KNetConnector.Initialize(ConnectorContext)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_Java_Util_List_Java_Util_Map_System_String_System_String___">KNetConnector.Initialize(ConnectorContext, List&lt;Map&lt;string, string&gt;&gt;)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_Java_Util_List_Java_Util_Map_Java_Lang_String_Java_Lang_String___">KNetConnector.Initialize(ConnectorContext, List&lt;Map&lt;String, String&gt;&gt;)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_StartInternal">KNetConnector.StartInternal()</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_Java_Util_Map_System_String_System_String__">KNetConnector.Start(Map&lt;string, string&gt;)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_Java_Util_Map_Java_Lang_String_Java_Lang_String__">KNetConnector.Start(Map&lt;String, String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__">KNetConnector.Start(IReadOnlyDictionary&lt;string, string&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Reconfigure_Java_Util_Map_System_String_System_String__">KNetConnector.Reconfigure(Map&lt;string, string&gt;)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Reconfigure_Java_Util_Map_Java_Lang_String_Java_Lang_String__">KNetConnector.Reconfigure(Map&lt;String, String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskClass">KNetConnector.TaskClass()</a>
@@ -207,7 +207,7 @@ Class KNetSinkConnector&lt;TSinkConnector, TTask&gt;  <a class="header-action li
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Stop">KNetConnector.Stop()</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Validate_Java_Util_Map_System_String_System_String__">KNetConnector.Validate(Map&lt;string, string&gt;)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Validate_Java_Util_Map_Java_Lang_String_Java_Lang_String__">KNetConnector.Validate(Map&lt;String, String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Config">KNetConnector.Config()</a>

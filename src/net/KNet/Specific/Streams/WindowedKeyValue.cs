@@ -24,21 +24,23 @@ namespace MASES.KNet.Streams
     /// <summary>
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/> where the key is <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
     /// </summary>
-    /// <typeparam name="TKey">The key type</typeparam>
-    /// <typeparam name="TValue">The value type</typeparam>
-    public sealed class WindowedKeyValue<TKey, TValue> : IGenericSerDesFactoryApplier
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    public sealed class WindowedKeyValue<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> _valueInner;
-        Windowed<TKey> _key = null;
-        TValue _value;
+        readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> _valueInner;
+        Windowed<K, TJVMK> _key = null;
+        V _value;
         bool _valueStored;
-        ISerDes<TValue> _valueSerDes = null;
+        ISerDes<V, TJVMV> _valueSerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         internal WindowedKeyValue(IGenericSerDesFactory factory,
-                                      Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<byte[]>, byte[]> value,
-                                      ISerDes<TValue> valueSerDes,
+                                      Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> value,
+                                      ISerDes<V, TJVMV> valueSerDes,
                                       bool fromPrefetched)
         {
             _factory = factory;
@@ -46,7 +48,7 @@ namespace MASES.KNet.Streams
             _valueSerDes = valueSerDes;
             if (fromPrefetched)
             {
-                _valueSerDes ??= _factory?.BuildValueSerDes<TValue>();
+                _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
                 _value = _valueSerDes.Deserialize(null, _valueInner.value);
                 _valueStored = true;
             }
@@ -55,24 +57,24 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
-        public Windowed<TKey> Key
+        public Windowed<K, TJVMK> Key
         {
             get
             {
-                _key ??= new Windowed<TKey>(_factory, _valueInner.key);
+                _key ??= new Windowed<K, TJVMK>(_factory, _valueInner.key);
                 return _key;
             }
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
-        public TValue Value
+        public V Value
         {
             get
             {
                 if (!_valueStored)
                 {
-                    _valueSerDes ??= _factory?.BuildValueSerDes<TValue>();
+                    _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
                     var kk = _valueInner.value;
                     _value = _valueSerDes.Deserialize(null, kk);
                     _valueStored = true;

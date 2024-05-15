@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MirrorSourceConnector | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorSourceConnector.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorSourceConnector.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -93,7 +93,7 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorSourceConnector.html">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.1/org/apache/kafka/connect/mirror/MirrorSourceConnector.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorSourceConnector.html">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorSourceConnector.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -136,13 +136,13 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceConnector.html#Org_Apache_Kafka_Connect_Source_SourceConnector_AlterOffsets_Java_Util_Map_System_String_System_String__Java_Util_Map_Java_Util_Map_System_String_System_Object__Java_Util_Map_System_String_System_Object___">SourceConnector.AlterOffsets(Map&lt;string, string&gt;, Map&lt;Map&lt;string, object&gt;, Map&lt;string, object&gt;&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceConnector.html#Org_Apache_Kafka_Connect_Source_SourceConnector_AlterOffsets_Java_Util_Map_Java_Lang_String_Java_Lang_String__Java_Util_Map_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object___">SourceConnector.AlterOffsets(Map&lt;String, String&gt;, Map&lt;Map&lt;String, object&gt;, Map&lt;String, object&gt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceConnector.html#Org_Apache_Kafka_Connect_Source_SourceConnector_CanDefineTransactionBoundaries_Java_Util_Map_System_String_System_String__">SourceConnector.CanDefineTransactionBoundaries(Map&lt;string, string&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceConnector.html#Org_Apache_Kafka_Connect_Source_SourceConnector_CanDefineTransactionBoundaries_Java_Util_Map_Java_Lang_String_Java_Lang_String__">SourceConnector.CanDefineTransactionBoundaries(Map&lt;String, String&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceConnector.html#Org_Apache_Kafka_Connect_Source_SourceConnector_ExactlyOnceSupport_Java_Util_Map_System_String_System_String__">SourceConnector.ExactlyOnceSupport(Map&lt;string, string&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceConnector.html#Org_Apache_Kafka_Connect_Source_SourceConnector_ExactlyOnceSupport_Java_Util_Map_Java_Lang_String_Java_Lang_String__">SourceConnector.ExactlyOnceSupport(Map&lt;String, String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_TaskClass__1">Connector.TaskClass&lt;ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task&gt;()</a>
@@ -154,22 +154,22 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
       <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_Config">Connector.Config()</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_Start_Java_Util_Map_System_String_System_String__">Connector.Start(Map&lt;string, string&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_Start_Java_Util_Map_Java_Lang_String_Java_Lang_String__">Connector.Start(Map&lt;String, String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_Stop">Connector.Stop()</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_Validate_Java_Util_Map_System_String_System_String__">Connector.Validate(Map&lt;string, string&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_Validate_Java_Util_Map_Java_Lang_String_Java_Lang_String__">Connector.Validate(Map&lt;String, String&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_Java_Util_List_Java_Util_Map_System_String_System_String___">Connector.Initialize(ConnectorContext, List&lt;Map&lt;string, string&gt;&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_Java_Util_List_Java_Util_Map_Java_Lang_String_Java_Lang_String___">Connector.Initialize(ConnectorContext, List&lt;Map&lt;String, String&gt;&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_">Connector.Initialize(ConnectorContext)</a>
     </div>
     <div>
-      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_Reconfigure_Java_Util_Map_System_String_System_String__">Connector.Reconfigure(Map&lt;string, string&gt;)</a>
+      <a class="xref" href="Org.Apache.Kafka.Connect.Connector.Connector.html#Org_Apache_Kafka_Connect_Connector_Connector_Reconfigure_Java_Util_Map_Java_Lang_String_Java_Lang_String__">Connector.Reconfigure(Map&lt;String, String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html#Org_Apache_Kafka_Connect_Components_Versioned_Version">Versioned.Version()</a>
@@ -178,49 +178,97 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecute(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.SGetField(IJavaType, string)</a>
@@ -263,6 +311,9 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;Versioned&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Versioned&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
       <span class="xref">JVMBridgeBase&lt;Versioned&gt;.Execute&lt;T&gt;(params T[])</span>
@@ -352,16 +403,31 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -456,7 +522,7 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConnector__ctor" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConnector.#ctor">
   MirrorSourceConnector()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L749"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L793"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -483,7 +549,7 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConnector__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConnector.#ctor(System.Object[])">
   MirrorSourceConnector(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L753"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L797"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -519,7 +585,7 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConnector_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConnector.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L760"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L804"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -551,7 +617,7 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConnector_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConnector.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L764"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L808"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -583,7 +649,7 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConnector_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConnector.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L768"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L812"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -615,7 +681,7 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConnector_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConnector.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L772"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L816"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -647,7 +713,7 @@ Class MirrorSourceConnector  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConnector_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConnector.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L776"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L820"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>

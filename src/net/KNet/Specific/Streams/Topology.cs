@@ -65,15 +65,15 @@ namespace MASES.KNet.Streams
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="ISerializer{T}"/></param>
-        /// <param name="arg3"><see cref="ISerializer{T}"/></param>
+        /// <param name="arg2"><see cref="ISerializer{T, TJVMT}"/></param>
+        /// <param name="arg3"><see cref="ISerializer{T, TJVMT}"/></param>
         /// <param name="arg4"><see cref="string"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSink<K, V>(string arg0, string arg1, ISerializer<K> arg2, ISerializer<V> arg3, params string[] arg4)
+        public Topology AddSink<K, V>(string arg0, string arg1, ISerializer<K, byte[]> arg2, ISerializer<V, byte[]> arg3, params string[] arg4)
         {
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4.ToArray());
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -81,8 +81,8 @@ namespace MASES.KNet.Streams
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="ISerializer{T}"/></param>
-        /// <param name="arg3"><see cref="ISerializer{T}"/></param>
+        /// <param name="arg2"><see cref="ISerializer{T, TJVMT}"/></param>
+        /// <param name="arg3"><see cref="ISerializer{T, TJVMT}"/></param>
         /// <param name="arg4"><see cref="StreamPartitioner{TKey, TValue}"/></param>
         /// <param name="arg5"><see cref="string"/></param>
         /// <typeparam name="K"></typeparam>
@@ -90,10 +90,10 @@ namespace MASES.KNet.Streams
         /// <typeparam name="Arg4objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg4objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSink<K, V, Arg4objectSuperK, Arg4objectSuperV>(string arg0, string arg1, ISerializer<K> arg2, ISerializer<V> arg3, StreamPartitioner<Arg4objectSuperK, Arg4objectSuperV> arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V
+        public Topology AddSink<K, V, Arg4objectSuperK, Arg4objectSuperV>(string arg0, string arg1, ISerializer<K, byte[]> arg2, ISerializer<V, byte[]> arg3, StreamPartitioner<Arg4objectSuperK, Arg4objectSuperV> arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V
         {
             if (arg4 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5.ToArray());
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -126,7 +126,7 @@ namespace MASES.KNet.Streams
         public Topology AddSink<K, V>(string arg0, TopicNameExtractor<K, V> arg1, params string[] arg2)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2.ToArray());
+            var top = _topology.AddSink(arg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -134,16 +134,16 @@ namespace MASES.KNet.Streams
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="TopicNameExtractor{TKey, TValue}"/></param>
-        /// <param name="arg2"><see cref="ISerializer{T}"/></param>
-        /// <param name="arg3"><see cref="ISerializer{T}"/></param>
+        /// <param name="arg2"><see cref="ISerializer{T, TJVMT}"/></param>
+        /// <param name="arg3"><see cref="ISerializer{T, TJVMT}"/></param>
         /// <param name="arg4"><see cref="string"/></param>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSink<K, V>(string arg0, TopicNameExtractor<K, V> arg1, ISerializer<K> arg2, ISerializer<V> arg3, params string[] arg4)
+        public Topology AddSink<K, V>(string arg0, TopicNameExtractor<K, V> arg1, ISerializer<K, byte[]> arg2, ISerializer<V, byte[]> arg3, params string[] arg4)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4.ToArray());
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -151,8 +151,8 @@ namespace MASES.KNet.Streams
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="TopicNameExtractor{TKey, TValue}"/></param>
-        /// <param name="arg2"><see cref="ISerializer{T}"/></param>
-        /// <param name="arg3"><see cref="ISerializer{T}"/></param>
+        /// <param name="arg2"><see cref="ISerializer{T, TJVMT}"/></param>
+        /// <param name="arg3"><see cref="ISerializer{T, TJVMT}"/></param>
         /// <param name="arg4"><see cref="StreamPartitioner{TKey, TValue}"/></param>
         /// <param name="arg5"><see cref="string"/></param>
         /// <typeparam name="K"></typeparam>
@@ -160,10 +160,10 @@ namespace MASES.KNet.Streams
         /// <typeparam name="Arg4objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg4objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSink<K, V, Arg4objectSuperK, Arg4objectSuperV>(string arg0, TopicNameExtractor<K, V> arg1, ISerializer<K> arg2, ISerializer<V> arg3, StreamPartitioner<Arg4objectSuperK, Arg4objectSuperV> arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V
+        public Topology AddSink<K, V, Arg4objectSuperK, Arg4objectSuperV>(string arg0, TopicNameExtractor<K, V> arg1, ISerializer<K, byte[]> arg2, ISerializer<V, byte[]> arg3, StreamPartitioner<Arg4objectSuperK, Arg4objectSuperV> arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5.ToArray());
+            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -182,7 +182,7 @@ namespace MASES.KNet.Streams
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2, arg3.ToArray());
+            var top = _topology.AddSink(arg0, arg1, arg2, arg3.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -194,7 +194,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="Topology"/></returns>
         public Topology AddSink(string arg0, string arg1, params string[] arg2)
         {
-            var top = _topology.AddSink(arg0, arg1, arg2.ToArray());
+            var top = _topology.AddSink(arg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -205,7 +205,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="Topology"/></returns>
         public Topology AddSource(string arg0, params string[] arg1)
         {
-            var top = _topology.AddSource(arg0, arg1.ToArray());
+            var top = _topology.AddSource(arg0, arg1.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -223,11 +223,11 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-java.lang.String-IKNetDeserializer-IKNetDeserializer-java.lang.String[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="IDeserializer{T}"/></param>
-        /// <param name="arg2"><see cref="IDeserializer{T}"/></param>
+        /// <param name="arg1"><see cref="IDeserializer{T, TJVMT}"/></param>
+        /// <param name="arg2"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg3"><see cref="string"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(string arg0, IDeserializer<object> arg1, IDeserializer<object> arg2, params string[] arg3)
+        public Topology AddSource(string arg0, IDeserializer<object, byte[]> arg1, IDeserializer<object, byte[]> arg2, params string[] arg3)
         {
             var top = (arg3.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer) : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer, arg3);
             return new Topology(top, _factory);
@@ -236,11 +236,11 @@ namespace MASES.KNet.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/Topology.html#addSource-java.lang.String-IKNetDeserializer-IKNetDeserializer-java.util.regex.Pattern-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="IDeserializer{T}"/></param>
-        /// <param name="arg2"><see cref="IDeserializer{T}"/></param>
+        /// <param name="arg1"><see cref="IDeserializer{T, TJVMT}"/></param>
+        /// <param name="arg2"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg3"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(string arg0, IDeserializer<object> arg1, IDeserializer<object> arg2, Java.Util.Regex.Pattern arg3)
+        public Topology AddSource(string arg0, IDeserializer<object, byte[]> arg1, IDeserializer<object, byte[]> arg2, Java.Util.Regex.Pattern arg3)
         {
             var top = _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer, arg3);
             return new Topology(top, _factory);
@@ -280,7 +280,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="Topology"/></returns>
         public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, params string[] arg2)
         {
-            var top = _topology.AddSource(arg0, arg1, arg2.ToArray());
+            var top = _topology.AddSource(arg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -300,11 +300,11 @@ namespace MASES.KNet.Streams
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="IDeserializer{T}"/></param>
-        /// <param name="arg3"><see cref="IDeserializer{T}"/></param>
+        /// <param name="arg2"><see cref="IDeserializer{T, TJVMT}"/></param>
+        /// <param name="arg3"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg4"><see cref="string"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, IDeserializer<object> arg2, IDeserializer<object> arg3, params string[] arg4)
+        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, IDeserializer<object, byte[]> arg2, IDeserializer<object, byte[]> arg3, params string[] arg4)
         {
             var top = (arg4.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer) : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
             return new Topology(top, _factory);
@@ -314,11 +314,11 @@ namespace MASES.KNet.Streams
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="IDeserializer{T}"/></param>
-        /// <param name="arg3"><see cref="IDeserializer{T}"/></param>
+        /// <param name="arg2"><see cref="IDeserializer{T, TJVMT}"/></param>
+        /// <param name="arg3"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg4"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, IDeserializer<object> arg2, IDeserializer<object> arg3, Java.Util.Regex.Pattern arg4)
+        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, IDeserializer<object, byte[]> arg2, IDeserializer<object, byte[]> arg3, Java.Util.Regex.Pattern arg4)
         {
             var top = _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
             return new Topology(top, _factory);
@@ -329,11 +329,11 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
-        /// <param name="arg3"><see cref="IDeserializer{T}"/></param>
-        /// <param name="arg4"><see cref="IDeserializer{T}"/></param>
+        /// <param name="arg3"><see cref="IDeserializer{T, TJVMT}"/></param>
+        /// <param name="arg4"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg5"><see cref="string"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, IDeserializer<object> arg3, IDeserializer<object> arg4, params string[] arg5)
+        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, IDeserializer<object, byte[]> arg3, IDeserializer<object, byte[]> arg4, params string[] arg5)
         {
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             var top = (arg5.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer) : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
@@ -345,11 +345,11 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
-        /// <param name="arg3"><see cref="IDeserializer{T}"/></param>
-        /// <param name="arg4"><see cref="IDeserializer{T}"/></param>
+        /// <param name="arg3"><see cref="IDeserializer{T, TJVMT}"/></param>
+        /// <param name="arg4"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg5"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, IDeserializer<object> arg3, IDeserializer<object> arg4, Java.Util.Regex.Pattern arg5)
+        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, IDeserializer<object, byte[]> arg3, IDeserializer<object, byte[]> arg4, Java.Util.Regex.Pattern arg5)
         {
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             var top = _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
@@ -366,7 +366,7 @@ namespace MASES.KNet.Streams
         public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg1, string arg2, params string[] arg3)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSource(arg0, arg1, arg2, arg3.ToArray());
+            var top = _topology.AddSource(arg0, arg1, arg2, arg3.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>

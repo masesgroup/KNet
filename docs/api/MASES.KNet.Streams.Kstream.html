@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -91,177 +91,322 @@
 Classes
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetAggregator-3.html">KNetAggregator&lt;K, V, VA&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Aggregator-3.html">Aggregator&lt;K, V, VA&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="MASES.KNet.Streams.Kstream.Aggregator-6.html">Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Aggregator-6.html">Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;</a></dt>
       <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Aggregator-3.html">Aggregator&lt;K, V, VA&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetBranchedKStream-2.html">KNetBranchedKStream&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.BranchedKStream-4.html">BranchedKStream&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.BranchedKStream-2.html">BranchedKStream&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetBranched-2.html">KNetBranched&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Branched-4.html">Branched&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Branched-2.html">Branched&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetConsumed-2.html">KNetConsumed&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.CogroupedKStream-4.html">CogroupedKStream&lt;K, VOut, TJVMK, TJVMVOut&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.CogroupedKStream-2.html">CogroupedKStream&lt;K, VOut&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed&lt;K, V&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Consumed-2.html">Consumed&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetCountingMaterialized-1.html">KNetCountingMaterialized&lt;K&gt;</a></dt>
-      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-4.html">KNetMaterialized&lt;K, V, TJVM, TContainer&gt;</a></p>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.CountingMaterialized-2.html">CountingMaterialized&lt;K, TJVMK&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-5.html">Materialized&lt;K, V, TJVMK, TJVMV, TContainer&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetEnumerableKeyValueMapper-4.html">KNetEnumerableKeyValueMapper&lt;K, V, KR, VR&gt;</a></dt>
-      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper-3.html">KeyValueMapper&lt;K, V, VR&gt;</a></p>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper-4.html">EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper-8.html">EnumerableKeyValueMapper&lt;K, V, KR, VR, TJVMK, TJVMV, TJVMKR, TJVMVR&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetEnumerableValueMapperWithKey-3.html">KNetEnumerableValueMapperWithKey&lt;K, V, VR&gt;</a></dt>
-      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey-3.html">ValueMapperWithKey&lt;K, V, VR&gt;</a></p>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper-8.html">EnumerableKeyValueMapper&lt;K, V, KR, VR, TJVMK, TJVMV, TJVMKR, TJVMVR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetEnumerableValueMapper-2.html">KNetEnumerableValueMapper&lt;V, VR&gt;</a></dt>
-      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueMapper-2.html">ValueMapper&lt;V, VR&gt;</a></p>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableValueMapperWithKey-3.html">EnumerableValueMapperWithKey&lt;K, V, VR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableValueMapperWithKey-6.html">EnumerableValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetForeachAction-2.html">KNetForeachAction&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableValueMapperWithKey-6.html">EnumerableValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html">ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableValueMapper-2.html">EnumerableValueMapper&lt;V, VR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableValueMapper-4.html">EnumerableValueMapper&lt;V, VR, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableValueMapper-4.html">EnumerableValueMapper&lt;V, VR, TJVMV, TJVMVR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-4.html">ValueMapper&lt;V, VR, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.ForeachAction-2.html">ForeachAction&lt;K, V&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.ForeachAction-4.html">ForeachAction&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.ForeachAction-4.html">ForeachAction&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachAction-2.html">ForeachAction&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetGlobalKTable-2.html">KNetGlobalKTable&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.GlobalKTable-2.html">GlobalKTable&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetGrouped-2.html">KNetGrouped&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Grouped-2.html">Grouped&lt;K, V&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.Grouped-4.html">Grouped&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Grouped-4.html">Grouped&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Grouped-2.html">Grouped&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetInitializer-1.html">KNetInitializer&lt;VA&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Initializer-1.html">Initializer&lt;VA&gt;</a></dt>
       <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Initializer-1.html">Initializer&lt;VA&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetJoined-3.html">KNetJoined&lt;K, V, VO&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Initializer-2.html">Initializer&lt;VA, TJVMVA&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Initializer-1.html">Initializer&lt;VA&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Joined-3.html">Joined&lt;K, V, VO&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.Joined-6.html">Joined&lt;K, V, VO, TJVMK, TJVMV, TJVMVO&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Joined-6.html">Joined&lt;K, V, VO, TJVMK, TJVMV, TJVMVO&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined&lt;K, V, VO&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetKGroupedStream-2.html">KNetKGroupedStream&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KGroupedStream-4.html">KGroupedStream&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KGroupedStream-2.html">KGroupedStream&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetKGroupedTable-2.html">KNetKGroupedTable&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KGroupedTable-4.html">KGroupedTable&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KGroupedTable-2.html">KGroupedTable&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetKStream-2.html">KNetKStream&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KStream-2.html">KStream&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetKTable-2.html">KNetKTable&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KTable-2.html">KTable&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetKeyValueKeyValueMapper-4.html">KNetKeyValueKeyValueMapper&lt;K, V, KR, VR&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueKeyValueMapper-4.html">KeyValueKeyValueMapper&lt;K, V, KR, VR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueKeyValueMapper-8.html">KeyValueKeyValueMapper&lt;K, V, KR, VR, TJVMK, TJVMV, TJVMKR, TJVMVR&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueKeyValueMapper-8.html">KeyValueKeyValueMapper&lt;K, V, KR, VR, TJVMK, TJVMV, TJVMKR, TJVMVR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapperForString-2.html">KeyValueMapperForString&lt;K, V&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-3.html">KeyValueMapper&lt;K, V, VR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html">KeyValueMapper&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper-3.html">KeyValueMapper&lt;K, V, VR&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetKeyValueMapper-3.html">KNetKeyValueMapper&lt;K, V, VR&gt;</a></dt>
-      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper-3.html">KeyValueMapper&lt;K, V, VR&gt;</a></p>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-3.html">Materialized&lt;K, V, TJVMK&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-5.html">Materialized&lt;K, V, TJVMK, TJVMV, TContainer&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-2.html">KNetMaterialized&lt;K, V&gt;</a></dt>
-      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-4.html">KNetMaterialized&lt;K, V, TJVM, TContainer&gt;</a></p>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-5.html">Materialized&lt;K, V, TJVMK, TJVMV, TContainer&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-4.html">KNetMaterialized&lt;K, V, TJVM, TContainer&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-5.html">Materialized&lt;K, V, TJVMK, TJVMV, TContainer&gt;</a></dt>
       <dd><p>KNet base extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized-3.html">Materialized&lt;K, V, S&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetPredicateEqualityTest-2.html">KNetPredicateEqualityTest&lt;TKey, TValue&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Merger-2.html">Merger&lt;K, V&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.Merger-4.html">Merger&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Merger-4.html">Merger&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Merger-2.html">Merger&lt;K, V&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.PredicateEqualityTest-2.html">PredicateEqualityTest&lt;TKey, TValue&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Predicate-2.html">Predicate&lt;K, V&gt;</a> to execute <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Predicate-2.html#Org_Apache_Kafka_Streams_Kstream_Predicate_2_Test__0__1_">Test(K, V)</a> directly in the JVM</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetPredicate-2.html">KNetPredicate&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-2.html">Predicate&lt;K, V&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html">Predicate&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Predicate-2.html">Predicate&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetPrinted-2.html">KNetPrinted&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Printed-2.html">Printed&lt;K, V&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.Printed-4.html">Printed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Printed-4.html">Printed&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Printed-2.html">Printed&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetProduced-2.html">KNetProduced&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Produced-2.html">Produced&lt;K, V&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.Produced-4.html">Produced&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Produced-4.html">Produced&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Produced-2.html">Produced&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetReducer-1.html">KNetReducer&lt;V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Reducer-1.html">Reducer&lt;V&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.Reducer-2.html">Reducer&lt;V, TJVMV&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Reducer-2.html">Reducer&lt;V, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Reducer-1.html">Reducer&lt;V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetRepartitioned-2.html">KNetRepartitioned&lt;K, V&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Repartitioned-4.html">Repartitioned&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Produced-2.html">Produced&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetStreamJoined-3.html">KNetStreamJoined&lt;K, V1, V2&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.SessionWindowedCogroupedKStream-4.html">SessionWindowedCogroupedKStream&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream-2.html">SessionWindowedCogroupedKStream&lt;K, V&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.SessionWindowedKStream-4.html">SessionWindowedKStream&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream-2.html">SessionWindowedKStream&lt;K, V&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.StreamJoined-6.html">StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.StreamJoined-3.html">StreamJoined&lt;K, V1, V2&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetSuppressed-1.html">KNetSuppressed&lt;K&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Suppressed-1.html">Suppressed&lt;K&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.Suppressed-2.html">Suppressed&lt;K, TJVMK&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Suppressed-2.html">Suppressed&lt;K, TJVMK&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Suppressed-1.html">Suppressed&lt;K&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetTableJoined-2.html">KNetTableJoined&lt;K, KO&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-2.html">TableJoined&lt;K, KO&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TableJoined-2.html">TableJoined&lt;K, KO&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetValueJoinerWithKey-4.html">KNetValueJoinerWithKey&lt;K1, V1, V2, VR&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html">TableJoined&lt;K, KO, TJVMK, TJVMKO&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TableJoined-2.html">TableJoined&lt;K, KO&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.TimeWindowedCogroupedKStream-4.html">TimeWindowedCogroupedKStream&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream-2.html">TimeWindowedCogroupedKStream&lt;K, V&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.TimeWindowedKStream-4.html">TimeWindowedKStream&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream-2.html">TimeWindowedKStream&lt;K, V&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoinerWithKey-4.html">ValueJoinerWithKey&lt;K1, V1, V2, VR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoinerWithKey-8.html">ValueJoinerWithKey&lt;K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoinerWithKey-8.html">ValueJoinerWithKey&lt;K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey-4.html">ValueJoinerWithKey&lt;K1, V1, V2, VR&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetValueJoiner-3.html">KNetValueJoiner&lt;V1, V2, VR&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-3.html">ValueJoiner&lt;V1, V2, VR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.ValueJoiner-6.html">ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueJoiner-3.html">ValueJoiner&lt;V1, V2, VR&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetValueMapperWithKey-3.html">KNetValueMapperWithKey&lt;K, V, VR&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-3.html">ValueMapperWithKey&lt;K, V, VR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html">ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapperWithKey-6.html">ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey-3.html">ValueMapperWithKey&lt;K, V, VR&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetValueMapper-2.html">KNetValueMapper&lt;V, VR&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-2.html">ValueMapper&lt;V, VR&gt;</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueMapper-2.html">ValueMapper&lt;V, VR&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KNetWindowed-1.html">KNetWindowed&lt;TKey&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-4.html">ValueMapper&lt;V, VR, TJVMV, TJVMVR&gt;</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueMapper-2.html">ValueMapper&lt;V, VR&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.Windowed-1.html">Windowed&lt;TKey&gt;</a></dt>
       <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed&lt;K&gt;</a></p>
 </dd>
     </dl>
@@ -269,8 +414,8 @@ Classes
 Interfaces
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.IKNetMaterialized-1.html">IKNetMaterialized&lt;TJVM&gt;</a></dt>
-      <dd><p>Supporting interface for <a class="xref" href="MASES.KNet.Streams.Kstream.KNetMaterialized-4.html">KNetMaterialized&lt;K, V, TJVM, TContainer&gt;</a></p>
+      <dt><a class="xref" href="MASES.KNet.Streams.Kstream.IKNetMaterialized-2.html">IKNetMaterialized&lt;TJVMK, TJVMV&gt;</a></dt>
+      <dd><p>Supporting interface for <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-5.html">Materialized&lt;K, V, TJVMK, TJVMV, TContainer&gt;</a></p>
 </dd>
     </dl>
 

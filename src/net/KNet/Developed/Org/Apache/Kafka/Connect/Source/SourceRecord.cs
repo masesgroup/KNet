@@ -49,7 +49,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TOffset}"/></returns>
         /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
-        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                      string topic, int? partition, Schema valueSchema, TValue? value)
 
         {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TOffset}"/></returns>
         /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
-        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                      string topic, Schema valueSchema, TValue? value)
 
         {
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TOffset}"/></returns>
         /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
-        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                              string topic, Schema keySchema, TKey? key, Schema valueSchema, TValue? value)
 
         {
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TOffset}"/></returns>
         /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
-        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                      string topic, int? partition,
                                                                      Schema keySchema, TKey? key, Schema valueSchema, TValue? value)
 
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TOffset}"/></returns>
         /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
-        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                      string topic, int? partition,
                                                                      Schema keySchema, TKey? key,
                                                                      Schema valueSchema, TValue? value,
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TOffset}"/></returns>
         /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
-        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public static SourceRecord<TKeySource, TOffset, TKey?, TValue?> New<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                              string topic, int? partition,
                                                              Schema keySchema, TKey? key,
                                                              Schema valueSchema, TValue? value,
@@ -222,7 +222,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="partition">The partition number for the Kafka topic; may be null</param>
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, object> sourcePartition, Map<Java.Lang.String, object> sourceOffset,
                             string topic, int? partition, Schema valueSchema, TValue? value)
             : base(sourcePartition, sourceOffset, topic, partition, valueSchema, value)
         {
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="topic">The name of the topic; may be null</param>
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, object> sourcePartition, Map<Java.Lang.String, object> sourceOffset,
                             string topic, Schema valueSchema, TValue? value)
             : base(sourcePartition, sourceOffset, topic, valueSchema, value)
         {
@@ -250,7 +250,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="key">The key; may be null</param>
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, object> sourcePartition, Map<Java.Lang.String, object> sourceOffset,
                             string topic, Schema keySchema, TKey? key, Schema valueSchema, TValue? value)
             : base(sourcePartition, sourceOffset, topic, keySchema, key, valueSchema, value)
         {
@@ -266,7 +266,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="key">The key; may be null</param>
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, object> sourcePartition, Map<Java.Lang.String, object> sourceOffset,
                             string topic, int? partition,
                             Schema keySchema, TKey? key, Schema valueSchema, TValue? value)
                  : base(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value)
@@ -284,7 +284,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, object> sourcePartition, Map<Java.Lang.String, object> sourceOffset,
                             string topic, int? partition,
                             Schema keySchema, TKey? key,
                             Schema valueSchema, TValue? value,
@@ -305,7 +305,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, object> sourcePartition, Map<Java.Lang.String, object> sourceOffset,
                             string topic, int? partition,
                             Schema keySchema, TKey? key,
                             Schema valueSchema, TValue? value,
@@ -349,7 +349,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="partition">The partition number for the Kafka topic; may be null</param>
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
-        public SourceRecord(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                             string topic, int? partition, Schema valueSchema, TValue? value)
             : base(sourcePartition, sourceOffset, topic, partition, valueSchema, value)
         {
@@ -362,7 +362,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="topic">The name of the topic; may be null</param>
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
-        public SourceRecord(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                             string topic, Schema valueSchema, TValue? value)
             : base(sourcePartition, sourceOffset, topic, valueSchema, value)
         {
@@ -377,7 +377,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="key">The key; may be null</param>
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
-        public SourceRecord(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                             string topic, Schema keySchema, TKey? key, Schema valueSchema, TValue? value)
             : base(sourcePartition, sourceOffset, topic, keySchema, key, valueSchema, value)
         {
@@ -393,7 +393,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="key">The key; may be null</param>
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
-        public SourceRecord(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                             string topic, int? partition,
                             Schema keySchema, TKey? key, Schema valueSchema, TValue? value)
                  : base(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value)
@@ -411,7 +411,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
-        public SourceRecord(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                             string topic, int? partition,
                             Schema keySchema, TKey? key,
                             Schema valueSchema, TValue? value,
@@ -432,7 +432,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
-        public SourceRecord(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
+        public SourceRecord(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                             string topic, int? partition,
                             Schema keySchema, TKey? key,
                             Schema valueSchema, TValue? value,
@@ -443,10 +443,10 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <summary>
         /// The source partition
         /// </summary>
-        public Map<string, TKeySource> SourcePartition => IExecute<Map<string, TKeySource>>("sourcePartition");
+        public Map<Java.Lang.String, TKeySource> SourcePartition => IExecute<Map<Java.Lang.String, TKeySource>>("sourcePartition");
         /// <summary>
         /// The source offset
         /// </summary>
-        public Map<string, TOffset> SourceOffset => IExecute<Map<string, TOffset>>("sourceOffset");
+        public Map<Java.Lang.String, TOffset> SourceOffset => IExecute<Map<Java.Lang.String, TOffset>>("sourceOffset");
     }
 }

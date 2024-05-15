@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -96,48 +96,48 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.KNetKeyValue-2.html">KNetKeyValue&lt;TKey, TValue&gt;</a></dt>
-      <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.KeyValue-2.html">KeyValue&lt;K, V&gt;</a></p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Streams.KNetStreams.html">KNetStreams</a></dt>
       <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.KNetStreamsBuilder.html">KNetStreamsBuilder</a></dt>
-      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.StreamsBuilder.html">StreamsBuilder</a></p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.KNetTimestampedKeyValue-2.html">KNetTimestampedKeyValue&lt;TKey, TValue&gt;</a></dt>
-      <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp&lt;V&gt;</a></p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.KNetTimestampedWindowedKeyValue-2.html">KNetTimestampedWindowedKeyValue&lt;TKey, TValue&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Streams.KeyValue-2.html">KeyValue&lt;TKey, TValue&gt;</a></dt>
       <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.KeyValue-2.html">KeyValue&lt;K, V&gt;</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.KNetTopology.html">KNetTopology</a></dt>
-      <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.KNetTopologyConfig.html">KNetTopologyConfig</a></dt>
-      <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.TopologyConfig.html">TopologyConfig</a></p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Streams.KNetWindowedKeyValue-2.html">KNetWindowedKeyValue&lt;TKey, TValue&gt;</a></dt>
-      <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.KeyValue-2.html">KeyValue&lt;K, V&gt;</a> where the key is <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed&lt;K&gt;</a></p>
+      <dt><a class="xref" href="MASES.KNet.Streams.StreamsBuilder.html">StreamsBuilder</a></dt>
+      <dd><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.StreamsBuilder.html">StreamsBuilder</a></p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Streams.StreamsConfigBuilder.html">StreamsConfigBuilder</a></dt>
       <dd><p>Builder for <a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html">StreamsConfig</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.TimestampedKeyValue-2.html">TimestampedKeyValue&lt;TKey, TValue&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp&lt;V&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.TimestampedWindowedKeyValue-2.html">TimestampedWindowedKeyValue&lt;TKey, TValue&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.KeyValue-2.html">KeyValue&lt;K, V&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.Topology.html">Topology</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.TopologyConfig.html">TopologyConfig</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.TopologyConfig.html">TopologyConfig</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Streams.WindowedKeyValue-2.html">WindowedKeyValue&lt;TKey, TValue&gt;</a></dt>
+      <dd><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.KeyValue-2.html">KeyValue&lt;K, V&gt;</a> where the key is <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Windowed-1.html">Windowed&lt;K&gt;</a></p>
 </dd>
     </dl>
 

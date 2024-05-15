@@ -237,15 +237,16 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Serialize a <see cref="SerializationType.Boolean"/>
         /// </summary>
-        public static byte[] SerializeBoolean(string topic, bool data)
+        public static byte[] SerializeBoolean(bool fallbackToKafka, string topic, bool data)
         {
-            return _BooleanSerializer.Serialize(topic, data);
+            if (fallbackToKafka) return _BooleanSerializer.Serialize(topic, data);
+            return BitConverter.GetBytes(data);
         }
 
         /// <summary>
         /// Serialize a <see cref="SerializationType.ByteArray"/>
         /// </summary>
-        public static byte[] SerializeByteArray(string topic, byte[] data)
+        public static byte[] SerializeByteArray(bool fallbackToKafka, string topic, byte[] data)
         {
             return data;
         }
@@ -254,16 +255,17 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Serialize a <see cref="SerializationType.ByteBuffer"/>
         /// </summary>
-        public static byte[] SerializeByteBuffer(string topic, ByteBuffer data)
+        public static byte[] SerializeByteBuffer(bool fallbackToKafka, string topic, ByteBuffer data)
         {
-            return _ByteBufferSerializer.Serialize(topic, data);
+            if (fallbackToKafka) return _ByteBufferSerializer.Serialize(topic, data);
+            return (byte[])data.Array();
         }
 
         static readonly BytesSerializer _BytesSerializer = new BytesSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Bytes"/>
         /// </summary>
-        public static byte[] SerializeBytes(string topic, Bytes data)
+        public static byte[] SerializeBytes(bool fallbackToKafka, string topic, Bytes data)
         {
             return _BytesSerializer.Serialize(topic, data);
         }
@@ -272,38 +274,43 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Serialize a <see cref="SerializationType.Double"/>
         /// </summary>
-        public static byte[] SerializeDouble(string topic, double data)
+        public static byte[] SerializeDouble(bool fallbackToKafka, string topic, double data)
         {
-            return _DoubleSerializer.Serialize(topic, data);
+            if (fallbackToKafka) return _DoubleSerializer.Serialize(topic, data);
+            return BitConverter.GetBytes(data);
         }
 
         static readonly FloatSerializer _FloatSerializer = new FloatSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Float"/>
         /// </summary>
-        public static byte[] SerializeFloat(string topic, float data)
+        public static byte[] SerializeFloat(bool fallbackToKafka, string topic, float data)
         {
-            return _FloatSerializer.Serialize(topic, data);
+            if (fallbackToKafka) return _FloatSerializer.Serialize(topic, data);
+            return BitConverter.GetBytes(data);
         }
 
         static readonly IntegerSerializer _IntSerializer = new IntegerSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Integer"/>
         /// </summary>
-        public static byte[] SerializeInt(string topic, int data)
+        public static byte[] SerializeInt(bool fallbackToKafka, string topic, int data)
         {
-            return _IntSerializer.Serialize(topic, data);
+            if (fallbackToKafka) return _IntSerializer.Serialize(topic, data);
+            return BitConverter.GetBytes(data);
+
             // the following generates an error in container
             //return new byte[] { (byte)(data >>> 24), (byte)(data >>> 16), (byte)(data >>> 8), ((byte)data) };
         }
 
-        static readonly Serializer<long> _LongSerializer = new LongSerializer();
+        static readonly LongSerializer _LongSerializer = new LongSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Long"/>
         /// </summary>
-        public static byte[] SerializeLong(string topic, long data)
+        public static byte[] SerializeLong(bool fallbackToKafka, string topic, long data)
         {
-            return _LongSerializer.Serialize(topic, data);
+            if (fallbackToKafka) return _LongSerializer.Serialize(topic, data);
+            return BitConverter.GetBytes(data);
             // the following generates an error in container
             //return new byte[] { (byte)((int)(data >>> 56)), (byte)((int)(data >>> 48)), (byte)((int)(data >>> 40)), (byte)((int)(data >>> 32)), (byte)((int)(data >>> 24)), (byte)((int)(data >>> 16)), (byte)((int)(data >>> 8)), ((byte)data) };
         }
@@ -312,30 +319,31 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Serialize a <see cref="SerializationType.Short"/>
         /// </summary>
-        public static byte[] SerializeShort(string topic, short data)
+        public static byte[] SerializeShort(bool fallbackToKafka, string topic, short data)
         {
-            return _ShortSerializer.Serialize(topic, data);
+            if (fallbackToKafka) return _ShortSerializer.Serialize(topic, data);
+            return BitConverter.GetBytes(data);
             // the following generates an error in container
             //return new byte[] { (byte)(data >>> 8), ((byte)data) };
         }
         /// <summary>
         /// Serialize a <see cref="SerializationType.String"/>
         /// </summary>
-        public static byte[] SerializeString(string topic, string data)
+        public static byte[] SerializeString(bool fallbackToKafka, string topic, string data)
         {
             return Encoding.UTF8.GetBytes(data);
         }
         /// <summary>
         /// Serialize a <see cref="SerializationType.Guid"/>
         /// </summary>
-        public static byte[] SerializeGuid(string topic, Guid data)
+        public static byte[] SerializeGuid(bool fallbackToKafka, string topic, Guid data)
         {
             return data.ToByteArray();
         }
         /// <summary>
         /// Serialize a <see cref="SerializationType.Void"/>
         /// </summary>
-        public static byte[] SerializeVoid(string topic, Java.Lang.Void data)
+        public static byte[] SerializeVoid(bool fallbackToKafka, string topic, Java.Lang.Void data)
         {
             return null;
         }
@@ -344,20 +352,25 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Boolean"/>
         /// </summary>
-        public static bool DeserializeBoolean(string topic, byte[] data)
+        public static bool DeserializeBoolean(bool fallbackToKafka, string topic, byte[] data)
         {
-            var result = _BooleanDeserializer.Deserialize(topic, data);
-            if (result is IJavaObject ijo)
+            if (data == null) return default;
+            if (fallbackToKafka)
             {
-                return JVMBridgeBase.Wraps<Java.Lang.Boolean>(ijo);
+                var result = _BooleanDeserializer.Deserialize(topic, data);
+                if (result is IJavaObject ijo)
+                {
+                    return JVMBridgeBase.Wraps<Java.Lang.Boolean>(ijo);
+                }
+                return (bool)result;
             }
-            return (bool)result;
+            return BitConverter.ToBoolean(data, 0);
         }
 
         /// <summary>
         /// Deserialize a <see cref="SerializationType.ByteArray"/>
         /// </summary>
-        public static byte[] DeserializeByteArray(string topic, byte[] data)
+        public static byte[] DeserializeByteArray(bool fallbackToKafka, string topic, byte[] data)
         {
             return data;
         }
@@ -366,8 +379,9 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Deserialize a <see cref="SerializationType.ByteBuffer"/>
         /// </summary>
-        public static ByteBuffer DeserializeByteBuffer(string topic, byte[] data)
+        public static ByteBuffer DeserializeByteBuffer(bool fallbackToKafka, string topic, byte[] data)
         {
+            if (data == null) return default;
             return JVMBridgeBase.Wraps<ByteBuffer>(_ByteBufferDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
@@ -375,8 +389,9 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Bytes"/>
         /// </summary>
-        public static Bytes DeserializeBytes(string topic, byte[] data)
+        public static Bytes DeserializeBytes(bool fallbackToKafka, string topic, byte[] data)
         {
+            if (data == null) return default;
             return JVMBridgeBase.Wraps<Bytes>(_BytesDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
@@ -384,42 +399,57 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Double"/>
         /// </summary>
-        public static double DeserializeDouble(string topic, byte[] data)
+        public static double DeserializeDouble(bool fallbackToKafka, string topic, byte[] data)
         {
-            var result = _DoubleDeserializer.Deserialize(topic, data);
-            if (result is IJavaObject ijo)
+            if (data == null) return default;
+            if (fallbackToKafka)
             {
-                return JVMBridgeBase.Wraps<Java.Lang.Double>(ijo);
+                var result = _DoubleDeserializer.Deserialize(topic, data);
+                if (result is IJavaObject ijo)
+                {
+                    return JVMBridgeBase.Wraps<Java.Lang.Double>(ijo);
+                }
+                return (double)result;
             }
-            return (double)result;
+            return BitConverter.ToDouble(data, 0);
         }
 
         static readonly FloatDeserializer _FloatDeserializer = new FloatDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Float"/>
         /// </summary>
-        public static float DeserializeFloat(string topic, byte[] data)
+        public static float DeserializeFloat(bool fallbackToKafka, string topic, byte[] data)
         {
-            var result = _FloatDeserializer.Deserialize(topic, data);
-            if (result is IJavaObject ijo)
+            if (data == null) return default;
+            if (fallbackToKafka)
             {
-                return JVMBridgeBase.Wraps<Java.Lang.Float>(ijo);
+                var result = _FloatDeserializer.Deserialize(topic, data);
+                if (result is IJavaObject ijo)
+                {
+                    return JVMBridgeBase.Wraps<Java.Lang.Float>(ijo);
+                }
+                return (float)result;
             }
-            return (float)result;
+            return BitConverter.ToSingle(data, 0);
         }
 
         static readonly IntegerDeserializer _IntDeserializer = new IntegerDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Integer"/>
         /// </summary>
-        public static int DeserializeInt(string topic, byte[] data)
+        public static int DeserializeInt(bool fallbackToKafka, string topic, byte[] data)
         {
-            var result = _IntDeserializer.Deserialize(topic, data);
-            if (result is IJavaObject ijo)
+            if (data == null) return default;
+            if (fallbackToKafka)
             {
-                return JVMBridgeBase.Wraps<Java.Lang.Integer>(ijo);
+                var result = _IntDeserializer.Deserialize(topic, data);
+                if (result is IJavaObject ijo)
+                {
+                    return JVMBridgeBase.Wraps<Java.Lang.Integer>(ijo);
+                }
+                return (int)result;
             }
-            return (int)result;
+            return BitConverter.ToInt32(data, 0);
 
             //if (data == null)
             //{
@@ -451,14 +481,19 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Long"/>
         /// </summary>
-        public static long DeserializeLong(string topic, byte[] data)
+        public static long DeserializeLong(bool fallbackToKafka, string topic, byte[] data)
         {
-            var result = _LongDeserializer.Deserialize(topic, data);
-            if (result is IJavaObject ijo)
+            if (data == null) return default;
+            if (fallbackToKafka)
             {
-                return JVMBridgeBase.Wraps<Java.Lang.Long>(ijo);
+                var result = _LongDeserializer.Deserialize(topic, data);
+                if (result is IJavaObject ijo)
+                {
+                    return JVMBridgeBase.Wraps<Java.Lang.Long>(ijo);
+                }
+                return (long)result;
             }
-            return (long)result;
+            return BitConverter.ToInt64(data, 0);
 
             //if (data == null)
             //{
@@ -490,14 +525,19 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Short"/>
         /// </summary>
-        public static short DeserializeShort(string topic, byte[] data)
+        public static short DeserializeShort(bool fallbackToKafka, string topic, byte[] data)
         {
-            var result = _ShortDeserializer.Deserialize(topic, data);
-            if (result is IJavaObject ijo)
+            if (data == null) return default;
+            if (fallbackToKafka)
             {
-                return JVMBridgeBase.Wraps<Java.Lang.Short>(ijo);
+                var result = _ShortDeserializer.Deserialize(topic, data);
+                if (result is IJavaObject ijo)
+                {
+                    return JVMBridgeBase.Wraps<Java.Lang.Short>(ijo);
+                }
+                return (short)result;
             }
-            return (short)result;
+            return BitConverter.ToInt16(data, 0);
 
             //if (data == null)
             //{
@@ -527,21 +567,23 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Deserialize a <see cref="SerializationType.String"/>
         /// </summary>
-        public static string DeserializeString(string topic, byte[] data)
+        public static string DeserializeString(bool fallbackToKafka, string topic, byte[] data)
         {
+            if (data == null) return default;
             return Encoding.UTF8.GetString(data);
         }
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Guid"/>
         /// </summary>
-        public static Guid DeserializeGuid(string topic, byte[] data)
+        public static Guid DeserializeGuid(bool fallbackToKafka, string topic, byte[] data)
         {
+            if (data == null) return Guid.Empty;
             return new Guid(data);
         }
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Void"/>
         /// </summary>
-        public static Java.Lang.Void DeserializeVoid(string topic, byte[] data)
+        public static Java.Lang.Void DeserializeVoid(bool fallbackToKafka, string topic, byte[] data)
         {
             if (data != null)
             {
