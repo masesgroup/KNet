@@ -147,6 +147,9 @@ namespace MASES.KNet
             return props;
         }
 
+        /// <inheritdoc cref="IGenericSerDesFactory.AutoSelectBuffered"/>
+        public bool AutoSelectBuffered { get; set; }
+
         Type _KNetKeySerDes = null;
         /// <inheritdoc cref="IGenericSerDesFactory.KNetKeySerDes"/>
         public Type KNetKeySerDes
@@ -212,7 +215,14 @@ namespace MASES.KNet
                 {
                     if (KNetSerialization.IsInternalManaged<TKey>())
                     {
-                        serDes = new SerDes<TKey, TJVMTKey>();
+                        if (AutoSelectBuffered && typeof(TJVMTKey) == typeof(Java.Nio.ByteBuffer))
+                        {
+                            serDes = new SerDesBuffered<TKey>();
+                        }
+                        else
+                        {
+                            serDes = new SerDes<TKey, TJVMTKey>();
+                        }
                     }
                     else
                     {
@@ -238,7 +248,14 @@ namespace MASES.KNet
                 {
                     if (KNetSerialization.IsInternalManaged<TValue>())
                     {
-                        serDes = new SerDes<TValue, TJVMTValue>();
+                        if (AutoSelectBuffered && typeof(TJVMTValue) == typeof(Java.Nio.ByteBuffer))
+                        {
+                            serDes = new SerDesBuffered<TValue>();
+                        }
+                        else
+                        {
+                            serDes = new SerDes<TValue, TJVMTValue>();
+                        }
                     }
                     else
                     {

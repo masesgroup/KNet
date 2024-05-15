@@ -243,13 +243,27 @@ namespace MASES.KNet.Producer
         {
             if (!props.ContainsKey(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG))
             {
-                props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArraySerializer");
+                if (typeof(TJVMK) == typeof(byte[]))
+                {
+                    props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArraySerializer");
+                }
+                else
+                {
+                    props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.mases.knet.common.serialization.ByteBufferSerializer");
+                }
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
             if (!props.ContainsKey(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG))
             {
-                props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArraySerializer");
+                if (typeof(TJVMV) == typeof(byte[]))
+                {
+                    props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArraySerializer");
+                }
+                else
+                {
+                    props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.mases.knet.common.serialization.ByteBufferSerializer");
+                }
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
@@ -559,6 +573,96 @@ namespace MASES.KNet.Producer
         /// <param name="keySerializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
         /// <param name="valueSerializer">Value serializer base on <see cref="SerDes{V, TJVMV}"/></param>
         public KNetProducer(ProducerConfigBuilder props, ISerDes<K, byte[]> keySerializer, ISerDes<V, byte[]> valueSerializer)
+            : base(props, keySerializer, valueSerializer)
+        {
+        }
+    }
+
+    #endregion
+
+    #region KNetProducerBuffered<K, V>
+    /// <summary>
+    /// Extends <see cref="KafkaProducer"/> adding less intrusive methods which performs better in high throughput applications, extends <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/> using <see cref="Java.Nio.ByteBuffer"/>
+    /// </summary>
+    /// <typeparam name="K">Same meaning of <see cref="KafkaProducer"/></typeparam>
+    /// <typeparam name="V">Same meaning of <see cref="KafkaProducer"/></typeparam>
+    public class KNetProducerBuffered<K, V> : KNetProducer<K, V, Java.Nio.ByteBuffer, Java.Nio.ByteBuffer>
+    {
+        /// <summary>
+        /// Initialize a new instance of <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/>
+        /// </summary>
+        /// <param name="configBuilder">An instance of <see cref="ProducerConfigBuilder"/> </param>
+        public KNetProducerBuffered(ProducerConfigBuilder configBuilder)
+            : base(configBuilder)
+        {
+        }
+        /// <summary>
+        /// Initialize a new instance of <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/>
+        /// </summary>
+        /// <param name="props">The properties to use, see <see cref="ProducerConfigBuilder"/></param>
+        /// <param name="keySerializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
+        /// <param name="valueSerializer">Value serializer base on <see cref="SerDes{V, TJVMV}"/></param>
+        public KNetProducerBuffered(ProducerConfigBuilder props, ISerDes<K, Java.Nio.ByteBuffer> keySerializer, ISerDes<V, Java.Nio.ByteBuffer> valueSerializer)
+            : base(props, keySerializer, valueSerializer)
+        {
+        }
+    }
+
+    #endregion
+
+    #region KNetProducerKeyBuffered<K, V>
+    /// <summary>
+    /// Extends <see cref="KafkaProducer"/> adding less intrusive methods which performs better in high throughput applications, extends <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/> using <see cref="Java.Nio.ByteBuffer"/> for key
+    /// </summary>
+    /// <typeparam name="K">Same meaning of <see cref="KafkaProducer"/></typeparam>
+    /// <typeparam name="V">Same meaning of <see cref="KafkaProducer"/></typeparam>
+    public class KNetProducerKeyBuffered<K, V> : KNetProducer<K, V, Java.Nio.ByteBuffer, byte[]>
+    {
+        /// <summary>
+        /// Initialize a new instance of <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/>
+        /// </summary>
+        /// <param name="configBuilder">An instance of <see cref="ProducerConfigBuilder"/> </param>
+        public KNetProducerKeyBuffered(ProducerConfigBuilder configBuilder)
+            : base(configBuilder)
+        {
+        }
+        /// <summary>
+        /// Initialize a new instance of <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/>
+        /// </summary>
+        /// <param name="props">The properties to use, see <see cref="ProducerConfigBuilder"/></param>
+        /// <param name="keySerializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
+        /// <param name="valueSerializer">Value serializer base on <see cref="SerDes{V, TJVMV}"/></param>
+        public KNetProducerKeyBuffered(ProducerConfigBuilder props, ISerDes<K, Java.Nio.ByteBuffer> keySerializer, ISerDes<V, byte[]> valueSerializer)
+            : base(props, keySerializer, valueSerializer)
+        {
+        }
+    }
+
+    #endregion
+
+    #region KNetProducerValueBuffered<K, V>
+    /// <summary>
+    /// Extends <see cref="KafkaProducer"/> adding less intrusive methods which performs better in high throughput applications, extends <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/> using <see cref="Java.Nio.ByteBuffer"/> for value
+    /// </summary>
+    /// <typeparam name="K">Same meaning of <see cref="KafkaProducer"/></typeparam>
+    /// <typeparam name="V">Same meaning of <see cref="KafkaProducer"/></typeparam>
+    public class KNetProducerValueBuffered<K, V> : KNetProducer<K, V, byte[], Java.Nio.ByteBuffer>
+    {
+        /// <summary>
+        /// Initialize a new instance of <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/>
+        /// </summary>
+        /// <param name="configBuilder">An instance of <see cref="ProducerConfigBuilder"/> </param>
+        public KNetProducerValueBuffered(ProducerConfigBuilder configBuilder)
+            : base(configBuilder)
+        {
+        }
+        /// <summary>
+        /// Initialize a new instance of <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/>
+        /// </summary>
+        /// <param name="props">The properties to use, see <see cref="ProducerConfigBuilder"/></param>
+        /// <param name="keySerializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
+        /// <param name="valueSerializer">Value serializer base on <see cref="SerDes{V, TJVMV}"/></param>
+        public KNetProducerValueBuffered(ProducerConfigBuilder props, ISerDes<K, byte[]> keySerializer, ISerDes<V, Java.Nio.ByteBuffer> valueSerializer)
             : base(props, keySerializer, valueSerializer)
         {
         }

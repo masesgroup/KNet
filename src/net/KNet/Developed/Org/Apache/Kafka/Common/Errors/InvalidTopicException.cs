@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Errors
         /// </summary>
         public Set<string> InvalidTopics()
         {
-            return JVMBridgeBase.Wraps<Set<string>>(BridgeInstance.Invoke("invalidTopics") as IJavaObject);
+            return JVMBridgeBase.WrapsDirect<Set<string>>(BridgeInstance.Invoke("invalidTopics") as IJavaObject);
         }
     }
 }

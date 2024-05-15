@@ -26,6 +26,11 @@ namespace MASES.KNet.Serialization
     public interface IGenericSerDesFactory
     {
         /// <summary>
+        /// Set to <see langword="true"/> to automatically fallback to <see cref="SerDesBuffered{T}"/> when the JVM type is <see cref="Java.Nio.ByteBuffer"/>
+        /// </summary>
+        /// <remarks>The property is by default <see langword="true"/> to optimized data flow between CLR and JVM</remarks>
+        bool AutoSelectBuffered { get; }
+        /// <summary>
         /// The <see cref="Type"/> used to create an instance of <see cref="ISerDes{T, TJVMT}"/> for keys with <see cref="BuildKeySerDes{TKey, TJVMTKey}"/>
         /// </summary>
         Type KNetKeySerDes { get; }

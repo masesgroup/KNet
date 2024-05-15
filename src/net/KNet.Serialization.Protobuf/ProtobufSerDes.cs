@@ -17,6 +17,7 @@
 */
 
 using Google.Protobuf;
+using Java.Nio;
 using Org.Apache.Kafka.Common.Header;
 using System;
 using System.IO;
@@ -26,25 +27,25 @@ using System.Text;
 namespace MASES.KNet.Serialization.Protobuf
 {
     /// <summary>
-    /// Base class to define extensions of <see cref="SerDes{T}"/> for Protobuf, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+    /// Base class to define extensions of <see cref="SerDes{T, TJVMT}"/> for Protobuf, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
     /// </summary>
     public static class ProtobufSerDes
     {
         /// <summary>
-        /// Protobuf extension of <see cref="SerDes{T}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// Protobuf extension of <see cref="SerDes{T, TJVMT}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class Key<T> : SerDes<T> where T : IMessage<T>, new()
+        public class KeyRaw<T> : SerDes<T, byte[]> where T : IMessage<T>, new()
         {
             readonly MessageParser<T> _parser = new MessageParser<T>(() => new T());
-            readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(Key<>).ToAssemblyQualified());
+            readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(KeyRaw<>).ToAssemblyQualified());
             readonly byte[] keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
             /// <inheritdoc/>
             public override bool UseHeaders => true;
             /// <summary>
             /// Default initializer
             /// </summary>
-            public Key()
+            public KeyRaw()
             {
 
             }
@@ -65,12 +66,12 @@ namespace MASES.KNet.Serialization.Protobuf
                     return stream.ToArray();
                 }
             }
-            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, TJVMT)"/>
             public override T Deserialize(string topic, byte[] data)
             {
                 return DeserializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
             public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
             {
                 if (data == null) return default;
@@ -79,20 +80,70 @@ namespace MASES.KNet.Serialization.Protobuf
         }
 
         /// <summary>
-        /// Protobuf extension of <see cref="SerDes{T}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// Protobuf extension of <see cref="SerDes{T, TJVMT}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class Value<T> : SerDes<T> where T : IMessage<T>, new()
+        public class KeyBuffered<T> : SerDes<T, Java.Nio.ByteBuffer> where T : IMessage<T>, new()
         {
             readonly MessageParser<T> _parser = new MessageParser<T>(() => new T());
-            readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(Value<>).ToAssemblyQualified());
+            readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(KeyBuffered<>).ToAssemblyQualified());
+            readonly byte[] keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
+            /// <inheritdoc/>
+            public override bool UseHeaders => true;
+            /// <inheritdoc/>
+            public override bool IsDirectBuffered => true;
+            /// <summary>
+            /// Default initializer
+            /// </summary>
+            public KeyBuffered()
+            {
+
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Serialize(string, T)"/>
+            public override Java.Nio.ByteBuffer Serialize(string topic, T data)
+            {
+                return SerializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
+            public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, T data)
+            {
+                headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
+                headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
+
+                MemoryStream stream = new MemoryStream();
+                {
+                    data.WriteTo(stream);
+                    return ByteBuffer.From(stream);
+                }
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, TJVMT)"/>
+            public override T Deserialize(string topic, Java.Nio.ByteBuffer data)
+            {
+                return DeserializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
+            public override T DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
+            {
+                if (data == null) return default;
+                return _parser.ParseFrom(data.ToStream());
+            }
+        }
+
+        /// <summary>
+        /// Protobuf extension of <see cref="SerDes{T, TJVMT}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public class ValueRaw<T> : SerDes<T, byte[]> where T : IMessage<T>, new()
+        {
+            readonly MessageParser<T> _parser = new MessageParser<T>(() => new T());
+            readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(ValueRaw<>).ToAssemblyQualified());
             readonly byte[] valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
             /// <inheritdoc/>
             public override bool UseHeaders => true;
             /// <summary>
             /// Default initializer
             /// </summary>
-            public Value()
+            public ValueRaw()
             {
 
             }
@@ -113,16 +164,66 @@ namespace MASES.KNet.Serialization.Protobuf
                     return stream.ToArray();
                 }
             }
-            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, TJVMT)"/>
             public override T Deserialize(string topic, byte[] data)
             {
                 return DeserializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
             public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
             {
                 if (data == null) return default;
                 return _parser.ParseFrom(data);
+            }
+        }
+
+        /// <summary>
+        /// Protobuf extension of <see cref="SerDes{T, TJVMT}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public class ValueBuffered<T> : SerDes<T, Java.Nio.ByteBuffer> where T : IMessage<T>, new()
+        {
+            readonly MessageParser<T> _parser = new MessageParser<T>(() => new T());
+            readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(ValueBuffered<>).ToAssemblyQualified());
+            readonly byte[] valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
+            /// <inheritdoc/>
+            public override bool UseHeaders => true;
+            /// <inheritdoc/>
+            public override bool IsDirectBuffered => true;
+            /// <summary>
+            /// Default initializer
+            /// </summary>
+            public ValueBuffered()
+            {
+
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Serialize(string, T)"/>
+            public override Java.Nio.ByteBuffer Serialize(string topic, T data)
+            {
+                return SerializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
+            public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, T data)
+            {
+                headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
+                headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
+
+                MemoryStream stream = new MemoryStream();
+                {
+                    data.WriteTo(stream);
+                    return ByteBuffer.From(stream);
+                }
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, TJVMT)"/>
+            public override T Deserialize(string topic, Java.Nio.ByteBuffer data)
+            {
+                return DeserializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
+            public override T DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
+            {
+                if (data == null) return default;
+                return _parser.ParseFrom(data.ToStream());
             }
         }
     }

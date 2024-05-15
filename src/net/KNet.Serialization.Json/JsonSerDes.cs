@@ -16,36 +16,55 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Nio;
 using Org.Apache.Kafka.Common.Header;
 using System;
+using System.Diagnostics.Eventing.Reader;
+using System.IO;
 using System.Text;
+#if NET462_OR_GREATER
+using Newtonsoft.Json;
+#else
+using System.Text.Json;
+#endif
 
 namespace MASES.KNet.Serialization.Json
 {
     /// <summary>
-    /// Base class to define extensions of <see cref="SerDes{T}"/> for Json, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+    /// Base class to define extensions of <see cref="SerDes{T, TJVMT}"/> for Json, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
     /// </summary>
     public static class JsonSerDes
     {
         /// <summary>
-        /// Json extension of <see cref="SerDes{T}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// Json extension of <see cref="SerDes{T, TJVMT}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class Key<T> : SerDes<T>
+        public class KeyRaw<T> : SerDes<T, byte[]>
         {
-            readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(Key<>).ToAssemblyQualified());
+            readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(KeyRaw<>).ToAssemblyQualified());
             readonly byte[] keyTypeName = null;
             readonly ISerDes<T, byte[]> _defaultSerDes = default!;
+#if NET462_OR_GREATER
+            /// <summary>
+            /// Settings used from <see cref="JsonConvert.DeserializeObject(string, JsonSerializerSettings)"/> and <see cref="JsonConvert.SerializeObject(object?, JsonSerializerSettings?)"/>
+            /// </summary>
+            public JsonSerializerSettings Options { get; set; } = new JsonSerializerSettings();
+#else
+            /// <summary>
+            /// Settings used from <see cref="JsonSerializer.Deserialize(Stream, JsonSerializerOptions?)"/> and <see cref="JsonSerializer.Serialize{TValue}(TValue, JsonSerializerOptions?)"/>
+            /// </summary>
+            public JsonSerializerOptions Options { get; set; } = new JsonSerializerOptions();
+#endif
             /// <inheritdoc/>
             public override bool UseHeaders => true;
             /// <summary>
             /// Default initializer
             /// </summary>
-            public Key()
+            public KeyRaw()
             {
                 if (KNetSerialization.IsInternalManaged<T>())
                 {
-                    _defaultSerDes = new SerDes<T>();
+                    _defaultSerDes = new SerDes<T, byte[]>();
                     keyTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
                 }
                 else
@@ -67,51 +86,178 @@ namespace MASES.KNet.Serialization.Json
                 if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
 
 #if NET462_OR_GREATER
-                var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Newtonsoft.Json.Formatting.None);
+                var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
                 return Encoding.UTF8.GetBytes(jsonStr);
 #else
-                var jsonStr = System.Text.Json.JsonSerializer.Serialize<T>(data);
+                var jsonStr = System.Text.Json.JsonSerializer.Serialize<T>(data, Options);
                 return Encoding.UTF8.GetBytes(jsonStr);
 #endif
             }
-            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, TJVMT)"/>
             public override T Deserialize(string topic, byte[] data)
             {
                 return DeserializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
             public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
             {
                 if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
                 if (data == null) return default;
 #if NET462_OR_GREATER
                 var jsonStr = Encoding.UTF8.GetString(data);
-                return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonStr);
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonStr, Options);
 #else
-                return System.Text.Json.JsonSerializer.Deserialize<T>(data)!;
+                return System.Text.Json.JsonSerializer.Deserialize<T>(data, Options)!;
 #endif
             }
         }
 
         /// <summary>
-        /// Json extension of <see cref="SerDes{T}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// Json extension of <see cref="SerDes{T, TJVMT}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class Value<T> : SerDes<T>
+        public class KeyBuffered<T> : SerDes<T, Java.Nio.ByteBuffer>
         {
-            readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(Value<>).ToAssemblyQualified());
+#if NET462_OR_GREATER
+            readonly Newtonsoft.Json.JsonSerializer _serializer;
+#endif
+            readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(KeyBuffered<>).ToAssemblyQualified());
+            readonly byte[] keyTypeName = null;
+            readonly ISerDes<T, byte[]> _defaultSerDes = default!;
+#if NET462_OR_GREATER
+            /// <summary>
+            /// When set to <see langword="true"/> the oprion forces <see cref="ValueBuffered{T}"/> to use <see cref="System.IO.Stream"/> with <see cref="Java.Nio.ByteBuffer"/> to reduce memory copy
+            /// </summary>
+            /// <remarks>Added specifically to .NET Framework because NewtonSoft JSon seems to have problems with large streams</remarks>
+            public bool UseStreamWithByteBuffer { get; set; } = true;
+            /// <summary>
+            /// Settings used from <see cref="JsonConvert.DeserializeObject(string, JsonSerializerSettings)"/> and <see cref="JsonConvert.SerializeObject(object?, JsonSerializerSettings?)"/>
+            /// </summary>
+            public JsonSerializerSettings Options { get; set; } = new JsonSerializerSettings();
+#else
+            /// <summary>
+            /// Settings used from <see cref="JsonSerializer.Deserialize(Stream, JsonSerializerOptions?)"/> and <see cref="JsonSerializer.Serialize{TValue}(TValue, JsonSerializerOptions?)"/>
+            /// </summary>
+            public JsonSerializerOptions Options { get; set; } = new JsonSerializerOptions();
+#endif
+            /// <inheritdoc/>
+            public override bool UseHeaders => true;
+            /// <inheritdoc/>
+            public override bool IsDirectBuffered => true;
+            /// <summary>
+            /// Default initializer
+            /// </summary>
+            public KeyBuffered()
+            {
+                if (KNetSerialization.IsInternalManaged<T>())
+                {
+                    _defaultSerDes = new SerDes<T, byte[]>();
+                    keyTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
+                }
+                else
+                {
+#if NET462_OR_GREATER
+                    _serializer = new Newtonsoft.Json.JsonSerializer();
+                    _serializer.Formatting = Newtonsoft.Json.Formatting.None;
+#endif
+                    keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
+                }
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Serialize(string, T)"/>
+            public override Java.Nio.ByteBuffer Serialize(string topic, T data)
+            {
+                return SerializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
+            public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, T data)
+            {
+                headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
+                headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
+
+                if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
+
+#if NET462_OR_GREATER
+                if (UseStreamWithByteBuffer)
+                {
+                    var ms = new MemoryStream();
+                    using (StreamWriter sw = new StreamWriter(ms, new UTF8Encoding(false), 128, true))
+                    using (Newtonsoft.Json.JsonWriter writer = new Newtonsoft.Json.JsonTextWriter(sw))
+                    {
+                        _serializer.Serialize(writer, data);
+                    }
+                    return ByteBuffer.From(ms);
+                }
+                else
+                {
+                    var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
+                    return ByteBuffer.From(Encoding.UTF8.GetBytes(jsonStr));
+                }
+#else
+                var ms = new MemoryStream();
+                System.Text.Json.JsonSerializer.Serialize<T>(ms, data, Options);
+                return ByteBuffer.From(ms);
+#endif
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, TJVMT)"/>
+            public override T Deserialize(string topic, Java.Nio.ByteBuffer data)
+            {
+                return DeserializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
+            public override T DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
+            {
+                if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
+                if (data == null) return default;
+#if NET462_OR_GREATER
+                if (UseStreamWithByteBuffer)
+                {
+                    using (StreamReader sw = new StreamReader(data.ToStream()))
+                    using (Newtonsoft.Json.JsonReader reader = new Newtonsoft.Json.JsonTextReader(sw))
+                    {
+                        return _serializer.Deserialize<T>(reader);
+                    }
+                }
+                else
+                {
+                    var jsonStr = Encoding.UTF8.GetString((byte[])data);
+                    return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonStr, Options);
+                }
+#else
+                return System.Text.Json.JsonSerializer.Deserialize<T>(data.ToStream(), Options)!;
+#endif
+            }
+        }
+
+        /// <summary>
+        /// Json extension of <see cref="SerDes{T, TJVMT}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public class ValueRaw<T> : SerDes<T, byte[]>
+        {
+            readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(ValueRaw<>).ToAssemblyQualified());
             readonly byte[] valueTypeName = null!;
-            readonly ISerDes<T, byte[]> _defaultSerDes = default;
+            readonly ISerDes<T, byte[]> _defaultSerDes = default!;
+#if NET462_OR_GREATER
+            /// <summary>
+            /// Settings used from <see cref="JsonConvert.DeserializeObject(string, JsonSerializerSettings)"/> and <see cref="JsonConvert.SerializeObject(object?, JsonSerializerSettings?)"/>
+            /// </summary>
+            public JsonSerializerSettings Options { get; set; } = new JsonSerializerSettings();
+#else
+            /// <summary>
+            /// Settings used from <see cref="JsonSerializer.Deserialize(Stream, JsonSerializerOptions?)"/> and <see cref="JsonSerializer.Serialize{TValue}(TValue, JsonSerializerOptions?)"/>
+            /// </summary>
+            public JsonSerializerOptions Options { get; set; } = new JsonSerializerOptions();
+#endif
             /// <inheritdoc/>
             public override bool UseHeaders => true;
             /// <summary>
             /// Default initializer
             /// </summary>
-            public Value()
+            public ValueRaw()
             {
                 if (KNetSerialization.IsInternalManaged<T>())
                 {
-                    _defaultSerDes = new SerDes<T>();
+                    _defaultSerDes = new SerDes<T, byte[]>();
                     valueTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
                 }
                 else
@@ -133,19 +279,19 @@ namespace MASES.KNet.Serialization.Json
                 if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
 
 #if NET462_OR_GREATER
-                var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Newtonsoft.Json.Formatting.None);
+                var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
                 return Encoding.UTF8.GetBytes(jsonStr);
 #else
-                var jsonStr = System.Text.Json.JsonSerializer.Serialize<T>(data);
+                var jsonStr = System.Text.Json.JsonSerializer.Serialize<T>(data, Options);
                 return Encoding.UTF8.GetBytes(jsonStr);
 #endif
             }
-            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, TJVMT)"/>
             public override T Deserialize(string topic, byte[] data)
             {
                 return DeserializeWithHeaders(topic, null, data);
             }
-            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, byte[])"/>
+            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
             public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
             {
                 if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
@@ -153,9 +299,126 @@ namespace MASES.KNet.Serialization.Json
                 if (data == null) return default;
 #if NET462_OR_GREATER
                 var jsonStr = Encoding.UTF8.GetString(data);
-                return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonStr);
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonStr, Options);
 #else
-                return System.Text.Json.JsonSerializer.Deserialize<T>(data)!;
+                return System.Text.Json.JsonSerializer.Deserialize<T>(data, Options)!;
+#endif
+            }
+        }
+
+        /// <summary>
+        /// Json extension of <see cref="SerDes{T, TJVMT}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public class ValueBuffered<T> : SerDes<T, Java.Nio.ByteBuffer>
+        {
+#if NET462_OR_GREATER
+            readonly Newtonsoft.Json.JsonSerializer _serializer;
+#endif
+            readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(ValueBuffered<>).ToAssemblyQualified());
+            readonly byte[] valueTypeName = null!;
+            readonly ISerDes<T, Java.Nio.ByteBuffer> _defaultSerDes = default!;
+#if NET462_OR_GREATER
+            /// <summary>
+            /// When set to <see langword="true"/> the oprion forces <see cref="ValueBuffered{T}"/> to use <see cref="System.IO.Stream"/> with <see cref="Java.Nio.ByteBuffer"/> to reduce memory copy
+            /// </summary>
+            /// <remarks>Added specifically to .NET Framework because NewtonSoft JSon seems to have problems with large streams</remarks>
+            public bool UseByteBufferWithStream { get; set; } = true;
+            /// <summary>
+            /// Settings used from <see cref="JsonConvert.DeserializeObject(string, JsonSerializerSettings)"/> and <see cref="JsonConvert.SerializeObject(object?, JsonSerializerSettings?)"/>
+            /// </summary>
+            public JsonSerializerSettings Options { get; set; } = new JsonSerializerSettings();
+#else
+            /// <summary>
+            /// Settings used from <see cref="JsonSerializer.Deserialize(Stream, JsonSerializerOptions?)"/> and <see cref="JsonSerializer.Serialize{TValue}(TValue, JsonSerializerOptions?)"/>
+            /// </summary>
+            public JsonSerializerOptions Options { get; set; } = new JsonSerializerOptions();
+#endif
+            /// <inheritdoc/>
+            public override bool UseHeaders => true;
+            /// <inheritdoc/>
+            public override bool IsDirectBuffered => true;
+            /// <summary>
+            /// Default initializer
+            /// </summary>
+            public ValueBuffered()
+            {
+                if (KNetSerialization.IsInternalManaged<T>())
+                {
+                    _defaultSerDes = new SerDes<T, Java.Nio.ByteBuffer>();
+                    valueTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
+                }
+                else
+                {
+#if NET462_OR_GREATER
+                    _serializer = new Newtonsoft.Json.JsonSerializer();
+                    _serializer.Formatting = Newtonsoft.Json.Formatting.None;
+#endif
+                    valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
+                }
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Serialize(string, T)"/>
+            public override Java.Nio.ByteBuffer Serialize(string topic, T data)
+            {
+                return SerializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
+            public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, T data)
+            {
+                headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
+                headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
+
+                if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
+
+#if NET462_OR_GREATER
+                if (UseByteBufferWithStream)
+                {
+                    var ms = new MemoryStream();
+                    using (StreamWriter sw = new StreamWriter(ms, new UTF8Encoding(false), 128, true))
+                    using (Newtonsoft.Json.JsonWriter writer = new Newtonsoft.Json.JsonTextWriter(sw))
+                    {
+                        _serializer.Serialize(writer, data);
+                    }
+                    return ByteBuffer.From(ms);
+                }
+                else
+                {
+                    var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
+                    return ByteBuffer.From(Encoding.UTF8.GetBytes(jsonStr));
+                }
+#else
+                var ms = new MemoryStream();
+                System.Text.Json.JsonSerializer.Serialize<T>(ms, data, Options);
+                return ByteBuffer.From(ms);
+#endif
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.Deserialize(string, TJVMT)"/>
+            public override T Deserialize(string topic, Java.Nio.ByteBuffer data)
+            {
+                return DeserializeWithHeaders(topic, null, data);
+            }
+            /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
+            public override T DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
+            {
+                if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
+
+                if (data == null) return default;
+#if NET462_OR_GREATER
+                if (UseByteBufferWithStream)
+                {
+                    using (StreamReader sw = new StreamReader(data.ToStream()))
+                    using (Newtonsoft.Json.JsonReader reader = new Newtonsoft.Json.JsonTextReader(sw))
+                    {
+                        return _serializer.Deserialize<T>(reader);
+                    }
+                }
+                else
+                {
+                    var jsonStr = Encoding.UTF8.GetString((byte[])data);
+                    return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonStr, Options);
+                }
+#else
+                return System.Text.Json.JsonSerializer.Deserialize<T>(data.ToStream(), Options)!;
 #endif
             }
         }

@@ -16,9 +16,16 @@
 *  Refer to LICENSE for more information.
 */
 
+using System;
+
 namespace MASES.KNet.TestCommon
 {
     internal class SharedKNetCore : KNetCore<SharedKNetCore>
     {
+        public override bool LogClassPath => false;
+
+        public long CurrentJNICalls => JVMStats.TotalJNICalls;
+
+        public TimeSpan CurrentTimeSpentInJNICalls => JVMStats.TotalTimeInJNICalls;
     }
 }

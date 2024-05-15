@@ -31,15 +31,27 @@ using MASES.KNet.Producer;
 using MASES.KNet.Consumer;
 using MASES.KNet.Common;
 using System.Diagnostics;
+using Org.Apache.Kafka.Common.Errors;
 
 namespace MASES.KNetTest
 {
     class Program
     {
-        static bool useCallback = true;
+        static bool withBigExtraValue = false;
+        static bool withBigBigExtraValue = false;
+        static bool consoleOutput = System.Diagnostics.Debugger.IsAttached ? true : false;
+        static bool runBuffered = false;
+        static bool useCallback = false;
+        static bool onlyProduce = false;
+        static bool flushWhileSend = false;
+        static bool withAck = false;
+        static bool runInParallel = false;
 
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
+
+        static int NonParallelLimit = 100000;
+        static long _firstOffset = -1;
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
@@ -47,14 +59,44 @@ namespace MASES.KNetTest
 
         public class TestType
         {
-            public TestType(int i)
+            static byte[] _bigExtraValue = null;
+            static byte[] _bigBigExtraValue = null;
+            static TestType()
             {
-                name = description = value = i.ToString();
+                _bigExtraValue = new byte[100000];
+                for (int i = 0; i < _bigExtraValue.LongLength; i++)
+                {
+                    _bigExtraValue[i] = (byte)(i % byte.MaxValue);
+                }
+                _bigBigExtraValue = new byte[1000000];
+                for (int i = 0; i < _bigBigExtraValue.LongLength; i++)
+                {
+                    _bigBigExtraValue[i] = (byte)(i % byte.MaxValue);
+                }
             }
 
-            public string name;
-            public string description;
-            public string value;
+            public TestType()
+            {
+                    
+            }
+
+            public TestType(int i, bool withBigExtraValue, bool bigBigExtraValue)
+            {
+                name = description = value = i.ToString();
+                if (withBigExtraValue)
+                {
+                    extraValue = _bigExtraValue;
+                }
+                else if (bigBigExtraValue)
+                {
+                    extraValue = _bigBigExtraValue;
+                }
+            }
+
+            public string name { get; set; }
+            public string description { get; set; }
+            public string value { get; set; }
+            public byte[] extraValue { get; set; }
 
             public override string ToString()
             {
@@ -70,37 +112,86 @@ namespace MASES.KNetTest
             if (appArgs.Length != 0)
             {
                 serverToUse = args[0];
+                if (args.Length > 1)
+                {
+                    for (int i = 1; i < args.Length; i++)
+                    {
+                        if (args[i] == "runBuffered") { runBuffered = true; continue; }
+                        if (args[i] == "consoleOutput") { consoleOutput = true; continue; }
+                        if (args[i] == "useCallback") { useCallback = true; continue; }
+                        if (args[i] == "withBigExtraValue") { withBigExtraValue = true; NonParallelLimit /= 10; continue; }
+                        if (args[i] == "withBigBigExtraValue") { withBigBigExtraValue = true; NonParallelLimit /= 100; continue; }
+                        if (args[i] == "onlyProduce") { onlyProduce = true; continue; }
+                        if (args[i] == "flushWhileSend") { flushWhileSend = true; continue; }
+                        if (args[i] == "withAck") { withAck = true; continue; }
+                        if (args[i] == "runInParallel") { runInParallel = true; continue; }
+                        Console.WriteLine($"Unknown {args[i]}");
+                    }
+                }
             }
 
-            SerDes<TestType> serializer = new SerDes<TestType>()
+            SerDesRaw<TestType> serializer = new SerDesRaw<TestType>()
             {
                 OnSerialize = (topic, type) => { return Array.Empty<byte>(); }
             };
 
-            SerDes<TestType> deserializer = new SerDes<TestType>()
+            SerDesRaw<TestType> deserializer = new SerDesRaw<TestType>()
             {
-                OnDeserialize = (topic, data) => { return new TestType(0); }
+                OnDeserialize = (topic, data) => { return new TestType(0, false, false); }
             };
 
             CreateTopic();
-
-            Thread threadProduce = new(ProduceSomething)
-            {
-                Name = "produce"
-            };
-            threadProduce.Start();
-
-            Thread threadConsume = new(ConsumeSomething)
-            {
-                Name = "consume"
-            };
-            threadConsume.Start();
-
             Console.CancelKeyPress += Console_CancelKeyPress;
             Console.WriteLine("Press Ctrl-C to exit");
-            resetEvent.WaitOne(TimeSpan.FromSeconds(10));
-            resetEvent.Set();
+            if (runInParallel)
+            {
+                Thread threadProduce;
+                Thread threadConsume;
+                if (runBuffered)
+                {
+                    threadProduce = new(ProduceSomethingBuffered)
+                    {
+                        Name = "produce buffered"
+                    };
+
+                    threadConsume = new(ConsumeSomethingBuffered)
+                    {
+                        Name = "consume buffered"
+                    };
+                }
+                else
+                {
+                    threadProduce = new(ProduceSomething)
+                    {
+                        Name = "produce"
+                    };
+
+                    threadConsume = new(ConsumeSomething)
+                    {
+                        Name = "consume"
+                    };
+                }
+                threadProduce.Start();
+                if (!onlyProduce) threadConsume.Start();
+                resetEvent.WaitOne(TimeSpan.FromSeconds(System.Diagnostics.Debugger.IsAttached ? 1000 : 60));
+                resetEvent.Set();
+            }
+            else
+            {
+                if (runBuffered)
+                {
+                    ProduceSomethingBuffered();
+                    if (!onlyProduce) ConsumeSomethingBuffered();
+                }
+                else
+                {
+                    ProduceSomething();
+                    if (!onlyProduce) ConsumeSomething();
+                }
+            }
             Thread.Sleep(2000); // wait the threads exit
+
+            Console.WriteLine($"End of {(runBuffered ? "buffered" : "non buffered")} test");
         }
 
         private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
@@ -125,6 +216,7 @@ namespace MASES.KNetTest
                 topic = topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
                                                                  .WithDeleteRetentionMs(100)
                                                                  .WithMinCleanableDirtyRatio(0.01)
+                                                                 .WithMaxMessageBytes(100 * 1024 * 1024)
                                                                  .WithSegmentMs(100));
 
                 var coll = Collections.Singleton(topic);
@@ -149,13 +241,14 @@ namespace MASES.KNetTest
                     // if creation failed the ExecutionException wraps the underlying cause.
                     future.Get();
                     ********/
-                    admin.CreateTopic(topicName, partitions, replicationFactor);
+                    admin.CreateTopic(topic);
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
             }
+            catch (TopicExistsException) { }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
@@ -176,12 +269,14 @@ namespace MASES.KNetTest
 
                 ProducerConfigBuilder props = ProducerConfigBuilder.Create()
                                                                    .WithBootstrapServers(serverToUse)
-                                                                   .WithAcks(ProducerConfigBuilder.AcksTypes.All)
+                                                                   .WithAcks(withAck ? ProducerConfigBuilder.AcksTypes.All : ProducerConfigBuilder.AcksTypes.None)
+                                                                   .WithMaxRequestSize(10 * 1024 * 1024)
                                                                    .WithRetries(0)
                                                                    .WithLingerMs(1);
 
-                SerDes<string> keySerializer = new SerDes<string>();
-                JsonSerDes.Value<TestType> valueSerializer = new JsonSerDes.Value<TestType>();
+                var keySerializer = new SerDesRaw<string>();
+                var valueSerializer = new JsonSerDes.ValueRaw<TestType>();
+                Stopwatch watcher = new Stopwatch();
                 try
                 {
                     using (var producer = new KNetProducer<string, TestType>(props, keySerializer, valueSerializer))
@@ -195,22 +290,45 @@ namespace MASES.KNetTest
                                 OnOnCompletion = (o1, o2) =>
                                 {
                                     if (o2 != null) Console.WriteLine(o2.ToString());
-                                    else Console.WriteLine($"Produced on topic {o1.Topic()} at offset {o1.Offset()}");
+                                    else if (consoleOutput) Console.WriteLine($"Produced on topic {o1.Topic()} at offset {o1.Offset()}");
                                 }
                             };
                         }
+                        var baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls;
                         try
                         {
-                            while (!resetEvent.WaitOne(0))
+                            while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
                             {
-                                var record = new KNet.Producer.ProducerRecord<string, TestType>(topicToUse, i.ToString(), new TestType(i));
+                                watcher.Start();
+                                var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withBigExtraValue, withBigBigExtraValue));
                                 var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
-                                Console.WriteLine($"Producing: {record} with result: {result.Get()}");
-                                producer.Flush();
+                                if (!runInParallel && _firstOffset == -1)
+                                {
+                                    _firstOffset = result.Get().Offset();
+                                }
+                                watcher.Stop();
+                                if (consoleOutput) Console.WriteLine($"Producing: {record}");
+                                if (flushWhileSend)
+                                {
+                                    watcher.Start();
+                                    producer.Flush();
+                                    watcher.Stop();
+                                }
                                 i++;
                             }
+                            if (!flushWhileSend)
+                            {
+                                watcher.Start();
+                                producer.Flush();
+                                watcher.Stop();
+                            }
+                            baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls - baseJNICalls;
                         }
-                        finally { if (useCallback) callback.Dispose(); }
+                        finally
+                        {
+                            if (useCallback) callback.Dispose();
+                            if (i != 0) Console.WriteLine($"Flushed {i} elements in {watcher.Elapsed}, produce mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / i)} with mean JNI Calls {baseJNICalls / i}");
+                        }
                     }
                 }
                 finally
@@ -243,12 +361,13 @@ namespace MASES.KNetTest
 
                 ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
                                                                    .WithBootstrapServers(serverToUse)
-                                                                   .WithGroupId("test")
+                                                                   .WithGroupId(Guid.NewGuid().ToString())
+                                                                   .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST)
                                                                    .WithEnableAutoCommit(true)
                                                                    .WithAutoCommitIntervalMs(1000);
 
-                SerDes<string> keyDeserializer = new SerDes<string>();
-                SerDes<TestType> valueDeserializer = new JsonSerDes.Value<TestType>();
+                SerDesRaw<string> keyDeserializer = new SerDesRaw<string>();
+                var valueDeserializer = new JsonSerDes.ValueRaw<TestType>();
                 ConsumerRebalanceListener rebalanceListener = null;
                 KNetConsumer<string, TestType> consumer = null;
 
@@ -275,10 +394,26 @@ namespace MASES.KNetTest
                 {
                     using (consumer = new KNetConsumer<string, TestType>(props, keyDeserializer, valueDeserializer))
                     {
-                        if (useCallback) consumer.Subscribe(topics, rebalanceListener);
-                        else consumer.Subscribe(topics);
+                        if (runInParallel)
+                        {
+                            if (useCallback) consumer.Subscribe(topics, rebalanceListener);
+                            else consumer.Subscribe(topics);
+                        }
+                        else
+                        {
+                            var tp = new Org.Apache.Kafka.Common.TopicPartition(topicToUse, 0);
+                            consumer.Assign(Collections.Singleton(tp));
+                            if (_firstOffset != -1)
+                            {
+                                consumer.Seek(tp, _firstOffset);
+                            }
+                            else
+                            {
+                                consumer.SeekToBeginning(Collections.Singleton(tp));
+                            }
+                        }
 
-                        while (!resetEvent.WaitOne(0))
+                        while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
                             watcherTotal.Start();
@@ -289,13 +424,15 @@ namespace MASES.KNetTest
 #endif
                             {
                                 elements++;
-                                watcher.Start();
+                                watcherTotal.Start();
                                 var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
-                                watcher.Stop();
                                 watcherTotal.Stop();
-                                Console.WriteLine(str);
+                                watcher.Start();
+                                if (consoleOutput) Console.WriteLine(str);
+                                watcher.Stop();
                             }
                         }
+                        watcherTotal.Stop();
                     }
                 }
                 finally
@@ -303,7 +440,205 @@ namespace MASES.KNetTest
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
                     topics?.Dispose();
-                    if (elements != 0) Console.WriteLine($"Total mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
+                    if (elements != 0) Console.WriteLine($"Total mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
+                }
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Consumer ended with error: {0}", ex.Message);
+            }
+        }
+
+        static void ProduceSomethingBuffered()
+        {
+            try
+            {
+                /**** Direct mode ******
+                Properties props = new Properties();
+                props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+                props.Put(ProducerConfig.ACKS_CONFIG, "all");
+                props.Put(ProducerConfig.RETRIES_CONFIG, 0);
+                props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
+                ******/
+
+                ProducerConfigBuilder props = ProducerConfigBuilder.Create()
+                                                                   .WithBootstrapServers(serverToUse)
+                                                                   .WithAcks(withAck ? ProducerConfigBuilder.AcksTypes.All : ProducerConfigBuilder.AcksTypes.None)
+                                                                   .WithMaxRequestSize(10 * 1024 * 1024)
+                                                                   .WithRetries(0)
+                                                                   .WithLingerMs(1);
+
+                var keySerializer = new SerDesRaw<string>(); // standard serDes for string
+                var valueSerializer = new JsonSerDes.ValueBuffered<TestType>();
+                Stopwatch watcher = new Stopwatch();
+                try
+                {
+                    using (var producer = new KNetProducerValueBuffered<string, TestType>(props, keySerializer, valueSerializer))
+                    {
+                        int i = 0;
+                        Callback callback = null;
+                        if (useCallback)
+                        {
+                            callback = new Callback()
+                            {
+                                OnOnCompletion = (o1, o2) =>
+                                {
+                                    if (o2 != null) Console.WriteLine(o2.ToString());
+                                    else if (consoleOutput) Console.WriteLine($"Produced on topic {o1.Topic()} at offset {o1.Offset()}");
+                                }
+                            };
+                        }
+                        var baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls;
+                        try
+                        {
+                            while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
+                            {
+                                watcher.Start();
+                                var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withBigExtraValue, withBigBigExtraValue));
+                                var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
+                                if (!runInParallel && _firstOffset == -1)
+                                {
+                                    _firstOffset = result.Get().Offset();
+                                }
+                                watcher.Stop();
+                                if (consoleOutput) Console.WriteLine($"Producing: {record}");
+                                if (flushWhileSend)
+                                {
+                                    watcher.Start();
+                                    producer.Flush();
+                                    watcher.Stop();
+                                }
+                                i++;
+                            }
+                            if (!flushWhileSend)
+                            {
+                                watcher.Start();
+                                producer.Flush();
+                                watcher.Stop();
+                            }
+                            baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls - baseJNICalls;
+                        }
+                        finally
+                        {
+                            if (useCallback) callback.Dispose();
+                            if (i != 0) Console.WriteLine($"Flushed {i} elements in {watcher.Elapsed}, produce mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / i)} with mean JNI Calls {baseJNICalls / i}");
+                        }
+                    }
+                }
+                finally
+                {
+                    keySerializer?.Dispose();
+                    valueSerializer?.Dispose();
+                }
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                Console.WriteLine("Producer ended with error: {0}", ex.InnerException.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Producer ended with error: {0}", ex.Message);
+            }
+        }
+
+        static void ConsumeSomethingBuffered()
+        {
+            try
+            {
+                /**** Direct mode ******
+                Properties props = new Properties();
+                props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+                props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
+                props.Put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
+                props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
+                *******/
+
+                ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
+                                                                   .WithBootstrapServers(serverToUse)
+                                                                   .WithGroupId(Guid.NewGuid().ToString())
+                                                                   .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST)
+                                                                   .WithEnableAutoCommit(true)
+                                                                   .WithAutoCommitIntervalMs(1000);
+
+                var keyDeserializer = new SerDesRaw<string>();
+                var valueDeserializer = new JsonSerDes.ValueBuffered<TestType>();
+                ConsumerRebalanceListener rebalanceListener = null;
+                KNetConsumerValueBuffered<string, TestType> consumer = null;
+
+                if (useCallback)
+                {
+                    rebalanceListener = new ConsumerRebalanceListener()
+                    {
+                        OnOnPartitionsRevoked = (o) =>
+                        {
+                            Console.WriteLine("Revoked: {0}", o.ToString());
+                        },
+                        OnOnPartitionsAssigned = (o) =>
+                        {
+                            Console.WriteLine("Assigned: {0}", o.ToString());
+                        }
+                    };
+                }
+                const bool withPrefetch = true;
+                long elements = 0;
+                Stopwatch watcherTotal = new Stopwatch();
+                Stopwatch watcher = new Stopwatch();
+                var topics = Collections.Singleton((Java.Lang.String)topicToUse);
+                try
+                {
+                    using (consumer = new KNetConsumerValueBuffered<string, TestType>(props, keyDeserializer, valueDeserializer))
+                    {
+                        if (runInParallel)
+                        {
+                            if (useCallback) consumer.Subscribe(topics, rebalanceListener);
+                            else consumer.Subscribe(topics);
+                        }
+                        else
+                        {
+                            var tp = new Org.Apache.Kafka.Common.TopicPartition(topicToUse, 0);
+                            consumer.Assign(Collections.Singleton(tp));
+                            if (_firstOffset != -1)
+                            {
+                                consumer.Seek(tp, _firstOffset);
+                            }
+                            else
+                            {
+                                consumer.SeekToBeginning(Collections.Singleton(tp));
+                            }
+                        }
+
+                        while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
+                        {
+                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                            watcherTotal.Start();
+#if NET7_0_OR_GREATER
+                            foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
+#else
+                            foreach (var item in records)
+#endif
+                            {
+                                elements++;
+                                watcherTotal.Start();
+                                var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
+                                watcherTotal.Stop();
+                                watcher.Start();
+                                if (consoleOutput) Console.WriteLine(str);
+                                watcher.Stop();
+                            }
+                        }
+                        watcherTotal.Stop();
+                    }
+                }
+                finally
+                {
+                    keyDeserializer?.Dispose();
+                    valueDeserializer?.Dispose();
+                    topics?.Dispose();
+                    if (elements != 0) Console.WriteLine($"Total mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)

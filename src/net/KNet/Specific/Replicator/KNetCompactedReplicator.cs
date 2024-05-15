@@ -1603,4 +1603,16 @@ namespace MASES.KNet.Replicator
     {
     }
     #endregion
+
+    #region KNetCompactedReplicatorBuffered<K, V>
+    /// <summary>
+    /// Provides a reliable dictionary, persisted in a COMPACTED Kafka topic and shared among applications, extends <see cref="KNetCompactedReplicator{K, V, TJVMK, TJVMV}"/> using <see cref="Java.Nio.ByteBuffer"/>
+    /// </summary>
+    /// <typeparam name="K">The type of keys in the dictionary</typeparam>
+    /// <typeparam name="V">The type of values in the dictionary. Must be a nullable type</typeparam>
+    public class KNetCompactedReplicatorBuffered<K, V> : KNetCompactedReplicator<K, V, Java.Nio.ByteBuffer, Java.Nio.ByteBuffer>
+        where V : class
+    {
+    }
+    #endregion
 }
