@@ -40,7 +40,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <classpathfile>${basedir}/classpathfile.classpath</classpathfile>
-        <kafkaVersion>3.6.2</kafkaVersion>
+        <kafkaVersion>3.7.0</kafkaVersion>
         <knetVersion>2.6.1.0</knetVersion>
         <jcobridgeVersion>2.5.13</jcobridgeVersion>
 		<jcobridgepath>../../../bin/net6.0/JCOBridge.jar</jcobridgepath>
@@ -280,6 +280,11 @@
             <groupId>org.apache.kafka</groupId>
             <artifactId>connect-basic-auth-extension</artifactId>
             <version>${kafkaVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-proto</artifactId>
+            <version>1.0.0-alpha</version>
         </dependency>
     </dependencies>
 </project>

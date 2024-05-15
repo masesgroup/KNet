@@ -161,6 +161,19 @@ namespace MASES.KNet
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="CommonClientConfigs.RETRY_BACKOFF_MAX_MS_CONFIG"/>
+        /// </summary>
+        public long RetryBackoffMaxMs { get { return GetProperty<long>(CommonClientConfigs.RETRY_BACKOFF_MAX_MS_CONFIG); } set { SetProperty(CommonClientConfigs.RETRY_BACKOFF_MAX_MS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="CommonClientConfigs.RETRY_BACKOFF_MAX_MS_CONFIG"/>
+        /// </summary>
+        public T WithRetryBackoffMaxMs(long retryBackoffMaxMs)
+        {
+            var clone = Clone();
+            clone.RetryBackoffMaxMs = retryBackoffMaxMs;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="CommonClientConfigs.RETRY_BACKOFF_MS_CONFIG"/>
         /// </summary>
         public long RetryBackoffMs { get { return GetProperty<long>(CommonClientConfigs.RETRY_BACKOFF_MS_CONFIG); } set { SetProperty(CommonClientConfigs.RETRY_BACKOFF_MS_CONFIG, value); } }
@@ -343,6 +356,19 @@ namespace MASES.KNet
         {
             var clone = Clone();
             clone.DefaultListValueSerdeTypeClass = defaultListValueSerdeTypeClass;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="CommonClientConfigs.ENABLE_METRICS_PUSH_CONFIG"/>
+        /// </summary>
+        public bool EnableMetricsPush { get { return GetProperty<bool>(CommonClientConfigs.ENABLE_METRICS_PUSH_CONFIG); } set { SetProperty(CommonClientConfigs.ENABLE_METRICS_PUSH_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="CommonClientConfigs.ENABLE_METRICS_PUSH_CONFIG"/>
+        /// </summary>
+        public T WithEnableMetricsPush(bool enableMetricsPush)
+        {
+            var clone = Clone();
+            clone.EnableMetricsPush = enableMetricsPush;
             return clone;
         }
         /// <summary>
