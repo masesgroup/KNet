@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ValueTransformer&lt;V, VR&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -136,6 +136,12 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
     </dd>
   </dl>
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueTransformerDirect-2.html">ValueTransformerDirect&lt;V, VR&gt;</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -327,6 +333,9 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -357,7 +366,10 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -509,7 +521,7 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_ValueTransformer_2__ctor" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueTransformer`2.#ctor">
   ValueTransformer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L3678"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L4703"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -540,7 +552,7 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_ValueTransformer_2_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueTransformer`2.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L3683"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L4712"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -568,6 +580,38 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
 
 
 
+  <a id="Org_Apache_Kafka_Streams_Kstream_ValueTransformer_2_InitHandlers_" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueTransformer`2.InitHandlers*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ValueTransformer_2_InitHandlers" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueTransformer`2.InitHandlers">
+  InitHandlers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L4707"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable/disable handlers initialization, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool InitHandlers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_Kstream_ValueTransformer_2_OnClose_" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueTransformer`2.OnClose*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_ValueTransformer_2_OnClose" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueTransformer`2.OnClose">
@@ -575,7 +619,7 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueTransformer.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#close--</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -610,7 +654,7 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueTransformer.cs/#L206"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -645,7 +689,7 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueTransformer.cs/#L227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -684,7 +728,7 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueTransformer.cs/#L197"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#close--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -711,7 +755,7 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueTransformer.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -771,7 +815,7 @@ Class ValueTransformer&lt;V, VR&gt;  <a class="header-action link-secondary" tit
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueTransformer.cs/#L241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

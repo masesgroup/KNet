@@ -1,0 +1,639 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IConsumer&lt;K, V, TJVMK, TJVMV&gt; | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IConsumer&lt;K, V, TJVMK, TJVMV&gt; | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="KNet extension of">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Consumer_IConsumer_4.md&amp;value=---%0Auid%3A%20MASES.KNet.Consumer.IConsumer%604%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.Consumer.IConsumer`4">
+
+
+
+  <h1 id="MASES_KNet_Consumer_IConsumer_4" data-uid="MASES.KNet.Consumer.IConsumer`4" class="text-break">
+Interface IConsumer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Consumer.html">Consumer</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer-2.html">IConsumer&lt;K, V&gt;</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IConsumer&lt;K, V, TJVMK, TJVMV&gt; : IConsumer&lt;TJVMK, TJVMV&gt;, IConsumer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable, ICloseable, IAutoCloseable</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_2_Poll_Java_Time_Duration_">IConsumer&lt;TJVMK, TJVMV&gt;.Poll(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Assignment">IConsumer.Assignment()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Subscription">IConsumer.Subscription()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Paused">IConsumer.Paused()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Metrics__1">IConsumer.Metrics&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Subscribe_Java_Util_Collection_Java_Lang_String__">IConsumer.Subscribe(Collection&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Subscribe_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_">IConsumer.Subscribe(Collection&lt;String&gt;, ConsumerRebalanceListener)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_ClientInstanceId_Java_Time_Duration_">IConsumer.ClientInstanceId(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Assign_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">IConsumer.Assign(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Subscribe_Java_Util_Regex_Pattern_Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_">IConsumer.Subscribe(Pattern, ConsumerRebalanceListener)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Subscribe_Java_Util_Regex_Pattern_">IConsumer.Subscribe(Pattern)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Unsubscribe">IConsumer.Unsubscribe()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_CommitSync">IConsumer.CommitSync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_CommitSync_Java_Time_Duration_">IConsumer.CommitSync(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_CommitSync_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__">IConsumer.CommitSync(Map&lt;TopicPartition, OffsetAndMetadata&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_CommitSync_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__Java_Time_Duration_">IConsumer.CommitSync(Map&lt;TopicPartition, OffsetAndMetadata&gt;, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_CommitAsync">IConsumer.CommitAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_CommitAsync_Org_Apache_Kafka_Clients_Consumer_OffsetCommitCallback_">IConsumer.CommitAsync(OffsetCommitCallback)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_CommitAsync_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__Org_Apache_Kafka_Clients_Consumer_OffsetCommitCallback_">IConsumer.CommitAsync(Map&lt;TopicPartition, OffsetAndMetadata&gt;, OffsetCommitCallback)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Seek_Org_Apache_Kafka_Common_TopicPartition_System_Int64_">IConsumer.Seek(TopicPartition, long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Seek_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata_">IConsumer.Seek(TopicPartition, OffsetAndMetadata)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_SeekToBeginning_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">IConsumer.SeekToBeginning(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_SeekToEnd_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">IConsumer.SeekToEnd(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Position_Org_Apache_Kafka_Common_TopicPartition_">IConsumer.Position(TopicPartition)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Position_Org_Apache_Kafka_Common_TopicPartition_Java_Time_Duration_">IConsumer.Position(TopicPartition, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Committed_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__">IConsumer.Committed(Set&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Committed_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Java_Time_Duration_">IConsumer.Committed(Set&lt;TopicPartition&gt;, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_PartitionsFor_Java_Lang_String_">IConsumer.PartitionsFor(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_PartitionsFor_Java_Lang_String_Java_Time_Duration_">IConsumer.PartitionsFor(String, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_ListTopics">IConsumer.ListTopics()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_ListTopics_Java_Time_Duration_">IConsumer.ListTopics(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Pause_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">IConsumer.Pause(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Resume_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">IConsumer.Resume(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_OffsetsForTimes_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__">IConsumer.OffsetsForTimes(Map&lt;TopicPartition, Long&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_OffsetsForTimes_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__Java_Time_Duration_">IConsumer.OffsetsForTimes(Map&lt;TopicPartition, Long&gt;, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_BeginningOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">IConsumer.BeginningOffsets(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_BeginningOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__Java_Time_Duration_">IConsumer.BeginningOffsets(Collection&lt;TopicPartition&gt;, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_EndOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">IConsumer.EndOffsets(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_EndOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__Java_Time_Duration_">IConsumer.EndOffsets(Collection&lt;TopicPartition&gt;, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_CurrentLag_Org_Apache_Kafka_Common_TopicPartition_">IConsumer.CurrentLag(TopicPartition)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_GroupMetadata">IConsumer.GroupMetadata()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_EnforceRebalance">IConsumer.EnforceRebalance()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_EnforceRebalance_Java_Lang_String_">IConsumer.EnforceRebalance(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html#Org_Apache_Kafka_Clients_Consumer_IConsumer_Wakeup">IConsumer.Wakeup()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">IJVMBridgeBase.IsInstanceOf(string)</a>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.IsInstanceOf(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.DynBridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.BridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeDefinition.BridgeClassName</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeDefinition.IsBridgeInterface</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeDefinition.IsBridgeAbstract</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeDefinition.IsBridgeStatic</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeDefinition.IsBridgeCloseable</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeDefinition.IsBridgeListener</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="api/Java.Io.ICloseable.html#Java_Io_ICloseable_Close">ICloseable.Close()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaConsumerExtensions.html#MASES_KNet_Extensions_KafkaConsumerExtensions_ConsumeAsync__2_Org_Apache_Kafka_Clients_Consumer_IConsumer___0___1__">KafkaConsumerExtensions.ConsumeAsync&lt;K, V&gt;(IConsumer&lt;K, V&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaConsumerExtensions.html#MASES_KNet_Extensions_KafkaConsumerExtensions_Consume__2_Org_Apache_Kafka_Clients_Consumer_IConsumer___0___1__System_Threading_CancellationToken_">KafkaConsumerExtensions.Consume&lt;K, V&gt;(IConsumer&lt;K, V&gt;, CancellationToken)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Consumer_IConsumer_4_IsCompleting_" data-uid="MASES.KNet.Consumer.IConsumer`4.IsCompleting*"></a>
+
+  <h3 id="MASES_KNet_Consumer_IConsumer_4_IsCompleting" data-uid="MASES.KNet.Consumer.IConsumer`4.IsCompleting">
+  IsCompleting
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="MASES.KNet.Consumer.IConsumer-4.html">IConsumer&lt;K, V, TJVMK, TJVMV&gt;</a> instance is completing async operation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsCompleting { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_IConsumer_4_IsEmpty_" data-uid="MASES.KNet.Consumer.IConsumer`4.IsEmpty*"></a>
+
+  <h3 id="MASES_KNet_Consumer_IConsumer_4_IsEmpty" data-uid="MASES.KNet.Consumer.IConsumer`4.IsEmpty">
+  IsEmpty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="MASES.KNet.Consumer.IConsumer-4.html">IConsumer&lt;K, V, TJVMK, TJVMV&gt;</a> instance has an empty set of items in async operation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsEmpty { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_IConsumer_4_WaitingMessages_" data-uid="MASES.KNet.Consumer.IConsumer`4.WaitingMessages*"></a>
+
+  <h3 id="MASES_KNet_Consumer_IConsumer_4_WaitingMessages" data-uid="MASES.KNet.Consumer.IConsumer`4.WaitingMessages">
+  WaitingMessages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of messages in the <a class="xref" href="MASES.KNet.Consumer.IConsumer-4.html">IConsumer&lt;K, V, TJVMK, TJVMV&gt;</a> instance waiting to be processed in async operation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int WaitingMessages { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Consumer_IConsumer_4_Consume_" data-uid="MASES.KNet.Consumer.IConsumer`4.Consume*"></a>
+
+  <h3 id="MASES_KNet_Consumer_IConsumer_4_Consume_System_Int64_System_Action_MASES_KNet_Consumer_ConsumerRecord__0__1__2__3___" data-uid="MASES.KNet.Consumer.IConsumer`4.Consume(System.Int64,System.Action{MASES.KNet.Consumer.ConsumerRecord{`0,`1,`2,`3}})">
+  Consume(long, Action&lt;ConsumerRecord&lt;K, V, TJVMK, TJVMV&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet sync extension for <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer.html#Org_Apache_Kafka_Clients_Consumer_Consumer_Poll_Java_Time_Duration_">Poll(Duration)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Consume(long timeoutMs, Action&lt;ConsumerRecord&lt;K, V, TJVMK, TJVMV&gt;&gt; callback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Timeout in milliseconds</p>
+</dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Consumer.ConsumerRecord-4.html">ConsumerRecord</a>&lt;K, V, TJVMK, TJVMV&gt;&gt;</dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a> where receives <a class="xref" href="MASES.KNet.Consumer.ConsumerRecord-4.html">ConsumerRecord&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_IConsumer_4_ConsumeAsync_" data-uid="MASES.KNet.Consumer.IConsumer`4.ConsumeAsync*"></a>
+
+  <h3 id="MASES_KNet_Consumer_IConsumer_4_ConsumeAsync_System_Int64_" data-uid="MASES.KNet.Consumer.IConsumer`4.ConsumeAsync(System.Int64)">
+  ConsumeAsync(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet async extension for <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer.html#Org_Apache_Kafka_Clients_Consumer_Consumer_Poll_Java_Time_Duration_">Poll(Duration)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ConsumeAsync(long timeoutMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Timeout in milliseconds</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if something was enqued for Async operations</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_IConsumer_4_Poll_" data-uid="MASES.KNet.Consumer.IConsumer`4.Poll*"></a>
+
+  <h3 id="MASES_KNet_Consumer_IConsumer_4_Poll_System_Int64_" data-uid="MASES.KNet.Consumer.IConsumer`4.Poll(System.Int64)">
+  Poll(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet extension for <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer.html#Org_Apache_Kafka_Clients_Consumer_Consumer_Poll_Java_Time_Duration_">Poll(Duration)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ConsumerRecords&lt;K, V, TJVMK, TJVMV&gt; Poll(long timeoutMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Timeout in milliseconds</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerRecords-4.html">ConsumerRecords</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Consumer.ConsumerRecords-4.html">ConsumerRecords&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_IConsumer_4_Poll_" data-uid="MASES.KNet.Consumer.IConsumer`4.Poll*"></a>
+
+  <h3 id="MASES_KNet_Consumer_IConsumer_4_Poll_System_TimeSpan_" data-uid="MASES.KNet.Consumer.IConsumer`4.Poll(System.TimeSpan)">
+  Poll(TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet extension for <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer.html#Org_Apache_Kafka_Clients_Consumer_Consumer_Poll_Java_Time_Duration_">Poll(Duration)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ConsumerRecords&lt;K, V, TJVMK, TJVMV&gt; Poll(TimeSpan timeout)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>Timeout expressed as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerRecords-4.html">ConsumerRecords</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Consumer.ConsumerRecords-4.html">ConsumerRecords&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_IConsumer_4_SetCallback_" data-uid="MASES.KNet.Consumer.IConsumer`4.SetCallback*"></a>
+
+  <h3 id="MASES_KNet_Consumer_IConsumer_4_SetCallback_System_Action_MASES_KNet_Consumer_ConsumerRecord__0__1__2__3___" data-uid="MASES.KNet.Consumer.IConsumer`4.SetCallback(System.Action{MASES.KNet.Consumer.ConsumerRecord{`0,`1,`2,`3}})">
+  SetCallback(Action&lt;ConsumerRecord&lt;K, V, TJVMK, TJVMV&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a> to use to receive <a class="xref" href="MASES.KNet.Consumer.ConsumerRecord-4.html">ConsumerRecord&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetCallback(Action&lt;ConsumerRecord&lt;K, V, TJVMK, TJVMV&gt;&gt; cb)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cb</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Consumer.ConsumerRecord-4.html">ConsumerRecord</a>&lt;K, V, TJVMK, TJVMV&gt;&gt;</dt>
+    <dd><p>The callback <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L37" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

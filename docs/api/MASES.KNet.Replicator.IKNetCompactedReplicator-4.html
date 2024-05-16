@@ -1,0 +1,1363 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt; | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt; | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="Public interface for">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_IKNetCompactedReplicator_4.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.IKNetCompactedReplicator%604%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4">
+
+
+
+  <h1 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4" class="text-break">
+Interface IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Replicator.html">Replicator</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Public interface for <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt; : IDictionary&lt;K, V&gt;, ICollection&lt;KeyValuePair&lt;K, V&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;K, V&gt;&gt;, IEnumerable, IDisposable where V : class</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The type of keys in the dictionary</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The type of values in the dictionary. Must be a nullable type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2.containskey">IDictionary&lt;K, V&gt;.ContainsKey(K)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2.add">IDictionary&lt;K, V&gt;.Add(K, V)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2.remove">IDictionary&lt;K, V&gt;.Remove(K)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2.trygetvalue">IDictionary&lt;K, V&gt;.TryGetValue(K, out V)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2.item">IDictionary&lt;K, V&gt;.this[K]</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2.keys">IDictionary&lt;K, V&gt;.Keys</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2.values">IDictionary&lt;K, V&gt;.Values</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.add">ICollection&lt;KeyValuePair&lt;K, V&gt;&gt;.Add(KeyValuePair&lt;K, V&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.clear">ICollection&lt;KeyValuePair&lt;K, V&gt;&gt;.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.contains">ICollection&lt;KeyValuePair&lt;K, V&gt;&gt;.Contains(KeyValuePair&lt;K, V&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.copyto">ICollection&lt;KeyValuePair&lt;K, V&gt;&gt;.CopyTo(KeyValuePair&lt;K, V&gt;[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.remove">ICollection&lt;KeyValuePair&lt;K, V&gt;&gt;.Remove(KeyValuePair&lt;K, V&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.count">ICollection&lt;KeyValuePair&lt;K, V&gt;&gt;.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.isreadonly">ICollection&lt;KeyValuePair&lt;K, V&gt;&gt;.IsReadOnly</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator">IEnumerable&lt;KeyValuePair&lt;K, V&gt;&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator">IEnumerable.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_AccessRights_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.AccessRights*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_AccessRights" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.AccessRights">
+  AccessRights
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set <a class="xref" href="MASES.KNet.Replicator.AccessRightsType.html">AccessRightsType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AccessRightsType AccessRights { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Replicator.AccessRightsType.html">AccessRightsType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_BootstrapServers_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.BootstrapServers*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_BootstrapServers" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.BootstrapServers">
+  BootstrapServers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set bootstrap servers</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string BootstrapServers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ConsumePollTimeout_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ConsumePollTimeout*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ConsumePollTimeout" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ConsumePollTimeout">
+  ConsumePollTimeout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set the poll timeout to be used for <a class="xref" href="MASES.KNet.Consumer.IConsumer-4.html#MASES_KNet_Consumer_IConsumer_4_ConsumeAsync_System_Int64_">ConsumeAsync(long)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long ConsumePollTimeout { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ConsumerConfig_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ConsumerConfig*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ConsumerConfig" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ConsumerConfig">
+  ConsumerConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set <a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ConsumerConfigBuilder ConsumerConfig { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ConsumerInstances_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ConsumerInstances*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ConsumerInstances" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ConsumerInstances">
+  ConsumerInstances
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set the number of <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a> instances to be used, null to allocate <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a> based on <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_Partitions">Partitions</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int? ConsumerInstances { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_CurrentConsumersSyncState_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.CurrentConsumersSyncState*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_CurrentConsumersSyncState" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.CurrentConsumersSyncState">
+  CurrentConsumersSyncState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports a snapshot of current sync state the value (<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> means it is in sync) associated to each consumer (the key).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyDictionary&lt;int, bool&gt; CurrentConsumersSyncState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_CurrentConsumersSyncState_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>It is only a snapshot when the property is read and cannot reflect real conditions</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_CurrentPartitionLags_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.CurrentPartitionLags*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_CurrentPartitionLags" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.CurrentPartitionLags">
+  CurrentPartitionLags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports a snapshot of current lags (the value) associated to each partition (the key).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyDictionary&lt;int, long&gt; CurrentPartitionLags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_CurrentPartitionLags_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>It is only a snapshot when the property is read and cannot reflect real conditions</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_GroupId_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.GroupId*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_GroupId" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.GroupId">
+  GroupId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set the group id, if not set a value is generated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GroupId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_IsAssigned_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.IsAssigned*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_IsAssigned" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.IsAssigned">
+  IsAssigned
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the instance was started</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsAssigned { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_IsStarted_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.IsStarted*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_IsStarted" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.IsStarted">
+  IsStarted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the instance was started</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsStarted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_KNetKeySerDes_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.KNetKeySerDes*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_KNetKeySerDes" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.KNetKeySerDes">
+  KNetKeySerDes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> used to create an instance of <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_KeySerDes">KeySerDes</a>&quot;/&gt;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Type KNetKeySerDes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_KNetValueSerDes_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.KNetValueSerDes*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_KNetValueSerDes" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.KNetValueSerDes">
+  KNetValueSerDes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> used to create an instance of <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_ValueSerDes">ValueSerDes</a>&quot;/&gt;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Type KNetValueSerDes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_KeySerDes_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.KeySerDes*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_KeySerDes" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.KeySerDes">
+  KeySerDes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a>, by default it creates a default one based on <code class="typeparamref">K</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISerDes&lt;K, TJVMK&gt; KeySerDes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes</a>&lt;K, TJVMK&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_OnDelayedStore_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.OnDelayedStore*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_OnDelayedStore" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.OnDelayedStore">
+  OnDelayedStore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>It is called to request if the [<code class="typeparamref">K</code>, <code class="typeparamref">V</code>] can be stored in the <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Func&lt;IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;, bool, KeyValuePair&lt;K, V&gt;, bool&gt; OnDelayedStore { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;K, V&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_OnDelayedStore_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The second parameter reports the current value that depends on values set to <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_UpdateMode">UpdateMode</a> and if it contains the <a class="xref" href="MASES.KNet.Replicator.UpdateModeTypes.html#MASES_KNet_Replicator_UpdateModeTypes_Delayed">Delayed</a></p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_Partitions_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.Partitions*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_Partitions" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.Partitions">
+  Partitions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set partitions to use when topic is created for the first time, otherwise reports the partiions of the topic</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Partitions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ProducerConfig_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ProducerConfig*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ProducerConfig" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ProducerConfig">
+  ProducerConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set <a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ProducerConfigBuilder ProducerConfig { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ReplicationFactor_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ReplicationFactor*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ReplicationFactor" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ReplicationFactor">
+  ReplicationFactor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set replication factor to use when topic is created for the first time, otherwise reports the replication factor of the topic</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">short ReplicationFactor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_StateName_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.StateName*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_StateName" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.StateName">
+  StateName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set topic name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string StateName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_TopicConfig_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.TopicConfig*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_TopicConfig" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.TopicConfig">
+  TopicConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set <a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a> to use when topic is created for the first time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TopicConfigBuilder TopicConfig { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.TopicConfigBuilder.html">TopicConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_UpdateMode_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.UpdateMode*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_UpdateMode" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.UpdateMode">
+  UpdateMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set <a class="xref" href="MASES.KNet.Replicator.UpdateModeTypes.html">UpdateModeTypes</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">UpdateModeTypes UpdateMode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Replicator.UpdateModeTypes.html">UpdateModeTypes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ValueSerDes_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ValueSerDes*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ValueSerDes" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ValueSerDes">
+  ValueSerDes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> to use in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a>, by default it creates a default one based on <code class="typeparamref">V</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISerDes&lt;V, TJVMV&gt; ValueSerDes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes</a>&lt;V, TJVMV&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ConsumerMetrics_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ConsumerMetrics*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ConsumerMetrics__1" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ConsumerMetrics``1">
+  ConsumerMetrics&lt;TMetric&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports the <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a> metrics. <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyDictionary&lt;int, Map&lt;MetricName, TMetric&gt;&gt; ConsumerMetrics&lt;TMetric&gt;() where TMetric : Metric</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, TMetric&gt;&gt;</dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> where the key is the current allocated <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a> and value is a <a class="xref" href="api/Java.Util.Map.html">Map</a> of <a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a> and <code class="typeparamref">TMetric</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TMetric</code></dt>
+    <dd><p>Extends <a class="xref" href="Org.Apache.Kafka.Common.Metric.html">Metric</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_Flush_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.Flush*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_Flush" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.Flush">
+  Flush()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits until all outstanding produce requests and delivery report callbacks are completed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Flush()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ProducerMetrics_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ProducerMetrics*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_ProducerMetrics__1" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.ProducerMetrics``1">
+  ProducerMetrics&lt;TMetric&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports the <a class="xref" href="MASES.KNet.Producer.KNetProducer-4.html">KNetProducer&lt;K, V, TJVMK, TJVMV&gt;</a> metrics. <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Map&lt;MetricName, TMetric&gt; ProducerMetrics&lt;TMetric&gt;() where TMetric : Metric</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, TMetric&gt;</dt>
+    <dd><p>A <a class="xref" href="api/Java.Util.Map.html">Map</a> of <a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a> and <code class="typeparamref">TMetric</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TMetric</code></dt>
+    <dd><p>Extends <a class="xref" href="Org.Apache.Kafka.Common.Metric.html">Metric</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_Start_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.Start*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_Start" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start this <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a>: create the <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_StateName">StateName</a> topic if not available, allocates Producer and Consumer, sets serializer/deserializer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Some errors occurred</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_StartAndWait_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.StartAndWait*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_StartAndWait_System_Int32_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.StartAndWait(System.Int32)">
+  StartAndWait(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start this <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a>: create the <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_StateName">StateName</a> topic if not available, allocates Producer and Consumers, sets serializer/deserializer
+Then waits its synchronization with <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_StateName">StateName</a> topic which stores dictionary data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool StartAndWait(int timeout = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of milliseconds to wait, or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.timeout.infinite">Infinite</a> to wait indefinitely</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current instance synchronize within the given <code class="paramref">timeout</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Some errors occurred or the provided <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_AccessRights">AccessRights</a> do not include the <a class="xref" href="MASES.KNet.Replicator.AccessRightsType.html#MASES_KNet_Replicator_AccessRightsType_Read">Read</a> flag</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_SyncWait_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.SyncWait*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_SyncWait_System_Int32_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.SyncWait(System.Int32)">
+  SyncWait(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits that <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a> is synchronized to the <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_StateName">StateName</a> topic which stores dictionary data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SyncWait(int timeout = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of milliseconds to wait, or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.timeout.infinite">Infinite</a> to wait indefinitely</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current instance synchronize within the given <code class="paramref">timeout</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The provided <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_AccessRights">AccessRights</a> do not include the <a class="xref" href="MASES.KNet.Replicator.AccessRightsType.html#MASES_KNet_Replicator_AccessRightsType_Read">Read</a> flag</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_WaitForStateAssignment_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.WaitForStateAssignment*"></a>
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_WaitForStateAssignment_System_Int32_" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.WaitForStateAssignment(System.Int32)">
+  WaitForStateAssignment(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for all paritions assignment of the <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_StateName">StateName</a> topic which stores dictionary data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool WaitForStateAssignment(int timeout = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of milliseconds to wait, or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.timeout.infinite">Infinite</a> to wait indefinitely</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current instance receives a signal within the given <code class="paramref">timeout</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The provided <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html#MASES_KNet_Replicator_IKNetCompactedReplicator_4_AccessRights">AccessRights</a> do not include the <a class="xref" href="MASES.KNet.Replicator.AccessRightsType.html#MASES_KNet_Replicator_AccessRightsType_Read">Read</a> flag</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_OnLocalAdd" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.OnLocalAdd">
+  OnLocalAdd
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">K</code>, <code class="typeparamref">V</code>] is added on this <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;, KeyValuePair&lt;K, V&gt;&gt; OnLocalAdd</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;K, V&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_OnLocalRemove" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.OnLocalRemove">
+  OnLocalRemove
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">K</code>, <code class="typeparamref">V</code>] is removed from this <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;, KeyValuePair&lt;K, V&gt;&gt; OnLocalRemove</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;K, V&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_OnLocalUpdate" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.OnLocalUpdate">
+  OnLocalUpdate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">K</code>, <code class="typeparamref">V</code>] is updated on this <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;, KeyValuePair&lt;K, V&gt;&gt; OnLocalUpdate</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;K, V&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_OnRemoteAdd" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.OnRemoteAdd">
+  OnRemoteAdd
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">K</code>, <code class="typeparamref">V</code>] is added by consuming data from the others <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;, KeyValuePair&lt;K, V&gt;&gt; OnRemoteAdd</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;K, V&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_OnRemoteRemove" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.OnRemoteRemove">
+  OnRemoteRemove
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">K</code>, <code class="typeparamref">V</code>] is removed by consuming data from the others <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;, KeyValuePair&lt;K, V&gt;&gt; OnRemoteRemove</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;K, V&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="MASES_KNet_Replicator_IKNetCompactedReplicator_4_OnRemoteUpdate" data-uid="MASES.KNet.Replicator.IKNetCompactedReplicator`4.OnRemoteUpdate">
+  OnRemoteUpdate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when a [<code class="typeparamref">K</code>, <code class="typeparamref">V</code>] is updated by consuming data from the others <a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;, KeyValuePair&lt;K, V&gt;&gt; OnRemoteUpdate</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;K, V&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L95" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

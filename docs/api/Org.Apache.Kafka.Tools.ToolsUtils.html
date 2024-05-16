@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ToolsUtils | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ToolsUtils.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/org/apache/kafka/tools/ToolsUtils.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ToolsUtils.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ToolsUtils.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/org/apache/kafka/tools/ToolsUtils.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/org/apache/kafka/tools/ToolsUtils.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -297,6 +297,9 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -327,7 +330,10 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -479,7 +485,7 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Tools_ToolsUtils__ctor" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.#ctor">
   ToolsUtils()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L897"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L1117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -506,7 +512,7 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Tools_ToolsUtils__ctor_System_Object___" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.#ctor(System.Object[])">
   ToolsUtils(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L901"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L1121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -542,7 +548,7 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Tools_ToolsUtils_BridgeClassName" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L908"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L1128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -574,7 +580,7 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Tools_ToolsUtils_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L912"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L1132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -606,7 +612,7 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Tools_ToolsUtils_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L916"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L1136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -638,7 +644,7 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Tools_ToolsUtils_IsBridgeInterface" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L920"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L1140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -670,7 +676,7 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Tools_ToolsUtils_IsBridgeStatic" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L924"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/AllPackageClasses.cs/#L1144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -702,14 +708,58 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
 </h2>
 
 
+  <a id="Org_Apache_Kafka_Tools_ToolsUtils_Duplicates_" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.Duplicates*"></a>
+
+  <h3 id="Org_Apache_Kafka_Tools_ToolsUtils_Duplicates__1_Java_Util_List___0__" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.Duplicates``1(Java.Util.List{``0})">
+  Duplicates&lt;T&gt;(List&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/ToolsUtils.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/org/apache/kafka/tools/ToolsUtils.html#duplicates-java.util.List-">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/org/apache/kafka/tools/ToolsUtils.html#duplicates-java.util.List-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Set&lt;T&gt; Duplicates&lt;T&gt;(List&lt;T&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;T&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;T&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Tools_ToolsUtils_PrettyPrintTable_" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.PrettyPrintTable*"></a>
 
   <h3 id="Org_Apache_Kafka_Tools_ToolsUtils_PrettyPrintTable_Java_Util_List_Java_Lang_String__Java_Util_List_Java_Util_List_Java_Lang_String___Java_Io_PrintStream_" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.PrettyPrintTable(Java.Util.List{Java.Lang.String},Java.Util.List{Java.Util.List{Java.Lang.String}},Java.Io.PrintStream)">
   PrettyPrintTable(List&lt;String&gt;, List&lt;List&lt;String&gt;&gt;, PrintStream)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/ToolsUtils.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/ToolsUtils.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ToolsUtils.html#prettyPrintTable-java.util.List-java.util.List-java.io.PrintStream-">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ToolsUtils.html#prettyPrintTable-java.util.List-java.util.List-java.io.PrintStream-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/org/apache/kafka/tools/ToolsUtils.html#prettyPrintTable-java.util.List-java.util.List-java.io.PrintStream-">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/org/apache/kafka/tools/ToolsUtils.html#prettyPrintTable-java.util.List-java.util.List-java.io.PrintStream-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -745,10 +795,10 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Tools_ToolsUtils_PrintMetrics__1_Java_Util_Map_Org_Apache_Kafka_Common_MetricName___0__" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.PrintMetrics``1(Java.Util.Map{Org.Apache.Kafka.Common.MetricName,``0})">
   PrintMetrics&lt;Arg0ExtendsOrg_Apache_Kafka_Common_Metric&gt;(Map&lt;MetricName, Arg0ExtendsOrg_Apache_Kafka_Common_Metric&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/ToolsUtils.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/ToolsUtils.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ToolsUtils.html#printMetrics-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.6.2/org/apache/kafka/tools/ToolsUtils.html#printMetrics-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/org/apache/kafka/tools/ToolsUtils.html#printMetrics-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/org/apache/kafka/tools/ToolsUtils.html#printMetrics-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -777,6 +827,44 @@ Class ToolsUtils  <a class="header-action link-secondary" title="View source" hr
 
 
 
+
+
+
+  <a id="Org_Apache_Kafka_Tools_ToolsUtils_ValidateBootstrapServer_" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.ValidateBootstrapServer*"></a>
+
+  <h3 id="Org_Apache_Kafka_Tools_ToolsUtils_ValidateBootstrapServer_Java_Lang_String_" data-uid="Org.Apache.Kafka.Tools.ToolsUtils.ValidateBootstrapServer(Java.Lang.String)">
+  ValidateBootstrapServer(String)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/ToolsUtils.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/org/apache/kafka/tools/ToolsUtils.html#validateBootstrapServer-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.0/org/apache/kafka/tools/ToolsUtils.html#validateBootstrapServer-java.lang.String-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ValidateBootstrapServer(String arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dd></dd>
+  </dl>
 
 
 

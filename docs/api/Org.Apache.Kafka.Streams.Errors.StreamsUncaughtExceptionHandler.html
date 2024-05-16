@@ -129,6 +129,12 @@ Class StreamsUncaughtExceptionHandler  <a class="header-action link-secondary" t
     </dd>
   </dl>
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandlerDirect.html">StreamsUncaughtExceptionHandlerDirect</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -320,6 +326,9 @@ Class StreamsUncaughtExceptionHandler  <a class="header-action link-secondary" t
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -350,7 +359,10 @@ Class StreamsUncaughtExceptionHandler  <a class="header-action link-secondary" t
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -536,7 +548,7 @@ Class StreamsUncaughtExceptionHandler  <a class="header-action link-secondary" t
 
   <h3 id="Org_Apache_Kafka_Streams_Errors_StreamsUncaughtExceptionHandler_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Errors/AllPackageClasses.cs/#L559"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Errors/AllPackageClasses.cs/#L563"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -564,6 +576,38 @@ Class StreamsUncaughtExceptionHandler  <a class="header-action link-secondary" t
 
 
 
+  <a id="Org_Apache_Kafka_Streams_Errors_StreamsUncaughtExceptionHandler_InitHandlers_" data-uid="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.InitHandlers*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Errors_StreamsUncaughtExceptionHandler_InitHandlers" data-uid="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.InitHandlers">
+  InitHandlers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Errors/AllPackageClasses.cs/#L558"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable/disable handlers initialization, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool InitHandlers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_Errors_StreamsUncaughtExceptionHandler_OnHandle_" data-uid="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.OnHandle*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_Errors_StreamsUncaughtExceptionHandler_OnHandle" data-uid="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.OnHandle">
@@ -571,7 +615,7 @@ Class StreamsUncaughtExceptionHandler  <a class="header-action link-secondary" t
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Errors/StreamsUncaughtExceptionHandler.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle-java.lang.Throwable-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle-java.lang.Throwable-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle-java.lang.Throwable-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle-java.lang.Throwable-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -610,7 +654,7 @@ Class StreamsUncaughtExceptionHandler  <a class="header-action link-secondary" t
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Errors/StreamsUncaughtExceptionHandler.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle-java.lang.Throwable-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle-java.lang.Throwable-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle-java.lang.Throwable-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle-java.lang.Throwable-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

@@ -188,6 +188,12 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRetries_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithRetries(int)</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_RetryBackoffMaxMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.RetryBackoffMaxMs</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRetryBackoffMaxMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithRetryBackoffMaxMs(long)</a>
+    </div>
+    <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_RetryBackoffMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.RetryBackoffMs</a>
     </div>
     <div>
@@ -272,6 +278,12 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultListValueSerdeTypeClass_Java_Lang_Class_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithDefaultListValueSerdeTypeClass(Class)</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_EnableMetricsPush">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.EnableMetricsPush</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithEnableMetricsPush_System_Boolean_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithEnableMetricsPush(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_GroupId">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.GroupId</a>
     </div>
     <div>
@@ -341,6 +353,9 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.ToMap()</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_AutoSelectBuffered">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.AutoSelectBuffered</a>
+    </div>
+    <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetKeySerDes">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.KNetKeySerDes</a>
     </div>
     <div>
@@ -350,13 +365,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__2">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.BuildKeySerDes&lt;TKey, TJVMTKey&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__1">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.BuildKeySerDes&lt;TKey&gt;()</a>
-    </div>
-    <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__2">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.BuildValueSerDes&lt;TValue, TJVMTValue&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__1">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.BuildValueSerDes&lt;TValue&gt;()</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Clear">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.Clear()</a>
@@ -419,7 +428,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_AllowAutoCreateTopics" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.AllowAutoCreateTopics">
   AllowAutoCreateTopics
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L295"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ALLOW_AUTO_CREATE_TOPICS_CONFIG">ALLOW_AUTO_CREATE_TOPICS_CONFIG</a></p>
@@ -515,7 +524,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_CheckCrcs" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.CheckCrcs">
   CheckCrcs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CHECK_CRCS_CONFIG">CHECK_CRCS_CONFIG</a></p>
@@ -579,7 +588,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_ExcludeInternalTopics" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.ExcludeInternalTopics">
   ExcludeInternalTopics
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L268"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_EXCLUDE_INTERNAL_TOPICS_CONFIG">EXCLUDE_INTERNAL_TOPICS_CONFIG</a></p>
@@ -703,11 +712,75 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_GroupProtocol_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.GroupProtocol*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_GroupProtocol" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.GroupProtocol">
+  GroupProtocol
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_GROUP_PROTOCOL_CONFIG">GROUP_PROTOCOL_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GroupProtocol { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_GroupRemoteAssignor_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.GroupRemoteAssignor*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_GroupRemoteAssignor" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.GroupRemoteAssignor">
+  GroupRemoteAssignor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_GROUP_REMOTE_ASSIGNOR_CONFIG">GROUP_REMOTE_ASSIGNOR_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GroupRemoteAssignor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_InterceptorClasses_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.InterceptorClasses*"></a>
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_InterceptorClasses" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.InterceptorClasses">
   InterceptorClasses
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_INTERCEPTOR_CLASSES_CONFIG">INTERCEPTOR_CLASSES_CONFIG</a></p>
@@ -739,7 +812,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_IsolationLevel" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.IsolationLevel">
   IsolationLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L282"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ISOLATION_LEVEL_CONFIG">ISOLATION_LEVEL_CONFIG</a></p>
@@ -771,7 +844,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_KeyDeserializerClass" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.KeyDeserializerClass">
   KeyDeserializerClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_KEY_DESERIALIZER_CLASS_CONFIG">KEY_DESERIALIZER_CLASS_CONFIG</a></p>
@@ -803,7 +876,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_MaxPartitionFetchBytes" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.MaxPartitionFetchBytes">
   MaxPartitionFetchBytes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L203"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_PARTITION_FETCH_BYTES_CONFIG">MAX_PARTITION_FETCH_BYTES_CONFIG</a></p>
@@ -899,7 +972,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_SecurityProviders" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.SecurityProviders">
   SecurityProviders
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L308"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_SECURITY_PROVIDERS_CONFIG">SECURITY_PROVIDERS_CONFIG</a></p>
@@ -931,7 +1004,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_ValueDeserializerClass" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.ValueDeserializerClass">
   ValueDeserializerClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L242"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_VALUE_DESERIALIZER_CLASS_CONFIG">VALUE_DESERIALIZER_CLASS_CONFIG</a></p>
@@ -967,7 +1040,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithAllowAutoCreateTopics_System_Boolean_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithAllowAutoCreateTopics(System.Boolean)">
   WithAllowAutoCreateTopics(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L299"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ALLOW_AUTO_CREATE_TOPICS_CONFIG">ALLOW_AUTO_CREATE_TOPICS_CONFIG</a></p>
@@ -1078,7 +1151,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithCheckCrcs_System_Boolean_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithCheckCrcs(System.Boolean)">
   WithCheckCrcs(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CHECK_CRCS_CONFIG">CHECK_CRCS_CONFIG</a></p>
@@ -1152,7 +1225,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithExcludeInternalTopics_System_Boolean_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithExcludeInternalTopics(System.Boolean)">
   WithExcludeInternalTopics(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L272"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_EXCLUDE_INTERNAL_TOPICS_CONFIG">EXCLUDE_INTERNAL_TOPICS_CONFIG</a></p>
@@ -1296,11 +1369,85 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithGroupProtocol_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithGroupProtocol*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithGroupProtocol_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithGroupProtocol(System.String)">
+  WithGroupProtocol(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_GROUP_PROTOCOL_CONFIG">GROUP_PROTOCOL_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithGroupProtocol(string groupProtocol)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>groupProtocol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithGroupRemoteAssignor_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithGroupRemoteAssignor*"></a>
+
+  <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithGroupRemoteAssignor_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithGroupRemoteAssignor(System.String)">
+  WithGroupRemoteAssignor(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_GROUP_REMOTE_ASSIGNOR_CONFIG">GROUP_REMOTE_ASSIGNOR_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerConfigBuilder WithGroupRemoteAssignor(string groupRemoteAssignor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>groupRemoteAssignor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithInterceptorClasses_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithInterceptorClasses*"></a>
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithInterceptorClasses_Java_Util_List_Java_Lang_Class__" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithInterceptorClasses(Java.Util.List{Java.Lang.Class})">
   WithInterceptorClasses(List&lt;Class&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L259"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_INTERCEPTOR_CLASSES_CONFIG">INTERCEPTOR_CLASSES_CONFIG</a></p>
@@ -1337,7 +1484,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithIsolationLevel_Org_Apache_Kafka_Common_IsolationLevel_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithIsolationLevel(Org.Apache.Kafka.Common.IsolationLevel)">
   WithIsolationLevel(IsolationLevel)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L286"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ISOLATION_LEVEL_CONFIG">ISOLATION_LEVEL_CONFIG</a></p>
@@ -1374,7 +1521,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithKeyDeserializerClass_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithKeyDeserializerClass(System.String)">
   WithKeyDeserializerClass(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_KEY_DESERIALIZER_CLASS_CONFIG">KEY_DESERIALIZER_CLASS_CONFIG</a></p>
@@ -1411,7 +1558,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithMaxPartitionFetchBytes_System_Int32_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithMaxPartitionFetchBytes(System.Int32)">
   WithMaxPartitionFetchBytes(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L207"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_PARTITION_FETCH_BYTES_CONFIG">MAX_PARTITION_FETCH_BYTES_CONFIG</a></p>
@@ -1522,7 +1669,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithSecurityProviders_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithSecurityProviders(System.String)">
   WithSecurityProviders(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L312"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_SECURITY_PROVIDERS_CONFIG">SECURITY_PROVIDERS_CONFIG</a></p>
@@ -1559,7 +1706,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Consumer_ConsumerConfigBuilder_WithValueDeserializerClass_System_String_" data-uid="MASES.KNet.Consumer.ConsumerConfigBuilder.WithValueDeserializerClass(System.String)">
   WithValueDeserializerClass(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/ConsumerConfigBuilder.cs/#L246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html#Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_VALUE_DESERIALIZER_CLASS_CONFIG">VALUE_DESERIALIZER_CLASS_CONFIG</a></p>

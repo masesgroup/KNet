@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt; | MASES Group - KNet </title>
+      <title>Class ReadOnlyKeyValueStore&lt;K, V, TJVMK, TJVMV&gt; | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt; | MASES Group - KNet ">
+      <meta name="title" content="Class ReadOnlyKeyValueStore&lt;K, V, TJVMK, TJVMV&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
       <meta name="description" content="KNet implementation of">
       <link rel="icon" href="../images/favicon.ico">
@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_State_ReadOnlyKeyValueStore_4" data-uid="MASES.KNet.Streams.State.ReadOnlyKeyValueStore`4" class="text-break">
-Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/ReadOnlyKeyValueStore.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class ReadOnlyKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/ReadOnlyKeyValueStore.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,23 +98,23 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt; : ManagedStore&lt;ReadOnlyKeyValueStore&lt;TJVMTKey, TJVMTValue&gt;&gt;, IManagedStore&lt;ReadOnlyKeyValueStore&lt;TJVMTKey, TJVMTValue&gt;&gt;, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ReadOnlyKeyValueStore&lt;K, V, TJVMK, TJVMV&gt; : ManagedStore&lt;ReadOnlyKeyValueStore&lt;TJVMK, TJVMV&gt;&gt;, IManagedStore&lt;ReadOnlyKeyValueStore&lt;TJVMK, TJVMV&gt;&gt;, IGenericSerDesFactoryApplier</code></pre>
   </div>
 
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>TKey</code></dt>
+    <dt><code>K</code></dt>
     <dd><p>The key type</p>
 </dd>
-    <dt><code>TValue</code></dt>
+    <dt><code>V</code></dt>
     <dd><p>The value type</p>
 </dd>
-    <dt><code>TJVMTKey</code></dt>
+    <dt><code>TJVMK</code></dt>
     <dd><p>The JVM key type</p>
 </dd>
-    <dt><code>TJVMTValue</code></dt>
+    <dt><code>TJVMV</code></dt>
     <dd><p>The JVM value type</p>
 </dd>
   </dl>
@@ -123,15 +123,15 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html">ManagedStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;TJVMTKey, TJVMTValue&gt;&gt;</div>
-      <div><span class="xref">ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;</span></div>
+      <div><a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html">ManagedStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;TJVMK, TJVMV&gt;&gt;</div>
+      <div><span class="xref">ReadOnlyKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;</span></div>
     </dd>
   </dl>
 
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="MASES.KNet.Streams.State.IManagedStore-1.html">IManagedStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;TJVMTKey, TJVMTValue&gt;&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Streams.State.IManagedStore-1.html">IManagedStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;TJVMK, TJVMV&gt;&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
     </dd>
   </dl>
@@ -139,7 +139,7 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
-      <div><a class="xref" href="MASES.KNet.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore&lt;TKey, TValue&gt;</a></div>
+      <div><a class="xref" href="MASES.KNet.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore&lt;K, V&gt;</a></div>
     </dd>
   </dl>
 
@@ -147,10 +147,10 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html#MASES_KNet_Streams_State_ManagedStore_1_Store">ManagedStore&lt;ReadOnlyKeyValueStore&lt;TJVMTKey, TJVMTValue&gt;&gt;.Store</a>
+      <a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html#MASES_KNet_Streams_State_ManagedStore_1_Store">ManagedStore&lt;ReadOnlyKeyValueStore&lt;TJVMK, TJVMV&gt;&gt;.Store</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html#MASES_KNet_Streams_State_ManagedStore_1_Factory">ManagedStore&lt;ReadOnlyKeyValueStore&lt;TJVMTKey, TJVMTValue&gt;&gt;.Factory</a>
+      <a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html#MASES_KNet_Streams_State_ManagedStore_1_Factory">ManagedStore&lt;ReadOnlyKeyValueStore&lt;TJVMK, TJVMV&gt;&gt;.Factory</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -196,7 +196,7 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract KeyValueIterator&lt;TKey, TValue&gt; All { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; All { get; }</code></pre>
   </div>
 
 
@@ -205,8 +205,8 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;TKey, TValue&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator&lt;TKey, TValue&gt;</a></p>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -262,7 +262,7 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract KeyValueIterator&lt;TKey, TValue&gt; ReverseAll { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; ReverseAll { get; }</code></pre>
   </div>
 
 
@@ -271,8 +271,8 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;TKey, TValue&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator&lt;TKey, TValue&gt;</a></p>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -290,7 +290,7 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
   <a id="MASES_KNet_Streams_State_ReadOnlyKeyValueStore_4_Get_" data-uid="MASES.KNet.Streams.State.ReadOnlyKeyValueStore`4.Get*"></a>
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlyKeyValueStore_4_Get__0_" data-uid="MASES.KNet.Streams.State.ReadOnlyKeyValueStore`4.Get(`0)">
-  Get(TKey)
+  Get(K)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/ReadOnlyKeyValueStore.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -299,20 +299,20 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TValue Get(TKey arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract V Get(K arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <span class="xref">TKey</span></dt>
-    <dd><p><code class="typeparamref">TKey</code></p>
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">TValue</span></dt>
-    <dd><p><code class="typeparamref">TValue</code></p>
+    <dt><span class="xref">V</span></dt>
+    <dd><p><code class="typeparamref">V</code></p>
 </dd>
   </dl>
 
@@ -329,7 +329,7 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
   <a id="MASES_KNet_Streams_State_ReadOnlyKeyValueStore_4_Range_" data-uid="MASES.KNet.Streams.State.ReadOnlyKeyValueStore`4.Range*"></a>
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlyKeyValueStore_4_Range__0__0_" data-uid="MASES.KNet.Streams.State.ReadOnlyKeyValueStore`4.Range(`0,`0)">
-  Range(TKey, TKey)
+  Range(K, K)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/ReadOnlyKeyValueStore.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -338,23 +338,23 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract KeyValueIterator&lt;TKey, TValue&gt; Range(TKey arg0, TKey arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; Range(K arg0, K arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <span class="xref">TKey</span></dt>
-    <dd><p><code class="typeparamref">TKey</code></p>
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
 </dd>
-    <dt><code>arg1</code> <span class="xref">TKey</span></dt>
-    <dd><p><code class="typeparamref">TValue</code></p>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">V</code></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;TKey, TValue&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator&lt;TKey, TValue&gt;</a></p>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -371,7 +371,7 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
   <a id="MASES_KNet_Streams_State_ReadOnlyKeyValueStore_4_ReverseRange_" data-uid="MASES.KNet.Streams.State.ReadOnlyKeyValueStore`4.ReverseRange*"></a>
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlyKeyValueStore_4_ReverseRange__0__0_" data-uid="MASES.KNet.Streams.State.ReadOnlyKeyValueStore`4.ReverseRange(`0,`0)">
-  ReverseRange(TKey, TKey)
+  ReverseRange(K, K)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/ReadOnlyKeyValueStore.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -380,23 +380,23 @@ Class ReadOnlyKeyValueStore&lt;TKey, TValue, TJVMTKey, TJVMTValue&gt;  <a class=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract KeyValueIterator&lt;TKey, TValue&gt; ReverseRange(TKey arg0, TKey arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; ReverseRange(K arg0, K arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <span class="xref">TKey</span></dt>
-    <dd><p><code class="typeparamref">TKey</code></p>
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
 </dd>
-    <dt><code>arg1</code> <span class="xref">TKey</span></dt>
-    <dd><p><code class="typeparamref">TKey</code></p>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;TKey, TValue&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator&lt;TKey, TValue&gt;</a></p>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 

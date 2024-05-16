@@ -138,6 +138,7 @@ Class Reducer&lt;V&gt;  <a class="header-action link-secondary" title="View sour
     <dt>Derived</dt>
     <dd>
       <div><a class="xref" href="MASES.KNet.Streams.Kstream.Reducer-2.html">Reducer&lt;V, TJVMV&gt;</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ReducerDirect-1.html">ReducerDirect&lt;V&gt;</a></div>
     </dd>
   </dl>
 
@@ -331,6 +332,9 @@ Class Reducer&lt;V&gt;  <a class="header-action link-secondary" title="View sour
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -361,7 +365,10 @@ Class Reducer&lt;V&gt;  <a class="header-action link-secondary" title="View sour
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -516,7 +523,7 @@ Class Reducer&lt;V&gt;  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Reducer_1__ctor" data-uid="Org.Apache.Kafka.Streams.Kstream.Reducer`1.#ctor">
   Reducer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1940"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L2473"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -547,7 +554,7 @@ Class Reducer&lt;V&gt;  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Reducer_1_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Kstream.Reducer`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1945"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L2482"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -575,6 +582,38 @@ Class Reducer&lt;V&gt;  <a class="header-action link-secondary" title="View sour
 
 
 
+  <a id="Org_Apache_Kafka_Streams_Kstream_Reducer_1_InitHandlers_" data-uid="Org.Apache.Kafka.Streams.Kstream.Reducer`1.InitHandlers*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Reducer_1_InitHandlers" data-uid="Org.Apache.Kafka.Streams.Kstream.Reducer`1.InitHandlers">
+  InitHandlers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L2477"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable/disable handlers initialization, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool InitHandlers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_Kstream_Reducer_1_OnApply_" data-uid="Org.Apache.Kafka.Streams.Kstream.Reducer`1.OnApply*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Reducer_1_OnApply" data-uid="Org.Apache.Kafka.Streams.Kstream.Reducer`1.OnApply">
@@ -582,7 +621,7 @@ Class Reducer&lt;V&gt;  <a class="header-action link-secondary" title="View sour
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Reducer.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -621,7 +660,7 @@ Class Reducer&lt;V&gt;  <a class="header-action link-secondary" title="View sour
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Reducer.cs/#L157"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

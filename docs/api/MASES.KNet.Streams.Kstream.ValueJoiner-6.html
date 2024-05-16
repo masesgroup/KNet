@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_ValueJoiner_6" data-uid="MASES.KNet.Streams.Kstream.ValueJoiner`6" class="text-break">
-Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -115,11 +115,14 @@ Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-ac
     <dd><p>joined value type</p>
 </dd>
     <dt><code>TJVMV1</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">V1</code></p>
+</dd>
     <dt><code>TJVMV2</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">V2</code></p>
+</dd>
     <dt><code>TJVMVR</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">VR</code></p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -159,6 +162,9 @@ Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-ac
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueJoiner-3.html#Org_Apache_Kafka_Streams_Kstream_ValueJoiner_3_InitHandlers">ValueJoiner&lt;TJVMV1, TJVMV2, TJVMVR&gt;.InitHandlers</a>
+    </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueJoiner-3.html#Org_Apache_Kafka_Streams_Kstream_ValueJoiner_3_BridgeClassName">ValueJoiner&lt;TJVMV1, TJVMV2, TJVMVR&gt;.BridgeClassName</a>
     </div>
@@ -361,6 +367,9 @@ Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-ac
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -391,7 +400,10 @@ Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-ac
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -543,7 +555,7 @@ Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-ac
 
   <h3 id="MASES_KNet_Streams_Kstream_ValueJoiner_6_Factory" data-uid="MASES.KNet.Streams.Kstream.ValueJoiner`6.Factory">
   Factory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the current <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></p>
@@ -575,7 +587,7 @@ Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-ac
 
   <h3 id="MASES_KNet_Streams_Kstream_ValueJoiner_6_OnApply" data-uid="MASES.KNet.Streams.Kstream.ValueJoiner`6.OnApply">
   OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
@@ -610,7 +622,7 @@ Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-ac
 
   <h3 id="MASES_KNet_Streams_Kstream_ValueJoiner_6_Value1" data-uid="MASES.KNet.Streams.Kstream.ValueJoiner`6.Value1">
   Value1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">V1</code> content</p>
@@ -642,7 +654,7 @@ Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-ac
 
   <h3 id="MASES_KNet_Streams_Kstream_ValueJoiner_6_Value2" data-uid="MASES.KNet.Streams.Kstream.ValueJoiner`6.Value2">
   Value2
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">V2</code> content</p>
@@ -678,7 +690,7 @@ Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-ac
 
   <h3 id="MASES_KNet_Streams_Kstream_ValueJoiner_6_Apply" data-uid="MASES.KNet.Streams.Kstream.ValueJoiner`6.Apply">
   Apply()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
@@ -711,7 +723,7 @@ Class ValueJoiner&lt;V1, V2, VR, TJVMV1, TJVMV2, TJVMVR&gt;  <a class="header-ac
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueJoiner.cs/#L33" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class FutureCallback&lt;T&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/FutureCallback.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/FutureCallback.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/FutureCallback.html">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/FutureCallback.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/FutureCallback.html">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/FutureCallback.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -174,6 +174,9 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Connect.Util.ConvertingFutureCallback-2.html#Org_Apache_Kafka_Connect_Util_ConvertingFutureCallback_2_OnCompletion_MASES_JCOBridge_C2JBridge_JVMBridgeException__0_">ConvertingFutureCallback&lt;T, T&gt;.OnCompletion(JVMBridgeException, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Connect.Util.ConvertingFutureCallback-2.html#Org_Apache_Kafka_Connect_Util_ConvertingFutureCallback_2_RecordStage_Org_Apache_Kafka_Connect_Util_Stage_">ConvertingFutureCallback&lt;T, T&gt;.RecordStage(Stage)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConvertingFutureCallback&lt;T, T&gt;&gt;.SExecute(IJavaType, string, params object[])</a>
@@ -341,6 +344,9 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -371,7 +377,10 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Execute&lt;T&gt;(params T[])</span>
@@ -526,7 +535,7 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Org_Apache_Kafka_Connect_Util_FutureCallback_1__ctor" data-uid="Org.Apache.Kafka.Connect.Util.FutureCallback`1.#ctor">
   FutureCallback()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L403"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L447"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -556,7 +565,7 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/FutureCallback.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/FutureCallback.html#org.apache.kafka.connect.util.FutureCallback(org.apache.kafka.connect.util.Callback)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/FutureCallback.html#org.apache.kafka.connect.util.FutureCallback(org.apache.kafka.connect.util.Callback)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/FutureCallback.html#org.apache.kafka.connect.util.FutureCallback(org.apache.kafka.connect.util.Callback)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/FutureCallback.html#org.apache.kafka.connect.util.FutureCallback(org.apache.kafka.connect.util.Callback)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -586,7 +595,7 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Org_Apache_Kafka_Connect_Util_FutureCallback_1__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Util.FutureCallback`1.#ctor(System.Object[])">
   FutureCallback(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L407"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L451"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -622,7 +631,7 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Org_Apache_Kafka_Connect_Util_FutureCallback_1_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Util.FutureCallback`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L458"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -654,7 +663,7 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Org_Apache_Kafka_Connect_Util_FutureCallback_1_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Util.FutureCallback`1.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L418"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L462"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -686,7 +695,7 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Org_Apache_Kafka_Connect_Util_FutureCallback_1_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Util.FutureCallback`1.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L422"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L466"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -718,7 +727,7 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Org_Apache_Kafka_Connect_Util_FutureCallback_1_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Util.FutureCallback`1.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L470"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -750,7 +759,7 @@ Class FutureCallback&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Org_Apache_Kafka_Connect_Util_FutureCallback_1_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Util.FutureCallback`1.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L430"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L474"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>

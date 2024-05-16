@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class KNetConsumer&lt;K, V&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="KNet extension of">
+      <meta name="description" content="Extends  using array of">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Consumer_KNetConsumer_2" data-uid="MASES.KNet.Consumer.KNetConsumer`2" class="text-break">
-Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L103"><i class="bi bi-code-slash"></i></a>
+Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L360"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,12 +93,12 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html">KafkaConsumer&lt;K, V&gt;</a></p>
+  <div class="markdown summary"><p>Extends <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a> using array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KNetConsumer&lt;K, V&gt; : KafkaConsumer&lt;byte[], byte[]&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IJVMBridgeBaseStatic, IConsumer&lt;K, V&gt;, IConsumer&lt;byte[], byte[]&gt;, IConsumer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable, ICloseable, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class KNetConsumer&lt;K, V&gt; : KNetConsumer&lt;K, V, byte[], byte[]&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IJVMBridgeBaseStatic, IConsumer&lt;K, V, byte[], byte[]&gt;, IConsumer&lt;byte[], byte[]&gt;, IConsumer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable, ICloseable, IAutoCloseable</code></pre>
   </div>
 
 
@@ -124,6 +124,7 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
       <div><a class="xref" href="api/Java.Io.Closeable.html">Closeable</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer-2.html">Consumer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
       <div><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html">KafkaConsumer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
       <div><span class="xref">KNetConsumer&lt;K, V&gt;</span></div>
     </dd>
   </dl>
@@ -134,7 +135,7 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><span class="xref">IJVMBridgeCore</span></div>
       <div><span class="xref">IJVMBridgeBaseStatic</span></div>
-      <div><a class="xref" href="MASES.KNet.Consumer.IConsumer-2.html">IConsumer</a>&lt;K, V&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Consumer.IConsumer-4.html">IConsumer</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
       <div><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer-2.html">IConsumer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
       <div><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IConsumer.html">IConsumer</a></div>
       <div><span class="xref">IJVMBridgeBase</span></div>
@@ -149,6 +150,36 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html#MASES_KNet_Consumer_KNetConsumer_4_BridgeClassName">KNetConsumer&lt;K, V, byte[], byte[]&gt;.BridgeClassName</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html#MASES_KNet_Consumer_KNetConsumer_4_Poll_System_Int64_">KNetConsumer&lt;K, V, byte[], byte[]&gt;.Poll(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html#MASES_KNet_Consumer_KNetConsumer_4_Poll_System_TimeSpan_">KNetConsumer&lt;K, V, byte[], byte[]&gt;.Poll(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html#MASES_KNet_Consumer_KNetConsumer_4_Dispose">KNetConsumer&lt;K, V, byte[], byte[]&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html#MASES_KNet_Consumer_KNetConsumer_4_SetCallback_System_Action_MASES_KNet_Consumer_ConsumerRecord__0__1__2__3___">KNetConsumer&lt;K, V, byte[], byte[]&gt;.SetCallback(Action&lt;ConsumerRecord&lt;K, V, byte[], byte[]&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html#MASES_KNet_Consumer_KNetConsumer_4_IsCompleting">KNetConsumer&lt;K, V, byte[], byte[]&gt;.IsCompleting</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html#MASES_KNet_Consumer_KNetConsumer_4_IsEmpty">KNetConsumer&lt;K, V, byte[], byte[]&gt;.IsEmpty</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html#MASES_KNet_Consumer_KNetConsumer_4_WaitingMessages">KNetConsumer&lt;K, V, byte[], byte[]&gt;.WaitingMessages</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html#MASES_KNet_Consumer_KNetConsumer_4_ConsumeAsync_System_Int64_">KNetConsumer&lt;K, V, byte[], byte[]&gt;.ConsumeAsync(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html#MASES_KNet_Consumer_KNetConsumer_4_Consume_System_Int64_System_Action_MASES_KNet_Consumer_ConsumerRecord__0__1__2__3___">KNetConsumer&lt;K, V, byte[], byte[]&gt;.Consume(long, Action&lt;ConsumerRecord&lt;K, V, byte[], byte[]&gt;&gt;)</a>
+    </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Poll_System_Int64_">KafkaConsumer&lt;byte[], byte[]&gt;.Poll(long)</a>
     </div>
@@ -231,6 +262,9 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Poll_Java_Time_Duration_">KafkaConsumer&lt;byte[], byte[]&gt;.Poll(Duration)</a>
     </div>
     <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_ClientInstanceId_Java_Time_Duration_">KafkaConsumer&lt;byte[], byte[]&gt;.ClientInstanceId(Duration)</a>
+    </div>
+    <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Assign_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">KafkaConsumer&lt;byte[], byte[]&gt;.Assign(Collection&lt;TopicPartition&gt;)</a>
     </div>
     <div>
@@ -304,6 +338,9 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
     </div>
     <div>
       <a class="xref" href="api/Java.Io.Closeable.html#Java_Io_Closeable_Close">Closeable.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="api/Java.Io.Closeable.html#Java_Io_Closeable_BridgeClassName">Closeable.BridgeClassName</a>
     </div>
     <div>
       <a class="xref" href="api/Java.Io.Closeable.html#Java_Io_Closeable_IsBridgeAbstract">Closeable.IsBridgeAbstract</a>
@@ -483,6 +520,9 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -513,7 +553,13 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Dispose()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -670,17 +716,17 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <a id="MASES_KNet_Consumer_KNetConsumer_2__ctor_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.#ctor*"></a>
 
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2__ctor_MASES_KNet_Consumer_ConsumerConfigBuilder_MASES_KNet_Serialization_ISerDes__0__MASES_KNet_Serialization_ISerDes__1__System_Boolean_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.#ctor(MASES.KNet.Consumer.ConsumerConfigBuilder,MASES.KNet.Serialization.ISerDes{`0},MASES.KNet.Serialization.ISerDes{`1},System.Boolean)">
-  KNetConsumer(ConsumerConfigBuilder, ISerDes&lt;K&gt;, ISerDes&lt;V&gt;, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Consumer_KNetConsumer_2__ctor_MASES_KNet_Consumer_ConsumerConfigBuilder_MASES_KNet_Serialization_ISerDes__0_System_Byte____MASES_KNet_Serialization_ISerDes__1_System_Byte____System_Boolean_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.#ctor(MASES.KNet.Consumer.ConsumerConfigBuilder,MASES.KNet.Serialization.ISerDes{`0,System.Byte[]},MASES.KNet.Serialization.ISerDes{`1,System.Byte[]},System.Boolean)">
+  KNetConsumer(ConsumerConfigBuilder, ISerDes&lt;K, byte[]&gt;, ISerDes&lt;V, byte[]&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L378"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-2.html">KNetConsumer&lt;K, V&gt;</a></p>
+  <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetConsumer(ConsumerConfigBuilder props, ISerDes&lt;K&gt; keyDeserializer, ISerDes&lt;V&gt; valueDeserializer, bool useJVMCallback = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public KNetConsumer(ConsumerConfigBuilder props, ISerDes&lt;K, byte[]&gt; keyDeserializer, ISerDes&lt;V, byte[]&gt; valueDeserializer, bool useJVMCallback = false)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -688,11 +734,11 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
     <dt><code>props</code> <a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></dt>
     <dd><p>The properties to use, see <a class="xref" href="MASES.KNet.Consumer.ConsumerConfigBuilder.html">ConsumerConfigBuilder</a></p>
 </dd>
-    <dt><code>keyDeserializer</code> <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes</a>&lt;K&gt;</dt>
-    <dd><p>Key serializer base on <a class="xref" href="MASES.KNet.Serialization.SerDes-1.html">SerDes&lt;T&gt;</a></p>
+    <dt><code>keyDeserializer</code> <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes</a>&lt;K, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p>Key serializer base on <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html">SerDes&lt;T, TJVMT&gt;</a></p>
 </dd>
-    <dt><code>valueDeserializer</code> <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes</a>&lt;V&gt;</dt>
-    <dd><p>Value serializer base on <a class="xref" href="MASES.KNet.Serialization.SerDes-1.html">SerDes&lt;T&gt;</a></p>
+    <dt><code>valueDeserializer</code> <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes</a>&lt;V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p>Value serializer base on <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html">SerDes&lt;T, TJVMT&gt;</a></p>
 </dd>
     <dt><code>useJVMCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to active callback based mode</p>
@@ -714,10 +760,10 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="MASES_KNet_Consumer_KNetConsumer_2__ctor_MASES_KNet_Consumer_ConsumerConfigBuilder_System_Boolean_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.#ctor(MASES.KNet.Consumer.ConsumerConfigBuilder,System.Boolean)">
   KNetConsumer(ConsumerConfigBuilder, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L367"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-2.html">KNetConsumer&lt;K, V&gt;</a></p>
+  <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -746,387 +792,11 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
 
 
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="MASES_KNet_Consumer_KNetConsumer_2_BridgeClassName_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.BridgeClassName*"></a>
-
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2_BridgeClassName" data-uid="MASES.KNet.Consumer.KNetConsumer`2.BridgeClassName">
-  BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L116"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Consumer_KNetConsumer_2_IsCompleting_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.IsCompleting*"></a>
-
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2_IsCompleting" data-uid="MASES.KNet.Consumer.KNetConsumer`2.IsCompleting">
-  IsCompleting
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L283"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="MASES.KNet.Consumer.IConsumer-2.html">IConsumer&lt;K, V&gt;</a> instance is completing async operation</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsCompleting { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Consumer_KNetConsumer_2_IsEmpty_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.IsEmpty*"></a>
-
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2_IsEmpty" data-uid="MASES.KNet.Consumer.KNetConsumer`2.IsEmpty">
-  IsEmpty
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L285"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="MASES.KNet.Consumer.IConsumer-2.html">IConsumer&lt;K, V&gt;</a> instance has an empty set of items in async operation</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsEmpty { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Consumer_KNetConsumer_2_WaitingMessages_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.WaitingMessages*"></a>
-
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2_WaitingMessages" data-uid="MASES.KNet.Consumer.KNetConsumer`2.WaitingMessages">
-  WaitingMessages
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L287"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Number of messages in the <a class="xref" href="MASES.KNet.Consumer.IConsumer-2.html">IConsumer&lt;K, V&gt;</a> instance waiting to be processed in async operation</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int WaitingMessages { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="MASES_KNet_Consumer_KNetConsumer_2_Consume_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.Consume*"></a>
-
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2_Consume_System_Int64_System_Action_MASES_KNet_Consumer_ConsumerRecord__0__1___" data-uid="MASES.KNet.Consumer.KNetConsumer`2.Consume(System.Int64,System.Action{MASES.KNet.Consumer.ConsumerRecord{`0,`1}})">
-  Consume(long, Action&lt;ConsumerRecord&lt;K, V&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L310"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>KNet sync extension for <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer.html#Org_Apache_Kafka_Clients_Consumer_Consumer_Poll_Java_Time_Duration_">Poll(Duration)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Consume(long timeoutMs, Action&lt;ConsumerRecord&lt;K, V&gt;&gt; callback)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>timeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd><p>Timeout in milliseconds</p>
-</dd>
-    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Consumer.ConsumerRecord-2.html">ConsumerRecord</a>&lt;K, V&gt;&gt;</dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a> where receives <a class="xref" href="MASES.KNet.Consumer.ConsumerRecord-2.html">ConsumerRecord&lt;K, V&gt;</a></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Consumer_KNetConsumer_2_ConsumeAsync_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.ConsumeAsync*"></a>
-
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2_ConsumeAsync_System_Int64_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.ConsumeAsync(System.Int64)">
-  ConsumeAsync(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L289"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>KNet async extension for <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer.html#Org_Apache_Kafka_Clients_Consumer_Consumer_Poll_Java_Time_Duration_">Poll(Duration)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ConsumeAsync(long timeoutMs)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>timeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd><p>Timeout in milliseconds</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if something was enqued for Async operations</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Consumer_KNetConsumer_2_Dispose_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.Dispose*"></a>
-
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2_Dispose" data-uid="MASES.KNet.Consumer.KNetConsumer`2.Dispose">
-  Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L205"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Dispose()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Consumer_KNetConsumer_2_Finalize_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.Finalize*"></a>
-
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2_Finalize" data-uid="MASES.KNet.Consumer.KNetConsumer`2.Finalize">
-  ~KNetConsumer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L175"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Finalizer</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected ~KNetConsumer()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Consumer_KNetConsumer_2_Poll_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.Poll*"></a>
-
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2_Poll_System_Int64_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.Poll(System.Int64)">
-  Poll(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L181"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>KNet extension for <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer.html#Org_Apache_Kafka_Clients_Consumer_Consumer_Poll_Java_Time_Duration_">Poll(Duration)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerRecords&lt;K, V&gt; Poll(long timeoutMs)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>timeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd><p>Timeout in milliseconds</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerRecords-2.html">ConsumerRecords</a>&lt;K, V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Consumer.ConsumerRecords-2.html">ConsumerRecords&lt;K, V&gt;</a></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Consumer_KNetConsumer_2_Poll_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.Poll*"></a>
-
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2_Poll_System_TimeSpan_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.Poll(System.TimeSpan)">
-  Poll(TimeSpan)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L187"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>KNet extension for <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer.html#Org_Apache_Kafka_Clients_Consumer_Consumer_Poll_Java_Time_Duration_">Poll(Duration)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerRecords&lt;K, V&gt; Poll(TimeSpan timeout)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
-    <dd><p>Timeout expressed as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Consumer.ConsumerRecords-2.html">ConsumerRecords</a>&lt;K, V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Consumer.ConsumerRecords-2.html">ConsumerRecords&lt;K, V&gt;</a></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Consumer_KNetConsumer_2_SetCallback_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.SetCallback*"></a>
-
-  <h3 id="MASES_KNet_Consumer_KNetConsumer_2_SetCallback_System_Action_MASES_KNet_Consumer_ConsumerRecord__0__1___" data-uid="MASES.KNet.Consumer.KNetConsumer`2.SetCallback(System.Action{MASES.KNet.Consumer.ConsumerRecord{`0,`1}})">
-  SetCallback(Action&lt;ConsumerRecord&lt;K, V&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L238"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a> to use to receive <a class="xref" href="MASES.KNet.Consumer.ConsumerRecord-2.html">ConsumerRecord&lt;K, V&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetCallback(Action&lt;ConsumerRecord&lt;K, V&gt;&gt; cb)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>cb</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Consumer.ConsumerRecord-2.html">ConsumerRecord</a>&lt;K, V&gt;&gt;</dt>
-    <dd><p>The callback <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L103" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L360" class="edit-link">Edit this page</a>
         </div>
 
 

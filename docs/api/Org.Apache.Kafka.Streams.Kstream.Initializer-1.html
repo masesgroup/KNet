@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>Class Initializer&lt;VA&gt; | MASES Group - KNet </title>
+      <title>Class Initializer&lt;VAgg&gt; | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Initializer&lt;VA&gt; | MASES Group - KNet ">
+      <meta name="title" content="Class Initializer&lt;VAgg&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
       <meta name="description" content="Listener for Kafka Initializer. Extends , implements">
       <link rel="icon" href="../images/favicon.ico">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Kstream_Initializer_1" data-uid="Org.Apache.Kafka.Streams.Kstream.Initializer`1" class="text-break">
-Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Initializer.cs/#L109"><i class="bi bi-code-slash"></i></a>
+Class Initializer&lt;VAgg&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Initializer.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,19 +93,19 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Listener for Kafka Initializer. Extends <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener</span>, implements <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.IInitializer-1.html">IInitializer&lt;VA&gt;</a></p>
+  <div class="markdown summary"><p>Listener for Kafka Initializer. Extends <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener</span>, implements <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.IInitializer-1.html">IInitializer&lt;VAgg&gt;</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Initializer&lt;VA&gt; : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IInitializer&lt;VA&gt;, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class Initializer&lt;VAgg&gt; : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IInitializer&lt;VAgg&gt;, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>VA</code></dt>
+    <dt><code>VAgg</code></dt>
     <dd></dd>
   </dl>
 
@@ -117,7 +117,7 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
       <div><span class="xref">JVMBridgeBase</span></div>
       <div><span class="xref">JVMBridgeBase</span>&lt;<span class="xref">JVMBridgeListener</span>&gt;</div>
       <div><span class="xref">JVMBridgeListener</span></div>
-      <div><span class="xref">Initializer&lt;VA&gt;</span></div>
+      <div><span class="xref">Initializer&lt;VAgg&gt;</span></div>
     </dd>
   </dl>
 
@@ -128,7 +128,7 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
       <div><span class="xref">IJVMBridgeCore</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><span class="xref">IJVMBridgeBaseStatic</span></div>
-      <div><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.IInitializer-1.html">IInitializer</a>&lt;VA&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.IInitializer-1.html">IInitializer</a>&lt;VAgg&gt;</div>
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
     </dd>
@@ -138,6 +138,7 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
     <dt>Derived</dt>
     <dd>
       <div><a class="xref" href="MASES.KNet.Streams.Kstream.Initializer-2.html">Initializer&lt;VA, TJVMVA&gt;</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.InitializerDirect-1.html">InitializerDirect&lt;VAgg&gt;</a></div>
     </dd>
   </dl>
 
@@ -331,6 +332,9 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -361,7 +365,10 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -516,7 +523,7 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Initializer_1__ctor" data-uid="Org.Apache.Kafka.Streams.Kstream.Initializer`1.#ctor">
   Initializer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L886"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1091"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -547,7 +554,7 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Initializer_1_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Kstream.Initializer`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L891"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -575,19 +582,19 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
 
 
 
-  <a id="Org_Apache_Kafka_Streams_Kstream_Initializer_1_OnApply_" data-uid="Org.Apache.Kafka.Streams.Kstream.Initializer`1.OnApply*"></a>
+  <a id="Org_Apache_Kafka_Streams_Kstream_Initializer_1_InitHandlers_" data-uid="Org.Apache.Kafka.Streams.Kstream.Initializer`1.InitHandlers*"></a>
 
-  <h3 id="Org_Apache_Kafka_Streams_Kstream_Initializer_1_OnApply" data-uid="Org.Apache.Kafka.Streams.Kstream.Initializer`1.OnApply">
-  OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Initializer.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Initializer_1_InitHandlers" data-uid="Org.Apache.Kafka.Streams.Kstream.Initializer`1.InitHandlers">
+  InitHandlers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1095"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Initializer.html#apply--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Initializer.html#apply--</a></p>
+  <div class="markdown level1 summary"><p>Enable/disable handlers initialization, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;VA&gt; OnApply { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual bool InitHandlers { get; }</code></pre>
   </div>
 
 
@@ -596,7 +603,39 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;VA&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Initializer_1_OnApply_" data-uid="Org.Apache.Kafka.Streams.Kstream.Initializer`1.OnApply*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Initializer_1_OnApply" data-uid="Org.Apache.Kafka.Streams.Kstream.Initializer`1.OnApply">
+  OnApply
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Initializer.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Initializer.html#apply--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Initializer.html#apply--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;VAgg&gt; OnApply { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;VAgg&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -621,19 +660,19 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Initializer.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Initializer.html#apply--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Initializer.html#apply--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Initializer.html#apply--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Initializer.html#apply--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual VA Apply()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual VAgg Apply()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">VA</span></dt>
-    <dd><p><code class="typeparamref">VA</code></p>
+    <dt><span class="xref">VAgg</span></dt>
+    <dd><p><code class="typeparamref">VAgg</code></p>
 </dd>
   </dl>
 

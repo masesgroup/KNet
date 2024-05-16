@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Processor_Api_Processor_8" data-uid="MASES.KNet.Streams.Processor.Api.Processor`8" class="text-break">
-Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L31"><i class="bi bi-code-slash"></i></a>
+Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -118,13 +118,17 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
     <dd><p>The output value type</p>
 </dd>
     <dt><code>TJVMKIn</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">KIn</code></p>
+</dd>
     <dt><code>TJVMVIn</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">VIn</code></p>
+</dd>
     <dt><code>TJVMKOut</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">KOut</code></p>
+</dd>
     <dt><code>TJVMVOut</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">VOut</code></p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -164,6 +168,9 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Processor-4.html#Org_Apache_Kafka_Streams_Processor_Api_Processor_4_InitHandlers">Processor&lt;TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt;.InitHandlers</a>
+    </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Processor-4.html#Org_Apache_Kafka_Streams_Processor_Api_Processor_4_BridgeClassName">Processor&lt;TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt;.BridgeClassName</a>
     </div>
@@ -384,6 +391,9 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -414,7 +424,10 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -566,15 +579,15 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Processor_8_Context" data-uid="MASES.KNet.Streams.Processor.Api.Processor`8.Context">
   Context
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a class="xref" href="MASES.KNet.Streams.Processor.Api.ProcessorContext-2.html">ProcessorContext&lt;KForward, VForward&gt;</a> received from the init</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="MASES.KNet.Streams.Processor.Api.ProcessorContext-4.html">ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;</a> received from the init</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract ProcessorContext&lt;KOut, VOut&gt; Context { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract ProcessorContext&lt;KOut, VOut, TJVMKOut, TJVMVOut&gt; Context { get; }</code></pre>
   </div>
 
 
@@ -583,7 +596,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Processor.Api.ProcessorContext-2.html">ProcessorContext</a>&lt;KOut, VOut&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Processor.Api.ProcessorContext-4.html">ProcessorContext</a>&lt;KOut, VOut, TJVMKOut, TJVMVOut&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -598,7 +611,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Processor_8_Factory" data-uid="MASES.KNet.Streams.Processor.Api.Processor`8.Factory">
   Factory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the current <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></p>
@@ -630,7 +643,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Processor_8_OnInit" data-uid="MASES.KNet.Streams.Processor.Api.Processor`8.OnInit">
   OnInit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Processor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Processor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-</a></p>
@@ -638,7 +651,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;ProcessorContext&lt;KOut, VOut&gt;&gt; OnInit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Action&lt;ProcessorContext&lt;KOut, VOut, TJVMKOut, TJVMVOut&gt;&gt; OnInit { get; set; }</code></pre>
   </div>
 
 
@@ -647,7 +660,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Streams.Processor.Api.ProcessorContext-2.html">ProcessorContext</a>&lt;KOut, VOut&gt;&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Streams.Processor.Api.ProcessorContext-4.html">ProcessorContext</a>&lt;KOut, VOut, TJVMKOut, TJVMVOut&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -665,7 +678,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Processor_8_OnProcess" data-uid="MASES.KNet.Streams.Processor.Api.Processor`8.OnProcess">
   OnProcess
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Processor.html#process-org.apache.kafka.streams.processor.api.Record-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/api/Processor.html#process-org.apache.kafka.streams.processor.api.Record-</a></p>
@@ -673,7 +686,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;Record&lt;KIn, VIn&gt;&gt; OnProcess { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Action&lt;Record&lt;KIn, VIn, TJVMKIn, TJVMVIn&gt;&gt; OnProcess { get; set; }</code></pre>
   </div>
 
 
@@ -682,7 +695,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Streams.Processor.Api.Record-2.html">Record</a>&lt;KIn, VIn&gt;&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Streams.Processor.Api.Record-4.html">Record</a>&lt;KIn, VIn, TJVMKIn, TJVMVIn&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -702,9 +715,9 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
 
   <a id="MASES_KNet_Streams_Processor_Api_Processor_8_Init_" data-uid="MASES.KNet.Streams.Processor.Api.Processor`8.Init*"></a>
 
-  <h3 id="MASES_KNet_Streams_Processor_Api_Processor_8_Init_MASES_KNet_Streams_Processor_Api_ProcessorContext__2__3__" data-uid="MASES.KNet.Streams.Processor.Api.Processor`8.Init(MASES.KNet.Streams.Processor.Api.ProcessorContext{`2,`3})">
-  Init(ProcessorContext&lt;KOut, VOut&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_Processor_Api_Processor_8_Init_MASES_KNet_Streams_Processor_Api_ProcessorContext__2__3__6__7__" data-uid="MASES.KNet.Streams.Processor.Api.Processor`8.Init(MASES.KNet.Streams.Processor.Api.ProcessorContext{`2,`3,`6,`7})">
+  Init(ProcessorContext&lt;KOut, VOut, TJVMKOut, TJVMVOut&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Processor-4.html#Org_Apache_Kafka_Streams_Processor_Api_Processor_4_Init_Org_Apache_Kafka_Streams_Processor_Api_ProcessorContext__2__3__">Init(ProcessorContext&lt;KOut, VOut&gt;)</a></p>
@@ -712,13 +725,13 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Init(ProcessorContext&lt;KOut, VOut&gt; arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Init(ProcessorContext&lt;KOut, VOut, TJVMKOut, TJVMVOut&gt; arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Processor.Api.ProcessorContext-2.html">ProcessorContext</a>&lt;KOut, VOut&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.Processor.Api.ProcessorContext-2.html">ProcessorContext&lt;KForward, VForward&gt;</a></p>
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Processor.Api.ProcessorContext-4.html">ProcessorContext</a>&lt;KOut, VOut, TJVMKOut, TJVMVOut&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Processor.Api.ProcessorContext-4.html">ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;</a></p>
 </dd>
   </dl>
 
@@ -735,9 +748,9 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
 
   <a id="MASES_KNet_Streams_Processor_Api_Processor_8_Process_" data-uid="MASES.KNet.Streams.Processor.Api.Processor`8.Process*"></a>
 
-  <h3 id="MASES_KNet_Streams_Processor_Api_Processor_8_Process_MASES_KNet_Streams_Processor_Api_Record__0__1__" data-uid="MASES.KNet.Streams.Processor.Api.Processor`8.Process(MASES.KNet.Streams.Processor.Api.Record{`0,`1})">
-  Process(Record&lt;KIn, VIn&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_Processor_Api_Processor_8_Process_MASES_KNet_Streams_Processor_Api_Record__0__1__4__5__" data-uid="MASES.KNet.Streams.Processor.Api.Processor`8.Process(MASES.KNet.Streams.Processor.Api.Record{`0,`1,`4,`5})">
+  Process(Record&lt;KIn, VIn, TJVMKIn, TJVMVIn&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Processor-4.html#Org_Apache_Kafka_Streams_Processor_Api_Processor_4_Process_Org_Apache_Kafka_Streams_Processor_Api_Record__0__1__">Process(Record&lt;KIn, VIn&gt;)</a></p>
@@ -745,13 +758,13 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Process(Record&lt;KIn, VIn&gt; arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Process(Record&lt;KIn, VIn, TJVMKIn, TJVMVIn&gt; arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Processor.Api.Record-2.html">Record</a>&lt;KIn, VIn&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.Processor.Api.Record-2.html">Record&lt;TKey, TValue&gt;</a></p>
+    <dt><code>arg0</code> <a class="xref" href="MASES.KNet.Streams.Processor.Api.Record-4.html">Record</a>&lt;KIn, VIn, TJVMKIn, TJVMVIn&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Processor.Api.Record-4.html">Record&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -770,7 +783,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L31" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Processor.cs/#L35" class="edit-link">Edit this page</a>
         </div>
 
 

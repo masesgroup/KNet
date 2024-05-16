@@ -123,7 +123,10 @@ Interface IProducer  <a class="header-action link-secondary" title="View source"
       <span class="xref">IJVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">IJVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">IJVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">IJVMBridgeBase.DynBridgeInstance</span>
@@ -170,7 +173,7 @@ Interface IProducer  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#abortTransaction--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#abortTransaction--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#abortTransaction--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#abortTransaction--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -202,7 +205,7 @@ Interface IProducer  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#beginTransaction--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#beginTransaction--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#beginTransaction--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#beginTransaction--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -227,6 +230,45 @@ Interface IProducer  <a class="header-action link-secondary" title="View source"
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Producer_IProducer_ClientInstanceId_" data-uid="Org.Apache.Kafka.Clients.Producer.IProducer.ClientInstanceId*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Producer_IProducer_ClientInstanceId_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Producer.IProducer.ClientInstanceId(Java.Time.Duration)">
+  ClientInstanceId(Duration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#clientInstanceId-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#clientInstanceId-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Uuid ClientInstanceId(Duration arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Producer_IProducer_CommitTransaction_" data-uid="Org.Apache.Kafka.Clients.Producer.IProducer.CommitTransaction*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_IProducer_CommitTransaction" data-uid="Org.Apache.Kafka.Clients.Producer.IProducer.CommitTransaction">
@@ -234,7 +276,7 @@ Interface IProducer  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#commitTransaction--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#commitTransaction--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#commitTransaction--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#commitTransaction--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -266,7 +308,7 @@ Interface IProducer  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#flush--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#flush--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#flush--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#flush--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -293,7 +335,7 @@ Interface IProducer  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#initTransactions--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#initTransactions--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#initTransactions--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#initTransactions--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -320,7 +362,7 @@ Interface IProducer  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#metrics--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#metrics--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -358,7 +400,7 @@ Interface IProducer  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#partitionsFor-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#partitionsFor-java.lang.String-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#partitionsFor-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#partitionsFor-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -396,7 +438,7 @@ Interface IProducer  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#sendOffsetsToTransaction-java.util.Map-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#sendOffsetsToTransaction-java.util.Map-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#sendOffsetsToTransaction-java.util.Map-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#sendOffsetsToTransaction-java.util.Map-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

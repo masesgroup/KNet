@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>Interface IInitializer&lt;VA&gt; | MASES Group - KNet </title>
+      <title>Interface IInitializer&lt;VAgg&gt; | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IInitializer&lt;VA&gt; | MASES Group - KNet ">
+      <meta name="title" content="Interface IInitializer&lt;VAgg&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
       <meta name="description" content="Listener for Kafka Initializer. Extends">
       <link rel="icon" href="../images/favicon.ico">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Kstream_IInitializer_1" data-uid="Org.Apache.Kafka.Streams.Kstream.IInitializer`1" class="text-break">
-Interface IInitializer&lt;VA&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Initializer.cs/#L94"><i class="bi bi-code-slash"></i></a>
+Interface IInitializer&lt;VAgg&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Initializer.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,14 +98,14 @@ Interface IInitializer&lt;VA&gt;  <a class="header-action link-secondary" title=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IInitializer&lt;VA&gt; : IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IInitializer&lt;VAgg&gt; : IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>VA</code></dt>
+    <dt><code>VAgg</code></dt>
     <dd><p>The Initialized data associated to the event</p>
 </dd>
   </dl>
@@ -129,7 +129,10 @@ Interface IInitializer&lt;VA&gt;  <a class="header-action link-secondary" title=
       <span class="xref">IJVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">IJVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">IJVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">IJVMBridgeBase.DynBridgeInstance</span>
@@ -178,13 +181,13 @@ Interface IInitializer&lt;VA&gt;  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">VA Apply()</code></pre>
+    <pre><code class="lang-csharp hljs">VAgg Apply()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">VA</span></dt>
+    <dt><span class="xref">VAgg</span></dt>
     <dd><p>The <code class="typeparamref">VA</code> apply evaluation</p>
 </dd>
   </dl>

@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1" class="text-break">
-Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L55"><i class="bi bi-code-slash"></i></a>
+Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -172,6 +172,9 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Processor.StreamPartitioner-2.html#Org_Apache_Kafka_Streams_Processor_StreamPartitioner_2_Partition_Java_Lang_String__0__1_System_Int32_">StreamPartitioner&lt;byte[], Void&gt;.Partition(String, byte[], Void, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.StreamPartitioner-2.html#Org_Apache_Kafka_Streams_Processor_StreamPartitioner_2_InitHandlers">StreamPartitioner&lt;byte[], Void&gt;.InitHandlers</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Processor.StreamPartitioner-2.html#Org_Apache_Kafka_Streams_Processor_StreamPartitioner_2_BridgeClassName">StreamPartitioner&lt;byte[], Void&gt;.BridgeClassName</a>
@@ -378,6 +381,9 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -408,7 +414,10 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -560,7 +569,7 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Key" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Key">
   Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">K</code> content</p>
@@ -592,7 +601,7 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_NumPartitions" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.NumPartitions">
   NumPartitions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The total number of partitions</p>
@@ -624,7 +633,7 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Topic" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Topic">
   Topic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The topic name this record is sent to</p>
@@ -656,7 +665,7 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Value" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> content</p>
@@ -692,10 +701,10 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Partitions_Java_Lang_String_System_Byte___Java_Lang_Void_System_Int32_" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Partitions(Java.Lang.String,System.Byte[],Java.Lang.Void,System.Int32)">
   Partitions(String, byte[], Void, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -743,7 +752,7 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L55" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L56" class="edit-link">Edit this page</a>
         </div>
 
 

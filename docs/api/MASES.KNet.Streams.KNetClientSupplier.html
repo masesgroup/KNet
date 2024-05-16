@@ -135,6 +135,9 @@ Class KNetClientSupplier  <a class="header-action link-secondary" title="View so
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="Org.Apache.Kafka.Streams.KafkaClientSupplier.html#Org_Apache_Kafka_Streams_KafkaClientSupplier_InitHandlers">KafkaClientSupplier.InitHandlers</a>
+    </div>
+    <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.KafkaClientSupplier.html#Org_Apache_Kafka_Streams_KafkaClientSupplier_BridgeClassName">KafkaClientSupplier.BridgeClassName</a>
     </div>
     <div>
@@ -342,6 +345,9 @@ Class KNetClientSupplier  <a class="header-action link-secondary" title="View so
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -372,7 +378,10 @@ Class KNetClientSupplier  <a class="header-action link-secondary" title="View so
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -516,7 +525,7 @@ Class KNetClientSupplier  <a class="header-action link-secondary" title="View so
 
   <h2 id="MASES_KNet_Streams_KNetClientSupplier_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>The default <a class="xref" href="Org.Apache.Kafka.Streams.KafkaClientSupplier.html">KafkaClientSupplier</a> used from <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a> allocates both <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.html">KafkaConsumer</a> and <a class="xref" href="Org.Apache.Kafka.Clients.Producer.KafkaProducer.html">KafkaProducer</a>.
-<a class="xref" href="MASES.KNet.Streams.KNetClientSupplier.html">KNetClientSupplier</a> uses <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-2.html">KNetConsumer&lt;K, V&gt;</a> and <a class="xref" href="MASES.KNet.Producer.KNetProducer-2.html">KNetProducer&lt;K, V&gt;</a>, the instance shall be disposed when no more in use, but still be alive still <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a> is alive.</p>
+<a class="xref" href="MASES.KNet.Streams.KNetClientSupplier.html">KNetClientSupplier</a> uses <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a> and <a class="xref" href="MASES.KNet.Producer.KNetProducer-4.html">KNetProducer&lt;K, V, TJVMK, TJVMV&gt;</a>, the instance shall be disposed when no more in use, but still be alive still <a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.html">KafkaStreams</a> is alive.</p>
 </div>
 
 
@@ -589,7 +598,7 @@ Class KNetClientSupplier  <a class="header-action link-secondary" title="View so
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetClientSupplier.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/KafkaClientSupplier.html#getAdmin-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/KafkaClientSupplier.html#getAdmin-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/KafkaClientSupplier.html#getAdmin-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/KafkaClientSupplier.html#getAdmin-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -631,7 +640,7 @@ Class KNetClientSupplier  <a class="header-action link-secondary" title="View so
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetClientSupplier.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/KafkaClientSupplier.html#getConsumer-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/KafkaClientSupplier.html#getConsumer-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/KafkaClientSupplier.html#getConsumer-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/KafkaClientSupplier.html#getConsumer-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -670,7 +679,7 @@ Class KNetClientSupplier  <a class="header-action link-secondary" title="View so
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetClientSupplier.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/KafkaClientSupplier.html#getGlobalConsumer-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/KafkaClientSupplier.html#getGlobalConsumer-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/KafkaClientSupplier.html#getGlobalConsumer-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/KafkaClientSupplier.html#getGlobalConsumer-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -709,7 +718,7 @@ Class KNetClientSupplier  <a class="header-action link-secondary" title="View so
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetClientSupplier.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/KafkaClientSupplier.html#getProducer-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/KafkaClientSupplier.html#getProducer-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/KafkaClientSupplier.html#getProducer-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/KafkaClientSupplier.html#getProducer-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -748,7 +757,7 @@ Class KNetClientSupplier  <a class="header-action link-secondary" title="View so
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/KNetClientSupplier.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/KafkaClientSupplier.html#getRestoreConsumer-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/KafkaClientSupplier.html#getRestoreConsumer-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/KafkaClientSupplier.html#getRestoreConsumer-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/KafkaClientSupplier.html#getRestoreConsumer-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

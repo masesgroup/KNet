@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ProducerInterceptor&lt;K, V&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -138,6 +138,12 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
     </dd>
   </dl>
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerInterceptorDirect-2.html">ProducerInterceptorDirect&lt;K, V&gt;</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -329,6 +335,9 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -359,7 +368,10 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -511,7 +523,7 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_ProducerInterceptor_2__ctor" data-uid="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor`2.#ctor">
   ProducerInterceptor()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/AllPackageClasses.cs/#L441"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/AllPackageClasses.cs/#L564"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -542,7 +554,7 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_ProducerInterceptor_2_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor`2.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/AllPackageClasses.cs/#L446"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/AllPackageClasses.cs/#L573"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -570,6 +582,38 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Producer_ProducerInterceptor_2_InitHandlers_" data-uid="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor`2.InitHandlers*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Producer_ProducerInterceptor_2_InitHandlers" data-uid="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor`2.InitHandlers">
+  InitHandlers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/AllPackageClasses.cs/#L568"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable/disable handlers initialization, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool InitHandlers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Producer_ProducerInterceptor_2_OnClose_" data-uid="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor`2.OnClose*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_ProducerInterceptor_2_OnClose" data-uid="Org.Apache.Kafka.Clients.Producer.ProducerInterceptor`2.OnClose">
@@ -577,7 +621,7 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/ProducerInterceptor.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -612,7 +656,7 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/ProducerInterceptor.cs/#L275"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Configurable.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Configurable.html#configure-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -647,7 +691,7 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/ProducerInterceptor.cs/#L253"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -682,7 +726,7 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/ProducerInterceptor.cs/#L210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -721,7 +765,7 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/ProducerInterceptor.cs/#L244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -748,7 +792,7 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/ProducerInterceptor.cs/#L287"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Configurable.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/Configurable.html#configure-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -808,7 +852,7 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/ProducerInterceptor.cs/#L266"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -844,7 +888,7 @@ Class ProducerInterceptor&lt;K, V&gt;  <a class="header-action link-secondary" t
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/ProducerInterceptor.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

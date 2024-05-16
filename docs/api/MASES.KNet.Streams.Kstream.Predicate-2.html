@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_Predicate_2" data-uid="MASES.KNet.Streams.Kstream.Predicate`2" class="text-break">
-Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L76"><i class="bi bi-code-slash"></i></a>
+Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -165,6 +165,9 @@ Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html#MASES_KNet_Streams_Kstream_Predicate_4_Test">Predicate&lt;K, V, byte[], byte[]&gt;.Test()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Predicate-2.html#Org_Apache_Kafka_Streams_Kstream_Predicate_2_InitHandlers">Predicate&lt;byte[], byte[]&gt;.InitHandlers</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Predicate-2.html#Org_Apache_Kafka_Streams_Kstream_Predicate_2_BridgeClassName">Predicate&lt;byte[], byte[]&gt;.BridgeClassName</a>
@@ -368,6 +371,9 @@ Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -398,7 +404,10 @@ Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -550,7 +559,7 @@ Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Streams_Kstream_Predicate_2_Key" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.Key">
   Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">K</code> content</p>
@@ -582,7 +591,7 @@ Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Streams_Kstream_Predicate_2_OnTest" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.OnTest">
   OnTest
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-</a></p>
@@ -617,7 +626,7 @@ Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Streams_Kstream_Predicate_2_Value" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">V</code> content</p>
@@ -653,10 +662,10 @@ Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Streams_Kstream_Predicate_2_Test_System_Byte___System_Byte___" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.Test(System.Byte[],System.Byte[])">
   Test(byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -695,7 +704,7 @@ Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L76" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L78" class="edit-link">Edit this page</a>
         </div>
 
 

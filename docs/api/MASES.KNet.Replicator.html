@@ -91,7 +91,17 @@
 Classes
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a></dt>
+      <dt><a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicatorBuffered-2.html">KNetCompactedReplicatorBuffered&lt;K, V&gt;</a></dt>
+      <dd><p>Provides a reliable dictionary, persisted in a COMPACTED Kafka topic and shared among applications, extends <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a> using <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a></dt>
+      <dd><p>Provides a reliable dictionary, persisted in a COMPACTED Kafka topic and shared among applications, extends <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a> using array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
       <dd><p>Provides a reliable dictionary, persisted in a COMPACTED Kafka topic and shared among applications</p>
 </dd>
     </dl>
@@ -99,8 +109,8 @@ Classes
 Interfaces
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-2.html">IKNetCompactedReplicator&lt;TKey, TValue&gt;</a></dt>
-      <dd><p>Public interface for <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a></p>
+      <dt><a class="xref" href="MASES.KNet.Replicator.IKNetCompactedReplicator-4.html">IKNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></dt>
+      <dd><p>Public interface for <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-4.html">KNetCompactedReplicator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
     </dl>
     <h3 id="enums">
@@ -108,12 +118,12 @@ Enums
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Replicator.AccessRightsType.html">AccessRightsType</a></dt>
-      <dd><p><a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a> access rights to data</p>
+      <dd><p><a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> access rights to data</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Replicator.UpdateModeTypes.html">UpdateModeTypes</a></dt>
-      <dd><p><a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;TKey, TValue&gt;</a> update modes</p>
+      <dd><p><a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> update modes</p>
 </dd>
     </dl>
 

@@ -140,6 +140,7 @@ Class ForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" title="
     <dt>Derived</dt>
     <dd>
       <div><a class="xref" href="MASES.KNet.Streams.Kstream.ForeachAction-4.html">ForeachAction&lt;K, V, TJVMK, TJVMV&gt;</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachActionDirect-2.html">ForeachActionDirect&lt;K, V&gt;</a></div>
     </dd>
   </dl>
 
@@ -333,6 +334,9 @@ Class ForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" title="
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -363,7 +367,10 @@ Class ForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" title="
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -518,7 +525,7 @@ Class ForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachAction_2__ctor" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachAction`2.#ctor">
   ForeachAction()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L567"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L690"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -549,7 +556,7 @@ Class ForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachAction_2_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachAction`2.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L572"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L699"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -577,6 +584,38 @@ Class ForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
 
 
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachAction_2_InitHandlers_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachAction`2.InitHandlers*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachAction_2_InitHandlers" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachAction`2.InitHandlers">
+  InitHandlers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L694"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable/disable handlers initialization, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool InitHandlers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_Kstream_ForeachAction_2_OnApply_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachAction`2.OnApply*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachAction_2_OnApply" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachAction`2.OnApply">
@@ -584,7 +623,7 @@ Class ForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" title="
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachAction.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -623,7 +662,7 @@ Class ForeachAction&lt;K, V&gt;  <a class="header-action link-secondary" title="
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachAction.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

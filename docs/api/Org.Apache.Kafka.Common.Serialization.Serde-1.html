@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Serde&lt;T&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -134,6 +134,12 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
     </dd>
   </dl>
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Org.Apache.Kafka.Common.Serialization.SerdeDirect-1.html">SerdeDirect&lt;T&gt;</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -325,6 +331,9 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -355,7 +364,10 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -507,7 +519,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1__ctor" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.#ctor">
   Serde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L988"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -538,7 +550,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L993"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -566,6 +578,38 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
 
 
 
+  <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_InitHandlers_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.InitHandlers*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_InitHandlers" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.InitHandlers">
+  InitHandlers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable/disable handlers initialization, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool InitHandlers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnClose_" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.OnClose*"></a>
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serde_1_OnClose" data-uid="Org.Apache.Kafka.Common.Serialization.Serde`1.OnClose">
@@ -573,7 +617,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L286"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#close--</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -608,7 +652,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L317"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -643,7 +687,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L232"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#deserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#deserializer--</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#deserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#deserializer--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -678,7 +722,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#serializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#serializer--</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#serializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#serializer--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -717,7 +761,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L298"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#close--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -747,7 +791,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L277"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#close--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -777,7 +821,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L331"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -816,7 +860,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L308"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#configure-java.util.Map-boolean-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -855,7 +899,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#deserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#deserializer--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#deserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#deserializer--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -915,7 +959,7 @@ Class Serde&lt;T&gt;  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serde.cs/#L269"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#serializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#serializer--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#serializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#serializer--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

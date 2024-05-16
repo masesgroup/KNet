@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_Initializer_1" data-uid="MASES.KNet.Streams.Kstream.Initializer`1" class="text-break">
-Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L67"><i class="bi bi-code-slash"></i></a>
+Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,7 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Initializer-1.html">Initializer&lt;VA&gt;</a></p>
+  <div class="markdown summary"><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Initializer-1.html">Initializer&lt;VAgg&gt;</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -150,6 +150,9 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.Initializer-2.html#MASES_KNet_Streams_Kstream_Initializer_2_Apply2">Initializer&lt;VA, byte[]&gt;.Apply2()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Initializer-1.html#Org_Apache_Kafka_Streams_Kstream_Initializer_1_InitHandlers">Initializer&lt;byte[]&gt;.InitHandlers</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Initializer-1.html#Org_Apache_Kafka_Streams_Kstream_Initializer_1_BridgeClassName">Initializer&lt;byte[]&gt;.BridgeClassName</a>
@@ -353,6 +356,9 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -383,7 +389,10 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -535,10 +544,10 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Streams_Kstream_Initializer_1_Apply" data-uid="MASES.KNet.Streams.Kstream.Initializer`1.Apply">
   Apply()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Initializer.html#apply--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Initializer.html#apply--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Initializer.html#apply--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Initializer.html#apply--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -550,7 +559,7 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p><code class="typeparamref">VA</code></p>
+    <dd><p><code class="typeparamref">VAgg</code></p>
 </dd>
   </dl>
 
@@ -568,7 +577,7 @@ Class Initializer&lt;VA&gt;  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L67" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L68" class="edit-link">Edit this page</a>
         </div>
 
 
