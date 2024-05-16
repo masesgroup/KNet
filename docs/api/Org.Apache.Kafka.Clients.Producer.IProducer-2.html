@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Clients_Producer_IProducer_2" data-uid="Org.Apache.Kafka.Clients.Producer.IProducer`2" class="text-break">
-Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L166"><i class="bi bi-code-slash"></i></a>
+Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -142,6 +142,9 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
       <a class="xref" href="Org.Apache.Kafka.Clients.Producer.IProducer.html#Org_Apache_Kafka_Clients_Producer_IProducer_Metrics__1">IProducer.Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()</a>
     </div>
     <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Producer.IProducer.html#Org_Apache_Kafka_Clients_Producer_IProducer_ClientInstanceId_Java_Time_Duration_">IProducer.ClientInstanceId(Duration)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">IJVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -154,7 +157,10 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
       <span class="xref">IJVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">IJVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">IJVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">IJVMBridgeBase.DynBridgeInstance</span>
@@ -250,10 +256,10 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_IProducer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__" data-uid="Org.Apache.Kafka.Clients.Producer.IProducer`2.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{`0,`1})">
   Send(ProducerRecord&lt;K, V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#send-org.apache.kafka.clients.producer.ProducerRecord-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#send-org.apache.kafka.clients.producer.ProducerRecord-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#send-org.apache.kafka.clients.producer.ProducerRecord-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#send-org.apache.kafka.clients.producer.ProducerRecord-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -288,10 +294,10 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_IProducer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="Org.Apache.Kafka.Clients.Producer.IProducer`2.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{`0,`1},Org.Apache.Kafka.Clients.Producer.Callback)">
   Send(ProducerRecord&lt;K, V&gt;, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#send-org.apache.kafka.clients.producer.ProducerRecord-org.apache.kafka.clients.producer.Callback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/producer/Producer.html#send-org.apache.kafka.clients.producer.ProducerRecord-org.apache.kafka.clients.producer.Callback-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#send-org.apache.kafka.clients.producer.ProducerRecord-org.apache.kafka.clients.producer.Callback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Producer.html#send-org.apache.kafka.clients.producer.ProducerRecord-org.apache.kafka.clients.producer.Callback-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -328,7 +334,7 @@ Interface IProducer&lt;K, V&gt;  <a class="header-action link-secondary" title="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L166" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L175" class="edit-link">Edit this page</a>
         </div>
 
 

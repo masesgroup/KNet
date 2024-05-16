@@ -117,14 +117,49 @@ Interface IGenericSerDesFactory  <a class="header-action link-secondary" title="
 </h2>
 
 
+  <a id="MASES_KNet_Serialization_IGenericSerDesFactory_AutoSelectBuffered_" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.AutoSelectBuffered*"></a>
+
+  <h3 id="MASES_KNet_Serialization_IGenericSerDesFactory_AutoSelectBuffered" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.AutoSelectBuffered">
+  AutoSelectBuffered
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to automatically fallback to <a class="xref" href="MASES.KNet.Serialization.SerDesBuffered-1.html">SerDesBuffered&lt;T&gt;</a> when the JVM type is <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AutoSelectBuffered { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Serialization_IGenericSerDesFactory_AutoSelectBuffered_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The property is by default <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to optimized data flow between CLR and JVM</p>
+</div>
+
+
+
+
   <a id="MASES_KNet_Serialization_IGenericSerDesFactory_KNetKeySerDes_" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.KNetKeySerDes*"></a>
 
   <h3 id="MASES_KNet_Serialization_IGenericSerDesFactory_KNetKeySerDes" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.KNetKeySerDes">
   KNetKeySerDes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> used to create an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> for keys with <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_BuildKeySerDes__1">BuildKeySerDes&lt;TKey&gt;()</a></p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> used to create an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> for keys with <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_BuildKeySerDes__2">BuildKeySerDes&lt;TKey, TJVMTKey&gt;()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -153,10 +188,10 @@ Interface IGenericSerDesFactory  <a class="header-action link-secondary" title="
 
   <h3 id="MASES_KNet_Serialization_IGenericSerDesFactory_KNetValueSerDes" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.KNetValueSerDes">
   KNetValueSerDes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> used to create an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> for values with <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_BuildValueSerDes__1">BuildValueSerDes&lt;TValue&gt;()</a></p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> used to create an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> for values with <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_BuildValueSerDes__2">BuildValueSerDes&lt;TValue, TJVMTValue&gt;()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -187,57 +222,12 @@ Interface IGenericSerDesFactory  <a class="header-action link-secondary" title="
 
   <a id="MASES_KNet_Serialization_IGenericSerDesFactory_BuildKeySerDes_" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.BuildKeySerDes*"></a>
 
-  <h3 id="MASES_KNet_Serialization_IGenericSerDesFactory_BuildKeySerDes__1" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.BuildKeySerDes``1">
-  BuildKeySerDes&lt;TKey&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L50"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Builds an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> defined in <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetKeySerDes">KNetKeySerDes</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ISerDes&lt;TKey&gt; BuildKeySerDes&lt;TKey&gt;()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes</a>&lt;TKey&gt;</dt>
-    <dd><p>An instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a></p>
-</dd>
-  </dl>
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>TKey</code></dt>
-    <dd><p>The type of the key</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetKeySerDes">KNetKeySerDes</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a></p>
-</dd>
-  </dl>
-
-
-
-  <a id="MASES_KNet_Serialization_IGenericSerDesFactory_BuildKeySerDes_" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.BuildKeySerDes*"></a>
-
   <h3 id="MASES_KNet_Serialization_IGenericSerDesFactory_BuildKeySerDes__2" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.BuildKeySerDes``2">
   BuildKeySerDes&lt;TKey, TJVMTKey&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Builds an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> defined in <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetKeySerDes">KNetKeySerDes</a></p>
+  <div class="markdown level1 summary"><p>Builds an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> defined in <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetKeySerDes">KNetKeySerDes</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -249,7 +239,7 @@ Interface IGenericSerDesFactory  <a class="header-action link-secondary" title="
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes</a>&lt;TKey, TJVMTKey&gt;</dt>
-    <dd><p>An instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a></p>
+    <dd><p>An instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a></p>
 </dd>
   </dl>
 
@@ -280,57 +270,12 @@ Interface IGenericSerDesFactory  <a class="header-action link-secondary" title="
 
   <a id="MASES_KNet_Serialization_IGenericSerDesFactory_BuildValueSerDes_" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.BuildValueSerDes*"></a>
 
-  <h3 id="MASES_KNet_Serialization_IGenericSerDesFactory_BuildValueSerDes__1" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.BuildValueSerDes``1">
-  BuildValueSerDes&lt;TValue&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L65"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Builds an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> defined in <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetValueSerDes">KNetValueSerDes</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ISerDes&lt;TValue&gt; BuildValueSerDes&lt;TValue&gt;()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes</a>&lt;TValue&gt;</dt>
-    <dd><p>An instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a></p>
-</dd>
-  </dl>
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>TValue</code></dt>
-    <dd><p>The type of the key</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetValueSerDes">KNetValueSerDes</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a></p>
-</dd>
-  </dl>
-
-
-
-  <a id="MASES_KNet_Serialization_IGenericSerDesFactory_BuildValueSerDes_" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.BuildValueSerDes*"></a>
-
   <h3 id="MASES_KNet_Serialization_IGenericSerDesFactory_BuildValueSerDes__2" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.BuildValueSerDes``2">
   BuildValueSerDes&lt;TValue, TJVMTValue&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Builds an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a> using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> defined in <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetValueSerDes">KNetValueSerDes</a></p>
+  <div class="markdown level1 summary"><p>Builds an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> defined in <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetValueSerDes">KNetValueSerDes</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -342,7 +287,7 @@ Interface IGenericSerDesFactory  <a class="header-action link-secondary" title="
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes</a>&lt;TValue, TJVMTValue&gt;</dt>
-    <dd><p>An instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a></p>
+    <dd><p>An instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a></p>
 </dd>
   </dl>
 
@@ -375,7 +320,7 @@ Interface IGenericSerDesFactory  <a class="header-action link-secondary" title="
 
   <h3 id="MASES_KNet_Serialization_IGenericSerDesFactory_Clear" data-uid="MASES.KNet.Serialization.IGenericSerDesFactory.Clear">
   Clear()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IGenericSerDesFactory.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Clear the current factory</p>

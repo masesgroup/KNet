@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_ForeachAction_4" data-uid="MASES.KNet.Streams.Kstream.ForeachAction`4" class="text-break">
-Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -112,9 +112,11 @@ Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-seco
     <dd><p>first value type</p>
 </dd>
     <dt><code>TJVMK</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
     <dt><code>TJVMV</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -154,6 +156,9 @@ Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-seco
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachAction-2.html#Org_Apache_Kafka_Streams_Kstream_ForeachAction_2_InitHandlers">ForeachAction&lt;TJVMK, TJVMV&gt;.InitHandlers</a>
+    </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachAction-2.html#Org_Apache_Kafka_Streams_Kstream_ForeachAction_2_BridgeClassName">ForeachAction&lt;TJVMK, TJVMV&gt;.BridgeClassName</a>
     </div>
@@ -356,6 +361,9 @@ Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-seco
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -386,7 +394,10 @@ Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-seco
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -538,7 +549,7 @@ Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-seco
 
   <h3 id="MASES_KNet_Streams_Kstream_ForeachAction_4_Factory" data-uid="MASES.KNet.Streams.Kstream.ForeachAction`4.Factory">
   Factory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the current <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></p>
@@ -570,7 +581,7 @@ Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-seco
 
   <h3 id="MASES_KNet_Streams_Kstream_ForeachAction_4_Key" data-uid="MASES.KNet.Streams.Kstream.ForeachAction`4.Key">
   Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">K</code> content</p>
@@ -602,7 +613,7 @@ Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-seco
 
   <h3 id="MASES_KNet_Streams_Kstream_ForeachAction_4_OnApply" data-uid="MASES.KNet.Streams.Kstream.ForeachAction`4.OnApply">
   OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-</a></p>
@@ -637,7 +648,7 @@ Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-seco
 
   <h3 id="MASES_KNet_Streams_Kstream_ForeachAction_4_Value" data-uid="MASES.KNet.Streams.Kstream.ForeachAction`4.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">V</code> content</p>
@@ -673,7 +684,7 @@ Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-seco
 
   <h3 id="MASES_KNet_Streams_Kstream_ForeachAction_4_Apply" data-uid="MASES.KNet.Streams.Kstream.ForeachAction`4.Apply">
   Apply()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-</a></p>
@@ -700,7 +711,7 @@ Class ForeachAction&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-seco
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ForeachAction.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 

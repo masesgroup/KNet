@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4" data-uid="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper`4" class="text-break">
-Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L217"><i class="bi bi-code-slash"></i></a>
+Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L223"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -166,6 +166,9 @@ Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.KeyValueMapper-6.html#MASES_KNet_Streams_Kstream_KeyValueMapper_6_Apply__0__1_">KeyValueMapper&lt;K, V, VR, byte[], byte[], Iterable&lt;KeyValue&lt;byte[], byte[]&gt;&gt;&gt;.Apply(K, V)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper-3.html#Org_Apache_Kafka_Streams_Kstream_KeyValueMapper_3_InitHandlers">KeyValueMapper&lt;byte[], byte[], Iterable&lt;KeyValue&lt;byte[], byte[]&gt;&gt;&gt;.InitHandlers</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper-3.html#Org_Apache_Kafka_Streams_Kstream_KeyValueMapper_3_BridgeClassName">KeyValueMapper&lt;byte[], byte[], Iterable&lt;KeyValue&lt;byte[], byte[]&gt;&gt;&gt;.BridgeClassName</a>
@@ -369,6 +372,9 @@ Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -399,7 +405,10 @@ Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -551,7 +560,7 @@ Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4_OnApply" data-uid="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper`4.OnApply">
   OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-</a></p>
@@ -590,10 +599,10 @@ Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4_Apply_System_Byte___System_Byte___" data-uid="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper`4.Apply(System.Byte[],System.Byte[])">
   Apply(byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -632,7 +641,7 @@ Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4_Apply__0__1_" data-uid="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper`4.Apply(`0,`1)">
   Apply(K, V)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-</a></p>
@@ -674,7 +683,7 @@ Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L217" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L223" class="edit-link">Edit this page</a>
         </div>
 
 

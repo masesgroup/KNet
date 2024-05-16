@@ -270,8 +270,8 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <a id="MASES_KNet_Streams_Topology_AddSink_" data-uid="MASES.KNet.Streams.Topology.AddSink*"></a>
 
-  <h3 id="MASES_KNet_Streams_Topology_AddSink__2_System_String_MASES_KNet_Streams_Processor_TopicNameExtractor___0___1__MASES_KNet_Serialization_ISerializer___0__MASES_KNet_Serialization_ISerializer___1__System_String___" data-uid="MASES.KNet.Streams.Topology.AddSink``2(System.String,MASES.KNet.Streams.Processor.TopicNameExtractor{``0,``1},MASES.KNet.Serialization.ISerializer{``0},MASES.KNet.Serialization.ISerializer{``1},System.String[])">
-  AddSink&lt;K, V&gt;(string, TopicNameExtractor&lt;K, V&gt;, ISerializer&lt;K&gt;, ISerializer&lt;V&gt;, params string[])
+  <h3 id="MASES_KNet_Streams_Topology_AddSink__2_System_String_MASES_KNet_Streams_Processor_TopicNameExtractor___0___1__MASES_KNet_Serialization_ISerializer___0_System_Byte____MASES_KNet_Serialization_ISerializer___1_System_Byte____System_String___" data-uid="MASES.KNet.Streams.Topology.AddSink``2(System.String,MASES.KNet.Streams.Processor.TopicNameExtractor{``0,``1},MASES.KNet.Serialization.ISerializer{``0,System.Byte[]},MASES.KNet.Serialization.ISerializer{``1,System.Byte[]},System.String[])">
+  AddSink&lt;K, V&gt;(string, TopicNameExtractor&lt;K, V&gt;, ISerializer&lt;K, byte[]&gt;, ISerializer&lt;V, byte[]&gt;, params string[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Topology.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -280,7 +280,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topology AddSink&lt;K, V&gt;(string arg0, TopicNameExtractor&lt;K, V&gt; arg1, ISerializer&lt;K&gt; arg2, ISerializer&lt;V&gt; arg3, params string[] arg4)</code></pre>
+    <pre><code class="lang-csharp hljs">public Topology AddSink&lt;K, V&gt;(string arg0, TopicNameExtractor&lt;K, V&gt; arg1, ISerializer&lt;K, byte[]&gt; arg2, ISerializer&lt;V, byte[]&gt; arg3, params string[] arg4)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -291,11 +291,11 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
     <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Processor.TopicNameExtractor-2.html">TopicNameExtractor</a>&lt;K, V&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Processor.TopicNameExtractor-2.html">TopicNameExtractor&lt;K, V&gt;</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer</a>&lt;K&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer&lt;T&gt;</a></p>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer</a>&lt;K, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer&lt;T, TJVMT&gt;</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer</a>&lt;V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer&lt;T&gt;</a></p>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer</a>&lt;V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer&lt;T, TJVMT&gt;</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
@@ -380,8 +380,8 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <a id="MASES_KNet_Streams_Topology_AddSink_" data-uid="MASES.KNet.Streams.Topology.AddSink*"></a>
 
-  <h3 id="MASES_KNet_Streams_Topology_AddSink__2_System_String_System_String_MASES_KNet_Serialization_ISerializer___0__MASES_KNet_Serialization_ISerializer___1__System_String___" data-uid="MASES.KNet.Streams.Topology.AddSink``2(System.String,System.String,MASES.KNet.Serialization.ISerializer{``0},MASES.KNet.Serialization.ISerializer{``1},System.String[])">
-  AddSink&lt;K, V&gt;(string, string, ISerializer&lt;K&gt;, ISerializer&lt;V&gt;, params string[])
+  <h3 id="MASES_KNet_Streams_Topology_AddSink__2_System_String_System_String_MASES_KNet_Serialization_ISerializer___0_System_Byte____MASES_KNet_Serialization_ISerializer___1_System_Byte____System_String___" data-uid="MASES.KNet.Streams.Topology.AddSink``2(System.String,System.String,MASES.KNet.Serialization.ISerializer{``0,System.Byte[]},MASES.KNet.Serialization.ISerializer{``1,System.Byte[]},System.String[])">
+  AddSink&lt;K, V&gt;(string, string, ISerializer&lt;K, byte[]&gt;, ISerializer&lt;V, byte[]&gt;, params string[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Topology.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -390,7 +390,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topology AddSink&lt;K, V&gt;(string arg0, string arg1, ISerializer&lt;K&gt; arg2, ISerializer&lt;V&gt; arg3, params string[] arg4)</code></pre>
+    <pre><code class="lang-csharp hljs">public Topology AddSink&lt;K, V&gt;(string arg0, string arg1, ISerializer&lt;K, byte[]&gt; arg2, ISerializer&lt;V, byte[]&gt; arg3, params string[] arg4)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -401,11 +401,11 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer</a>&lt;K&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer&lt;T&gt;</a></p>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer</a>&lt;K, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer&lt;T, TJVMT&gt;</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer</a>&lt;V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer&lt;T&gt;</a></p>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer</a>&lt;V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer&lt;T, TJVMT&gt;</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
@@ -438,8 +438,8 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <a id="MASES_KNet_Streams_Topology_AddSink_" data-uid="MASES.KNet.Streams.Topology.AddSink*"></a>
 
-  <h3 id="MASES_KNet_Streams_Topology_AddSink__4_System_String_MASES_KNet_Streams_Processor_TopicNameExtractor___0___1__MASES_KNet_Serialization_ISerializer___0__MASES_KNet_Serialization_ISerializer___1__MASES_KNet_Streams_Processor_StreamPartitioner___2___3__System_String___" data-uid="MASES.KNet.Streams.Topology.AddSink``4(System.String,MASES.KNet.Streams.Processor.TopicNameExtractor{``0,``1},MASES.KNet.Serialization.ISerializer{``0},MASES.KNet.Serialization.ISerializer{``1},MASES.KNet.Streams.Processor.StreamPartitioner{``2,``3},System.String[])">
-  AddSink&lt;K, V, Arg4objectSuperK, Arg4objectSuperV&gt;(string, TopicNameExtractor&lt;K, V&gt;, ISerializer&lt;K&gt;, ISerializer&lt;V&gt;, StreamPartitioner&lt;Arg4objectSuperK, Arg4objectSuperV&gt;, params string[])
+  <h3 id="MASES_KNet_Streams_Topology_AddSink__4_System_String_MASES_KNet_Streams_Processor_TopicNameExtractor___0___1__MASES_KNet_Serialization_ISerializer___0_System_Byte____MASES_KNet_Serialization_ISerializer___1_System_Byte____MASES_KNet_Streams_Processor_StreamPartitioner___2___3__System_String___" data-uid="MASES.KNet.Streams.Topology.AddSink``4(System.String,MASES.KNet.Streams.Processor.TopicNameExtractor{``0,``1},MASES.KNet.Serialization.ISerializer{``0,System.Byte[]},MASES.KNet.Serialization.ISerializer{``1,System.Byte[]},MASES.KNet.Streams.Processor.StreamPartitioner{``2,``3},System.String[])">
+  AddSink&lt;K, V, Arg4objectSuperK, Arg4objectSuperV&gt;(string, TopicNameExtractor&lt;K, V&gt;, ISerializer&lt;K, byte[]&gt;, ISerializer&lt;V, byte[]&gt;, StreamPartitioner&lt;Arg4objectSuperK, Arg4objectSuperV&gt;, params string[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Topology.cs/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -448,7 +448,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topology AddSink&lt;K, V, Arg4objectSuperK, Arg4objectSuperV&gt;(string arg0, TopicNameExtractor&lt;K, V&gt; arg1, ISerializer&lt;K&gt; arg2, ISerializer&lt;V&gt; arg3, StreamPartitioner&lt;Arg4objectSuperK, Arg4objectSuperV&gt; arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V</code></pre>
+    <pre><code class="lang-csharp hljs">public Topology AddSink&lt;K, V, Arg4objectSuperK, Arg4objectSuperV&gt;(string arg0, TopicNameExtractor&lt;K, V&gt; arg1, ISerializer&lt;K, byte[]&gt; arg2, ISerializer&lt;V, byte[]&gt; arg3, StreamPartitioner&lt;Arg4objectSuperK, Arg4objectSuperV&gt; arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -459,11 +459,11 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
     <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Processor.TopicNameExtractor-2.html">TopicNameExtractor</a>&lt;K, V&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Processor.TopicNameExtractor-2.html">TopicNameExtractor&lt;K, V&gt;</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer</a>&lt;K&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer&lt;T&gt;</a></p>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer</a>&lt;K, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer&lt;T, TJVMT&gt;</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer</a>&lt;V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer&lt;T&gt;</a></p>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer</a>&lt;V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer&lt;T, TJVMT&gt;</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitioner-2.html">StreamPartitioner</a>&lt;Arg4objectSuperK, Arg4objectSuperV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitioner-2.html">StreamPartitioner&lt;K, V&gt;</a></p>
@@ -566,8 +566,8 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <a id="MASES_KNet_Streams_Topology_AddSink_" data-uid="MASES.KNet.Streams.Topology.AddSink*"></a>
 
-  <h3 id="MASES_KNet_Streams_Topology_AddSink__4_System_String_System_String_MASES_KNet_Serialization_ISerializer___0__MASES_KNet_Serialization_ISerializer___1__MASES_KNet_Streams_Processor_StreamPartitioner___2___3__System_String___" data-uid="MASES.KNet.Streams.Topology.AddSink``4(System.String,System.String,MASES.KNet.Serialization.ISerializer{``0},MASES.KNet.Serialization.ISerializer{``1},MASES.KNet.Streams.Processor.StreamPartitioner{``2,``3},System.String[])">
-  AddSink&lt;K, V, Arg4objectSuperK, Arg4objectSuperV&gt;(string, string, ISerializer&lt;K&gt;, ISerializer&lt;V&gt;, StreamPartitioner&lt;Arg4objectSuperK, Arg4objectSuperV&gt;, params string[])
+  <h3 id="MASES_KNet_Streams_Topology_AddSink__4_System_String_System_String_MASES_KNet_Serialization_ISerializer___0_System_Byte____MASES_KNet_Serialization_ISerializer___1_System_Byte____MASES_KNet_Streams_Processor_StreamPartitioner___2___3__System_String___" data-uid="MASES.KNet.Streams.Topology.AddSink``4(System.String,System.String,MASES.KNet.Serialization.ISerializer{``0,System.Byte[]},MASES.KNet.Serialization.ISerializer{``1,System.Byte[]},MASES.KNet.Streams.Processor.StreamPartitioner{``2,``3},System.String[])">
+  AddSink&lt;K, V, Arg4objectSuperK, Arg4objectSuperV&gt;(string, string, ISerializer&lt;K, byte[]&gt;, ISerializer&lt;V, byte[]&gt;, StreamPartitioner&lt;Arg4objectSuperK, Arg4objectSuperV&gt;, params string[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Topology.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -576,7 +576,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topology AddSink&lt;K, V, Arg4objectSuperK, Arg4objectSuperV&gt;(string arg0, string arg1, ISerializer&lt;K&gt; arg2, ISerializer&lt;V&gt; arg3, StreamPartitioner&lt;Arg4objectSuperK, Arg4objectSuperV&gt; arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V</code></pre>
+    <pre><code class="lang-csharp hljs">public Topology AddSink&lt;K, V, Arg4objectSuperK, Arg4objectSuperV&gt;(string arg0, string arg1, ISerializer&lt;K, byte[]&gt; arg2, ISerializer&lt;V, byte[]&gt; arg3, StreamPartitioner&lt;Arg4objectSuperK, Arg4objectSuperV&gt; arg4, params string[] arg5) where Arg4objectSuperK : K where Arg4objectSuperV : V</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -587,11 +587,11 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer</a>&lt;K&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer&lt;T&gt;</a></p>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer</a>&lt;K, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer&lt;T, TJVMT&gt;</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer</a>&lt;V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer&lt;T&gt;</a></p>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer</a>&lt;V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer&lt;T, TJVMT&gt;</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitioner-2.html">StreamPartitioner</a>&lt;Arg4objectSuperK, Arg4objectSuperV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitioner-2.html">StreamPartitioner&lt;K, V&gt;</a></p>
@@ -925,8 +925,8 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <a id="MASES_KNet_Streams_Topology_AddSource_" data-uid="MASES.KNet.Streams.Topology.AddSource*"></a>
 
-  <h3 id="MASES_KNet_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_Topology_AutoOffsetReset_System_String_MASES_KNet_Serialization_IDeserializer_System_Object__MASES_KNet_Serialization_IDeserializer_System_Object__Java_Util_Regex_Pattern_" data-uid="MASES.KNet.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset,System.String,MASES.KNet.Serialization.IDeserializer{System.Object},MASES.KNet.Serialization.IDeserializer{System.Object},Java.Util.Regex.Pattern)">
-  AddSource(AutoOffsetReset, string, IDeserializer&lt;object&gt;, IDeserializer&lt;object&gt;, Pattern)
+  <h3 id="MASES_KNet_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_Topology_AutoOffsetReset_System_String_MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____Java_Util_Regex_Pattern_" data-uid="MASES.KNet.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset,System.String,MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},Java.Util.Regex.Pattern)">
+  AddSource(AutoOffsetReset, string, IDeserializer&lt;object, byte[]&gt;, IDeserializer&lt;object, byte[]&gt;, Pattern)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Topology.cs/#L321"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -935,7 +935,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topology AddSource(Topology.AutoOffsetReset arg0, string arg1, IDeserializer&lt;object&gt; arg2, IDeserializer&lt;object&gt; arg3, Pattern arg4)</code></pre>
+    <pre><code class="lang-csharp hljs">public Topology AddSource(Topology.AutoOffsetReset arg0, string arg1, IDeserializer&lt;object, byte[]&gt; arg2, IDeserializer&lt;object, byte[]&gt; arg3, Pattern arg4)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -946,11 +946,11 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></dt>
     <dd><p><a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></p>
@@ -976,8 +976,8 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <a id="MASES_KNet_Streams_Topology_AddSource_" data-uid="MASES.KNet.Streams.Topology.AddSource*"></a>
 
-  <h3 id="MASES_KNet_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_Topology_AutoOffsetReset_System_String_MASES_KNet_Serialization_IDeserializer_System_Object__MASES_KNet_Serialization_IDeserializer_System_Object__System_String___" data-uid="MASES.KNet.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset,System.String,MASES.KNet.Serialization.IDeserializer{System.Object},MASES.KNet.Serialization.IDeserializer{System.Object},System.String[])">
-  AddSource(AutoOffsetReset, string, IDeserializer&lt;object&gt;, IDeserializer&lt;object&gt;, params string[])
+  <h3 id="MASES_KNet_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_Topology_AutoOffsetReset_System_String_MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____System_String___" data-uid="MASES.KNet.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset,System.String,MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},System.String[])">
+  AddSource(AutoOffsetReset, string, IDeserializer&lt;object, byte[]&gt;, IDeserializer&lt;object, byte[]&gt;, params string[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Topology.cs/#L307"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -986,7 +986,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topology AddSource(Topology.AutoOffsetReset arg0, string arg1, IDeserializer&lt;object&gt; arg2, IDeserializer&lt;object&gt; arg3, params string[] arg4)</code></pre>
+    <pre><code class="lang-csharp hljs">public Topology AddSource(Topology.AutoOffsetReset arg0, string arg1, IDeserializer&lt;object, byte[]&gt; arg2, IDeserializer&lt;object, byte[]&gt; arg3, params string[] arg4)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -997,11 +997,11 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
@@ -1027,8 +1027,8 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <a id="MASES_KNet_Streams_Topology_AddSource_" data-uid="MASES.KNet.Streams.Topology.AddSource*"></a>
 
-  <h3 id="MASES_KNet_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_Topology_AutoOffsetReset_System_String_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_MASES_KNet_Serialization_IDeserializer_System_Object__MASES_KNet_Serialization_IDeserializer_System_Object__Java_Util_Regex_Pattern_" data-uid="MASES.KNet.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset,System.String,Org.Apache.Kafka.Streams.Processor.TimestampExtractor,MASES.KNet.Serialization.IDeserializer{System.Object},MASES.KNet.Serialization.IDeserializer{System.Object},Java.Util.Regex.Pattern)">
-  AddSource(AutoOffsetReset, string, TimestampExtractor, IDeserializer&lt;object&gt;, IDeserializer&lt;object&gt;, Pattern)
+  <h3 id="MASES_KNet_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_Topology_AutoOffsetReset_System_String_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____Java_Util_Regex_Pattern_" data-uid="MASES.KNet.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset,System.String,Org.Apache.Kafka.Streams.Processor.TimestampExtractor,MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},Java.Util.Regex.Pattern)">
+  AddSource(AutoOffsetReset, string, TimestampExtractor, IDeserializer&lt;object, byte[]&gt;, IDeserializer&lt;object, byte[]&gt;, Pattern)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Topology.cs/#L352"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1037,7 +1037,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topology AddSource(Topology.AutoOffsetReset arg0, string arg1, TimestampExtractor arg2, IDeserializer&lt;object&gt; arg3, IDeserializer&lt;object&gt; arg4, Pattern arg5)</code></pre>
+    <pre><code class="lang-csharp hljs">public Topology AddSource(Topology.AutoOffsetReset arg0, string arg1, TimestampExtractor arg2, IDeserializer&lt;object, byte[]&gt; arg3, IDeserializer&lt;object, byte[]&gt; arg4, Pattern arg5)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1051,11 +1051,11 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
     <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.TimestampExtractor.html">TimestampExtractor</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.TimestampExtractor.html">TimestampExtractor</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
-    <dt><code>arg4</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg4</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
     <dt><code>arg5</code> <a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></dt>
     <dd><p><a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></p>
@@ -1081,8 +1081,8 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <a id="MASES_KNet_Streams_Topology_AddSource_" data-uid="MASES.KNet.Streams.Topology.AddSource*"></a>
 
-  <h3 id="MASES_KNet_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_Topology_AutoOffsetReset_System_String_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_MASES_KNet_Serialization_IDeserializer_System_Object__MASES_KNet_Serialization_IDeserializer_System_Object__System_String___" data-uid="MASES.KNet.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset,System.String,Org.Apache.Kafka.Streams.Processor.TimestampExtractor,MASES.KNet.Serialization.IDeserializer{System.Object},MASES.KNet.Serialization.IDeserializer{System.Object},System.String[])">
-  AddSource(AutoOffsetReset, string, TimestampExtractor, IDeserializer&lt;object&gt;, IDeserializer&lt;object&gt;, params string[])
+  <h3 id="MASES_KNet_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_Topology_AutoOffsetReset_System_String_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____System_String___" data-uid="MASES.KNet.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset,System.String,Org.Apache.Kafka.Streams.Processor.TimestampExtractor,MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},System.String[])">
+  AddSource(AutoOffsetReset, string, TimestampExtractor, IDeserializer&lt;object, byte[]&gt;, IDeserializer&lt;object, byte[]&gt;, params string[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Topology.cs/#L336"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1091,7 +1091,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topology AddSource(Topology.AutoOffsetReset arg0, string arg1, TimestampExtractor arg2, IDeserializer&lt;object&gt; arg3, IDeserializer&lt;object&gt; arg4, params string[] arg5)</code></pre>
+    <pre><code class="lang-csharp hljs">public Topology AddSource(Topology.AutoOffsetReset arg0, string arg1, TimestampExtractor arg2, IDeserializer&lt;object, byte[]&gt; arg3, IDeserializer&lt;object, byte[]&gt; arg4, params string[] arg5)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1105,11 +1105,11 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
     <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.TimestampExtractor.html">TimestampExtractor</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.TimestampExtractor.html">TimestampExtractor</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg3</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
-    <dt><code>arg4</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg4</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
     <dt><code>arg5</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
@@ -1222,8 +1222,8 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <a id="MASES_KNet_Streams_Topology_AddSource_" data-uid="MASES.KNet.Streams.Topology.AddSource*"></a>
 
-  <h3 id="MASES_KNet_Streams_Topology_AddSource_System_String_MASES_KNet_Serialization_IDeserializer_System_Object__MASES_KNet_Serialization_IDeserializer_System_Object__Java_Util_Regex_Pattern_" data-uid="MASES.KNet.Streams.Topology.AddSource(System.String,MASES.KNet.Serialization.IDeserializer{System.Object},MASES.KNet.Serialization.IDeserializer{System.Object},Java.Util.Regex.Pattern)">
-  AddSource(string, IDeserializer&lt;object&gt;, IDeserializer&lt;object&gt;, Pattern)
+  <h3 id="MASES_KNet_Streams_Topology_AddSource_System_String_MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____Java_Util_Regex_Pattern_" data-uid="MASES.KNet.Streams.Topology.AddSource(System.String,MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},Java.Util.Regex.Pattern)">
+  AddSource(string, IDeserializer&lt;object, byte[]&gt;, IDeserializer&lt;object, byte[]&gt;, Pattern)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Topology.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1232,7 +1232,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topology AddSource(string arg0, IDeserializer&lt;object&gt; arg1, IDeserializer&lt;object&gt; arg2, Pattern arg3)</code></pre>
+    <pre><code class="lang-csharp hljs">public Topology AddSource(string arg0, IDeserializer&lt;object, byte[]&gt; arg1, IDeserializer&lt;object, byte[]&gt; arg2, Pattern arg3)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1240,11 +1240,11 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
     <dt><code>arg3</code> <a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></dt>
     <dd><p><a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></p>
@@ -1270,8 +1270,8 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <a id="MASES_KNet_Streams_Topology_AddSource_" data-uid="MASES.KNet.Streams.Topology.AddSource*"></a>
 
-  <h3 id="MASES_KNet_Streams_Topology_AddSource_System_String_MASES_KNet_Serialization_IDeserializer_System_Object__MASES_KNet_Serialization_IDeserializer_System_Object__System_String___" data-uid="MASES.KNet.Streams.Topology.AddSource(System.String,MASES.KNet.Serialization.IDeserializer{System.Object},MASES.KNet.Serialization.IDeserializer{System.Object},System.String[])">
-  AddSource(string, IDeserializer&lt;object&gt;, IDeserializer&lt;object&gt;, params string[])
+  <h3 id="MASES_KNet_Streams_Topology_AddSource_System_String_MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____MASES_KNet_Serialization_IDeserializer_System_Object_System_Byte____System_String___" data-uid="MASES.KNet.Streams.Topology.AddSource(System.String,MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},MASES.KNet.Serialization.IDeserializer{System.Object,System.Byte[]},System.String[])">
+  AddSource(string, IDeserializer&lt;object, byte[]&gt;, IDeserializer&lt;object, byte[]&gt;, params string[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Topology.cs/#L230"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1280,7 +1280,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topology AddSource(string arg0, IDeserializer&lt;object&gt; arg1, IDeserializer&lt;object&gt; arg2, params string[] arg3)</code></pre>
+    <pre><code class="lang-csharp hljs">public Topology AddSource(string arg0, IDeserializer&lt;object, byte[]&gt; arg1, IDeserializer&lt;object, byte[]&gt; arg2, params string[] arg3)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1288,11 +1288,11 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></p>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></p>
 </dd>
     <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>

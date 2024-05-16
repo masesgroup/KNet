@@ -188,6 +188,12 @@ Class AdminClientConfigBuilder  <a class="header-action link-secondary" title="V
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRetries_System_Int32_">CommonClientConfigsBuilder&lt;AdminClientConfigBuilder&gt;.WithRetries(int)</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_RetryBackoffMaxMs">CommonClientConfigsBuilder&lt;AdminClientConfigBuilder&gt;.RetryBackoffMaxMs</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithRetryBackoffMaxMs_System_Int64_">CommonClientConfigsBuilder&lt;AdminClientConfigBuilder&gt;.WithRetryBackoffMaxMs(long)</a>
+    </div>
+    <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_RetryBackoffMs">CommonClientConfigsBuilder&lt;AdminClientConfigBuilder&gt;.RetryBackoffMs</a>
     </div>
     <div>
@@ -272,6 +278,12 @@ Class AdminClientConfigBuilder  <a class="header-action link-secondary" title="V
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultListValueSerdeTypeClass_Java_Lang_Class_">CommonClientConfigsBuilder&lt;AdminClientConfigBuilder&gt;.WithDefaultListValueSerdeTypeClass(Class)</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_EnableMetricsPush">CommonClientConfigsBuilder&lt;AdminClientConfigBuilder&gt;.EnableMetricsPush</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithEnableMetricsPush_System_Boolean_">CommonClientConfigsBuilder&lt;AdminClientConfigBuilder&gt;.WithEnableMetricsPush(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_GroupId">CommonClientConfigsBuilder&lt;AdminClientConfigBuilder&gt;.GroupId</a>
     </div>
     <div>
@@ -341,6 +353,9 @@ Class AdminClientConfigBuilder  <a class="header-action link-secondary" title="V
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;AdminClientConfigBuilder&gt;.ToMap()</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_AutoSelectBuffered">GenericConfigBuilder&lt;AdminClientConfigBuilder&gt;.AutoSelectBuffered</a>
+    </div>
+    <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KNetKeySerDes">GenericConfigBuilder&lt;AdminClientConfigBuilder&gt;.KNetKeySerDes</a>
     </div>
     <div>
@@ -350,13 +365,7 @@ Class AdminClientConfigBuilder  <a class="header-action link-secondary" title="V
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__2">GenericConfigBuilder&lt;AdminClientConfigBuilder&gt;.BuildKeySerDes&lt;TKey, TJVMTKey&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__1">GenericConfigBuilder&lt;AdminClientConfigBuilder&gt;.BuildKeySerDes&lt;TKey&gt;()</a>
-    </div>
-    <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__2">GenericConfigBuilder&lt;AdminClientConfigBuilder&gt;.BuildValueSerDes&lt;TValue, TJVMTValue&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__1">GenericConfigBuilder&lt;AdminClientConfigBuilder&gt;.BuildValueSerDes&lt;TValue&gt;()</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Clear">GenericConfigBuilder&lt;AdminClientConfigBuilder&gt;.Clear()</a>
@@ -396,11 +405,43 @@ Class AdminClientConfigBuilder  <a class="header-action link-secondary" title="V
 </h2>
 
 
+  <a id="MASES_KNet_Admin_AdminClientConfigBuilder_BootstrapControllers_" data-uid="MASES.KNet.Admin.AdminClientConfigBuilder.BootstrapControllers*"></a>
+
+  <h3 id="MASES_KNet_Admin_AdminClientConfigBuilder_BootstrapControllers" data-uid="MASES.KNet.Admin.AdminClientConfigBuilder.BootstrapControllers">
+  BootstrapControllers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Admin/AdminClientConfig.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Admin.AdminClientConfig.html#Org_Apache_Kafka_Clients_Admin_AdminClientConfig_BOOTSTRAP_CONTROLLERS_CONFIG">BOOTSTRAP_CONTROLLERS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BootstrapControllers { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Admin_AdminClientConfigBuilder_SecurityProviders_" data-uid="MASES.KNet.Admin.AdminClientConfigBuilder.SecurityProviders*"></a>
 
   <h3 id="MASES_KNet_Admin_AdminClientConfigBuilder_SecurityProviders" data-uid="MASES.KNet.Admin.AdminClientConfigBuilder.SecurityProviders">
   SecurityProviders
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Admin/AdminClientConfig.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Admin/AdminClientConfig.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Admin.AdminClientConfig.html#Org_Apache_Kafka_Clients_Admin_AdminClientConfig_SECURITY_PROVIDERS_CONFIG">SECURITY_PROVIDERS_CONFIG</a></p>
@@ -432,11 +473,48 @@ Class AdminClientConfigBuilder  <a class="header-action link-secondary" title="V
 </h2>
 
 
+  <a id="MASES_KNet_Admin_AdminClientConfigBuilder_WithBootstrapControllers_" data-uid="MASES.KNet.Admin.AdminClientConfigBuilder.WithBootstrapControllers*"></a>
+
+  <h3 id="MASES_KNet_Admin_AdminClientConfigBuilder_WithBootstrapControllers_System_String_" data-uid="MASES.KNet.Admin.AdminClientConfigBuilder.WithBootstrapControllers(System.String)">
+  WithBootstrapControllers(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Admin/AdminClientConfig.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Admin.AdminClientConfig.html#Org_Apache_Kafka_Clients_Admin_AdminClientConfig_BOOTSTRAP_CONTROLLERS_CONFIG">BOOTSTRAP_CONTROLLERS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdminClientConfigBuilder WithBootstrapControllers(string bootstrapControllers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bootstrapControllers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Admin.AdminClientConfigBuilder.html">AdminClientConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Admin_AdminClientConfigBuilder_WithSecurityProviders_" data-uid="MASES.KNet.Admin.AdminClientConfigBuilder.WithSecurityProviders*"></a>
 
   <h3 id="MASES_KNet_Admin_AdminClientConfigBuilder_WithSecurityProviders_System_String_" data-uid="MASES.KNet.Admin.AdminClientConfigBuilder.WithSecurityProviders(System.String)">
   WithSecurityProviders(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Admin/AdminClientConfig.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Admin/AdminClientConfig.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Admin.AdminClientConfig.html#Org_Apache_Kafka_Clients_Admin_AdminClientConfig_SECURITY_PROVIDERS_CONFIG">SECURITY_PROVIDERS_CONFIG</a></p>

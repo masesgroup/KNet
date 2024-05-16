@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_Branched_4" data-uid="MASES.KNet.Streams.Kstream.Branched`4" class="text-break">
-Class Branched&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class Branched&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -110,9 +110,11 @@ Class Branched&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary
     <dt><code>V</code></dt>
     <dd></dd>
     <dt><code>TJVMK</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
     <dt><code>TJVMV</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -170,7 +172,7 @@ Class Branched&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary
 
   <h3 id="MASES_KNet_Streams_Kstream_Branched_4_As_System_String_" data-uid="MASES.KNet.Streams.Kstream.Branched`4.As(System.String)">
   As(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#as-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#as-java.lang.String-</a></p>
@@ -209,7 +211,7 @@ Class Branched&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary
 
   <h3 id="MASES_KNet_Streams_Kstream_Branched_4_WithConsumer_MASES_KNet_Streams_Utils_KStreamConsumer__0__1__2__3__" data-uid="MASES.KNet.Streams.Kstream.Branched`4.WithConsumer(MASES.KNet.Streams.Utils.KStreamConsumer{`0,`1,`2,`3})">
   WithConsumer(KStreamConsumer&lt;K, V, TJVMK, TJVMV&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer-java.util.function.Consumer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer-java.util.function.Consumer-</a></p>
@@ -248,7 +250,7 @@ Class Branched&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary
 
   <h3 id="MASES_KNet_Streams_Kstream_Branched_4_WithConsumer_MASES_KNet_Streams_Utils_KStreamConsumer__0__1__2__3__System_String_" data-uid="MASES.KNet.Streams.Kstream.Branched`4.WithConsumer(MASES.KNet.Streams.Utils.KStreamConsumer{`0,`1,`2,`3},System.String)">
   WithConsumer(KStreamConsumer&lt;K, V, TJVMK, TJVMV&gt;, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer-java.util.function.Consumer-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer-java.util.function.Consumer-java.lang.String-</a></p>
@@ -290,7 +292,7 @@ Class Branched&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary
 
   <h3 id="MASES_KNet_Streams_Kstream_Branched_4_WithFunction_MASES_KNet_Streams_Utils_KStreamFunction__0__1__2__3__" data-uid="MASES.KNet.Streams.Kstream.Branched`4.WithFunction(MASES.KNet.Streams.Utils.KStreamFunction{`0,`1,`2,`3})">
   WithFunction(KStreamFunction&lt;K, V, TJVMK, TJVMV&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withFunction-java.util.function.Function-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withFunction-java.util.function.Function-</a></p>
@@ -329,7 +331,7 @@ Class Branched&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary
 
   <h3 id="MASES_KNet_Streams_Kstream_Branched_4_WithFunction_MASES_KNet_Streams_Utils_KStreamFunction__0__1__2__3__System_String_" data-uid="MASES.KNet.Streams.Kstream.Branched`4.WithFunction(MASES.KNet.Streams.Utils.KStreamFunction{`0,`1,`2,`3},System.String)">
   WithFunction(KStreamFunction&lt;K, V, TJVMK, TJVMV&gt;, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withFunction-java.util.function.Function-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Branched.html#withFunction-java.util.function.Function-java.lang.String-</a></p>
@@ -375,7 +377,7 @@ Class Branched&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary
 
   <h3 id="MASES_KNet_Streams_Kstream_Branched_4_op_Implicit_MASES_KNet_Streams_Kstream_Branched__0__1__2__3___Org_Apache_Kafka_Streams_Kstream_Branched__2__3_" data-uid="MASES.KNet.Streams.Kstream.Branched`4.op_Implicit(MASES.KNet.Streams.Kstream.Branched{`0,`1,`2,`3})~Org.Apache.Kafka.Streams.Kstream.Branched{`2,`3}">
   implicit operator Branched&lt;TJVMK, TJVMV&gt;(Branched&lt;K, V, TJVMK, TJVMV&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.Kstream.Branched-4.html">Branched&lt;K, V, TJVMK, TJVMV&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Branched-2.html">Branched&lt;K, V&gt;</a></p>
@@ -412,7 +414,7 @@ Class Branched&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Branched.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 

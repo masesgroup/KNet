@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_Initializer_2" data-uid="MASES.KNet.Streams.Kstream.Initializer`2" class="text-break">
-Class Initializer&lt;VA, TJVMVA&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L28"><i class="bi bi-code-slash"></i></a>
+Class Initializer&lt;VA, TJVMVA&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,7 @@ Class Initializer&lt;VA, TJVMVA&gt;  <a class="header-action link-secondary" tit
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Initializer-1.html">Initializer&lt;VA&gt;</a></p>
+  <div class="markdown summary"><p>KNet implementation of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Initializer-1.html">Initializer&lt;VAgg&gt;</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -109,7 +109,8 @@ Class Initializer&lt;VA, TJVMVA&gt;  <a class="header-action link-secondary" tit
     <dd><p>The key type</p>
 </dd>
     <dt><code>TJVMVA</code></dt>
-    <dd></dd>
+    <dd><p>The JVM type of <code class="typeparamref">VA</code></p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -149,6 +150,9 @@ Class Initializer&lt;VA, TJVMVA&gt;  <a class="header-action link-secondary" tit
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Initializer-1.html#Org_Apache_Kafka_Streams_Kstream_Initializer_1_InitHandlers">Initializer&lt;TJVMVA&gt;.InitHandlers</a>
+    </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Initializer-1.html#Org_Apache_Kafka_Streams_Kstream_Initializer_1_BridgeClassName">Initializer&lt;TJVMVA&gt;.BridgeClassName</a>
     </div>
@@ -348,6 +352,9 @@ Class Initializer&lt;VA, TJVMVA&gt;  <a class="header-action link-secondary" tit
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -378,7 +385,10 @@ Class Initializer&lt;VA, TJVMVA&gt;  <a class="header-action link-secondary" tit
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -530,7 +540,7 @@ Class Initializer&lt;VA, TJVMVA&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="MASES_KNet_Streams_Kstream_Initializer_2_Factory" data-uid="MASES.KNet.Streams.Kstream.Initializer`2.Factory">
   Factory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the current <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></p>
@@ -562,7 +572,7 @@ Class Initializer&lt;VA, TJVMVA&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="MASES_KNet_Streams_Kstream_Initializer_2_OnApply2" data-uid="MASES.KNet.Streams.Kstream.Initializer`2.OnApply2">
   OnApply2
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Initializer.html#apply--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Initializer.html#apply--</a></p>
@@ -601,7 +611,7 @@ Class Initializer&lt;VA, TJVMVA&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="MASES_KNet_Streams_Kstream_Initializer_2_Apply2" data-uid="MASES.KNet.Streams.Kstream.Initializer`2.Apply2">
   Apply2()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Initializer.html#apply--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Initializer.html#apply--</a></p>
@@ -634,7 +644,7 @@ Class Initializer&lt;VA, TJVMVA&gt;  <a class="header-action link-secondary" tit
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L28" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Initializer.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 

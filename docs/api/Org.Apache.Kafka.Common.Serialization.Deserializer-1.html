@@ -135,6 +135,12 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
     </dd>
   </dl>
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Org.Apache.Kafka.Common.Serialization.DeserializerDirect-1.html">DeserializerDirect&lt;T&gt;</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -326,6 +332,9 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -356,7 +365,10 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -511,7 +523,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Deserializer_1__ctor" data-uid="Org.Apache.Kafka.Common.Serialization.Deserializer`1.#ctor">
   Deserializer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L413"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L454"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -542,7 +554,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Deserializer_1_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Serialization.Deserializer`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L418"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L463"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -570,6 +582,38 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="Org_Apache_Kafka_Common_Serialization_Deserializer_1_InitHandlers_" data-uid="Org.Apache.Kafka.Common.Serialization.Deserializer`1.InitHandlers*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Deserializer_1_InitHandlers" data-uid="Org.Apache.Kafka.Common.Serialization.Deserializer`1.InitHandlers">
+  InitHandlers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable/disable handlers initialization, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool InitHandlers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Common_Serialization_Deserializer_1_OnClose_" data-uid="Org.Apache.Kafka.Common.Serialization.Deserializer`1.OnClose*"></a>
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Deserializer_1_OnClose" data-uid="Org.Apache.Kafka.Common.Serialization.Deserializer`1.OnClose">
@@ -577,7 +621,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L396"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#close--</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -612,7 +656,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L427"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -647,7 +691,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L288"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-byte[]-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-byte[]-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -682,7 +726,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -717,7 +761,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L362"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-</a></p>
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -756,7 +800,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L408"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#close--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -786,7 +830,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L387"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#close--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -816,7 +860,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L441"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -855,7 +899,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L418"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#configure-java.util.Map-boolean-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -894,7 +938,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L379"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -942,7 +986,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L341"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -990,7 +1034,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L303"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-byte[]-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-byte[]-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1032,7 +1076,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L353"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1080,7 +1124,7 @@ Class Deserializer&lt;T&gt;  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Deserializer.cs/#L315"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

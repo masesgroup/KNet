@@ -420,8 +420,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_GlobalTable_" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1__" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1})">
-  GlobalTable&lt;K, V&gt;(string, Consumed&lt;K, V&gt;)
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]})">
+  GlobalTable&lt;K, V&gt;(string, Consumed&lt;K, V, byte[], byte[]&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -430,7 +430,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, byte[], byte[]&gt; GlobalTable&lt;K, V&gt;(string arg0, Consumed&lt;K, V&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, byte[], byte[]&gt; GlobalTable&lt;K, V&gt;(string arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -438,8 +438,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed</a>&lt;K, V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed&lt;K, V&gt;</a></p>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -469,8 +469,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_GlobalTable_" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1__MASES_KNet_Streams_Kstream_Materialized___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1},MASES.KNet.Streams.Kstream.Materialized{``0,``1,System.Byte[],System.Byte[]})">
-  GlobalTable&lt;K, V&gt;(string, Consumed&lt;K, V&gt;, Materialized&lt;K, V, byte[], byte[]&gt;)
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____MASES_KNet_Streams_Kstream_Materialized___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]},MASES.KNet.Streams.Kstream.Materialized{``0,``1,System.Byte[],System.Byte[]})">
+  GlobalTable&lt;K, V&gt;(string, Consumed&lt;K, V, byte[], byte[]&gt;, Materialized&lt;K, V, byte[], byte[]&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -479,7 +479,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, byte[], byte[]&gt; GlobalTable&lt;K, V&gt;(string arg0, Consumed&lt;K, V&gt; arg1, Materialized&lt;K, V, byte[], byte[]&gt; arg2)</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, byte[], byte[]&gt; GlobalTable&lt;K, V&gt;(string arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1, Materialized&lt;K, V, byte[], byte[]&gt; arg2)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -487,8 +487,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed</a>&lt;K, V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed&lt;K, V&gt;</a></p>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
@@ -655,8 +655,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Stream_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_Java_Util_Regex_Pattern_MASES_KNet_Streams_Kstream_Consumed___0___1__" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(Java.Util.Regex.Pattern,MASES.KNet.Streams.Kstream.Consumed{``0,``1})">
-  Stream&lt;K, V&gt;(Pattern, Consumed&lt;K, V&gt;)
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_Java_Util_Regex_Pattern_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(Java.Util.Regex.Pattern,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]})">
+  Stream&lt;K, V&gt;(Pattern, Consumed&lt;K, V, byte[], byte[]&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L177"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -665,7 +665,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(Pattern arg0, Consumed&lt;K, V&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(Pattern arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -673,8 +673,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></dt>
     <dd><p><a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed</a>&lt;K, V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed&lt;K, V&gt;</a></p>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -750,8 +750,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Stream_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_System_Collections_Generic_IEnumerable_System_String__MASES_KNet_Streams_Kstream_Consumed___0___1__" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(System.Collections.Generic.IEnumerable{System.String},MASES.KNet.Streams.Kstream.Consumed{``0,``1})">
-  Stream&lt;K, V&gt;(IEnumerable&lt;string&gt;, Consumed&lt;K, V&gt;)
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_System_Collections_Generic_IEnumerable_System_String__MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(System.Collections.Generic.IEnumerable{System.String},MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]})">
+  Stream&lt;K, V&gt;(IEnumerable&lt;string&gt;, Consumed&lt;K, V, byte[], byte[]&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -760,7 +760,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(IEnumerable&lt;string&gt; arg0, Consumed&lt;K, V&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(IEnumerable&lt;string&gt; arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -768,8 +768,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed</a>&lt;K, V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed&lt;K, V&gt;</a></p>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -845,8 +845,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Stream_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1__" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1})">
-  Stream&lt;K, V&gt;(string, Consumed&lt;K, V&gt;)
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]})">
+  Stream&lt;K, V&gt;(string, Consumed&lt;K, V, byte[], byte[]&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -855,7 +855,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(string arg0, Consumed&lt;K, V&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(string arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -863,8 +863,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed</a>&lt;K, V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed&lt;K, V&gt;</a></p>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -940,8 +940,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Table_" data-uid="MASES.KNet.Streams.StreamsBuilder.Table*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1__" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1})">
-  Table&lt;K, V&gt;(string, Consumed&lt;K, V&gt;)
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]})">
+  Table&lt;K, V&gt;(string, Consumed&lt;K, V, byte[], byte[]&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -950,7 +950,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, byte[], byte[]&gt; Table&lt;K, V&gt;(string arg0, Consumed&lt;K, V&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, byte[], byte[]&gt; Table&lt;K, V&gt;(string arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -958,8 +958,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed</a>&lt;K, V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed&lt;K, V&gt;</a></p>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -989,8 +989,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Table_" data-uid="MASES.KNet.Streams.StreamsBuilder.Table*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1__MASES_KNet_Streams_Kstream_Materialized___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1},MASES.KNet.Streams.Kstream.Materialized{``0,``1,System.Byte[],System.Byte[]})">
-  Table&lt;K, V&gt;(string, Consumed&lt;K, V&gt;, Materialized&lt;K, V, byte[], byte[]&gt;)
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____MASES_KNet_Streams_Kstream_Materialized___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]},MASES.KNet.Streams.Kstream.Materialized{``0,``1,System.Byte[],System.Byte[]})">
+  Table&lt;K, V&gt;(string, Consumed&lt;K, V, byte[], byte[]&gt;, Materialized&lt;K, V, byte[], byte[]&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -999,7 +999,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, byte[], byte[]&gt; Table&lt;K, V&gt;(string arg0, Consumed&lt;K, V&gt; arg1, Materialized&lt;K, V, byte[], byte[]&gt; arg2)</code></pre>
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, byte[], byte[]&gt; Table&lt;K, V&gt;(string arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1, Materialized&lt;K, V, byte[], byte[]&gt; arg2)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1007,8 +1007,8 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed</a>&lt;K, V&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-2.html">Consumed&lt;K, V&gt;</a></p>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>

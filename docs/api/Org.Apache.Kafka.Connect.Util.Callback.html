@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Callback | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/Callback.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/Callback.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class Callback  <a class="header-action link-secondary" title="View source" href
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/Callback.html">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/Callback.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/Callback.html">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/Callback.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -297,6 +297,9 @@ Class Callback  <a class="header-action link-secondary" title="View source" href
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -327,7 +330,10 @@ Class Callback  <a class="header-action link-secondary" title="View source" href
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -704,6 +710,45 @@ public Callback(params object[] args)</code></pre>
 </h2>
 
 
+  <a id="Org_Apache_Kafka_Connect_Util_Callback_ChainStaging_" data-uid="Org.Apache.Kafka.Connect.Util.Callback.ChainStaging*"></a>
+
+  <h3 id="Org_Apache_Kafka_Connect_Util_Callback_ChainStaging_Org_Apache_Kafka_Connect_Util_Callback_" data-uid="Org.Apache.Kafka.Connect.Util.Callback.ChainStaging(Org.Apache.Kafka.Connect.Util.Callback)">
+  ChainStaging(Callback)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/Callback.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/Callback.html#chainStaging-org.apache.kafka.connect.util.Callback-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/Callback.html#chainStaging-org.apache.kafka.connect.util.Callback-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Callback ChainStaging(Callback arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Connect.Util.Callback.html">Callback</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Util.Callback.html">Callback</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Util.Callback.html">Callback</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Util.Callback.html">Callback</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Connect_Util_Callback_OnCompletion_" data-uid="Org.Apache.Kafka.Connect.Util.Callback.OnCompletion*"></a>
 
   <h3 id="Org_Apache_Kafka_Connect_Util_Callback_OnCompletion_MASES_JCOBridge_C2JBridge_JVMBridgeException_System_Object_" data-uid="Org.Apache.Kafka.Connect.Util.Callback.OnCompletion(MASES.JCOBridge.C2JBridge.JVMBridgeException,System.Object)">
@@ -711,7 +756,7 @@ public Callback(params object[] args)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/Callback.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/Callback.html#onCompletion-java.lang.Throwable-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/Callback.html#onCompletion-java.lang.Throwable-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/Callback.html#onCompletion-java.lang.Throwable-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/Callback.html#onCompletion-java.lang.Throwable-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -726,6 +771,39 @@ public Callback(params object[] args)</code></pre>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Connect_Util_Callback_RecordStage_" data-uid="Org.Apache.Kafka.Connect.Util.Callback.RecordStage*"></a>
+
+  <h3 id="Org_Apache_Kafka_Connect_Util_Callback_RecordStage_Org_Apache_Kafka_Connect_Util_Stage_" data-uid="Org.Apache.Kafka.Connect.Util.Callback.RecordStage(Org.Apache.Kafka.Connect.Util.Stage)">
+  RecordStage(Stage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/Callback.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/Callback.html#recordStage-org.apache.kafka.connect.util.Stage-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.0/org/apache/kafka/connect/util/Callback.html#recordStage-org.apache.kafka.connect.util.Stage-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordStage(Stage arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Connect.Util.Stage.html">Stage</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Util.Stage.html">Stage</a></p>
 </dd>
   </dl>
 

@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_Aggregator_3" data-uid="MASES.KNet.Streams.Kstream.Aggregator`3" class="text-break">
-Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L82"><i class="bi bi-code-slash"></i></a>
+Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -172,6 +172,9 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Aggregator-3.html#Org_Apache_Kafka_Streams_Kstream_Aggregator_3_Apply__0__1__2_">Aggregator&lt;byte[], byte[], byte[]&gt;.Apply(byte[], byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Aggregator-3.html#Org_Apache_Kafka_Streams_Kstream_Aggregator_3_InitHandlers">Aggregator&lt;byte[], byte[], byte[]&gt;.InitHandlers</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Aggregator-3.html#Org_Apache_Kafka_Streams_Kstream_Aggregator_3_BridgeClassName">Aggregator&lt;byte[], byte[], byte[]&gt;.BridgeClassName</a>
@@ -366,6 +369,9 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -396,7 +402,10 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -548,7 +557,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="MASES_KNet_Streams_Kstream_Aggregator_3_Aggregate" data-uid="MASES.KNet.Streams.Kstream.Aggregator`3.Aggregate">
   Aggregate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">VA</code> content</p>
@@ -580,7 +589,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="MASES_KNet_Streams_Kstream_Aggregator_3_Key" data-uid="MASES.KNet.Streams.Kstream.Aggregator`3.Key">
   Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">K</code> content</p>
@@ -612,7 +621,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="MASES_KNet_Streams_Kstream_Aggregator_3_OnApply" data-uid="MASES.KNet.Streams.Kstream.Aggregator`3.OnApply">
   OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
@@ -647,7 +656,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="MASES_KNet_Streams_Kstream_Aggregator_3_Value" data-uid="MASES.KNet.Streams.Kstream.Aggregator`3.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">V</code> content</p>
@@ -683,10 +692,10 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="MASES_KNet_Streams_Kstream_Aggregator_3_Apply_System_Byte___System_Byte___System_Byte___" data-uid="MASES.KNet.Streams.Kstream.Aggregator`3.Apply(System.Byte[],System.Byte[],System.Byte[])">
   Apply(byte[], byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -703,14 +712,14 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
     <dd><p><code class="typeparamref">V</code></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p><code class="typeparamref">VA</code></p>
+    <dd><p><code class="typeparamref">VAgg</code></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p><code class="typeparamref">VA</code></p>
+    <dd><p><code class="typeparamref">VAgg</code></p>
 </dd>
   </dl>
 
@@ -728,7 +737,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L82" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L85" class="edit-link">Edit this page</a>
         </div>
 
 

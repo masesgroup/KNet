@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>Class Aggregator&lt;K, V, VA&gt; | MASES Group - KNet </title>
+      <title>Class Aggregator&lt;K, V, VAgg&gt; | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Aggregator&lt;K, V, VA&gt; | MASES Group - KNet ">
+      <meta name="title" content="Class Aggregator&lt;K, V, VAgg&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
       <meta name="description" content="Listener for Kafka Aggregator. Extends , implements">
       <link rel="icon" href="../images/favicon.ico">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Kstream_Aggregator_3" data-uid="Org.Apache.Kafka.Streams.Kstream.Aggregator`3" class="text-break">
-Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L58"><i class="bi bi-code-slash"></i></a>
+Class Aggregator&lt;K, V, VAgg&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,12 +93,12 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Listener for Kafka Aggregator. Extends <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener</span>, implements <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.IAggregator-3.html">IAggregator&lt;K, V, VA&gt;</a></p>
+  <div class="markdown summary"><p>Listener for Kafka Aggregator. Extends <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener</span>, implements <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.IAggregator-3.html">IAggregator&lt;K, V, VAgg&gt;</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Aggregator&lt;K, V, VA&gt; : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IAggregator&lt;K, V, VA&gt;, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class Aggregator&lt;K, V, VAgg&gt; : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IAggregator&lt;K, V, VAgg&gt;, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -109,7 +109,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
     <dd></dd>
     <dt><code>V</code></dt>
     <dd></dd>
-    <dt><code>VA</code></dt>
+    <dt><code>VAgg</code></dt>
     <dd></dd>
   </dl>
 
@@ -121,7 +121,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
       <div><span class="xref">JVMBridgeBase</span></div>
       <div><span class="xref">JVMBridgeBase</span>&lt;<span class="xref">JVMBridgeListener</span>&gt;</div>
       <div><span class="xref">JVMBridgeListener</span></div>
-      <div><span class="xref">Aggregator&lt;K, V, VA&gt;</span></div>
+      <div><span class="xref">Aggregator&lt;K, V, VAgg&gt;</span></div>
     </dd>
   </dl>
 
@@ -132,7 +132,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
       <div><span class="xref">IJVMBridgeCore</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><span class="xref">IJVMBridgeBaseStatic</span></div>
-      <div><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.IAggregator-3.html">IAggregator</a>&lt;K, V, VA&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.IAggregator-3.html">IAggregator</a>&lt;K, V, VAgg&gt;</div>
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
     </dd>
@@ -142,6 +142,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
     <dt>Derived</dt>
     <dd>
       <div><a class="xref" href="MASES.KNet.Streams.Kstream.Aggregator-6.html">Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.AggregatorDirect-3.html">AggregatorDirect&lt;K, V, VAgg&gt;</a></div>
     </dd>
   </dl>
 
@@ -335,6 +336,9 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -365,7 +369,10 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -520,7 +527,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Aggregator_3__ctor" data-uid="Org.Apache.Kafka.Streams.Kstream.Aggregator`3.#ctor">
   Aggregator()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -551,7 +558,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Aggregator_3_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Kstream.Aggregator`3.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -579,19 +586,19 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
 
 
 
-  <a id="Org_Apache_Kafka_Streams_Kstream_Aggregator_3_OnApply_" data-uid="Org.Apache.Kafka.Streams.Kstream.Aggregator`3.OnApply*"></a>
+  <a id="Org_Apache_Kafka_Streams_Kstream_Aggregator_3_InitHandlers_" data-uid="Org.Apache.Kafka.Streams.Kstream.Aggregator`3.InitHandlers*"></a>
 
-  <h3 id="Org_Apache_Kafka_Streams_Kstream_Aggregator_3_OnApply" data-uid="Org.Apache.Kafka.Streams.Kstream.Aggregator`3.OnApply">
-  OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Aggregator.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Aggregator_3_InitHandlers" data-uid="Org.Apache.Kafka.Streams.Kstream.Aggregator`3.InitHandlers">
+  InitHandlers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p>Enable/disable handlers initialization, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;K, V, VA, VA&gt; OnApply { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual bool InitHandlers { get; }</code></pre>
   </div>
 
 
@@ -600,7 +607,39 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;K, V, VA, VA&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_Aggregator_3_OnApply_" data-uid="Org.Apache.Kafka.Streams.Kstream.Aggregator`3.OnApply*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_Aggregator_3_OnApply" data-uid="Org.Apache.Kafka.Streams.Kstream.Aggregator`3.OnApply">
+  OnApply
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Aggregator.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;K, V, VAgg, VAgg&gt; OnApply { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;K, V, VAgg, VAgg&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -621,16 +660,16 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
   <a id="Org_Apache_Kafka_Streams_Kstream_Aggregator_3_Apply_" data-uid="Org.Apache.Kafka.Streams.Kstream.Aggregator`3.Apply*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Aggregator_3_Apply__0__1__2_" data-uid="Org.Apache.Kafka.Streams.Kstream.Aggregator`3.Apply(`0,`1,`2)">
-  Apply(K, V, VA)
+  Apply(K, V, VAgg)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Aggregator.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual VA Apply(K arg0, V arg1, VA arg2)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual VAgg Apply(K arg0, V arg1, VAgg arg2)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -641,15 +680,15 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
     <dt><code>arg1</code> <span class="xref">V</span></dt>
     <dd><p><code class="typeparamref">V</code></p>
 </dd>
-    <dt><code>arg2</code> <span class="xref">VA</span></dt>
-    <dd><p><code class="typeparamref">VA</code></p>
+    <dt><code>arg2</code> <span class="xref">VAgg</span></dt>
+    <dd><p><code class="typeparamref">VAgg</code></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">VA</span></dt>
-    <dd><p><code class="typeparamref">VA</code></p>
+    <dt><span class="xref">VAgg</span></dt>
+    <dd><p><code class="typeparamref">VAgg</code></p>
 </dd>
   </dl>
 
@@ -694,7 +733,7 @@ Class Aggregator&lt;K, V, VA&gt;  <a class="header-action link-secondary" title=
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L58" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L99" class="edit-link">Edit this page</a>
         </div>
 
 

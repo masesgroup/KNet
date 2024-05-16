@@ -91,6 +91,26 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Serialization.KNetByteBufferDeserializer.html">KNetByteBufferDeserializer</a></dt>
+      <dd><p>KNet specific class for org.mases.knet.common.serialization.ByteBufferDeserializer</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Serialization.KNetByteBufferSerializer.html">KNetByteBufferSerializer</a></dt>
+      <dd><p>KNet specific class for org.mases.knet.common.serialization.ByteBufferSerializer</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Serialization.KNetSerdes.html">KNetSerdes</a></dt>
+      <dd><p>KNet specific class for org.mases.knet.common.serialization.Serdes</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Serialization.KNetSerdes.ByteBufferSerde.html">KNetSerdes.ByteBufferSerde</a></dt>
+      <dd><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Serialization.KNetSerialization.html">KNetSerialization</a></dt>
       <dd><p>Helper for KNetSerDes</p>
 </dd>
@@ -101,8 +121,13 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Serialization.SerDes-1.html">SerDes&lt;T&gt;</a></dt>
-      <dd><p>Common serializer/deserializer</p>
+      <dt><a class="xref" href="MASES.KNet.Serialization.SerDesBuffered-1.html">SerDesBuffered&lt;T&gt;</a></dt>
+      <dd><p>Common serializer/deserializer based on <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="MASES.KNet.Serialization.SerDesRaw-1.html">SerDesRaw&lt;T&gt;</a></dt>
+      <dd><p>Common serializer/deserializer based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -113,11 +138,6 @@ Classes
     <h3 id="interfaces">
 Interfaces
 </h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Serialization.IDeserializer-1.html">IDeserializer&lt;T&gt;</a></dt>
-      <dd><p>KNet interface for deserializers based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array JVM type</p>
-</dd>
-    </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer&lt;T, TJVMT&gt;</a></dt>
       <dd><p>KNet interface for deserializers</p>
@@ -134,18 +154,8 @@ Interfaces
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Serialization.ISerDes-1.html">ISerDes&lt;T&gt;</a></dt>
-      <dd><p>KNet common serializer/deserializer based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array JVM type</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a></dt>
       <dd><p>KNet common serializer/deserializer</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="MASES.KNet.Serialization.ISerializer-1.html">ISerializer&lt;T&gt;</a></dt>
-      <dd><p>KNet interface for serializers based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array JVM type</p>
 </dd>
     </dl>
     <dl class="jumplist">

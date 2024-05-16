@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>Class TimestampedKeyValueStore&lt;TKey, TValue&gt; | MASES Group - KNet </title>
+      <title>Class TimestampedKeyValueStore&lt;K, V&gt; | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class TimestampedKeyValueStore&lt;TKey, TValue&gt; | MASES Group - KNet ">
+      <meta name="title" content="Class TimestampedKeyValueStore&lt;K, V&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
       <meta name="description" content="KNet implementation of">
       <link rel="icon" href="../images/favicon.ico">
@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_2" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`2" class="text-break">
-Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L72"><i class="bi bi-code-slash"></i></a>
+Class TimestampedKeyValueStore&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,17 +98,17 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TimestampedKeyValueStore&lt;TKey, TValue&gt; : TimestampedKeyValueStore&lt;TKey, TValue, byte[], byte[]&gt;, IManagedStore&lt;ReadOnlyKeyValueStore&lt;byte[], ValueAndTimestamp&lt;byte[]&gt;&gt;&gt;, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class TimestampedKeyValueStore&lt;K, V&gt; : TimestampedKeyValueStore&lt;K, V, byte[], byte[]&gt;, IManagedStore&lt;ReadOnlyKeyValueStore&lt;byte[], ValueAndTimestamp&lt;byte[]&gt;&gt;&gt;, IGenericSerDesFactoryApplier</code></pre>
   </div>
 
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>TKey</code></dt>
+    <dt><code>K</code></dt>
     <dd><p>The key type</p>
 </dd>
-    <dt><code>TValue</code></dt>
+    <dt><code>V</code></dt>
     <dd><p>The value type</p>
 </dd>
   </dl>
@@ -118,8 +118,8 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html">ManagedStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;&gt;</div>
-      <div><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html">TimestampedKeyValueStore</a>&lt;TKey, TValue, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
-      <div><span class="xref">TimestampedKeyValueStore&lt;TKey, TValue&gt;</span></div>
+      <div><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html">TimestampedKeyValueStore</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
+      <div><span class="xref">TimestampedKeyValueStore&lt;K, V&gt;</span></div>
     </dd>
   </dl>
 
@@ -136,22 +136,22 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ApproximateNumEntries">TimestampedKeyValueStore&lt;TKey, TValue, byte[], byte[]&gt;.ApproximateNumEntries</a>
+      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ApproximateNumEntries">TimestampedKeyValueStore&lt;K, V, byte[], byte[]&gt;.ApproximateNumEntries</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_All">TimestampedKeyValueStore&lt;TKey, TValue, byte[], byte[]&gt;.All</a>
+      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_All">TimestampedKeyValueStore&lt;K, V, byte[], byte[]&gt;.All</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_Range__0__0_">TimestampedKeyValueStore&lt;TKey, TValue, byte[], byte[]&gt;.Range(TKey, TKey)</a>
+      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_Range__0__0_">TimestampedKeyValueStore&lt;K, V, byte[], byte[]&gt;.Range(K, K)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_Get__0_">TimestampedKeyValueStore&lt;TKey, TValue, byte[], byte[]&gt;.Get(TKey)</a>
+      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_Get__0_">TimestampedKeyValueStore&lt;K, V, byte[], byte[]&gt;.Get(K)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ReverseAll">TimestampedKeyValueStore&lt;TKey, TValue, byte[], byte[]&gt;.ReverseAll</a>
+      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ReverseAll">TimestampedKeyValueStore&lt;K, V, byte[], byte[]&gt;.ReverseAll</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ReverseRange__0__0_">TimestampedKeyValueStore&lt;TKey, TValue, byte[], byte[]&gt;.ReverseRange(TKey, TKey)</a>
+      <a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html#MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ReverseRange__0__0_">TimestampedKeyValueStore&lt;K, V, byte[], byte[]&gt;.ReverseRange(K, K)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html#MASES_KNet_Streams_State_ManagedStore_1_Store">ManagedStore&lt;ReadOnlyKeyValueStore&lt;byte[], ValueAndTimestamp&lt;byte[]&gt;&gt;&gt;.Store</a>
@@ -195,7 +195,7 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_2_All" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`2.All">
   All
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all--</a></p>
@@ -203,7 +203,7 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override TimestampedKeyValueIterator&lt;TKey, TValue&gt; All { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override TimestampedKeyValueIterator&lt;K, V, byte[], byte[]&gt; All { get; }</code></pre>
   </div>
 
 
@@ -212,8 +212,8 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-2.html">TimestampedKeyValueIterator</a>&lt;TKey, TValue&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator&lt;TKey, TValue&gt;</a></p>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html">TimestampedKeyValueIterator</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -228,7 +228,7 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_2_ApproximateNumEntries" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`2.ApproximateNumEntries">
   ApproximateNumEntries
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries--</a></p>
@@ -261,7 +261,7 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_2_ReverseAll" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`2.ReverseAll">
   ReverseAll
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll--</a></p>
@@ -269,7 +269,7 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override TimestampedKeyValueIterator&lt;TKey, TValue&gt; ReverseAll { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override TimestampedKeyValueIterator&lt;K, V, byte[], byte[]&gt; ReverseAll { get; }</code></pre>
   </div>
 
 
@@ -278,8 +278,8 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-2.html">TimestampedKeyValueIterator</a>&lt;TKey, TValue&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator&lt;TKey, TValue&gt;</a></p>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html">TimestampedKeyValueIterator</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -297,8 +297,8 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
   <a id="MASES_KNet_Streams_State_TimestampedKeyValueStore_2_Get_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`2.Get*"></a>
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_2_Get__0_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`2.Get(`0)">
-  Get(TKey)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  Get(K)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get-java.lang.Object-</a></p>
@@ -306,20 +306,20 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override ValueAndTimestamp&lt;TValue&gt; Get(TKey arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public override ValueAndTimestamp&lt;V, byte[]&gt; Get(K arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <span class="xref">TKey</span></dt>
-    <dd><p><code class="typeparamref">TKey</code></p>
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp</a>&lt;TValue&gt;</dt>
-    <dd><p><code class="typeparamref">TValue</code></p>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.ValueAndTimestamp-2.html">ValueAndTimestamp</a>&lt;V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><code class="typeparamref">V</code></p>
 </dd>
   </dl>
 
@@ -336,8 +336,8 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
   <a id="MASES_KNet_Streams_State_TimestampedKeyValueStore_2_Range_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`2.Range*"></a>
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_2_Range__0__0_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`2.Range(`0,`0)">
-  Range(TKey, TKey)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  Range(K, K)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range-java.lang.Object-java.lang.Object-</a></p>
@@ -345,23 +345,23 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override TimestampedKeyValueIterator&lt;TKey, TValue&gt; Range(TKey arg0, TKey arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public override TimestampedKeyValueIterator&lt;K, V, byte[], byte[]&gt; Range(K arg0, K arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <span class="xref">TKey</span></dt>
-    <dd><p><code class="typeparamref">TKey</code></p>
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
 </dd>
-    <dt><code>arg1</code> <span class="xref">TKey</span></dt>
-    <dd><p><code class="typeparamref">TValue</code></p>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">V</code></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-2.html">TimestampedKeyValueIterator</a>&lt;TKey, TValue&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator&lt;TKey, TValue&gt;</a></p>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html">TimestampedKeyValueIterator</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -378,8 +378,8 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
   <a id="MASES_KNet_Streams_State_TimestampedKeyValueStore_2_ReverseRange_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`2.ReverseRange*"></a>
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_2_ReverseRange__0__0_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`2.ReverseRange(`0,`0)">
-  ReverseRange(TKey, TKey)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  ReverseRange(K, K)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange-java.lang.Object-java.lang.Object-</a></p>
@@ -387,23 +387,23 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override TimestampedKeyValueIterator&lt;TKey, TValue&gt; ReverseRange(TKey arg0, TKey arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public override TimestampedKeyValueIterator&lt;K, V, byte[], byte[]&gt; ReverseRange(K arg0, K arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <span class="xref">TKey</span></dt>
-    <dd><p><code class="typeparamref">TKey</code></p>
+    <dt><code>arg0</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
 </dd>
-    <dt><code>arg1</code> <span class="xref">TKey</span></dt>
-    <dd><p><code class="typeparamref">TKey</code></p>
+    <dt><code>arg1</code> <span class="xref">K</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-2.html">TimestampedKeyValueIterator</a>&lt;TKey, TValue&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator&lt;TKey, TValue&gt;</a></p>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html">TimestampedKeyValueIterator</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
@@ -421,7 +421,7 @@ Class TimestampedKeyValueStore&lt;TKey, TValue&gt;  <a class="header-action link
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L72" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L74" class="edit-link">Edit this page</a>
         </div>
 
 
