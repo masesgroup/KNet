@@ -17,14 +17,15 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
 
 namespace Org.Apache.Kafka.Common.Serialization
 { 
-        /// <summary>
+    /// <summary>
     /// Listener for Kafka Serializer. Extends <see cref="JVMBridgeListener"/>. Implements <see cref="ISerializer{T}"/>
     /// </summary>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public partial class Serde<T> : ISerde<T>
+    public partial class SerdeDirect<T> : ISerde<T>
     {
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#deserializer--"/>
@@ -32,7 +33,8 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Deserializer<T> DeserializerDirect()
         {
-            return new DeserializerDirect<T>();
+            var res = this.IExecute("deserializer") as IJavaObject;
+            return WrapsDirect<DeserializerDirect<T>>(res);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serde.html#serializer--"/>
@@ -40,7 +42,8 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Serializer<T> SerializerDirect()
         {
-            return new SerializerDirect<T>();
+            var res = this.IExecute("serializer") as IJavaObject;
+            return WrapsDirect<SerializerDirect<T>>(res);
         }
     }
 }
