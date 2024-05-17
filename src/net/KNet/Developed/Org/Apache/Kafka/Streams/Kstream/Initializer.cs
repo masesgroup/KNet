@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Executes the Initializer action in the CLR
         /// </summary>
-        /// <returns>The <typeparamref name="VA"/> apply evaluation</returns>
+        /// <returns>The <typeparamref name="VAgg"/> apply evaluation</returns>
         VAgg Apply();
     }
 
