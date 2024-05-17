@@ -97,8 +97,6 @@ namespace MASES.KNet.Serialization.MessagePack
             public MessagePackSerializerOptions MessagePackSerializerOptions { get; set; } = null;
             /// <inheritdoc/>
             public override bool UseHeaders => true;
-            /// <inheritdoc/>
-            public override bool IsDirectBuffered => true;
             /// <summary>
             /// Default initializer
             /// </summary>
@@ -204,8 +202,6 @@ namespace MASES.KNet.Serialization.MessagePack
             public MessagePackSerializerOptions MessagePackSerializerOptions { get; set; } = null;
             /// <inheritdoc/>
             public override bool UseHeaders => true;
-            /// <inheritdoc/>
-            public override bool IsDirectBuffered => true;
             /// <summary>
             /// Default initializer
             /// </summary>

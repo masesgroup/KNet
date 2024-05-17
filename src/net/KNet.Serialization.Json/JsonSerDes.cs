@@ -142,8 +142,6 @@ namespace MASES.KNet.Serialization.Json
 #endif
             /// <inheritdoc/>
             public override bool UseHeaders => true;
-            /// <inheritdoc/>
-            public override bool IsDirectBuffered => true;
             /// <summary>
             /// Default initializer
             /// </summary>
@@ -336,8 +334,6 @@ namespace MASES.KNet.Serialization.Json
 #endif
             /// <inheritdoc/>
             public override bool UseHeaders => true;
-            /// <inheritdoc/>
-            public override bool IsDirectBuffered => true;
             /// <summary>
             /// Default initializer
             /// </summary>

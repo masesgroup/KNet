@@ -90,8 +90,6 @@ namespace MASES.KNet.Serialization.Protobuf
             readonly byte[] keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
             /// <inheritdoc/>
             public override bool UseHeaders => true;
-            /// <inheritdoc/>
-            public override bool IsDirectBuffered => true;
             /// <summary>
             /// Default initializer
             /// </summary>
@@ -188,8 +186,6 @@ namespace MASES.KNet.Serialization.Protobuf
             readonly byte[] valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
             /// <inheritdoc/>
             public override bool UseHeaders => true;
-            /// <inheritdoc/>
-            public override bool IsDirectBuffered => true;
             /// <summary>
             /// Default initializer
             /// </summary>
