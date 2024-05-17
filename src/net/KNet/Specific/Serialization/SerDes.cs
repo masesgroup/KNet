@@ -299,14 +299,31 @@ namespace MASES.KNet.Serialization
     /// Common serializer/deserializer based on <see cref="byte"/> array
     /// </summary>
     /// <typeparam name="T">The <see cref="Type"/> to serialize/deserialize</typeparam>
-    public class SerDesRaw<T> : SerDes<T, byte[]>
+    public interface ISerDesRaw<T> : ISerDes<T, byte[]>
     {
     }
+
+    /// <summary>
+    /// Common serializer/deserializer based on <see cref="byte"/> array
+    /// </summary>
+    /// <typeparam name="T">The <see cref="Type"/> to serialize/deserialize</typeparam>
+    public class SerDesRaw<T> : SerDes<T, byte[]>, ISerDesRaw<T>
+    {
+    }
+
     /// <summary>
     /// Common serializer/deserializer based on <see cref="Java.Nio.ByteBuffer"/>
     /// </summary>
     /// <typeparam name="T">The <see cref="Type"/> to serialize/deserialize</typeparam>
-    public class SerDesBuffered<T> : SerDes<T, Java.Nio.ByteBuffer>
+    public interface ISerDesBuffered<T> : ISerDes<T, Java.Nio.ByteBuffer>
+    {
+    }
+
+    /// <summary>
+    /// Common serializer/deserializer based on <see cref="Java.Nio.ByteBuffer"/>
+    /// </summary>
+    /// <typeparam name="T">The <see cref="Type"/> to serialize/deserialize</typeparam>
+    public class SerDesBuffered<T> : SerDes<T, Java.Nio.ByteBuffer>, ISerDesBuffered<T>
     {
         /// <inheritdoc/>
         public override bool IsDirectBuffered => true;

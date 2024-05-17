@@ -34,7 +34,7 @@ namespace MASES.KNet.Serialization.MessagePack
         /// MessagePack extension of <see cref="SerDes{T, TJVMT}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class KeyRaw<T> : SerDes<T, byte[]>
+        public class KeyRaw<T> : SerDesRaw<T>
         {
             readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(KeyRaw<>).ToAssemblyQualified());
             readonly byte[] keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
@@ -87,7 +87,7 @@ namespace MASES.KNet.Serialization.MessagePack
         /// MessagePack extension of <see cref="SerDes{T, TJVMT}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class KeyBuffered<T> : SerDes<T, Java.Nio.ByteBuffer>
+        public class KeyBuffered<T> : SerDesBuffered<T>
         {
             readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(KeyBuffered<>).ToAssemblyQualified());
             readonly byte[] keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
@@ -141,7 +141,7 @@ namespace MASES.KNet.Serialization.MessagePack
         /// MessagePack extension of <see cref="SerDes{T, TJVMT}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class ValueRaw<T> : SerDes<T, byte[]>
+        public class ValueRaw<T> : SerDesRaw<T>
         {
             readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(ValueRaw<>).ToAssemblyQualified());
             readonly byte[] valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
@@ -194,7 +194,7 @@ namespace MASES.KNet.Serialization.MessagePack
         /// MessagePack extension of <see cref="SerDes{T, TJVMT}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class ValueBuffered<T> : SerDes<T, Java.Nio.ByteBuffer>
+        public class ValueBuffered<T> : SerDesBuffered<T>
         {
             readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(ValueBuffered<>).ToAssemblyQualified());
             readonly byte[] valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
