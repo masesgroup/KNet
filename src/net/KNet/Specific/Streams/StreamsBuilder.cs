@@ -72,123 +72,143 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="GlobalKTable{K, V, TJVMK, TJVMV}"/></returns>
-        public GlobalKTable<K, V, byte[], byte[]> GlobalTable<K, V>(string arg0, Consumed<K, V, byte[], byte[]> arg1, Materialized<K, V, byte[], byte[]> arg2)
+        public GlobalKTable<K, V, TJVMK, TJVMV> GlobalTable<K, V, TJVMK, TJVMV>(string arg0, Consumed<K, V, TJVMK, TJVMV> arg1, Materialized<K, V, TJVMK, TJVMV> arg2)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new GlobalKTable<K, V, byte[], byte[]>(_factory, _builder.GlobalTable<byte[], byte[]>(arg0, arg1, arg2));
+            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetConsumed{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="GlobalKTable{K, V, TJVMK, TJVMV}"/></returns>
-        public GlobalKTable<K, V, byte[], byte[]> GlobalTable<K, V>(string arg0, Consumed<K, V, byte[], byte[]> arg1)
+        public GlobalKTable<K, V, TJVMK, TJVMV> GlobalTable<K, V, TJVMK, TJVMV>(string arg0, Consumed<K, V, TJVMK, TJVMV> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new GlobalKTable<K, V, byte[], byte[]>(_factory, _builder.GlobalTable<byte[], byte[]>(arg0, arg1));
+            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetMaterialized{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="GlobalKTable{K, V, TJVMK, TJVMV}"/></returns>
-        public GlobalKTable<K, V, byte[], byte[]> GlobalTable<K, V>(string arg0, Materialized<K, V, byte[], byte[]> arg1)
+        public GlobalKTable<K, V, TJVMK, TJVMV> GlobalTable<K, V, TJVMK, TJVMV>(string arg0, Materialized<K, V, TJVMK, TJVMV> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new GlobalKTable<K, V, byte[], byte[]>(_factory, _builder.GlobalTable<byte[], byte[]>(arg0, arg1));
+            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="GlobalKTable{K, V, TJVMK, TJVMV}"/></returns>
-        public GlobalKTable<K, V, byte[], byte[]> GlobalTable<K, V>(string arg0)
+        public GlobalKTable<K, V, TJVMK, TJVMV> GlobalTable<K, V, TJVMK, TJVMV>(string arg0)
         {
-            return new GlobalKTable<K, V, byte[], byte[]>(_factory, _builder.GlobalTable<byte[], byte[]>(arg0));
+            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.lang.String-KNetConsumed{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
-        public KStream<K, V, byte[], byte[]> Stream<K, V>(string arg0, Consumed<K, V, byte[], byte[]> arg1)
+        public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(string arg0, Consumed<K, V, TJVMK, TJVMV> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0));
+            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
-        public KStream<K, V, byte[], byte[]> Stream<K, V>(string arg0)
+        public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(string arg0)
         {
-            return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0));
+            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.Collection-KNetConsumed{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
-        public KStream<K, V, byte[], byte[]> Stream<K, V>(System.Collections.Generic.IEnumerable<string> arg0, Consumed<K, V, byte[], byte[]> arg1)
+        public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(System.Collections.Generic.IEnumerable<string> arg0, Consumed<K, V, TJVMK, TJVMV> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0.ToJVMCollection<Java.Lang.String, string>(), arg1));
+            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0.ToJVMCollection<Java.Lang.String, string>(), arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
-        public KStream<K, V, byte[], byte[]> Stream<K, V>(System.Collections.Generic.IEnumerable<string> arg0)
+        public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(System.Collections.Generic.IEnumerable<string> arg0)
         {
-            return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0.ToJVMCollection<Java.Lang.String, string>()));
+            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0.ToJVMCollection<Java.Lang.String, string>()));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.regex.Pattern-KNetConsumed{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
-        public KStream<K, V, byte[], byte[]> Stream<K, V>(Java.Util.Regex.Pattern arg0, Consumed<K, V, byte[], byte[]> arg1)
+        public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(Java.Util.Regex.Pattern arg0, Consumed<K, V, TJVMK, TJVMV> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0));
+            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.regex.Pattern-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Regex.Pattern"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
-        public KStream<K, V, byte[], byte[]> Stream<K, V>(Java.Util.Regex.Pattern arg0)
+        public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(Java.Util.Regex.Pattern arg0)
         {
-            return new KStream<K, V, byte[], byte[]>(_factory, _builder.Stream<byte[], byte[]>(arg0));
+            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetConsumed{K, V}-KNetMaterialized{K, V}-"/>
@@ -196,51 +216,59 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg2"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public KTable<K, V, byte[], byte[]> Table<K, V>(string arg0, Consumed<K, V, byte[], byte[]> arg1, Materialized<K, V, byte[], byte[]> arg2)
+        public KTable<K, V, TJVMK, TJVMV> Table<K, V, TJVMK, TJVMV>(string arg0, Consumed<K, V, TJVMK, TJVMV> arg1, Materialized<K, V, TJVMK, TJVMV> arg2)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KTable<K, V, byte[], byte[]>(_factory, _builder.Table<byte[], byte[]>(arg0, arg1, arg2));
+            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetConsumed{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
-        public KTable<K, V, byte[], byte[]> Table<K, V>(string arg0, Consumed<K, V, byte[], byte[]> arg1)
+        public KTable<K, V, TJVMK, TJVMV> Table<K, V, TJVMK, TJVMV>(string arg0, Consumed<K, V, TJVMK, TJVMV> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KTable<K, V, byte[], byte[]>(_factory, _builder.Table<byte[], byte[]>(arg0, arg1));
+            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetMaterialized{K, V}-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
-        public KTable<K, V, byte[], byte[]> Table<K, V>(string arg0, Materialized<K, V, byte[], byte[]> arg1)
+        public KTable<K, V, TJVMK, TJVMV> Table<K, V, TJVMK, TJVMV>(string arg0, Materialized<K, V, TJVMK, TJVMV> arg1)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KTable<K, V, byte[], byte[]>(_factory, _builder.Table<byte[], byte[]>(arg0, arg1));
+            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
-        public KTable<K, V, byte[], byte[]> Table<K, V>(string arg0)
+        public KTable<K, V, TJVMK, TJVMV> Table<K, V, TJVMK, TJVMV>(string arg0)
         {
-            return new KTable<K, V, byte[], byte[]>(_factory, _builder.Table<byte[], byte[]>(arg0));
+            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#addStateStore-org.apache.kafka.streams.state.StoreBuilder-"/>
