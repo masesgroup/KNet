@@ -123,7 +123,7 @@ namespace MASES.KNetTestKNetStreams
 
                 EnumerableValueMapper<string, string> valueMapper = null;
                 KeyValueMapper<string, string, string> keyValuemapper = null;
-                StreamsUncaughtExceptionHandler errorHandler = null; 
+                StreamsUncaughtExceptionHandler errorHandler = null;
 
                 try
                 {
