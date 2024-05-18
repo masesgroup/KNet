@@ -21,6 +21,10 @@ on:
 #  schedule:
 #    - cron: '26 23 * * 3'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   # Verify if a check is needed
   check_changes:
