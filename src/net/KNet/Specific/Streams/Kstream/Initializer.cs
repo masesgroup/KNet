@@ -28,6 +28,8 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMVA">The JVM type of <typeparamref name="VA"/></typeparam>
     public class Initializer<VA, TJVMVA> : Org.Apache.Kafka.Streams.Kstream.Initializer<TJVMVA>, IGenericSerDesFactoryApplier
     {
+        ISerDes<VA, TJVMVA> _valueSerializer = null;
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
@@ -50,7 +52,15 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <remarks>If <see cref="OnApply2"/> has a value it takes precedence over corresponding class method</remarks>
         public System.Func<VA> OnApply2 { get; set; } = null;
+        /// <inheritdoc/>
+        public sealed override TJVMVA Apply()
+        {
+            _valueSerializer ??= Factory?.BuildValueSerDes<VA, TJVMVA>();
 
+            var methodToExecute = (OnApply2 != null) ? OnApply2 : Apply2;
+            var res = methodToExecute();
+            return _valueSerializer.Serialize(null, res);
+        }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Initializer.html#apply--"/>
         /// </summary>
@@ -67,15 +77,6 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VA">The key type</typeparam>
     public class Initializer<VA> : Initializer<VA, byte[]>
     {
-        ISerDes<VA, byte[]> _valueSerializer = null;
-        /// <inheritdoc/>
-        public sealed override byte[] Apply()
-        {
-            _valueSerializer ??= Factory?.BuildValueSerDes<VA, byte[]>();
 
-            var methodToExecute = (OnApply2 != null) ? OnApply2 : Apply2;
-            var res = methodToExecute();
-            return _valueSerializer.Serialize(null, res);
-        }
     }
 }
