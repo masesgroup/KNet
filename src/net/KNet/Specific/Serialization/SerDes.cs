@@ -147,47 +147,47 @@ namespace MASES.KNet.Serialization
 
             if (IsDirectBuffered)
             {
-                kSerde = new KNetSerdes.ByteBufferSerde().CastTo<SerdeDirect<TJVMT>>();
+                kSerde = new Serdes.ByteBufferSerde().CastTo<SerdeDirect<TJVMT>>();
             }
             else
             {
                 switch (_JVMSerializationType)
                 {
                     case KNetSerialization.SerializationType.Boolean:
-                        kSerde = new Serdes.BooleanSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.BooleanSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                     case KNetSerialization.SerializationType.ByteArray:
-                        kSerde = new Serdes.ByteArraySerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ByteArraySerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                     case KNetSerialization.SerializationType.ByteBuffer:
-                        kSerde = new Serdes.ByteBufferSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ByteBufferSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                     case KNetSerialization.SerializationType.Bytes:
-                        kSerde = new Serdes.BytesSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.BytesSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                     case KNetSerialization.SerializationType.Double:
-                        kSerde = new Serdes.DoubleSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.DoubleSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                     case KNetSerialization.SerializationType.Float:
-                        kSerde = new Serdes.FloatSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.FloatSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                     case KNetSerialization.SerializationType.Integer:
-                        kSerde = new Serdes.IntegerSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.IntegerSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                     case KNetSerialization.SerializationType.Long:
-                        kSerde = new Serdes.LongSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.LongSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                     case KNetSerialization.SerializationType.Short:
-                        kSerde = new Serdes.ShortSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ShortSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                     case KNetSerialization.SerializationType.String:
-                        kSerde = new Serdes.StringSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.StringSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                     case KNetSerialization.SerializationType.Guid:
-                        kSerde = new Serdes.UUIDSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.UUIDSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                     case KNetSerialization.SerializationType.Void:
-                        kSerde = new Serdes.VoidSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.VoidSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
                 case KNetSerialization.SerializationType.External:
                 default:

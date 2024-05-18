@@ -249,7 +249,7 @@ namespace MASES.KNet.Producer
                 }
                 else
                 {
-                    props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, ClassNameOf<KNetByteBufferSerializer>());
+                    props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, ClassNameOf<ByteBufferSerializer>());
                 }
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
@@ -262,7 +262,7 @@ namespace MASES.KNet.Producer
                 }
                 else
                 {
-                    props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, ClassNameOf<KNetByteBufferSerializer>());
+                    props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, ClassNameOf<ByteBufferSerializer>());
                 }
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG}, remove from configuration.");

@@ -174,7 +174,7 @@ namespace MASES.KNet.Consumer
                 }
                 else
                 {
-                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, ClassNameOf<KNetByteBufferDeserializer>());
+                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, ClassNameOf<ByteBufferDeserializer>());
                 }
             }
             else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
@@ -187,7 +187,7 @@ namespace MASES.KNet.Consumer
                 }
                 else
                 {
-                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, ClassNameOf<KNetByteBufferDeserializer>());
+                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, ClassNameOf<ByteBufferDeserializer>());
                 }
             }
             else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
