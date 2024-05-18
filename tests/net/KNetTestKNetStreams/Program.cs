@@ -77,13 +77,17 @@ namespace MASES.KNetTestKNetStreams
         {
             try
             {
+                string baSerdesName = Java.Lang.Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.ByteArraySerde>();
+                var keyValueSerde = Java.Lang.Class.ForName(baSerdesName, true, Java.Lang.ClassLoader.SystemClassLoader);
                 StreamsConfigBuilder configBuilder = StreamsConfigBuilder.Create()
                                                                          .WithApplicationId("streams-pipe")
-                                                                         .WithBootstrapServers(serverToUse);
+                                                                         .WithBootstrapServers(serverToUse)
+                                                                         .WithDefaultKeySerdeClass(keyValueSerde)
+                                                                         .WithDefaultValueSerdeClass(keyValueSerde);
 
                 var builder = new StreamsBuilder(configBuilder);
 
-                builder.Stream<string, string>(topicToUse).To("streams-pipe-output");
+                builder.Stream<string, string, byte[], byte[]>(topicToUse).To("streams-pipe-output");
 
                 var streams = new KNetStreams(builder.Build(), configBuilder);
                 {
@@ -109,9 +113,13 @@ namespace MASES.KNetTestKNetStreams
         {
             try
             {
+                string baSerdesName = Java.Lang.Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.ByteArraySerde>();
+                var keyValueSerde = Java.Lang.Class.ForName(baSerdesName, true, Java.Lang.ClassLoader.SystemClassLoader);
                 StreamsConfigBuilder configBuilder = StreamsConfigBuilder.Create()
                                                                          .WithApplicationId("WordCountDemo")
-                                                                         .WithBootstrapServers(serverToUse);
+                                                                         .WithBootstrapServers(serverToUse)
+                                                                         .WithDefaultKeySerdeClass(keyValueSerde)
+                                                                         .WithDefaultValueSerdeClass(keyValueSerde);
 
                 EnumerableValueMapper<string, string> valueMapper = null;
                 KeyValueMapper<string, string, string> keyValuemapper = null;
@@ -121,7 +129,7 @@ namespace MASES.KNetTestKNetStreams
                 {
                     var builder = new StreamsBuilder(configBuilder);
 
-                    var source = builder.Stream<string, string>(topicToUse);
+                    var source = builder.Stream<string, string, byte[], byte[]>(topicToUse);
 
                     valueMapper = new EnumerableValueMapper<string, string>()
                     {
