@@ -98,7 +98,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt; : TopicNameExtractor&lt;TJVMK, TJVMV&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, ITopicNameExtractor&lt;TJVMK, TJVMV&gt;, ITopicNameExtractor, IJVMBridgeBase, IJVMBridgeDefinition, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt; : TopicNameExtractor&lt;TJVMK, TJVMV&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, ITopicNameExtractor&lt;TJVMK, TJVMV&gt;, ITopicNameExtractor, IJVMBridgeBase, IJVMBridgeDefinition, IGenericSerDesFactoryApplier</code></pre>
   </div>
 
 
@@ -550,7 +550,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Processor_TopicNameExtractor_4_Factory" data-uid="MASES.KNet.Streams.Processor.TopicNameExtractor`4.Factory">
   Factory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the current <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></p>
@@ -582,7 +582,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Processor_TopicNameExtractor_4_Key" data-uid="MASES.KNet.Streams.Processor.TopicNameExtractor`4.Key">
   Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">K</code> content</p>
@@ -590,7 +590,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract K Key { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual K Key { get; }</code></pre>
   </div>
 
 
@@ -614,7 +614,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Processor_TopicNameExtractor_4_OnExtract" data-uid="MASES.KNet.Streams.Processor.TopicNameExtractor`4.OnExtract">
   OnExtract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-</a></p>
@@ -622,7 +622,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;TopicNameExtractor&lt;K, V&gt;, string&gt; OnExtract { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;, string&gt; OnExtract { get; set; }</code></pre>
   </div>
 
 
@@ -631,7 +631,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="MASES.KNet.Streams.Processor.TopicNameExtractor-2.html">TopicNameExtractor</a>&lt;K, V&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="MASES.KNet.Streams.Processor.TopicNameExtractor-4.html">TopicNameExtractor</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -649,7 +649,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Processor_TopicNameExtractor_4_RecordContext" data-uid="MASES.KNet.Streams.Processor.TopicNameExtractor`4.RecordContext">
   RecordContext
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Current <a class="xref" href="Org.Apache.Kafka.Streams.Processor.RecordContext.html">RecordContext</a> metadata of the record</p>
@@ -657,7 +657,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract RecordContext RecordContext { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual RecordContext RecordContext { get; }</code></pre>
   </div>
 
 
@@ -681,7 +681,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Processor_TopicNameExtractor_4_Value" data-uid="MASES.KNet.Streams.Processor.TopicNameExtractor`4.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">V</code> content</p>
@@ -689,7 +689,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract V Value { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual V Value { get; }</code></pre>
   </div>
 
 
@@ -717,7 +717,7 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Processor_TopicNameExtractor_4_Extract" data-uid="MASES.KNet.Streams.Processor.TopicNameExtractor`4.Extract">
   Extract()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet override of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-</a></p>
@@ -733,6 +733,51 @@ Class TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Processor_TopicNameExtractor_4_Extract_" data-uid="MASES.KNet.Streams.Processor.TopicNameExtractor`4.Extract*"></a>
+
+  <h3 id="MASES_KNet_Streams_Processor_TopicNameExtractor_4_Extract__2__3_Org_Apache_Kafka_Streams_Processor_RecordContext_" data-uid="MASES.KNet.Streams.Processor.TopicNameExtractor`4.Extract(`2,`3,Org.Apache.Kafka.Streams.Processor.RecordContext)">
+  Extract(TJVMK, TJVMV, RecordContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/TopicNameExtractor.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override sealed String Extract(TJVMK arg0, TJVMV arg1, RecordContext arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">TJVMK</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">TJVMV</span></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.RecordContext.html">RecordContext</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.RecordContext.html">RecordContext</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 

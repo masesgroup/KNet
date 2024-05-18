@@ -1184,6 +1184,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.ByteBufferDeserializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.ByteBufferDeserializer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.ByteBufferSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.ByteBufferSerializer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Serialization.IDeserializer-2.yml",
       "output": {
         ".html": {
@@ -1218,6 +1238,36 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.ISerDes-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.ISerDes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.ISerDes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.ISerDesBuffered-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.ISerDesBuffered-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.ISerDesRaw-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.ISerDesRaw-1.html"
         }
       },
       "version": ""
@@ -1288,46 +1338,6 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.Json.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Serialization.KNetByteBufferDeserializer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Serialization.KNetByteBufferDeserializer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Serialization.KNetByteBufferSerializer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Serialization.KNetByteBufferSerializer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Serialization.KNetSerdes.ByteBufferSerde.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Serialization.KNetSerdes.ByteBufferSerde.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Serialization.KNetSerdes.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Serialization.KNetSerdes.html"
         }
       },
       "version": ""
@@ -1484,16 +1494,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Serialization.SerDes.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Serialization.SerDes.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Serialization.SerDesBuffered-1.yml",
       "output": {
         ".html": {
@@ -1508,6 +1508,36 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.SerDesRaw-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.SerDes_1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.SerDes_1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.Serdes.ByteBufferSerde.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.Serdes.ByteBufferSerde.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Serialization.Serdes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Serialization.Serdes.html"
         }
       },
       "version": ""
@@ -1868,6 +1898,16 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueMapperForString-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueMapperForString-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.Kstream.KeyValueMapperForString-4.html"
         }
       },
       "version": ""

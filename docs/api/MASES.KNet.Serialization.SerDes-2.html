@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Serialization_SerDes_2" data-uid="MASES.KNet.Serialization.SerDes`2" class="text-break">
-Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L55"><i class="bi bi-code-slash"></i></a>
+Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SerDes&lt;T, TJVMT&gt; : ISerDes&lt;T, TJVMT&gt;, ISerializer&lt;T, TJVMT&gt;, IDeserializer&lt;T, TJVMT&gt;, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class SerDes&lt;T, TJVMT&gt; : ISerDes&lt;T, TJVMT&gt;, ISerializer&lt;T, TJVMT&gt;, IDeserializer&lt;T, TJVMT&gt;, ISerDes, IDisposable</code></pre>
   </div>
 
 
@@ -127,6 +127,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
       <div><a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes</a>&lt;T, TJVMT&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer</a>&lt;T, TJVMT&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;T, TJVMT&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Serialization.ISerDes.html">ISerDes</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
@@ -134,26 +135,6 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
-      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Key.BinaryBuffered-1.html">AvroSerDes.Key.BinaryBuffered&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Key.BinaryRaw-1.html">AvroSerDes.Key.BinaryRaw&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Key.JsonBuffered-1.html">AvroSerDes.Key.JsonBuffered&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Key.JsonRaw-1.html">AvroSerDes.Key.JsonRaw&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Value.BinaryBuffered-1.html">AvroSerDes.Value.BinaryBuffered&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Value.BinaryRaw-1.html">AvroSerDes.Value.BinaryRaw&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Value.JsonBuffered-1.html">AvroSerDes.Value.JsonBuffered&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Value.JsonRaw-1.html">AvroSerDes.Value.JsonRaw&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Json.JsonSerDes.KeyBuffered-1.html">JsonSerDes.KeyBuffered&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Json.JsonSerDes.KeyRaw-1.html">JsonSerDes.KeyRaw&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Json.JsonSerDes.ValueBuffered-1.html">JsonSerDes.ValueBuffered&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Json.JsonSerDes.ValueRaw-1.html">JsonSerDes.ValueRaw&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.MessagePack.MessagePackSerDes.KeyBuffered-1.html">MessagePackSerDes.KeyBuffered&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.MessagePack.MessagePackSerDes.KeyRaw-1.html">MessagePackSerDes.KeyRaw&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.MessagePack.MessagePackSerDes.ValueBuffered-1.html">MessagePackSerDes.ValueBuffered&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.MessagePack.MessagePackSerDes.ValueRaw-1.html">MessagePackSerDes.ValueRaw&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.KeyBuffered-1.html">ProtobufSerDes.KeyBuffered&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.KeyRaw-1.html">ProtobufSerDes.KeyRaw&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.ValueBuffered-1.html">ProtobufSerDes.ValueBuffered&lt;T&gt;</a></div>
-      <div><a class="xref" href="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.ValueRaw-1.html">ProtobufSerDes.ValueRaw&lt;T&gt;</a></div>
       <div><a class="xref" href="MASES.KNet.Serialization.SerDesBuffered-1.html">SerDesBuffered&lt;T&gt;</a></div>
       <div><a class="xref" href="MASES.KNet.Serialization.SerDesRaw-1.html">SerDesRaw&lt;T&gt;</a></div>
     </dd>
@@ -198,7 +179,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2__ctor" data-uid="MASES.KNet.Serialization.SerDes`2.#ctor">
   SerDes()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default initializer</p>
@@ -229,10 +210,10 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_IsDirectBuffered" data-uid="MASES.KNet.Serialization.SerDes`2.IsDirectBuffered">
   IsDirectBuffered
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L230"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> in implementing class if the implementation shall use the support of direct buffer exchange</p>
+  <div class="markdown level1 summary"><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> in implementing class if the implementation uses the support of direct buffer data exchange</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -253,6 +234,41 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
 
 
+  <h4 class="section" id="MASES_KNet_Serialization_SerDes_2_IsDirectBuffered_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the KNet classes will use KNetByteBufferSerializer and KNetByteBufferDeserializer as backing JVM classes</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Serialization_SerDes_2_JVMType_" data-uid="MASES.KNet.Serialization.SerDes`2.JVMType*"></a>
+
+  <h3 id="MASES_KNet_Serialization_SerDes_2_JVMType" data-uid="MASES.KNet.Serialization.SerDes`2.JVMType">
+  JVMType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MASES.KNet.Serialization.ISerDes.html#MASES_KNet_Serialization_ISerDes_Type">Type</a>, representing the JVM type, managed from this <a class="xref" href="MASES.KNet.Serialization.ISerDes.html">ISerDes</a> instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type JVMType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
 
 
 
@@ -261,7 +277,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_KafkaDeserializer" data-uid="MASES.KNet.Serialization.SerDes`2.KafkaDeserializer">
   KafkaDeserializer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer-1.html">Deserializer&lt;T&gt;</a> to use in Apache Kafka</p>
@@ -293,7 +309,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_KafkaSerde" data-uid="MASES.KNet.Serialization.SerDes`2.KafkaSerde">
   KafkaSerde
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde&lt;T&gt;</a> to use in Apache Kafka</p>
@@ -325,7 +341,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_KafkaSerializer" data-uid="MASES.KNet.Serialization.SerDes`2.KafkaSerializer">
   KafkaSerializer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L253"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serializer-1.html">Serializer&lt;T&gt;</a> to use in Apache Kafka</p>
@@ -357,7 +373,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_OnDeserialize" data-uid="MASES.KNet.Serialization.SerDes`2.OnDeserialize">
   OnDeserialize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L245"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>External deserialization function</p>
@@ -389,7 +405,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_OnDeserializeWithHeaders" data-uid="MASES.KNet.Serialization.SerDes`2.OnDeserializeWithHeaders">
   OnDeserializeWithHeaders
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L249"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>External deserialization function using <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></p>
@@ -421,7 +437,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_OnSerialize" data-uid="MASES.KNet.Serialization.SerDes`2.OnSerialize">
   OnSerialize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L237"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>External serialization function</p>
@@ -453,7 +469,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_OnSerializeWithHeaders" data-uid="MASES.KNet.Serialization.SerDes`2.OnSerializeWithHeaders">
   OnSerializeWithHeaders
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>External serialization function using <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></p>
@@ -481,11 +497,43 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
 
 
+  <a id="MASES_KNet_Serialization_SerDes_2_Type_" data-uid="MASES.KNet.Serialization.SerDes`2.Type*"></a>
+
+  <h3 id="MASES_KNet_Serialization_SerDes_2_Type" data-uid="MASES.KNet.Serialization.SerDes`2.Type">
+  Type
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MASES.KNet.Serialization.ISerDes.html#MASES_KNet_Serialization_ISerDes_Type">Type</a> managed from this <a class="xref" href="MASES.KNet.Serialization.ISerDes.html">ISerDes</a> instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type Type { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Serialization_SerDes_2_UseHeaders_" data-uid="MASES.KNet.Serialization.SerDes`2.UseHeaders*"></a>
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_UseHeaders" data-uid="MASES.KNet.Serialization.SerDes`2.UseHeaders">
   UseHeaders
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L226"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a> are used</p>
@@ -517,10 +565,10 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_UseKafkaClassForSupportedTypes" data-uid="MASES.KNet.Serialization.SerDes`2.UseKafkaClassForSupportedTypes">
   UseKafkaClassForSupportedTypes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> in implementing class if the implementation shall use the deserializer of Apache Kafka, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a></p>
+  <div class="markdown level1 summary"><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> in implementing class if the implementation shall use the serializer of Apache Kafka, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -556,7 +604,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_Deserialize_System_String__1_" data-uid="MASES.KNet.Serialization.SerDes`2.Deserialize(System.String,`1)">
   Deserialize(string, TJVMT)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L294"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the Deserializer action in the CLR</p>
@@ -598,7 +646,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_DeserializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers__1_" data-uid="MASES.KNet.Serialization.SerDes`2.DeserializeWithHeaders(System.String,Org.Apache.Kafka.Common.Header.Headers,`1)">
   DeserializeWithHeaders(string, Headers, TJVMT)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L323"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the Deserializer action in the CLR</p>
@@ -643,7 +691,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_Dispose" data-uid="MASES.KNet.Serialization.SerDes`2.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
@@ -670,7 +718,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_Finalize" data-uid="MASES.KNet.Serialization.SerDes`2.Finalize">
   ~SerDes()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Finalizer</p>
@@ -697,7 +745,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_Serialize_System_String__0_" data-uid="MASES.KNet.Serialization.SerDes`2.Serialize(System.String,`0)">
   Serialize(string, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L257"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the Serializer action in the CLR</p>
@@ -739,7 +787,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="MASES_KNet_Serialization_SerDes_2_SerializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers__0_" data-uid="MASES.KNet.Serialization.SerDes`2.SerializeWithHeaders(System.String,Org.Apache.Kafka.Common.Header.Headers,`0)">
   SerializeWithHeaders(string, Headers, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L284"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the Serializer action in the CLR</p>
@@ -784,7 +832,7 @@ Class SerDes&lt;T, TJVMT&gt;  <a class="header-action link-secondary" title="Vie
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L55" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L84" class="edit-link">Edit this page</a>
         </div>
 
 

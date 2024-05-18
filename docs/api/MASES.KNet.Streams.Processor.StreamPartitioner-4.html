@@ -98,7 +98,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt; : StreamPartitioner&lt;TJVMK, TJVMV&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IStreamPartitioner&lt;TJVMK, TJVMV&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt; : StreamPartitioner&lt;TJVMK, TJVMV&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IStreamPartitioner&lt;TJVMK, TJVMV&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IGenericSerDesFactoryApplier</code></pre>
   </div>
 
 
@@ -556,7 +556,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitioner_4_Factory" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`4.Factory">
   Factory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the current <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></p>
@@ -588,7 +588,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitioner_4_Key" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`4.Key">
   Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">K</code> content</p>
@@ -596,7 +596,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract K Key { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual K Key { get; }</code></pre>
   </div>
 
 
@@ -620,7 +620,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitioner_4_NumPartitions" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`4.NumPartitions">
   NumPartitions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The total number of partitions</p>
@@ -628,7 +628,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract int NumPartitions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual int NumPartitions { get; }</code></pre>
   </div>
 
 
@@ -652,7 +652,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitioner_4_OnPartitions" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`4.OnPartitions">
   OnPartitions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-</a></p>
@@ -687,7 +687,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitioner_4_Topic" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`4.Topic">
   Topic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The topic name this record is sent to</p>
@@ -695,7 +695,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract string Topic { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Topic { get; }</code></pre>
   </div>
 
 
@@ -719,7 +719,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitioner_4_Value" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`4.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">V</code> content</p>
@@ -727,7 +727,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract V Value { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual V Value { get; }</code></pre>
   </div>
 
 
@@ -755,7 +755,7 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
 
   <h3 id="MASES_KNet_Streams_Processor_StreamPartitioner_4_Partitions" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`4.Partitions">
   Partitions()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet override of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-</a></p>
@@ -780,6 +780,57 @@ Class StreamPartitioner&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-
 
 
 
+
+
+
+
+  <a id="MASES_KNet_Streams_Processor_StreamPartitioner_4_Partitions_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`4.Partitions*"></a>
+
+  <h3 id="MASES_KNet_Streams_Processor_StreamPartitioner_4_Partitions_Java_Lang_String__2__3_System_Int32_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`4.Partitions(Java.Lang.String,`2,`3,System.Int32)">
+  Partitions(String, TJVMK, TJVMV, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitioner.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Optional&lt;Set&lt;Integer&gt;&gt; Partitions(String arg0, TJVMK arg1, TJVMV arg2, int arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">TJVMK</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">TJVMV</span></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.Integer.html">Integer</a>&gt;&gt;</dt>
+    <dd><p><a class="xref" href="api/Java.Util.Optional.html">Optional</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Streams_Processor_StreamPartitioner_4_Partitions_Java_Lang_String__2__3_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface using <a class="xref" href="Org.Apache.Kafka.Streams.Processor.StreamPartitioner-2.html#Org_Apache_Kafka_Streams_Processor_StreamPartitioner_2_PartitionsDefault_Java_Lang_String__0__1_System_Int32_">PartitionsDefault(String, K, V, int)</a>; override the method to implement a different behavior</p>
+</div>
 
 
 

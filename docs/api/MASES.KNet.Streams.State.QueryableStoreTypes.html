@@ -152,8 +152,8 @@ Class QueryableStoreTypes  <a class="header-action link-secondary" title="View s
   <a id="MASES_KNet_Streams_State_QueryableStoreTypes_KeyValueStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.KeyValueStore*"></a>
 
   <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_KeyValueStore__2" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.KeyValueStore``2">
-  KeyValueStore&lt;TKey, TValue&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  KeyValueStore&lt;K, V&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_KeyValueStore__2">KeyValueStore&lt;K, V&gt;()</a> based on array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
@@ -161,22 +161,121 @@ Class QueryableStoreTypes  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;ReadOnlyKeyValueStore&lt;TKey, TValue&gt;, ReadOnlyKeyValueStore&lt;byte[], byte[]&gt;&gt; KeyValueStore&lt;TKey, TValue&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;ReadOnlyKeyValueStore&lt;K, V&gt;, ReadOnlyKeyValueStore&lt;byte[], byte[]&gt;&gt; KeyValueStore&lt;K, V&gt;()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;TKey, TValue&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;K, V&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>TKey</code></dt>
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_QueryableStoreTypes_KeyValueStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.KeyValueStore*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_KeyValueStore__4" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.KeyValueStore``4">
+  KeyValueStore&lt;K, V, TJVMK, TJVMV&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_KeyValueStore__2">KeyValueStore&lt;K, V&gt;()</a> based on <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;ReadOnlyKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;, ReadOnlyKeyValueStore&lt;TJVMK, TJVMV&gt;&gt; KeyValueStore&lt;K, V, TJVMK, TJVMV&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.ReadOnlyKeyValueStore-4.html">ReadOnlyKeyValueStore</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;TJVMK, TJVMV&gt;&gt;</dt>
     <dd></dd>
-    <dt><code>TValue</code></dt>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_QueryableStoreTypes_KeyValueStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.KeyValueStore*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_KeyValueStore__5" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.KeyValueStore``5">
+  KeyValueStore&lt;K, V, TJVMK, TJVMV, TConcreteStore&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_KeyValueStore__2">KeyValueStore&lt;K, V&gt;()</a> based on <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;TConcreteStore, ReadOnlyKeyValueStore&lt;TJVMK, TJVMV&gt;&gt; KeyValueStore&lt;K, V, TJVMK, TJVMV, TConcreteStore&gt;() where TConcreteStore : ReadOnlyKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;, new()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;TConcreteStore, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;TJVMK, TJVMV&gt;&gt;</dt>
     <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>TConcreteStore</code></dt>
+    <dd><p>A concrete type extending <a class="xref" href="MASES.KNet.Streams.State.ReadOnlyKeyValueStore-4.html">ReadOnlyKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
   </dl>
 
 
@@ -191,8 +290,8 @@ Class QueryableStoreTypes  <a class="header-action link-secondary" title="View s
   <a id="MASES_KNet_Streams_State_QueryableStoreTypes_SessionStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.SessionStore*"></a>
 
   <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_SessionStore__2" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.SessionStore``2">
-  SessionStore&lt;TKey, TValue&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  SessionStore&lt;K, V&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_SessionStore__2">SessionStore&lt;K, V&gt;()</a> based on array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
@@ -200,22 +299,121 @@ Class QueryableStoreTypes  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;ReadOnlySessionStore&lt;TKey, TValue&gt;, ReadOnlySessionStore&lt;byte[], byte[]&gt;&gt; SessionStore&lt;TKey, TValue&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;ReadOnlySessionStore&lt;K, V&gt;, ReadOnlySessionStore&lt;byte[], byte[]&gt;&gt; SessionStore&lt;K, V&gt;()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.ReadOnlySessionStore-2.html">ReadOnlySessionStore</a>&lt;TKey, TValue&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore-2.html">ReadOnlySessionStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.ReadOnlySessionStore-2.html">ReadOnlySessionStore</a>&lt;K, V&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore-2.html">ReadOnlySessionStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>TKey</code></dt>
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_QueryableStoreTypes_SessionStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.SessionStore*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_SessionStore__4" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.SessionStore``4">
+  SessionStore&lt;K, V, TJVMK, TJVMV&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_SessionStore__2">SessionStore&lt;K, V&gt;()</a> based on <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;ReadOnlySessionStore&lt;K, V, TJVMK, TJVMV&gt;, ReadOnlySessionStore&lt;TJVMK, TJVMV&gt;&gt; SessionStore&lt;K, V, TJVMK, TJVMV&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.ReadOnlySessionStore-4.html">ReadOnlySessionStore</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore-2.html">ReadOnlySessionStore</a>&lt;TJVMK, TJVMV&gt;&gt;</dt>
     <dd></dd>
-    <dt><code>TValue</code></dt>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_QueryableStoreTypes_SessionStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.SessionStore*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_SessionStore__5" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.SessionStore``5">
+  SessionStore&lt;K, V, TJVMK, TJVMV, TConcreteStore&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_SessionStore__2">SessionStore&lt;K, V&gt;()</a> based on <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;TConcreteStore, ReadOnlySessionStore&lt;TJVMK, TJVMV&gt;&gt; SessionStore&lt;K, V, TJVMK, TJVMV, TConcreteStore&gt;() where TConcreteStore : ReadOnlySessionStore&lt;K, V, TJVMK, TJVMV&gt;, new()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;TConcreteStore, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore-2.html">ReadOnlySessionStore</a>&lt;TJVMK, TJVMV&gt;&gt;</dt>
     <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>TConcreteStore</code></dt>
+    <dd><p>A concrete type extending <a class="xref" href="MASES.KNet.Streams.State.ReadOnlySessionStore-4.html">ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;</a></p>
+</dd>
   </dl>
 
 
@@ -230,8 +428,8 @@ Class QueryableStoreTypes  <a class="header-action link-secondary" title="View s
   <a id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedKeyValueStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore*"></a>
 
   <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedKeyValueStore__2" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore``2">
-  TimestampedKeyValueStore&lt;TKey, TValue&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  TimestampedKeyValueStore&lt;K, V&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_TimestampedKeyValueStore__2">TimestampedKeyValueStore&lt;K, V&gt;()</a> based on array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
@@ -239,22 +437,121 @@ Class QueryableStoreTypes  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;TimestampedKeyValueStore&lt;TKey, TValue&gt;, ReadOnlyKeyValueStore&lt;byte[], ValueAndTimestamp&lt;byte[]&gt;&gt;&gt; TimestampedKeyValueStore&lt;TKey, TValue&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;TimestampedKeyValueStore&lt;K, V&gt;, ReadOnlyKeyValueStore&lt;byte[], ValueAndTimestamp&lt;byte[]&gt;&gt;&gt; TimestampedKeyValueStore&lt;K, V&gt;()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-2.html">TimestampedKeyValueStore</a>&lt;TKey, TValue&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-2.html">TimestampedKeyValueStore</a>&lt;K, V&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>TKey</code></dt>
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedKeyValueStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedKeyValueStore__4" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore``4">
+  TimestampedKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_TimestampedKeyValueStore__2">TimestampedKeyValueStore&lt;K, V&gt;()</a> based on <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;TimestampedKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;, ReadOnlyKeyValueStore&lt;TJVMK, ValueAndTimestamp&lt;TJVMV&gt;&gt;&gt; TimestampedKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueStore-4.html">TimestampedKeyValueStore</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;TJVMK, <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp</a>&lt;TJVMV&gt;&gt;&gt;</dt>
     <dd></dd>
-    <dt><code>TValue</code></dt>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedKeyValueStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedKeyValueStore__5" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore``5">
+  TimestampedKeyValueStore&lt;K, V, TJVMK, TJVMV, TConcreteStore&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_TimestampedKeyValueStore__2">TimestampedKeyValueStore&lt;K, V&gt;()</a> based on <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;TConcreteStore, ReadOnlyKeyValueStore&lt;TJVMK, ValueAndTimestamp&lt;TJVMV&gt;&gt;&gt; TimestampedKeyValueStore&lt;K, V, TJVMK, TJVMV, TConcreteStore&gt;() where TConcreteStore : TimestampedKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;, new()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;TConcreteStore, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore-2.html">ReadOnlyKeyValueStore</a>&lt;TJVMK, <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp</a>&lt;TJVMV&gt;&gt;&gt;</dt>
     <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>TConcreteStore</code></dt>
+    <dd><p>A concrete type extending <a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html#MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedKeyValueStore__4">TimestampedKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;()</a></p>
+</dd>
   </dl>
 
 
@@ -269,8 +566,8 @@ Class QueryableStoreTypes  <a class="header-action link-secondary" title="View s
   <a id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedWindowStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedWindowStore*"></a>
 
   <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedWindowStore__2" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedWindowStore``2">
-  TimestampedWindowStore&lt;TKey, TValue&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  TimestampedWindowStore&lt;K, V&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L214"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_TimestampedWindowStore__2">TimestampedWindowStore&lt;K, V&gt;()</a> based on array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
@@ -278,22 +575,121 @@ Class QueryableStoreTypes  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;TimestampedWindowStore&lt;TKey, TValue&gt;, ReadOnlyWindowStore&lt;byte[], ValueAndTimestamp&lt;byte[]&gt;&gt;&gt; TimestampedWindowStore&lt;TKey, TValue&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;TimestampedWindowStore&lt;K, V&gt;, ReadOnlyWindowStore&lt;byte[], ValueAndTimestamp&lt;byte[]&gt;&gt;&gt; TimestampedWindowStore&lt;K, V&gt;()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.TimestampedWindowStore-2.html">TimestampedWindowStore</a>&lt;TKey, TValue&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.TimestampedWindowStore-2.html">TimestampedWindowStore</a>&lt;K, V&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>TKey</code></dt>
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedWindowStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedWindowStore*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedWindowStore__4" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedWindowStore``4">
+  TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_TimestampedWindowStore__2">TimestampedWindowStore&lt;K, V&gt;()</a> based on <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;, ReadOnlyWindowStore&lt;TJVMK, ValueAndTimestamp&lt;TJVMV&gt;&gt;&gt; TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.TimestampedWindowStore-4.html">TimestampedWindowStore</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;TJVMK, <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp</a>&lt;TJVMV&gt;&gt;&gt;</dt>
     <dd></dd>
-    <dt><code>TValue</code></dt>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedWindowStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedWindowStore*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedWindowStore__5" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.TimestampedWindowStore``5">
+  TimestampedWindowStore&lt;K, V, TJVMK, TJVMV, TConcreteStore&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_TimestampedWindowStore__2">TimestampedWindowStore&lt;K, V&gt;()</a> based on <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;TConcreteStore, ReadOnlyWindowStore&lt;TJVMK, ValueAndTimestamp&lt;TJVMV&gt;&gt;&gt; TimestampedWindowStore&lt;K, V, TJVMK, TJVMV, TConcreteStore&gt;() where TConcreteStore : TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;, new()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;TConcreteStore, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;TJVMK, <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueAndTimestamp-1.html">ValueAndTimestamp</a>&lt;TJVMV&gt;&gt;&gt;</dt>
     <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>TConcreteStore</code></dt>
+    <dd><p>A concrete type extending <a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html#MASES_KNet_Streams_State_QueryableStoreTypes_TimestampedWindowStore__4">TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;()</a></p>
+</dd>
   </dl>
 
 
@@ -308,8 +704,8 @@ Class QueryableStoreTypes  <a class="header-action link-secondary" title="View s
   <a id="MASES_KNet_Streams_State_QueryableStoreTypes_WindowStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.WindowStore*"></a>
 
   <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_WindowStore__2" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.WindowStore``2">
-  WindowStore&lt;TKey, TValue&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  WindowStore&lt;K, V&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_WindowStore__2">WindowStore&lt;K, V&gt;()</a> based on array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
@@ -317,22 +713,121 @@ Class QueryableStoreTypes  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;ReadOnlyWindowStore&lt;TKey, TValue&gt;, ReadOnlyWindowStore&lt;byte[], byte[]&gt;&gt; WindowStore&lt;TKey, TValue&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;ReadOnlyWindowStore&lt;K, V&gt;, ReadOnlyWindowStore&lt;byte[], byte[]&gt;&gt; WindowStore&lt;K, V&gt;()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;TKey, TValue&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;K, V&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>TKey</code></dt>
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_QueryableStoreTypes_WindowStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.WindowStore*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_WindowStore__4" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.WindowStore``4">
+  WindowStore&lt;K, V, TJVMK, TJVMV&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_WindowStore__2">WindowStore&lt;K, V&gt;()</a> based on <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;ReadOnlyWindowStore&lt;K, V, TJVMK, TJVMV&gt;, ReadOnlyWindowStore&lt;TJVMK, TJVMV&gt;&gt; WindowStore&lt;K, V, TJVMK, TJVMV&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.ReadOnlyWindowStore-4.html">ReadOnlyWindowStore</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;TJVMK, TJVMV&gt;&gt;</dt>
     <dd></dd>
-    <dt><code>TValue</code></dt>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_QueryableStoreTypes_WindowStore_" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.WindowStore*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_QueryableStoreTypes_WindowStore__5" data-uid="MASES.KNet.Streams.State.QueryableStoreTypes.WindowStore``5">
+  WindowStore&lt;K, V, TJVMK, TJVMV, TConcreteStore&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/QueryableStoreTypes.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet value of <a class="xref" href="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.html#Org_Apache_Kafka_Streams_State_QueryableStoreTypes_WindowStore__2">WindowStore&lt;K, V&gt;()</a> based on <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QueryableStoreTypes.StoreType&lt;TConcreteStore, ReadOnlyWindowStore&lt;TJVMK, TJVMV&gt;&gt; WindowStore&lt;K, V, TJVMK, TJVMV, TConcreteStore&gt;() where TConcreteStore : ReadOnlyWindowStore&lt;K, V, TJVMK, TJVMV&gt;, new()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.html">QueryableStoreTypes</a>.<a class="xref" href="MASES.KNet.Streams.State.QueryableStoreTypes.StoreType-2.html">StoreType</a>&lt;TConcreteStore, <a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore-2.html">ReadOnlyWindowStore</a>&lt;TJVMK, TJVMV&gt;&gt;</dt>
     <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd><p>The key type</p>
+</dd>
+    <dt><code>V</code></dt>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>TConcreteStore</code></dt>
+    <dd><p>A concrete type extending <a class="xref" href="MASES.KNet.Streams.State.ReadOnlyWindowStore-4.html">ReadOnlyWindowStore&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
   </dl>
 
 

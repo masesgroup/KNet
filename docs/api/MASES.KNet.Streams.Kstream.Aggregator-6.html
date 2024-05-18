@@ -98,7 +98,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt; : Aggregator&lt;TJVMK, TJVMV, TJVMVA&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IAggregator&lt;TJVMK, TJVMV, TJVMVA&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt; : Aggregator&lt;TJVMK, TJVMV, TJVMVA&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IAggregator&lt;TJVMK, TJVMV, TJVMVA&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IGenericSerDesFactoryApplier</code></pre>
   </div>
 
 
@@ -553,7 +553,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_Kstream_Aggregator_6_Aggregate" data-uid="MASES.KNet.Streams.Kstream.Aggregator`6.Aggregate">
   Aggregate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">VA</code> content</p>
@@ -561,7 +561,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract VA Aggregate { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual VA Aggregate { get; }</code></pre>
   </div>
 
 
@@ -585,7 +585,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_Kstream_Aggregator_6_Factory" data-uid="MASES.KNet.Streams.Kstream.Aggregator`6.Factory">
   Factory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the current <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></p>
@@ -617,7 +617,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_Kstream_Aggregator_6_Key" data-uid="MASES.KNet.Streams.Kstream.Aggregator`6.Key">
   Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">K</code> content</p>
@@ -625,7 +625,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract K Key { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual K Key { get; }</code></pre>
   </div>
 
 
@@ -649,7 +649,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_Kstream_Aggregator_6_OnApply" data-uid="MASES.KNet.Streams.Kstream.Aggregator`6.OnApply">
   OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
@@ -657,7 +657,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;Aggregator&lt;K, V, VA&gt;, VA&gt; OnApply { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;, VA&gt; OnApply { get; set; }</code></pre>
   </div>
 
 
@@ -666,7 +666,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="MASES.KNet.Streams.Kstream.Aggregator-3.html">Aggregator</a>&lt;K, V, VA&gt;, VA&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="MASES.KNet.Streams.Kstream.Aggregator-6.html">Aggregator</a>&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;, VA&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -684,7 +684,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_Kstream_Aggregator_6_Value" data-uid="MASES.KNet.Streams.Kstream.Aggregator`6.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">V</code> content</p>
@@ -692,7 +692,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract V Value { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual V Value { get; }</code></pre>
   </div>
 
 
@@ -720,7 +720,7 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_Kstream_Aggregator_6_Apply" data-uid="MASES.KNet.Streams.Kstream.Aggregator`6.Apply">
   Apply()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
@@ -736,6 +736,51 @@ Class Aggregator&lt;K, V, VA, TJVMK, TJVMV, TJVMVA&gt;  <a class="header-action 
   <dl class="parameters">
     <dt><span class="xref">VA</span></dt>
     <dd><p><code class="typeparamref">VA</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_Aggregator_6_Apply_" data-uid="MASES.KNet.Streams.Kstream.Aggregator`6.Apply*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_Aggregator_6_Apply__3__4__5_" data-uid="MASES.KNet.Streams.Kstream.Aggregator`6.Apply(`3,`4,`5)">
+  Apply(TJVMK, TJVMV, TJVMVA)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Aggregator.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override sealed TJVMVA Apply(TJVMK arg0, TJVMV arg1, TJVMVA arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">TJVMK</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">TJVMV</span></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>arg2</code> <span class="xref">TJVMVA</span></dt>
+    <dd><p><code class="typeparamref">VAgg</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TJVMVA</span></dt>
+    <dd><p><code class="typeparamref">VAgg</code></p>
 </dd>
   </dl>
 

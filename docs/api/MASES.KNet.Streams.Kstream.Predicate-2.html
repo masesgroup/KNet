@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_Predicate_2" data-uid="MASES.KNet.Streams.Kstream.Predicate`2" class="text-break">
-Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L78"><i class="bi bi-code-slash"></i></a>
+Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -162,6 +162,9 @@ Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html#MASES_KNet_Streams_Kstream_Predicate_4_Value">Predicate&lt;K, V, byte[], byte[]&gt;.Value</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html#MASES_KNet_Streams_Kstream_Predicate_4_Test__2__3_">Predicate&lt;K, V, byte[], byte[]&gt;.Test(byte[], byte[])</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html#MASES_KNet_Streams_Kstream_Predicate_4_Test">Predicate&lt;K, V, byte[], byte[]&gt;.Test()</a>
@@ -551,160 +554,11 @@ Class Predicate&lt;K, V&gt;  <a class="header-action link-secondary" title="View
 
 
 
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="MASES_KNet_Streams_Kstream_Predicate_2_Key_" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.Key*"></a>
-
-  <h3 id="MASES_KNet_Streams_Kstream_Predicate_2_Key" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.Key">
-  Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L93"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The <code class="typeparamref">K</code> content</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override K Key { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">K</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Streams_Kstream_Predicate_2_OnTest_" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.OnTest*"></a>
-
-  <h3 id="MASES_KNet_Streams_Kstream_Predicate_2_OnTest" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.OnTest">
-  OnTest
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L91"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;Predicate&lt;K, V&gt;, bool&gt; OnTest { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-2.html">Predicate</a>&lt;K, V&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="MASES_KNet_Streams_Kstream_Predicate_2_OnTest_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-2.html#MASES_KNet_Streams_Kstream_Predicate_2_OnTest">OnTest</a> has a value it takes precedence over corresponding <a class="xref" href="MASES.KNet.Streams.Kstream.Predicate-4.html#MASES_KNet_Streams_Kstream_Predicate_4_Test">Test()</a> class method</p>
-</div>
-
-
-
-
-  <a id="MASES_KNet_Streams_Kstream_Predicate_2_Value_" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.Value*"></a>
-
-  <h3 id="MASES_KNet_Streams_Kstream_Predicate_2_Value" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.Value">
-  Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L95"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The <code class="typeparamref">V</code> content</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override V Value { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">V</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="MASES_KNet_Streams_Kstream_Predicate_2_Test_" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.Test*"></a>
-
-  <h3 id="MASES_KNet_Streams_Kstream_Predicate_2_Test_System_Byte___System_Byte___" data-uid="MASES.KNet.Streams.Kstream.Predicate`2.Test(System.Byte[],System.Byte[])">
-  Test(byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L97"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override sealed bool Test(byte[] arg0, byte[] arg1)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p><code class="typeparamref">K</code></p>
-</dd>
-    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p><code class="typeparamref">V</code></p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L78" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Predicate.cs/#L96" class="edit-link">Edit this page</a>
         </div>
 
 

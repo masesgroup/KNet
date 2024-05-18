@@ -98,7 +98,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt; : ManagedStore&lt;ReadOnlyWindowStore&lt;TJVMK, ValueAndTimestamp&lt;TJVMV&gt;&gt;&gt;, IManagedStore&lt;ReadOnlyWindowStore&lt;TJVMK, ValueAndTimestamp&lt;TJVMV&gt;&gt;&gt;, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt; : ManagedStore&lt;ReadOnlyWindowStore&lt;TJVMK, ValueAndTimestamp&lt;TJVMV&gt;&gt;&gt;, IManagedStore&lt;ReadOnlyWindowStore&lt;TJVMK, ValueAndTimestamp&lt;TJVMV&gt;&gt;&gt;, IGenericSerDesFactoryApplier</code></pre>
   </div>
 
 
@@ -196,7 +196,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; All { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; All { get; }</code></pre>
   </div>
 
 
@@ -221,7 +221,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_State_TimestampedWindowStore_4_BackwardAll" data-uid="MASES.KNet.Streams.State.TimestampedWindowStore`4.BackwardAll">
   BackwardAll
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll--</a></p>
@@ -229,7 +229,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; BackwardAll { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; BackwardAll { get; }</code></pre>
   </div>
 
 
@@ -258,7 +258,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_State_TimestampedWindowStore_4_BackwardFetch__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.TimestampedWindowStore`4.BackwardFetch(`0,Java.Time.Instant,Java.Time.Instant)">
   BackwardFetch(K, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
@@ -266,7 +266,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TimestampedWindowStoreIterator&lt;V, TJVMV&gt; BackwardFetch(K arg0, Instant arg1, Instant arg2)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TimestampedWindowStoreIterator&lt;V, TJVMV&gt; BackwardFetch(K arg0, Instant arg1, Instant arg2)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -308,7 +308,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_State_TimestampedWindowStore_4_BackwardFetch__0__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.TimestampedWindowStore`4.BackwardFetch(`0,`0,Java.Time.Instant,Java.Time.Instant)">
   BackwardFetch(K, K, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
@@ -316,7 +316,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; BackwardFetch(K arg0, K arg1, Instant arg2, Instant arg3)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; BackwardFetch(K arg0, K arg1, Instant arg2, Instant arg3)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -361,7 +361,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_State_TimestampedWindowStore_4_BackwardFetchAll_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.TimestampedWindowStore`4.BackwardFetchAll(Java.Time.Instant,Java.Time.Instant)">
   BackwardFetchAll(Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-</a></p>
@@ -369,7 +369,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; BackwardFetchAll(Instant arg0, Instant arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; BackwardFetchAll(Instant arg0, Instant arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -408,7 +408,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_State_TimestampedWindowStore_4_Fetch__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.TimestampedWindowStore`4.Fetch(`0,Java.Time.Instant,Java.Time.Instant)">
   Fetch(K, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
@@ -416,7 +416,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TimestampedWindowStoreIterator&lt;V, TJVMV&gt; Fetch(K arg0, Instant arg1, Instant arg2)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TimestampedWindowStoreIterator&lt;V, TJVMV&gt; Fetch(K arg0, Instant arg1, Instant arg2)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -458,7 +458,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_State_TimestampedWindowStore_4_Fetch__0_System_Int64_" data-uid="MASES.KNet.Streams.State.TimestampedWindowStore`4.Fetch(`0,System.Int64)">
   Fetch(K, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-long-</a></p>
@@ -466,7 +466,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract ValueAndTimestamp&lt;V, TJVMV&gt; Fetch(K arg0, long arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ValueAndTimestamp&lt;V, TJVMV&gt; Fetch(K arg0, long arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -508,7 +508,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; Fetch(K arg0, K arg1, Instant arg2, Instant arg3)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; Fetch(K arg0, K arg1, Instant arg2, Instant arg3)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -553,7 +553,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
 
   <h3 id="MASES_KNet_Streams_State_TimestampedWindowStore_4_FetchAll_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.TimestampedWindowStore`4.FetchAll(Java.Time.Instant,Java.Time.Instant)">
   FetchAll(Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedWindowStore.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll-java.time.Instant-java.time.Instant-</a></p>
@@ -561,7 +561,7 @@ Class TimestampedWindowStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; FetchAll(Instant arg0, Instant arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TimestampedWindowedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; FetchAll(Instant arg0, Instant arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

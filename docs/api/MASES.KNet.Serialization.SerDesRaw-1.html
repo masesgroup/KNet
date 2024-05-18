@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Serialization_SerDesRaw_1" data-uid="MASES.KNet.Serialization.SerDesRaw`1" class="text-break">
-Class SerDesRaw&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L302"><i class="bi bi-code-slash"></i></a>
+Class SerDesRaw&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L347"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,7 @@ Class SerDesRaw&lt;T&gt;  <a class="header-action link-secondary" title="View so
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SerDesRaw&lt;T&gt; : SerDes&lt;T, byte[]&gt;, ISerDes&lt;T, byte[]&gt;, ISerializer&lt;T, byte[]&gt;, IDeserializer&lt;T, byte[]&gt;, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class SerDesRaw&lt;T&gt; : SerDes&lt;T, byte[]&gt;, ISerDesRaw&lt;T&gt;, ISerDes&lt;T, byte[]&gt;, ISerializer&lt;T, byte[]&gt;, IDeserializer&lt;T, byte[]&gt;, ISerDes, IDisposable</code></pre>
   </div>
 
 
@@ -122,19 +122,51 @@ Class SerDesRaw&lt;T&gt;  <a class="header-action link-secondary" title="View so
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="MASES.KNet.Serialization.ISerDesRaw-1.html">ISerDesRaw</a>&lt;T&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Serialization.ISerDes.html">ISerDes</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Key.BinaryRaw-1.html">AvroSerDes.Key.BinaryRaw&lt;T&gt;</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Key.JsonRaw-1.html">AvroSerDes.Key.JsonRaw&lt;T&gt;</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Value.BinaryRaw-1.html">AvroSerDes.Value.BinaryRaw&lt;T&gt;</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.Avro.AvroSerDes.Value.JsonRaw-1.html">AvroSerDes.Value.JsonRaw&lt;T&gt;</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.Json.JsonSerDes.KeyRaw-1.html">JsonSerDes.KeyRaw&lt;T&gt;</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.Json.JsonSerDes.ValueRaw-1.html">JsonSerDes.ValueRaw&lt;T&gt;</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.MessagePack.MessagePackSerDes.KeyRaw-1.html">MessagePackSerDes.KeyRaw&lt;T&gt;</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.MessagePack.MessagePackSerDes.ValueRaw-1.html">MessagePackSerDes.ValueRaw&lt;T&gt;</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.KeyRaw-1.html">ProtobufSerDes.KeyRaw&lt;T&gt;</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.ValueRaw-1.html">ProtobufSerDes.ValueRaw&lt;T&gt;</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
       <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_Dispose">SerDes&lt;T, byte[]&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_Type">SerDes&lt;T, byte[]&gt;.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_JVMType">SerDes&lt;T, byte[]&gt;.JVMType</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_UseHeaders">SerDes&lt;T, byte[]&gt;.UseHeaders</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_UseKafkaClassForSupportedTypes">SerDes&lt;T, byte[]&gt;.UseKafkaClassForSupportedTypes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_IsDirectBuffered">SerDes&lt;T, byte[]&gt;.IsDirectBuffered</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_OnSerialize">SerDes&lt;T, byte[]&gt;.OnSerialize</a>
@@ -156,15 +188,6 @@ Class SerDesRaw&lt;T&gt;  <a class="header-action link-secondary" title="View so
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_KafkaDeserializer">SerDes&lt;T, byte[]&gt;.KafkaDeserializer</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_UseHeaders">SerDes&lt;T, byte[]&gt;.UseHeaders</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_UseKafkaClassForSupportedTypes">SerDes&lt;T, byte[]&gt;.UseKafkaClassForSupportedTypes</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_IsDirectBuffered">SerDes&lt;T, byte[]&gt;.IsDirectBuffered</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_Serialize_System_String__0_">SerDes&lt;T, byte[]&gt;.Serialize(string, T)</a>
@@ -210,7 +233,7 @@ Class SerDesRaw&lt;T&gt;  <a class="header-action link-secondary" title="View so
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L302" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L347" class="edit-link">Edit this page</a>
         </div>
 
 
