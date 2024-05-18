@@ -27,25 +27,12 @@ namespace MASES.KNet.Serialization
     /// </summary>
     /// <typeparam name="T">The .NET type</typeparam>
     /// <typeparam name="TJVMT">The JVM type used</typeparam>
-    public interface ISerializer<T, TJVMT> : IDisposable
+    public interface ISerializer<T, TJVMT> : ISerDes
     {
         /// <summary>
         /// The <see cref="Serializer{T}"/> to use in Apache Kafka
         /// </summary>
         public Serializer<TJVMT> KafkaSerializer { get; }
-        /// <summary>
-        /// <see langword="true"/> if <see cref="Headers"/> are used
-        /// </summary>
-        bool UseHeaders { get; set; }
-        /// <summary>
-        /// Set to <see langword="true"/> in implementing class if the implementation shall use the serializer of Apache Kafka, default is <see langword="false"/>
-        /// </summary>
-        /// <remarks>When this option is set to <see langword="true"/> there is better compatibility with data managed from Apache Kafka, but there is a performance impact</remarks>
-        bool UseKafkaClassForSupportedTypes { get; set; }
-        /// <summary>
-        /// Set to <see langword="true"/> in implementing class if the implementation shall use the support of direct buffer exchange
-        /// </summary>
-        bool IsDirectBuffered { get; }
         /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.ISerializer{T}.Serialize(Java.Lang.String, T)"/>
         TJVMT Serialize(string topic, T data);
         /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.ISerializer{T}.Serialize(Java.Lang.String, Headers, T)"/>

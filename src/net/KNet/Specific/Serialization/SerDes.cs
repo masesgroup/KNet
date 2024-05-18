@@ -28,9 +28,37 @@ namespace MASES.KNet.Serialization
     /// <summary>
     /// KNet common serializer/deserializer
     /// </summary>
+    public interface ISerDes : IDisposable
+    {
+        /// <summary>
+        /// The <see cref="Type"/> managed from this <see cref="ISerDes"/> instance
+        /// </summary>
+        Type Type { get; }
+        /// <summary>
+        /// The <see cref="Type"/>, representing the JVM type, managed from this <see cref="ISerDes"/> instance
+        /// </summary>
+        Type JVMType { get; }
+        /// <summary>
+        /// <see langword="true"/> if <see cref="Headers"/> are used
+        /// </summary>
+        bool UseHeaders { get; set; }
+        /// <summary>
+        /// Set to <see langword="true"/> in implementing class if the implementation shall use the serializer of Apache Kafka, default is <see langword="false"/>
+        /// </summary>
+        /// <remarks>When this option is set to <see langword="true"/> there is better compatibility with data managed from Apache Kafka, but there is a performance impact</remarks>
+        bool UseKafkaClassForSupportedTypes { get; set; }
+        /// <summary>
+        /// Set to <see langword="true"/> in implementing class if the implementation shall use the support of direct buffer exchange
+        /// </summary>
+        bool IsDirectBuffered { get; }
+    }
+
+    /// <summary>
+    /// KNet common serializer/deserializer
+    /// </summary>
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
     /// <typeparam name="TJVMT">The corresponding JVM type used</typeparam>
-    public interface ISerDes<T, TJVMT> : ISerializer<T, TJVMT>, IDeserializer<T, TJVMT>
+    public interface ISerDes<T, TJVMT> : ISerDes, ISerializer<T, TJVMT>, IDeserializer<T, TJVMT>
     {
         /// <summary>
         /// The <see cref="Serde{T}"/> to use in Apache Kafka
@@ -187,7 +215,21 @@ namespace MASES.KNet.Serialization
         }
         #endregion
 
-        #region IKNetSerDes<T>
+        #region ISerDes
+
+        /// <inheritdoc cref="ISerDes.Type"/>
+        public Type Type => typeof(T);
+        /// <inheritdoc cref="ISerDes.JVMType"/>
+        public Type JVMType => typeof(TJVMT);
+        /// <inheritdoc cref="ISerDes.UseHeaders"/>
+        public virtual bool UseHeaders { get; set; } = false;
+        /// <inheritdoc cref="ISerDes.UseKafkaClassForSupportedTypes"/>
+        public virtual bool UseKafkaClassForSupportedTypes { get; set; } = false;
+        /// <inheritdoc cref="ISerDes.IsDirectBuffered"/>
+        public virtual bool IsDirectBuffered => false;
+        #endregion
+
+        #region ISerDes<T>
         /// <summary>
         /// External serialization function
         /// </summary>
@@ -210,12 +252,6 @@ namespace MASES.KNet.Serialization
         public Serializer<TJVMT> KafkaSerializer => _KafkaSerializer;
         /// <inheritdoc cref="IDeserializer{T, TJVMT}.KafkaDeserializer"/>
         public Deserializer<TJVMT> KafkaDeserializer => _KafkaDeserializer;
-        /// <inheritdoc cref="IDeserializer{T, TJVMT}.UseHeaders"/>
-        public virtual bool UseHeaders { get; set; } = false;
-        /// <inheritdoc cref="IDeserializer{T, TJVMT}.UseKafkaClassForSupportedTypes"/>
-        public virtual bool UseKafkaClassForSupportedTypes { get; set; } = false;
-        /// <inheritdoc cref="IDeserializer{T, TJVMT}.IsDirectBuffered"/>
-        public virtual bool IsDirectBuffered => false;
         /// <inheritdoc cref="ISerializer{T, TJVMT}.Serialize(string, T)"/>
         public virtual TJVMT Serialize(string topic, T data)
         {
