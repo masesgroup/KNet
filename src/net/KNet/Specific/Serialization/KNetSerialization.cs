@@ -233,7 +233,7 @@ namespace MASES.KNet.Serialization
             return SerializationType.External;
         }
 
-        static readonly BooleanSerializer _BooleanSerializer = new BooleanSerializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.BooleanSerializer _BooleanSerializer = new Org.Apache.Kafka.Common.Serialization.BooleanSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Boolean"/>
         /// </summary>
@@ -251,7 +251,7 @@ namespace MASES.KNet.Serialization
             return data;
         }
 
-        static readonly ByteBufferSerializer _ByteBufferSerializer = new ByteBufferSerializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.ByteBufferSerializer _ByteBufferSerializer = new Org.Apache.Kafka.Common.Serialization.ByteBufferSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.ByteBuffer"/>
         /// </summary>
@@ -261,7 +261,7 @@ namespace MASES.KNet.Serialization
             return data.ToArray(true);
         }
 
-        static readonly BytesSerializer _BytesSerializer = new BytesSerializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.BytesSerializer _BytesSerializer = new Org.Apache.Kafka.Common.Serialization.BytesSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Bytes"/>
         /// </summary>
@@ -270,7 +270,7 @@ namespace MASES.KNet.Serialization
             return _BytesSerializer.Serialize(topic, data);
         }
 
-        static readonly DoubleSerializer _DoubleSerializer = new DoubleSerializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.DoubleSerializer _DoubleSerializer = new Org.Apache.Kafka.Common.Serialization.DoubleSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Double"/>
         /// </summary>
@@ -280,7 +280,7 @@ namespace MASES.KNet.Serialization
             return BitConverter.GetBytes(data);
         }
 
-        static readonly FloatSerializer _FloatSerializer = new FloatSerializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.FloatSerializer _FloatSerializer = new Org.Apache.Kafka.Common.Serialization. FloatSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Float"/>
         /// </summary>
@@ -290,7 +290,7 @@ namespace MASES.KNet.Serialization
             return BitConverter.GetBytes(data);
         }
 
-        static readonly IntegerSerializer _IntSerializer = new IntegerSerializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.IntegerSerializer _IntSerializer = new Org.Apache.Kafka.Common.Serialization.IntegerSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Integer"/>
         /// </summary>
@@ -303,7 +303,7 @@ namespace MASES.KNet.Serialization
             //return new byte[] { (byte)(data >>> 24), (byte)(data >>> 16), (byte)(data >>> 8), ((byte)data) };
         }
 
-        static readonly LongSerializer _LongSerializer = new LongSerializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.LongSerializer _LongSerializer = new Org.Apache.Kafka.Common.Serialization.LongSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Long"/>
         /// </summary>
@@ -315,7 +315,7 @@ namespace MASES.KNet.Serialization
             //return new byte[] { (byte)((int)(data >>> 56)), (byte)((int)(data >>> 48)), (byte)((int)(data >>> 40)), (byte)((int)(data >>> 32)), (byte)((int)(data >>> 24)), (byte)((int)(data >>> 16)), (byte)((int)(data >>> 8)), ((byte)data) };
         }
 
-        static readonly ShortSerializer _ShortSerializer = new ShortSerializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.ShortSerializer _ShortSerializer = new Org.Apache.Kafka.Common.Serialization.ShortSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Short"/>
         /// </summary>
@@ -348,7 +348,7 @@ namespace MASES.KNet.Serialization
             return null;
         }
 
-        static readonly BooleanDeserializer _BooleanDeserializer = new BooleanDeserializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.BooleanDeserializer _BooleanDeserializer = new Org.Apache.Kafka.Common.Serialization.BooleanDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Boolean"/>
         /// </summary>
@@ -375,7 +375,7 @@ namespace MASES.KNet.Serialization
             return data;
         }
 
-        static readonly ByteBufferDeserializer _ByteBufferDeserializer = new ByteBufferDeserializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.ByteBufferDeserializer _ByteBufferDeserializer = new Org.Apache.Kafka.Common.Serialization.ByteBufferDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.ByteBuffer"/>
         /// </summary>
@@ -385,7 +385,7 @@ namespace MASES.KNet.Serialization
             return JVMBridgeBase.WrapsDirect<ByteBuffer>(_ByteBufferDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
-        static readonly BytesDeserializer _BytesDeserializer = new BytesDeserializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.BytesDeserializer _BytesDeserializer = new Org.Apache.Kafka.Common.Serialization.BytesDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Bytes"/>
         /// </summary>
@@ -395,7 +395,7 @@ namespace MASES.KNet.Serialization
             return JVMBridgeBase.WrapsDirect<Bytes>(_BytesDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
-        static readonly DoubleDeserializer _DoubleDeserializer = new DoubleDeserializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.DoubleDeserializer _DoubleDeserializer = new Org.Apache.Kafka.Common.Serialization.DoubleDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Double"/>
         /// </summary>
@@ -414,7 +414,7 @@ namespace MASES.KNet.Serialization
             return BitConverter.ToDouble(data, 0);
         }
 
-        static readonly FloatDeserializer _FloatDeserializer = new FloatDeserializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.FloatDeserializer _FloatDeserializer = new Org.Apache.Kafka.Common.Serialization.FloatDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Float"/>
         /// </summary>
@@ -433,7 +433,7 @@ namespace MASES.KNet.Serialization
             return BitConverter.ToSingle(data, 0);
         }
 
-        static readonly IntegerDeserializer _IntDeserializer = new IntegerDeserializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.IntegerDeserializer _IntDeserializer = new Org.Apache.Kafka.Common.Serialization.IntegerDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Integer"/>
         /// </summary>
@@ -477,7 +477,7 @@ namespace MASES.KNet.Serialization
             //}
         }
 
-        static readonly LongDeserializer _LongDeserializer = new LongDeserializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.LongDeserializer _LongDeserializer = new Org.Apache.Kafka.Common.Serialization.LongDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Long"/>
         /// </summary>
@@ -521,7 +521,7 @@ namespace MASES.KNet.Serialization
             //}
         }
 
-        static readonly ShortDeserializer _ShortDeserializer = new ShortDeserializer();
+        static readonly Org.Apache.Kafka.Common.Serialization.ShortDeserializer _ShortDeserializer = new Org.Apache.Kafka.Common.Serialization.ShortDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Short"/>
         /// </summary>
