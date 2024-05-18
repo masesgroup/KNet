@@ -21,7 +21,15 @@ The current available packages are:
   - [MASES.KNet.Serialization.MessagePack](https://www.nuget.org/packages/MASES.KNet.Serialization.MessagePack/): it is a serdes which uses [MessagePack](https://en.wikipedia.org/wiki/MessagePack); till now it is at its first stage and it is based on general purpose API from [MessagePack](https://www.nuget.org/packages/MessagePack) package
   - [MASES.KNet.Serialization.Protobuf](https://www.nuget.org/packages/MASES.KNet.Serialization.Protobuf/): it is a serdes which uses [Google.Protobuf](https://en.wikipedia.org/wiki/Protocol_Buffers); till now it is at its first stage and it is based on general purpose API from [Google.Protobuf](https://www.nuget.org/packages/Google.Protobuf) package
 
-Let consider a type defined like the following one:
+Starting from version 2.7.0, KNet comes with two kind of data exchange mechanisms:
+- **Raw**: data exchanges, across JVM-CLR boundary, using `byte` array transfer and this is the standard used since last version
+- **Buffered**: data exchanges, across JVM-CLR boundary, using `ByteBuffer` objects:
+  - this version avoids a real data move, only references to `ByteBuffer` are exchanged
+  - the serializer/deserializer shares, with the `ByteBuffer`, the memory pointers originating the information and the counterpart reads that memory without make copies
+
+All available packages listed at the beginning comes with both versions and the user can choose its preferred one.
+
+As example, let consider a type defined like the following one:
 
 ```c#
 public class TestType
@@ -46,19 +54,47 @@ To manage it within C#, without create `TestType` in Java, an user can create:
 
 - serializer (the body must be updated with the user serializer):
 ```c#
-KNetSerDes<TestType> serializer = new KNetSerDes<TestType>((topic, type) => { return new byte[0]; });
+SerDesRaw<TestType> serializer = new SerDesRaw<TestType>()
+{
+    OnSerialize = (topic, type) => { return Array.Empty<byte>(); }
+};
 ```
 - deserializer (the body must be updated with the user deserializer):
 ```c#
-KNetSerDes<TestType> deserializer = new KNetSerDes<TestType>((topic, data) => { return new TestType(0); });
+SerDesRaw<TestType> deserializer = new SerDesRaw<TestType>()
+{
+    OnDeserialize = (topic, data) => { return new TestType(0); }
+};
 ```
 
 Otherwise the user can use a ready made class like in the following snippet:
 
 ```c#
-KNetSerDes<TestType> serdes = new JsonSerDes<TestType>();
+ISerDesRaw<TestType> serdes = new JsonSerDes.ValueRaw<TestType>();
 ```
-A single `JsonSerDes` can be used in serialization and deserialization, and produce Json serialized data.
+
+A single `JsonSerDes.ValueRaw` can be used in serialization and deserialization, and produce Json serialized data.
+
+## Key and Value versions
+
+The reader noticed that in the example was used `JsonSerDes.ValueRaw`. It is a serializer/deserializer, based on `byte` array, generally used for values because it stores, within the record `Headers` information related to the value itself.
+All packages listed above have multiple types based on the scope and data exchange mechanism:
+- [Serialization Format].KeyRaw: key serializer/deserializer based on `byte` array
+- [Serialization Format].KeyBuffered: key serializer/deserializer based on `ByteBuffer`
+- [Serialization Format].ValueRaw: value serializer/deserializer based on `byte` array
+- [Serialization Format].ValueBuffered: value serializer/deserializer based on `ByteBuffer`
+
+where [Serialization format] depends on the serializatin package in use.
+
+> [!TIP]
+> As specified above, each serializer stores info within the `Headers` and this behavior is controlled from a property named `UseHeaders`.
+> If the user writes a code like:
+>
+>```c#
+> ISerDesRaw<TestType> serdes = new JsonSerDes.ValueRaw<TestType>();
+> serdes.UseHeader = false;
+>```
+> The `ISerDesRaw<TestType>` instance does not writes the `Headers` and can be used both for key and value.
 
 ## Specific cases
 
@@ -71,7 +107,7 @@ The Avro serializer is based on [Apache.Avro](https://www.nuget.org/packages/Apa
   - Shall have a parameterless constructor
   - Shall conform to [ISpecificRecord](https://avro.apache.org/docs/1.11.1/api/csharp/html/interfaceAvro_1_1Specific_1_1ISpecificRecord.html)
 
-**NOTE**: simple types (the one that have an Apche Kafka default serializer) are not managed and will be refused
+**NOTE**: simple types (the one that have an Apache Kafka default serializer) are not managed and will be refused
 
 ### MessagePack serializer
 

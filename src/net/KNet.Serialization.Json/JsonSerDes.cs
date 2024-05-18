@@ -39,11 +39,11 @@ namespace MASES.KNet.Serialization.Json
         /// Json extension of <see cref="SerDes{T, TJVMT}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class KeyRaw<T> : SerDes<T, byte[]>
+        public class KeyRaw<T> : SerDesRaw<T>
         {
             readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(KeyRaw<>).ToAssemblyQualified());
             readonly byte[] keyTypeName = null;
-            readonly ISerDes<T, byte[]> _defaultSerDes = default!;
+            readonly ISerDesRaw<T> _defaultSerDes = default!;
 #if NET462_OR_GREATER
             /// <summary>
             /// Settings used from <see cref="JsonConvert.DeserializeObject(string, JsonSerializerSettings)"/> and <see cref="JsonConvert.SerializeObject(object?, JsonSerializerSettings?)"/>
@@ -64,7 +64,7 @@ namespace MASES.KNet.Serialization.Json
             {
                 if (KNetSerialization.IsInternalManaged<T>())
                 {
-                    _defaultSerDes = new SerDes<T, byte[]>();
+                    _defaultSerDes = new SerDesRaw<T>();
                     keyTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
                 }
                 else
@@ -234,7 +234,7 @@ namespace MASES.KNet.Serialization.Json
         {
             readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(ValueRaw<>).ToAssemblyQualified());
             readonly byte[] valueTypeName = null!;
-            readonly ISerDes<T, byte[]> _defaultSerDes = default!;
+            readonly ISerDesRaw<T> _defaultSerDes = default!;
 #if NET462_OR_GREATER
             /// <summary>
             /// Settings used from <see cref="JsonConvert.DeserializeObject(string, JsonSerializerSettings)"/> and <see cref="JsonConvert.SerializeObject(object?, JsonSerializerSettings?)"/>
