@@ -27,43 +27,70 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM key type</typeparam>
     /// <typeparam name="TJVMV">The JVM value type</typeparam>
-    public abstract class ReadOnlyKeyValueStore<K, V, TJVMK, TJVMV> : ManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, TJVMV>>
+    public class ReadOnlyKeyValueStore<K, V, TJVMK, TJVMV> : ManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, TJVMV>>
     {
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
-        public abstract long ApproximateNumEntries { get; }
+        public virtual long ApproximateNumEntries => Store.ApproximateNumEntries();
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all--"/>
         /// </summary>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public abstract KeyValueIterator<K, V, TJVMK, TJVMV> All { get; }
+        public virtual KeyValueIterator<K, V, TJVMK, TJVMV> All => new(Factory, Store.All());
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public abstract KeyValueIterator<K, V, TJVMK, TJVMV> Range(K arg0, K arg1);
+        public virtual KeyValueIterator<K, V, TJVMK, TJVMV> Range(K arg0, K arg1)
+        {
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
+
+            var r0 = _keySerDes.Serialize(null, arg0);
+            var r1 = _keySerDes.Serialize(null, arg1);
+
+            return new(factory, Store.Range(r0, r1));
+        }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><typeparamref name="V"/></returns>
-        public abstract V Get(K arg0);
+        public virtual V Get(K arg0)
+        {
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
+            var _valueSerDes = factory?.BuildValueSerDes<V, TJVMV>();
+
+            var r0 = _keySerDes.Serialize(null, arg0);
+            var res = Store.Get(r0);
+            return _valueSerDes.Deserialize(null, res);
+        }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll--"/>
         /// </summary>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public abstract KeyValueIterator<K, V, TJVMK, TJVMV> ReverseAll { get; }
+        public virtual KeyValueIterator<K, V, TJVMK, TJVMV> ReverseAll => new(Factory, Store.ReverseAll());
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public abstract KeyValueIterator<K, V, TJVMK, TJVMV> ReverseRange(K arg0, K arg1);
+        public virtual KeyValueIterator<K, V, TJVMK, TJVMV> ReverseRange(K arg0, K arg1)
+        {
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
+
+            var r0 = _keySerDes.Serialize(null, arg0);
+            var r1 = _keySerDes.Serialize(null, arg1);
+
+            return new(factory, Store.ReverseRange(r0, r1));
+        }
     }
 
     /// <summary>
@@ -73,44 +100,5 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="V">The value type</typeparam>
     public class ReadOnlyKeyValueStore<K, V> : ReadOnlyKeyValueStore<K, V, byte[], byte[]>
     {
-        /// <inheritdoc/>
-        public override long ApproximateNumEntries => Store.ApproximateNumEntries();
-        /// <inheritdoc/>
-        public override KeyValueIterator<K, V, byte[], byte[]> All => new(Factory, Store.All());
-        /// <inheritdoc/>
-        public override KeyValueIterator<K, V, byte[], byte[]> Range(K arg0, K arg1)
-        {
-            IGenericSerDesFactory factory = Factory;
-            var _keySerDes = factory?.BuildKeySerDes<K, byte[]>();
-
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
-
-            return new(factory, Store.Range(r0, r1));
-        }
-        /// <inheritdoc/>
-        public override V Get(K arg0)
-        {
-            IGenericSerDesFactory factory = Factory;
-            var _keySerDes = factory?.BuildKeySerDes<K, byte[]>();
-            var _valueSerDes = factory?.BuildValueSerDes<V, byte[]>();
-
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var res = Store.Get(r0);
-            return _valueSerDes.Deserialize(null, res);
-        }
-        /// <inheritdoc/>
-        public override KeyValueIterator<K, V, byte[], byte[]> ReverseAll => new(Factory, Store.ReverseAll());
-        /// <inheritdoc/>
-        public override KeyValueIterator<K, V, byte[], byte[]> ReverseRange(K arg0, K arg1)
-        {
-            IGenericSerDesFactory factory = Factory;
-            var _keySerDes = factory?.BuildKeySerDes<K, byte[]>();
-
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
-
-            return new(factory, Store.ReverseRange(r0, r1));
-        }
     }
 }

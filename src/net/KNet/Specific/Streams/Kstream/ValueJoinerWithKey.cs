@@ -32,8 +32,22 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMV1">The JVM type of <typeparamref name="V1"/></typeparam>
     /// <typeparam name="TJVMV2">The JVM type of <typeparamref name="V2"/></typeparam>
     /// <typeparam name="TJVMVR">The JVM type of <typeparamref name="VR"/></typeparam>
-    public abstract class ValueJoinerWithKey<K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<TJVMK1, TJVMV1, TJVMV2, TJVMVR>, IGenericSerDesFactoryApplier
+    public class ValueJoinerWithKey<K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR> : Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<TJVMK1, TJVMV1, TJVMV2, TJVMVR>, IGenericSerDesFactoryApplier
     {
+        TJVMK1 _arg0;
+        TJVMV1 _arg1;
+        TJVMV2 _arg2;
+        K1 _key1;
+        bool _key1Set = false;
+        V1 _value1;
+        bool _value1Set = false;
+        V2 _value2;
+        bool _value2Set = false;
+        ISerDes<K1, TJVMK1> _k1Serializer = null;
+        ISerDes<V1, TJVMV1> _v1Serializer = null;
+        ISerDes<V2, TJVMV2> _v2Serializer = null;
+        ISerDes<VR, TJVMVR> _vrSerializer = null;
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
@@ -55,20 +69,31 @@ namespace MASES.KNet.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
-        public new System.Func<ValueJoinerWithKey<K1, V1, V2, VR>, VR> OnApply { get; set; } = null;
+        public new System.Func<ValueJoinerWithKey<K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR>, VR> OnApply { get; set; } = null;
         /// <summary>
         /// The <typeparamref name="K1"/> content
         /// </summary>
-        public abstract K1 Key { get; }
+        public virtual K1 Key { get { if (!_key1Set) { _k1Serializer ??= Factory?.BuildKeySerDes<K1, TJVMK1>(); _key1 = _k1Serializer.Deserialize(null, _arg0); _key1Set = true; } return _key1; } }
         /// <summary>
         /// The <typeparamref name="V1"/> content
         /// </summary>
-        public abstract V1 Value1 { get; }
+        public virtual V1 Value1 { get { if (!_value1Set) { _v1Serializer ??= Factory?.BuildValueSerDes<V1, TJVMV1>(); _value1 = _v1Serializer.Deserialize(null, _arg1); _value1Set = true; } return _value1; } }
         /// <summary>
         /// The <typeparamref name="V2"/> content
         /// </summary>
-        public abstract V2 Value2 { get; }
+        public virtual V2 Value2 { get { if (!_value2Set) { _v2Serializer ??= Factory?.BuildValueSerDes<V2, TJVMV2>(); _value2 = _v2Serializer.Deserialize(null, _arg2); _value2Set = true; } return _value2; } }
+        /// <inheritdoc/>
+        public override TJVMVR Apply(TJVMK1 arg0, TJVMV1 arg1, TJVMV2 arg2)
+        {
+            _key1Set = _value1Set = _value2Set = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+            _arg2 = arg2;
 
+            VR res = (OnApply != null) ? OnApply(this) : Apply();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
+            return _vrSerializer.Serialize(null, res);
+        }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -88,39 +113,5 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VR">joined value type</typeparam>
     public class ValueJoinerWithKey<K1, V1, V2, VR> : ValueJoinerWithKey<K1, V1, V2, VR, byte[], byte[], byte[], byte[]>
     {
-        byte[] _arg0, _arg1, _arg2;
-        K1 _key1;
-        bool _key1Set = false;
-        V1 _value1;
-        bool _value1Set = false;
-        V2 _value2;
-        bool _value2Set = false;
-        ISerDes<K1, byte[]> _k1Serializer = null;
-        ISerDes<V1, byte[]> _v1Serializer = null;
-        ISerDes<V2, byte[]> _v2Serializer = null;
-        ISerDes<VR, byte[]> _vrSerializer = null;
-        /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
-        /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="ValueJoinerWithKey{K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR}.Apply()"/> class method</remarks>
-        public new System.Func<ValueJoinerWithKey<K1, V1, V2, VR>, VR> OnApply { get; set; } = null;
-        /// <inheritdoc/>
-        public override K1 Key { get { if (!_key1Set) { _k1Serializer ??= Factory?.BuildKeySerDes<K1, byte[]>(); _key1 = _k1Serializer.Deserialize(null, _arg0); _key1Set = true; } return _key1; } }
-        /// <inheritdoc/>
-        public override V1 Value1 { get { if (!_value1Set) { _v1Serializer ??= Factory?.BuildValueSerDes<V1, byte[]>(); _value1 = _v1Serializer.Deserialize(null, _arg1); _value1Set = true; } return _value1; } }
-        /// <inheritdoc/>
-        public override V2 Value2 { get { if (!_value2Set) { _v2Serializer ??= Factory?.BuildValueSerDes<V2, byte[]>(); _value2 = _v2Serializer.Deserialize(null, _arg2); _value2Set = true; } return _value2; } }
-        /// <inheritdoc/>
-        public sealed override byte[] Apply(byte[] arg0, byte[] arg1, byte[] arg2)
-        {
-            _key1Set = _value1Set = _value2Set = false;
-            _arg0 = arg0;
-            _arg1 = arg1;
-            _arg2 = arg2;
-
-            VR res = (OnApply != null) ? OnApply(this) : Apply();
-            _vrSerializer ??= Factory?.BuildValueSerDes<VR, byte[]>();
-            return _vrSerializer.Serialize(null, res);
-        }
     }
 }

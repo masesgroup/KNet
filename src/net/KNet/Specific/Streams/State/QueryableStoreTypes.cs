@@ -37,41 +37,183 @@ namespace MASES.KNet.Streams.State
         }
 
         /// <summary>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.KeyValueStore{K, V}"/> based on <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/>
+        /// </summary>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        /// <typeparam name="TConcreteStore">A concrete type extending <see cref="ReadOnlyKeyValueStore{K, V, TJVMK, TJVMV}"/></typeparam>
+        public static StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, TJVMV>> KeyValueStore<K, V, TJVMK, TJVMV, TConcreteStore>()
+            where TConcreteStore : ReadOnlyKeyValueStore<K, V, TJVMK, TJVMV>, new()
+        {
+            return new StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, TJVMV>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.KeyValueStore<TJVMK, TJVMV>());
+        }
+
+        /// <summary>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.KeyValueStore{K, V}"/> based on <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/>
+        /// </summary>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        public static StoreType<ReadOnlyKeyValueStore<K, V, TJVMK, TJVMV>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, TJVMV>> KeyValueStore<K, V, TJVMK, TJVMV>()
+        {
+            return KeyValueStore<K, V, TJVMK, TJVMV, ReadOnlyKeyValueStore<K, V, TJVMK, TJVMV>>();
+        }
+
+        /// <summary>
         /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.KeyValueStore{K, V}"/> based on array of <see cref="byte"/>
         /// </summary>
-        public static StoreType<ReadOnlyKeyValueStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]>> KeyValueStore<TKey, TValue>()
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        public static StoreType<ReadOnlyKeyValueStore<K, V>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]>> KeyValueStore<K, V>()
         {
-            return new StoreType<ReadOnlyKeyValueStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], byte[]>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.KeyValueStore<byte[], byte[]>());
+            return KeyValueStore<K, V, byte[], byte[], ReadOnlyKeyValueStore<K, V>>();
         }
+
+        /// <summary>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.SessionStore{K, V}"/> based on <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/>
+        /// </summary>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        /// <typeparam name="TConcreteStore">A concrete type extending <see cref="ReadOnlySessionStore{K, V, TJVMK, TJVMV}"/></typeparam>
+        public static StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<TJVMK, TJVMV>> SessionStore<K, V, TJVMK, TJVMV, TConcreteStore>()
+            where TConcreteStore : ReadOnlySessionStore<K, V, TJVMK, TJVMV>, new()
+        {
+            return new StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<TJVMK, TJVMV>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.SessionStore<TJVMK, TJVMV>());
+        }
+
+        /// <summary>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.SessionStore{K, V}"/> based on <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/>
+        /// </summary>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        public static StoreType<ReadOnlySessionStore<K, V, TJVMK, TJVMV>, Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<TJVMK, TJVMV>> SessionStore<K, V, TJVMK, TJVMV>()
+        {
+            return SessionStore<K, V, TJVMK, TJVMV, ReadOnlySessionStore<K, V, TJVMK, TJVMV>>();
+        }
+
         /// <summary>
         /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.SessionStore{K, V}"/> based on array of <see cref="byte"/>
         /// </summary>
-        public static StoreType<ReadOnlySessionStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<byte[], byte[]>> SessionStore<TKey, TValue>()
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        public static StoreType<ReadOnlySessionStore<K, V>, Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<byte[], byte[]>> SessionStore<K, V>()
         {
-            return new StoreType<ReadOnlySessionStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<byte[], byte[]>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.SessionStore<byte[], byte[]>());
+            return SessionStore<K, V, byte[], byte[], ReadOnlySessionStore<K, V>>();
         }
+
+        /// <summary>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.WindowStore{K, V}"/> based on <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/>
+        /// </summary>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        /// <typeparam name="TConcreteStore">A concrete type extending <see cref="ReadOnlyWindowStore{K, V, TJVMK, TJVMV}"/></typeparam>
+        public static StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, TJVMV>> WindowStore<K, V, TJVMK, TJVMV, TConcreteStore>()
+            where TConcreteStore : ReadOnlyWindowStore<K, V, TJVMK, TJVMV>, new()
+        {
+            return new StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, TJVMV>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.WindowStore<TJVMK, TJVMV>());
+        }
+
+        /// <summary>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.WindowStore{K, V}"/> based on <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/>
+        /// </summary>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        public static StoreType<ReadOnlyWindowStore<K, V, TJVMK, TJVMV>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, TJVMV>> WindowStore<K, V, TJVMK, TJVMV>()
+        {
+            return WindowStore<K, V, TJVMK, TJVMV, ReadOnlyWindowStore<K, V, TJVMK, TJVMV>>();
+        }
+
         /// <summary>
         /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.WindowStore{K, V}"/> based on array of <see cref="byte"/>
         /// </summary>
-        public static StoreType<ReadOnlyWindowStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], byte[]>> WindowStore<TKey, TValue>()
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        public static StoreType<ReadOnlyWindowStore<K, V>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], byte[]>> WindowStore<K, V>()
         {
-            return new StoreType<ReadOnlyWindowStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], byte[]>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.WindowStore<byte[], byte[]>());
+            return WindowStore<K, V, byte[], byte[], ReadOnlyWindowStore<K, V>>();
+        }
+
+        /// <summary>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore{K, V}"/> based on <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/>
+        /// </summary>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        /// <typeparam name="TConcreteStore">A concrete type extending <see cref="TimestampedKeyValueStore{K, V, TJVMK, TJVMV}"/></typeparam>
+        public static StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>> TimestampedKeyValueStore<K, V, TJVMK, TJVMV, TConcreteStore>()
+            where TConcreteStore : TimestampedKeyValueStore<K, V, TJVMK, TJVMV>, new()
+        {
+            return new StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore<TJVMK, TJVMV>());
+        }
+
+        /// <summary>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore{K, V}"/> based on <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/>
+        /// </summary>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        public static StoreType<TimestampedKeyValueStore<K, V, TJVMK, TJVMV>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>> TimestampedKeyValueStore<K, V, TJVMK, TJVMV>()
+        {
+            return TimestampedKeyValueStore<K, V, TJVMK, TJVMV, TimestampedKeyValueStore<K, V, TJVMK, TJVMV>>();
         }
 
         /// <summary>
         /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore{K, V}"/> based on array of <see cref="byte"/>
         /// </summary>
-        public static StoreType<TimestampedKeyValueStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>> TimestampedKeyValueStore<TKey, TValue>()
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        public static StoreType<TimestampedKeyValueStore<K, V>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>> TimestampedKeyValueStore<K, V>()
         {
-            return new StoreType<TimestampedKeyValueStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore<byte[], byte[]>());
+            return TimestampedKeyValueStore<K, V, byte[], byte[], TimestampedKeyValueStore<K, V>>();
+        }
+
+        /// <summary>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedWindowStore{K, V}"/> based on <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/>
+        /// </summary>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        /// <typeparam name="TConcreteStore">A concrete type extending <see cref="TimestampedWindowStore{K, V, TJVMK, TJVMV}"/></typeparam>
+        public static StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>> TimestampedWindowStore<K, V, TJVMK, TJVMV, TConcreteStore>()
+            where TConcreteStore : TimestampedWindowStore<K, V, TJVMK, TJVMV>, new()
+        {
+            return new StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedWindowStore<TJVMK, TJVMV>());
+        }
+
+        /// <summary>
+        /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedWindowStore{K, V}"/> based on <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/>
+        /// </summary>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+        /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+        public static StoreType<TimestampedWindowStore<K, V, TJVMK, TJVMV>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>> TimestampedWindowStore<K, V, TJVMK, TJVMV>()
+        {
+            return TimestampedWindowStore<K, V, TJVMK, TJVMV, TimestampedWindowStore<K, V, TJVMK, TJVMV>>();
         }
 
         /// <summary>
         /// KNet value of <see cref="Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedWindowStore{K, V}"/> based on array of <see cref="byte"/>
         /// </summary>
-        public static StoreType<TimestampedWindowStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>> TimestampedWindowStore<TKey, TValue>()
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="V">The value type</typeparam>
+        public static StoreType<TimestampedWindowStore<K, V>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>> TimestampedWindowStore<K, V>()
         {
-            return new StoreType<TimestampedWindowStore<TKey, TValue>, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<byte[], Org.Apache.Kafka.Streams.State.ValueAndTimestamp<byte[]>>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedWindowStore<byte[], byte[]>());
+            return TimestampedWindowStore<K, V, byte[], byte[], TimestampedWindowStore<K, V>>();
         }
     }
 }

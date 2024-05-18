@@ -28,14 +28,49 @@ namespace MASES.KNet.Streams.Processor
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
-    public abstract class StreamPartitionerNoValue<K, TJVMK> : StreamPartitioner<K, string, TJVMK, Java.Lang.Void>
+    public class StreamPartitionerNoValue<K, TJVMK> : StreamPartitioner<K, string, TJVMK, Java.Lang.Void>
     {
+        string _arg0;
+        TJVMK _arg1;
+        int _arg3;
+        K _key;
+        bool _keySet = false;
+        ISerDes<K, TJVMK> _kSerializer = null;
+
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
         /// <remarks>If <see cref="StreamPartitionerNoValue{K, TJVMK}.OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<string, K, int, System.Collections.Generic.ICollection<int?>> OnPartitions { get; set; } = null;
 
+        /// <inheritdoc/>
+        public override string Topic => _arg0;
+        /// <inheritdoc/>
+        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
+        /// <inheritdoc/>
+        public override string Value { get { throw new InvalidOperationException("Value type is Java.Lang.Void"); } }
+        /// <inheritdoc/>
+        public override int NumPartitions => _arg3;
+        /// <inheritdoc/>
+        public override Optional<Set<Integer>> Partitions(Java.Lang.String arg0, TJVMK arg1, Java.Lang.Void arg2, int arg3)
+        {
+            _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
+            _keySet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+            _arg3 = arg3;
+
+            var methodToExecute = (OnPartitions != null) ? OnPartitions : Partitions;
+
+            var res = methodToExecute(arg0, _kSerializer.Deserialize(arg0, arg1), arg3);
+            if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
+            HashSet<Integer> result = new HashSet<Integer>();
+            foreach (var item in res)
+            {
+                result.Add(item.HasValue ? Integer.ValueOf(item.Value) : null);
+            }
+            return Optional<Set<Integer>>.Of(result);
+        }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
@@ -55,41 +90,5 @@ namespace MASES.KNet.Streams.Processor
     /// <typeparam name="K">The key type</typeparam>
     public class StreamPartitionerNoValue<K> : StreamPartitionerNoValue<K, byte[]>
     {
-        string _arg0;
-        byte[] _arg1;
-        int _arg3;
-        K _key;
-        bool _keySet = false;
-        ISerDes<K, byte[]> _kSerializer = null;
-
-        /// <inheritdoc/>
-        public override string Topic => _arg0;
-        /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
-        /// <inheritdoc/>
-        public override string Value { get { throw new InvalidOperationException("Value type is Java.Lang.Void"); } }
-        /// <inheritdoc/>
-        public override int NumPartitions => _arg3;
-
-        /// <inheritdoc/>
-        public sealed override Optional<Set<Integer>> Partitions(Java.Lang.String arg0, byte[] arg1, Java.Lang.Void arg2, int arg3)
-        {
-            _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>();
-            _keySet = false;
-            _arg0 = arg0;
-            _arg1 = arg1;
-            _arg3 = arg3;
-
-            var methodToExecute = (OnPartitions != null) ? OnPartitions : Partitions;
-
-            var res = methodToExecute(arg0, _kSerializer.Deserialize(arg0, arg1), arg3);
-            if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
-            HashSet<Integer> result = new HashSet<Integer>();
-            foreach (var item in res)
-            {
-                result.Add(item.HasValue ? Integer.ValueOf(item.Value) : null);
-            }
-            return Optional<Set<Integer>>.Of(result);
-        }
     }
 }

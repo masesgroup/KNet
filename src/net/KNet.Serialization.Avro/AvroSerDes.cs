@@ -79,7 +79,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Key extension of <see cref="SerDes{T, TJVMT}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class BinaryRaw<T> : SerDes<T, byte[]> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class BinaryRaw<T> : SerDesRaw<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -148,7 +148,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Key extension of <see cref="SerDes{T, TJVMT}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class BinaryBuffered<T> : SerDes<T, Java.Nio.ByteBuffer> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class BinaryBuffered<T> : SerDesBuffered<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -172,8 +172,6 @@ namespace MASES.KNet.Serialization.Avro
                 readonly byte[] keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                 /// <inheritdoc/>
                 public override bool UseHeaders => true;
-                /// <inheritdoc/>
-                public override bool IsDirectBuffered => true;
                 /// <summary>
                 /// Default initializer
                 /// </summary>
@@ -218,7 +216,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Key extension of <see cref="SerDes{T, TJVMT}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class JsonRaw<T> : SerDes<T, byte[]> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class JsonRaw<T> : SerDesRaw<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -287,7 +285,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Key extension of <see cref="SerDes{T, TJVMT}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class JsonBuffered<T> : SerDes<T, Java.Nio.ByteBuffer> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class JsonBuffered<T> : SerDesBuffered<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -311,8 +309,6 @@ namespace MASES.KNet.Serialization.Avro
                 readonly byte[] keyTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                 /// <inheritdoc/>
                 public override bool UseHeaders => true;
-                /// <inheritdoc/>
-                public override bool IsDirectBuffered => true;
                 /// <summary>
                 /// Default initializer
                 /// </summary>
@@ -364,7 +360,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Value extension of <see cref="SerDes{T, TJVMT}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class BinaryRaw<T> : SerDes<T, byte[]> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class BinaryRaw<T> : SerDesRaw<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -433,7 +429,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Value extension of <see cref="SerDes{T, TJVMT}"/> for Binary encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class BinaryBuffered<T> : SerDes<T, Java.Nio.ByteBuffer> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class BinaryBuffered<T> : SerDesBuffered<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -457,8 +453,6 @@ namespace MASES.KNet.Serialization.Avro
                 readonly byte[] valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                 /// <inheritdoc/>
                 public override bool UseHeaders => true;
-                /// <inheritdoc/>
-                public override bool IsDirectBuffered => true;
                 /// <summary>
                 /// Default initializer
                 /// </summary>
@@ -503,7 +497,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Value extension of <see cref="SerDes{T, TJVMT}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class JsonRaw<T> : SerDes<T, byte[]> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class JsonRaw<T> : SerDesRaw<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -572,7 +566,7 @@ namespace MASES.KNet.Serialization.Avro
             /// Avro Value extension of <see cref="SerDes{T, TJVMT}"/> for Json encoding, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            public class JsonBuffered<T> : SerDes<T, Java.Nio.ByteBuffer> where T : global::Avro.Specific.ISpecificRecord, new()
+            public class JsonBuffered<T> : SerDesBuffered<T> where T : global::Avro.Specific.ISpecificRecord, new()
             {
                 global::Avro.Schema _schema;
                 /// <summary>
@@ -596,8 +590,6 @@ namespace MASES.KNet.Serialization.Avro
                 readonly byte[] valueTypeName = Encoding.UTF8.GetBytes(typeof(T).ToAssemblyQualified());
                 /// <inheritdoc/>
                 public override bool UseHeaders => true;
-                /// <inheritdoc/>
-                public override bool IsDirectBuffered => true;
                 /// <summary>
                 /// Default initializer
                 /// </summary>

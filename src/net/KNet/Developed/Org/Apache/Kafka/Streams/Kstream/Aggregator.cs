@@ -35,7 +35,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="o1">The Aggregator object</param>
         /// <param name="o2">The Aggregator object</param>
         /// <param name="aggregate">The current aggregate value</param>
-        /// <returns>The <typeparamref name="VA"/> apply evaluation</returns>
+        /// <returns>The <typeparamref name="VAgg"/> apply evaluation</returns>
         VAgg Apply(K o1, V o2, VAgg aggregate);
     }
 

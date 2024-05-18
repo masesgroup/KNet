@@ -28,8 +28,17 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V">first value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public abstract class ForeachAction<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Kstream.ForeachAction<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
+    public class ForeachAction<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Kstream.ForeachAction<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
     {
+        TJVMK _arg0;
+        TJVMV _arg1;
+        K _key;
+        bool _keySet = false;
+        V _value;
+        bool _valueSet = false;
+        ISerDes<K, TJVMK> _kSerializer = null;
+        ISerDes<V, TJVMV> _vSerializer = null;
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
@@ -51,15 +60,26 @@ namespace MASES.KNet.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
-        public new System.Action<ForeachAction<K, V>> OnApply { get; set; } = null;
+        public new System.Action<ForeachAction<K, V, TJVMK, TJVMV>> OnApply { get; set; } = null;
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
-        public abstract K Key { get; }
+        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
         /// <summary>
         /// The <typeparamref name="V"/> content
         /// </summary>
-        public abstract V Value { get; }
+        public virtual V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
+        /// <inheritdoc/>
+        public sealed override void Apply(TJVMK arg0, TJVMV arg1)
+        {
+            _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
+            _keySet = _valueSet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+
+            if (OnApply != null) OnApply(this); else Apply();
+        }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -76,32 +96,6 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V">first value type</typeparam>
     public class ForeachAction<K, V> : ForeachAction<K, V, byte[], byte[]>
     {
-        byte[] _arg0, _arg1;
-        K _key;
-        bool _keySet = false;
-        V _value;
-        bool _valueSet = false;
-        ISerDes<K, byte[]> _kSerializer = null;
-        ISerDes<V, byte[]> _vSerializer = null;
-        /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-"/>
-        /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="ForeachAction{K, V, TJVMK, TJVMV}.Apply()"/> class method</remarks>
-        public new System.Action<ForeachAction<K, V>> OnApply { get; set; } = null;
-        /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
-        /// <inheritdoc/>
-        public override V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
-        /// <inheritdoc/>
-        public sealed override void Apply(byte[] arg0, byte[] arg1)
-        {
-            _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>();
-            _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>();
-            _keySet = _valueSet = false;
-            _arg0 = arg0;
-            _arg1 = arg1;
 
-            if (OnApply != null) OnApply(this); else Apply();
-        }
     }
 }

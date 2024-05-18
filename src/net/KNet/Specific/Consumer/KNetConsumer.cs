@@ -145,7 +145,7 @@ namespace MASES.KNet.Consumer
         /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{ValueTuple, TJVMV}"/></param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
         public KNetConsumer(ConsumerConfigBuilder props, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer, bool useJVMCallback = false)
-            : base(CheckProperties(props), keyDeserializer.KafkaDeserializer, valueDeserializer.KafkaDeserializer)
+            : base(CheckProperties(props, keyDeserializer, valueDeserializer), keyDeserializer.KafkaDeserializer, valueDeserializer.KafkaDeserializer)
         {
             _keyDeserializer = keyDeserializer;
             _valueDeserializer = valueDeserializer;
@@ -164,30 +164,30 @@ namespace MASES.KNet.Consumer
             }
         }
 
-        static Properties CheckProperties(Properties props)
+        static Properties CheckProperties(Properties props, ISerDes keyDeserializer, ISerDes valueDeserializer)
         {
             if (!props.ContainsKey(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG))
             {
-                if (typeof(TJVMK) == typeof(byte[]))
+                if (!keyDeserializer.IsDirectBuffered)
                 {
-                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArrayDeserializer");
+                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArrayDeserializer>());
                 }
                 else
                 {
-                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.mases.knet.common.serialization.ByteBufferDeserializer");
+                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, ClassNameOf<ByteBufferDeserializer>());
                 }
             }
             else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
             if (!props.ContainsKey(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG))
             {
-                if (typeof(TJVMV) == typeof(byte[]))
+                if (!valueDeserializer.IsDirectBuffered)
                 {
-                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArrayDeserializer");
+                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArrayDeserializer>());
                 }
                 else
                 {
-                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.mases.knet.common.serialization.ByteBufferDeserializer");
+                    props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, ClassNameOf<ByteBufferDeserializer>());
                 }
             }
             else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");

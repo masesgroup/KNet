@@ -204,14 +204,14 @@ namespace MASES.KNet
             }
         }
 
-        readonly ConcurrentDictionary<(Type, Type), object> _keySerDesComplete = new();
+        readonly ConcurrentDictionary<(Type, Type), ISerDes> _keySerDesComplete = new();
 
         /// <inheritdoc cref="IGenericSerDesFactory.BuildKeySerDes{TKey, TJVMTKey}"/>
         public ISerDes<TKey, TJVMTKey> BuildKeySerDes<TKey, TJVMTKey>()
         {
             lock (_keySerDesComplete)
             {
-                if (!_keySerDesComplete.TryGetValue((typeof(TKey), typeof(TJVMTKey)), out object serDes))
+                if (!_keySerDesComplete.TryGetValue((typeof(TKey), typeof(TJVMTKey)), out ISerDes serDes))
                 {
                     if (KNetSerialization.IsInternalManaged<TKey>())
                     {
@@ -228,7 +228,7 @@ namespace MASES.KNet
                     {
                         if (KNetKeySerDes == null) throw new InvalidOperationException($"No default serializer available for {typeof(TKey)}, property {nameof(KNetKeySerDes)} shall be set.");
                         var tmp = KNetKeySerDes.MakeGenericType(typeof(TKey));
-                        serDes = Activator.CreateInstance(tmp);
+                        serDes = Activator.CreateInstance(tmp) as ISerDes;
                     }
                     _keySerDesComplete[(typeof(TKey), typeof(TJVMTKey))] = serDes;
                 }
@@ -237,14 +237,14 @@ namespace MASES.KNet
         }
 
 
-        readonly ConcurrentDictionary<(Type, Type), object> _valueSerDesComplete = new();
+        readonly ConcurrentDictionary<(Type, Type), ISerDes> _valueSerDesComplete = new();
 
         /// <inheritdoc cref="IGenericSerDesFactory.BuildValueSerDes{TValue, TJVMTValue}"/>
         public ISerDes<TValue, TJVMTValue> BuildValueSerDes<TValue, TJVMTValue>()
         {
             lock (_valueSerDesComplete)
             {
-                if (!_valueSerDesComplete.TryGetValue((typeof(TValue), typeof(TJVMTValue)), out object serDes))
+                if (!_valueSerDesComplete.TryGetValue((typeof(TValue), typeof(TJVMTValue)), out ISerDes serDes))
                 {
                     if (KNetSerialization.IsInternalManaged<TValue>())
                     {
@@ -261,7 +261,7 @@ namespace MASES.KNet
                     {
                         if (KNetValueSerDes == null) throw new InvalidOperationException($"No default serializer available for {typeof(TValue)}, property {nameof(KNetValueSerDes)} shall be set.");
                         var tmp = KNetValueSerDes.MakeGenericType(typeof(TValue));
-                        serDes = Activator.CreateInstance(tmp);
+                        serDes = Activator.CreateInstance(tmp) as ISerDes;
                     }
                     _valueSerDesComplete[(typeof(TValue), typeof(TJVMTValue))] = serDes;
                 }

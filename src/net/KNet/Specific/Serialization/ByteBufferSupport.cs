@@ -24,7 +24,7 @@ namespace MASES.KNet.Serialization
     /// <summary>
     /// KNet specific class for org.mases.knet.common.serialization.ByteBufferDeserializer
     /// </summary>
-    public class KNetByteBufferDeserializer : JVMBridgeBase<KNetByteBufferDeserializer>
+    public class ByteBufferDeserializer : JVMBridgeBase<ByteBufferDeserializer>
     {
         /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.common.serialization.ByteBufferDeserializer";
@@ -33,7 +33,7 @@ namespace MASES.KNet.Serialization
     /// <summary>
     /// KNet specific class for org.mases.knet.common.serialization.ByteBufferSerializer
     /// </summary>
-    public class KNetByteBufferSerializer : JVMBridgeBase<KNetByteBufferSerializer>
+    public class ByteBufferSerializer : JVMBridgeBase<ByteBufferSerializer>
     {
         /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.common.serialization.ByteBufferSerializer";
@@ -42,7 +42,7 @@ namespace MASES.KNet.Serialization
     /// <summary>
     /// KNet specific class for org.mases.knet.common.serialization.Serdes
     /// </summary>
-    public class KNetSerdes : JVMBridgeBase<KNetSerdes>
+    public class Serdes : JVMBridgeBase<Serdes>
     {
         /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.common.serialization.Serdes";

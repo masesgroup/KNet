@@ -110,27 +110,53 @@ namespace MASES.KNet.Streams
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.common.serialization.Serializer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><typeparamref name="TKey"/></param>
+        /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><see cref="ISerializer{T, TJVMK}"/></param>
-        /// <typeparam name="TKey"></typeparam>
+        /// <typeparam name="K"></typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.KeyQueryMetadata"/></returns>
-        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<TKey>(string arg0, TKey arg1, ISerializer<TKey, byte[]> arg2)
+        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K, TJVMK>(string arg0, K arg1, ISerializer<K, TJVMK> arg2)
         {
-            return _inner.QueryMetadataForKey<byte[]>(arg0, arg2.Serialize(null, arg1), arg2.KafkaSerializer);
+            return _inner.QueryMetadataForKey<TJVMK>(arg0, arg2.Serialize(null, arg1), arg2.KafkaSerializer);
+        }
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.common.serialization.Serializer-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg1"><typeparamref name="K"/></param>
+        /// <param name="arg2"><see cref="ISerializer{T, TJVMK}"/></param>
+        /// <typeparam name="K"></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.KeyQueryMetadata"/></returns>
+        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K>(string arg0, K arg1, ISerializer<K, byte[]> arg2)
+        {
+            return QueryMetadataForKey<K, byte[]>(arg0, arg1, arg2);
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><typeparamref name="TKey"/></param>
+        /// <param name="arg1"><typeparamref name="K"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
-        /// <typeparam name="TKey">The key type</typeparam>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.KeyQueryMetadata"/></returns>
-        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<TKey>(string arg0, TKey arg1, StreamPartitioner<TKey, object> arg2)
+        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K, TJVMK>(string arg0, K arg1, StreamPartitioner<K, object> arg2)
         {
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var keySerDes = _factory?.BuildKeySerDes<TKey, byte[]>();
+            var keySerDes = _factory?.BuildKeySerDes<K, TJVMK>();
             return _inner.IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", arg0, keySerDes.Serialize(null, arg1), arg2);
+        }
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.streams.processor.StreamPartitioner-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg1"><typeparamref name="K"/></param>
+        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
+        /// <typeparam name="K">The key type</typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.KeyQueryMetadata"/></returns>
+        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K>(string arg0, K arg1, StreamPartitioner<K, object> arg2)
+        {
+            return QueryMetadataForKey<K, byte[]>(arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/KafkaStreams.html#query-org.apache.kafka.streams.query.StateQueryRequest-"/>

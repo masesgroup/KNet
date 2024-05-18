@@ -30,8 +30,19 @@ namespace MASES.KNet.Streams.Processor
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public abstract class StreamPartitioner<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Processor.StreamPartitioner<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
+    public class StreamPartitioner<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Streams.Processor.StreamPartitioner<TJVMK, TJVMV>, IGenericSerDesFactoryApplier
     {
+        string _arg0;
+        TJVMK _arg1;
+        TJVMV _arg2;
+        int _arg3;
+        K _key;
+        bool _keySet = false;
+        V _value;
+        bool _valueSet = false;
+        ISerDes<K, TJVMK> _kSerializer = null;
+        ISerDes<V, TJVMV> _vSerializer = null;
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
@@ -57,19 +68,37 @@ namespace MASES.KNet.Streams.Processor
         /// <summary>
         /// The topic name this record is sent to
         /// </summary>
-        public abstract string Topic { get; }
+        public virtual string Topic => _arg0;
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
-        public abstract K Key { get; }
+        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K,TJVMK>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
         /// <summary>
         /// The <typeparamref name="V"/> content
         /// </summary>
-        public abstract V Value { get; }
+        public virtual V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value = _vSerializer.Deserialize(null, _arg2); _valueSet = true; } return _value; } }
         /// <summary>
         /// The total number of partitions
         /// </summary>
-        public abstract int NumPartitions { get; }
+        public virtual int NumPartitions => _arg3;
+        /// <inheritdoc/>
+        public override Optional<Set<Integer>> Partitions(Java.Lang.String arg0, TJVMK arg1, TJVMV arg2, int arg3)
+        {
+            _keySet = _valueSet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+            _arg2 = arg2;
+            _arg3 = arg3;
+
+            var res = (OnPartitions != null) ? OnPartitions(this) : Partitions();
+            if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
+            HashSet<Integer> result = new HashSet<Integer>();
+            foreach (var item in res)
+            {
+                result.Add(item.HasValue ? Integer.ValueOf(item.Value) : null);
+            }
+            return Optional<Set<Integer>>.Of(result);
+        }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
@@ -87,45 +116,6 @@ namespace MASES.KNet.Streams.Processor
     /// <typeparam name="V">The value type</typeparam>
     public class StreamPartitioner<K, V> : StreamPartitioner<K, V, byte[], byte[]>
     {
-        string _arg0;
-        byte[] _arg1, _arg2;
-        int _arg3;
-        K _key;
-        bool _keySet = false;
-        V _value;
-        bool _valueSet = false;
-        ISerDes<K, byte[]> _kSerializer = null;
-        ISerDes<V, byte[]> _vSerializer = null;
-        /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
-        /// </summary>
-        /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding <see cref="StreamPartitioner{K, V, TJVMK, TJVMV}.Partitions()"/> class method</remarks>
-        public new System.Func<StreamPartitioner<K, V>, System.Collections.Generic.ICollection<int?>> OnPartitions { get; set; } = null;
-        /// <inheritdoc/>
-        public override string Topic => _arg0;
-        /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
-        /// <inheritdoc/>
-        public override V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>(); _value = _vSerializer.Deserialize(null, _arg2); _valueSet = true; } return _value; } }
-        /// <inheritdoc/>
-        public override int NumPartitions => _arg3;
-        /// <inheritdoc/>
-        public sealed override Optional<Set<Integer>> Partitions(Java.Lang.String arg0, byte[] arg1, byte[] arg2, int arg3)
-        {
-            _keySet = _valueSet = false;
-            _arg0 = arg0;
-            _arg1 = arg1;
-            _arg2 = arg2;
-            _arg3 = arg3;
 
-            var res = (OnPartitions != null) ? OnPartitions(this) : Partitions();
-            if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
-            HashSet<Integer> result = new HashSet<Integer>();
-            foreach (var item in res)
-            {
-                result.Add(item.HasValue ? Integer.ValueOf(item.Value) : null);
-            }
-            return Optional<Set<Integer>>.Of(result);
-        }
     }
 }

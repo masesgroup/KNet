@@ -30,8 +30,21 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     /// <typeparam name="TJVMVA">The JVM type of <typeparamref name="VA"/></typeparam>
-    public abstract class Aggregator<K, V, VA, TJVMK, TJVMV, TJVMVA> : Org.Apache.Kafka.Streams.Kstream.Aggregator<TJVMK, TJVMV, TJVMVA>, IGenericSerDesFactoryApplier
+    public class Aggregator<K, V, VA, TJVMK, TJVMV, TJVMVA> : Org.Apache.Kafka.Streams.Kstream.Aggregator<TJVMK, TJVMV, TJVMVA>, IGenericSerDesFactoryApplier
     {
+        TJVMK _arg0;
+        TJVMV _arg1;
+        TJVMVA _arg2;
+        K _key;
+        bool _keySet = false;
+        V _value;
+        bool _valueSet = false;
+        VA _aggregate;
+        bool _aggregateSet = false;
+        ISerDes<K, TJVMK> _kSerializer = null;
+        ISerDes<V, TJVMV> _vSerializer = null;
+        ISerDes<VA, TJVMVA> _vaSerializer = null;
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
@@ -53,19 +66,31 @@ namespace MASES.KNet.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method <see cref="Apply()"/></remarks>
-        public new System.Func<Aggregator<K, V, VA>, VA> OnApply { get; set; } = null;
+        public new System.Func<Aggregator<K, V, VA, TJVMK, TJVMV, TJVMVA>, VA> OnApply { get; set; } = null;
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
-        public abstract K Key { get; }
+        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
         /// <summary>
         /// The <typeparamref name="V"/> content
         /// </summary>
-        public abstract V Value { get; }
+        public virtual V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
         /// <summary>
         /// The <typeparamref name="VA"/> content
         /// </summary>
-        public abstract VA Aggregate { get; }
+        public virtual VA Aggregate { get { if (!_aggregateSet) { _vaSerializer ??= Factory?.BuildValueSerDes<VA, TJVMVA>(); _aggregate = _vaSerializer.Deserialize(null, _arg2); _aggregateSet = true; } return _aggregate; } }
+        /// <inheritdoc/>
+        public sealed override TJVMVA Apply(TJVMK arg0, TJVMV arg1, TJVMVA arg2)
+        {
+            _keySet = _valueSet = _aggregateSet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+            _arg2 = arg2;
+
+            VA res = (OnApply != null) ? OnApply(this) : Apply();
+            _vaSerializer ??= Factory?.BuildValueSerDes<VA, TJVMVA>();
+            return _vaSerializer.Serialize(null, res);
+        }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
@@ -84,38 +109,6 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VA">The key type</typeparam>
     public class Aggregator<K, V, VA> : Aggregator<K, V, VA, byte[], byte[], byte[]>
     {
-        byte[] _arg0, _arg1, _arg2;
-        K _key;
-        bool _keySet = false;
-        V _value;
-        bool _valueSet = false;
-        VA _aggregate;
-        bool _aggregateSet = false;
-        ISerDes<K, byte[]> _kSerializer = null;
-        ISerDes<V, byte[]> _vSerializer = null;
-        ISerDes<VA, byte[]> _vaSerializer = null;
-        /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
-        /// </summary>
-        /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method <see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}.Apply()"/></remarks>
-        public new System.Func<Aggregator<K, V, VA>, VA> OnApply { get; set; } = null;
-        /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, byte[]>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
-        /// <inheritdoc/>
-        public override V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, byte[]>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
-        /// <inheritdoc/>
-        public override VA Aggregate { get { if (!_aggregateSet) { _vaSerializer ??= Factory?.BuildValueSerDes<VA, byte[]>(); _aggregate = _vaSerializer.Deserialize(null, _arg2); _aggregateSet = true; } return _aggregate; } }
-        /// <inheritdoc/>
-        public sealed override byte[] Apply(byte[] arg0, byte[] arg1, byte[] arg2)
-        {       
-            _keySet = _valueSet = _aggregateSet = false;
-            _arg0 = arg0;
-            _arg1 = arg1;
-            _arg2 = arg2;
 
-            VA res = (OnApply != null) ? OnApply(this) : Apply();
-            _vaSerializer ??= Factory?.BuildValueSerDes<VA, byte[]>();
-            return _vaSerializer.Serialize(null, res);
-        }
     }
 }

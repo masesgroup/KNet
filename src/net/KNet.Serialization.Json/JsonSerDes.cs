@@ -39,11 +39,11 @@ namespace MASES.KNet.Serialization.Json
         /// Json extension of <see cref="SerDes{T, TJVMT}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class KeyRaw<T> : SerDes<T, byte[]>
+        public class KeyRaw<T> : SerDesRaw<T>
         {
             readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(KeyRaw<>).ToAssemblyQualified());
             readonly byte[] keyTypeName = null;
-            readonly ISerDes<T, byte[]> _defaultSerDes = default!;
+            readonly ISerDesRaw<T> _defaultSerDes = default!;
 #if NET462_OR_GREATER
             /// <summary>
             /// Settings used from <see cref="JsonConvert.DeserializeObject(string, JsonSerializerSettings)"/> and <see cref="JsonConvert.SerializeObject(object?, JsonSerializerSettings?)"/>
@@ -64,7 +64,7 @@ namespace MASES.KNet.Serialization.Json
             {
                 if (KNetSerialization.IsInternalManaged<T>())
                 {
-                    _defaultSerDes = new SerDes<T, byte[]>();
+                    _defaultSerDes = new SerDesRaw<T>();
                     keyTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
                 }
                 else
@@ -116,14 +116,14 @@ namespace MASES.KNet.Serialization.Json
         /// Json extension of <see cref="SerDes{T, TJVMT}"/> for Key, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class KeyBuffered<T> : SerDes<T, Java.Nio.ByteBuffer>
+        public class KeyBuffered<T> : SerDesBuffered<T>
         {
 #if NET462_OR_GREATER
             readonly Newtonsoft.Json.JsonSerializer _serializer;
 #endif
             readonly byte[] keySerDesName = Encoding.UTF8.GetBytes(typeof(KeyBuffered<>).ToAssemblyQualified());
             readonly byte[] keyTypeName = null;
-            readonly ISerDes<T, byte[]> _defaultSerDes = default!;
+            readonly ISerDesBuffered<T> _defaultSerDes = default!;
 #if NET462_OR_GREATER
             /// <summary>
             /// When set to <see langword="true"/> the oprion forces <see cref="ValueBuffered{T}"/> to use <see cref="System.IO.Stream"/> with <see cref="Java.Nio.ByteBuffer"/> to reduce memory copy
@@ -142,8 +142,6 @@ namespace MASES.KNet.Serialization.Json
 #endif
             /// <inheritdoc/>
             public override bool UseHeaders => true;
-            /// <inheritdoc/>
-            public override bool IsDirectBuffered => true;
             /// <summary>
             /// Default initializer
             /// </summary>
@@ -151,7 +149,7 @@ namespace MASES.KNet.Serialization.Json
             {
                 if (KNetSerialization.IsInternalManaged<T>())
                 {
-                    _defaultSerDes = new SerDes<T, byte[]>();
+                    _defaultSerDes = new SerDesBuffered<T>();
                     keyTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
                 }
                 else
@@ -232,11 +230,11 @@ namespace MASES.KNet.Serialization.Json
         /// Json extension of <see cref="SerDes{T, TJVMT}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class ValueRaw<T> : SerDes<T, byte[]>
+        public class ValueRaw<T> : SerDesRaw<T>
         {
             readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(ValueRaw<>).ToAssemblyQualified());
             readonly byte[] valueTypeName = null!;
-            readonly ISerDes<T, byte[]> _defaultSerDes = default!;
+            readonly ISerDesRaw<T> _defaultSerDes = default!;
 #if NET462_OR_GREATER
             /// <summary>
             /// Settings used from <see cref="JsonConvert.DeserializeObject(string, JsonSerializerSettings)"/> and <see cref="JsonConvert.SerializeObject(object?, JsonSerializerSettings?)"/>
@@ -257,7 +255,7 @@ namespace MASES.KNet.Serialization.Json
             {
                 if (KNetSerialization.IsInternalManaged<T>())
                 {
-                    _defaultSerDes = new SerDes<T, byte[]>();
+                    _defaultSerDes = new SerDesRaw<T>();
                     valueTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
                 }
                 else
@@ -310,14 +308,14 @@ namespace MASES.KNet.Serialization.Json
         /// Json extension of <see cref="SerDes{T, TJVMT}"/> for Value, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class ValueBuffered<T> : SerDes<T, Java.Nio.ByteBuffer>
+        public class ValueBuffered<T> : SerDesBuffered<T>
         {
 #if NET462_OR_GREATER
             readonly Newtonsoft.Json.JsonSerializer _serializer;
 #endif
             readonly byte[] valueSerDesName = Encoding.UTF8.GetBytes(typeof(ValueBuffered<>).ToAssemblyQualified());
             readonly byte[] valueTypeName = null!;
-            readonly ISerDes<T, Java.Nio.ByteBuffer> _defaultSerDes = default!;
+            readonly ISerDesBuffered<T> _defaultSerDes = default!;
 #if NET462_OR_GREATER
             /// <summary>
             /// When set to <see langword="true"/> the oprion forces <see cref="ValueBuffered{T}"/> to use <see cref="System.IO.Stream"/> with <see cref="Java.Nio.ByteBuffer"/> to reduce memory copy
@@ -336,8 +334,6 @@ namespace MASES.KNet.Serialization.Json
 #endif
             /// <inheritdoc/>
             public override bool UseHeaders => true;
-            /// <inheritdoc/>
-            public override bool IsDirectBuffered => true;
             /// <summary>
             /// Default initializer
             /// </summary>
@@ -345,7 +341,7 @@ namespace MASES.KNet.Serialization.Json
             {
                 if (KNetSerialization.IsInternalManaged<T>())
                 {
-                    _defaultSerDes = new SerDes<T, Java.Nio.ByteBuffer>();
+                    _defaultSerDes = new SerDesBuffered<T>();
                     valueTypeName = Encoding.UTF8.GetBytes(typeof(T).FullName!);
                 }
                 else
