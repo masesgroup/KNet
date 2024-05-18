@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4" data-uid="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper`4" class="text-break">
-Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L223"><i class="bi bi-code-slash"></i></a>
+Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L247"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -152,6 +152,12 @@ Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper-8.html#MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_8_OnApply">EnumerableKeyValueMapper&lt;K, V, KR, VR, byte[], byte[], byte[], byte[]&gt;.OnApply</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper-8.html#MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_8_Apply__4__5_">EnumerableKeyValueMapper&lt;K, V, KR, VR, byte[], byte[], byte[], byte[]&gt;.Apply(byte[], byte[])</a>
+    </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper-8.html#MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_8_Apply__0__1_">EnumerableKeyValueMapper&lt;K, V, KR, VR, byte[], byte[], byte[], byte[]&gt;.Apply(K, V)</a>
     </div>
@@ -552,138 +558,11 @@ Class EnumerableKeyValueMapper&lt;K, V, KR, VR&gt;  <a class="header-action link
 
 
 
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4_OnApply_" data-uid="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper`4.OnApply*"></a>
-
-  <h3 id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4_OnApply" data-uid="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper`4.OnApply">
-  OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L233"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;K, V, IEnumerable&lt;(KR, VR)&gt;&gt; OnApply { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;(KR, VR)&gt;&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4_OnApply_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper-4.html#MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4_OnApply">OnApply</a> has a value it takes precedence over corresponding class method</p>
-</div>
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4_Apply_" data-uid="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper`4.Apply*"></a>
-
-  <h3 id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4_Apply_System_Byte___System_Byte___" data-uid="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper`4.Apply(System.Byte[],System.Byte[])">
-  Apply(byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L235"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override sealed Iterable&lt;KeyValue&lt;byte[], byte[]&gt;&gt; Apply(byte[] arg0, byte[] arg1)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p><code class="typeparamref">K</code></p>
-</dd>
-    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p><code class="typeparamref">V</code></p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Iterable</span></dt>
-    <dd><p><span class="xref">Java.Lang.Iterable</span></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4_Apply_" data-uid="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper`4.Apply*"></a>
-
-  <h3 id="MASES_KNet_Streams_Kstream_EnumerableKeyValueMapper_4_Apply__0__1_" data-uid="MASES.KNet.Streams.Kstream.EnumerableKeyValueMapper`4.Apply(`0,`1)">
-  Apply(K, V)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L258"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply-java.lang.Object-java.lang.Object-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;(KR, VR)&gt; Apply(K arg0, V arg1)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>arg0</code> <span class="xref">K</span></dt>
-    <dd><p><code class="typeparamref">K</code></p>
-</dd>
-    <dt><code>arg1</code> <span class="xref">V</span></dt>
-    <dd><p><code class="typeparamref">V</code></p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;(KR, VR)&gt;</dt>
-    <dd><p><code class="typeparamref">VR</code></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L223" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/KeyValueMapper.cs/#L247" class="edit-link">Edit this page</a>
         </div>
 
 

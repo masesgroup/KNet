@@ -265,7 +265,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="MASES_KNet_Streams_StreamsBuilder_AddStateStore_Org_Apache_Kafka_Streams_State_StoreBuilder_" data-uid="MASES.KNet.Streams.StreamsBuilder.AddStateStore(Org.Apache.Kafka.Streams.State.StoreBuilder)">
   AddStateStore(StoreBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L278"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#addStateStore-org.apache.kafka.streams.state.StoreBuilder-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#addStateStore-org.apache.kafka.streams.state.StoreBuilder-</a></p>
@@ -304,7 +304,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="MASES_KNet_Streams_StreamsBuilder_Build" data-uid="MASES.KNet.Streams.StreamsBuilder.Build">
   Build()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L286"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#build--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#build--</a></p>
@@ -337,7 +337,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="MASES_KNet_Streams_StreamsBuilder_Build_Java_Util_Properties_" data-uid="MASES.KNet.Streams.StreamsBuilder.Build(Java.Util.Properties)">
   Build(Properties)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L295"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#build-java.util.Properties-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#build-java.util.Properties-</a></p>
@@ -374,9 +374,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_GlobalTable_" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__2_System_String_" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``2(System.String)">
-  GlobalTable&lt;K, V&gt;(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__4_System_String_" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``4(System.String)">
+  GlobalTable&lt;K, V, TJVMK, TJVMV&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-</a></p>
@@ -384,7 +384,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, byte[], byte[]&gt; GlobalTable&lt;K, V&gt;(string arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, TJVMK, TJVMV&gt; GlobalTable&lt;K, V, TJVMK, TJVMV&gt;(string arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -396,7 +396,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -404,9 +404,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -420,9 +428,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_GlobalTable_" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]})">
-  GlobalTable&lt;K, V&gt;(string, Consumed&lt;K, V, byte[], byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__4_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1___2___3__" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``4(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,``2,``3})">
+  GlobalTable&lt;K, V, TJVMK, TJVMV&gt;(string, Consumed&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetConsumed{K, V}-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetConsumed{K, V}-</a></p>
@@ -430,7 +438,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, byte[], byte[]&gt; GlobalTable&lt;K, V&gt;(string arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, TJVMK, TJVMV&gt; GlobalTable&lt;K, V, TJVMK, TJVMV&gt;(string arg0, Consumed&lt;K, V, TJVMK, TJVMV&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -438,14 +446,14 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -453,9 +461,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -469,9 +485,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_GlobalTable_" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____MASES_KNet_Streams_Kstream_Materialized___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]},MASES.KNet.Streams.Kstream.Materialized{``0,``1,System.Byte[],System.Byte[]})">
-  GlobalTable&lt;K, V&gt;(string, Consumed&lt;K, V, byte[], byte[]&gt;, Materialized&lt;K, V, byte[], byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__4_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1___2___3__MASES_KNet_Streams_Kstream_Materialized___0___1___2___3__" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``4(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,``2,``3},MASES.KNet.Streams.Kstream.Materialized{``0,``1,``2,``3})">
+  GlobalTable&lt;K, V, TJVMK, TJVMV&gt;(string, Consumed&lt;K, V, TJVMK, TJVMV&gt;, Materialized&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetConsumed{K, V}-KNetMaterialized{K, V}-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetConsumed{K, V}-KNetMaterialized{K, V}-</a></p>
@@ -479,7 +495,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, byte[], byte[]&gt; GlobalTable&lt;K, V&gt;(string arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1, Materialized&lt;K, V, byte[], byte[]&gt; arg2)</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, TJVMK, TJVMV&gt; GlobalTable&lt;K, V, TJVMK, TJVMV&gt;(string arg0, Consumed&lt;K, V, TJVMK, TJVMV&gt; arg1, Materialized&lt;K, V, TJVMK, TJVMV&gt; arg2)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -487,17 +503,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -505,9 +521,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -521,9 +545,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_GlobalTable_" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__2_System_String_MASES_KNet_Streams_Kstream_Materialized___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``2(System.String,MASES.KNet.Streams.Kstream.Materialized{``0,``1,System.Byte[],System.Byte[]})">
-  GlobalTable&lt;K, V&gt;(string, Materialized&lt;K, V, byte[], byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_GlobalTable__4_System_String_MASES_KNet_Streams_Kstream_Materialized___0___1___2___3__" data-uid="MASES.KNet.Streams.StreamsBuilder.GlobalTable``4(System.String,MASES.KNet.Streams.Kstream.Materialized{``0,``1,``2,``3})">
+  GlobalTable&lt;K, V, TJVMK, TJVMV&gt;(string, Materialized&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetMaterialized{K, V}-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetMaterialized{K, V}-</a></p>
@@ -531,7 +555,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, byte[], byte[]&gt; GlobalTable&lt;K, V&gt;(string arg0, Materialized&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;K, V, TJVMK, TJVMV&gt; GlobalTable&lt;K, V, TJVMK, TJVMV&gt;(string arg0, Materialized&lt;K, V, TJVMK, TJVMV&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -539,14 +563,14 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -554,9 +578,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -609,9 +641,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Stream_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_Java_Util_Regex_Pattern_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(Java.Util.Regex.Pattern)">
-  Stream&lt;K, V&gt;(Pattern)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__4_Java_Util_Regex_Pattern_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``4(Java.Util.Regex.Pattern)">
+  Stream&lt;K, V, TJVMK, TJVMV&gt;(Pattern)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L209"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.regex.Pattern-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.regex.Pattern-</a></p>
@@ -619,7 +651,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(Pattern arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, TJVMK, TJVMV&gt; Stream&lt;K, V, TJVMK, TJVMV&gt;(Pattern arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -631,7 +663,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -639,9 +671,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -655,9 +695,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Stream_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_Java_Util_Regex_Pattern_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(Java.Util.Regex.Pattern,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]})">
-  Stream&lt;K, V&gt;(Pattern, Consumed&lt;K, V, byte[], byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__4_Java_Util_Regex_Pattern_MASES_KNet_Streams_Kstream_Consumed___0___1___2___3__" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``4(Java.Util.Regex.Pattern,MASES.KNet.Streams.Kstream.Consumed{``0,``1,``2,``3})">
+  Stream&lt;K, V, TJVMK, TJVMV&gt;(Pattern, Consumed&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.regex.Pattern-KNetConsumed{K, V}-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.regex.Pattern-KNetConsumed{K, V}-</a></p>
@@ -665,7 +705,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(Pattern arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, TJVMK, TJVMV&gt; Stream&lt;K, V, TJVMK, TJVMV&gt;(Pattern arg0, Consumed&lt;K, V, TJVMK, TJVMV&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -673,14 +713,14 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></dt>
     <dd><p><a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -688,9 +728,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -704,9 +752,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Stream_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_System_Collections_Generic_IEnumerable_System_String__" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(System.Collections.Generic.IEnumerable{System.String})">
-  Stream&lt;K, V&gt;(IEnumerable&lt;string&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__4_System_Collections_Generic_IEnumerable_System_String__" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``4(System.Collections.Generic.IEnumerable{System.String})">
+  Stream&lt;K, V, TJVMK, TJVMV&gt;(IEnumerable&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.Collection-</a></p>
@@ -714,7 +762,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(IEnumerable&lt;string&gt; arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, TJVMK, TJVMV&gt; Stream&lt;K, V, TJVMK, TJVMV&gt;(IEnumerable&lt;string&gt; arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -726,7 +774,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -734,9 +782,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -750,9 +806,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Stream_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_System_Collections_Generic_IEnumerable_System_String__MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(System.Collections.Generic.IEnumerable{System.String},MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]})">
-  Stream&lt;K, V&gt;(IEnumerable&lt;string&gt;, Consumed&lt;K, V, byte[], byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__4_System_Collections_Generic_IEnumerable_System_String__MASES_KNet_Streams_Kstream_Consumed___0___1___2___3__" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``4(System.Collections.Generic.IEnumerable{System.String},MASES.KNet.Streams.Kstream.Consumed{``0,``1,``2,``3})">
+  Stream&lt;K, V, TJVMK, TJVMV&gt;(IEnumerable&lt;string&gt;, Consumed&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L167"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.Collection-KNetConsumed{K, V}-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.Collection-KNetConsumed{K, V}-</a></p>
@@ -760,7 +816,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(IEnumerable&lt;string&gt; arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, TJVMK, TJVMV&gt; Stream&lt;K, V, TJVMK, TJVMV&gt;(IEnumerable&lt;string&gt; arg0, Consumed&lt;K, V, TJVMK, TJVMV&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -768,14 +824,14 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -783,9 +839,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -799,9 +863,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Stream_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_System_String_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(System.String)">
-  Stream&lt;K, V&gt;(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__4_System_String_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``4(System.String)">
+  Stream&lt;K, V, TJVMK, TJVMV&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.lang.String-</a></p>
@@ -809,7 +873,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(string arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, TJVMK, TJVMV&gt; Stream&lt;K, V, TJVMK, TJVMV&gt;(string arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -821,7 +885,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -829,9 +893,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -845,9 +917,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Stream_" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]})">
-  Stream&lt;K, V&gt;(string, Consumed&lt;K, V, byte[], byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Stream__4_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1___2___3__" data-uid="MASES.KNet.Streams.StreamsBuilder.Stream``4(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,``2,``3})">
+  Stream&lt;K, V, TJVMK, TJVMV&gt;(string, Consumed&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.lang.String-KNetConsumed{K, V}-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.lang.String-KNetConsumed{K, V}-</a></p>
@@ -855,7 +927,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, byte[], byte[]&gt; Stream&lt;K, V&gt;(string arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public KStream&lt;K, V, TJVMK, TJVMV&gt; Stream&lt;K, V, TJVMK, TJVMV&gt;(string arg0, Consumed&lt;K, V, TJVMK, TJVMV&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -863,14 +935,14 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KStream-4.html">KStream&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -878,9 +950,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -894,9 +974,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Table_" data-uid="MASES.KNet.Streams.StreamsBuilder.Table*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__2_System_String_" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``2(System.String)">
-  Table&lt;K, V&gt;(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__4_System_String_" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``4(System.String)">
+  Table&lt;K, V, TJVMK, TJVMV&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L269"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-</a></p>
@@ -904,7 +984,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, byte[], byte[]&gt; Table&lt;K, V&gt;(string arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; Table&lt;K, V, TJVMK, TJVMV&gt;(string arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -916,7 +996,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -924,9 +1004,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -940,9 +1028,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Table_" data-uid="MASES.KNet.Streams.StreamsBuilder.Table*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]})">
-  Table&lt;K, V&gt;(string, Consumed&lt;K, V, byte[], byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__4_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1___2___3__" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``4(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,``2,``3})">
+  Table&lt;K, V, TJVMK, TJVMV&gt;(string, Consumed&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L240"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetConsumed{K, V}-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetConsumed{K, V}-</a></p>
@@ -950,7 +1038,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, byte[], byte[]&gt; Table&lt;K, V&gt;(string arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; Table&lt;K, V, TJVMK, TJVMV&gt;(string arg0, Consumed&lt;K, V, TJVMK, TJVMV&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -958,14 +1046,14 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -973,9 +1061,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -989,9 +1085,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Table_" data-uid="MASES.KNet.Streams.StreamsBuilder.Table*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__2_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1_System_Byte___System_Byte____MASES_KNet_Streams_Kstream_Materialized___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``2(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,System.Byte[],System.Byte[]},MASES.KNet.Streams.Kstream.Materialized{``0,``1,System.Byte[],System.Byte[]})">
-  Table&lt;K, V&gt;(string, Consumed&lt;K, V, byte[], byte[]&gt;, Materialized&lt;K, V, byte[], byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__4_System_String_MASES_KNet_Streams_Kstream_Consumed___0___1___2___3__MASES_KNet_Streams_Kstream_Materialized___0___1___2___3__" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``4(System.String,MASES.KNet.Streams.Kstream.Consumed{``0,``1,``2,``3},MASES.KNet.Streams.Kstream.Materialized{``0,``1,``2,``3})">
+  Table&lt;K, V, TJVMK, TJVMV&gt;(string, Consumed&lt;K, V, TJVMK, TJVMV&gt;, Materialized&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetConsumed{K, V}-KNetMaterialized{K, V}-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetConsumed{K, V}-KNetMaterialized{K, V}-</a></p>
@@ -999,7 +1095,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, byte[], byte[]&gt; Table&lt;K, V&gt;(string arg0, Consumed&lt;K, V, byte[], byte[]&gt; arg1, Materialized&lt;K, V, byte[], byte[]&gt; arg2)</code></pre>
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; Table&lt;K, V, TJVMK, TJVMV&gt;(string arg0, Consumed&lt;K, V, TJVMK, TJVMV&gt; arg1, Materialized&lt;K, V, TJVMK, TJVMV&gt; arg2)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1007,17 +1103,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Consumed-4.html">Consumed&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><code>arg2</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.KTable.html">KTable</a></p>
 </dd>
   </dl>
@@ -1025,9 +1121,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 
@@ -1041,9 +1145,9 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <a id="MASES_KNet_Streams_StreamsBuilder_Table_" data-uid="MASES.KNet.Streams.StreamsBuilder.Table*"></a>
 
-  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__2_System_String_MASES_KNet_Streams_Kstream_Materialized___0___1_System_Byte___System_Byte____" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``2(System.String,MASES.KNet.Streams.Kstream.Materialized{``0,``1,System.Byte[],System.Byte[]})">
-  Table&lt;K, V&gt;(string, Materialized&lt;K, V, byte[], byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Streams_StreamsBuilder_Table__4_System_String_MASES_KNet_Streams_Kstream_Materialized___0___1___2___3__" data-uid="MASES.KNet.Streams.StreamsBuilder.Table``4(System.String,MASES.KNet.Streams.Kstream.Materialized{``0,``1,``2,``3})">
+  Table&lt;K, V, TJVMK, TJVMV&gt;(string, Materialized&lt;K, V, TJVMK, TJVMV&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/StreamsBuilder.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetMaterialized{K, V}-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetMaterialized{K, V}-</a></p>
@@ -1051,7 +1155,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, byte[], byte[]&gt; Table&lt;K, V&gt;(string arg0, Materialized&lt;K, V, byte[], byte[]&gt; arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public KTable&lt;K, V, TJVMK, TJVMV&gt; Table&lt;K, V, TJVMK, TJVMV&gt;(string arg0, Materialized&lt;K, V, TJVMK, TJVMV&gt; arg1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1059,14 +1163,14 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-4.html">Materialized&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dt><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.Kstream.KTable-4.html">KTable&lt;K, V, TJVMK, TJVMV&gt;</a></p>
 </dd>
   </dl>
@@ -1074,9 +1178,17 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>K</code></dt>
-    <dd></dd>
+    <dd><p>The key type</p>
+</dd>
     <dt><code>V</code></dt>
-    <dd></dd>
+    <dd><p>The value type</p>
+</dd>
+    <dt><code>TJVMK</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>TJVMV</code></dt>
+    <dd><p>The JVM type of <code class="typeparamref">V</code></p>
+</dd>
   </dl>
 
 

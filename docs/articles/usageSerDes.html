@@ -102,7 +102,18 @@
 <li><a href="https://www.nuget.org/packages/MASES.KNet.Serialization.MessagePack/">MASES.KNet.Serialization.MessagePack</a>: it is a serdes which uses <a href="https://en.wikipedia.org/wiki/MessagePack">MessagePack</a>; till now it is at its first stage and it is based on general purpose API from <a href="https://www.nuget.org/packages/MessagePack">MessagePack</a> package</li>
 <li><a href="https://www.nuget.org/packages/MASES.KNet.Serialization.Protobuf/">MASES.KNet.Serialization.Protobuf</a>: it is a serdes which uses <a href="https://en.wikipedia.org/wiki/Protocol_Buffers">Google.Protobuf</a>; till now it is at its first stage and it is based on general purpose API from <a href="https://www.nuget.org/packages/Google.Protobuf">Google.Protobuf</a> package</li>
 </ul>
-<p>Let consider a type defined like the following one:</p>
+<p>Starting from version 2.7.0, KNet comes with two kind of data exchange mechanisms:</p>
+<ul>
+<li><strong>Raw</strong>: data exchanges, across JVM-CLR boundary, using <code>byte</code> array transfer and this is the standard used since last version</li>
+<li><strong>Buffered</strong>: data exchanges, across JVM-CLR boundary, using <code>ByteBuffer</code> objects:
+<ul>
+<li>this version avoids a real data move, only references to <code>ByteBuffer</code> are exchanged</li>
+<li>the serializer/deserializer shares, with the <code>ByteBuffer</code>, the memory pointers originating the information and the counterpart reads that memory without make copies</li>
+</ul>
+</li>
+</ul>
+<p>All available packages listed at the beginning comes with both versions and the user can choose its preferred one.</p>
+<p>As example, let consider a type defined like the following one:</p>
 <pre><code class="lang-c#">public class TestType
 {
     public TestType(int i)
@@ -124,17 +135,42 @@
 <ul>
 <li>serializer (the body must be updated with the user serializer):</li>
 </ul>
-<pre><code class="lang-c#">KNetSerDes&lt;TestType&gt; serializer = new KNetSerDes&lt;TestType&gt;((topic, type) =&gt; { return new byte[0]; });
+<pre><code class="lang-c#">SerDesRaw&lt;TestType&gt; serializer = new SerDesRaw&lt;TestType&gt;()
+{
+    OnSerialize = (topic, type) =&gt; { return Array.Empty&lt;byte&gt;(); }
+};
 </code></pre>
 <ul>
 <li>deserializer (the body must be updated with the user deserializer):</li>
 </ul>
-<pre><code class="lang-c#">KNetSerDes&lt;TestType&gt; deserializer = new KNetSerDes&lt;TestType&gt;((topic, data) =&gt; { return new TestType(0); });
+<pre><code class="lang-c#">SerDesRaw&lt;TestType&gt; deserializer = new SerDesRaw&lt;TestType&gt;()
+{
+    OnDeserialize = (topic, data) =&gt; { return new TestType(0); }
+};
 </code></pre>
 <p>Otherwise the user can use a ready made class like in the following snippet:</p>
-<pre><code class="lang-c#">KNetSerDes&lt;TestType&gt; serdes = new JsonSerDes&lt;TestType&gt;();
+<pre><code class="lang-c#">ISerDesRaw&lt;TestType&gt; serdes = new JsonSerDes.ValueRaw&lt;TestType&gt;();
 </code></pre>
-<p>A single <code>JsonSerDes</code> can be used in serialization and deserialization, and produce Json serialized data.</p>
+<p>A single <code>JsonSerDes.ValueRaw</code> can be used in serialization and deserialization, and produce Json serialized data.</p>
+<h2 id="key-and-value-versions">Key and Value versions</h2>
+<p>The reader noticed that in the example was used <code>JsonSerDes.ValueRaw</code>. It is a serializer/deserializer, based on <code>byte</code> array, generally used for values because it stores, within the record <code>Headers</code> information related to the value itself.
+All packages listed above have multiple types based on the scope and data exchange mechanism:</p>
+<ul>
+<li>[Serialization Format].KeyRaw: key serializer/deserializer based on <code>byte</code> array</li>
+<li>[Serialization Format].KeyBuffered: key serializer/deserializer based on <code>ByteBuffer</code></li>
+<li>[Serialization Format].ValueRaw: value serializer/deserializer based on <code>byte</code> array</li>
+<li>[Serialization Format].ValueBuffered: value serializer/deserializer based on <code>ByteBuffer</code></li>
+</ul>
+<p>where [Serialization format] depends on the serializatin package in use.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>As specified above, each serializer stores info within the <code>Headers</code> and this behavior is controlled from a property named <code>UseHeaders</code>.
+If the user writes a code like:</p>
+<pre><code class="lang-c#">ISerDesRaw&lt;TestType&gt; serdes = new JsonSerDes.ValueRaw&lt;TestType&gt;();
+serdes.UseHeader = false;
+</code></pre>
+<p>The <code>ISerDesRaw&lt;TestType&gt;</code> instance does not writes the <code>Headers</code> and can be used both for key and value.</p>
+</div>
 <h2 id="specific-cases">Specific cases</h2>
 <p>Some kind of serializers extension have specific needs will be listed below.</p>
 <h3 id="avro-serializer">Avro serializer</h3>
@@ -147,7 +183,7 @@
 </ul>
 </li>
 </ul>
-<p><strong>NOTE</strong>: simple types (the one that have an Apche Kafka default serializer) are not managed and will be refused</p>
+<p><strong>NOTE</strong>: simple types (the one that have an Apache Kafka default serializer) are not managed and will be refused</p>
 <h3 id="messagepack-serializer">MessagePack serializer</h3>
 <p>The MessagePack serializer is based on <a href="https://www.nuget.org/packages/MessagePack">MessagePack</a> package. The types managed are:</p>
 <ul>

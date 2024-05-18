@@ -98,7 +98,7 @@ Class ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;  <a class="header
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt; : ValueMapperWithKey&lt;TJVMK, TJVMV, TJVMVR&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IValueMapperWithKey&lt;TJVMK, TJVMV, TJVMVR&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt; : ValueMapperWithKey&lt;TJVMK, TJVMV, TJVMVR&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IValueMapperWithKey&lt;TJVMK, TJVMV, TJVMVR&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IGenericSerDesFactoryApplier</code></pre>
   </div>
 
 
@@ -556,7 +556,7 @@ Class ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;  <a class="header
 
   <h3 id="MASES_KNet_Streams_Kstream_ValueMapperWithKey_6_Factory" data-uid="MASES.KNet.Streams.Kstream.ValueMapperWithKey`6.Factory">
   Factory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueMapperWithKey.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueMapperWithKey.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the current <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></p>
@@ -588,7 +588,7 @@ Class ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;  <a class="header
 
   <h3 id="MASES_KNet_Streams_Kstream_ValueMapperWithKey_6_Key" data-uid="MASES.KNet.Streams.Kstream.ValueMapperWithKey`6.Key">
   Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueMapperWithKey.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueMapperWithKey.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">K</code> content</p>
@@ -596,7 +596,7 @@ Class ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;  <a class="header
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract K Key { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual K Key { get; }</code></pre>
   </div>
 
 
@@ -620,7 +620,7 @@ Class ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;  <a class="header
 
   <h3 id="MASES_KNet_Streams_Kstream_ValueMapperWithKey_6_OnApply" data-uid="MASES.KNet.Streams.Kstream.ValueMapperWithKey`6.OnApply">
   OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueMapperWithKey.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueMapperWithKey.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-</a></p>
@@ -655,7 +655,7 @@ Class ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;  <a class="header
 
   <h3 id="MASES_KNet_Streams_Kstream_ValueMapperWithKey_6_Value" data-uid="MASES.KNet.Streams.Kstream.ValueMapperWithKey`6.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueMapperWithKey.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueMapperWithKey.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">V</code> content</p>
@@ -663,7 +663,7 @@ Class ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;  <a class="header
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract V Value { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual V Value { get; }</code></pre>
   </div>
 
 
@@ -691,7 +691,7 @@ Class ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;  <a class="header
 
   <h3 id="MASES_KNet_Streams_Kstream_ValueMapperWithKey_6_Apply" data-uid="MASES.KNet.Streams.Kstream.ValueMapperWithKey`6.Apply">
   Apply()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueMapperWithKey.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueMapperWithKey.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-</a></p>
@@ -706,6 +706,48 @@ Class ValueMapperWithKey&lt;K, V, VR, TJVMK, TJVMV, TJVMVR&gt;  <a class="header
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">VR</span></dt>
+    <dd><p><code class="typeparamref">VR</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_ValueMapperWithKey_6_Apply_" data-uid="MASES.KNet.Streams.Kstream.ValueMapperWithKey`6.Apply*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_ValueMapperWithKey_6_Apply__3__4_" data-uid="MASES.KNet.Streams.Kstream.ValueMapperWithKey`6.Apply(`3,`4)">
+  Apply(TJVMK, TJVMV)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/ValueMapperWithKey.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TJVMVR Apply(TJVMK arg0, TJVMV arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">TJVMK</span></dt>
+    <dd><p><code class="typeparamref">K</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">TJVMV</span></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TJVMVR</span></dt>
     <dd><p><code class="typeparamref">VR</code></p>
 </dd>
   </dl>

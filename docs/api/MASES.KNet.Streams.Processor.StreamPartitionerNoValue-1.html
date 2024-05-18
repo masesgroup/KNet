@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1" class="text-break">
-Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L56"><i class="bi bi-code-slash"></i></a>
+Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -147,6 +147,21 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
       <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitionerNoValue-2.html#MASES_KNet_Streams_Processor_StreamPartitionerNoValue_2_OnPartitions">StreamPartitionerNoValue&lt;K, byte[]&gt;.OnPartitions</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitionerNoValue-2.html#MASES_KNet_Streams_Processor_StreamPartitionerNoValue_2_Topic">StreamPartitionerNoValue&lt;K, byte[]&gt;.Topic</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitionerNoValue-2.html#MASES_KNet_Streams_Processor_StreamPartitionerNoValue_2_Key">StreamPartitionerNoValue&lt;K, byte[]&gt;.Key</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitionerNoValue-2.html#MASES_KNet_Streams_Processor_StreamPartitionerNoValue_2_Value">StreamPartitionerNoValue&lt;K, byte[]&gt;.Value</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitionerNoValue-2.html#MASES_KNet_Streams_Processor_StreamPartitionerNoValue_2_NumPartitions">StreamPartitionerNoValue&lt;K, byte[]&gt;.NumPartitions</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitionerNoValue-2.html#MASES_KNet_Streams_Processor_StreamPartitionerNoValue_2_Partitions_Java_Lang_String__1_Java_Lang_Void_System_Int32_">StreamPartitionerNoValue&lt;K, byte[]&gt;.Partitions(String, byte[], Void, int)</a>
+    </div>
+    <div>
       <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitionerNoValue-2.html#MASES_KNet_Streams_Processor_StreamPartitionerNoValue_2_Partitions_System_String__0_System_Int32_">StreamPartitionerNoValue&lt;K, byte[]&gt;.Partitions(string, K, int)</a>
     </div>
     <div>
@@ -166,6 +181,9 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitioner-4.html#MASES_KNet_Streams_Processor_StreamPartitioner_4_NumPartitions">StreamPartitioner&lt;K, string, byte[], Void&gt;.NumPartitions</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitioner-4.html#MASES_KNet_Streams_Processor_StreamPartitioner_4_Partitions_Java_Lang_String__2__3_System_Int32_">StreamPartitioner&lt;K, string, byte[], Void&gt;.Partitions(String, byte[], Void, int)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitioner-4.html#MASES_KNet_Streams_Processor_StreamPartitioner_4_Partitions">StreamPartitioner&lt;K, string, byte[], Void&gt;.Partitions()</a>
@@ -561,198 +579,11 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
 
 
 
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Key_" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Key*"></a>
-
-  <h3 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Key" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Key">
-  Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L68"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The <code class="typeparamref">K</code> content</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override K Key { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">K</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_NumPartitions_" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.NumPartitions*"></a>
-
-  <h3 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_NumPartitions" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.NumPartitions">
-  NumPartitions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L72"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The total number of partitions</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int NumPartitions { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Topic_" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Topic*"></a>
-
-  <h3 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Topic" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Topic">
-  Topic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L66"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The topic name this record is sent to</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string Topic { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Value_" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Value*"></a>
-
-  <h3 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Value" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Value">
-  Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L70"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> content</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string Value { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Partitions_" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Partitions*"></a>
-
-  <h3 id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Partitions_Java_Lang_String_System_Byte___Java_Lang_Void_System_Int32_" data-uid="MASES.KNet.Streams.Processor.StreamPartitionerNoValue`1.Partitions(Java.Lang.String,System.Byte[],Java.Lang.Void,System.Int32)">
-  Partitions(String, byte[], Void, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L75"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override sealed Optional&lt;Set&lt;Integer&gt;&gt; Partitions(String arg0, byte[] arg1, Void arg2, int arg3)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
-</dd>
-    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p><code class="typeparamref">K</code></p>
-</dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.Void.html">Void</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.Void.html">Void</a></p>
-</dd>
-    <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.Integer.html">Integer</a>&gt;&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Optional.html">Optional</a></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section" id="MASES_KNet_Streams_Processor_StreamPartitionerNoValue_1_Partitions_Java_Lang_String_System_Byte___Java_Lang_Void_System_Int32__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The method invokes the default implementation in the JVM interface using <a class="xref" href="Org.Apache.Kafka.Streams.Processor.StreamPartitioner-2.html#Org_Apache_Kafka_Streams_Processor_StreamPartitioner_2_PartitionsDefault_Java_Lang_String__0__1_System_Int32_">PartitionsDefault(String, K, V, int)</a>; override the method to implement a different behavior</p>
-</div>
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L56" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/StreamPartitionerNoValue.cs/#L91" class="edit-link">Edit this page</a>
         </div>
 
 

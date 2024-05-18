@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Serialization_Protobuf_ProtobufSerDes_ValueRaw_1" data-uid="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.ValueRaw`1" class="text-break">
-Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L136"><i class="bi bi-code-slash"></i></a>
+Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,7 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProtobufSerDes.ValueRaw&lt;T&gt; : SerDes&lt;T, byte[]&gt;, ISerDes&lt;T, byte[]&gt;, ISerializer&lt;T, byte[]&gt;, IDeserializer&lt;T, byte[]&gt;, IDisposable where T : IMessage&lt;T&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProtobufSerDes.ValueRaw&lt;T&gt; : SerDesRaw&lt;T&gt;, ISerDesRaw&lt;T&gt;, ISerDes&lt;T, byte[]&gt;, ISerializer&lt;T, byte[]&gt;, IDeserializer&lt;T, byte[]&gt;, ISerDes, IDisposable where T : IMessage&lt;T&gt;, new()</code></pre>
   </div>
 
 
@@ -114,6 +114,7 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="MASES.KNet.Serialization.SerDes-2.html">SerDes</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Serialization.SerDesRaw-1.html">SerDesRaw</a>&lt;T&gt;</div>
       <div><span class="xref">ProtobufSerDes.ValueRaw&lt;T&gt;</span></div>
     </dd>
   </dl>
@@ -121,9 +122,11 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="MASES.KNet.Serialization.ISerDesRaw-1.html">ISerDesRaw</a>&lt;T&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.ISerializer-2.html">ISerializer</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.IDeserializer-2.html">IDeserializer</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Serialization.ISerDes.html">ISerDes</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
@@ -134,6 +137,21 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
     <dd>
     <div>
       <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_Dispose">SerDes&lt;T, byte[]&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_Type">SerDes&lt;T, byte[]&gt;.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_JVMType">SerDes&lt;T, byte[]&gt;.JVMType</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_UseHeaders">SerDes&lt;T, byte[]&gt;.UseHeaders</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_UseKafkaClassForSupportedTypes">SerDes&lt;T, byte[]&gt;.UseKafkaClassForSupportedTypes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_IsDirectBuffered">SerDes&lt;T, byte[]&gt;.IsDirectBuffered</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_OnSerialize">SerDes&lt;T, byte[]&gt;.OnSerialize</a>
@@ -155,15 +173,6 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_KafkaDeserializer">SerDes&lt;T, byte[]&gt;.KafkaDeserializer</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_UseHeaders">SerDes&lt;T, byte[]&gt;.UseHeaders</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_UseKafkaClassForSupportedTypes">SerDes&lt;T, byte[]&gt;.UseKafkaClassForSupportedTypes</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_IsDirectBuffered">SerDes&lt;T, byte[]&gt;.IsDirectBuffered</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Serialization.SerDes-2.html#MASES_KNet_Serialization_SerDes_2_Serialize_System_String__0_">SerDes&lt;T, byte[]&gt;.Serialize(string, T)</a>
@@ -213,7 +222,7 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Serialization_Protobuf_ProtobufSerDes_ValueRaw_1__ctor" data-uid="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.ValueRaw`1.#ctor">
   ValueRaw()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default initializer</p>
@@ -244,7 +253,7 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Serialization_Protobuf_ProtobufSerDes_ValueRaw_1_UseHeaders" data-uid="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.ValueRaw`1.UseHeaders">
   UseHeaders
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a> are used</p>
@@ -280,7 +289,7 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Serialization_Protobuf_ProtobufSerDes_ValueRaw_1_Deserialize_System_String_System_Byte___" data-uid="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.ValueRaw`1.Deserialize(System.String,System.Byte[])">
   Deserialize(string, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L166"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the Deserializer action in the CLR</p>
@@ -322,7 +331,7 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Serialization_Protobuf_ProtobufSerDes_ValueRaw_1_DeserializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers_System_Byte___" data-uid="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.ValueRaw`1.DeserializeWithHeaders(System.String,Org.Apache.Kafka.Common.Header.Headers,System.Byte[])">
   DeserializeWithHeaders(string, Headers, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the Deserializer action in the CLR</p>
@@ -367,7 +376,7 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Serialization_Protobuf_ProtobufSerDes_ValueRaw_1_Serialize_System_String__0_" data-uid="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.ValueRaw`1.Serialize(System.String,`0)">
   Serialize(string, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the Serializer action in the CLR</p>
@@ -409,7 +418,7 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Serialization_Protobuf_ProtobufSerDes_ValueRaw_1_SerializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers__0_" data-uid="MASES.KNet.Serialization.Protobuf.ProtobufSerDes.ValueRaw`1.SerializeWithHeaders(System.String,Org.Apache.Kafka.Common.Header.Headers,`0)">
   SerializeWithHeaders(string, Headers, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the Serializer action in the CLR</p>
@@ -454,7 +463,7 @@ Class ProtobufSerDes.ValueRaw&lt;T&gt;  <a class="header-action link-secondary" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L136" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet.Serialization.Protobuf/ProtobufSerDes.cs/#L134" class="edit-link">Edit this page</a>
         </div>
 
 

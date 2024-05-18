@@ -98,7 +98,7 @@ Interface IDeserializer&lt;T, TJVMT&gt;  <a class="header-action link-secondary"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IDeserializer&lt;T, TJVMT&gt; : IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IDeserializer&lt;T, TJVMT&gt; : ISerDes, IDisposable</code></pre>
   </div>
 
 
@@ -119,6 +119,21 @@ Interface IDeserializer&lt;T, TJVMT&gt;  <a class="header-action link-secondary"
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="MASES.KNet.Serialization.ISerDes.html#MASES_KNet_Serialization_ISerDes_Type">ISerDes.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.ISerDes.html#MASES_KNet_Serialization_ISerDes_JVMType">ISerDes.JVMType</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.ISerDes.html#MASES_KNet_Serialization_ISerDes_UseHeaders">ISerDes.UseHeaders</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.ISerDes.html#MASES_KNet_Serialization_ISerDes_UseKafkaClassForSupportedTypes">ISerDes.UseKafkaClassForSupportedTypes</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Serialization.ISerDes.html#MASES_KNet_Serialization_ISerDes_IsDirectBuffered">ISerDes.IsDirectBuffered</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
   </dd></dl>
@@ -130,38 +145,6 @@ Interface IDeserializer&lt;T, TJVMT&gt;  <a class="header-action link-secondary"
 
   <h2 class="section" id="properties">Properties
 </h2>
-
-
-  <a id="MASES_KNet_Serialization_IDeserializer_2_IsDirectBuffered_" data-uid="MASES.KNet.Serialization.IDeserializer`2.IsDirectBuffered*"></a>
-
-  <h3 id="MASES_KNet_Serialization_IDeserializer_2_IsDirectBuffered" data-uid="MASES.KNet.Serialization.IDeserializer`2.IsDirectBuffered">
-  IsDirectBuffered
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IDeserializer.cs/#L48"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> in implementing class if the implementation shall use the support of direct buffer exchange</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsDirectBuffered { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
 
 
   <a id="MASES_KNet_Serialization_IDeserializer_2_KafkaDeserializer_" data-uid="MASES.KNet.Serialization.IDeserializer`2.KafkaDeserializer*"></a>
@@ -196,73 +179,6 @@ Interface IDeserializer&lt;T, TJVMT&gt;  <a class="header-action link-secondary"
 
 
 
-  <a id="MASES_KNet_Serialization_IDeserializer_2_UseHeaders_" data-uid="MASES.KNet.Serialization.IDeserializer`2.UseHeaders*"></a>
-
-  <h3 id="MASES_KNet_Serialization_IDeserializer_2_UseHeaders" data-uid="MASES.KNet.Serialization.IDeserializer`2.UseHeaders">
-  UseHeaders
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IDeserializer.cs/#L39"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a> are used</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool UseHeaders { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Serialization_IDeserializer_2_UseKafkaClassForSupportedTypes_" data-uid="MASES.KNet.Serialization.IDeserializer`2.UseKafkaClassForSupportedTypes*"></a>
-
-  <h3 id="MASES_KNet_Serialization_IDeserializer_2_UseKafkaClassForSupportedTypes" data-uid="MASES.KNet.Serialization.IDeserializer`2.UseKafkaClassForSupportedTypes">
-  UseKafkaClassForSupportedTypes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IDeserializer.cs/#L44"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> in implementing class if the implementation shall use the deserializer of Apache Kafka, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool UseKafkaClassForSupportedTypes { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="MASES_KNet_Serialization_IDeserializer_2_UseKafkaClassForSupportedTypes_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>When this option is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> there is better compatibility with data managed from Apache Kafka, but there is a performance impact</p>
-</div>
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -271,7 +187,7 @@ Interface IDeserializer&lt;T, TJVMT&gt;  <a class="header-action link-secondary"
 
   <h3 id="MASES_KNet_Serialization_IDeserializer_2_Deserialize_System_String__1_" data-uid="MASES.KNet.Serialization.IDeserializer`2.Deserialize(System.String,`1)">
   Deserialize(string, TJVMT)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IDeserializer.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IDeserializer.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the Deserializer action in the CLR</p>
@@ -313,7 +229,7 @@ Interface IDeserializer&lt;T, TJVMT&gt;  <a class="header-action link-secondary"
 
   <h3 id="MASES_KNet_Serialization_IDeserializer_2_DeserializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers__1_" data-uid="MASES.KNet.Serialization.IDeserializer`2.DeserializeWithHeaders(System.String,Org.Apache.Kafka.Common.Header.Headers,`1)">
   DeserializeWithHeaders(string, Headers, TJVMT)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IDeserializer.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/IDeserializer.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the Deserializer action in the CLR</p>

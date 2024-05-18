@@ -98,7 +98,7 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Reducer&lt;V, TJVMV&gt; : Reducer&lt;TJVMV&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IReducer&lt;TJVMV&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class Reducer&lt;V, TJVMV&gt; : Reducer&lt;TJVMV&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IReducer&lt;TJVMV&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IGenericSerDesFactoryApplier</code></pre>
   </div>
 
 
@@ -158,9 +158,6 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Reducer-1.html#Org_Apache_Kafka_Streams_Kstream_Reducer_1_InitializeHandlers">Reducer&lt;TJVMV&gt;.InitializeHandlers()</a>
-    </div>
-    <div>
-      <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Reducer-1.html#Org_Apache_Kafka_Streams_Kstream_Reducer_1_Apply__0__0_">Reducer&lt;TJVMV&gt;.Apply(TJVMV, TJVMV)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler(string, EventHandler)</a>
@@ -537,7 +534,7 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Streams_Kstream_Reducer_2_Factory" data-uid="MASES.KNet.Streams.Kstream.Reducer`2.Factory">
   Factory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Reducer.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Reducer.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the current <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></p>
@@ -569,7 +566,7 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Streams_Kstream_Reducer_2_OnApply" data-uid="MASES.KNet.Streams.Kstream.Reducer`2.OnApply">
   OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Reducer.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Reducer.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-</a></p>
@@ -577,7 +574,7 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;Reducer&lt;V&gt;, V&gt; OnApply { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;Reducer&lt;V, TJVMV&gt;, V&gt; OnApply { get; set; }</code></pre>
   </div>
 
 
@@ -586,7 +583,7 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="MASES.KNet.Streams.Kstream.Reducer-1.html">Reducer</a>&lt;V&gt;, V&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="MASES.KNet.Streams.Kstream.Reducer-2.html">Reducer</a>&lt;V, TJVMV&gt;, V&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -604,7 +601,7 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Streams_Kstream_Reducer_2_Value1" data-uid="MASES.KNet.Streams.Kstream.Reducer`2.Value1">
   Value1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Reducer.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Reducer.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">V</code> content</p>
@@ -612,7 +609,7 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract V Value1 { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual V Value1 { get; }</code></pre>
   </div>
 
 
@@ -636,7 +633,7 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Streams_Kstream_Reducer_2_Value2" data-uid="MASES.KNet.Streams.Kstream.Reducer`2.Value2">
   Value2
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Reducer.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Reducer.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <code class="typeparamref">V</code> content</p>
@@ -644,7 +641,7 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract V Value2 { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual V Value2 { get; }</code></pre>
   </div>
 
 
@@ -672,7 +669,7 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Streams_Kstream_Reducer_2_Apply" data-uid="MASES.KNet.Streams.Kstream.Reducer`2.Apply">
   Apply()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Reducer.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Reducer.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-</a></p>
@@ -687,6 +684,48 @@ Class Reducer&lt;V, TJVMV&gt;  <a class="header-action link-secondary" title="Vi
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">V</span></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_Reducer_2_Apply_" data-uid="MASES.KNet.Streams.Kstream.Reducer`2.Apply*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_Reducer_2_Apply__1__1_" data-uid="MASES.KNet.Streams.Kstream.Reducer`2.Apply(`1,`1)">
+  Apply(TJVMV, TJVMV)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Reducer.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Reducer.html#apply-java.lang.Object-java.lang.Object-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TJVMV Apply(TJVMV arg0, TJVMV arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">TJVMV</span></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+    <dt><code>arg1</code> <span class="xref">TJVMV</span></dt>
+    <dd><p><code class="typeparamref">V</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TJVMV</span></dt>
     <dd><p><code class="typeparamref">V</code></p>
 </dd>
   </dl>
