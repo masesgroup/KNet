@@ -233,36 +233,36 @@ namespace MASES.KNet.Producer
         /// <param name="keySerializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
         /// <param name="valueSerializer">Value serializer base on <see cref="SerDes{V, TJVMV}"/></param>
         public KNetProducer(ProducerConfigBuilder props, ISerDes<K, TJVMK> keySerializer, ISerDes<V, TJVMV> valueSerializer)
-            : base(CheckProperties(props), keySerializer.KafkaSerializer, valueSerializer.KafkaSerializer)
+            : base(CheckProperties(props, keySerializer, valueSerializer), keySerializer.KafkaSerializer, valueSerializer.KafkaSerializer)
         {
             _keySerializer = keySerializer;
             _valueSerializer = valueSerializer;
         }
 
-        static Properties CheckProperties(Properties props)
+        static Properties CheckProperties(Properties props, ISerDes keySerializer, ISerDes valueSerializer)
         {
             if (!props.ContainsKey(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG))
             {
-                if (typeof(TJVMK) == typeof(byte[]))
+                if (!keySerializer.IsDirectBuffered)
                 {
-                    props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArraySerializer");
+                    props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArraySerializer>());
                 }
                 else
                 {
-                    props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.mases.knet.common.serialization.ByteBufferSerializer");
+                    props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, ClassNameOf<KNetByteBufferSerializer>());
                 }
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
             if (!props.ContainsKey(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG))
             {
-                if (typeof(TJVMV) == typeof(byte[]))
+                if (!valueSerializer.IsDirectBuffered)
                 {
-                    props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArraySerializer");
+                    props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArraySerializer>());
                 }
                 else
                 {
-                    props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.mases.knet.common.serialization.ByteBufferSerializer");
+                    props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, ClassNameOf<KNetByteBufferSerializer>());
                 }
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG}, remove from configuration.");

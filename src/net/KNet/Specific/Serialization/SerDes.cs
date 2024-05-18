@@ -48,8 +48,9 @@ namespace MASES.KNet.Serialization
         /// <remarks>When this option is set to <see langword="true"/> there is better compatibility with data managed from Apache Kafka, but there is a performance impact</remarks>
         bool UseKafkaClassForSupportedTypes { get; set; }
         /// <summary>
-        /// Set to <see langword="true"/> in implementing class if the implementation shall use the support of direct buffer exchange
+        /// Set to <see langword="true"/> in implementing class if the implementation uses the support of direct buffer data exchange
         /// </summary>
+        /// <remarks>If set to <see langword="true"/>, the KNet classes will use <see cref="KNetByteBufferSerializer"/> and <see cref="KNetByteBufferDeserializer"/> as backing JVM classes</remarks>
         bool IsDirectBuffered { get; }
     }
 
@@ -276,7 +277,7 @@ namespace MASES.KNet.Serialization
                 KNetSerialization.SerializationType.External => throw new InvalidOperationException($"{typeof(T)} needs an external serializer: set {nameof(OnSerialize)} or {nameof(OnSerializeWithHeaders)}."),
                 _ => default,
             };
-            return (IsDirectBuffered && _JVMSerializationType == KNetSerialization.SerializationType.ByteBuffer) ? (TJVMT)(object)(Java.Nio.ByteBuffer)newData 
+            return (IsDirectBuffered && _JVMSerializationType == KNetSerialization.SerializationType.ByteBuffer) ? (TJVMT)(object)Java.Nio.ByteBuffer.From(newData)
                                                                                                                  : (TJVMT)(object)newData;
         }
         /// <inheritdoc cref="ISerializer{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
