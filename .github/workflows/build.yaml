@@ -10,7 +10,7 @@ on:
     branches: '**'
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 # This workflow contains two jobs called "check_changes", "build_windows"
