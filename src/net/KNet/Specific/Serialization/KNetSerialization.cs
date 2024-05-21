@@ -279,7 +279,7 @@ namespace MASES.KNet.Serialization
         {
             if (fallbackToKafka) return _DoubleSerializer.Serialize(topic, data);
             var array = BitConverter.GetBytes(data);
-            if (ShallRevertByteOrder) Array.Reverse(array);
+            if (ShallRevertByteOrderDouble) Array.Reverse(array);
             return array;
         }
 
@@ -291,7 +291,7 @@ namespace MASES.KNet.Serialization
         {
             if (fallbackToKafka) return _FloatSerializer.Serialize(topic, data);
             var array = BitConverter.GetBytes(data);
-            if (ShallRevertByteOrder) Array.Reverse(array);
+            if (ShallRevertByteOrderFloat) Array.Reverse(array);
             return array;
         }
 
@@ -303,7 +303,7 @@ namespace MASES.KNet.Serialization
         {
             if (fallbackToKafka) return _IntSerializer.Serialize(topic, data);
             var array = BitConverter.GetBytes(data);
-            if (ShallRevertByteOrder) Array.Reverse(array);
+            if (ShallRevertByteOrderInt) Array.Reverse(array);
             return array;
 
             // the following generates an error in container
@@ -318,7 +318,7 @@ namespace MASES.KNet.Serialization
         {
             if (fallbackToKafka) return _LongSerializer.Serialize(topic, data);
             var array = BitConverter.GetBytes(data);
-            if (ShallRevertByteOrder) Array.Reverse(array);
+            if (ShallRevertByteOrderLong) Array.Reverse(array);
             return array;
 
             // the following generates an error in container
@@ -333,7 +333,7 @@ namespace MASES.KNet.Serialization
         {
             if (fallbackToKafka) return _ShortSerializer.Serialize(topic, data);
             var array = BitConverter.GetBytes(data);
-            if (ShallRevertByteOrder) Array.Reverse(array);
+            if (ShallRevertByteOrderShort) Array.Reverse(array);
             return array;
 
             // the following generates an error in container
@@ -424,7 +424,7 @@ namespace MASES.KNet.Serialization
                 }
                 return (double)result;
             }
-            if (ShallRevertByteOrder) Array.Reverse(data);
+            if (ShallRevertByteOrderDouble) Array.Reverse(data);
             return BitConverter.ToDouble(data, 0);
         }
 
@@ -444,7 +444,7 @@ namespace MASES.KNet.Serialization
                 }
                 return (float)result;
             }
-            if (ShallRevertByteOrder) Array.Reverse(data);
+            if (ShallRevertByteOrderFloat) Array.Reverse(data);
             return BitConverter.ToSingle(data, 0);
         }
 
@@ -464,7 +464,7 @@ namespace MASES.KNet.Serialization
                 }
                 return (int)result;
             }
-            if (ShallRevertByteOrder) Array.Reverse(data);
+            if (ShallRevertByteOrderInt) Array.Reverse(data);
             return BitConverter.ToInt32(data, 0);
 
             //if (data == null)
@@ -509,7 +509,7 @@ namespace MASES.KNet.Serialization
                 }
                 return (long)result;
             }
-            if (ShallRevertByteOrder) Array.Reverse(data);
+            if (ShallRevertByteOrderLong) Array.Reverse(data);
             return BitConverter.ToInt64(data, 0);
 
             //if (data == null)
@@ -554,7 +554,7 @@ namespace MASES.KNet.Serialization
                 }
                 return (short)result;
             }
-            if (ShallRevertByteOrder) Array.Reverse(data);
+            if (ShallRevertByteOrderShort) Array.Reverse(data);
             return BitConverter.ToInt16(data, 0);
 
             //if (data == null)
@@ -614,6 +614,10 @@ namespace MASES.KNet.Serialization
             }
         }
 
-        static readonly bool ShallRevertByteOrder = !SerializeInt(false, "", 1).SequenceEqual(SerializeInt(true, "", 1));
+        static readonly bool ShallRevertByteOrderShort = !SerializeShort(false, "", 1).SequenceEqual(SerializeShort(true, "", 1));
+        static readonly bool ShallRevertByteOrderInt = !SerializeInt(false, "", 1).SequenceEqual(SerializeInt(true, "", 1));
+        static readonly bool ShallRevertByteOrderLong = !SerializeLong(false, "", 1).SequenceEqual(SerializeLong(true, "", 1));
+        static readonly bool ShallRevertByteOrderFloat = !SerializeFloat(false, "", 1.1F).SequenceEqual(SerializeFloat(true, "", 1.1F));
+        static readonly bool ShallRevertByteOrderDouble = !SerializeDouble(false, "", 1.1).SequenceEqual(SerializeDouble(true, "", 1.1));
     }
 }

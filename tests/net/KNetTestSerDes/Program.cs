@@ -41,9 +41,13 @@ namespace MASES.KNetTestAdmin
             bb1 = KNetSerialization.SerializeBoolean(true, "test", false);
             if (!bb.SequenceEqual(bb1)) throw new System.Exception();
 
+            if (KNetSerialization.DeserializeBoolean(true, "test", bb) != false) throw new System.Exception();
+
             bb = KNetSerialization.SerializeBoolean(false, "test", true);
             bb1 = KNetSerialization.SerializeBoolean(true, "test", true);
             if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+            if (KNetSerialization.DeserializeBoolean(true, "test", bb) != true) throw new System.Exception();
 
             const int cycles = 100;
 
@@ -56,6 +60,8 @@ namespace MASES.KNetTestAdmin
                 bb = KNetSerialization.SerializeShort(false, "test", val);
                 bb1 = KNetSerialization.SerializeShort(true, "test", val);
                 if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+                if (KNetSerialization.DeserializeShort(true, "test", bb) != val) throw new System.Exception();
             }
 
             cycleDelta = int.MaxValue / cycles;
@@ -67,6 +73,8 @@ namespace MASES.KNetTestAdmin
                 bb = KNetSerialization.SerializeInt(false, "test", val);
                 bb1 = KNetSerialization.SerializeInt(true, "test", val);
                 if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+                if (KNetSerialization.DeserializeInt(true, "test", bb) != val) throw new System.Exception();
             }
 
             cycleDelta = long.MaxValue / cycles;
@@ -78,6 +86,8 @@ namespace MASES.KNetTestAdmin
                 bb = KNetSerialization.SerializeLong(false, "test", val);
                 bb1 = KNetSerialization.SerializeLong(true, "test", val);
                 if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+                if (KNetSerialization.DeserializeLong(true, "test", bb) != val) throw new System.Exception();
             }
 
             float cycleDeltaF = float.MaxValue / cycles;
@@ -89,6 +99,8 @@ namespace MASES.KNetTestAdmin
                 bb = KNetSerialization.SerializeFloat(false, "test", val);
                 bb1 = KNetSerialization.SerializeFloat(true, "test", val);
                 if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+                if (KNetSerialization.DeserializeFloat(true, "test", bb) != val) throw new System.Exception();
             }
 
             double cycleDeltaD = double.MaxValue / cycles;
@@ -100,6 +112,8 @@ namespace MASES.KNetTestAdmin
                 bb = KNetSerialization.SerializeDouble(false, "test", val);
                 bb1 = KNetSerialization.SerializeDouble(true, "test", val);
                 if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+                if (KNetSerialization.DeserializeDouble(true, "test", bb) != val) throw new System.Exception();
             }
         }
     }
