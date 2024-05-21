@@ -24,6 +24,7 @@ using Org.Apache.Kafka.Common.Errors;
 using Org.Apache.Kafka.Common.Serialization;
 using Org.Apache.Kafka.Common.Utils;
 using System;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
@@ -277,7 +278,9 @@ namespace MASES.KNet.Serialization
         public static byte[] SerializeDouble(bool fallbackToKafka, string topic, double data)
         {
             if (fallbackToKafka) return _DoubleSerializer.Serialize(topic, data);
-            return BitConverter.GetBytes(data);
+            var array = BitConverter.GetBytes(data);
+            if (ShallRevertByteOrder) Array.Reverse(array);
+            return array;
         }
 
         static readonly Org.Apache.Kafka.Common.Serialization.FloatSerializer _FloatSerializer = new Org.Apache.Kafka.Common.Serialization. FloatSerializer();
@@ -287,7 +290,9 @@ namespace MASES.KNet.Serialization
         public static byte[] SerializeFloat(bool fallbackToKafka, string topic, float data)
         {
             if (fallbackToKafka) return _FloatSerializer.Serialize(topic, data);
-            return BitConverter.GetBytes(data);
+            var array = BitConverter.GetBytes(data);
+            if (ShallRevertByteOrder) Array.Reverse(array);
+            return array;
         }
 
         static readonly Org.Apache.Kafka.Common.Serialization.IntegerSerializer _IntSerializer = new Org.Apache.Kafka.Common.Serialization.IntegerSerializer();
@@ -297,7 +302,9 @@ namespace MASES.KNet.Serialization
         public static byte[] SerializeInt(bool fallbackToKafka, string topic, int data)
         {
             if (fallbackToKafka) return _IntSerializer.Serialize(topic, data);
-            return BitConverter.GetBytes(data);
+            var array = BitConverter.GetBytes(data);
+            if (ShallRevertByteOrder) Array.Reverse(array);
+            return array;
 
             // the following generates an error in container
             //return new byte[] { (byte)(data >>> 24), (byte)(data >>> 16), (byte)(data >>> 8), ((byte)data) };
@@ -310,7 +317,10 @@ namespace MASES.KNet.Serialization
         public static byte[] SerializeLong(bool fallbackToKafka, string topic, long data)
         {
             if (fallbackToKafka) return _LongSerializer.Serialize(topic, data);
-            return BitConverter.GetBytes(data);
+            var array = BitConverter.GetBytes(data);
+            if (ShallRevertByteOrder) Array.Reverse(array);
+            return array;
+
             // the following generates an error in container
             //return new byte[] { (byte)((int)(data >>> 56)), (byte)((int)(data >>> 48)), (byte)((int)(data >>> 40)), (byte)((int)(data >>> 32)), (byte)((int)(data >>> 24)), (byte)((int)(data >>> 16)), (byte)((int)(data >>> 8)), ((byte)data) };
         }
@@ -322,7 +332,10 @@ namespace MASES.KNet.Serialization
         public static byte[] SerializeShort(bool fallbackToKafka, string topic, short data)
         {
             if (fallbackToKafka) return _ShortSerializer.Serialize(topic, data);
-            return BitConverter.GetBytes(data);
+            var array = BitConverter.GetBytes(data);
+            if (ShallRevertByteOrder) Array.Reverse(array);
+            return array;
+
             // the following generates an error in container
             //return new byte[] { (byte)(data >>> 8), ((byte)data) };
         }
@@ -411,6 +424,7 @@ namespace MASES.KNet.Serialization
                 }
                 return (double)result;
             }
+            if (ShallRevertByteOrder) Array.Reverse(data);
             return BitConverter.ToDouble(data, 0);
         }
 
@@ -430,6 +444,7 @@ namespace MASES.KNet.Serialization
                 }
                 return (float)result;
             }
+            if (ShallRevertByteOrder) Array.Reverse(data);
             return BitConverter.ToSingle(data, 0);
         }
 
@@ -449,6 +464,7 @@ namespace MASES.KNet.Serialization
                 }
                 return (int)result;
             }
+            if (ShallRevertByteOrder) Array.Reverse(data);
             return BitConverter.ToInt32(data, 0);
 
             //if (data == null)
@@ -493,6 +509,7 @@ namespace MASES.KNet.Serialization
                 }
                 return (long)result;
             }
+            if (ShallRevertByteOrder) Array.Reverse(data);
             return BitConverter.ToInt64(data, 0);
 
             //if (data == null)
@@ -537,6 +554,7 @@ namespace MASES.KNet.Serialization
                 }
                 return (short)result;
             }
+            if (ShallRevertByteOrder) Array.Reverse(data);
             return BitConverter.ToInt16(data, 0);
 
             //if (data == null)
@@ -595,5 +613,8 @@ namespace MASES.KNet.Serialization
                 return null;
             }
         }
+
+        static readonly bool ShallRevertByteOrder = !SerializeInt(false, "test", 1).SequenceEqual(SerializeInt(true, "test", 1));
+
     }
 }

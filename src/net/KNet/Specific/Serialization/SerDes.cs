@@ -50,7 +50,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Set to <see langword="true"/> in implementing class if the implementation uses the support of direct buffer data exchange
         /// </summary>
-        /// <remarks>If set to <see langword="true"/>, the KNet classes will use <see cref="KNetByteBufferSerializer"/> and <see cref="KNetByteBufferDeserializer"/> as backing JVM classes</remarks>
+        /// <remarks>If set to <see langword="true"/>, the KNet classes will use <see cref="ByteBufferSerializer"/> and <see cref="ByteBufferDeserializer"/> as backing JVM classes</remarks>
         bool IsDirectBuffered { get; }
     }
 
