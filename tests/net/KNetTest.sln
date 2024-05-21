@@ -60,6 +60,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Streams", "Test Stream
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetTestKNetStreams", "KNetTestKNetStreams\KNetTestKNetStreams.csproj", "{69DF3123-32D8-4583-9D76-A61A78DFF370}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetTestSerDes", "KNetTestSerDes\KNetTestSerDes.csproj", "{CED323B6-506B-470C-9F26-0B77667C8598}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -150,6 +152,10 @@ Global
 		{69DF3123-32D8-4583-9D76-A61A78DFF370}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69DF3123-32D8-4583-9D76-A61A78DFF370}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69DF3123-32D8-4583-9D76-A61A78DFF370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED323B6-506B-470C-9F26-0B77667C8598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED323B6-506B-470C-9F26-0B77667C8598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED323B6-506B-470C-9F26-0B77667C8598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED323B6-506B-470C-9F26-0B77667C8598}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -176,6 +182,7 @@ Global
 		{363CC373-CF04-4204-A44A-C96AB1B1085E} = {68128D24-3F72-4A25-A876-509F12F38E73}
 		{8E8EB519-70A3-487A-BB71-096988CCA6A9} = {68128D24-3F72-4A25-A876-509F12F38E73}
 		{69DF3123-32D8-4583-9D76-A61A78DFF370} = {35AE6AB6-C68A-4605-9C66-EE652977C27A}
+		{CED323B6-506B-470C-9F26-0B77667C8598} = {A77F1B9E-5576-46F0-BE58-C85FA9FA3A58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A7C16DC-1BAA-44BC-AA1C-D40B7B61878E}
