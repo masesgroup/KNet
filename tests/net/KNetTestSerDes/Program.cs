@@ -35,11 +35,6 @@ namespace MASES.KNetTestAdmin
             SharedKNetCore.CreateGlobalInstance();
             var appArgs = SharedKNetCore.FilteredArgs;
 
-            if (appArgs.Length != 0)
-            {
-                serverToUse = args[0];
-            }
-
             byte[] bb, bb1;
 
             bb = KNetSerialization.SerializeBoolean(false, "test", false);
