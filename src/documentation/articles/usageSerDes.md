@@ -5,7 +5,7 @@ _description: Describes how to use serialization of .NET suite for Apache Kafka
 
 # KNet: Serializer/Deserializer
 
-KNet comes with a base set of serializer and deserializer. Most of them are usable with primitives types (bool, int, etc) and array of bytes.
+KNet comes with a base set of serializer and deserializer. Most of them are usable with primitives types (`bool`, `int`, etc) and array of `byte`s.
 
 If the user wants to use structures types there are two ways:
   1. Creates types in Java and reflects them in C#
@@ -17,7 +17,7 @@ The current available packages are:
   - [MASES.KNet.Serialization.Avro](https://www.nuget.org/packages/MASES.KNet.Serialization.Avro/): it is a serdes which uses [AVRO](https://en.wikipedia.org/wiki/Apache_Avro); till now is not ready.
   - [MASES.KNet.Serialization.Json](https://www.nuget.org/packages/MASES.KNet.Serialization.Json/): it is a serdes which uses [Json](https://en.wikipedia.org/wiki/JSON); till now it is at its first stage and it is based on general purpose API from:
     - .NET Framework: it uses [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) package
-    - .NET 6/7: it uses the Json which comes with the frameworks
+    - .NET 6/8: it uses the Json which comes with the frameworks
   - [MASES.KNet.Serialization.MessagePack](https://www.nuget.org/packages/MASES.KNet.Serialization.MessagePack/): it is a serdes which uses [MessagePack](https://en.wikipedia.org/wiki/MessagePack); till now it is at its first stage and it is based on general purpose API from [MessagePack](https://www.nuget.org/packages/MessagePack) package
   - [MASES.KNet.Serialization.Protobuf](https://www.nuget.org/packages/MASES.KNet.Serialization.Protobuf/): it is a serdes which uses [Google.Protobuf](https://en.wikipedia.org/wiki/Protocol_Buffers); till now it is at its first stage and it is based on general purpose API from [Google.Protobuf](https://www.nuget.org/packages/Google.Protobuf) package
 

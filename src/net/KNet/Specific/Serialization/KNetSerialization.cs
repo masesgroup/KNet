@@ -614,7 +614,6 @@ namespace MASES.KNet.Serialization
             }
         }
 
-        static readonly bool ShallRevertByteOrder = !SerializeInt(false, "test", 1).SequenceEqual(SerializeInt(true, "test", 1));
-
+        static readonly bool ShallRevertByteOrder = !SerializeInt(false, "", 1).SequenceEqual(SerializeInt(true, "", 1));
     }
 }
