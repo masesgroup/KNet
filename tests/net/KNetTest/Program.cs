@@ -274,8 +274,8 @@ namespace MASES.KNetTest
                                                                    .WithRetries(0)
                                                                    .WithLingerMs(1);
 
-                var keySerializer = new SerDesRaw<string>();
-                var valueSerializer = new JsonSerDes.ValueRaw<TestType>();
+                var keySerializer = DefaultSerDes<string>.NewByteArraySerDes();
+                var valueSerializer = JsonSerDes.Value<TestType>.NewByteArraySerDes();
                 Stopwatch watcher = new Stopwatch();
                 try
                 {
@@ -366,8 +366,8 @@ namespace MASES.KNetTest
                                                                    .WithEnableAutoCommit(true)
                                                                    .WithAutoCommitIntervalMs(1000);
 
-                SerDesRaw<string> keyDeserializer = new SerDesRaw<string>();
-                var valueDeserializer = new JsonSerDes.ValueRaw<TestType>();
+                ISerDesRaw<string> keyDeserializer = DefaultSerDes<string>.NewByteArraySerDes();
+                var valueDeserializer = JsonSerDes.Value<TestType>.NewByteArraySerDes();
                 ConsumerRebalanceListener rebalanceListener = null;
                 KNetConsumer<string, TestType> consumer = null;
 
@@ -472,8 +472,8 @@ namespace MASES.KNetTest
                                                                    .WithRetries(0)
                                                                    .WithLingerMs(1);
 
-                var keySerializer = new SerDesRaw<string>(); // standard serDes for string
-                var valueSerializer = new JsonSerDes.ValueBuffered<TestType>();
+                var keySerializer = DefaultSerDes<string>.NewByteArraySerDes(); // standard serDes for string
+                var valueSerializer = JsonSerDes.Value<TestType>.NewByteBufferSerDes();
                 Stopwatch watcher = new Stopwatch();
                 try
                 {
@@ -564,8 +564,8 @@ namespace MASES.KNetTest
                                                                    .WithEnableAutoCommit(true)
                                                                    .WithAutoCommitIntervalMs(1000);
 
-                var keyDeserializer = new SerDesRaw<string>();
-                var valueDeserializer = new JsonSerDes.ValueBuffered<TestType>();
+                var keyDeserializer = DefaultSerDes<string>.NewByteArraySerDes();
+                var valueDeserializer = JsonSerDes.Value<TestType>.NewByteBufferSerDes();
                 ConsumerRebalanceListener rebalanceListener = null;
                 KNetConsumerValueBuffered<string, TestType> consumer = null;
 

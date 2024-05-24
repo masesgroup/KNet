@@ -49,8 +49,8 @@ namespace MASES.KNet
             var newT = new T
             {
                 _options = new System.Collections.Generic.Dictionary<string, object>(origin._options),
-                _KNetKeySerDes = origin._KNetKeySerDes,
-                _KNetValueSerDes = origin._KNetValueSerDes,
+                _KeySerDesSelector = origin._KeySerDesSelector,
+                _ValueSerDesSelector = origin._ValueSerDesSelector,
             };
             return newT;
         }
@@ -112,8 +112,8 @@ namespace MASES.KNet
             var clone = new T
             {
                 _options = new System.Collections.Generic.Dictionary<string, object>(_options),
-                _KNetKeySerDes = _KNetKeySerDes,
-                _KNetValueSerDes = _KNetValueSerDes
+                _KeySerDesSelector = _KeySerDesSelector,
+                _ValueSerDesSelector = _ValueSerDesSelector
             };
             return clone;
         }
@@ -150,57 +150,57 @@ namespace MASES.KNet
         /// <inheritdoc cref="IGenericSerDesFactory.AutoSelectBuffered"/>
         public bool AutoSelectBuffered { get; set; }
 
-        Type _KNetKeySerDes = null;
-        /// <inheritdoc cref="IGenericSerDesFactory.KNetKeySerDes"/>
-        public Type KNetKeySerDes
+        Type _KeySerDesSelector = null;
+        /// <inheritdoc cref="IGenericSerDesFactory.KeySerDesSelector"/>
+        public Type KeySerDesSelector
         {
-            get { return _KNetKeySerDes; }
+            get { return _KeySerDesSelector; }
             set
             {
                 if (value.GetConstructors().Single(ci => ci.GetParameters().Length == 0) == null)
                 {
-                    throw new ArgumentException($"{value.Name} does not contains a default constructor and cannot be used because it is not a valid Serializer type");
+                    throw new ArgumentException($"{value.Name} does not contains a default constructor and cannot be used because it is not a valid ISerDesSelector type");
                 }
 
                 if (value.IsGenericType)
                 {
                     var keyT = value.GetGenericArguments();
-                    if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
+                    if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid ISerDesSelector type"); }
                     var t = value.GetGenericTypeDefinition();
-                    if (t.GetInterface(typeof(ISerDes<,>).Name) == null)
+                    if (t.GetInterface(typeof(ISerDesSelector<>).Name) == null)
                     {
-                        throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
+                        throw new ArgumentException($"{value.Name} does not implement ISerDesSelector<> and cannot be used because it is not a valid ISerDesSelector type");
                     }
-                    _KNetKeySerDes = value;
+                    _KeySerDesSelector = value;
                 }
-                else throw new ArgumentException($"{value.Name} is not a generic type and cannot be used as a valid ValueContainer type");
+                else throw new ArgumentException($"{value.Name} is not a generic type and cannot be used as a valid ISerDesSelector type");
             }
         }
 
-        Type _KNetValueSerDes = null;
-        /// <inheritdoc cref="IGenericSerDesFactory.KNetValueSerDes"/>
-        public Type KNetValueSerDes
+        Type _ValueSerDesSelector = null;
+        /// <inheritdoc cref="IGenericSerDesFactory.ValueSerDesSelector"/>
+        public Type ValueSerDesSelector
         {
-            get { return _KNetValueSerDes; }
+            get { return _ValueSerDesSelector; }
             set
             {
                 if (value.GetConstructors().Single(ci => ci.GetParameters().Length == 0) == null)
                 {
-                    throw new ArgumentException($"{value.Name} does not contains a default constructor and cannot be used because it is not a valid Serializer type");
+                    throw new ArgumentException($"{value.Name} does not contains a default constructor and cannot be used because it is not a valid ISerDesSelector type");
                 }
 
                 if (value.IsGenericType)
                 {
                     var keyT = value.GetGenericArguments();
-                    if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid Serializer type"); }
+                    if (keyT.Length != 1) { throw new ArgumentException($"{value.Name} does not contains a single generic argument and cannot be used because it is not a valid ISerDesSelector type"); }
                     var t = value.GetGenericTypeDefinition();
-                    if (t.GetInterface(typeof(ISerDes<,>).Name) == null)
+                    if (t.GetInterface(typeof(ISerDesSelector<>).Name) == null)
                     {
-                        throw new ArgumentException($"{value.Name} does not implement IKNetSerDes<> and cannot be used because it is not a valid Serializer type");
+                        throw new ArgumentException($"{value.Name} does not implement ISerDesSelector<> and cannot be used because it is not a valid ISerDesSelector type");
                     }
-                    _KNetValueSerDes = value;
+                    _ValueSerDesSelector = value;
                 }
-                else throw new ArgumentException($"{value.Name} is not a generic type and cannot be used as a valid Serializer type");
+                else throw new ArgumentException($"{value.Name} is not a generic type and cannot be used as a valid ISerDesSelector type");
             }
         }
 
@@ -226,16 +226,25 @@ namespace MASES.KNet
                     }
                     else
                     {
-                        if (KNetKeySerDes == null) throw new InvalidOperationException($"No default serializer available for {typeof(TKey)}, property {nameof(KNetKeySerDes)} shall be set.");
-                        var tmp = KNetKeySerDes.MakeGenericType(typeof(TKey));
-                        serDes = Activator.CreateInstance(tmp) as ISerDes;
+                        if (KeySerDesSelector == null) throw new InvalidOperationException($"No default serializer available for {typeof(TKey)}, property {nameof(KeySerDesSelector)} shall be set.");
+
+                        var selectorForKey = KeySerDesSelector.MakeGenericType(typeof(TKey));
+                        var selector = Activator.CreateInstance(selectorForKey) as ISerDesSelector<TKey>;
+
+                        if (typeof(TJVMTKey) == typeof(Java.Nio.ByteBuffer))
+                        {
+                            serDes = selector.NewByteBufferSerDes();
+                        }
+                        else
+                        {
+                            serDes = selector.NewByteArraySerDes();
+                        }
                     }
                     _keySerDesComplete[(typeof(TKey), typeof(TJVMTKey))] = serDes;
                 }
                 return serDes as ISerDes<TKey, TJVMTKey>;
             }
         }
-
 
         readonly ConcurrentDictionary<(Type, Type), ISerDes> _valueSerDesComplete = new();
 
@@ -259,9 +268,19 @@ namespace MASES.KNet
                     }
                     else
                     {
-                        if (KNetValueSerDes == null) throw new InvalidOperationException($"No default serializer available for {typeof(TValue)}, property {nameof(KNetValueSerDes)} shall be set.");
-                        var tmp = KNetValueSerDes.MakeGenericType(typeof(TValue));
-                        serDes = Activator.CreateInstance(tmp) as ISerDes;
+                        if (ValueSerDesSelector == null) throw new InvalidOperationException($"No default serializer available for {typeof(TValue)}, property {nameof(ValueSerDesSelector)} shall be set.");
+                        
+                        var selectorForValue = ValueSerDesSelector.MakeGenericType(typeof(TValue));
+                        var selector = Activator.CreateInstance(selectorForValue) as ISerDesSelector<TValue>;
+
+                        if (typeof(TJVMTValue) == typeof(Java.Nio.ByteBuffer))
+                        {
+                            serDes = selector.NewByteBufferSerDes();
+                        }
+                        else
+                        {
+                            serDes = selector.NewByteArraySerDes();
+                        }
                     }
                     _valueSerDesComplete[(typeof(TValue), typeof(TJVMTValue))] = serDes;
                 }

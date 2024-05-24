@@ -26,6 +26,36 @@ using System;
 namespace MASES.KNet.Serialization
 {
     /// <summary>
+    /// KNet common interface to select serializer/deserializer
+    /// </summary>
+    /// <typeparam name="T">The <see cref="Type"/> to be serialized</typeparam>
+    public interface ISerDesSelector<T>
+    {
+        /// <summary>
+        /// Returns the name of this <see cref="Type"/> implementing <see cref="ISerDesSelector{T}"/>
+        /// </summary>
+        string SelectorTypeName { get; }
+        /// <summary>
+        /// Returns the generic <see cref="Type"/> implementing <see cref="ISerDes{T, TJVMT}"/> based on <see cref="byte"/> array data exchange
+        /// </summary>
+        Type ByteArraySerDes { get; }
+        /// <summary>
+        /// Returns the generic <see cref="Type"/> implementing <see cref="ISerDes{T, TJVMT}"/> based on <see cref="ByteBuffer"/> data exchange
+        /// </summary>
+        Type ByteBufferSerDes { get; }
+        /// <summary>
+        /// Returns an instance of <see cref="ByteArraySerDes"/>
+        /// </summary>
+        /// <returns>The <see cref="ISerDesRaw{T}"/> of a new instance of <see cref="ByteArraySerDes"/> based on <typeparamref name="T"/></returns>
+        ISerDesRaw<T> NewByteArraySerDes();
+        /// <summary>
+        /// Returns an instance of <see cref="ByteBufferSerDes"/>
+        /// </summary>
+        /// <returns>The <see cref="ISerDesBuffered{T}"/> of a new instance of <see cref="ByteBufferSerDes"/> based on <typeparamref name="T"/></returns>
+        ISerDesBuffered<T> NewByteBufferSerDes();
+    }
+
+    /// <summary>
     /// KNet common serializer/deserializer
     /// </summary>
     public interface ISerDes : IDisposable
@@ -66,15 +96,6 @@ namespace MASES.KNet.Serialization
         /// </summary>
         Serde<TJVMT> KafkaSerde { get; }
     }
-
-    ///// <summary>
-    ///// KNet common serializer/deserializer based on <see cref="byte"/> array JVM type
-    ///// </summary>
-    ///// <typeparam name="T">The type to serialize/deserialize</typeparam>
-    //public interface ISerDes<T> : ISerDes<T, byte[]>, ISerializer<T>, IDeserializer<T>
-    //{
-
-    //}
 
     /// <summary>
     /// Common serializer/deserializer
@@ -189,9 +210,9 @@ namespace MASES.KNet.Serialization
                     case KNetSerialization.SerializationType.Void:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.VoidSerde().CastTo<SerdeDirect<TJVMT>>();
                         break;
-                case KNetSerialization.SerializationType.External:
-                default:
-                    throw new InvalidOperationException($"{typeof(T)} needs an external serializer: set {nameof(OnSerialize)} or {nameof(OnSerializeWithHeaders)}.");
+                    case KNetSerialization.SerializationType.External:
+                    default:
+                        throw new InvalidOperationException($"{typeof(T)} needs an external serializer: set {nameof(OnSerialize)} or {nameof(OnSerializeWithHeaders)}.");
                 }
             }
 
@@ -364,6 +385,39 @@ namespace MASES.KNet.Serialization
     {
         /// <inheritdoc/>
         public override bool IsDirectBuffered => true;
+    }
+
+    /// <summary>
+    /// Default implementation of <see cref="ISerDesSelector{T}"/>
+    /// </summary>
+    public class DefaultSerDes<T> : ISerDesSelector<T>
+    {
+        /// <summary>
+        /// Returns a new instance of <see cref="DefaultSerDes{T}"/>
+        /// </summary>
+        /// <returns>The <see cref="ISerDesSelector{T}"/> of <see cref="DefaultSerDes{T}"/></returns>
+        public static ISerDesSelector<T> NewInstance() => new DefaultSerDes<T>();
+        /// <inheritdoc cref="ISerDesSelector{T}.SelectorTypeName"/>
+        public static string SelectorTypeName => typeof(DefaultSerDes<>).ToAssemblyQualified();
+        /// <inheritdoc cref="ISerDesSelector{T}.ByteArraySerDes"/>
+        public static Type ByteArraySerDes => typeof(SerDesRaw<T>);
+        /// <inheritdoc cref="ISerDesSelector{T}.ByteBufferSerDes"/>
+        public static Type ByteBufferSerDes => typeof(SerDesBuffered<T>);
+        /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
+        public static ISerDesRaw<T> NewByteArraySerDes() { return new SerDesRaw<T>(); }
+        /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
+        public static ISerDesBuffered<T> NewByteBufferSerDes() { return new SerDesBuffered<T>(); }
+
+        /// <inheritdoc cref="ISerDesSelector{T}.SelectorTypeName"/>
+        string ISerDesSelector<T>.SelectorTypeName => SelectorTypeName;
+        /// <inheritdoc cref="ISerDesSelector{T}.ByteArraySerDes"/>
+        Type ISerDesSelector<T>.ByteArraySerDes => ByteArraySerDes;
+        /// <inheritdoc cref="ISerDesSelector{T}.ByteBufferSerDes"/>
+        Type ISerDesSelector<T>.ByteBufferSerDes => ByteBufferSerDes;
+        /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
+        ISerDesRaw<T> ISerDesSelector<T>.NewByteArraySerDes() => NewByteArraySerDes();
+        /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
+        ISerDesBuffered<T> ISerDesSelector<T>.NewByteBufferSerDes()=> NewByteBufferSerDes();
     }
 
     /// <summary>
