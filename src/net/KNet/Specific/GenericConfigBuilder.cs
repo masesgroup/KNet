@@ -204,6 +204,7 @@ namespace MASES.KNet
             }
         }
 
+        readonly ConcurrentDictionary<(Type, Type), ISerDesSelector> _keySerDesSelectorComplete = new();
         readonly ConcurrentDictionary<(Type, Type), ISerDes> _keySerDesComplete = new();
 
         /// <inheritdoc cref="IGenericSerDesFactory.BuildKeySerDes{TKey, TJVMTKey}"/>
@@ -227,18 +228,14 @@ namespace MASES.KNet
                     else
                     {
                         if (KeySerDesSelector == null) throw new InvalidOperationException($"No default serializer available for {typeof(TKey)}, property {nameof(KeySerDesSelector)} shall be set.");
-
-                        var selectorForKey = KeySerDesSelector.MakeGenericType(typeof(TKey));
-                        var selector = Activator.CreateInstance(selectorForKey) as ISerDesSelector<TKey>;
-
-                        if (typeof(TJVMTKey) == typeof(Java.Nio.ByteBuffer))
+                        
+                        var selector = _keySerDesSelectorComplete.GetOrAdd((KeySerDesSelector, typeof(TKey)), (o) =>
                         {
-                            serDes = selector.NewByteBufferSerDes();
-                        }
-                        else
-                        {
-                            serDes = selector.NewByteArraySerDes();
-                        }
+                            var selectorForValue = o.Item1.MakeGenericType(o.Item2);
+                            return Activator.CreateInstance(selectorForValue) as ISerDesSelector;
+                        }) as ISerDesSelector<TKey>;
+
+                        serDes = selector.NewSerDes<TJVMTKey>();
                     }
                     _keySerDesComplete[(typeof(TKey), typeof(TJVMTKey))] = serDes;
                 }
@@ -246,6 +243,7 @@ namespace MASES.KNet
             }
         }
 
+        readonly ConcurrentDictionary<(Type, Type), ISerDesSelector> _valueSerDesSelectorComplete = new();
         readonly ConcurrentDictionary<(Type, Type), ISerDes> _valueSerDesComplete = new();
 
         /// <inheritdoc cref="IGenericSerDesFactory.BuildValueSerDes{TValue, TJVMTValue}"/>
@@ -269,18 +267,14 @@ namespace MASES.KNet
                     else
                     {
                         if (ValueSerDesSelector == null) throw new InvalidOperationException($"No default serializer available for {typeof(TValue)}, property {nameof(ValueSerDesSelector)} shall be set.");
-                        
-                        var selectorForValue = ValueSerDesSelector.MakeGenericType(typeof(TValue));
-                        var selector = Activator.CreateInstance(selectorForValue) as ISerDesSelector<TValue>;
 
-                        if (typeof(TJVMTValue) == typeof(Java.Nio.ByteBuffer))
+                        var selector = _valueSerDesSelectorComplete.GetOrAdd((ValueSerDesSelector, typeof(TValue)), (o) =>
                         {
-                            serDes = selector.NewByteBufferSerDes();
-                        }
-                        else
-                        {
-                            serDes = selector.NewByteArraySerDes();
-                        }
+                            var selectorForValue = o.Item1.MakeGenericType(o.Item2);
+                            return Activator.CreateInstance(selectorForValue) as ISerDesSelector;
+                        }) as ISerDesSelector<TValue>;
+
+                        serDes = selector.NewSerDes<TJVMTValue>();
                     }
                     _valueSerDesComplete[(typeof(TValue), typeof(TJVMTValue))] = serDes;
                 }

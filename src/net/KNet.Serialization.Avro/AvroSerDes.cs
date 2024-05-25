@@ -86,23 +86,31 @@ namespace MASES.KNet.Serialization.Avro
                 /// </summary>
                 /// <returns>The <see cref="ISerDesSelector{T}"/> of <see cref="Binary{T}"/></returns>
                 public static ISerDesSelector<T> NewInstance() => new Binary<T>();
-                /// <inheritdoc cref="ISerDesSelector{T}.SelectorTypeName"/>
+                /// <inheritdoc cref="ISerDesSelector.SelectorTypeName"/>
                 public static string SelectorTypeName => typeof(Binary<>).ToAssemblyQualified();
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteArraySerDes"/>
+                /// <inheritdoc cref="ISerDesSelector.ByteArraySerDes"/>
                 public static Type ByteArraySerDes => typeof(BinaryRaw<T>);
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteBufferSerDes"/>
+                /// <inheritdoc cref="ISerDesSelector.ByteBufferSerDes"/>
                 public static Type ByteBufferSerDes => typeof(BinaryBuffered<T>);
+                /// <inheritdoc cref="ISerDesSelector{T}.NewSerDes{TJVM}"/>
+                public static ISerDes<T, TJVM> NewSerDes<TJVM>()
+                {
+                    if (typeof(TJVM) == typeof(Java.Nio.ByteBuffer)) return NewByteBufferSerDes() as ISerDes<T, TJVM>;
+                    return NewByteArraySerDes() as ISerDes<T, TJVM>;
+                }
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
                 public static ISerDesRaw<T> NewByteArraySerDes() { return new BinaryRaw<T>(SelectorTypeName); }
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
                 public static ISerDesBuffered<T> NewByteBufferSerDes() { return new BinaryBuffered<T>(SelectorTypeName); }
 
-                /// <inheritdoc cref="ISerDesSelector{T}.SelectorTypeName"/>
-                string ISerDesSelector<T>.SelectorTypeName => SelectorTypeName;
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteArraySerDes"/>
-                Type ISerDesSelector<T>.ByteArraySerDes => ByteArraySerDes;
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteBufferSerDes"/>
-                Type ISerDesSelector<T>.ByteBufferSerDes => ByteBufferSerDes;
+                /// <inheritdoc cref="ISerDesSelector.SelectorTypeName"/>
+                string ISerDesSelector.SelectorTypeName => SelectorTypeName;
+                /// <inheritdoc cref="ISerDesSelector.ByteArraySerDes"/>
+                Type ISerDesSelector.ByteArraySerDes => ByteArraySerDes;
+                /// <inheritdoc cref="ISerDesSelector.ByteBufferSerDes"/>
+                Type ISerDesSelector.ByteBufferSerDes => ByteBufferSerDes;
+                /// <inheritdoc cref="ISerDesSelector{T}.NewSerDes{TJVM}"/>
+                ISerDes<T, TJVM> ISerDesSelector<T>.NewSerDes<TJVM>() => NewSerDes<TJVM>();
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
                 ISerDesRaw<T> ISerDesSelector<T>.NewByteArraySerDes() => NewByteArraySerDes();
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
@@ -259,23 +267,31 @@ namespace MASES.KNet.Serialization.Avro
                 /// </summary>
                 /// <returns>The <see cref="ISerDesSelector{T}"/> of <see cref="Json{T}"/></returns>
                 public static ISerDesSelector<T> NewInstance() => new Json<T>();
-                /// <inheritdoc cref="ISerDesSelector{T}.SelectorTypeName"/>
+                /// <inheritdoc cref="ISerDesSelector.SelectorTypeName"/>
                 public static string SelectorTypeName => typeof(Json<>).ToAssemblyQualified();
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteArraySerDes"/>
+                /// <inheritdoc cref="ISerDesSelector.ByteArraySerDes"/>
                 public static Type ByteArraySerDes => typeof(JsonRaw<T>);
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteBufferSerDes"/>
+                /// <inheritdoc cref="ISerDesSelector.ByteBufferSerDes"/>
                 public static Type ByteBufferSerDes => typeof(JsonBuffered<T>);
+                /// <inheritdoc cref="ISerDesSelector{T}.NewSerDes{TJVM}"/>
+                public static ISerDes<T, TJVM> NewSerDes<TJVM>()
+                {
+                    if (typeof(TJVM) == typeof(Java.Nio.ByteBuffer)) return NewByteBufferSerDes() as ISerDes<T, TJVM>;
+                    return NewByteArraySerDes() as ISerDes<T, TJVM>;
+                }
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
                 public static ISerDesRaw<T> NewByteArraySerDes() { return new JsonRaw<T>(SelectorTypeName); }
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
                 public static ISerDesBuffered<T> NewByteBufferSerDes() { return new JsonBuffered<T>(SelectorTypeName); }
 
-                /// <inheritdoc cref="ISerDesSelector{T}.SelectorTypeName"/>
-                string ISerDesSelector<T>.SelectorTypeName => SelectorTypeName;
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteArraySerDes"/>
-                Type ISerDesSelector<T>.ByteArraySerDes => ByteArraySerDes;
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteBufferSerDes"/>
-                Type ISerDesSelector<T>.ByteBufferSerDes => ByteBufferSerDes;
+                /// <inheritdoc cref="ISerDesSelector.SelectorTypeName"/>
+                string ISerDesSelector.SelectorTypeName => SelectorTypeName;
+                /// <inheritdoc cref="ISerDesSelector.ByteArraySerDes"/>
+                Type ISerDesSelector.ByteArraySerDes => ByteArraySerDes;
+                /// <inheritdoc cref="ISerDesSelector.ByteBufferSerDes"/>
+                Type ISerDesSelector.ByteBufferSerDes => ByteBufferSerDes;
+                /// <inheritdoc cref="ISerDesSelector{T}.NewSerDes{TJVM}"/>
+                ISerDes<T, TJVM> ISerDesSelector<T>.NewSerDes<TJVM>() => NewSerDes<TJVM>();
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
                 ISerDesRaw<T> ISerDesSelector<T>.NewByteArraySerDes() => NewByteArraySerDes();
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
@@ -439,23 +455,31 @@ namespace MASES.KNet.Serialization.Avro
                 /// </summary>
                 /// <returns>The <see cref="ISerDesSelector{T}"/> of <see cref="Binary{T}"/></returns>
                 public static ISerDesSelector<T> NewInstance() => new Binary<T>();
-                /// <inheritdoc cref="ISerDesSelector{T}.SelectorTypeName"/>
+                /// <inheritdoc cref="ISerDesSelector.SelectorTypeName"/>
                 public static string SelectorTypeName => typeof(Binary<>).ToAssemblyQualified();
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteArraySerDes"/>
+                /// <inheritdoc cref="ISerDesSelector.ByteArraySerDes"/>
                 public static Type ByteArraySerDes => typeof(BinaryRaw<T>);
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteBufferSerDes"/>
+                /// <inheritdoc cref="ISerDesSelector.ByteBufferSerDes"/>
                 public static Type ByteBufferSerDes => typeof(BinaryBuffered<T>);
+                /// <inheritdoc cref="ISerDesSelector{T}.NewSerDes{TJVM}"/>
+                public static ISerDes<T, TJVM> NewSerDes<TJVM>()
+                {
+                    if (typeof(TJVM) == typeof(Java.Nio.ByteBuffer)) return NewByteBufferSerDes() as ISerDes<T, TJVM>;
+                    return NewByteArraySerDes() as ISerDes<T, TJVM>;
+                }
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
                 public static ISerDesRaw<T> NewByteArraySerDes() { return new BinaryRaw<T>(SelectorTypeName); }
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
                 public static ISerDesBuffered<T> NewByteBufferSerDes() { return new BinaryBuffered<T>(SelectorTypeName); }
 
-                /// <inheritdoc cref="ISerDesSelector{T}.SelectorTypeName"/>
-                string ISerDesSelector<T>.SelectorTypeName => SelectorTypeName;
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteArraySerDes"/>
-                Type ISerDesSelector<T>.ByteArraySerDes => ByteArraySerDes;
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteBufferSerDes"/>
-                Type ISerDesSelector<T>.ByteBufferSerDes => ByteBufferSerDes;
+                /// <inheritdoc cref="ISerDesSelector.SelectorTypeName"/>
+                string ISerDesSelector.SelectorTypeName => SelectorTypeName;
+                /// <inheritdoc cref="ISerDesSelector.ByteArraySerDes"/>
+                Type ISerDesSelector.ByteArraySerDes => ByteArraySerDes;
+                /// <inheritdoc cref="ISerDesSelector.ByteBufferSerDes"/>
+                Type ISerDesSelector.ByteBufferSerDes => ByteBufferSerDes;
+                /// <inheritdoc cref="ISerDesSelector{T}.NewSerDes{TJVM}"/>
+                ISerDes<T, TJVM> ISerDesSelector<T>.NewSerDes<TJVM>() => NewSerDes<TJVM>();
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
                 ISerDesRaw<T> ISerDesSelector<T>.NewByteArraySerDes() => NewByteArraySerDes();
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
@@ -613,23 +637,31 @@ namespace MASES.KNet.Serialization.Avro
                 /// </summary>
                 /// <returns>The <see cref="ISerDesSelector{T}"/> of <see cref="Json{T}"/></returns>
                 public static ISerDesSelector<T> NewInstance() => new Json<T>();
-                /// <inheritdoc cref="ISerDesSelector{T}.SelectorTypeName"/>
+                /// <inheritdoc cref="ISerDesSelector.SelectorTypeName"/>
                 public static string SelectorTypeName => typeof(Json<>).ToAssemblyQualified();
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteArraySerDes"/>
+                /// <inheritdoc cref="ISerDesSelector.ByteArraySerDes"/>
                 public static Type ByteArraySerDes => typeof(JsonRaw<T>);
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteBufferSerDes"/>
+                /// <inheritdoc cref="ISerDesSelector.ByteBufferSerDes"/>
                 public static Type ByteBufferSerDes => typeof(JsonBuffered<T>);
+                /// <inheritdoc cref="ISerDesSelector{T}.NewSerDes{TJVM}"/>
+                public static ISerDes<T, TJVM> NewSerDes<TJVM>()
+                {
+                    if (typeof(TJVM) == typeof(Java.Nio.ByteBuffer)) return NewByteBufferSerDes() as ISerDes<T, TJVM>;
+                    return NewByteArraySerDes() as ISerDes<T, TJVM>;
+                }
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
                 public static ISerDesRaw<T> NewByteArraySerDes() { return new JsonRaw<T>(SelectorTypeName); }
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
                 public static ISerDesBuffered<T> NewByteBufferSerDes() { return new JsonBuffered<T>(SelectorTypeName); }
 
-                /// <inheritdoc cref="ISerDesSelector{T}.SelectorTypeName"/>
-                string ISerDesSelector<T>.SelectorTypeName => SelectorTypeName;
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteArraySerDes"/>
-                Type ISerDesSelector<T>.ByteArraySerDes => ByteArraySerDes;
-                /// <inheritdoc cref="ISerDesSelector{T}.ByteBufferSerDes"/>
-                Type ISerDesSelector<T>.ByteBufferSerDes => ByteBufferSerDes;
+                /// <inheritdoc cref="ISerDesSelector.SelectorTypeName"/>
+                string ISerDesSelector.SelectorTypeName => SelectorTypeName;
+                /// <inheritdoc cref="ISerDesSelector.ByteArraySerDes"/>
+                Type ISerDesSelector.ByteArraySerDes => ByteArraySerDes;
+                /// <inheritdoc cref="ISerDesSelector.ByteBufferSerDes"/>
+                Type ISerDesSelector.ByteBufferSerDes => ByteBufferSerDes;
+                /// <inheritdoc cref="ISerDesSelector{T}.NewSerDes{TJVM}"/>
+                ISerDes<T, TJVM> ISerDesSelector<T>.NewSerDes<TJVM>() => NewSerDes<TJVM>();
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
                 ISerDesRaw<T> ISerDesSelector<T>.NewByteArraySerDes() => NewByteArraySerDes();
                 /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
