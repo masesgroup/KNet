@@ -84,6 +84,10 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 * V2.0.0+: From version 2.0.0 the code base is fully reflected from the JARs of the Apache Kafka distribution downloaded from Maven; some developed classes still remains beside the specific KNet implementations
 * V2.4.0+: From version 2.4.0 it is available the new KNet Streams SDK
 * V2.5.0+: From version 2.5.0 there are two breaking changes: uses `Java.Lang.String` instead of `string` (`System.String`) in generated classes and KNet Streams SDK manages the counter-part JVM types
+* V2.7.0+: From version 2.7.0:
+  * all classes KNetProducer, KNetConsumer and KNet Streams SDK manage the counter-part JVM types
+  * serializers supports data exchange based on `byte` array and `ByteBuffer`
+  * version 2.7.2 introduces `ISerDesSelector` to optimize serialization selection based on `byte` array or `ByteBuffer`
 
 ---
 
