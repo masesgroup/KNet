@@ -180,6 +180,13 @@
 <li>V2.0.0+: From version 2.0.0 the code base is fully reflected from the JARs of the Apache Kafka distribution downloaded from Maven; some developed classes still remains beside the specific KNet implementations</li>
 <li>V2.4.0+: From version 2.4.0 it is available the new KNet Streams SDK</li>
 <li>V2.5.0+: From version 2.5.0 there are two breaking changes: uses <code>Java.Lang.String</code> instead of <code>string</code> (<code>System.String</code>) in generated classes and KNet Streams SDK manages the counter-part JVM types</li>
+<li>V2.7.0+: From version 2.7.0:
+<ul>
+<li>all classes KNetProducer, KNetConsumer and KNet Streams SDK manage the counter-part JVM types</li>
+<li>serializers supports data exchange based on <code>byte</code> array and <code>ByteBuffer</code></li>
+<li>version 2.7.2 introduces <code>ISerDesSelector</code> to optimize serialization selection based on <code>byte</code> array or <code>ByteBuffer</code></li>
+</ul>
+</li>
 </ul>
 <hr>
 <h2 id="runtime-engine">Runtime engine</h2>
