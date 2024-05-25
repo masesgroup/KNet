@@ -298,8 +298,8 @@ namespace MASES.KNet.Serialization
             JVMDeserializerClass = Java.Lang.Class.ForName(JVMDeserializerClassName, true, Java.Lang.ClassLoader.SystemClassLoader);
 
             _KafkaSerde = kSerde;
-            _KafkaSerializer = kSerde.SerializerDirect();
-            _KafkaDeserializer = kSerde.DeserializerDirect();
+            _KafkaSerializer = kSerde.Serializer();
+            _KafkaDeserializer = kSerde.Deserializer();
         }
         /// <summary>
         /// Finalizer
