@@ -42,6 +42,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Returns the generic <see cref="Type"/> implementing <see cref="ISerDes{T, TJVMT}"/> based on <see cref="ByteBuffer"/> data exchange
         /// </summary>
+        /// <remarks>Returns <see langword="null"/> if <see cref="ByteBuffer"/> data exchange is not supported</remarks>
         Type ByteBufferSerDes { get; }
     }
 
