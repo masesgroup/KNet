@@ -31,28 +31,28 @@ namespace MASES.KNet.Serialization
         /// <remarks>The property is by default <see langword="true"/> to optimized data flow between CLR and JVM</remarks>
         bool AutoSelectBuffered { get; }
         /// <summary>
-        /// The <see cref="Type"/> used to create an instance of <see cref="ISerDes{T, TJVMT}"/> for keys with <see cref="BuildKeySerDes{TKey, TJVMTKey}"/>
+        /// The <see cref="Type"/> used to create an instance of <see cref="ISerDesSelector{T}"/> for keys with <see cref="BuildKeySerDes{TKey, TJVMTKey}"/>
         /// </summary>
-        Type KNetKeySerDes { get; }
+        Type KeySerDesSelector { get; }
         /// <summary>
-        /// The <see cref="Type"/> used to create an instance of <see cref="ISerDes{T, TJVMT}"/> for values with <see cref="BuildValueSerDes{TValue, TJVMTValue}"/>
+        /// The <see cref="Type"/> used to create an instance of <see cref="ISerDesSelector{T}"/> for values with <see cref="BuildValueSerDes{TValue, TJVMTValue}"/>
         /// </summary>
-        Type KNetValueSerDes { get; }
+        Type ValueSerDesSelector { get; }
         /// <summary>
-        /// Builds an instance of <see cref="ISerDes{TKey, TJVMKey}"/> using the <see cref="Type"/> defined in <see cref="KNetKeySerDes"/>
+        /// Builds an instance of <see cref="ISerDes{TKey, TJVMKey}"/> using the <see cref="Type"/> defined in <see cref="KeySerDesSelector"/>
         /// </summary>
         /// <typeparam name="TKey">The type of the key</typeparam>
         /// <typeparam name="TJVMTKey">The JVM type of the key</typeparam>
         /// <returns>An instance of <see cref="ISerDes{TKey, TJVMKey}"/></returns>
-        /// <exception cref="InvalidOperationException">If <see cref="KNetKeySerDes"/> is <see langword="null"/></exception>
+        /// <exception cref="InvalidOperationException">If <see cref="KeySerDesSelector"/> is <see langword="null"/></exception>
         ISerDes<TKey, TJVMTKey> BuildKeySerDes<TKey, TJVMTKey>();
         /// <summary>
-        /// Builds an instance of <see cref="ISerDes{TValue, TJVMTValue}"/> using the <see cref="Type"/> defined in <see cref="KNetValueSerDes"/>
+        /// Builds an instance of <see cref="ISerDes{TValue, TJVMTValue}"/> using the <see cref="Type"/> defined in <see cref="ValueSerDesSelector"/>
         /// </summary>
         /// <typeparam name="TValue">The type of the key</typeparam>
         /// <typeparam name="TJVMTValue">The JVM type of the key</typeparam>
         /// <returns>An instance of <see cref="ISerDes{TValue, TJVMTValue}"/></returns>
-        /// <exception cref="InvalidOperationException">If <see cref="KNetValueSerDes"/> is <see langword="null"/></exception>
+        /// <exception cref="InvalidOperationException">If <see cref="ValueSerDesSelector"/> is <see langword="null"/></exception>
         ISerDes<TValue, TJVMTValue> BuildValueSerDes<TValue, TJVMTValue>();
         /// <summary>
         /// Clear the current factory

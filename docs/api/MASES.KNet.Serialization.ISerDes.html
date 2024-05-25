@@ -85,7 +85,7 @@
 
 
   <h1 id="MASES_KNet_Serialization_ISerDes" data-uid="MASES.KNet.Serialization.ISerDes" class="text-break">
-Interface ISerDes  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L31"><i class="bi bi-code-slash"></i></a>
+Interface ISerDes  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -128,7 +128,7 @@ Interface ISerDes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="MASES_KNet_Serialization_ISerDes_IsDirectBuffered" data-uid="MASES.KNet.Serialization.ISerDes.IsDirectBuffered">
   IsDirectBuffered
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> in implementing class if the implementation uses the support of direct buffer data exchange</p>
@@ -153,8 +153,200 @@ Interface ISerDes  <a class="header-action link-secondary" title="View source" h
 
 
   <h4 class="section" id="MASES_KNet_Serialization_ISerDes_IsDirectBuffered_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the KNet classes will use KNetByteBufferSerializer and KNetByteBufferDeserializer as backing JVM classes</p>
+  <div class="markdown level1 remarks"><p>If set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the KNet classes will use <a class="xref" href="MASES.KNet.Serialization.ByteBufferSerializer.html">ByteBufferSerializer</a> and <a class="xref" href="MASES.KNet.Serialization.ByteBufferDeserializer.html">ByteBufferDeserializer</a> as backing JVM classes</p>
 </div>
+
+
+
+
+  <a id="MASES_KNet_Serialization_ISerDes_JVMDeserializerClass_" data-uid="MASES.KNet.Serialization.ISerDes.JVMDeserializerClass*"></a>
+
+  <h3 id="MASES_KNet_Serialization_ISerDes_JVMDeserializerClass" data-uid="MASES.KNet.Serialization.ISerDes.JVMDeserializerClass">
+  JVMDeserializerClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the JVM deserializer <a class="xref" href="api/Java.Lang.Class.html">Class</a> associated to this <a class="xref" href="MASES.KNet.Serialization.ISerDes.html">ISerDes</a> instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Class JVMDeserializerClass { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Serialization_ISerDes_JVMDeserializerClassName_" data-uid="MASES.KNet.Serialization.ISerDes.JVMDeserializerClassName*"></a>
+
+  <h3 id="MASES_KNet_Serialization_ISerDes_JVMDeserializerClassName" data-uid="MASES.KNet.Serialization.ISerDes.JVMDeserializerClassName">
+  JVMDeserializerClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the deserializer class name to be used</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string JVMDeserializerClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Serialization_ISerDes_JVMSerDesClass_" data-uid="MASES.KNet.Serialization.ISerDes.JVMSerDesClass*"></a>
+
+  <h3 id="MASES_KNet_Serialization_ISerDes_JVMSerDesClass" data-uid="MASES.KNet.Serialization.ISerDes.JVMSerDesClass">
+  JVMSerDesClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the JVM serdes <a class="xref" href="api/Java.Lang.Class.html">Class</a> associated to this <a class="xref" href="MASES.KNet.Serialization.ISerDes.html">ISerDes</a> instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Class JVMSerDesClass { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Serialization_ISerDes_JVMSerDesClassName_" data-uid="MASES.KNet.Serialization.ISerDes.JVMSerDesClassName*"></a>
+
+  <h3 id="MASES_KNet_Serialization_ISerDes_JVMSerDesClassName" data-uid="MASES.KNet.Serialization.ISerDes.JVMSerDesClassName">
+  JVMSerDesClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the serdes class name to be used</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string JVMSerDesClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Serialization_ISerDes_JVMSerializerClass_" data-uid="MASES.KNet.Serialization.ISerDes.JVMSerializerClass*"></a>
+
+  <h3 id="MASES_KNet_Serialization_ISerDes_JVMSerializerClass" data-uid="MASES.KNet.Serialization.ISerDes.JVMSerializerClass">
+  JVMSerializerClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the JVM serializer <a class="xref" href="api/Java.Lang.Class.html">Class</a> associated to this <a class="xref" href="MASES.KNet.Serialization.ISerDes.html">ISerDes</a> instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Class JVMSerializerClass { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Serialization_ISerDes_JVMSerializerClassName_" data-uid="MASES.KNet.Serialization.ISerDes.JVMSerializerClassName*"></a>
+
+  <h3 id="MASES_KNet_Serialization_ISerDes_JVMSerializerClassName" data-uid="MASES.KNet.Serialization.ISerDes.JVMSerializerClassName">
+  JVMSerializerClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the serializer class name to be used</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string JVMSerializerClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
 
 
 
@@ -163,7 +355,7 @@ Interface ISerDes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="MASES_KNet_Serialization_ISerDes_JVMType" data-uid="MASES.KNet.Serialization.ISerDes.JVMType">
   JVMType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="MASES.KNet.Serialization.ISerDes.html#MASES_KNet_Serialization_ISerDes_Type">Type</a>, representing the JVM type, managed from this <a class="xref" href="MASES.KNet.Serialization.ISerDes.html">ISerDes</a> instance</p>
@@ -195,7 +387,7 @@ Interface ISerDes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="MASES_KNet_Serialization_ISerDes_Type" data-uid="MASES.KNet.Serialization.ISerDes.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="MASES.KNet.Serialization.ISerDes.html#MASES_KNet_Serialization_ISerDes_Type">Type</a> managed from this <a class="xref" href="MASES.KNet.Serialization.ISerDes.html">ISerDes</a> instance</p>
@@ -227,7 +419,7 @@ Interface ISerDes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="MASES_KNet_Serialization_ISerDes_UseHeaders" data-uid="MASES.KNet.Serialization.ISerDes.UseHeaders">
   UseHeaders
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a> are used</p>
@@ -259,7 +451,7 @@ Interface ISerDes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="MASES_KNet_Serialization_ISerDes_UseKafkaClassForSupportedTypes" data-uid="MASES.KNet.Serialization.ISerDes.UseKafkaClassForSupportedTypes">
   UseKafkaClassForSupportedTypes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> in implementing class if the implementation shall use the serializer of Apache Kafka, default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a></p>
@@ -294,7 +486,7 @@ Interface ISerDes  <a class="header-action link-secondary" title="View source" h
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L31" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/SerDes.cs/#L76" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -14,7 +14,7 @@ on:
         type: boolean
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 # This workflow contains one job called "build_documentation"
@@ -68,7 +68,7 @@ jobs:
       - name: Clear Java generated files
         run: Remove-Item .\src\jvm\knet\src\main\java\org\mases\knet\generated\* -Recurse -Force -Exclude README.md
 
-      - run: dotnet tool update --version 2.5.0 -g MASES.JNetReflector
+      - run: dotnet tool update --version 2.5.1 -g MASES.JNetReflector
 
       - name: Build classes
         shell: cmd

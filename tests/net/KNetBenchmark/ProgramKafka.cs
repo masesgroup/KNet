@@ -53,8 +53,8 @@ namespace MASES.KNet.Benchmark
                                                         .WithSendBuffer(SocketSendBufferBytes)
                                                         .WithReceiveBuffer(SocketReceiveBufferBytes)
                                                         .WithBufferMemory(128 * 1024 * 1024)
-                                                        .WithKeySerializerClass("org.apache.kafka.common.serialization.LongSerializer")
-                                                        .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer")
+                                                        .WithKeySerializerClass(Java.Lang.Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.LongSerializer>())
+                                                        .WithValueSerializerClass(Java.Lang.Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArraySerializer>())
                                                         .WithPartitionerIgnoreKeys(true)
                                                         .ToProperties();
                 if (UseSerdes)
@@ -242,8 +242,8 @@ namespace MASES.KNet.Benchmark
                                                         .WithSendBuffer(SocketSendBufferBytes)
                                                         .WithReceiveBuffer(SocketReceiveBufferBytes)
                                                         .WithFetchMinBytes(FetchMinBytes)
-                                                        .WithKeyDeserializerClass("org.apache.kafka.common.serialization.LongDeserializer")
-                                                        .WithValueDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer")
+                                                        .WithKeyDeserializerClass(Java.Lang.Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.LongDeserializer>())
+                                                        .WithValueDeserializerClass(Java.Lang.Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArrayDeserializer>())
                                                         .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                         .ToProperties();
                 if (UseSerdes)
