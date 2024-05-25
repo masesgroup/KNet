@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\Common\Common.props" />
+	<PropertyGroup>
+		<AssemblyName>KNetTestSerDes</AssemblyName>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>MASES.KNetTestSerDes</RootNamespace>
+		<Title>KNetTestSerDes - a test tool for KNet</Title>
+		<Description>KNetTestSerDes - a test tool for KNet</Description>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Include="..\Common\SharedKNetCore.cs" Link="SharedKNetCore.cs" />
+	</ItemGroup>
+</Project>

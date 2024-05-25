@@ -243,27 +243,13 @@ namespace MASES.KNet.Producer
         {
             if (!props.ContainsKey(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG))
             {
-                if (!keySerializer.IsDirectBuffered)
-                {
-                    props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArraySerializer>());
-                }
-                else
-                {
-                    props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, ClassNameOf<ByteBufferSerializer>());
-                }
+                props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, keySerializer.JVMSerializerClassName);
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
             if (!props.ContainsKey(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG))
             {
-                if (!valueSerializer.IsDirectBuffered)
-                {
-                    props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArraySerializer>());
-                }
-                else
-                {
-                    props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, ClassNameOf<ByteBufferSerializer>());
-                }
+                props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, valueSerializer.JVMSerializerClassName);
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
 

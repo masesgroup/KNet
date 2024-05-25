@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Lang;
 using Java.Nio;
 using Javax.Xml.Crypto;
 using MASES.JCOBridge.C2JBridge;
@@ -25,6 +26,50 @@ using System;
 
 namespace MASES.KNet.Serialization
 {
+    /// <summary>
+    /// KNet common interface to select serializer/deserializer
+    /// </summary>
+    public interface ISerDesSelector
+    {
+        /// <summary>
+        /// Returns the name of the <see cref="Type"/> implementing <see cref="ISerDesSelector"/>
+        /// </summary>
+        string SelectorTypeName { get; }
+        /// <summary>
+        /// Returns the generic <see cref="Type"/> implementing <see cref="ISerDes{T, TJVMT}"/> based on <see cref="byte"/> array data exchange
+        /// </summary>
+        Type ByteArraySerDes { get; }
+        /// <summary>
+        /// Returns the generic <see cref="Type"/> implementing <see cref="ISerDes{T, TJVMT}"/> based on <see cref="ByteBuffer"/> data exchange
+        /// </summary>
+        /// <remarks>Returns <see langword="null"/> if <see cref="ByteBuffer"/> data exchange is not supported</remarks>
+        Type ByteBufferSerDes { get; }
+    }
+
+    /// <summary>
+    /// KNet common interface to select serializer/deserializer
+    /// </summary>
+    /// <typeparam name="T">The <see cref="Type"/> to be serialized</typeparam>
+    public interface ISerDesSelector<T> : ISerDesSelector
+    {
+        /// <summary>
+        /// Returns an instance of <see cref="ISerDes{T, TJVM}"/>
+        /// </summary>
+        /// <typeparam name="TJVM">The JVM type to use for <typeparamref name="T"/></typeparam>
+        /// <returns>The <see cref="ISerDes{T, TJVM}"/> of a new instance of <see cref="ISerDesSelector.ByteArraySerDes"/> or <see cref="ISerDesSelector.ByteBufferSerDes"/> based on <typeparamref name="TJVM"/></returns>
+        ISerDes<T, TJVM> NewSerDes<TJVM>();
+        /// <summary>
+        /// Returns an instance of <see cref="ISerDesSelector.ByteArraySerDes"/>
+        /// </summary>
+        /// <returns>The <see cref="ISerDesRaw{T}"/> of a new instance of <see cref="ISerDesSelector.ByteArraySerDes"/> based on <typeparamref name="T"/></returns>
+        ISerDesRaw<T> NewByteArraySerDes();
+        /// <summary>
+        /// Returns an instance of <see cref="ISerDesSelector.ByteBufferSerDes"/>
+        /// </summary>
+        /// <returns>The <see cref="ISerDesBuffered{T}"/> of a new instance of <see cref="ISerDesSelector.ByteBufferSerDes"/> based on <typeparamref name="T"/></returns>
+        ISerDesBuffered<T> NewByteBufferSerDes();
+    }
+
     /// <summary>
     /// KNet common serializer/deserializer
     /// </summary>
@@ -39,6 +84,30 @@ namespace MASES.KNet.Serialization
         /// </summary>
         Type JVMType { get; }
         /// <summary>
+        /// Returns the serializer class name to be used 
+        /// </summary>
+        string JVMSerializerClassName { get; }
+        /// <summary>
+        /// Returns the deserializer class name to be used 
+        /// </summary>
+        string JVMDeserializerClassName { get; }
+        /// <summary>
+        /// Returns the serdes class name to be used 
+        /// </summary>
+        string JVMSerDesClassName { get; }
+        /// <summary>
+        /// Returns the JVM serializer <see cref="Java.Lang.Class"/> associated to this <see cref="ISerDes"/> instance
+        /// </summary>
+        Java.Lang.Class JVMSerializerClass { get; }
+        /// <summary>
+        /// Returns the JVM deserializer <see cref="Java.Lang.Class"/> associated to this <see cref="ISerDes"/> instance
+        /// </summary>
+        Java.Lang.Class JVMDeserializerClass { get; }
+        /// <summary>
+        /// Returns the JVM serdes <see cref="Java.Lang.Class"/> associated to this <see cref="ISerDes"/> instance
+        /// </summary>
+        Java.Lang.Class JVMSerDesClass { get; }
+        /// <summary>
         /// <see langword="true"/> if <see cref="Headers"/> are used
         /// </summary>
         bool UseHeaders { get; set; }
@@ -50,7 +119,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Set to <see langword="true"/> in implementing class if the implementation uses the support of direct buffer data exchange
         /// </summary>
-        /// <remarks>If set to <see langword="true"/>, the KNet classes will use <see cref="KNetByteBufferSerializer"/> and <see cref="KNetByteBufferDeserializer"/> as backing JVM classes</remarks>
+        /// <remarks>If set to <see langword="true"/>, the KNet classes will use <see cref="ByteBufferSerializer"/> and <see cref="ByteBufferDeserializer"/> as backing JVM classes</remarks>
         bool IsDirectBuffered { get; }
     }
 
@@ -66,15 +135,6 @@ namespace MASES.KNet.Serialization
         /// </summary>
         Serde<TJVMT> KafkaSerde { get; }
     }
-
-    ///// <summary>
-    ///// KNet common serializer/deserializer based on <see cref="byte"/> array JVM type
-    ///// </summary>
-    ///// <typeparam name="T">The type to serialize/deserialize</typeparam>
-    //public interface ISerDes<T> : ISerDes<T, byte[]>, ISerializer<T>, IDeserializer<T>
-    //{
-
-    //}
 
     /// <summary>
     /// Common serializer/deserializer
@@ -148,6 +208,9 @@ namespace MASES.KNet.Serialization
             if (IsDirectBuffered)
             {
                 kSerde = new Serdes.ByteBufferSerde().CastTo<SerdeDirect<TJVMT>>();
+                JVMSerDesClassName = Class.ClassNameOf<MASES.KNet.Serialization.Serdes.ByteBufferSerde>();
+                JVMSerializerClassName = Class.ClassNameOf<MASES.KNet.Serialization.ByteBufferSerializer>();
+                JVMDeserializerClassName = Class.ClassNameOf<MASES.KNet.Serialization.ByteBufferDeserializer>();
             }
             else
             {
@@ -155,45 +218,84 @@ namespace MASES.KNet.Serialization
                 {
                     case KNetSerialization.SerializationType.Boolean:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.BooleanSerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.BooleanSerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.BooleanSerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.BooleanDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.ByteArray:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ByteArraySerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.ByteArraySerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArraySerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArrayDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.ByteBuffer:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ByteBufferSerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.ByteBufferSerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteBufferSerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteBufferDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Bytes:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.BytesSerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.BytesSerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.BytesSerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.BytesDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Double:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.DoubleSerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.DoubleSerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.DoubleSerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.DoubleDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Float:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.FloatSerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.FloatSerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.FloatSerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.FloatDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Integer:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.IntegerSerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.IntegerSerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.IntegerSerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.IntegerDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Long:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.LongSerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.LongSerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.LongSerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.LongDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Short:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ShortSerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.ShortSerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ShortSerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ShortDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.String:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.StringSerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.StringSerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.StringSerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.StringDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Guid:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.UUIDSerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.UUIDSerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.UUIDSerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.UUIDDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Void:
                         kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.VoidSerde().CastTo<SerdeDirect<TJVMT>>();
+                        JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.VoidSerde>();
+                        JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.VoidSerializer>();
+                        JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.VoidDeserializer>();
                         break;
-                case KNetSerialization.SerializationType.External:
-                default:
-                    throw new InvalidOperationException($"{typeof(T)} needs an external serializer: set {nameof(OnSerialize)} or {nameof(OnSerializeWithHeaders)}.");
+                    case KNetSerialization.SerializationType.External:
+                    default:
+                        throw new InvalidOperationException($"{typeof(T)} needs an external serializer: set {nameof(OnSerialize)} or {nameof(OnSerializeWithHeaders)}.");
                 }
             }
+            JVMSerDesClass = Java.Lang.Class.ForName(JVMSerDesClassName, true, Java.Lang.ClassLoader.SystemClassLoader);
+            JVMSerializerClass = Java.Lang.Class.ForName(JVMSerializerClassName, true, Java.Lang.ClassLoader.SystemClassLoader);
+            JVMDeserializerClass = Java.Lang.Class.ForName(JVMDeserializerClassName, true, Java.Lang.ClassLoader.SystemClassLoader);
 
             _KafkaSerde = kSerde;
             _KafkaSerializer = kSerde.SerializerDirect();
@@ -222,6 +324,18 @@ namespace MASES.KNet.Serialization
         public Type Type => typeof(T);
         /// <inheritdoc cref="ISerDes.JVMType"/>
         public Type JVMType => typeof(TJVMT);
+        /// <inheritdoc cref="ISerDes.JVMSerializerClassName"/>
+        public string JVMSerializerClassName { get; protected set; }
+        /// <inheritdoc cref="ISerDes.JVMDeserializerClassName"/>
+        public string JVMDeserializerClassName { get; protected set; }
+        /// <inheritdoc cref="ISerDes.JVMSerializerClassName"/>
+        public string JVMSerDesClassName { get; protected set; }
+        /// <inheritdoc cref="ISerDes.JVMSerializerClass"/>
+        public Java.Lang.Class JVMSerializerClass { get; protected set; }
+        /// <inheritdoc cref="ISerDes.JVMDeserializerClass"/>
+        public Java.Lang.Class JVMDeserializerClass { get; protected set; }
+        /// <inheritdoc cref="ISerDes.JVMSerDesClass"/>
+        public Java.Lang.Class JVMSerDesClass { get; protected set; }
         /// <inheritdoc cref="ISerDes.UseHeaders"/>
         public virtual bool UseHeaders { get; set; } = false;
         /// <inheritdoc cref="ISerDes.UseKafkaClassForSupportedTypes"/>
@@ -364,6 +478,47 @@ namespace MASES.KNet.Serialization
     {
         /// <inheritdoc/>
         public override bool IsDirectBuffered => true;
+    }
+
+    /// <summary>
+    /// Default implementation of <see cref="ISerDesSelector{T}"/>
+    /// </summary>
+    public class DefaultSerDes<T> : ISerDesSelector<T>
+    {
+        /// <summary>
+        /// Returns a new instance of <see cref="DefaultSerDes{T}"/>
+        /// </summary>
+        /// <returns>The <see cref="ISerDesSelector{T}"/> of <see cref="DefaultSerDes{T}"/></returns>
+        public static ISerDesSelector<T> NewInstance() => new DefaultSerDes<T>();
+        /// <inheritdoc cref="ISerDesSelector.SelectorTypeName"/>
+        public static string SelectorTypeName => typeof(DefaultSerDes<>).ToAssemblyQualified();
+        /// <inheritdoc cref="ISerDesSelector.ByteArraySerDes"/>
+        public static Type ByteArraySerDes => typeof(SerDesRaw<T>);
+        /// <inheritdoc cref="ISerDesSelector.ByteBufferSerDes"/>
+        public static Type ByteBufferSerDes => typeof(SerDesBuffered<T>);
+        /// <inheritdoc cref="ISerDesSelector{T}.NewSerDes{TJVM}"/>
+        public static ISerDes<T, TJVM> NewSerDes<TJVM>()
+        {
+            if (typeof(TJVM) == typeof(Java.Nio.ByteBuffer)) return NewByteBufferSerDes() as ISerDes<T, TJVM>;
+            return NewByteArraySerDes() as ISerDes<T, TJVM>;
+        }
+        /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
+        public static ISerDesRaw<T> NewByteArraySerDes() { return new SerDesRaw<T>(); }
+        /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
+        public static ISerDesBuffered<T> NewByteBufferSerDes() { return new SerDesBuffered<T>(); }
+
+        /// <inheritdoc cref="ISerDesSelector.SelectorTypeName"/>
+        string ISerDesSelector.SelectorTypeName => SelectorTypeName;
+        /// <inheritdoc cref="ISerDesSelector.ByteArraySerDes"/>
+        Type ISerDesSelector.ByteArraySerDes => ByteArraySerDes;
+        /// <inheritdoc cref="ISerDesSelector.ByteBufferSerDes"/>
+        Type ISerDesSelector.ByteBufferSerDes => ByteBufferSerDes;
+        /// <inheritdoc cref="ISerDesSelector{T}.NewSerDes{TJVM}"/>
+        ISerDes<T, TJVM> ISerDesSelector<T>.NewSerDes<TJVM>() => NewSerDes<TJVM>();
+        /// <inheritdoc cref="ISerDesSelector{T}.NewByteArraySerDes"/>
+        ISerDesRaw<T> ISerDesSelector<T>.NewByteArraySerDes() => NewByteArraySerDes();
+        /// <inheritdoc cref="ISerDesSelector{T}.NewByteBufferSerDes"/>
+        ISerDesBuffered<T> ISerDesSelector<T>.NewByteBufferSerDes() => NewByteBufferSerDes();
     }
 
     /// <summary>
