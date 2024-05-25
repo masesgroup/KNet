@@ -83,7 +83,7 @@
         <article data-uid="">
 <h1 id="knet-serializerdeserializer">KNet: Serializer/Deserializer</h1>
 
-<p>KNet comes with a base set of serializer and deserializer. Most of them are usable with primitives types (bool, int, etc) and array of bytes.</p>
+<p>KNet comes with a base set of serializer and deserializer. Most of them are usable with primitives types (<code>bool</code>, <code>int</code>, etc) and array of <code>byte</code>s.</p>
 <p>If the user wants to use structures types there are two ways:</p>
 <ol>
 <li>Creates types in Java and reflects them in C#</li>
@@ -96,7 +96,7 @@
 <li><a href="https://www.nuget.org/packages/MASES.KNet.Serialization.Json/">MASES.KNet.Serialization.Json</a>: it is a serdes which uses <a href="https://en.wikipedia.org/wiki/JSON">Json</a>; till now it is at its first stage and it is based on general purpose API from:
 <ul>
 <li>.NET Framework: it uses <a href="https://www.nuget.org/packages/Newtonsoft.Json">Newtonsoft.Json</a> package</li>
-<li>.NET 6/7: it uses the Json which comes with the frameworks</li>
+<li>.NET 6/8: it uses the Json which comes with the frameworks</li>
 </ul>
 </li>
 <li><a href="https://www.nuget.org/packages/MASES.KNet.Serialization.MessagePack/">MASES.KNet.Serialization.MessagePack</a>: it is a serdes which uses <a href="https://en.wikipedia.org/wiki/MessagePack">MessagePack</a>; till now it is at its first stage and it is based on general purpose API from <a href="https://www.nuget.org/packages/MessagePack">MessagePack</a> package</li>
@@ -149,24 +149,26 @@
 };
 </code></pre>
 <p>Otherwise the user can use a ready made class like in the following snippet:</p>
-<pre><code class="lang-c#">ISerDesRaw&lt;TestType&gt; serdes = new JsonSerDes.ValueRaw&lt;TestType&gt;();
+<pre><code class="lang-c#">ISerDesRaw&lt;TestType&gt; serdes = JsonSerDes.Value&lt;TestType&gt;.NewByteArraySerDes();
 </code></pre>
 <p>A single <code>JsonSerDes.ValueRaw</code> can be used in serialization and deserialization, and produce Json serialized data.</p>
 <h2 id="key-and-value-versions">Key and Value versions</h2>
-<p>The reader noticed that in the example was used <code>JsonSerDes.ValueRaw</code>. It is a serializer/deserializer, based on <code>byte</code> array, generally used for values because it stores, within the record <code>Headers</code> information related to the value itself.
-All packages listed above have multiple types based on the scope and data exchange mechanism:</p>
+<p>The reader noticed that in the example was used <code>JsonSerDes.Value&lt;T&gt;().NewByteArraySerDes()</code>. It is a serializer/deserializer, based on <code>byte</code> array, generally used for values because it stores, within the record <code>Headers</code> information related to the value itself.</p>
+<p>All packages listed above have multiple types based on the scope and data exchange mechanism:</p>
 <ul>
-<li>[Serialization Format].KeyRaw: key serializer/deserializer based on <code>byte</code> array</li>
-<li>[Serialization Format].KeyBuffered: key serializer/deserializer based on <code>ByteBuffer</code></li>
-<li>[Serialization Format].ValueRaw: value serializer/deserializer based on <code>byte</code> array</li>
-<li>[Serialization Format].ValueBuffered: value serializer/deserializer based on <code>ByteBuffer</code></li>
+<li>[Serialization Format].Key: key serializer/deserializer can manages data transfer using both <code>byte</code> array and <code>ByteBuffer</code></li>
+<li>[Serialization Format].Value: value serializer/deserializer can manages data transfer using both <code>byte</code> array and <code>ByteBuffer</code></li>
 </ul>
-<p>where [Serialization format] depends on the serializatin package in use.</p>
+<p>where [Serialization format] depends on the serializatin package in use and the selection of the data transfer can be made from underlying code or can be requested from the user:</p>
+<ul>
+<li><code>[Serialization Format].[Key or Value]&lt;TData&gt;.NewByteArraySerDes()</code>: returns an <code>ISerDesRaw&lt;TData&gt;</code></li>
+<li><code>[Serialization Format].[Key or Value]&lt;TData&gt;.NewByteBufferSerDes()</code>: returns an <code>ISerDesBuffered&lt;TData&gt;</code></li>
+</ul>
 <div class="TIP">
 <h5>Tip</h5>
 <p>As specified above, each serializer stores info within the <code>Headers</code> and this behavior is controlled from a property named <code>UseHeaders</code>.
 If the user writes a code like:</p>
-<pre><code class="lang-c#">ISerDesRaw&lt;TestType&gt; serdes = new JsonSerDes.ValueRaw&lt;TestType&gt;();
+<pre><code class="lang-c#">ISerDesRaw&lt;TestType&gt; serdes = JsonSerDes.Value&lt;TestType&gt;.NewByteArraySerDes();
 serdes.UseHeader = false;
 </code></pre>
 <p>The <code>ISerDesRaw&lt;TestType&gt;</code> instance does not writes the <code>Headers</code> and can be used both for key and value.</p>

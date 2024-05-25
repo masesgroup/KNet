@@ -204,19 +204,19 @@ Class GenericConfigBuilder&lt;T&gt;  <a class="header-action link-secondary" tit
 
 
 
-  <a id="MASES_KNet_GenericConfigBuilder_1_KNetKeySerDes_" data-uid="MASES.KNet.GenericConfigBuilder`1.KNetKeySerDes*"></a>
+  <a id="MASES_KNet_GenericConfigBuilder_1_KeySerDesSelector_" data-uid="MASES.KNet.GenericConfigBuilder`1.KeySerDesSelector*"></a>
 
-  <h3 id="MASES_KNet_GenericConfigBuilder_1_KNetKeySerDes" data-uid="MASES.KNet.GenericConfigBuilder`1.KNetKeySerDes">
-  KNetKeySerDes
+  <h3 id="MASES_KNet_GenericConfigBuilder_1_KeySerDesSelector" data-uid="MASES.KNet.GenericConfigBuilder`1.KeySerDesSelector">
+  KeySerDesSelector
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/GenericConfigBuilder.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> used to create an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> for keys with <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_BuildKeySerDes__2">BuildKeySerDes&lt;TKey, TJVMTKey&gt;()</a></p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> used to create an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDesSelector-1.html">ISerDesSelector&lt;T&gt;</a> for keys with <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_BuildKeySerDes__2">BuildKeySerDes&lt;TKey, TJVMTKey&gt;()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Type KNetKeySerDes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Type KeySerDesSelector { get; set; }</code></pre>
   </div>
 
 
@@ -236,19 +236,19 @@ Class GenericConfigBuilder&lt;T&gt;  <a class="header-action link-secondary" tit
 
 
 
-  <a id="MASES_KNet_GenericConfigBuilder_1_KNetValueSerDes_" data-uid="MASES.KNet.GenericConfigBuilder`1.KNetValueSerDes*"></a>
+  <a id="MASES_KNet_GenericConfigBuilder_1_ValueSerDesSelector_" data-uid="MASES.KNet.GenericConfigBuilder`1.ValueSerDesSelector*"></a>
 
-  <h3 id="MASES_KNet_GenericConfigBuilder_1_KNetValueSerDes" data-uid="MASES.KNet.GenericConfigBuilder`1.KNetValueSerDes">
-  KNetValueSerDes
+  <h3 id="MASES_KNet_GenericConfigBuilder_1_ValueSerDesSelector" data-uid="MASES.KNet.GenericConfigBuilder`1.ValueSerDesSelector">
+  ValueSerDesSelector
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/GenericConfigBuilder.cs/#L182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> used to create an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> for values with <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_BuildValueSerDes__2">BuildValueSerDes&lt;TValue, TJVMTValue&gt;()</a></p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> used to create an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDesSelector-1.html">ISerDesSelector&lt;T&gt;</a> for values with <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_BuildValueSerDes__2">BuildValueSerDes&lt;TValue, TJVMTValue&gt;()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Type KNetValueSerDes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Type ValueSerDesSelector { get; set; }</code></pre>
   </div>
 
 
@@ -276,10 +276,10 @@ Class GenericConfigBuilder&lt;T&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__2" data-uid="MASES.KNet.GenericConfigBuilder`1.BuildKeySerDes``2">
   BuildKeySerDes&lt;TKey, TJVMTKey&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/GenericConfigBuilder.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/GenericConfigBuilder.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Builds an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> defined in <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetKeySerDes">KNetKeySerDes</a></p>
+  <div class="markdown level1 summary"><p>Builds an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> defined in <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KeySerDesSelector">KeySerDesSelector</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -314,7 +314,7 @@ Class GenericConfigBuilder&lt;T&gt;  <a class="header-action link-secondary" tit
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetKeySerDes">KNetKeySerDes</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a></p>
+    <dd><p>If <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KeySerDesSelector">KeySerDesSelector</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a></p>
 </dd>
   </dl>
 
@@ -324,10 +324,10 @@ Class GenericConfigBuilder&lt;T&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__2" data-uid="MASES.KNet.GenericConfigBuilder`1.BuildValueSerDes``2">
   BuildValueSerDes&lt;TValue, TJVMTValue&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/GenericConfigBuilder.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/GenericConfigBuilder.cs/#L250"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Builds an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> defined in <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetValueSerDes">KNetValueSerDes</a></p>
+  <div class="markdown level1 summary"><p>Builds an instance of <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes&lt;T, TJVMT&gt;</a> using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> defined in <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_ValueSerDesSelector">ValueSerDesSelector</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -362,7 +362,7 @@ Class GenericConfigBuilder&lt;T&gt;  <a class="header-action link-secondary" tit
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_KNetValueSerDes">KNetValueSerDes</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a></p>
+    <dd><p>If <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html#MASES_KNet_Serialization_IGenericSerDesFactory_ValueSerDesSelector">ValueSerDesSelector</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a></p>
 </dd>
   </dl>
 
@@ -372,7 +372,7 @@ Class GenericConfigBuilder&lt;T&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="MASES_KNet_GenericConfigBuilder_1_Clear" data-uid="MASES.KNet.GenericConfigBuilder`1.Clear">
   Clear()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/GenericConfigBuilder.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/GenericConfigBuilder.cs/#L286"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Clear the current factory</p>
@@ -504,7 +504,7 @@ Class GenericConfigBuilder&lt;T&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="MASES_KNet_GenericConfigBuilder_1_Dispose" data-uid="MASES.KNet.GenericConfigBuilder`1.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/GenericConfigBuilder.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/GenericConfigBuilder.cs/#L304"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
