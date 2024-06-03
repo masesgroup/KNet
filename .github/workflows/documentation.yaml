@@ -13,10 +13,6 @@ on:
         default: false
         type: boolean
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 # This workflow contains one job called "build_documentation"
 jobs:
   build_documentation:

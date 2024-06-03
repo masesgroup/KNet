@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
         /// </summary>
-        public override string BridgeClassName => "org.mases.knet.streams.processor.api.FixedKeyProcessorSupplier";
+        public override string BridgeClassName => "org.mases.knet.developed.streams.processor.api.FixedKeyProcessorSupplier";
         #endregion
 
         #region Instance methods

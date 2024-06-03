@@ -29,7 +29,7 @@ namespace MASES.KNet.Connect
         /// Initialize a new <see cref="KNetConnectDistributed"/>
         /// </summary>
         public KNetConnectDistributed()
-            : base("org.mases.knet.connect.cli.ConnectDistributed")
+            : base("org.mases.knet.developed.connect.cli.ConnectDistributed")
         {
             KNetConnectProxy.Register();
         }
