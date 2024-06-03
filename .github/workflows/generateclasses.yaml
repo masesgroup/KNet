@@ -103,7 +103,7 @@ jobs:
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
-      - name: Request a PR to commit changes
+      - name: Request a PR to commit changes made with unpublished version of JNetReflector
         if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflector == true }} #do not push any changes outside main repo or GeneratePR is false
         uses: peter-evans/create-pull-request@v6
         with:
@@ -123,7 +123,7 @@ jobs:
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
 
-      - name: Request a PR to commit changes
+      - name: Request a PR to commit changes made with latest published version of JNetReflector
         if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflector == false }} #do not push any changes outside main repo or GeneratePR is false
         uses: peter-evans/create-pull-request@v6
         with:
