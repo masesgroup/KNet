@@ -167,14 +167,6 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Deserializer<Inner>>("innerDeserializer", "()Lorg/apache/kafka/common/serialization/Deserializer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer--"/>
-        /// </summary>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
-        public Org.Apache.Kafka.Common.Serialization.Deserializer<Inner> InnerDeserializerDirect()
-        {
-            return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.DeserializerDirect<Inner>, Org.Apache.Kafka.Common.Serialization.Deserializer<Inner>>("innerDeserializer", "()Lorg/apache/kafka/common/serialization/Deserializer;");
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/ListDeserializer.html#close--"/>
         /// </summary>
         public void Close()

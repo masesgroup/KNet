@@ -333,14 +333,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<K>>("keySerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#keySerde--"/>
-        /// </summary>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public Org.Apache.Kafka.Common.Serialization.Serde<K> KeySerdeDirect()
-        {
-            return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<K>, Org.Apache.Kafka.Common.Serialization.Serde<K>>("keySerde", "()Lorg/apache/kafka/common/serialization/Serde;");
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#valueSerde--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -349,28 +341,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<V>>("valueSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#valueSerde--"/>
-        /// </summary>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public Org.Apache.Kafka.Common.Serialization.Serde<V> ValueSerdeDirect()
-        {
-            return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<V>, Org.Apache.Kafka.Common.Serialization.Serde<V>>("valueSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Serde<VO> OtherValueSerde()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<VO>>("otherValueSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde--"/>
-        /// </summary>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public Org.Apache.Kafka.Common.Serialization.Serde<VO> OtherValueSerdeDirect()
-        {
-            return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<VO>, Org.Apache.Kafka.Common.Serialization.Serde<VO>>("otherValueSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#withGracePeriod-java.time.Duration-"/>

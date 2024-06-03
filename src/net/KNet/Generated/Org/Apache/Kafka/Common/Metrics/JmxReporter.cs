@@ -102,15 +102,6 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
             return SExecuteWithSignature<Java.Util.Function.Predicate<Java.Lang.String>>(LocalBridgeClazz, "compilePredicate", "(Ljava/util/Map;)Ljava/util/function/Predicate;", arg0);
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/metrics/JmxReporter.html#compilePredicate-java.util.Map-"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <returns><see cref="Java.Util.Function.Predicate"/></returns>
-        public static Java.Util.Function.Predicate<Java.Lang.String> CompilePredicateDirect(Java.Util.Map<Java.Lang.String, object> arg0)
-        {
-            return SExecuteWithSignature<Java.Util.Function.PredicateDirect<Java.Lang.String>, Java.Util.Function.Predicate<Java.Lang.String>>(LocalBridgeClazz, "compilePredicate", "(Ljava/util/Map;)Ljava/util/function/Predicate;", arg0);
-        }
 
         #endregion
 

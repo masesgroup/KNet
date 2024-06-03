@@ -268,14 +268,6 @@ namespace Org.Apache.Kafka.Streams
             {
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.TopicNameExtractor<object, object>>("topicNameExtractor", "()Lorg/apache/kafka/streams/processor/TopicNameExtractor;");
             }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyDescription.Sink.html#topicNameExtractor--"/>
-            /// </summary>
-            /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor"/></returns>
-            public Org.Apache.Kafka.Streams.Processor.TopicNameExtractor<object, object> TopicNameExtractorDirect()
-            {
-                return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect<object, object>, Org.Apache.Kafka.Streams.Processor.TopicNameExtractor<object, object>>("topicNameExtractor", "()Lorg/apache/kafka/streams/processor/TopicNameExtractor;");
-            }
 
             #endregion
 

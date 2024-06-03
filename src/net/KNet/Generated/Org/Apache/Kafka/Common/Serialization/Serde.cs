@@ -428,7 +428,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
         public override Org.Apache.Kafka.Common.Serialization.Deserializer<T> Deserializer()
         {
-            return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.DeserializerDirect<T>, Org.Apache.Kafka.Common.Serialization.Deserializer<T>>("deserializer", "()Lorg/apache/kafka/common/serialization/Deserializer;");
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Deserializer<T>>("deserializer", "()Lorg/apache/kafka/common/serialization/Deserializer;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#serializer--"/>
@@ -436,7 +436,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
         public override Org.Apache.Kafka.Common.Serialization.Serializer<T> Serializer()
         {
-            return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerializerDirect<T>, Org.Apache.Kafka.Common.Serialization.Serializer<T>>("serializer", "()Lorg/apache/kafka/common/serialization/Serializer;");
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serializer<T>>("serializer", "()Lorg/apache/kafka/common/serialization/Serializer;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serde.html#close--"/>
