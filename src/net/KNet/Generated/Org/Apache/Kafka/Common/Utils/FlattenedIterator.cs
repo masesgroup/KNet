@@ -32,9 +32,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/FlattenedIterator.html#org.apache.kafka.common.utils.FlattenedIterator(java.util.Iterator,java.util.function.Function)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
+        /// <param name="arg0"><see cref="Java.Util.IteratorClass"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        public FlattenedIterator(Java.Util.Iterator arg0, Java.Util.Function.Function arg1)
+        public FlattenedIterator(Java.Util.IteratorClass arg0, Java.Util.Function.Function arg1)
             : base(arg0, arg1)
         {
         }
@@ -72,9 +72,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/FlattenedIterator.html#org.apache.kafka.common.utils.FlattenedIterator(java.util.Iterator,java.util.function.Function)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
+        /// <param name="arg0"><see cref="Java.Util.IteratorClass"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        public FlattenedIterator(Java.Util.Iterator<O> arg0, Java.Util.Function.Function<O, Java.Util.Iterator<I>> arg1)
+        public FlattenedIterator(Java.Util.IteratorClass<O> arg0, Java.Util.Function.Function<O, Java.Util.IteratorClass<I>> arg1)
             : base(arg0, arg1)
         {
         }

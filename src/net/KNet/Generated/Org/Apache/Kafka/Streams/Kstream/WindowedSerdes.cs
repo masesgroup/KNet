@@ -52,16 +52,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>>(LocalBridgeClazz, "sessionWindowedSerdeFrom", "(Ljava/lang/Class;)Lorg/apache/kafka/common/serialization/Serde;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/WindowedSerdes.html#sessionWindowedSerdeFrom-java.lang.Class-"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
-        /// <typeparam name="T"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public static Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>> SessionWindowedSerdeFromDirect<T>(Java.Lang.Class arg0)
-        {
-            return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>, Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>>(LocalBridgeClazz, "sessionWindowedSerdeFrom", "(Ljava/lang/Class;)Lorg/apache/kafka/common/serialization/Serde;", arg0);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/WindowedSerdes.html#timeWindowedSerdeFrom-java.lang.Class-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
@@ -71,17 +61,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public static Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>> TimeWindowedSerdeFrom<T>(Java.Lang.Class arg0, long arg1)
         {
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>>(LocalBridgeClazz, "timeWindowedSerdeFrom", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/WindowedSerdes.html#timeWindowedSerdeFrom-java.lang.Class-long-"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
-        /// <param name="arg1"><see cref="long"/></param>
-        /// <typeparam name="T"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public static Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>> TimeWindowedSerdeFromDirect<T>(Java.Lang.Class arg0, long arg1)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>, Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>>(LocalBridgeClazz, "timeWindowedSerdeFrom", arg0, arg1);
         }
 
         #endregion

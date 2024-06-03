@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Raft
     #endregion
 
     #region BatchReader<T>
-    public partial class BatchReader<T> : Org.Apache.Kafka.Raft.IBatchReader<T>, Java.Util.IIterator<Org.Apache.Kafka.Raft.Batch<T>>, Java.Lang.IAutoCloseable
+    public partial class BatchReader<T> : Org.Apache.Kafka.Raft.IBatchReader<T>, Java.Util.IIteratorClass<Org.Apache.Kafka.Raft.Batch<T>>, Java.Lang.IAutoCloseable
     {
         #region Constructors
 

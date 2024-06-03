@@ -161,13 +161,13 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/Utils.html#covariantCast-java.util.Iterator-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
+        /// <param name="arg0"><see cref="Java.Util.IteratorClass"/></param>
         /// <typeparam name="S"></typeparam>
         /// <typeparam name="Arg0ExtendsS"><typeparamref name="S"/></typeparam>
-        /// <returns><see cref="Java.Util.Iterator"/></returns>
-        public static Java.Util.Iterator<S> CovariantCast<S, Arg0ExtendsS>(Java.Util.Iterator<Arg0ExtendsS> arg0) where Arg0ExtendsS : S
+        /// <returns><see cref="Java.Util.IteratorClass"/></returns>
+        public static Java.Util.IteratorClass<S> CovariantCast<S, Arg0ExtendsS>(Java.Util.IteratorClass<Arg0ExtendsS> arg0) where Arg0ExtendsS : S
         {
-            return SExecuteWithSignature<Java.Util.Iterator<S>>(LocalBridgeClazz, "covariantCast", "(Ljava/util/Iterator;)Ljava/util/Iterator;", arg0);
+            return SExecuteWithSignature<Java.Util.IteratorClass<S>>(LocalBridgeClazz, "covariantCast", "(Ljava/util/Iterator;)Ljava/util/Iterator;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/Utils.html#loadClass-java.lang.String-java.lang.Class-"/>
@@ -250,21 +250,21 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/Utils.html#toList-java.util.Iterator-java.util.function.Predicate-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
+        /// <param name="arg0"><see cref="Java.Util.IteratorClass"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Predicate"/></param>
         /// <typeparam name="T"></typeparam>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public static Java.Util.List<T> ToList<T>(Java.Util.Iterator<T> arg0, Java.Util.Function.Predicate<T> arg1)
+        public static Java.Util.List<T> ToList<T>(Java.Util.IteratorClass<T> arg0, Java.Util.Function.Predicate<T> arg1)
         {
             return SExecute<Java.Util.List<T>>(LocalBridgeClazz, "toList", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/Utils.html#toList-java.util.Iterator-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
+        /// <param name="arg0"><see cref="Java.Util.IteratorClass"/></param>
         /// <typeparam name="T"></typeparam>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public static Java.Util.List<T> ToList<T>(Java.Util.Iterator<T> arg0)
+        public static Java.Util.List<T> ToList<T>(Java.Util.IteratorClass<T> arg0)
         {
             return SExecuteWithSignature<Java.Util.List<T>>(LocalBridgeClazz, "toList", "(Ljava/util/Iterator;)Ljava/util/List;", arg0);
         }

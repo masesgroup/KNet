@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/CircularIterator.html#hasNext--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
-        public bool HasNext()
+        public bool HasNextMethod()
         {
             return IExecuteWithSignature<bool>("hasNext", "()Z");
         }
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/CircularIterator.html#next--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
-        public object Next()
+        public object NextMethod()
         {
             return IExecuteWithSignature("next", "()Ljava/lang/Object;");
         }
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/CircularIterator.html#hasNext--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
-        public bool HasNext()
+        public bool HasNextMethod()
         {
             return IExecuteWithSignature<bool>("hasNext", "()Z");
         }
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/CircularIterator.html#next--"/>
         /// </summary>
         /// <returns><typeparamref name="T"/></returns>
-        public T Next()
+        public T NextMethod()
         {
             return IExecuteWithSignature<T>("next", "()Ljava/lang/Object;");
         }

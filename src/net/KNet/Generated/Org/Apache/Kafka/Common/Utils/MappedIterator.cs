@@ -32,9 +32,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/MappedIterator.html#org.apache.kafka.common.utils.MappedIterator(java.util.Iterator,java.util.function.Function)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
+        /// <param name="arg0"><see cref="Java.Util.IteratorClass"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        public MappedIterator(Java.Util.Iterator arg0, Java.Util.Function.Function arg1)
+        public MappedIterator(Java.Util.IteratorClass arg0, Java.Util.Function.Function arg1)
             : base(arg0, arg1)
         {
         }
@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/MappedIterator.html#hasNext--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
-        public bool HasNext()
+        public bool HasNextMethod()
         {
             return IExecuteWithSignature<bool>("hasNext", "()Z");
         }
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/MappedIterator.html#next--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
-        public object Next()
+        public object NextMethod()
         {
             return IExecuteWithSignature("next", "()Ljava/lang/Object;");
         }
@@ -88,9 +88,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/MappedIterator.html#org.apache.kafka.common.utils.MappedIterator(java.util.Iterator,java.util.function.Function)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
+        /// <param name="arg0"><see cref="Java.Util.IteratorClass"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
-        public MappedIterator(Java.Util.Iterator<F> arg0, Java.Util.Function.Function<F, T> arg1)
+        public MappedIterator(Java.Util.IteratorClass<F> arg0, Java.Util.Function.Function<F, T> arg1)
             : base(arg0, arg1)
         {
         }
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/MappedIterator.html#hasNext--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
-        public bool HasNext()
+        public bool HasNextMethod()
         {
             return IExecuteWithSignature<bool>("hasNext", "()Z");
         }
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/MappedIterator.html#next--"/>
         /// </summary>
         /// <returns><typeparamref name="T"/></returns>
-        public T Next()
+        public T NextMethod()
         {
             return IExecuteWithSignature<T>("next", "()Ljava/lang/Object;");
         }

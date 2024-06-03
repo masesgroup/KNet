@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Streams.State
     #endregion
 
     #region VersionedRecordIterator<V>
-    public partial class VersionedRecordIterator<V> : Org.Apache.Kafka.Streams.State.IVersionedRecordIterator<V>, Java.Util.IIterator<Org.Apache.Kafka.Streams.State.VersionedRecord<V>>, Java.Io.ICloseable
+    public partial class VersionedRecordIterator<V> : Org.Apache.Kafka.Streams.State.IVersionedRecordIterator<V>, Java.Util.IIteratorClass<Org.Apache.Kafka.Streams.State.VersionedRecord<V>>, Java.Io.ICloseable
     {
         #region Constructors
 

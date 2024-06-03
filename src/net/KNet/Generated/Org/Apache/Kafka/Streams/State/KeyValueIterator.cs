@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Streams.State
     #endregion
 
     #region KeyValueIterator<K, V>
-    public partial class KeyValueIterator<K, V> : Org.Apache.Kafka.Streams.State.IKeyValueIterator<K, V>, Java.Util.IIterator<Org.Apache.Kafka.Streams.KeyValue<K, V>>, Java.Io.ICloseable
+    public partial class KeyValueIterator<K, V> : Org.Apache.Kafka.Streams.State.IKeyValueIterator<K, V>, Java.Util.IIteratorClass<Org.Apache.Kafka.Streams.KeyValue<K, V>>, Java.Io.ICloseable
     {
         #region Constructors
 

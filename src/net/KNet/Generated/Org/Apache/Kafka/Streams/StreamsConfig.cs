@@ -880,28 +880,12 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<object>>("defaultKeySerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/StreamsConfig.html#defaultKeySerde--"/>
-        /// </summary>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public Org.Apache.Kafka.Common.Serialization.Serde<object> DefaultKeySerdeDirect()
-        {
-            return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<object>, Org.Apache.Kafka.Common.Serialization.Serde<object>>("defaultKeySerde", "()Lorg/apache/kafka/common/serialization/Serde;");
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/StreamsConfig.html#defaultValueSerde--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Serde<object> DefaultValueSerde()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<object>>("defaultValueSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/StreamsConfig.html#defaultValueSerde--"/>
-        /// </summary>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public Org.Apache.Kafka.Common.Serialization.Serde<object> DefaultValueSerdeDirect()
-        {
-            return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<object>, Org.Apache.Kafka.Common.Serialization.Serde<object>>("defaultValueSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/StreamsConfig.html#defaultDeserializationExceptionHandler--"/>

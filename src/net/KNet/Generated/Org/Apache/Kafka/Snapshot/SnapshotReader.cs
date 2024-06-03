@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Snapshot
     #endregion
 
     #region SnapshotReader<T>
-    public partial class SnapshotReader<T> : Org.Apache.Kafka.Snapshot.ISnapshotReader<T>, Java.Lang.IAutoCloseable, Java.Util.IIterator<Org.Apache.Kafka.Raft.Batch<T>>
+    public partial class SnapshotReader<T> : Org.Apache.Kafka.Snapshot.ISnapshotReader<T>, Java.Lang.IAutoCloseable, Java.Util.IIteratorClass<Org.Apache.Kafka.Raft.Batch<T>>
     {
         #region Constructors
 

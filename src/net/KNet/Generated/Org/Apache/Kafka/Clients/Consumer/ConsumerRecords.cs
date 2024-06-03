@@ -95,10 +95,10 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator--"/>
         /// </summary>
-        /// <returns><see cref="Java.Util.Iterator"/></returns>
-        public Java.Util.Iterator Iterator()
+        /// <returns><see cref="Java.Util.IteratorClass"/></returns>
+        public Java.Util.IteratorClass IteratorMethod()
         {
-            return IExecuteWithSignature<Java.Util.Iterator>("iterator", "()Ljava/util/Iterator;");
+            return IExecuteWithSignature<Java.Util.IteratorClass>("iterator", "()Ljava/util/Iterator;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-org.apache.kafka.common.TopicPartition-"/>
@@ -202,10 +202,10 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator--"/>
         /// </summary>
-        /// <returns><see cref="Java.Util.Iterator"/></returns>
-        public Java.Util.Iterator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> Iterator()
+        /// <returns><see cref="Java.Util.IteratorClass"/></returns>
+        public Java.Util.IteratorClass<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> IteratorMethod()
         {
-            return IExecuteWithSignature<Java.Util.Iterator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>>("iterator", "()Ljava/util/Iterator;");
+            return IExecuteWithSignature<Java.Util.IteratorClass<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>>("iterator", "()Ljava/util/Iterator;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-org.apache.kafka.common.TopicPartition-"/>

@@ -48,9 +48,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/CloseableIterator.html#wrap-java.util.Iterator-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
+        /// <param name="arg0"><see cref="Java.Util.IteratorClass"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.CloseableIterator"/></returns>
-        public static Org.Apache.Kafka.Common.Utils.CloseableIterator Wrap(Java.Util.Iterator arg0)
+        public static Org.Apache.Kafka.Common.Utils.CloseableIterator Wrap(Java.Util.IteratorClass arg0)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Utils.CloseableIterator>(LocalBridgeClazz, "wrap", "(Ljava/util/Iterator;)Lorg/apache/kafka/common/utils/CloseableIterator;", arg0);
         }
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Utils
     #endregion
 
     #region CloseableIterator<T>
-    public partial class CloseableIterator<T> : Org.Apache.Kafka.Common.Utils.ICloseableIterator<T>, Java.Util.IIterator<T>, Java.Io.ICloseable
+    public partial class CloseableIterator<T> : Org.Apache.Kafka.Common.Utils.ICloseableIterator<T>, Java.Util.IIteratorClass<T>, Java.Io.ICloseable
     {
         #region Constructors
 
@@ -121,10 +121,10 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/utils/CloseableIterator.html#wrap-java.util.Iterator-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
+        /// <param name="arg0"><see cref="Java.Util.IteratorClass"/></param>
         /// <typeparam name="R"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.CloseableIterator"/></returns>
-        public static Org.Apache.Kafka.Common.Utils.CloseableIterator<R> Wrap<R>(Java.Util.Iterator<R> arg0)
+        public static Org.Apache.Kafka.Common.Utils.CloseableIterator<R> Wrap<R>(Java.Util.IteratorClass<R> arg0)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Utils.CloseableIterator<R>>(LocalBridgeClazz, "wrap", "(Ljava/util/Iterator;)Lorg/apache/kafka/common/utils/CloseableIterator;", arg0);
         }
