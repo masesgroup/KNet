@@ -36,7 +36,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
         /// </summary>
-        public override string BridgeClassName => "org.mases.knet.streams.kstream.KNetPredicateEqualityTest";
+        public override string BridgeClassName => "org.mases.knet.developed.streams.kstream.KNetPredicateEqualityTest";
 
         void updateRemote()
         {

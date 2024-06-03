@@ -27,7 +27,7 @@ namespace MASES.KNet.Serialization
     public class ByteBufferDeserializer : JVMBridgeBase<ByteBufferDeserializer>
     {
         /// <inheritdoc/>
-        public override string BridgeClassName => "org.mases.knet.common.serialization.ByteBufferDeserializer";
+        public override string BridgeClassName => "org.mases.knet.developed.common.serialization.ByteBufferDeserializer";
     }
 
     /// <summary>
@@ -36,7 +36,7 @@ namespace MASES.KNet.Serialization
     public class ByteBufferSerializer : JVMBridgeBase<ByteBufferSerializer>
     {
         /// <inheritdoc/>
-        public override string BridgeClassName => "org.mases.knet.common.serialization.ByteBufferSerializer";
+        public override string BridgeClassName => "org.mases.knet.developed.common.serialization.ByteBufferSerializer";
     }
 
     /// <summary>
@@ -45,7 +45,7 @@ namespace MASES.KNet.Serialization
     public class Serdes : JVMBridgeBase<Serdes>
     {
         /// <inheritdoc/>
-        public override string BridgeClassName => "org.mases.knet.common.serialization.Serdes";
+        public override string BridgeClassName => "org.mases.knet.developed.common.serialization.Serdes";
         /// <summary>
         /// Returns <see cref="Org.Apache.Kafka.Common.Serialization.Serde{T}"/> of <see cref="Java.Nio.ByteBuffer"/>
         /// </summary>

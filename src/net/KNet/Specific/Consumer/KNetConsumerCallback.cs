@@ -35,7 +35,7 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
         /// </summary>
-        public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.KNetConsumerCallback";
+        public sealed override string BridgeClassName => "org.mases.knet.developed.clients.consumer.KNetConsumerCallback";
 
         readonly Action<ConsumerRecord<K, V, TJVMK, TJVMV>> recordReadyFunction = null;
         public virtual Action<ConsumerRecord<K, V, TJVMK, TJVMV>> OnRecordReady { get { return recordReadyFunction; } }

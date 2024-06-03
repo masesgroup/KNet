@@ -166,33 +166,6 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.6.0</version>
-                <configuration>
-                    <links>
-                        <link>https://www.jcobridge.com/api-java</link>
-                    </links>
-                    <quiet>true</quiet>
-                    <source>8</source>
-                    <additionalDependencies>
-                        <additionalDependency>
-                            <groupId>JCOBridge</groupId>
-                            <artifactId>JCOBridge</artifactId>
-                            <version>${jcobridgeVersion}</version>
-                        </additionalDependency>
-                    </additionalDependencies>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>

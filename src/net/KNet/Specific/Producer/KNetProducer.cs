@@ -210,7 +210,7 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
         /// </summary>
-        public override string BridgeClassName => "org.mases.knet.clients.producer.KNetProducer";
+        public override string BridgeClassName => "org.mases.knet.developed.clients.producer.KNetProducer";
 
         readonly bool _autoCreateSerDes = false;
         readonly ISerDes<K, TJVMK> _keySerializer;

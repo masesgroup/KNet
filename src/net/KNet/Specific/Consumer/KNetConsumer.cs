@@ -124,7 +124,7 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
         /// </summary>
-        public override string BridgeClassName => "org.mases.knet.clients.consumer.KNetConsumer";
+        public override string BridgeClassName => "org.mases.knet.developed.clients.consumer.KNetConsumer";
 
         internal KNetConsumer(Properties props) : base(props) { }
 
