@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// </summary>
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task"><see cref="Org.Apache.Kafka.Connect.Connector.Task"/></typeparam>
         /// <returns><see cref="Java.Lang.Class"/></returns>
-        public Java.Lang.Class TaskClass<ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task>() where ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task: Org.Apache.Kafka.Connect.Connector.Task
+        public Java.Lang.Class TaskClass<ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task>() where ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task : Org.Apache.Kafka.Connect.Connector.Task
         {
             return IExecuteWithSignature<Java.Lang.Class>("taskClass", "()Ljava/lang/Class;");
         }

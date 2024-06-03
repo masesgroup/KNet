@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.CogroupedKStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.CogroupedKStream<K, VOut> Cogroup<VOut, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Aggregator<Arg0objectSuperK, Arg0objectSuperV, VOut> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.CogroupedKStream<K, VOut> Cogroup<VOut, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Aggregator<Arg0objectSuperK, Arg0objectSuperV, VOut> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.CogroupedKStream<K, VOut>>("cogroup", "(Lorg/apache/kafka/streams/kstream/Aggregator;)Lorg/apache/kafka/streams/kstream/CogroupedKStream;", arg0);
         }
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Aggregate<VR, Arg1objectSuperK, Arg1objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Initializer<VR> arg0, Org.Apache.Kafka.Streams.Kstream.Aggregator<Arg1objectSuperK, Arg1objectSuperV, VR> arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2) where Arg1objectSuperK: K where Arg1objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Aggregate<VR, Arg1objectSuperK, Arg1objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Initializer<VR> arg0, Org.Apache.Kafka.Streams.Kstream.Aggregator<Arg1objectSuperK, Arg1objectSuperV, VR> arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("aggregate", arg0, arg1, arg2);
         }
@@ -270,7 +270,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Aggregate<VR, Arg1objectSuperK, Arg1objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Initializer<VR> arg0, Org.Apache.Kafka.Streams.Kstream.Aggregator<Arg1objectSuperK, Arg1objectSuperV, VR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg3) where Arg1objectSuperK: K where Arg1objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Aggregate<VR, Arg1objectSuperK, Arg1objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Initializer<VR> arg0, Org.Apache.Kafka.Streams.Kstream.Aggregator<Arg1objectSuperK, Arg1objectSuperV, VR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg3) where Arg1objectSuperK : K where Arg1objectSuperV : V
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("aggregate", arg0, arg1, arg2, arg3);
         }
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Aggregate<VR, Arg1objectSuperK, Arg1objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Initializer<VR> arg0, Org.Apache.Kafka.Streams.Kstream.Aggregator<Arg1objectSuperK, Arg1objectSuperV, VR> arg1) where Arg1objectSuperK: K where Arg1objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Aggregate<VR, Arg1objectSuperK, Arg1objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Initializer<VR> arg0, Org.Apache.Kafka.Streams.Kstream.Aggregator<Arg1objectSuperK, Arg1objectSuperV, VR> arg1) where Arg1objectSuperK : K where Arg1objectSuperV : V
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("aggregate", arg0, arg1);
         }
@@ -293,7 +293,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Windows"/></param>
         /// <typeparam name="W"><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream<K, V> WindowedBy<W>(Org.Apache.Kafka.Streams.Kstream.Windows<W> arg0) where W: Org.Apache.Kafka.Streams.Kstream.Window
+        public Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream<K, V> WindowedBy<W>(Org.Apache.Kafka.Streams.Kstream.Windows<W> arg0) where W : Org.Apache.Kafka.Streams.Kstream.Window
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream<K, V>>("windowedBy", arg0);
         }

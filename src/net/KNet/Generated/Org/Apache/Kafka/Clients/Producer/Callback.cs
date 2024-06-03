@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("onCompletion", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>>(OnCompletionEventHandler));
+            AddEventHandler("onCompletion", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>>(OnCompletionEventHandler));
 
         }
 
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Callback.html#onCompletion-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnCompletion"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnCompletion { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnCompletion { get; set; } = null;
 
         void OnCompletionEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>> data)
         {

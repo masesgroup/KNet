@@ -436,7 +436,7 @@ namespace Org.Apache.Kafka.Common
         /// <typeparam name="Arg0objectSuperT"><typeparamref name="T"/></typeparam>
         /// <typeparam name="Arg0objectSuperJava_Lang_Throwable"><see cref="Java.Lang.Throwable"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<T> WhenComplete<Arg0objectSuperT, Arg0objectSuperJava_Lang_Throwable>(Org.Apache.Kafka.Common.KafkaFuture.BiConsumer<Arg0objectSuperT, Arg0objectSuperJava_Lang_Throwable> arg0) where Arg0objectSuperT: T where Arg0objectSuperJava_Lang_Throwable: Java.Lang.Throwable
+        public Org.Apache.Kafka.Common.KafkaFuture<T> WhenComplete<Arg0objectSuperT, Arg0objectSuperJava_Lang_Throwable>(Org.Apache.Kafka.Common.KafkaFuture.BiConsumer<Arg0objectSuperT, Arg0objectSuperJava_Lang_Throwable> arg0) where Arg0objectSuperT : T where Arg0objectSuperJava_Lang_Throwable : Java.Lang.Throwable
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture<T>>("whenComplete", "(Lorg/apache/kafka/common/KafkaFuture$BiConsumer;)Lorg/apache/kafka/common/KafkaFuture;", arg0);
         }

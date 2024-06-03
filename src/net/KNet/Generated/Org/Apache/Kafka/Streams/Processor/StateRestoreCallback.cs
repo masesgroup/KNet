@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("restore", new System.EventHandler<CLRListenerEventArgs<CLREventData<byte[]>>>(RestoreEventHandler));
+            AddEventHandler("restore", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<byte[]>>>(RestoreEventHandler));
 
         }
 
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StateRestoreCallback.html#restore-byte[]-byte[]-"/>
         /// </summary>
         /// <remarks>If <see cref="OnRestore"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<byte[], byte[]> OnRestore { get; set; } = null;
+        public global::System.Action<byte[], byte[]> OnRestore { get; set; } = null;
 
         void RestoreEventHandler(object sender, CLRListenerEventArgs<CLREventData<byte[]>> data)
         {

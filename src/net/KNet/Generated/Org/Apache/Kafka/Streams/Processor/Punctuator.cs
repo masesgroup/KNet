@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("punctuate", new System.EventHandler<CLRListenerEventArgs<CLREventData<long>>>(PunctuateEventHandler));
+            AddEventHandler("punctuate", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<long>>>(PunctuateEventHandler));
 
         }
 
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/Punctuator.html#punctuate-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnPunctuate"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<long> OnPunctuate { get; set; } = null;
+        public global::System.Action<long> OnPunctuate { get; set; } = null;
 
         void PunctuateEventHandler(object sender, CLRListenerEventArgs<CLREventData<long>> data)
         {

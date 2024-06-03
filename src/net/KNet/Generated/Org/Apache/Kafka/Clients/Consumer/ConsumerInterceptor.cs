@@ -50,10 +50,10 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("onConsume", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>>>(OnConsumeEventHandler));
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("onCommit", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(OnCommitEventHandler));
-            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(ConfigureEventHandler));
+            AddEventHandler("onConsume", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>>>(OnConsumeEventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("onCommit", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(OnCommitEventHandler));
+            AddEventHandler("configure", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(ConfigureEventHandler));
 
         }
 
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onConsume-org.apache.kafka.clients.consumer.ConsumerRecords-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnConsume"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords, Org.Apache.Kafka.Clients.Consumer.ConsumerRecords> OnOnConsume { get; set; } = null;
+        public global::System.Func<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords, Org.Apache.Kafka.Clients.Consumer.ConsumerRecords> OnOnConsume { get; set; } = null;
 
         void OnConsumeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>> data)
         {
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onCommit-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnCommit"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map> OnOnCommit { get; set; } = null;
+        public global::System.Action<Java.Util.Map> OnOnCommit { get; set; } = null;
 
         void OnCommitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map>> data)
         {
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map> OnConfigure { get; set; } = null;
+        public global::System.Action<Java.Util.Map> OnConfigure { get; set; } = null;
 
         void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map>> data)
         {
@@ -258,10 +258,10 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("onConsume", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>>>(OnConsumeEventHandler));
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("onCommit", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>>(OnCommitEventHandler));
-            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
+            AddEventHandler("onConsume", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>>>(OnConsumeEventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("onCommit", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>>(OnCommitEventHandler));
+            AddEventHandler("configure", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
 
         }
 
@@ -269,7 +269,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onConsume-org.apache.kafka.clients.consumer.ConsumerRecords-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnConsume"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>, Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>> OnOnConsume { get; set; } = null;
+        public global::System.Func<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>, Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>> OnOnConsume { get; set; } = null;
 
         void OnConsumeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>> data)
         {
@@ -292,7 +292,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -312,7 +312,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onCommit-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnCommit"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>> OnOnCommit { get; set; } = null;
+        public global::System.Action<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>> OnOnCommit { get; set; } = null;
 
         void OnCommitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>> data)
         {
@@ -333,7 +333,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
+        public global::System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
 
         void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {

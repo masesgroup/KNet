@@ -803,7 +803,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg2objectSuperGV"><typeparamref name="GV"/></typeparam>
         /// <typeparam name="Arg2ExtendsRV"><typeparamref name="RV"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> Join<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2, Org.Apache.Kafka.Streams.Kstream.Named arg3) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1ExtendsGK: GK where Arg2objectSuperV: V where Arg2objectSuperGV: GV where Arg2ExtendsRV: RV
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> Join<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2, Org.Apache.Kafka.Streams.Kstream.Named arg3) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1ExtendsGK : GK where Arg2objectSuperV : V where Arg2objectSuperGV : GV where Arg2ExtendsRV : RV
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, RV>>("join", arg0, arg1, arg2, arg3);
         }
@@ -823,7 +823,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg2objectSuperGV"><typeparamref name="GV"/></typeparam>
         /// <typeparam name="Arg2ExtendsRV"><typeparamref name="RV"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> Join<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1ExtendsGK: GK where Arg2objectSuperV: V where Arg2objectSuperGV: GV where Arg2ExtendsRV: RV
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> Join<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1ExtendsGK : GK where Arg2objectSuperV : V where Arg2objectSuperGV : GV where Arg2ExtendsRV : RV
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, RV>>("join", arg0, arg1, arg2);
         }
@@ -845,7 +845,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg2objectSuperGV"><typeparamref name="GV"/></typeparam>
         /// <typeparam name="Arg2ExtendsRV"><typeparamref name="RV"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> Join<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2, Org.Apache.Kafka.Streams.Kstream.Named arg3) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1ExtendsGK: GK where Arg2objectSuperK: K where Arg2objectSuperV: V where Arg2objectSuperGV: GV where Arg2ExtendsRV: RV
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> Join<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2, Org.Apache.Kafka.Streams.Kstream.Named arg3) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1ExtendsGK : GK where Arg2objectSuperK : K where Arg2objectSuperV : V where Arg2objectSuperGV : GV where Arg2ExtendsRV : RV
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, RV>>("join", arg0, arg1, arg2, arg3);
         }
@@ -866,7 +866,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg2objectSuperGV"><typeparamref name="GV"/></typeparam>
         /// <typeparam name="Arg2ExtendsRV"><typeparamref name="RV"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> Join<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1ExtendsGK: GK where Arg2objectSuperK: K where Arg2objectSuperV: V where Arg2objectSuperGV: GV where Arg2ExtendsRV: RV
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> Join<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1ExtendsGK : GK where Arg2objectSuperK : K where Arg2objectSuperV : V where Arg2objectSuperGV : GV where Arg2ExtendsRV : RV
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, RV>>("join", arg0, arg1, arg2);
         }
@@ -887,7 +887,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg2objectSuperGV"><typeparamref name="GV"/></typeparam>
         /// <typeparam name="Arg2ExtendsRV"><typeparamref name="RV"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> LeftJoin<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2, Org.Apache.Kafka.Streams.Kstream.Named arg3) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1ExtendsGK: GK where Arg2objectSuperV: V where Arg2objectSuperGV: GV where Arg2ExtendsRV: RV
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> LeftJoin<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2, Org.Apache.Kafka.Streams.Kstream.Named arg3) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1ExtendsGK : GK where Arg2objectSuperV : V where Arg2objectSuperGV : GV where Arg2ExtendsRV : RV
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, RV>>("leftJoin", arg0, arg1, arg2, arg3);
         }
@@ -907,7 +907,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg2objectSuperGV"><typeparamref name="GV"/></typeparam>
         /// <typeparam name="Arg2ExtendsRV"><typeparamref name="RV"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> LeftJoin<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1ExtendsGK: GK where Arg2objectSuperV: V where Arg2objectSuperGV: GV where Arg2ExtendsRV: RV
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> LeftJoin<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1ExtendsGK : GK where Arg2objectSuperV : V where Arg2objectSuperGV : GV where Arg2ExtendsRV : RV
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, RV>>("leftJoin", arg0, arg1, arg2);
         }
@@ -929,7 +929,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg2objectSuperGV"><typeparamref name="GV"/></typeparam>
         /// <typeparam name="Arg2ExtendsRV"><typeparamref name="RV"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> LeftJoin<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2, Org.Apache.Kafka.Streams.Kstream.Named arg3) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1ExtendsGK: GK where Arg2objectSuperK: K where Arg2objectSuperV: V where Arg2objectSuperGV: GV where Arg2ExtendsRV: RV
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> LeftJoin<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2, Org.Apache.Kafka.Streams.Kstream.Named arg3) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1ExtendsGK : GK where Arg2objectSuperK : K where Arg2objectSuperV : V where Arg2objectSuperGV : GV where Arg2ExtendsRV : RV
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, RV>>("leftJoin", arg0, arg1, arg2, arg3);
         }
@@ -950,7 +950,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg2objectSuperGV"><typeparamref name="GV"/></typeparam>
         /// <typeparam name="Arg2ExtendsRV"><typeparamref name="RV"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> LeftJoin<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1ExtendsGK: GK where Arg2objectSuperK: K where Arg2objectSuperV: V where Arg2objectSuperGV: GV where Arg2ExtendsRV: RV
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, RV> LeftJoin<RV, GK, GV, Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK, Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV>(Org.Apache.Kafka.Streams.Kstream.GlobalKTable<GK, GV> arg0, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg1objectSuperK, Arg1objectSuperV, Arg1ExtendsGK> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg2objectSuperK, Arg2objectSuperV, Arg2objectSuperGV, Arg2ExtendsRV> arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1ExtendsGK : GK where Arg2objectSuperK : K where Arg2objectSuperV : V where Arg2objectSuperGV : GV where Arg2ExtendsRV : RV
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, RV>>("leftJoin", arg0, arg1, arg2);
         }
@@ -968,7 +968,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0ExtendsKR"><typeparamref name="KR"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR> FlatMap<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_, Arg0ExtendsKR, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK: K where Arg0objectSuperV: V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__: Java.Lang.Iterable<Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_> where Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_: Org.Apache.Kafka.Streams.KeyValue<Arg0ExtendsKR, Arg0ExtendsVR> where Arg0ExtendsKR: KR where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR> FlatMap<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_, Arg0ExtendsKR, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__ : Java.Lang.Iterable<Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_> where Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_ : Org.Apache.Kafka.Streams.KeyValue<Arg0ExtendsKR, Arg0ExtendsVR> where Arg0ExtendsKR : KR where Arg0ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR>>("flatMap", arg0, arg1);
         }
@@ -985,7 +985,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0ExtendsKR"><typeparamref name="KR"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR> FlatMap<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_, Arg0ExtendsKR, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__: Java.Lang.Iterable<Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_> where Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_: Org.Apache.Kafka.Streams.KeyValue<Arg0ExtendsKR, Arg0ExtendsVR> where Arg0ExtendsKR: KR where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR> FlatMap<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_, Arg0ExtendsKR, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR__ : Java.Lang.Iterable<Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_> where Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_ : Org.Apache.Kafka.Streams.KeyValue<Arg0ExtendsKR, Arg0ExtendsVR> where Arg0ExtendsKR : KR where Arg0ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR>>("flatMap", arg0);
         }
@@ -1002,7 +1002,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0ExtendsKR"><typeparamref name="KR"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR> Map<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_, Arg0ExtendsKR, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK: K where Arg0objectSuperV: V where Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_: Org.Apache.Kafka.Streams.KeyValue<Arg0ExtendsKR, Arg0ExtendsVR> where Arg0ExtendsKR: KR where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR> Map<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_, Arg0ExtendsKR, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_ : Org.Apache.Kafka.Streams.KeyValue<Arg0ExtendsKR, Arg0ExtendsVR> where Arg0ExtendsKR : KR where Arg0ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR>>("map", arg0, arg1);
         }
@@ -1018,7 +1018,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0ExtendsKR"><typeparamref name="KR"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR> Map<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_, Arg0ExtendsKR, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V where Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_: Org.Apache.Kafka.Streams.KeyValue<Arg0ExtendsKR, Arg0ExtendsVR> where Arg0ExtendsKR: KR where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR> Map<KR, VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_, Arg0ExtendsKR, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsOrg_Apache_Kafka_Streams_KeyValue_Arg0ExtendsKR_Arg0ExtendsVR_ : Org.Apache.Kafka.Streams.KeyValue<Arg0ExtendsKR, Arg0ExtendsVR> where Arg0ExtendsKR : KR where Arg0ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<KR, VR>>("map", arg0);
         }
@@ -1031,7 +1031,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KGroupedStream<KR, V> GroupBy<KR, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, KR> arg0, Org.Apache.Kafka.Streams.Kstream.Grouped<KR, V> arg1) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.KGroupedStream<KR, V> GroupBy<KR, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, KR> arg0, Org.Apache.Kafka.Streams.Kstream.Grouped<KR, V> arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KGroupedStream<KR, V>>("groupBy", arg0, arg1);
         }
@@ -1043,7 +1043,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KGroupedStream<KR, V> GroupBy<KR, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, KR> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.KGroupedStream<KR, V> GroupBy<KR, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, KR> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KGroupedStream<KR, V>>("groupBy", "(Lorg/apache/kafka/streams/kstream/KeyValueMapper;)Lorg/apache/kafka/streams/kstream/KGroupedStream;", arg0);
         }
@@ -1057,7 +1057,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsKR"><typeparamref name="KR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, V> SelectKey<KR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK: K where Arg0objectSuperV: V where Arg0ExtendsKR: KR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, V> SelectKey<KR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsKR : KR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<KR, V>>("selectKey", arg0, arg1);
         }
@@ -1070,7 +1070,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsKR"><typeparamref name="KR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, V> SelectKey<KR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V where Arg0ExtendsKR: KR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<KR, V> SelectKey<KR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsKR : KR
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<KR, V>>("selectKey", "(Lorg/apache/kafka/streams/kstream/KeyValueMapper;)Lorg/apache/kafka/streams/kstream/KStream;", arg0);
         }
@@ -1087,7 +1087,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("join", arg0, arg1, arg2, arg3);
         }
@@ -1103,7 +1103,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("join", arg0, arg1, arg2);
         }
@@ -1121,7 +1121,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("join", arg0, arg1, arg2, arg3);
         }
@@ -1138,7 +1138,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("join", arg0, arg1, arg2);
         }
@@ -1155,7 +1155,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("leftJoin", arg0, arg1, arg2, arg3);
         }
@@ -1171,7 +1171,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("leftJoin", arg0, arg1, arg2);
         }
@@ -1189,7 +1189,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("leftJoin", arg0, arg1, arg2, arg3);
         }
@@ -1206,7 +1206,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("leftJoin", arg0, arg1, arg2);
         }
@@ -1223,7 +1223,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> OuterJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> OuterJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("outerJoin", arg0, arg1, arg2, arg3);
         }
@@ -1239,7 +1239,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> OuterJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> OuterJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("outerJoin", arg0, arg1, arg2);
         }
@@ -1257,7 +1257,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> OuterJoin<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> OuterJoin<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2, Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO> arg3) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("outerJoin", arg0, arg1, arg2, arg3);
         }
@@ -1274,7 +1274,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVO"><typeparamref name="VO"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> OuterJoin<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1objectSuperVO: VO where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> OuterJoin<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("outerJoin", arg0, arg1, arg2);
         }
@@ -1288,7 +1288,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_"><see cref="Java.Lang.Iterable{Arg0ExtendsVR}"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> FlatMapValues<VR, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapper<Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperV: V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_: Java.Lang.Iterable<Arg0ExtendsVR> where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> FlatMapValues<VR, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapper<Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperV : V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_ : Java.Lang.Iterable<Arg0ExtendsVR> where Arg0ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("flatMapValues", arg0, arg1);
         }
@@ -1301,7 +1301,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_"><see cref="Java.Lang.Iterable{Arg0ExtendsVR}"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> FlatMapValues<VR, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapper<Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_> arg0) where Arg0objectSuperV: V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_: Java.Lang.Iterable<Arg0ExtendsVR> where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> FlatMapValues<VR, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapper<Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_> arg0) where Arg0objectSuperV : V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_ : Java.Lang.Iterable<Arg0ExtendsVR> where Arg0ExtendsVR : VR
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("flatMapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapper;)Lorg/apache/kafka/streams/kstream/KStream;", arg0);
         }
@@ -1316,7 +1316,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_"><see cref="Java.Lang.Iterable{Arg0ExtendsVR}"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> FlatMapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK: K where Arg0objectSuperV: V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_: Java.Lang.Iterable<Arg0ExtendsVR> where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> FlatMapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_ : Java.Lang.Iterable<Arg0ExtendsVR> where Arg0ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("flatMapValues", arg0, arg1);
         }
@@ -1330,7 +1330,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_"><see cref="Java.Lang.Iterable{Arg0ExtendsVR}"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> FlatMapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_: Java.Lang.Iterable<Arg0ExtendsVR> where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> FlatMapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsJava_Lang_Iterable_Arg0ExtendsVR_ : Java.Lang.Iterable<Arg0ExtendsVR> where Arg0ExtendsVR : VR
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("flatMapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;)Lorg/apache/kafka/streams/kstream/KStream;", arg0);
         }
@@ -1343,7 +1343,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> MapValues<VR, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapper<Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperV: V where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> MapValues<VR, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapper<Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("mapValues", arg0, arg1);
         }
@@ -1355,7 +1355,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> MapValues<VR, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapper<Arg0objectSuperV, Arg0ExtendsVR> arg0) where Arg0objectSuperV: V where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> MapValues<VR, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapper<Arg0objectSuperV, Arg0ExtendsVR> arg0) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapper;)Lorg/apache/kafka/streams/kstream/KStream;", arg0);
         }
@@ -1369,7 +1369,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> MapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK: K where Arg0objectSuperV: V where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> MapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("mapValues", arg0, arg1);
         }
@@ -1382,7 +1382,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <typeparam name="Arg0ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> MapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V where Arg0ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> MapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;)Lorg/apache/kafka/streams/kstream/KStream;", arg0);
         }
@@ -1398,7 +1398,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVT"><typeparamref name="VT"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VT, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VT> arg2) where Arg1objectSuperV: V where Arg1objectSuperVT: VT where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VT, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VT> arg2) where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("join", arg0, arg1, arg2);
         }
@@ -1413,7 +1413,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVT"><typeparamref name="VT"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VT, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperV: V where Arg1objectSuperVT: VT where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VT, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("join", arg0, arg1);
         }
@@ -1430,7 +1430,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVT"><typeparamref name="VT"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VT, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VT> arg2) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1objectSuperVT: VT where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VT, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VT> arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("join", arg0, arg1, arg2);
         }
@@ -1446,7 +1446,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVT"><typeparamref name="VT"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VT, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1objectSuperVT: VT where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> Join<VR, VT, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("join", arg0, arg1);
         }
@@ -1462,7 +1462,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVT"><typeparamref name="VT"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VT, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VT> arg2) where Arg1objectSuperV: V where Arg1objectSuperVT: VT where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VT, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VT> arg2) where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("leftJoin", arg0, arg1, arg2);
         }
@@ -1477,7 +1477,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVT"><typeparamref name="VT"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VT, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperV: V where Arg1objectSuperVT: VT where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VT, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("leftJoin", arg0, arg1);
         }
@@ -1494,7 +1494,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVT"><typeparamref name="VT"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VT, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VT> arg2) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1objectSuperVT: VT where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VT, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VT> arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("leftJoin", arg0, arg1, arg2);
         }
@@ -1510,7 +1510,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperVT"><typeparamref name="VT"/></typeparam>
         /// <typeparam name="Arg1ExtendsVR"><typeparamref name="VR"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VT, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperK: K where Arg1objectSuperV: V where Arg1objectSuperVT: VT where Arg1ExtendsVR: VR
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> LeftJoin<VR, VT, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VT> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVT, Arg1ExtendsVR> arg1) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg1objectSuperVT : VT where Arg1ExtendsVR : VR
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("leftJoin", arg0, arg1);
         }
@@ -1556,7 +1556,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Filter<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Filter<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("filter", arg0, arg1);
         }
@@ -1567,7 +1567,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Filter<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Filter<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("filter", "(Lorg/apache/kafka/streams/kstream/Predicate;)Lorg/apache/kafka/streams/kstream/KStream;", arg0);
         }
@@ -1579,7 +1579,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("filterNot", arg0, arg1);
         }
@@ -1590,7 +1590,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("filterNot", "(Lorg/apache/kafka/streams/kstream/Predicate;)Lorg/apache/kafka/streams/kstream/KStream;", arg0);
         }
@@ -1621,7 +1621,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Peek<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.ForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Peek<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.ForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("peek", arg0, arg1);
         }
@@ -1632,7 +1632,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Peek<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.ForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Peek<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.ForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("peek", "(Lorg/apache/kafka/streams/kstream/ForeachAction;)Lorg/apache/kafka/streams/kstream/KStream;", arg0);
         }
@@ -1696,7 +1696,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        public void Foreach<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.ForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public void Foreach<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.ForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             IExecute("foreach", arg0, arg1);
         }
@@ -1706,7 +1706,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ForeachAction"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        public void Foreach<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.ForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public void Foreach<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.ForeachAction<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             IExecuteWithSignature("foreach", "(Lorg/apache/kafka/streams/kstream/ForeachAction;)V", arg0);
         }

@@ -50,10 +50,10 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("onSend", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.ProducerRecord>>>(OnSendEventHandler));
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("onAcknowledgement", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>>(OnAcknowledgementEventHandler));
-            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(ConfigureEventHandler));
+            AddEventHandler("onSend", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.ProducerRecord>>>(OnSendEventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("onAcknowledgement", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>>(OnAcknowledgementEventHandler));
+            AddEventHandler("configure", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(ConfigureEventHandler));
 
         }
 
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnSend"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Org.Apache.Kafka.Clients.Producer.ProducerRecord, Org.Apache.Kafka.Clients.Producer.ProducerRecord> OnOnSend { get; set; } = null;
+        public global::System.Func<Org.Apache.Kafka.Clients.Producer.ProducerRecord, Org.Apache.Kafka.Clients.Producer.ProducerRecord> OnOnSend { get; set; } = null;
 
         void OnSendEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.ProducerRecord>> data)
         {
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnAcknowledgement"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnAcknowledgement { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnAcknowledgement { get; set; } = null;
 
         void OnAcknowledgementEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>> data)
         {
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map> OnConfigure { get; set; } = null;
+        public global::System.Action<Java.Util.Map> OnConfigure { get; set; } = null;
 
         void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map>> data)
         {
@@ -260,10 +260,10 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("onSend", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>>>>(OnSendEventHandler));
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("onAcknowledgement", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>>(OnAcknowledgementEventHandler));
-            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
+            AddEventHandler("onSend", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>>>>(OnSendEventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("onAcknowledgement", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>>(OnAcknowledgementEventHandler));
+            AddEventHandler("configure", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
 
         }
 
@@ -271,7 +271,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnSend"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>, Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>> OnOnSend { get; set; } = null;
+        public global::System.Func<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>, Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>> OnOnSend { get; set; } = null;
 
         void OnSendEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>>> data)
         {
@@ -294,7 +294,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -314,7 +314,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnAcknowledgement"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnAcknowledgement { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnAcknowledgement { get; set; } = null;
 
         void OnAcknowledgementEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>> data)
         {
@@ -336,7 +336,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
+        public global::System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
 
         void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {

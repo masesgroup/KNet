@@ -36,12 +36,12 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("Transformation class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Transformation class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Transformation() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("Transformation class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Transformation class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Transformation(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -77,18 +77,18 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.0/org/apache/kafka/connect/transforms/Transformation.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class Transformation<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Transformation<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class Transformation<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Transformation<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.Transformation";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("Transformation class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Transformation class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Transformation() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("Transformation class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Transformation class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Transformation(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -129,12 +129,12 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("Cast class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Cast class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Cast() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("Cast class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Cast class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Cast(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/Cast.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.Cast<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.Cast<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.Cast$Key";
             /// <summary>
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/Cast.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.Cast<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.Cast<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.Cast$Value";
             /// <summary>
@@ -348,18 +348,18 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/Cast.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class Cast<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Cast<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class Cast<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Cast<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.Cast";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("Cast class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Cast class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Cast() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("Cast class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Cast class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Cast(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -439,7 +439,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/DropHeaders.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class DropHeaders<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DropHeaders<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class DropHeaders<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DropHeaders<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.DropHeaders";
         /// <summary>
@@ -489,12 +489,12 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("ExtractField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("ExtractField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public ExtractField() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("ExtractField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("ExtractField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public ExtractField(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -570,7 +570,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/ExtractField.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.ExtractField<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.ExtractField<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.ExtractField$Key";
             /// <summary>
@@ -659,7 +659,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/ExtractField.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.ExtractField<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.ExtractField<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.ExtractField$Value";
             /// <summary>
@@ -708,18 +708,18 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/ExtractField.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class ExtractField<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ExtractField<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class ExtractField<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ExtractField<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.ExtractField";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("ExtractField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("ExtractField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public ExtractField() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("ExtractField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("ExtractField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public ExtractField(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -799,7 +799,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/Filter.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class Filter<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Filter<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class Filter<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Filter<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.Filter";
         /// <summary>
@@ -849,12 +849,12 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("Flatten class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Flatten class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Flatten() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("Flatten class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Flatten class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Flatten(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -930,7 +930,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/Flatten.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.Flatten<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.Flatten<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.Flatten$Key";
             /// <summary>
@@ -1019,7 +1019,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/Flatten.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.Flatten<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.Flatten<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.Flatten$Value";
             /// <summary>
@@ -1068,18 +1068,18 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/Flatten.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class Flatten<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Flatten<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class Flatten<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Flatten<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.Flatten";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("Flatten class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Flatten class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Flatten() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("Flatten class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Flatten class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Flatten(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -1120,12 +1120,12 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("HeaderFrom class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("HeaderFrom class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public HeaderFrom() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("HeaderFrom class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("HeaderFrom class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public HeaderFrom(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -1201,7 +1201,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/HeaderFrom.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.HeaderFrom<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.HeaderFrom<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.HeaderFrom$Key";
             /// <summary>
@@ -1290,7 +1290,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/HeaderFrom.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.HeaderFrom<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.HeaderFrom<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.HeaderFrom$Value";
             /// <summary>
@@ -1339,18 +1339,18 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/HeaderFrom.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class HeaderFrom<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HeaderFrom<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class HeaderFrom<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HeaderFrom<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.HeaderFrom";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("HeaderFrom class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("HeaderFrom class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public HeaderFrom() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("HeaderFrom class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("HeaderFrom class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public HeaderFrom(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -1391,12 +1391,12 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("HoistField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("HoistField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public HoistField() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("HoistField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("HoistField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public HoistField(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -1472,7 +1472,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/HoistField.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.HoistField<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.HoistField<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.HoistField$Key";
             /// <summary>
@@ -1561,7 +1561,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/HoistField.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.HoistField<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.HoistField<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.HoistField$Value";
             /// <summary>
@@ -1610,18 +1610,18 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/HoistField.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class HoistField<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HoistField<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class HoistField<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HoistField<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.HoistField";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("HoistField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("HoistField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public HoistField() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("HoistField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("HoistField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public HoistField(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -1662,12 +1662,12 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("InsertField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("InsertField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public InsertField() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("InsertField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("InsertField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public InsertField(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -1743,7 +1743,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/InsertField.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.InsertField<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.InsertField<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.InsertField$Key";
             /// <summary>
@@ -1832,7 +1832,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/InsertField.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.InsertField<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.InsertField<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.InsertField$Value";
             /// <summary>
@@ -1881,18 +1881,18 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/InsertField.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class InsertField<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InsertField<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class InsertField<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InsertField<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.InsertField";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("InsertField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("InsertField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public InsertField() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("InsertField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("InsertField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public InsertField(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -1972,7 +1972,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/InsertHeader.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class InsertHeader<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InsertHeader<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class InsertHeader<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InsertHeader<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.InsertHeader";
         /// <summary>
@@ -2022,12 +2022,12 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("MaskField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("MaskField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public MaskField() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("MaskField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("MaskField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public MaskField(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -2103,7 +2103,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/MaskField.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.MaskField<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.MaskField<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.MaskField$Key";
             /// <summary>
@@ -2192,7 +2192,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/MaskField.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.MaskField<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.MaskField<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.MaskField$Value";
             /// <summary>
@@ -2241,18 +2241,18 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/MaskField.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class MaskField<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MaskField<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class MaskField<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MaskField<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.MaskField";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("MaskField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("MaskField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public MaskField() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("MaskField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("MaskField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public MaskField(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -2332,7 +2332,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/RegexRouter.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class RegexRouter<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RegexRouter<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class RegexRouter<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RegexRouter<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.RegexRouter";
         /// <summary>
@@ -2382,12 +2382,12 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("ReplaceField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("ReplaceField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public ReplaceField() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("ReplaceField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("ReplaceField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public ReplaceField(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -2463,7 +2463,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/ReplaceField.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.ReplaceField<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.ReplaceField<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.ReplaceField$Key";
             /// <summary>
@@ -2552,7 +2552,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/ReplaceField.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.ReplaceField<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.ReplaceField<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.ReplaceField$Value";
             /// <summary>
@@ -2601,18 +2601,18 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/ReplaceField.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class ReplaceField<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplaceField<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class ReplaceField<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplaceField<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.ReplaceField";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("ReplaceField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("ReplaceField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public ReplaceField() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("ReplaceField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("ReplaceField class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public ReplaceField(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -2653,12 +2653,12 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("SetSchemaMetadata class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("SetSchemaMetadata class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public SetSchemaMetadata() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("SetSchemaMetadata class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("SetSchemaMetadata class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public SetSchemaMetadata(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -2734,7 +2734,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/SetSchemaMetadata.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.SetSchemaMetadata$Key";
             /// <summary>
@@ -2823,7 +2823,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/SetSchemaMetadata.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.SetSchemaMetadata$Value";
             /// <summary>
@@ -2872,18 +2872,18 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/SetSchemaMetadata.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class SetSchemaMetadata<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SetSchemaMetadata<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class SetSchemaMetadata<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SetSchemaMetadata<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.SetSchemaMetadata";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("SetSchemaMetadata class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("SetSchemaMetadata class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public SetSchemaMetadata() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("SetSchemaMetadata class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("SetSchemaMetadata class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public SetSchemaMetadata(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -2924,12 +2924,12 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("TimestampConverter class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("TimestampConverter class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public TimestampConverter() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("TimestampConverter class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("TimestampConverter class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public TimestampConverter(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -3005,7 +3005,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/TimestampConverter.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.TimestampConverter<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.TimestampConverter<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.TimestampConverter$Key";
             /// <summary>
@@ -3094,7 +3094,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/TimestampConverter.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.TimestampConverter<R> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+        public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.TimestampConverter<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.transforms.TimestampConverter$Value";
             /// <summary>
@@ -3143,18 +3143,18 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/TimestampConverter.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class TimestampConverter<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimestampConverter<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class TimestampConverter<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimestampConverter<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.TimestampConverter";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("TimestampConverter class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("TimestampConverter class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public TimestampConverter() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("TimestampConverter class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("TimestampConverter class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public TimestampConverter(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -3234,7 +3234,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/TimestampRouter.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class TimestampRouter<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimestampRouter<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class TimestampRouter<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimestampRouter<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.TimestampRouter";
         /// <summary>
@@ -3323,7 +3323,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/ValueToKey.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class ValueToKey<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueToKey<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class ValueToKey<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueToKey<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.ValueToKey";
         /// <summary>

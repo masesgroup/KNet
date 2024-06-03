@@ -68,8 +68,8 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("restoreAll", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>>>>(RestoreAllEventHandler));
-            AddEventHandler("restore", new System.EventHandler<CLRListenerEventArgs<CLREventData<byte[]>>>(RestoreEventHandler));
+            AddEventHandler("restoreAll", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>>>>(RestoreAllEventHandler));
+            AddEventHandler("restore", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<byte[]>>>(RestoreEventHandler));
 
         }
 
@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restoreAll-java.util.Collection-"/>
         /// </summary>
         /// <remarks>If <see cref="OnRestoreAll"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>> OnRestoreAll { get; set; } = null;
+        public global::System.Action<Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>> OnRestoreAll { get; set; } = null;
 
         void RestoreAllEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>>> data)
         {
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore-byte[]-byte[]-"/>
         /// </summary>
         /// <remarks>If <see cref="OnRestore"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<byte[], byte[]> OnRestore { get; set; } = null;
+        public global::System.Action<byte[], byte[]> OnRestore { get; set; } = null;
 
         void RestoreEventHandler(object sender, CLRListenerEventArgs<CLREventData<byte[]>> data)
         {

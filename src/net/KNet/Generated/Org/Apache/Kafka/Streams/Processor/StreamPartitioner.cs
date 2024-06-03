@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("partitions", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(PartitionsEventHandler));
+            AddEventHandler("partitions", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(PartitionsEventHandler));
 
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
         /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Lang.String, object, object, int, Java.Util.Optional> OnPartitions { get; set; } = null;
+        public global::System.Func<Java.Lang.String, object, object, int, Java.Util.Optional> OnPartitions { get; set; } = null;
 
         void PartitionsEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Lang.String>> data)
         {
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("partitions", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(PartitionsEventHandler));
+            AddEventHandler("partitions", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(PartitionsEventHandler));
 
         }
         /// <summary>
@@ -211,7 +211,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
         /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Lang.String, K, V, int, Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>>> OnPartitions { get; set; } = null;
+        public global::System.Func<Java.Lang.String, K, V, int, Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>>> OnPartitions { get; set; } = null;
 
         void PartitionsEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Lang.String>> data)
         {

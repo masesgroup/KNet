@@ -68,9 +68,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("onBatchLoaded", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnBatchLoadedEventHandler));
-            AddEventHandler("onUpdateStart", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnUpdateStartEventHandler));
-            AddEventHandler("onUpdateSuspended", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnUpdateSuspendedEventHandler));
+            AddEventHandler("onBatchLoaded", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnBatchLoadedEventHandler));
+            AddEventHandler("onUpdateStart", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnUpdateStartEventHandler));
+            AddEventHandler("onUpdateSuspended", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnUpdateSuspendedEventHandler));
 
         }
 
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onBatchLoaded-org.apache.kafka.common.TopicPartition-java.lang.String-org.apache.kafka.streams.processor.TaskId-long-long-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnBatchLoaded"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, Org.Apache.Kafka.Streams.Processor.TaskId, long, long, long> OnOnBatchLoaded { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, Org.Apache.Kafka.Streams.Processor.TaskId, long, long, long> OnOnBatchLoaded { get; set; } = null;
 
         void OnBatchLoadedEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
         {
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnUpdateStart"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long> OnOnUpdateStart { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long> OnOnUpdateStart { get; set; } = null;
 
         void OnUpdateStartEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
         {
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateSuspended-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-org.apache.kafka.streams.processor.StandbyUpdateListener.SuspendReason-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnUpdateSuspended"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long, long, Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason> OnOnUpdateSuspended { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long, long, Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason> OnOnUpdateSuspended { get; set; } = null;
 
         void OnUpdateSuspendedEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
         {

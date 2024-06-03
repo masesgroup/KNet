@@ -50,9 +50,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>>>(InitEventHandler));
-            AddEventHandler("transform", new System.EventHandler<CLRListenerEventArgs<CLREventData<object>>>(TransformEventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("init", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>>>(InitEventHandler));
+            AddEventHandler("transform", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<object>>>(TransformEventHandler));
 
         }
 
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Streams.Processor.ProcessorContext> OnInit { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Streams.Processor.ProcessorContext> OnInit { get; set; } = null;
 
         void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>> data)
         {
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnTransform"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<object, object> OnTransform { get; set; } = null;
+        public global::System.Func<object, object> OnTransform { get; set; } = null;
 
         void TransformEventHandler(object sender, CLRListenerEventArgs<CLREventData<object>> data)
         {
@@ -228,9 +228,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>>>(InitEventHandler));
-            AddEventHandler("transform", new System.EventHandler<CLRListenerEventArgs<CLREventData<V>>>(TransformEventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("init", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>>>(InitEventHandler));
+            AddEventHandler("transform", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<V>>>(TransformEventHandler));
 
         }
 
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -258,7 +258,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Streams.Processor.ProcessorContext> OnInit { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Streams.Processor.ProcessorContext> OnInit { get; set; } = null;
 
         void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>> data)
         {
@@ -279,7 +279,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnTransform"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<V, VR> OnTransform { get; set; } = null;
+        public global::System.Func<V, VR> OnTransform { get; set; } = null;
 
         void TransformEventHandler(object sender, CLRListenerEventArgs<CLREventData<V>> data)
         {

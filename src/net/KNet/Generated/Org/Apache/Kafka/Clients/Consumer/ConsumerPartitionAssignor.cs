@@ -59,29 +59,16 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Static methods
-        
-        /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#getAssignorInstances-java.util.List-java.util.Map-"/>
-        /// </summary>
-        /// <remarks>If <see cref="OnGetAssignorInstances"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Util.List<Java.Lang.String>, Java.Util.Map<Java.Lang.String, object>, Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor>> OnGetAssignorInstances { get; set; } = null;
-
-        void GetAssignorInstancesEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.List<Java.Lang.String>>> data)
-        {
-            var methodToExecute = (OnGetAssignorInstances != null) ? OnGetAssignorInstances : GetAssignorInstances;
-            var executionResult = methodToExecute.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<Java.Util.Map<Java.Lang.String, object>>(0));
-            data.SetReturnValue(executionResult);
-        }
-
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#getAssignorInstances-java.util.List-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
-        public virtual Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor> GetAssignorInstances(Java.Util.List<Java.Lang.String> arg0, Java.Util.Map<Java.Lang.String, object> arg1)
+        /// <remarks>The method invokes the static implementation in the JVM interface</remarks>
+        public static Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor> GetAssignorInstances(Java.Util.List<Java.Lang.String> arg0, Java.Util.Map<Java.Lang.String, object> arg1)
         {
-            return default;
+            return SExecute<Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor>>(LocalBridgeClazz, "getAssignorInstances", arg0, arg1);
         }
 
         #endregion
@@ -92,12 +79,12 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("name", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(NameEventHandler));
-            AddEventHandler("assign", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Cluster>>>(AssignEventHandler));
-            AddEventHandler("subscriptionUserData", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Set<Java.Lang.String>>>>(SubscriptionUserDataEventHandler));
-            AddEventHandler("supportedProtocols", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(SupportedProtocolsEventHandler));
-            AddEventHandler("version", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(VersionEventHandler));
-            AddEventHandler("onAssignment", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment>>>(OnAssignmentEventHandler));
+            AddEventHandler("name", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(NameEventHandler));
+            AddEventHandler("assign", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Cluster>>>(AssignEventHandler));
+            AddEventHandler("subscriptionUserData", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Set<Java.Lang.String>>>>(SubscriptionUserDataEventHandler));
+            AddEventHandler("supportedProtocols", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(SupportedProtocolsEventHandler));
+            AddEventHandler("version", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(VersionEventHandler));
+            AddEventHandler("onAssignment", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment>>>(OnAssignmentEventHandler));
 
         }
 
@@ -105,7 +92,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#name--"/>
         /// </summary>
         /// <remarks>If <see cref="OnName"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Lang.String> OnName { get; set; } = null;
+        public global::System.Func<Java.Lang.String> OnName { get; set; } = null;
 
         void NameEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -127,7 +114,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#assign-org.apache.kafka.common.Cluster-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription-"/>
         /// </summary>
         /// <remarks>If <see cref="OnAssign"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Org.Apache.Kafka.Common.Cluster, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupSubscription, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupAssignment> OnAssign { get; set; } = null;
+        public global::System.Func<Org.Apache.Kafka.Common.Cluster, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupSubscription, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupAssignment> OnAssign { get; set; } = null;
 
         void AssignEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Cluster>> data)
         {
@@ -161,7 +148,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-"/>
         /// </summary>
         /// <remarks>If <see cref="OnSubscriptionUserData"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Util.Set<Java.Lang.String>, Java.Nio.ByteBuffer> OnSubscriptionUserData { get; set; } = null;
+        public global::System.Func<Java.Util.Set<Java.Lang.String>, Java.Nio.ByteBuffer> OnSubscriptionUserData { get; set; } = null;
 
         void SubscriptionUserDataEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Set<Java.Lang.String>>> data)
         {
@@ -194,7 +181,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols--"/>
         /// </summary>
         /// <remarks>If <see cref="OnSupportedProtocols"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.RebalanceProtocol>> OnSupportedProtocols { get; set; } = null;
+        public global::System.Func<Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.RebalanceProtocol>> OnSupportedProtocols { get; set; } = null;
 
         void SupportedProtocolsEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -226,7 +213,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version--"/>
         /// </summary>
         /// <remarks>If <see cref="OnVersion"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<short> OnVersion { get; set; } = null;
+        public global::System.Func<short> OnVersion { get; set; } = null;
 
         void VersionEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -259,7 +246,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnAssignment"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment, Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata> OnOnAssignment { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment, Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata> OnOnAssignment { get; set; } = null;
 
         void OnAssignmentEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment>> data)
         {

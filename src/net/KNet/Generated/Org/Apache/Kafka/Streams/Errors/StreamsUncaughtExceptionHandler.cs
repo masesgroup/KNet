@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("handle", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(HandleEventHandler));
+            AddEventHandler("handle", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(HandleEventHandler));
 
         }
 
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle-java.lang.Throwable-"/>
         /// </summary>
         /// <remarks>If <see cref="OnHandle"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<MASES.JCOBridge.C2JBridge.JVMBridgeException, Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse> OnHandle { get; set; } = null;
+        public global::System.Func<MASES.JCOBridge.C2JBridge.JVMBridgeException, Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse> OnHandle { get; set; } = null;
 
         void HandleEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {

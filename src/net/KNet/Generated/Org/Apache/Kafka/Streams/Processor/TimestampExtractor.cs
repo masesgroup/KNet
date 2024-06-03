@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("extract", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object>>>>(ExtractEventHandler));
+            AddEventHandler("extract", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object>>>>(ExtractEventHandler));
 
         }
 
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/TimestampExtractor.html#extract-org.apache.kafka.clients.consumer.ConsumerRecord-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object>, long, long> OnExtract { get; set; } = null;
+        public global::System.Func<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object>, long, long> OnExtract { get; set; } = null;
 
         void ExtractEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object>>> data)
         {

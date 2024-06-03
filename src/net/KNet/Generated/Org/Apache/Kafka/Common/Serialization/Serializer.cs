@@ -50,10 +50,10 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("serialize", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(SerializeEventHandler));
-            AddEventHandler("serialize3", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(Serialize3EventHandler));
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(ConfigureEventHandler));
+            AddEventHandler("serialize", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(SerializeEventHandler));
+            AddEventHandler("serialize3", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(Serialize3EventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("configure", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(ConfigureEventHandler));
 
         }
 
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnSerialize"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Lang.String, object, byte[]> OnSerialize { get; set; } = null;
+        public global::System.Func<Java.Lang.String, object, byte[]> OnSerialize { get; set; } = null;
 
         void SerializeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Lang.String>> data)
         {
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-org.apache.kafka.common.header.Headers-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnSerialize3"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Lang.String, Org.Apache.Kafka.Common.Header.Headers, object, byte[]> OnSerialize3 { get; set; } = null;
+        public global::System.Func<Java.Lang.String, Org.Apache.Kafka.Common.Header.Headers, object, byte[]> OnSerialize3 { get; set; } = null;
 
         void Serialize3EventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Lang.String>> data)
         {
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serializer.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serializer.html#configure-java.util.Map-boolean-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map, bool> OnConfigure { get; set; } = null;
+        public global::System.Action<Java.Util.Map, bool> OnConfigure { get; set; } = null;
 
         void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map>> data)
         {
@@ -302,10 +302,10 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("serialize", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(SerializeEventHandler));
-            AddEventHandler("serialize3", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(Serialize3EventHandler));
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
+            AddEventHandler("serialize", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(SerializeEventHandler));
+            AddEventHandler("serialize3", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(Serialize3EventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("configure", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
 
         }
 
@@ -313,7 +313,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnSerialize"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Lang.String, T, byte[]> OnSerialize { get; set; } = null;
+        public global::System.Func<Java.Lang.String, T, byte[]> OnSerialize { get; set; } = null;
 
         void SerializeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Lang.String>> data)
         {
@@ -349,7 +349,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-org.apache.kafka.common.header.Headers-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnSerialize3"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Lang.String, Org.Apache.Kafka.Common.Header.Headers, T, byte[]> OnSerialize3 { get; set; } = null;
+        public global::System.Func<Java.Lang.String, Org.Apache.Kafka.Common.Header.Headers, T, byte[]> OnSerialize3 { get; set; } = null;
 
         void Serialize3EventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Lang.String>> data)
         {
@@ -383,7 +383,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serializer.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -414,7 +414,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serializer.html#configure-java.util.Map-boolean-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<Java.Lang.String, object>, bool> OnConfigure { get; set; } = null;
+        public global::System.Action<Java.Util.Map<Java.Lang.String, object>, bool> OnConfigure { get; set; } = null;
 
         void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
