@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("extract", new System.EventHandler<CLRListenerEventArgs<CLREventData<object>>>(ExtractEventHandler));
+            AddEventHandler("extract", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<object>>>(ExtractEventHandler));
 
         }
 
@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<object, object, Org.Apache.Kafka.Streams.Processor.RecordContext, Java.Lang.String> OnExtract { get; set; } = null;
+        public global::System.Func<object, object, Org.Apache.Kafka.Streams.Processor.RecordContext, Java.Lang.String> OnExtract { get; set; } = null;
 
         void ExtractEventHandler(object sender, CLRListenerEventArgs<CLREventData<object>> data)
         {
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("extract", new System.EventHandler<CLRListenerEventArgs<CLREventData<K>>>(ExtractEventHandler));
+            AddEventHandler("extract", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<K>>>(ExtractEventHandler));
 
         }
 
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<K, V, Org.Apache.Kafka.Streams.Processor.RecordContext, Java.Lang.String> OnExtract { get; set; } = null;
+        public global::System.Func<K, V, Org.Apache.Kafka.Streams.Processor.RecordContext, Java.Lang.String> OnExtract { get; set; } = null;
 
         void ExtractEventHandler(object sender, CLRListenerEventArgs<CLREventData<K>> data)
         {

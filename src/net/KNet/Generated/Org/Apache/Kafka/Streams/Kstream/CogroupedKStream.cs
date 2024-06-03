@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.CogroupedKStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.CogroupedKStream<K, VAgg> Cogroup<V, Arg1objectSuperK, Arg1objectSuperV>(Org.Apache.Kafka.Streams.Kstream.KGroupedStream<K, V> arg0, Org.Apache.Kafka.Streams.Kstream.Aggregator<Arg1objectSuperK, Arg1objectSuperV, VAgg> arg1) where Arg1objectSuperK: K where Arg1objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.CogroupedKStream<K, VAgg> Cogroup<V, Arg1objectSuperK, Arg1objectSuperV>(Org.Apache.Kafka.Streams.Kstream.KGroupedStream<K, V> arg0, Org.Apache.Kafka.Streams.Kstream.Aggregator<Arg1objectSuperK, Arg1objectSuperV, VAgg> arg1) where Arg1objectSuperK : K where Arg1objectSuperV : V
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.CogroupedKStream<K, VAgg>>("cogroup", arg0, arg1);
         }
@@ -194,7 +194,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Windows"/></param>
         /// <typeparam name="W"><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<K, VAgg> WindowedBy<W>(Org.Apache.Kafka.Streams.Kstream.Windows<W> arg0) where W: Org.Apache.Kafka.Streams.Kstream.Window
+        public Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<K, VAgg> WindowedBy<W>(Org.Apache.Kafka.Streams.Kstream.Windows<W> arg0) where W : Org.Apache.Kafka.Streams.Kstream.Window
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<K, VAgg>>("windowedBy", arg0);
         }

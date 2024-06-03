@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <typeparam name="Arg0ExtendsJava_Util_Map_Java_Lang_Integer_Java_Lang_Long_"><see cref="Java.Util.Map{Java.Lang.Integer, Java.Lang.Long}"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.Position"/></returns>
-        public static Org.Apache.Kafka.Streams.Query.Position FromMap<Arg0ExtendsJava_Util_Map_Java_Lang_Integer_Java_Lang_Long_>(Java.Util.Map<Java.Lang.String, Arg0ExtendsJava_Util_Map_Java_Lang_Integer_Java_Lang_Long_> arg0) where Arg0ExtendsJava_Util_Map_Java_Lang_Integer_Java_Lang_Long_: Java.Util.Map<Java.Lang.Integer, Java.Lang.Long>
+        public static Org.Apache.Kafka.Streams.Query.Position FromMap<Arg0ExtendsJava_Util_Map_Java_Lang_Integer_Java_Lang_Long_>(Java.Util.Map<Java.Lang.String, Arg0ExtendsJava_Util_Map_Java_Lang_Integer_Java_Lang_Long_> arg0) where Arg0ExtendsJava_Util_Map_Java_Lang_Integer_Java_Lang_Long_ : Java.Util.Map<Java.Lang.Integer, Java.Lang.Long>
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.Position>(LocalBridgeClazz, "fromMap", "(Ljava/util/Map;)Lorg/apache/kafka/streams/query/Position;", arg0);
         }

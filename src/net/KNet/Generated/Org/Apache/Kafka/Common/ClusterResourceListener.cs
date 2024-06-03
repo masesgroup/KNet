@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Common
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("onUpdate", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.ClusterResource>>>(OnUpdateEventHandler));
+            AddEventHandler("onUpdate", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.ClusterResource>>>(OnUpdateEventHandler));
 
         }
 
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/ClusterResourceListener.html#onUpdate-org.apache.kafka.common.ClusterResource-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnUpdate"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.ClusterResource> OnOnUpdate { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Common.ClusterResource> OnOnUpdate { get; set; } = null;
 
         void OnUpdateEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.ClusterResource>> data)
         {

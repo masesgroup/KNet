@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="M"><see cref="Java.Util.Map{K, V}"/></typeparam>
         /// <returns><see cref="Java.Util.Stream.Collector"/></returns>
-        public static Java.Util.Stream.Collector<Java.Util.Map.Entry<K, V>, M, M> EntriesToMap<K, V, M>(Java.Util.Function.Supplier<M> arg0) where M: Java.Util.Map<K, V>
+        public static Java.Util.Stream.Collector<Java.Util.Map.Entry<K, V>, M, M> EntriesToMap<K, V, M>(Java.Util.Function.Supplier<M> arg0) where M : Java.Util.Map<K, V>
         {
             return SExecute<Java.Util.Stream.Collector<Java.Util.Map.Entry<K, V>, M, M>>(LocalBridgeClazz, "entriesToMap", arg0);
         }
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <typeparam name="S"></typeparam>
         /// <typeparam name="Arg0ExtendsS"><typeparamref name="S"/></typeparam>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
-        public static Java.Util.Iterator<S> CovariantCast<S, Arg0ExtendsS>(Java.Util.Iterator<Arg0ExtendsS> arg0) where Arg0ExtendsS: S
+        public static Java.Util.Iterator<S> CovariantCast<S, Arg0ExtendsS>(Java.Util.Iterator<Arg0ExtendsS> arg0) where Arg0ExtendsS : S
         {
             return SExecuteWithSignature<Java.Util.Iterator<S>>(LocalBridgeClazz, "covariantCast", "(Ljava/util/Iterator;)Ljava/util/Iterator;", arg0);
         }
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <typeparam name="T"></typeparam>
         /// <returns><see cref="Java.Lang.Class"/></returns>
         /// <exception cref="Java.Lang.ClassNotFoundException"/>
-        public static Java.Lang.Class LoadClass<ReturnExtendsT, T>(Java.Lang.String arg0, Java.Lang.Class arg1) where ReturnExtendsT: T
+        public static Java.Lang.Class LoadClass<ReturnExtendsT, T>(Java.Lang.String arg0, Java.Lang.Class arg1) where ReturnExtendsT : T
         {
             return SExecute<Java.Lang.Class>(LocalBridgeClazz, "loadClass", arg0, arg1);
         }
@@ -284,7 +284,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <param name="arg0"><typeparamref name="T"/></param>
         /// <typeparam name="T"><see cref="Java.Lang.Comparable{T}"/></typeparam>
         /// <returns><see cref="Java.Util.SortedSet"/></returns>
-        public static Java.Util.SortedSet<T> MkSortedSet<T>(params T[] arg0) where T: Java.Lang.Comparable<T>
+        public static Java.Util.SortedSet<T> MkSortedSet<T>(params T[] arg0) where T : Java.Lang.Comparable<T>
         {
             if (arg0.Length == 0) return SExecute<Java.Util.SortedSet<T>>(LocalBridgeClazz, "mkSortedSet"); else return SExecute<Java.Util.SortedSet<T>>(LocalBridgeClazz, "mkSortedSet", arg0);
         }

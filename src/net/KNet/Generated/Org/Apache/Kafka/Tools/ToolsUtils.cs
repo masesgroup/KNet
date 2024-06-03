@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <typeparam name="Arg0ExtendsOrg_Apache_Kafka_Common_Metric"><see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
-        public static void PrintMetrics<Arg0ExtendsOrg_Apache_Kafka_Common_Metric>(Java.Util.Map<Org.Apache.Kafka.Common.MetricName, Arg0ExtendsOrg_Apache_Kafka_Common_Metric> arg0) where Arg0ExtendsOrg_Apache_Kafka_Common_Metric: Org.Apache.Kafka.Common.Metric
+        public static void PrintMetrics<Arg0ExtendsOrg_Apache_Kafka_Common_Metric>(Java.Util.Map<Org.Apache.Kafka.Common.MetricName, Arg0ExtendsOrg_Apache_Kafka_Common_Metric> arg0) where Arg0ExtendsOrg_Apache_Kafka_Common_Metric : Org.Apache.Kafka.Common.Metric
         {
             SExecuteWithSignature(LocalBridgeClazz, "printMetrics", "(Ljava/util/Map;)V", arg0);
         }

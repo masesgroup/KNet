@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="S"><see cref="Org.Apache.Kafka.Streams.Processor.IStateStore"/></typeparam>
         /// <returns><typeparamref name="S"/></returns>
-        public S GetStateStore<S>(Java.Lang.String arg0) where S: Org.Apache.Kafka.Streams.Processor.IStateStore, new()
+        public S GetStateStore<S>(Java.Lang.String arg0) where S : Org.Apache.Kafka.Streams.Processor.IStateStore, new()
         {
             return IExecute<S>("getStateStore", arg0);
         }

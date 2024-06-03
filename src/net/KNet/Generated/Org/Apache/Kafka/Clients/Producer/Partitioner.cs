@@ -68,9 +68,9 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("partition", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(PartitionEventHandler));
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
+            AddEventHandler("partition", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(PartitionEventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("configure", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
 
         }
 
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Partitioner.html#partition-java.lang.String-java.lang.Object-byte[]-java.lang.Object-byte[]-org.apache.kafka.common.Cluster-"/>
         /// </summary>
         /// <remarks>If <see cref="OnPartition"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Lang.String, object, byte[], object, byte[], Org.Apache.Kafka.Common.Cluster, int> OnPartition { get; set; } = null;
+        public global::System.Func<Java.Lang.String, object, byte[], object, byte[], Org.Apache.Kafka.Common.Cluster, int> OnPartition { get; set; } = null;
 
         void PartitionEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Lang.String>> data)
         {
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/producer/Partitioner.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
+        public global::System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
 
         void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {

@@ -68,10 +68,10 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("onBatchRestored", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnBatchRestoredEventHandler));
-            AddEventHandler("onRestoreEnd", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnRestoreEndEventHandler));
-            AddEventHandler("onRestoreStart", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnRestoreStartEventHandler));
-            AddEventHandler("onRestoreSuspended", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnRestoreSuspendedEventHandler));
+            AddEventHandler("onBatchRestored", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnBatchRestoredEventHandler));
+            AddEventHandler("onRestoreEnd", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnRestoreEndEventHandler));
+            AddEventHandler("onRestoreStart", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnRestoreStartEventHandler));
+            AddEventHandler("onRestoreSuspended", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnRestoreSuspendedEventHandler));
 
         }
 
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnBatchRestored"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long, long> OnOnBatchRestored { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long, long> OnOnBatchRestored { get; set; } = null;
 
         void OnBatchRestoredEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
         {
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnRestoreEnd"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long> OnOnRestoreEnd { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long> OnOnRestoreEnd { get; set; } = null;
 
         void OnRestoreEndEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
         {
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnRestoreStart"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long, long> OnOnRestoreStart { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long, long> OnOnRestoreStart { get; set; } = null;
 
         void OnRestoreStartEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
         {
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnRestoreSuspended"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long> OnOnRestoreSuspended { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long> OnOnRestoreSuspended { get; set; } = null;
 
         void OnRestoreSuspendedEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
         {

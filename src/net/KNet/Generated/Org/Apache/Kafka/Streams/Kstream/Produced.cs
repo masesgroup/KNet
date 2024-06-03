@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Produced<K, V> StreamPartitioner<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Processor.StreamPartitioner<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public static Org.Apache.Kafka.Streams.Kstream.Produced<K, V> StreamPartitioner<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Processor.StreamPartitioner<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced<K, V>>(LocalBridgeClazz, "streamPartitioner", arg0);
         }
@@ -207,7 +207,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg2objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg2objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
-        public static Org.Apache.Kafka.Streams.Kstream.Produced<K, V> With<Arg2objectSuperK, Arg2objectSuperV>(Org.Apache.Kafka.Common.Serialization.Serde<K> arg0, Org.Apache.Kafka.Common.Serialization.Serde<V> arg1, Org.Apache.Kafka.Streams.Processor.StreamPartitioner<Arg2objectSuperK, Arg2objectSuperV> arg2) where Arg2objectSuperK: K where Arg2objectSuperV: V
+        public static Org.Apache.Kafka.Streams.Kstream.Produced<K, V> With<Arg2objectSuperK, Arg2objectSuperV>(Org.Apache.Kafka.Common.Serialization.Serde<K> arg0, Org.Apache.Kafka.Common.Serialization.Serde<V> arg1, Org.Apache.Kafka.Streams.Processor.StreamPartitioner<Arg2objectSuperK, Arg2objectSuperV> arg2) where Arg2objectSuperK : K where Arg2objectSuperV : V
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced<K, V>>(LocalBridgeClazz, "with", arg0, arg1, arg2);
         }
@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.Produced<K, V> WithStreamPartitioner<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Processor.StreamPartitioner<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.Produced<K, V> WithStreamPartitioner<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Processor.StreamPartitioner<Arg0objectSuperK, Arg0objectSuperV> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Produced<K, V>>("withStreamPartitioner", "(Lorg/apache/kafka/streams/processor/StreamPartitioner;)Lorg/apache/kafka/streams/kstream/Produced;", arg0);
         }

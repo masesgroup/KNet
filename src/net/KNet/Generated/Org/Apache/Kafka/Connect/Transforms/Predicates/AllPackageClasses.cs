@@ -36,12 +36,12 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("Predicate class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Predicate class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Predicate() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("Predicate class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Predicate class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Predicate(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -77,18 +77,18 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.0/org/apache/kafka/connect/transforms/predicates/Predicate.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class Predicate<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Predicate<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class Predicate<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Predicate<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.predicates.Predicate";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [Obsolete("Predicate class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Predicate class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Predicate() { }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [Obsolete("Predicate class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        [global::System.Obsolete("Predicate class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public Predicate(params object[] args) : base(args) { }
 
         private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/predicates/HasHeaderKey.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class HasHeaderKey<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HasHeaderKey<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class HasHeaderKey<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HasHeaderKey<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.predicates.HasHeaderKey";
         /// <summary>
@@ -257,7 +257,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class RecordIsTombstone<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordIsTombstone<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class RecordIsTombstone<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordIsTombstone<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.predicates.RecordIsTombstone";
         /// <summary>
@@ -346,7 +346,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.0/org/apache/kafka/connect/transforms/predicates/TopicNameMatches.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
-    public partial class TopicNameMatches<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicNameMatches<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
+    public partial class TopicNameMatches<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicNameMatches<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.transforms.predicates.TopicNameMatches";
         /// <summary>

@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Streams
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="Arg2objectSuperK"><typeparamref name="K"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.KeyQueryMetadata"/></returns>
-        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K, Arg2objectSuperK>(Java.Lang.String arg0, K arg1, Org.Apache.Kafka.Streams.Processor.StreamPartitioner<Arg2objectSuperK, object> arg2) where Arg2objectSuperK: K
+        public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K, Arg2objectSuperK>(Java.Lang.String arg0, K arg1, Org.Apache.Kafka.Streams.Processor.StreamPartitioner<Arg2objectSuperK, object> arg2) where Arg2objectSuperK : K
         {
             return IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", arg0, arg1, arg2);
         }
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Metric"><see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric> Metrics<ReturnExtendsOrg_Apache_Kafka_Common_Metric>() where ReturnExtendsOrg_Apache_Kafka_Common_Metric: Org.Apache.Kafka.Common.Metric
+        public Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric> Metrics<ReturnExtendsOrg_Apache_Kafka_Common_Metric>() where ReturnExtendsOrg_Apache_Kafka_Common_Metric : Org.Apache.Kafka.Common.Metric
         {
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric>>("metrics", "()Ljava/util/Map;");
         }
@@ -557,7 +557,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             protected virtual void InitializeHandlers()
             {
-                AddEventHandler("onChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.KafkaStreams.State>>>(OnChangeEventHandler));
+                AddEventHandler("onChange", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.KafkaStreams.State>>>(OnChangeEventHandler));
 
             }
 
@@ -565,7 +565,7 @@ namespace Org.Apache.Kafka.Streams
             /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange-org.apache.kafka.streams.KafkaStreams.State-org.apache.kafka.streams.KafkaStreams.State-"/>
             /// </summary>
             /// <remarks>If <see cref="OnOnChange"/> has a value it takes precedence over corresponding class method</remarks>
-            public System.Action<Org.Apache.Kafka.Streams.KafkaStreams.State, Org.Apache.Kafka.Streams.KafkaStreams.State> OnOnChange { get; set; } = null;
+            public global::System.Action<Org.Apache.Kafka.Streams.KafkaStreams.State, Org.Apache.Kafka.Streams.KafkaStreams.State> OnOnChange { get; set; } = null;
 
             void OnChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.KafkaStreams.State>> data)
             {

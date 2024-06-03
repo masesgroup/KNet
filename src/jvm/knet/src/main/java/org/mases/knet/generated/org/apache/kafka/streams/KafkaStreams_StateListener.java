@@ -22,8 +22,8 @@
 
 package org.mases.knet.generated.org.apache.kafka.streams;
 
-public final class StateListener extends org.mases.jcobridge.JCListener implements org.apache.kafka.streams.KafkaStreams.StateListener {
-    public StateListener(String key) throws org.mases.jcobridge.JCNativeException {
+public final class KafkaStreams_StateListener extends org.mases.jcobridge.JCListener implements org.apache.kafka.streams.KafkaStreams.StateListener {
+    public KafkaStreams_StateListener(String key) throws org.mases.jcobridge.JCNativeException {
         super(key);
     }
 

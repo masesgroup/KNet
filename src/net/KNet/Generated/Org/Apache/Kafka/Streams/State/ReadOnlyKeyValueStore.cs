@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <typeparam name="P"></typeparam>
         /// <typeparam name="PS"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer{P}"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
-        public Org.Apache.Kafka.Streams.State.KeyValueIterator<K, V> PrefixScan<P, PS>(P arg0, PS arg1) where PS: Org.Apache.Kafka.Common.Serialization.Serializer<P>
+        public Org.Apache.Kafka.Streams.State.KeyValueIterator<K, V> PrefixScan<P, PS>(P arg0, PS arg1) where PS : Org.Apache.Kafka.Common.Serialization.Serializer<P>
         {
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<K, V>>("prefixScan", arg0, arg1);
         }

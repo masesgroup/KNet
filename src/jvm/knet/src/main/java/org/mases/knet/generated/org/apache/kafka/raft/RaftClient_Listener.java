@@ -22,8 +22,8 @@
 
 package org.mases.knet.generated.org.apache.kafka.raft;
 
-public final class Listener extends org.mases.jcobridge.JCListener implements org.apache.kafka.raft.RaftClient.Listener {
-    public Listener(String key) throws org.mases.jcobridge.JCNativeException {
+public final class RaftClient_Listener extends org.mases.jcobridge.JCListener implements org.apache.kafka.raft.RaftClient.Listener {
+    public RaftClient_Listener(String key) throws org.mases.jcobridge.JCNativeException {
         super(key);
     }
 

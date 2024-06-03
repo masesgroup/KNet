@@ -185,10 +185,10 @@ namespace Org.Apache.Kafka.Raft
             /// </summary>
             protected virtual void InitializeHandlers()
             {
-                AddEventHandler("handleCommit", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.BatchReader>>>(HandleCommitEventHandler));
-                AddEventHandler("handleLoadSnapshot", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Snapshot.SnapshotReader>>>(HandleLoadSnapshotEventHandler));
-                AddEventHandler("beginShutdown", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(BeginShutdownEventHandler));
-                AddEventHandler("handleLeaderChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.LeaderAndEpoch>>>(HandleLeaderChangeEventHandler));
+                AddEventHandler("handleCommit", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.BatchReader>>>(HandleCommitEventHandler));
+                AddEventHandler("handleLoadSnapshot", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Snapshot.SnapshotReader>>>(HandleLoadSnapshotEventHandler));
+                AddEventHandler("beginShutdown", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(BeginShutdownEventHandler));
+                AddEventHandler("handleLeaderChange", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.LeaderAndEpoch>>>(HandleLeaderChangeEventHandler));
 
             }
 
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Raft
             /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit-org.apache.kafka.raft.BatchReader-"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleCommit"/> has a value it takes precedence over corresponding class method</remarks>
-            public System.Action<Org.Apache.Kafka.Raft.BatchReader> OnHandleCommit { get; set; } = null;
+            public global::System.Action<Org.Apache.Kafka.Raft.BatchReader> OnHandleCommit { get; set; } = null;
 
             void HandleCommitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.BatchReader>> data)
             {
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Raft
             /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot-org.apache.kafka.snapshot.SnapshotReader-"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleLoadSnapshot"/> has a value it takes precedence over corresponding class method</remarks>
-            public System.Action<Org.Apache.Kafka.Snapshot.SnapshotReader> OnHandleLoadSnapshot { get; set; } = null;
+            public global::System.Action<Org.Apache.Kafka.Snapshot.SnapshotReader> OnHandleLoadSnapshot { get; set; } = null;
 
             void HandleLoadSnapshotEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Snapshot.SnapshotReader>> data)
             {
@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Raft
             /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown--"/>
             /// </summary>
             /// <remarks>If <see cref="OnBeginShutdown"/> has a value it takes precedence over corresponding class method</remarks>
-            public System.Action OnBeginShutdown { get; set; } = null;
+            public global::System.Action OnBeginShutdown { get; set; } = null;
 
             void BeginShutdownEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
             {
@@ -276,7 +276,7 @@ namespace Org.Apache.Kafka.Raft
             /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange-org.apache.kafka.raft.LeaderAndEpoch-"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleLeaderChange"/> has a value it takes precedence over corresponding class method</remarks>
-            public System.Action<Org.Apache.Kafka.Raft.LeaderAndEpoch> OnHandleLeaderChange { get; set; } = null;
+            public global::System.Action<Org.Apache.Kafka.Raft.LeaderAndEpoch> OnHandleLeaderChange { get; set; } = null;
 
             void HandleLeaderChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.LeaderAndEpoch>> data)
             {
@@ -391,10 +391,10 @@ namespace Org.Apache.Kafka.Raft
             /// </summary>
             protected virtual void InitializeHandlers()
             {
-                AddEventHandler("handleCommit", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.BatchReader<T>>>>(HandleCommitEventHandler));
-                AddEventHandler("handleLoadSnapshot", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Snapshot.SnapshotReader<T>>>>(HandleLoadSnapshotEventHandler));
-                AddEventHandler("beginShutdown", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(BeginShutdownEventHandler));
-                AddEventHandler("handleLeaderChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.LeaderAndEpoch>>>(HandleLeaderChangeEventHandler));
+                AddEventHandler("handleCommit", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.BatchReader<T>>>>(HandleCommitEventHandler));
+                AddEventHandler("handleLoadSnapshot", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Snapshot.SnapshotReader<T>>>>(HandleLoadSnapshotEventHandler));
+                AddEventHandler("beginShutdown", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(BeginShutdownEventHandler));
+                AddEventHandler("handleLeaderChange", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.LeaderAndEpoch>>>(HandleLeaderChangeEventHandler));
 
             }
 
@@ -402,7 +402,7 @@ namespace Org.Apache.Kafka.Raft
             /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit-org.apache.kafka.raft.BatchReader-"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleCommit"/> has a value it takes precedence over corresponding class method</remarks>
-            public System.Action<Org.Apache.Kafka.Raft.BatchReader<T>> OnHandleCommit { get; set; } = null;
+            public global::System.Action<Org.Apache.Kafka.Raft.BatchReader<T>> OnHandleCommit { get; set; } = null;
 
             void HandleCommitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.BatchReader<T>>> data)
             {
@@ -423,7 +423,7 @@ namespace Org.Apache.Kafka.Raft
             /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot-org.apache.kafka.snapshot.SnapshotReader-"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleLoadSnapshot"/> has a value it takes precedence over corresponding class method</remarks>
-            public System.Action<Org.Apache.Kafka.Snapshot.SnapshotReader<T>> OnHandleLoadSnapshot { get; set; } = null;
+            public global::System.Action<Org.Apache.Kafka.Snapshot.SnapshotReader<T>> OnHandleLoadSnapshot { get; set; } = null;
 
             void HandleLoadSnapshotEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Snapshot.SnapshotReader<T>>> data)
             {
@@ -452,7 +452,7 @@ namespace Org.Apache.Kafka.Raft
             /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown--"/>
             /// </summary>
             /// <remarks>If <see cref="OnBeginShutdown"/> has a value it takes precedence over corresponding class method</remarks>
-            public System.Action OnBeginShutdown { get; set; } = null;
+            public global::System.Action OnBeginShutdown { get; set; } = null;
 
             void BeginShutdownEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
             {
@@ -482,7 +482,7 @@ namespace Org.Apache.Kafka.Raft
             /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange-org.apache.kafka.raft.LeaderAndEpoch-"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleLeaderChange"/> has a value it takes precedence over corresponding class method</remarks>
-            public System.Action<Org.Apache.Kafka.Raft.LeaderAndEpoch> OnHandleLeaderChange { get; set; } = null;
+            public global::System.Action<Org.Apache.Kafka.Raft.LeaderAndEpoch> OnHandleLeaderChange { get; set; } = null;
 
             void HandleLeaderChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Raft.LeaderAndEpoch>> data)
             {

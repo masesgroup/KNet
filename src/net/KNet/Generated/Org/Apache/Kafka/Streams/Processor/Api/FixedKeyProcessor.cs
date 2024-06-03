@@ -50,9 +50,9 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("process", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord>>>(ProcessEventHandler));
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext>>>(InitEventHandler));
+            AddEventHandler("process", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord>>>(ProcessEventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("init", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext>>>(InitEventHandler));
 
         }
 
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process-org.apache.kafka.streams.processor.api.FixedKeyRecord-"/>
         /// </summary>
         /// <remarks>If <see cref="OnProcess"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord> OnProcess { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord> OnProcess { get; set; } = null;
 
         void ProcessEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord>> data)
         {
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init-org.apache.kafka.streams.processor.api.FixedKeyProcessorContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext> OnInit { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext> OnInit { get; set; } = null;
 
         void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext>> data)
         {
@@ -244,9 +244,9 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("process", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>>>>(ProcessEventHandler));
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext<KIn, VOut>>>>(InitEventHandler));
+            AddEventHandler("process", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>>>>(ProcessEventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("init", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext<KIn, VOut>>>>(InitEventHandler));
 
         }
 
@@ -254,7 +254,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process-org.apache.kafka.streams.processor.api.FixedKeyRecord-"/>
         /// </summary>
         /// <remarks>If <see cref="OnProcess"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>> OnProcess { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>> OnProcess { get; set; } = null;
 
         void ProcessEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>>> data)
         {
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -313,7 +313,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init-org.apache.kafka.streams.processor.api.FixedKeyProcessorContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext<KIn, VOut>> OnInit { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext<KIn, VOut>> OnInit { get; set; } = null;
 
         void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext<KIn, VOut>>> data)
         {

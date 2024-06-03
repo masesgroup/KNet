@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("onChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(OnChangeEventHandler));
+            AddEventHandler("onChange", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Lang.String>>>(OnChangeEventHandler));
 
         }
 
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/config/ConfigChangeCallback.html#onChange-java.lang.String-org.apache.kafka.common.config.ConfigData-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnChange"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Lang.String, Org.Apache.Kafka.Common.Config.ConfigData> OnOnChange { get; set; } = null;
+        public global::System.Action<Java.Lang.String, Org.Apache.Kafka.Common.Config.ConfigData> OnOnChange { get; set; } = null;
 
         void OnChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Lang.String>> data)
         {

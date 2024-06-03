@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("onComplete", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>>(OnCompleteEventHandler));
+            AddEventHandler("onComplete", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>>(OnCompleteEventHandler));
 
         }
 
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnComplete"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnComplete { get; set; } = null;
+        public global::System.Action<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnComplete { get; set; } = null;
 
         void OnCompleteEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>> data)
         {

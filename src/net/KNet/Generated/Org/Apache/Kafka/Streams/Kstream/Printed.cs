@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Printed"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.Printed<K, V> WithKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Java.Lang.String> arg0) where Arg0objectSuperK: K where Arg0objectSuperV: V
+        public Org.Apache.Kafka.Streams.Kstream.Printed<K, V> WithKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Java.Lang.String> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Printed<K, V>>("withKeyValueMapper", "(Lorg/apache/kafka/streams/kstream/KeyValueMapper;)Lorg/apache/kafka/streams/kstream/Printed;", arg0);
         }

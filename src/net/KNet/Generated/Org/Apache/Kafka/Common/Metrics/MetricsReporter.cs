@@ -68,15 +68,15 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         protected virtual void InitializeHandlers()
         {
-            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
-            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>>>(InitEventHandler));
-            AddEventHandler("metricChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>>(MetricChangeEventHandler));
-            AddEventHandler("metricRemoval", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>>(MetricRemovalEventHandler));
-            AddEventHandler("reconfigurableConfigs", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(ReconfigurableConfigsEventHandler));
-            AddEventHandler("contextChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.MetricsContext>>>(ContextChangeEventHandler));
-            AddEventHandler("reconfigure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ReconfigureEventHandler));
-            AddEventHandler("validateReconfiguration", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ValidateReconfigurationEventHandler));
+            AddEventHandler("configure", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ConfigureEventHandler));
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
+            AddEventHandler("init", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>>>(InitEventHandler));
+            AddEventHandler("metricChange", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>>(MetricChangeEventHandler));
+            AddEventHandler("metricRemoval", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>>(MetricRemovalEventHandler));
+            AddEventHandler("reconfigurableConfigs", new global::System.EventHandler<CLRListenerEventArgs<CLREventData>>(ReconfigurableConfigsEventHandler));
+            AddEventHandler("contextChange", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.MetricsContext>>>(ContextChangeEventHandler));
+            AddEventHandler("reconfigure", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ReconfigureEventHandler));
+            AddEventHandler("validateReconfiguration", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>>>(ValidateReconfigurationEventHandler));
 
         }
 
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
+        public global::System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
 
         void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/metrics/MetricsReporter.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action OnClose { get; set; } = null;
+        public global::System.Action OnClose { get; set; } = null;
 
         void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/metrics/MetricsReporter.html#init-java.util.List-"/>
         /// </summary>
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric>> OnInit { get; set; } = null;
+        public global::System.Action<Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric>> OnInit { get; set; } = null;
 
         void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>> data)
         {
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange-org.apache.kafka.common.metrics.KafkaMetric-"/>
         /// </summary>
         /// <remarks>If <see cref="OnMetricChange"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.Metrics.KafkaMetric> OnMetricChange { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Common.Metrics.KafkaMetric> OnMetricChange { get; set; } = null;
 
         void MetricChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.KafkaMetric>> data)
         {
@@ -167,7 +167,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval-org.apache.kafka.common.metrics.KafkaMetric-"/>
         /// </summary>
         /// <remarks>If <see cref="OnMetricRemoval"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.Metrics.KafkaMetric> OnMetricRemoval { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Common.Metrics.KafkaMetric> OnMetricRemoval { get; set; } = null;
 
         void MetricRemovalEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.KafkaMetric>> data)
         {
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs--"/>
         /// </summary>
         /// <remarks>If <see cref="OnReconfigurableConfigs"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Func<Java.Util.Set<Java.Lang.String>> OnReconfigurableConfigs { get; set; } = null;
+        public global::System.Func<Java.Util.Set<Java.Lang.String>> OnReconfigurableConfigs { get; set; } = null;
 
         void ReconfigurableConfigsEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange-org.apache.kafka.common.metrics.MetricsContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnContextChange"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Org.Apache.Kafka.Common.Metrics.MetricsContext> OnContextChange { get; set; } = null;
+        public global::System.Action<Org.Apache.Kafka.Common.Metrics.MetricsContext> OnContextChange { get; set; } = null;
 
         void ContextChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.MetricsContext>> data)
         {
@@ -260,7 +260,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnReconfigure"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<Java.Lang.String, object>> OnReconfigure { get; set; } = null;
+        public global::System.Action<Java.Util.Map<Java.Lang.String, object>> OnReconfigure { get; set; } = null;
 
         void ReconfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
@@ -292,7 +292,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnValidateReconfiguration"/> has a value it takes precedence over corresponding class method</remarks>
-        public System.Action<Java.Util.Map<Java.Lang.String, object>> OnValidateReconfiguration { get; set; } = null;
+        public global::System.Action<Java.Util.Map<Java.Lang.String, object>> OnValidateReconfiguration { get; set; } = null;
 
         void ValidateReconfigurationEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Java.Lang.String, object>>> data)
         {
