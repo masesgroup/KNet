@@ -196,6 +196,9 @@ jobs:
           name: KNet
           path: .\bin\*nupkg
 
+      - name: Pre compile tests
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
+
       - name: Save KNet bin in cache
         uses: actions/cache/save@v4
         with:
