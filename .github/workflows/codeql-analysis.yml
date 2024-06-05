@@ -115,8 +115,8 @@ jobs:
     - name: Maven preparation (step 1)
       if: matrix.language == 'java' 
       run: dotnet build --no-incremental --configuration Release --framework net8.0 /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" ./src/net/KNet/KNet.csproj
-        env:
-          GITHUB_SIMPLIFIED_GENERATION: true
+      env:
+        GITHUB_SIMPLIFIED_GENERATION: true
           
     - if: matrix.language == 'java' 
       run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
