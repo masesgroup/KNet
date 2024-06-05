@@ -23,7 +23,7 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 
-namespace MASES.KNetTest
+namespace MASES.KNetCompactedReplicatorTest
 {
     class Program
     {
