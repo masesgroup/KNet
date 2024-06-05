@@ -149,7 +149,7 @@ namespace MASES.KNet
         /// <exception cref="ArgumentException">If <paramref name="className"/> does not have a corresponding implemented <see cref="Type"/></exception>
         protected virtual void PrepareMainClassToRun(string className)
         {
-            if (!string.IsNullOrEmpty(className)) return;
+            if (string.IsNullOrWhiteSpace(className)) return;
             Type type = null;
             foreach (var item in typeof(KNetCore<>).Assembly.ExportedTypes)
             {

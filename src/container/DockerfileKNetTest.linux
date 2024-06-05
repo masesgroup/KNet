@@ -1,0 +1,28 @@
+﻿FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0-jammy AS build-env
+ARG TARGETARCH
+WORKDIR /app
+
+# Copy everything
+COPY ./src/net ./
+ENV KNET_DOCKER_BUILD_ACTIONS=true
+# Restore as distinct layers
+RUN dotnet restore KNetDocker.sln -a $TARGETARCH
+# Build and publish a release
+RUN dotnet publish ./KNetCLI/KNetCLI.csproj --framework net8.0 -c Release -o out -a $TARGETARCH
+
+# Build runtime image
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/runtime:8.0-jammy
+
+# Add JRE
+RUN apt-get update && apt-get install -y --no-install-recommends openjdk-17-jre-headless && rm -rf /var/lib/apt/lists/*
+
+ADD ./jars /app/jars
+ADD ./src/config /app/config
+ADD ./src/container/KNetTestRun.sh /app
+
+ENV JCOBRIDGE_JVMPath=/usr/lib/jvm/java-17-openjdk-amd64/lib/server/libjvm.so
+ENV JCOBRIDGE_LicensePath=
+
+WORKDIR /app
+COPY --from=build-env /app/out .
+CMD ./KNetTestRun.sh

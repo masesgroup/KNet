@@ -157,6 +157,14 @@ namespace MASES.KNetCLI
                     if (!namespaceList.Contains(item.Namespace)) namespaceList.Add(item.Namespace);
                 }
             }
+            var knetAssembly = typeof(KNetCore<>).Assembly;
+            foreach (var item in knetAssembly.GetExportedTypes())
+            {
+                if (item.IsPublic)
+                {
+                    if (!namespaceList.Contains(item.Namespace)) namespaceList.Add(item.Namespace);
+                }
+            }
             if (ParsedArgs.Exist(CLIParam.NamespaceList[0]))
             {
                 var namespaces = ParsedArgs.Get<string>(CLIParam.JarList[0]).Split(',', ';');
