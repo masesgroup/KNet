@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ls -las /app
+
 # Start zookeeper
 dotnet /app/KNetCLI.dll -ClassToRun ZooKeeperStart /app/config/zookeeper.config &
 
