@@ -174,7 +174,9 @@ jobs:
 
       - name: Recompile to create nuget packages
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet.sln
-
+        env:
+          GITHUB_TEST_PREPARATION: true
+          
       - name: Prepare PowerShell package
         run: |
           Copy-Item .\src\net\KNetPS\MASES.KNetPS.psd1 -Destination .\MASES.KNetPS\MASES.KNetPS.psd1 -Force
@@ -193,11 +195,10 @@ jobs:
           name: KNet
           path: .\bin\*nupkg
 
-      - name: Clear bin folder 
-        run: Remove-Item .\bin\* -Recurse -Force
-
       - name: Compile tests
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
+        env:
+          GITHUB_TEST_PREPARATION: true
 
       - uses: actions/upload-artifact@v4
         with:

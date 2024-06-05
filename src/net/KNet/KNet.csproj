@@ -21,12 +21,12 @@
 		<knetcore_kraft Include="$(ProjectDir)\..\..\config\kraft\*.*" />
 	</ItemGroup>
 
-	<Target Name="CopyCustomContent" AfterTargets="AfterBuild" Condition="'$(GITHUB_ACTIONS)' != 'true'">
+	<Target Name="CopyCustomContent" AfterTargets="AfterBuild" Condition="'$(GITHUB_ACTIONS)' != 'true' Or '$(GITHUB_TEST_PREPARATION)' == 'true'">
 		<Copy SourceFiles="@(knetcore_jars)" DestinationFolder="$(OutDir)\jars" />
 		<Copy SourceFiles="@(knetcore_config)" DestinationFolder="$(OutDir)\config" />
 		<Copy SourceFiles="@(knetcore_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
-	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish" Condition="'$(GITHUB_ACTIONS)' != 'true'">
+	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish" Condition="'$(GITHUB_ACTIONS)' != 'true' Or '$(GITHUB_TEST_PREPARATION)' == 'true'">
 		<Copy SourceFiles="@(knetcore_jars)" DestinationFolder="$(OutDir)\jars" />
 		<Copy SourceFiles="@(knetcore_config)" DestinationFolder="$(OutDir)\config" />
 		<Copy SourceFiles="@(knetcore_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
