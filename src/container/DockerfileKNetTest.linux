@@ -28,11 +28,10 @@ ADD ./jars /app/jars
 ADD ./src/config /app/config
 ADD ./src/container/KNetTestRun.sh /app
 
-RUN [“chmod”, “+x”, "/app/KNetTestRun.sh”]
-
 ENV JCOBRIDGE_JVMPath=/usr/lib/jvm/java-17-openjdk-amd64/lib/server/libjvm.so
 ENV JCOBRIDGE_LicensePath=
 
 WORKDIR /app
 COPY --from=build-env /app/out .
+RUN chmod +x /app/KNetTestRun.sh
 CMD ./KNetTestRun.sh
