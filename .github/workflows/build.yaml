@@ -132,9 +132,6 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
-      - name: Pre compile tests
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
-
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
         env:
@@ -196,8 +193,13 @@ jobs:
           name: KNet
           path: .\bin\*nupkg
 
-      - name: Pre compile tests
+      - name: Compile tests
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KNet_bin_${{ github.sha }}
+          path: .\bin\*
 
       - name: Save KNet bin in cache
         uses: actions/cache/save@v4
