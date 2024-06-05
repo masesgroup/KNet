@@ -17,8 +17,6 @@
 */
 
 using System;
-using System.IO;
-using System.Reflection;
 
 namespace MASES.KNet.TestCommon
 {
@@ -30,7 +28,7 @@ namespace MASES.KNet.TestCommon
             CreateGlobalInstance();
         }
 
-        public override bool LogClassPath => false;
+        public override bool LogClassPath => true;
 
         public long CurrentJNICalls => JVMStats.TotalJNICalls;
 
