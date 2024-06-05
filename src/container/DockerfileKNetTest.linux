@@ -19,7 +19,7 @@ LABEL org.opencontainers.image.authors='https://github.com/masesgroup', \
       org.opencontainers.image.source='https://github.com/masesgroup/KNet' \
       org.opencontainers.image.vendor='MASES Group' \
       org.opencontainers.image.licenses='Apache-2.0' \
-	  org.opencontainers.image.description "KNet Test container"
+      org.opencontainers.image.description="KNet Test container"
 
 # Add JRE
 RUN apt-get update && apt-get install -y --no-install-recommends openjdk-17-jre-headless && rm -rf /var/lib/apt/lists/*
