@@ -193,6 +193,9 @@ jobs:
           name: KNet
           path: .\bin\*nupkg
 
+      - name: Clear bin folder 
+        run: Remove-Item .\bin\* -Recurse -Force
+
       - name: Compile tests
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
 
