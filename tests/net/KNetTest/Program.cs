@@ -46,6 +46,7 @@ namespace MASES.KNetTest
         static bool flushWhileSend = false;
         static bool withAck = false;
         static bool runInParallel = false;
+        static bool avoidCreateTopicThrows = false;
 
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
@@ -77,7 +78,7 @@ namespace MASES.KNetTest
 
             public TestType()
             {
-                    
+
             }
 
             public TestType(int i, bool withBigExtraValue, bool bigBigExtraValue)
@@ -125,6 +126,7 @@ namespace MASES.KNetTest
                         if (args[i] == "flushWhileSend") { flushWhileSend = true; continue; }
                         if (args[i] == "withAck") { withAck = true; continue; }
                         if (args[i] == "runInParallel") { runInParallel = true; continue; }
+                        if (args[i] == "avoidCreateTopicThrows") { avoidCreateTopicThrows = true; continue; }
                         Console.WriteLine($"Unknown {args[i]}");
                     }
                 }
@@ -247,11 +249,13 @@ namespace MASES.KNetTest
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
+                if (!avoidCreateTopicThrows) throw;
             }
             catch (TopicExistsException) { }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                if (!avoidCreateTopicThrows) throw;
             }
         }
 
