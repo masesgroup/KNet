@@ -323,17 +323,13 @@ jobs:
  
       - name: Executing KNetTest on Ubuntu with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: matrix.os == 'ubuntu-latest'
-        run: |
-           dotnet ./bin/${{ matrix.framework }}/KNetTest.dll
-           docker logs "${{ job.services.mysql.id }}"
+        run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
         
       - name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'windows-latest' && matrix.framework != 'net462' }}
-        run: |
-          dotnet .\bin\${{ matrix.framework }}\KNetTest.dll
-          docker logs "${{ job.services.mysql.id }}"
+        run: dotnet .\bin\${{ matrix.framework }}\KNetTest.dll
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
           
