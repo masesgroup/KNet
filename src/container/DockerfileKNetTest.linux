@@ -33,6 +33,8 @@ ADD ./src/container/server.properties /app
 ENV JCOBRIDGE_JVMPath=/usr/lib/jvm/java-17-openjdk-amd64/lib/server/libjvm.so
 ENV JCOBRIDGE_LicensePath=
 
+EXPOSE 9092
+
 WORKDIR /app
 COPY --from=build-env /app/out .
 RUN chmod +x /app/KNetTestRun.sh
