@@ -13,7 +13,13 @@ RUN dotnet publish ./KNetCLI/KNetCLI.csproj --framework net8.0 -c Release -o out
 # Build runtime image
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/runtime:8.0-jammy
 
-LABEL org.opencontainers.image.description "KNet Test container"
+LABEL org.opencontainers.image.authors='https://github.com/masesgroup', \
+      org.opencontainers.image.url='https://knet.masesgroup.com' \
+      org.opencontainers.image.documentation='https://knet.masesgroup.com' \
+      org.opencontainers.image.source='https://github.com/masesgroup/KNet' \
+      org.opencontainers.image.vendor='MASES Group' \
+      org.opencontainers.image.licenses='Apache-2.0' \
+	  org.opencontainers.image.description "KNet Test container"
 
 # Add JRE
 RUN apt-get update && apt-get install -y --no-install-recommends openjdk-17-jre-headless && rm -rf /var/lib/apt/lists/*
