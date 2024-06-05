@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Start zookeeper
-dotnet KNetCLI.dll -ClassToRun ZooKeeperStart ./config/zookeeper.config &
+dotnet /app/KNetCLI.dll -ClassToRun ZooKeeperStart /app/config/zookeeper.config &
 
 # Start kafka broker
-dotnet KNetCLI.dll -ClassToRun KafkaStart ./config/zookeeper.config &
+dotnet /app/KNetCLI.dll -ClassToRun KafkaStart /app/config/zookeeper.config &
 
 # Wait for any process to exit
 wait -n
