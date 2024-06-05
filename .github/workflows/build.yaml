@@ -292,6 +292,9 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
         ports:
           - 9092:9092
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
     strategy:
       fail-fast: false
       matrix:
