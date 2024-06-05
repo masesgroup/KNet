@@ -106,7 +106,7 @@ namespace MASES.KNetTest
 
         static void Main(string[] args)
         {
-            SharedKNetCore.CreateGlobalInstance();
+            SharedKNetCore.Create();
             var appArgs = SharedKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)

@@ -16,9 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Util;
-using MASES.JCOBridge.C2JBridge;
-
 using MASES.KNet.TestCommon;
 using System;
 using System.Text.RegularExpressions;
@@ -47,7 +44,7 @@ namespace MASES.KNetTestKNetStreams
 
         static void Main(string[] args)
         {
-            SharedKNetCore.CreateGlobalInstance();
+            SharedKNetCore.Create();
             var appArgs = SharedKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)

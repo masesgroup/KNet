@@ -17,11 +17,19 @@
 */
 
 using System;
+using System.IO;
+using System.Reflection;
 
 namespace MASES.KNet.TestCommon
 {
     internal class SharedKNetCore : KNetCore<SharedKNetCore>
     {
+       public static void Create()
+        {
+            ApplicationJarRootPath = Const.DefaultJarsPath;
+            CreateGlobalInstance();
+        }
+
         public override bool LogClassPath => false;
 
         public long CurrentJNICalls => JVMStats.TotalJNICalls;
