@@ -1,2 +1,5 @@
 *.psd1 diff
 *.psm1 diff
+
+*.sh text eol=lf
+*.yaml text eol=auto
