@@ -31,8 +31,17 @@
 		<Copy SourceFiles="@(knetcore_config)" DestinationFolder="$(OutDir)\config" />
 		<Copy SourceFiles="@(knetcore_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
-	
-	
+	<ItemGroup Condition="'$(GITHUB_SIMPLIFIED_GENERATION)' == 'true'">
+		<Compile Remove="Developed\**" />
+		<Compile Remove="Generated\**" />
+		<Compile Remove="Specific\**" />
+		<EmbeddedResource Remove="Developed\**" />
+		<EmbeddedResource Remove="Generated\**" />
+		<EmbeddedResource Remove="Specific\**" />
+		<None Remove="Developed\**" />
+		<None Remove="Generated\**" />
+		<None Remove="Specific\**" />
+	</ItemGroup>
 	<ItemGroup>
 		<None Include="mases.knet.targets" Pack="true" PackagePath="build" />
 		<None Include="..\..\..\jars\*.jar" Pack="true" PackagePath="build\jars" />

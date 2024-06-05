@@ -137,6 +137,8 @@ jobs:
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
+        env:
+          GITHUB_SIMPLIFIED_GENERATION: true
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v4
@@ -214,7 +216,9 @@ jobs:
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src/net/KNet/KNet.csproj
-        
+        env:
+          GITHUB_SIMPLIFIED_GENERATION: true
+          
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
@@ -261,7 +265,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: latest
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
   execute_tests:
@@ -269,7 +273,7 @@ jobs:
     services:
       kafka:
         # Private registry image
-        image: ghcr.io/${{ github.repository_owner }}/knettest:latest
+        image: ghcr.io/${{ github.repository_owner }}/knettest:${{ github.ref_name }}
         credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}

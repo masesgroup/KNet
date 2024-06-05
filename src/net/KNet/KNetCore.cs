@@ -17,17 +17,10 @@
 */
 
 using MASES.CLIParser;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Clients.Producer;
-using Org.Apache.Kafka.Common;
-using Org.Apache.Kafka.Common.Errors;
-using Org.Apache.Kafka.Connect.Errors;
-using Org.Apache.Kafka.Streams.Errors;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using MASES.JNet;
-using Org.Apache.Kafka.Common.Config;
 
 namespace MASES.KNet
 {
