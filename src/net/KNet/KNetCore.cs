@@ -17,17 +17,10 @@
 */
 
 using MASES.CLIParser;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Clients.Producer;
-using Org.Apache.Kafka.Common;
-using Org.Apache.Kafka.Common.Errors;
-using Org.Apache.Kafka.Connect.Errors;
-using Org.Apache.Kafka.Streams.Errors;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using MASES.JNet;
-using Org.Apache.Kafka.Common.Config;
 
 namespace MASES.KNet
 {
@@ -149,7 +142,7 @@ namespace MASES.KNet
         /// <exception cref="ArgumentException">If <paramref name="className"/> does not have a corresponding implemented <see cref="Type"/></exception>
         protected virtual void PrepareMainClassToRun(string className)
         {
-            if (!string.IsNullOrEmpty(className)) return;
+            if (string.IsNullOrEmpty(className)) return;
             Type type = null;
             foreach (var item in typeof(KNetCore<>).Assembly.ExportedTypes)
             {
