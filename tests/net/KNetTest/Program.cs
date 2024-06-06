@@ -436,7 +436,7 @@ namespace MASES.KNetTest
                                 consumer.SeekToBeginning(Collections.Singleton(tp));
                             }
                         }
-
+                        int cycle = 0;
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
@@ -454,6 +454,12 @@ namespace MASES.KNetTest
                                 watcher.Start();
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
+                            }
+                            cycle++;
+                            if (elements == 0 && cycle == 60 * 5)
+                            {
+                                Console.WriteLine("Forcibly exit since no record was received within 1 minute.");
+                                break;
                             }
                         }
                         watcherTotal.Stop();
@@ -639,7 +645,7 @@ namespace MASES.KNetTest
                                 consumer.SeekToBeginning(Collections.Singleton(tp));
                             }
                         }
-
+                        int cycle = 0;
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
@@ -657,6 +663,12 @@ namespace MASES.KNetTest
                                 watcher.Start();
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
+                            }
+                            cycle++;
+                            if (elements == 0 && cycle == 60 * 5)
+                            {
+                                Console.WriteLine("Forcibly exit since no record was received within 1 minute.");
+                                break;
                             }
                         }
                         watcherTotal.Stop();

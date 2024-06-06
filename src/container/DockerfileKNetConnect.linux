@@ -8,13 +8,21 @@ ENV KNET_DOCKER_BUILD_ACTIONS=true
 # Restore as distinct layers
 RUN dotnet restore KNetDocker.sln -a $TARGETARCH
 # Build and publish a release
-RUN dotnet publish ./KNetConnect/KNetConnect.csproj --framework net8.0 -c Release -o out -a $TARGETARCH
+RUN dotnet publish ./KNetConnect/KNetConnect.csproj /p:NoWarn="0108%3B1030%3B0618" --framework net8.0 -c Release -o out -a $TARGETARCH
 
 # Build runtime image
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/runtime:8.0-jammy
 
 # Add JRE
 RUN apt-get update && apt-get install -y --no-install-recommends openjdk-17-jre-headless && rm -rf /var/lib/apt/lists/*
+
+LABEL org.opencontainers.image.authors='https://github.com/masesgroup', \
+      org.opencontainers.image.url='https://knet.masesgroup.com' \
+      org.opencontainers.image.documentation='https://knet.masesgroup.com' \
+      org.opencontainers.image.source='https://github.com/masesgroup/KNet' \
+      org.opencontainers.image.vendor='MASES Group' \
+      org.opencontainers.image.licenses='Apache-2.0' \
+      org.opencontainers.image.description="KNet Connect container"
 
 ADD ./jars /app/jars
 ADD ./src/config /app/config
