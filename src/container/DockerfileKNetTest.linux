@@ -29,10 +29,12 @@ ADD ./src/config /app/config
 ADD ./src/container/KNetTestRun.sh /app
 ADD ./src/container/zookeeper.properties /app
 ADD ./src/container/server.properties /app
+ADD ./src/container/log4j.properties /app
 
 ENV JCOBRIDGE_JVMPath=/usr/lib/jvm/java-17-openjdk-amd64/lib/server/libjvm.so
 ENV JCOBRIDGE_LicensePath=
 
+EXPOSE 2181
 EXPOSE 9092
 
 WORKDIR /app
