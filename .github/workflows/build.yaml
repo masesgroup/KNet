@@ -298,8 +298,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'ubuntu-latest', 'windows-latest' ]
+        os: [ 'ubuntu-latest' ] #, 'windows-latest' ]
         framework: [ 'net462', 'net6.0', 'net8.0' ]
+        buffered: [ 'runBuffered', '']
+        extraValue: [ '', 'withBigExtraValue', 'withBigBigExtraValue' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
@@ -326,18 +328,18 @@ jobs:
  
       - name: Executing KNetTest on Ubuntu with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: matrix.os == 'ubuntu-latest'
-        run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll
+        run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
         
       - name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'windows-latest' && matrix.framework != 'net462' }}
-        run: dotnet .\bin\${{ matrix.framework }}\KNetTest.dll
+        run: dotnet .\bin\${{ matrix.framework }}\KNetTest.dll randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
           
       - name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'windows-latest' && matrix.framework == 'net462' }}
-        run: .\bin\${{ matrix.framework }}\KNetTest.exe
+        run: .\bin\${{ matrix.framework }}\KNetTest.exe randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}

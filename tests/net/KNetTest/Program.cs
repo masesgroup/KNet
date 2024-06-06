@@ -47,6 +47,7 @@ namespace MASES.KNetTest
         static bool withAck = false;
         static bool runInParallel = false;
         static bool avoidCreateTopicThrows = false;
+        static bool randomizeTopicName = false;
 
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
@@ -127,6 +128,7 @@ namespace MASES.KNetTest
                         if (args[i] == "withAck") { withAck = true; continue; }
                         if (args[i] == "runInParallel") { runInParallel = true; continue; }
                         if (args[i] == "avoidCreateTopicThrows") { avoidCreateTopicThrows = true; continue; }
+                        if (args[i] == "randomizeTopicName") { randomizeTopicName = true; continue; }
                         Console.WriteLine($"Unknown {args[i]}");
                     }
                 }
@@ -141,6 +143,12 @@ namespace MASES.KNetTest
             {
                 OnDeserialize = (topic, data) => { return new TestType(0, false, false); }
             };
+
+            if (randomizeTopicName)
+            {
+                topicToUse += Guid.NewGuid().ToString();
+                Console.WriteLine($"Topic name will be {randomizeTopicName}");
+            }
 
             CreateTopic();
             Console.CancelKeyPress += Console_CancelKeyPress;

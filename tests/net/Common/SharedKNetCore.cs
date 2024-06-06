@@ -28,7 +28,7 @@ namespace MASES.KNet.TestCommon
             CreateGlobalInstance();
         }
 
-        public override bool LogClassPath => true;
+        public override bool LogClassPath => false;
 
         public long CurrentJNICalls => JVMStats.TotalJNICalls;
 
