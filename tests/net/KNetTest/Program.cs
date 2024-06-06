@@ -385,7 +385,8 @@ namespace MASES.KNetTest
                 ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
                                                                    .WithBootstrapServers(serverToUse)
                                                                    .WithGroupId(Guid.NewGuid().ToString())
-                                                                   .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST)
+                                                                   .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
+                                                                                                      : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                                    .WithEnableAutoCommit(true)
                                                                    .WithAutoCommitIntervalMs(1000);
 
@@ -587,7 +588,8 @@ namespace MASES.KNetTest
                 ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
                                                                    .WithBootstrapServers(serverToUse)
                                                                    .WithGroupId(Guid.NewGuid().ToString())
-                                                                   .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST)
+                                                                   .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
+                                                                                                      : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                                    .WithEnableAutoCommit(true)
                                                                    .WithAutoCommitIntervalMs(1000);
 
