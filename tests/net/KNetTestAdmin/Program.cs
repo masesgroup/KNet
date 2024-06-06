@@ -43,15 +43,22 @@ namespace MASES.KNetTestAdmin
                 serverToUse = args[0];
             }
 
-            var builder = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse);
-
-            //Properties props = new Properties();
-            //props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-
-            using (var admin = KafkaAdminClient.Create(builder))
+            try
             {
-                CreateTopic(admin);
-                DeleteTopic(admin);
+                var builder = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse);
+
+                //Properties props = new Properties();
+                //props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+
+                using (var admin = KafkaAdminClient.Create(builder))
+                {
+                    CreateTopic(admin);
+                    DeleteTopic(admin);
+                }
+            }
+            catch (Exception e)
+            {
+                Environment.ExitCode = SharedKNetCore.ManageException(e);
             }
         }
 

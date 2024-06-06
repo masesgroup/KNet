@@ -16,16 +16,38 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Lang;
 using System;
 
 namespace MASES.KNet.TestCommon
 {
     internal class SharedKNetCore : KNetCore<SharedKNetCore>
     {
-       public static void Create()
+        public static void Create()
         {
             ApplicationJarRootPath = Const.DefaultJarsPath;
             CreateGlobalInstance();
+        }
+
+        public static int ManageException(System.Exception e)
+        {
+            int retCode = 0;
+            if (e is ClassNotFoundException cnfe)
+            {
+                Console.WriteLine($"Failed with {cnfe}, current ClassPath is {SharedKNetCore.GlobalInstance.ClassPath}");
+                retCode = 1;
+            }
+            else if (e is NoClassDefFoundError ncdfe)
+            {
+                Console.WriteLine($"Failed with {ncdfe}, current ClassPath is {SharedKNetCore.GlobalInstance.ClassPath}");
+                retCode = 1;
+            }
+            else
+            {
+                Console.WriteLine($"Failed with {e}");
+                retCode = 1;
+            }
+            return retCode;
         }
 
         public override bool LogClassPath => false;

@@ -146,8 +146,8 @@ namespace MASES.KNetTest
 
             if (randomizeTopicName)
             {
-                topicToUse += Guid.NewGuid().ToString();
-                Console.WriteLine($"Topic name will be {randomizeTopicName}");
+                topicToUse += "-" + Guid.NewGuid().ToString();
+                Console.WriteLine($"Topic name will be {topicToUse}");
             }
 
             try
@@ -207,8 +207,7 @@ namespace MASES.KNetTest
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Failed with {e}");
-                Environment.ExitCode = 1;
+                Environment.ExitCode = SharedKNetCore.ManageException(e);
             }
         }
 

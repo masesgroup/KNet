@@ -58,34 +58,41 @@ namespace MASES.KNetCompactedReplicatorTest
             SharedKNetCore.Create();
             var appArgs = SharedKNetCore.FilteredArgs;
 
-            if (appArgs.Length != 0)
+            try
             {
-                serverToUse = args[0];
+                if (appArgs.Length != 0)
+                {
+                    serverToUse = args[0];
+                }
+                var sw = Stopwatch.StartNew();
+                TestValues("TestValues", 100, UpdateModeTypes.OnDelivery, 5);
+                sw.Stop();
+                Console.WriteLine($"End TestValues in {sw.Elapsed}");
+                sw = Stopwatch.StartNew();
+                Test("TestOnDelivery", 100, UpdateModeTypes.OnDelivery | UpdateModeTypes.Delayed, 5);
+                sw.Stop();
+                Console.WriteLine($"End TestOnDelivery in {sw.Elapsed}");
+                sw = Stopwatch.StartNew();
+                Test("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5);
+                sw.Stop();
+                Console.WriteLine($"End TestOnConsume in {sw.Elapsed}");
+                sw = Stopwatch.StartNew();
+                TestOnlyRead("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5);
+                sw.Stop();
+                Console.WriteLine($"End TestOnlyRead for TestOnConsume in {sw.Elapsed}");
+                sw = Stopwatch.StartNew();
+                Test("TestOnConsumeLessConsumers", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5, 2);
+                sw.Stop();
+                Console.WriteLine($"End TestOnConsume in {sw.Elapsed}");
+                Console.CancelKeyPress += Console_CancelKeyPress;
+                Console.WriteLine("Press Ctrl-C to exit");
+                resetEvent.WaitOne();
+                Thread.Sleep(2000); // wait the threads exit
             }
-            var sw = Stopwatch.StartNew();
-            TestValues("TestValues", 100, UpdateModeTypes.OnDelivery, 5);
-            sw.Stop();
-            Console.WriteLine($"End TestValues in {sw.Elapsed}");
-            sw = Stopwatch.StartNew();
-            Test("TestOnDelivery", 100, UpdateModeTypes.OnDelivery | UpdateModeTypes.Delayed, 5);
-            sw.Stop();
-            Console.WriteLine($"End TestOnDelivery in {sw.Elapsed}");
-            sw = Stopwatch.StartNew();
-            Test("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5);
-            sw.Stop();
-            Console.WriteLine($"End TestOnConsume in {sw.Elapsed}");
-            sw = Stopwatch.StartNew();
-            TestOnlyRead("TestOnConsume", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5);
-            sw.Stop();
-            Console.WriteLine($"End TestOnlyRead for TestOnConsume in {sw.Elapsed}");
-            sw = Stopwatch.StartNew();
-            Test("TestOnConsumeLessConsumers", 100, UpdateModeTypes.OnConsume | UpdateModeTypes.Delayed, 5, 2);
-            sw.Stop();
-            Console.WriteLine($"End TestOnConsume in {sw.Elapsed}");
-            Console.CancelKeyPress += Console_CancelKeyPress;
-            Console.WriteLine("Press Ctrl-C to exit");
-            resetEvent.WaitOne();
-            Thread.Sleep(2000); // wait the threads exit
+            catch (Exception e)
+            {
+                Environment.ExitCode = SharedKNetCore.ManageException(e);
+            }
         }
 
         private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
@@ -132,7 +139,7 @@ namespace MASES.KNetCompactedReplicatorTest
                 BootstrapServers = serverToUse,
                 StateName = topicName,
                 ValueSerDesSelector = typeof(JsonSerDes.Value<>),
-            //  ValueSerDes = new JsonSerDes.Value<TestType>(),
+                //  ValueSerDes = new JsonSerDes.Value<TestType>(),
             })
             {
                 replicator.StartAndWait();
