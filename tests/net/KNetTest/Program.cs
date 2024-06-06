@@ -150,58 +150,66 @@ namespace MASES.KNetTest
                 Console.WriteLine($"Topic name will be {randomizeTopicName}");
             }
 
-            CreateTopic();
-            Console.CancelKeyPress += Console_CancelKeyPress;
-            Console.WriteLine("Press Ctrl-C to exit");
-            if (runInParallel)
+            try
             {
-                Thread threadProduce;
-                Thread threadConsume;
-                if (runBuffered)
+                CreateTopic();
+                Console.CancelKeyPress += Console_CancelKeyPress;
+                Console.WriteLine("Press Ctrl-C to exit");
+                if (runInParallel)
                 {
-                    threadProduce = new(ProduceSomethingBuffered)
+                    Thread threadProduce;
+                    Thread threadConsume;
+                    if (runBuffered)
                     {
-                        Name = "produce buffered"
-                    };
+                        threadProduce = new(ProduceSomethingBuffered)
+                        {
+                            Name = "produce buffered"
+                        };
 
-                    threadConsume = new(ConsumeSomethingBuffered)
+                        threadConsume = new(ConsumeSomethingBuffered)
+                        {
+                            Name = "consume buffered"
+                        };
+                    }
+                    else
                     {
-                        Name = "consume buffered"
-                    };
+                        threadProduce = new(ProduceSomething)
+                        {
+                            Name = "produce"
+                        };
+
+                        threadConsume = new(ConsumeSomething)
+                        {
+                            Name = "consume"
+                        };
+                    }
+                    threadProduce.Start();
+                    if (!onlyProduce) threadConsume.Start();
+                    resetEvent.WaitOne(TimeSpan.FromSeconds(System.Diagnostics.Debugger.IsAttached ? 1000 : 60));
+                    resetEvent.Set();
                 }
                 else
                 {
-                    threadProduce = new(ProduceSomething)
+                    if (runBuffered)
                     {
-                        Name = "produce"
-                    };
-
-                    threadConsume = new(ConsumeSomething)
+                        ProduceSomethingBuffered();
+                        if (!onlyProduce) ConsumeSomethingBuffered();
+                    }
+                    else
                     {
-                        Name = "consume"
-                    };
+                        ProduceSomething();
+                        if (!onlyProduce) ConsumeSomething();
+                    }
                 }
-                threadProduce.Start();
-                if (!onlyProduce) threadConsume.Start();
-                resetEvent.WaitOne(TimeSpan.FromSeconds(System.Diagnostics.Debugger.IsAttached ? 1000 : 60));
-                resetEvent.Set();
+                Thread.Sleep(2000); // wait the threads exit
+
+                Console.WriteLine($"End of {(runBuffered ? "buffered" : "non buffered")} test");
             }
-            else
+            catch (Exception e)
             {
-                if (runBuffered)
-                {
-                    ProduceSomethingBuffered();
-                    if (!onlyProduce) ConsumeSomethingBuffered();
-                }
-                else
-                {
-                    ProduceSomething();
-                    if (!onlyProduce) ConsumeSomething();
-                }
+                Console.WriteLine($"Failed with {e.ToString()}");
+                Environment.ExitCode = 1;
             }
-            Thread.Sleep(2000); // wait the threads exit
-
-            Console.WriteLine($"End of {(runBuffered ? "buffered" : "non buffered")} test");
         }
 
         private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
