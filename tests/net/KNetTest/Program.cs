@@ -46,7 +46,7 @@ namespace MASES.KNetTest
         static bool flushWhileSend = false;
         static bool withAck = false;
         static bool runInParallel = false;
-        static bool avoidCreateTopicThrows = false;
+        static bool avoidThrows = false;
         static bool randomizeTopicName = false;
 
         const string theServer = "localhost:9092";
@@ -127,7 +127,7 @@ namespace MASES.KNetTest
                         if (args[i] == "flushWhileSend") { flushWhileSend = true; continue; }
                         if (args[i] == "withAck") { withAck = true; continue; }
                         if (args[i] == "runInParallel") { runInParallel = true; continue; }
-                        if (args[i] == "avoidCreateTopicThrows") { avoidCreateTopicThrows = true; continue; }
+                        if (args[i] == "avoidThrows") { avoidThrows = true; continue; }
                         if (args[i] == "randomizeTopicName") { randomizeTopicName = true; continue; }
                         Console.WriteLine($"Unknown {args[i]}");
                     }
@@ -185,7 +185,7 @@ namespace MASES.KNetTest
                     }
                     threadProduce.Start();
                     if (!onlyProduce) threadConsume.Start();
-                    resetEvent.WaitOne(TimeSpan.FromSeconds(System.Diagnostics.Debugger.IsAttached ? 1000 : 60));
+                    resetEvent.WaitOne(TimeSpan.FromSeconds(Debugger.IsAttached ? 1000 : 60));
                     resetEvent.Set();
                 }
                 else
@@ -207,7 +207,7 @@ namespace MASES.KNetTest
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Failed with {e.ToString()}");
+                Console.WriteLine($"Failed with {e}");
                 Environment.ExitCode = 1;
             }
         }
@@ -246,6 +246,8 @@ namespace MASES.KNetTest
 
                 Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
 
+                Console.WriteLine($"Creating {topic} using an AdminClient based on {props}");
+
                 using (IAdmin admin = KafkaAdminClient.Create(props))
                 {
                     /******* standard
@@ -264,14 +266,14 @@ namespace MASES.KNetTest
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine(ex.InnerException.Message);
-                if (!avoidCreateTopicThrows) throw;
             }
             catch (TopicExistsException) { }
             catch (Exception e)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine(e.Message);
-                if (!avoidCreateTopicThrows) throw;
             }
         }
 
@@ -359,10 +361,12 @@ namespace MASES.KNetTest
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Producer ended with error: {0}", ex.InnerException.Message);
             }
             catch (Exception ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Producer ended with error: {0}", ex.Message);
             }
         }
@@ -465,10 +469,12 @@ namespace MASES.KNetTest
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
             }
             catch (Exception ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Consumer ended with error: {0}", ex.Message);
             }
         }
@@ -557,10 +563,12 @@ namespace MASES.KNetTest
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Producer ended with error: {0}", ex.InnerException.Message);
             }
             catch (Exception ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Producer ended with error: {0}", ex.Message);
             }
         }
@@ -663,10 +671,12 @@ namespace MASES.KNetTest
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
             }
             catch (Exception ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Consumer ended with error: {0}", ex.Message);
             }
         }
