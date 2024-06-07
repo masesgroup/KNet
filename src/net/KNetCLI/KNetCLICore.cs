@@ -188,37 +188,37 @@ namespace MASES.KNetCLI
 
             PrepareMainClassToRun(ClassToRun);
 
-            switch (ClassToRun)
+            switch (ClassToRun.ToLowerInvariant())
             {
-                case "VerifiableConsumer":
+                case "verifiableconsumer":
                     ApplicationHeapSize = "512M";
                     break;
-                case "VerifiableProducer":
+                case "verifiableproducer":
                     ApplicationHeapSize = "512M";
                     break;
-                case "StreamsResetter":
+                case "streamsresetter":
                     ApplicationHeapSize = "512M";
                     break;
-                case "ZooKeeperStart":
-                    ApplicationHeapSize = "512M";
-                    ApplicationInitialHeapSize = "512M";
-                    break;
-                case "ZooKeeperShell":
+                case "zookeeperstart":
                     ApplicationHeapSize = "512M";
                     ApplicationInitialHeapSize = "512M";
                     break;
-                case "KafkaStart":
+                case "zookeepershell":
+                    ApplicationHeapSize = "512M";
+                    ApplicationInitialHeapSize = "512M";
+                    break;
+                case "kafkastart":
                     ApplicationHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
                     ApplicationInitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
                     break;
-                case "ConnectStandalone":
-                case "ConnectDistributed":
-                case "KNetConnectStandalone":
-                case "KNetConnectDistributed":
+                case "connectstandalone":
+                case "connectdistributed":
+                case "knetconnectstandalone":
+                case "knetconnectdistributed":
                     {
                         throw new ArgumentException($"Use KNetConnect to run KNet Connect SDK");
                     }
-                case "MirrorMaker2":
+                case "mirrormaker2":
                     {
                         ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
                         ApplicationHeapSize = "2G";

@@ -143,10 +143,12 @@ namespace MASES.KNet
         protected virtual void PrepareMainClassToRun(string className)
         {
             if (string.IsNullOrWhiteSpace(className)) return;
+            var invariantLowClassName = className.ToLowerInvariant();
             Type type = null;
             foreach (var item in typeof(KNetCore<>).Assembly.ExportedTypes)
             {
-                if (item.Name == className || item.FullName == className)
+                if (item.Name.ToLowerInvariant() == invariantLowClassName
+                    || item.FullName.ToLowerInvariant() == invariantLowClassName)
                 {
                     type = item;
                     break;
