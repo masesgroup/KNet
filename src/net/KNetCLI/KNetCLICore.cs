@@ -132,7 +132,20 @@ namespace MASES.KNetCLI
 
         protected override string[] ProcessCommandLine()
         {
-            var result = base.ProcessCommandLine();
+            var result = base.ProcessCommandLine(); // returns the filtered args till now
+
+            if (string.IsNullOrWhiteSpace(_classToRun) && result != null && result.Length > 0)
+            {
+                // try to use first argument as ClassToRun
+                _classToRun = result[0];
+                int remaining = result.Length - 1;
+                if (remaining != 0)
+                {
+                    string[] tmp_result = new string[remaining];
+                    Array.Copy(result, 1, tmp_result, 0, remaining); // remove first argument
+                    result = tmp_result;
+                }
+            }
 
             _Interactive = ParsedArgs.Exist(CLIParam.Interactive[0]);
             _NoLogo = ParsedArgs.Exist(CLIParam.NoLogo[0]);
@@ -151,6 +164,14 @@ namespace MASES.KNetCLI
 
             var jnetAssembly = typeof(JNetCoreBase<>).Assembly;
             foreach (var item in jnetAssembly.GetExportedTypes())
+            {
+                if (item.IsPublic)
+                {
+                    if (!namespaceList.Contains(item.Namespace)) namespaceList.Add(item.Namespace);
+                }
+            }
+            var knetAssembly = typeof(KNetCore<>).Assembly;
+            foreach (var item in knetAssembly.GetExportedTypes())
             {
                 if (item.IsPublic)
                 {
@@ -180,37 +201,37 @@ namespace MASES.KNetCLI
 
             PrepareMainClassToRun(ClassToRun);
 
-            switch (ClassToRun)
+            switch (ClassToRun.ToLowerInvariant())
             {
-                case "VerifiableConsumer":
+                case "verifiableconsumer":
                     ApplicationHeapSize = "512M";
                     break;
-                case "VerifiableProducer":
+                case "verifiableproducer":
                     ApplicationHeapSize = "512M";
                     break;
-                case "StreamsResetter":
+                case "streamsresetter":
                     ApplicationHeapSize = "512M";
                     break;
-                case "ZooKeeperStart":
-                    ApplicationHeapSize = "512M";
-                    ApplicationInitialHeapSize = "512M";
-                    break;
-                case "ZooKeeperShell":
+                case "zookeeperstart":
                     ApplicationHeapSize = "512M";
                     ApplicationInitialHeapSize = "512M";
                     break;
-                case "KafkaStart":
+                case "zookeepershell":
+                    ApplicationHeapSize = "512M";
+                    ApplicationInitialHeapSize = "512M";
+                    break;
+                case "kafkastart":
                     ApplicationHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
                     ApplicationInitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
                     break;
-                case "ConnectStandalone":
-                case "ConnectDistributed":
-                case "KNetConnectStandalone":
-                case "KNetConnectDistributed":
+                case "connectstandalone":
+                case "connectdistributed":
+                case "knetconnectstandalone":
+                case "knetconnectdistributed":
                     {
                         throw new ArgumentException($"Use KNetConnect to run KNet Connect SDK");
                     }
-                case "MirrorMaker2":
+                case "mirrormaker2":
                     {
                         ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
                         ApplicationHeapSize = "2G";

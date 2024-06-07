@@ -422,6 +422,7 @@ namespace MASES.KNet.Benchmark
 
         static void Init(string[] args)
         {
+            BenchmarkKNetCore.ApplicationJarRootPath = Const.DefaultJarsPath;
             BenchmarkKNetCore.ApplicationHeapSize = "4G";
             BenchmarkKNetCore.ApplicationInitialHeapSize = "4G";
             BenchmarkKNetCore.CreateGlobalInstance();

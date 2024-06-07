@@ -132,11 +132,10 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
-      - name: Pre compile tests
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
-
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
+        env:
+          GITHUB_SIMPLIFIED_GENERATION: true
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v4
@@ -175,7 +174,7 @@ jobs:
 
       - name: Recompile to create nuget packages
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet.sln
-
+          
       - name: Prepare PowerShell package
         run: |
           Copy-Item .\src\net\KNetPS\MASES.KNetPS.psd1 -Destination .\MASES.KNetPS\MASES.KNetPS.psd1 -Force
@@ -193,3 +192,155 @@ jobs:
         with:
           name: KNet
           path: .\bin\*nupkg
+
+      - name: Compile tests
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
+        env:
+          GITHUB_TEST_PREPARATION: true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KNet_bin_${{ github.sha }}
+          path: .\bin\*
+          
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KNet_jars_${{ github.sha }}
+          path: .\jars\*
+
+      - name: Save KNet bin in cache
+        uses: actions/cache/save@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: KNet_bin_${{ github.sha }}
+
+  build_container_knettest:
+    needs: check_changes
+    if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:    
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: '1'
+          submodules: 'true'
+
+      - name: Pre compile
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src/net/KNet/KNet.csproj
+        env:
+          GITHUB_SIMPLIFIED_GENERATION: true
+          
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v4
+        with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
+          java-version: 11
+          cache: 'maven'
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+
+      - name: Create Jars
+        run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+        
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ghcr.io/${{ github.repository_owner }}/knettest
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          file: ./src/container/DockerfileKNet.linux
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  execute_tests:
+    needs: [build_windows, build_container_knettest]
+    services:
+      kafka:
+        # Private registry image
+        image: ghcr.io/${{ github.repository_owner }}/knettest:${{ github.ref_name }}
+        credentials:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+        ports:
+          - 9092:9092
+        env:
+          KNET_RUNNING_MODE: standalone
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ 'ubuntu-latest' ] #, 'windows-latest' ]
+        framework: [ 'net462', 'net6.0', 'net8.0' ]
+        buffered: [ 'runBuffered', '']
+        extraValue: [ '', 'withBigExtraValue', 'withBigBigExtraValue' ]
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        exclude:
+          - os: ubuntu-latest
+            framework: net462
+          - jdk_vendor: oracle
+            jdk_version: 11
+        
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Restore KNet bin from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: KNet_bin_${{ github.sha }}
+ 
+      - name: Set up JDK distribution
+        uses: actions/setup-java@v4
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+ 
+      - name: Executing KNetTest on Ubuntu with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        if: matrix.os == 'ubuntu-latest'
+        run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+        
+      - name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        if: ${{ matrix.os == 'windows-latest' && matrix.framework != 'net462' }}
+        run: dotnet .\bin\${{ matrix.framework }}\KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
+      - name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        if: ${{ matrix.os == 'windows-latest' && matrix.framework == 'net462' }}
+        run: .\bin\${{ matrix.framework }}\KNetTest.exe localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}

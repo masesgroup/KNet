@@ -142,11 +142,13 @@ namespace MASES.KNet
         /// <exception cref="ArgumentException">If <paramref name="className"/> does not have a corresponding implemented <see cref="Type"/></exception>
         protected virtual void PrepareMainClassToRun(string className)
         {
-            if (string.IsNullOrEmpty(className)) return;
+            if (string.IsNullOrWhiteSpace(className)) return;
+            var invariantLowClassName = className.ToLowerInvariant();
             Type type = null;
             foreach (var item in typeof(KNetCore<>).Assembly.ExportedTypes)
             {
-                if (item.Name == className || item.FullName == className)
+                if (item.Name.ToLowerInvariant() == invariantLowClassName
+                    || item.FullName.ToLowerInvariant() == invariantLowClassName)
                 {
                     type = item;
                     break;
@@ -190,7 +192,10 @@ namespace MASES.KNet
         /// </summary>
         public static bool? ApplicationDisableJMX { get; set; }
 
-        string _classToRun;
+        /// <summary>
+        /// value can be overridden in subclasses
+        /// </summary>
+        protected string _classToRun;
         /// <summary>
         /// The class to run in CLI version
         /// </summary>

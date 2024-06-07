@@ -45,7 +45,9 @@ jobs:
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
-
+        env:
+          GITHUB_SIMPLIFIED_GENERATION: true
+          
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
@@ -102,6 +104,10 @@ jobs:
         run: jnetreflector -TraceLevel 0 -OriginRootPath %GITHUB_WORKSPACE%\jars -DestinationRootPath %GITHUB_WORKSPACE%\src\ -ConfigurationFile %GITHUB_WORKSPACE%\src\configuration.json
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+
+      - name: Try compilation
+        if: ${{ inputs.UseLatestJNetReflector == true }}
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
 
       - name: Request a PR to commit changes made with unpublished version of JNetReflector
         if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflector == true }} #do not push any changes outside main repo or GeneratePR is false

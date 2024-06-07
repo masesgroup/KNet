@@ -21,18 +21,27 @@
 		<knetcore_kraft Include="$(ProjectDir)\..\..\config\kraft\*.*" />
 	</ItemGroup>
 
-	<Target Name="CopyCustomContent" AfterTargets="AfterBuild" Condition="'$(GITHUB_ACTIONS)' != 'true'">
+	<Target Name="CopyCustomContent" AfterTargets="AfterBuild" Condition="'$(GITHUB_ACTIONS)' != 'true' Or '$(GITHUB_TEST_PREPARATION)' == 'true'">
 		<Copy SourceFiles="@(knetcore_jars)" DestinationFolder="$(OutDir)\jars" />
 		<Copy SourceFiles="@(knetcore_config)" DestinationFolder="$(OutDir)\config" />
 		<Copy SourceFiles="@(knetcore_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
-	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish" Condition="'$(GITHUB_ACTIONS)' != 'true'">
+	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish" Condition="'$(GITHUB_ACTIONS)' != 'true' Or '$(GITHUB_TEST_PREPARATION)' == 'true'">
 		<Copy SourceFiles="@(knetcore_jars)" DestinationFolder="$(OutDir)\jars" />
 		<Copy SourceFiles="@(knetcore_config)" DestinationFolder="$(OutDir)\config" />
 		<Copy SourceFiles="@(knetcore_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
-	
-	
+	<ItemGroup Condition="'$(GITHUB_SIMPLIFIED_GENERATION)' == 'true'">
+		<Compile Remove="Developed\**" />
+		<Compile Remove="Generated\**" />
+		<Compile Remove="Specific\**" />
+		<EmbeddedResource Remove="Developed\**" />
+		<EmbeddedResource Remove="Generated\**" />
+		<EmbeddedResource Remove="Specific\**" />
+		<None Remove="Developed\**" />
+		<None Remove="Generated\**" />
+		<None Remove="Specific\**" />
+	</ItemGroup>
 	<ItemGroup>
 		<None Include="mases.knet.targets" Pack="true" PackagePath="build" />
 		<None Include="..\..\..\jars\*.jar" Pack="true" PackagePath="build\jars" />

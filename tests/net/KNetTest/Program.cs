@@ -46,6 +46,8 @@ namespace MASES.KNetTest
         static bool flushWhileSend = false;
         static bool withAck = false;
         static bool runInParallel = false;
+        static bool avoidThrows = false;
+        static bool randomizeTopicName = false;
 
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
@@ -77,7 +79,7 @@ namespace MASES.KNetTest
 
             public TestType()
             {
-                    
+
             }
 
             public TestType(int i, bool withBigExtraValue, bool bigBigExtraValue)
@@ -106,7 +108,7 @@ namespace MASES.KNetTest
 
         static void Main(string[] args)
         {
-            SharedKNetCore.CreateGlobalInstance();
+            SharedKNetCore.Create();
             var appArgs = SharedKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
@@ -125,6 +127,8 @@ namespace MASES.KNetTest
                         if (args[i] == "flushWhileSend") { flushWhileSend = true; continue; }
                         if (args[i] == "withAck") { withAck = true; continue; }
                         if (args[i] == "runInParallel") { runInParallel = true; continue; }
+                        if (args[i] == "avoidThrows") { avoidThrows = true; continue; }
+                        if (args[i] == "randomizeTopicName") { randomizeTopicName = true; continue; }
                         Console.WriteLine($"Unknown {args[i]}");
                     }
                 }
@@ -140,58 +144,71 @@ namespace MASES.KNetTest
                 OnDeserialize = (topic, data) => { return new TestType(0, false, false); }
             };
 
-            CreateTopic();
-            Console.CancelKeyPress += Console_CancelKeyPress;
-            Console.WriteLine("Press Ctrl-C to exit");
-            if (runInParallel)
+            if (randomizeTopicName)
             {
-                Thread threadProduce;
-                Thread threadConsume;
-                if (runBuffered)
-                {
-                    threadProduce = new(ProduceSomethingBuffered)
-                    {
-                        Name = "produce buffered"
-                    };
+                topicToUse += "-" + Guid.NewGuid().ToString();
+                Console.WriteLine($"Topic name will be {topicToUse}");
+            }
 
-                    threadConsume = new(ConsumeSomethingBuffered)
+            try
+            {
+                CreateTopic();
+                Console.CancelKeyPress += Console_CancelKeyPress;
+                Console.WriteLine("Press Ctrl-C to exit");
+                if (runInParallel)
+                {
+                    Thread threadProduce;
+                    Thread threadConsume;
+                    if (runBuffered)
                     {
-                        Name = "consume buffered"
-                    };
+                        threadProduce = new(ProduceSomethingBuffered)
+                        {
+                            Name = "produce buffered"
+                        };
+
+                        threadConsume = new(ConsumeSomethingBuffered)
+                        {
+                            Name = "consume buffered"
+                        };
+                    }
+                    else
+                    {
+                        threadProduce = new(ProduceSomething)
+                        {
+                            Name = "produce"
+                        };
+
+                        threadConsume = new(ConsumeSomething)
+                        {
+                            Name = "consume"
+                        };
+                    }
+                    threadProduce.Start();
+                    if (!onlyProduce) threadConsume.Start();
+                    resetEvent.WaitOne(TimeSpan.FromSeconds(Debugger.IsAttached ? 1000 : 60));
+                    resetEvent.Set();
                 }
                 else
                 {
-                    threadProduce = new(ProduceSomething)
+                    if (runBuffered)
                     {
-                        Name = "produce"
-                    };
-
-                    threadConsume = new(ConsumeSomething)
+                        ProduceSomethingBuffered();
+                        if (!onlyProduce) ConsumeSomethingBuffered();
+                    }
+                    else
                     {
-                        Name = "consume"
-                    };
+                        ProduceSomething();
+                        if (!onlyProduce) ConsumeSomething();
+                    }
                 }
-                threadProduce.Start();
-                if (!onlyProduce) threadConsume.Start();
-                resetEvent.WaitOne(TimeSpan.FromSeconds(System.Diagnostics.Debugger.IsAttached ? 1000 : 60));
-                resetEvent.Set();
+                Thread.Sleep(2000); // wait the threads exit
+
+                Console.WriteLine($"End of {(runBuffered ? "buffered" : "non buffered")} test");
             }
-            else
+            catch (Exception e)
             {
-                if (runBuffered)
-                {
-                    ProduceSomethingBuffered();
-                    if (!onlyProduce) ConsumeSomethingBuffered();
-                }
-                else
-                {
-                    ProduceSomething();
-                    if (!onlyProduce) ConsumeSomething();
-                }
+                Environment.ExitCode = SharedKNetCore.ManageException(e);
             }
-            Thread.Sleep(2000); // wait the threads exit
-
-            Console.WriteLine($"End of {(runBuffered ? "buffered" : "non buffered")} test");
         }
 
         private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
@@ -228,6 +245,8 @@ namespace MASES.KNetTest
 
                 Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
 
+                Console.WriteLine($"Creating {topic} using an AdminClient based on {props}");
+
                 using (IAdmin admin = KafkaAdminClient.Create(props))
                 {
                     /******* standard
@@ -246,17 +265,20 @@ namespace MASES.KNetTest
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine(ex.InnerException.Message);
             }
             catch (TopicExistsException) { }
             catch (Exception e)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine(e.Message);
             }
         }
 
         static void ProduceSomething()
         {
+            Console.WriteLine("Starting ProduceSomething");
             try
             {
                 /**** Direct mode ******
@@ -339,16 +361,19 @@ namespace MASES.KNetTest
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Producer ended with error: {0}", ex.InnerException.Message);
             }
             catch (Exception ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Producer ended with error: {0}", ex.Message);
             }
         }
 
         static void ConsumeSomething()
         {
+            Console.WriteLine("Starting ConsumeSomething");
             try
             {
                 /**** Direct mode ******
@@ -362,7 +387,8 @@ namespace MASES.KNetTest
                 ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
                                                                    .WithBootstrapServers(serverToUse)
                                                                    .WithGroupId(Guid.NewGuid().ToString())
-                                                                   .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST)
+                                                                   .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
+                                                                                                      : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                                    .WithEnableAutoCommit(true)
                                                                    .WithAutoCommitIntervalMs(1000);
 
@@ -412,7 +438,7 @@ namespace MASES.KNetTest
                                 consumer.SeekToBeginning(Collections.Singleton(tp));
                             }
                         }
-
+                        int cycle = 0;
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
@@ -431,6 +457,12 @@ namespace MASES.KNetTest
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
                             }
+                            cycle++;
+                            if (elements == 0 && cycle == 60 * 5)
+                            {
+                                Console.WriteLine("Forcibly exit since no record was received within 1 minute.");
+                                break;
+                            }
                         }
                         watcherTotal.Stop();
                     }
@@ -445,16 +477,19 @@ namespace MASES.KNetTest
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
             }
             catch (Exception ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Consumer ended with error: {0}", ex.Message);
             }
         }
 
         static void ProduceSomethingBuffered()
         {
+            Console.WriteLine("Starting ProduceSomethingBuffered");
             try
             {
                 /**** Direct mode ******
@@ -537,16 +572,19 @@ namespace MASES.KNetTest
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Producer ended with error: {0}", ex.InnerException.Message);
             }
             catch (Exception ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Producer ended with error: {0}", ex.Message);
             }
         }
 
         static void ConsumeSomethingBuffered()
         {
+            Console.WriteLine("Starting ConsumeSomethingBuffered");
             try
             {
                 /**** Direct mode ******
@@ -560,7 +598,8 @@ namespace MASES.KNetTest
                 ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
                                                                    .WithBootstrapServers(serverToUse)
                                                                    .WithGroupId(Guid.NewGuid().ToString())
-                                                                   .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST)
+                                                                   .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
+                                                                                                      : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                                    .WithEnableAutoCommit(true)
                                                                    .WithAutoCommitIntervalMs(1000);
 
@@ -610,7 +649,7 @@ namespace MASES.KNetTest
                                 consumer.SeekToBeginning(Collections.Singleton(tp));
                             }
                         }
-
+                        int cycle = 0;
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
@@ -629,6 +668,12 @@ namespace MASES.KNetTest
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
                             }
+                            cycle++;
+                            if (elements == 0 && cycle == 60 * 5)
+                            {
+                                Console.WriteLine("Forcibly exit since no record was received within 1 minute.");
+                                break;
+                            }
                         }
                         watcherTotal.Stop();
                     }
@@ -643,10 +688,12 @@ namespace MASES.KNetTest
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
             }
             catch (Exception ex)
             {
+                if (!avoidThrows) throw;
                 Console.WriteLine("Consumer ended with error: {0}", ex.Message);
             }
         }

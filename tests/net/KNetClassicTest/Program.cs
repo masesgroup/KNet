@@ -47,7 +47,7 @@ namespace MASES.KNetClassicTest
 
         static void Main(string[] args)
         {
-            SharedKNetCore.CreateGlobalInstance();
+            SharedKNetCore.Create();
             var appArgs = SharedKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
@@ -55,24 +55,31 @@ namespace MASES.KNetClassicTest
                 serverToUse = args[0];
             }
 
-            CreateTopic();
-
-            Thread threadProduce = new(ProduceSomething)
+            try
             {
-                Name = "produce"
-            };
-            threadProduce.Start();
+                CreateTopic();
 
-            Thread threadConsume = new(ConsumeSomething)
+                Thread threadProduce = new(ProduceSomething)
+                {
+                    Name = "produce"
+                };
+                threadProduce.Start();
+
+                Thread threadConsume = new(ConsumeSomething)
+                {
+                    Name = "consume"
+                };
+                threadConsume.Start();
+
+                Console.CancelKeyPress += Console_CancelKeyPress;
+                Console.WriteLine("Press Ctrl-C to exit");
+                resetEvent.WaitOne();
+                Thread.Sleep(2000); // wait the threads exit
+            }
+            catch (Exception e)
             {
-                Name = "consume"
-            };
-            threadConsume.Start();
-
-            Console.CancelKeyPress += Console_CancelKeyPress;
-            Console.WriteLine("Press Ctrl-C to exit");
-            resetEvent.WaitOne();
-            Thread.Sleep(2000); // wait the threads exit
+                Environment.ExitCode = SharedKNetCore.ManageException(e);
+            }
         }
 
         private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
@@ -129,7 +136,9 @@ namespace MASES.KNetClassicTest
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
+                throw;
             }
+            catch (Org.Apache.Kafka.Common.Errors.TopicExistsException) { }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);

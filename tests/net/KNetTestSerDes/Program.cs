@@ -32,7 +32,7 @@ namespace MASES.KNetTestAdmin
 
         static void Main(string[] args)
         {
-            SharedKNetCore.CreateGlobalInstance();
+            SharedKNetCore.Create();
             var appArgs = SharedKNetCore.FilteredArgs;
 
             byte[] bb, bb1;
