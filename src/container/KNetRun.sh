@@ -76,10 +76,10 @@ else
 	fi
 	
 	#Issue newline to config file in case there is not one already
-	echo "" >> /app/config_container/server.properties"
+	echo "" >> /app/config_container/server.properties
 	
 	#Issue newline to config file in case there is not one already
-	echo "" >> /app/config_container/zookeeper.properties"
+	echo "" >> /app/config_container/zookeeper.properties
 	
 	(
 		function updateConfig() {
