@@ -143,19 +143,19 @@ else
 	if [ ${KNET_RUNNING_MODE} = "zookeeper" ]; then
 		echo "Starting zookeeper"
 		# Start zookeeper
-		dotnet /app/MASES.KNetCLI.dll -ClassToRun ZooKeeperStart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties
+		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties
 	elif [ ${KNET_RUNNING_MODE} = "broker" ]; then
 		echo "Starting broker"
 		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll -ClassToRun KafkaStart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties
 	elif [ ${KNET_RUNNING_MODE} = "standalone" ]; then
 		echo "Starting zookeeper"
 		# Start zookeeper
-		dotnet /app/MASES.KNetCLI.dll -ClassToRun ZooKeeperStart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties &
+		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties &
 	
 		echo "Starting broker"   
 		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll -ClassToRun KafkaStart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties &
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties &
 		
 		# Wait for any process to exit
 		wait -n
