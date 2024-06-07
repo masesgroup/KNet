@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends openjdk-17-jre-
 ADD ./jars /app/jars
 ADD ./src/config /app/config
 ADD ./src/config/kraft /app/config/kraft
-ADD ./src/container/config_alone /app/config_alone
+ADD ./src/container/config_container /app/config_container
 ADD ./src/container/KNetRun.sh /app
 
 ENV JCOBRIDGE_JVMPath=/usr/lib/jvm/java-17-openjdk-amd64/lib/server/libjvm.so

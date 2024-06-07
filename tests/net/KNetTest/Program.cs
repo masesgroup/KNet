@@ -278,6 +278,7 @@ namespace MASES.KNetTest
 
         static void ProduceSomething()
         {
+            Console.WriteLine("Starting ProduceSomething");
             try
             {
                 /**** Direct mode ******
@@ -372,6 +373,7 @@ namespace MASES.KNetTest
 
         static void ConsumeSomething()
         {
+            Console.WriteLine("Starting ConsumeSomething");
             try
             {
                 /**** Direct mode ******
@@ -487,6 +489,7 @@ namespace MASES.KNetTest
 
         static void ProduceSomethingBuffered()
         {
+            Console.WriteLine("Starting ProduceSomethingBuffered");
             try
             {
                 /**** Direct mode ******
@@ -581,6 +584,7 @@ namespace MASES.KNetTest
 
         static void ConsumeSomethingBuffered()
         {
+            Console.WriteLine("Starting ConsumeSomethingBuffered");
             try
             {
                 /**** Direct mode ******
