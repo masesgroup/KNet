@@ -132,7 +132,20 @@ namespace MASES.KNetCLI
 
         protected override string[] ProcessCommandLine()
         {
-            var result = base.ProcessCommandLine();
+            var result = base.ProcessCommandLine(); // returns the filtered args till now
+
+            if (string.IsNullOrWhiteSpace(_classToRun) && result != null && result.Length > 0)
+            {
+                // try to use first argument as ClassToRun
+                _classToRun = result[0];
+                int remaining = result.Length - 1;
+                if (remaining != 0)
+                {
+                    string[] tmp_result = new string[remaining];
+                    Array.Copy(result, 1, tmp_result, 0, remaining); // remove first argument
+                    result = tmp_result;
+                }
+            }
 
             _Interactive = ParsedArgs.Exist(CLIParam.Interactive[0]);
             _NoLogo = ParsedArgs.Exist(CLIParam.NoLogo[0]);

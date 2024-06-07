@@ -192,7 +192,10 @@ namespace MASES.KNet
         /// </summary>
         public static bool? ApplicationDisableJMX { get; set; }
 
-        string _classToRun;
+        /// <summary>
+        /// value can be overridden in subclasses
+        /// </summary>
+        protected string _classToRun;
         /// <summary>
         /// The class to run in CLI version
         /// </summary>
