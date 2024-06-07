@@ -70,25 +70,16 @@ else
 	
 	# Try and configure minimal settings or exit with error if there isn't enough information
 	if [[ -z "$KAFKA_ADVERTISED_HOST_NAME$KAFKA_LISTENERS" ]]; then
-		if [[ -n "$KAFKA_ADVERTISED_LISTENERS" ]]; then
-			echo "ERROR: Missing environment variable KAFKA_LISTENERS. Must be specified when using KAFKA_ADVERTISED_LISTENERS"
-			exit 1
-		elif [[ -z "$HOSTNAME_VALUE" ]]; then
-			echo "ERROR: No listener or advertised hostname configuration provided in environment."
-			echo "       Please define KAFKA_LISTENERS / (deprecated) KAFKA_ADVERTISED_HOST_NAME"
-			exit 1
-		fi
-	
 		# Maintain existing behaviour
 		# If HOSTNAME_COMMAND is provided, set that to the advertised.host.name value if listeners are not defined.
 		export KAFKA_ADVERTISED_HOST_NAME="$HOSTNAME_VALUE"
 	fi
 	
 	#Issue newline to config file in case there is not one already
-	echo "" >> app/config_container/server.properties"
+	echo "" >> /app/config_container/server.properties"
 	
 	#Issue newline to config file in case there is not one already
-	echo "" >> app/config_container/zookeeper.properties"
+	echo "" >> /app/config_container/zookeeper.properties"
 	
 	(
 		function updateConfig() {
@@ -123,17 +114,17 @@ else
 	
 			if [[ $env_var =~ ^KAFKA_ ]]; then
 				kafka_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
-				updateConfig "$kafka_name" "${!env_var}" "app/config_container/server.properties"
+				updateConfig "$kafka_name" "${!env_var}" "/app/config_container/server.properties"
 			fi
 			
 			if [[ $env_var =~ ^ZOOKEEPER_ ]]; then
 				kafka_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
-				updateConfig "$kafka_name" "${!env_var}" "app/config_container/server.properties"
+				updateConfig "$kafka_name" "${!env_var}" "/app/config_container/server.properties"
 			fi
 	
 			if [[ $env_var =~ ^LOG4J_ ]]; then
 				log4j_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
-				updateConfig "$log4j_name" "${!env_var}" "app/config_container/log4j.properties"
+				updateConfig "$log4j_name" "${!env_var}" "/app/config_container/log4j.properties"
 			fi
 		done
 	)
