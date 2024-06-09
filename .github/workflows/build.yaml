@@ -198,16 +198,6 @@ jobs:
         env:
           GITHUB_TEST_PREPARATION: true
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: KNet_bin_${{ github.sha }}
-          path: .\bin\*
-          
-      - uses: actions/upload-artifact@v4
-        with:
-          name: KNet_jars_${{ github.sha }}
-          path: .\jars\*
-
       - name: Save KNet bin in cache
         uses: actions/cache/save@v4
         with:
