@@ -22,7 +22,7 @@ using MASES.JCOBridge.C2JBridge.JVMInterop;
 namespace MASES.KNet.Serialization
 {
     /// <summary>
-    /// KNet specific class for org.mases.knet.common.serialization.ByteBufferDeserializer
+    /// KNet specific class for org.mases.knet.developed.common.serialization.ByteBufferDeserializer
     /// </summary>
     public class ByteBufferDeserializer : JVMBridgeBase<ByteBufferDeserializer>
     {
@@ -31,7 +31,7 @@ namespace MASES.KNet.Serialization
     }
 
     /// <summary>
-    /// KNet specific class for org.mases.knet.common.serialization.ByteBufferSerializer
+    /// KNet specific class for org.mases.knet.developed.common.serialization.ByteBufferSerializer
     /// </summary>
     public class ByteBufferSerializer : JVMBridgeBase<ByteBufferSerializer>
     {
@@ -40,7 +40,7 @@ namespace MASES.KNet.Serialization
     }
 
     /// <summary>
-    /// KNet specific class for org.mases.knet.common.serialization.Serdes
+    /// KNet specific class for org.mases.knet.developed.common.serialization.Serdes
     /// </summary>
     public class Serdes : JVMBridgeBase<Serdes>
     {
