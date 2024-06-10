@@ -161,8 +161,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
+                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         using MemoryStream memStream = new();
                         BinaryEncoder encoder = new(memStream);
@@ -231,8 +231,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
+                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         MemoryStream memStream = new();
                         BinaryEncoder encoder = new(memStream);
@@ -342,8 +342,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
+                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         using MemoryStream memStream = new();
                         JsonEncoder encoder = new(Schema, memStream);
@@ -412,8 +412,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
+                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         MemoryStream memStream = new();
                         JsonEncoder encoder = new(Schema, memStream);
@@ -530,8 +530,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
+                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         MemoryStream memStream = new();
                         BinaryEncoder encoder = new(memStream);
@@ -600,8 +600,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
+                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         MemoryStream memStream = new();
                         BinaryEncoder encoder = new(memStream);
@@ -712,8 +712,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
+                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         using MemoryStream memStream = new();
                         JsonEncoder encoder = new(Schema, memStream);
@@ -782,8 +782,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
+                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         MemoryStream memStream = new();
                         JsonEncoder encoder = new(Schema, memStream);
