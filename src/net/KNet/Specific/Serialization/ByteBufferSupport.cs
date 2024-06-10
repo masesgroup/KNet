@@ -61,7 +61,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public partial class ByteBufferSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Nio.ByteBuffer>
         {
-            const string _bridgeClassName = "org.mases.knet.common.serialization.Serdes$ByteBufferSerde";
+            const string _bridgeClassName = "org.mases.knet.developed.common.serialization.Serdes$ByteBufferSerde";
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
             /// </summary>
