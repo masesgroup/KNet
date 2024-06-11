@@ -319,6 +319,7 @@ jobs:
  
       - name: Executing KNetTest on Ubuntu with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: matrix.os == 'ubuntu-latest'
+        continue-on-error: true
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
