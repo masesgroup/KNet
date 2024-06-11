@@ -14,9 +14,9 @@ _description: Describes the Docker images of .NET suite for Apache Kafka
 	- **broker**: starts an Apache Kafka node, defaults to run a standalone broker exposing on port 9092
 	- **standalone**: starts, within the container, both a zookeeper node and an Apache Kafka node, it defaults to run exposing zookeeper on port 2181 and Kafka on port 9092 
 
-All kafka properties can be updated using envoronment variables in the following form:
-- Start with KAFKA_
-- Each property shall be capitalized and the '.' shall be replaced with '_' like KAFKA_ADVERTISED_LISTENERS
+All kafka properties can be updated using environment variables in the following form:
+- Shall start with **KAFKA_**
+- Each property shall be capitalized and the '.' shall be replaced with '_'
 - The value of the environment variable is the value will be used in the configuration file
 
 As an example: the environment variable **KAFKA_ADVERTISED_LISTENERS** represents **advertised.listeners**.
