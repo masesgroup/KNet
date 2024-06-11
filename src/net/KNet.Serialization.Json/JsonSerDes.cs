@@ -168,7 +168,7 @@ namespace MASES.KNet.Serialization.Json
                 readonly ISerDesBuffered<TData> _defaultSerDes = default!;
 #if NET462_OR_GREATER
                 /// <summary>
-                /// When set to <see langword="true"/> the oprion forces <see cref="ValueBuffered{TData}"/> to use <see cref="System.IO.Stream"/> with <see cref="Java.Nio.ByteBuffer"/> to reduce memory copy
+                /// When set to <see langword="true"/> the oprion forces <see cref="KeyBuffered{TData}"/> to use <see cref="System.IO.Stream"/> with <see cref="Java.Nio.ByteBuffer"/> to reduce memory copy
                 /// </summary>
                 /// <remarks>Added specifically to .NET Framework because NewtonSoft JSon seems to have problems with large streams</remarks>
                 public bool UseStreamWithByteBuffer { get; set; } = true;

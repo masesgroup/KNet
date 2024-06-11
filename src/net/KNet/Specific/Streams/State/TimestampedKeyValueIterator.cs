@@ -141,7 +141,7 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()"/> 
         /// </summary>
-        public bool HasNext => _iterator.HasNext;
+        public bool HasNext => _iterator.HasNext();
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#next()"/> 
         /// </summary>
@@ -151,7 +151,7 @@ namespace MASES.KNet.Streams.State
             {
                 IGenericSerDesFactory factory = Factory;
                 _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
-                return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(factory, _iterator.Next, _keySerDes, false);
+                return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(factory, _iterator.Next(), _keySerDes, false);
             }
         }
         /// <summary>
