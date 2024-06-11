@@ -132,13 +132,13 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()"/> 
         /// </summary>
-        public bool HasNext => _iterator.HasNext;
+        public bool HasNext => _iterator.HasNext();
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#next()"/> 
         /// </summary>
         public TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> Next
         {
-            get { return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(Factory, _iterator.Next); }
+            get { return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(Factory, _iterator.Next()); }
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
