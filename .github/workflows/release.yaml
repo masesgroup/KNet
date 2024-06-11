@@ -86,7 +86,7 @@ jobs:
       - name: Publish to PowerShell Gallery
         run: |
           $env:DOTNET_CLI_UI_LANGUAGE="en_US"
-          Publish-Module -Name .\MASES.KNetPS -NuGetApiKey ${{ secrets.MASES_POWERSHELLGALLERY_API_KEY }}
+          Publish-Module -Name .\MASES.KNetPS -Force -NuGetApiKey ${{ secrets.MASES_POWERSHELLGALLERY_API_KEY }}
         shell: pwsh
 
       - name: Publish to GitHub
