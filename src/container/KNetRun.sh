@@ -118,8 +118,8 @@ else
 			fi
 			
 			if [[ $env_var =~ ^ZOOKEEPER_ ]]; then
-				kafka_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
-				updateConfig "$kafka_name" "${!env_var}" "/app/config_container/server.properties"
+				zookeeper_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
+				updateConfig "$zookeeper_name" "${!env_var}" "/app/config_container/zookeeper.properties"
 			fi
 	
 			if [[ $env_var =~ ^LOG4J_ ]]; then

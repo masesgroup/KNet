@@ -458,9 +458,9 @@ namespace MASES.KNetTest
                                 watcher.Stop();
                             }
                             cycle++;
-                            if (elements == 0 && cycle == 60 * 5)
+                            if (elements >= 0 && cycle == 60 * 5)
                             {
-                                Console.WriteLine("Forcibly exit since no record was received within 1 minute.");
+                                Console.WriteLine($"Forcibly exit since no {NonParallelLimit} record was received within 1 minute.");
                                 break;
                             }
                         }
@@ -669,9 +669,9 @@ namespace MASES.KNetTest
                                 watcher.Stop();
                             }
                             cycle++;
-                            if (elements == 0 && cycle == 60 * 5)
+                            if (elements >= 0 && cycle == 60 * 5)
                             {
-                                Console.WriteLine("Forcibly exit since no record was received within 1 minute.");
+                                Console.WriteLine($"Forcibly exit since no {NonParallelLimit} record was received within 1 minute.");
                                 break;
                             }
                         }

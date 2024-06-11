@@ -122,8 +122,8 @@ namespace MASES.KNet.Serialization.Json
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(string, Headers, TData)"/>
                 public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                 {
-                    headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
-                    headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
+                    headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                    headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
 
@@ -212,8 +212,8 @@ namespace MASES.KNet.Serialization.Json
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(string, Headers, TData)"/>
                 public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                 {
-                    headers?.Add(KNetSerialization.KeyTypeIdentifier, keyTypeName);
-                    headers?.Add(KNetSerialization.KeySerializerIdentifier, keySerDesName);
+                    headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                    headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
 
@@ -357,8 +357,8 @@ namespace MASES.KNet.Serialization.Json
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(string, Headers, TData)"/>
                 public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                 {
-                    headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
-                    headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
+                    headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                    headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
 
@@ -448,8 +448,8 @@ namespace MASES.KNet.Serialization.Json
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(string, Headers, TData)"/>
                 public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                 {
-                    headers?.Add(KNetSerialization.ValueSerializerIdentifier, valueSerDesName);
-                    headers?.Add(KNetSerialization.ValueTypeIdentifier, valueTypeName);
+                    headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                    headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
 

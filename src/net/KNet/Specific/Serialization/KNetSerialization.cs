@@ -40,17 +40,33 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public const string KeyTypeIdentifier = "key-type";
         /// <summary>
+        /// Identity the type of the key used using a <see cref="Java.Lang.String"/>
+        /// </summary>
+        public static readonly Java.Lang.String KeyTypeIdentifierJVM = new Java.Lang.String(KeyTypeIdentifier);
+        /// <summary>
         /// Identity the serializer for the key
         /// </summary>
         public const string KeySerializerIdentifier = "key-serializer-type";
+        /// <summary>
+        /// Identity the serializer for the key using a <see cref="Java.Lang.String"/>
+        /// </summary>
+        public static readonly Java.Lang.String KeySerializerIdentifierJVM = new Java.Lang.String(KeySerializerIdentifier);
         /// <summary>
         /// Identity the type of the value used
         /// </summary>
         public const string ValueTypeIdentifier = "value-type";
         /// <summary>
-        /// Identity the serializer for the ValueContainer
+        /// Identity the type of the value used using a <see cref="Java.Lang.String"/>
+        /// </summary>
+        public static readonly Java.Lang.String ValueTypeIdentifierJVM = new Java.Lang.String(ValueTypeIdentifier);
+        /// <summary>
+        /// Identity the serializer for the value
         /// </summary>
         public const string ValueSerializerIdentifier = "value-serializer-type";
+        /// <summary>
+        /// Identity the serializer for the value using a <see cref="Java.Lang.String"/>
+        /// </summary>
+        public static readonly Java.Lang.String ValueSerializerIdentifierJVM = new Java.Lang.String(ValueSerializerIdentifier);
         /// <summary>
         /// Returns the typename with the assembly qualification to help reload better the types
         /// </summary>
