@@ -79,7 +79,7 @@ namespace MASES.KNetCLI
             var assembly = typeof(Program).Assembly;
 
             Console.WriteLine("KNetConnect - KNet Connect command line interface - Version " + assembly.GetName().Version.ToString());
-            Console.WriteLine(assembly.GetName().Name + " -[d|s] connect-standalone.properties [-KafkaLocation kafkaFolder] <JCOBridgeArguments> <ClassArguments>");
+            Console.WriteLine(assembly.GetName().Name + " -[d|s] [-k] connect-standalone.properties [-KafkaLocation kafkaFolder] <JCOBridgeArguments> <ClassArguments>");
             Console.WriteLine();
             if (!string.IsNullOrEmpty(errorString))
             {
@@ -88,6 +88,7 @@ namespace MASES.KNetCLI
 
             Console.WriteLine("s: start Connect in standalone mode. ");
             Console.WriteLine("d: start Connect in distributed mode. ");
+            Console.WriteLine("k: start Connect in distributed/standalone mode using KNet version. ");
             Console.WriteLine("KafkaLocation: The folder where Kafka package is available. Default consider this application uses the package jars folder.");
             Console.WriteLine("ScalaVersion: the scala version to be used. The default version (2.13.6) is binded to the deafult Apache Kafka version available in the package.");
             Console.WriteLine("Log4JConfiguration: the log4j configuration file; the default uses the file within the package.");
@@ -95,7 +96,8 @@ namespace MASES.KNetCLI
             Console.WriteLine("ClassArguments: the arguments of the class. Depends on the ClassToRun value, to obtain them runs the application or look at Apache Kafka documentation.");
             Console.WriteLine();
             Console.WriteLine("Examples:");
-            Console.WriteLine(assembly.GetName().Name + " -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning");
+            Console.WriteLine(assembly.GetName().Name + " -s connect-standalone.properties specific-connector.properties");
+            Console.WriteLine(assembly.GetName().Name + " -d connect-distributed.properties");
         }
     }
 }

@@ -201,7 +201,7 @@ namespace MASES.KNetCLI
 
             PrepareMainClassToRun(ClassToRun);
 
-            switch (ClassToRun.ToLowerInvariant())
+            switch (ClassToRun?.ToLowerInvariant())
             {
                 case "verifiableconsumer":
                     ApplicationHeapSize = "512M";
