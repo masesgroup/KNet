@@ -21,6 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using MASES.JNet;
+using MASES.JCOBridge.C2JBridge;
 
 namespace MASES.KNet
 {
@@ -306,6 +307,55 @@ namespace MASES.KNet
                 lst.Add(JarRootPath != null ? Path.Combine(JarRootPath, "*.jar") : JarRootPath);
                 return lst;
             }
+        }
+
+        /// <summary>
+        /// Launch the <typeparamref name="TClass"/> class with the <paramref name="args"/> arguments
+        /// </summary>
+        /// <typeparam name="TClass">A type which is defined as Main-Class</typeparam>
+        /// <param name="args">The arguments of the main method</param>
+        public static new void Launch<TClass>(params string[] args)
+            where TClass : IJVMBridgeMain
+        {
+            Launch(typeof(TClass), args);
+        }
+
+        /// <summary>
+        /// Launch the <paramref name="type"/> with the <paramref name="args"/> arguments
+        /// </summary>
+        /// <param name="type">The <see cref="Type"/> extending <see cref="IJVMBridgeMain"/></param>
+        /// <param name="args">The arguments of the main method</param>
+        public static new void Launch(Type type, params string[] args)
+        {
+            if (type == null) throw new ArgumentNullException(nameof(type));
+
+            try
+            {
+                JNetCore<T>.Launch(type, args);
+            }
+            catch (ArgumentException)
+            {
+                if (type.GetInterface(typeof(IJVMBridgeMain).Name) == null) throw;
+                var execType = type;
+                do
+                {
+                    System.Reflection.MethodInfo method = execType.GetMethod("Main", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
+                    if (method != null)
+                    {
+                        Java.Lang.String[] strings = new Java.Lang.String[args.Length];
+                        for (int i = 0; i < args.Length; i++)
+                        {
+                            strings[i] = args[i];
+                        }        
+                        method.Invoke(null, new object[] { strings });
+                        return;
+                    }
+                    execType = execType.BaseType;
+                }
+                while (execType != null && execType != typeof(object));
+
+            }
+            throw new ArgumentException($"{type} does not define any IJVMBridgeMain type or interface", "type");
         }
 
 #if DEBUG
