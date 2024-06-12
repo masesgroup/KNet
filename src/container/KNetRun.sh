@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-if [[ -z "${KNET_RUNNING_MODE}" ]]; then
+if [[ -z "${KNET_DOCKER_RUNNING_MODE}" ]]; then
 	echo "Starting command line execution of KNetCLI with arguments: $@"
 	# Generic execution
 	dotnet /app/MASES.KNetCLI.dll $@
@@ -80,6 +80,15 @@ else
 	
 	#Issue newline to config file in case there is not one already
 	echo "" >> /app/config_container/zookeeper.properties
+
+	#Issue newline to config file in case there is not one already
+	echo "" >> /app/config_container/connect-distributed.properties
+	
+	#Issue newline to config file in case there is not one already
+	echo "" >> /app/config_container/connect-standalone.properties
+
+	#Issue newline to config file in case there is not one already
+	echo "" >> /app/config_container/connect-knet-specific.properties
 	
 	(
 		function updateConfig() {
@@ -126,20 +135,35 @@ else
 				log4j_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
 				updateConfig "$log4j_name" "${!env_var}" "/app/config_container/log4j.properties"
 			fi
+			
+			if [[ $env_var =~ ^CONNECT_ ]]; then
+				connect_standalone_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
+				updateConfig "$connect_standalone_name" "${!env_var}" "/app/config_container/connect-standalone.properties"
+			fi
+			
+			if [[ $env_var =~ ^CONNECT_ ]]; then
+				connect_distributed_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
+				updateConfig "$connect_distributed_name" "${!env_var}" "/app/config_container/connect-distributed.properties"
+			fi
+			
+			if [[ $env_var =~ ^KNET_CONNECT_ ]]; then
+				knet_connect_specific_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
+				updateConfig "$knet_connect_specific_name" "${!env_var}" "/app/config_container/connect-knet-specific.properties"
+			fi
 		done
 	)
 
 ### end inherited from https://github.com/wurstmeister/kafka-docker/blob/901c084811fa9395f00af3c51e0ac6c32c697034/start-kafka.sh
 
-	if [ ${KNET_RUNNING_MODE} = "zookeeper" ]; then
+	if [ ${KNET_DOCKER_RUNNING_MODE} = "zookeeper" ]; then
 		echo "Starting zookeeper"
 		# Start zookeeper
 		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties
-	elif [ ${KNET_RUNNING_MODE} = "broker" ]; then
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "broker" ]; then
 		echo "Starting broker"
 		# Start kafka broker
 		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties
-	elif [ ${KNET_RUNNING_MODE} = "standalone" ]; then
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "server" ]; then
 		echo "Starting zookeeper"
 		# Start zookeeper
 		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties &
@@ -153,7 +177,45 @@ else
 		
 		# Exit with status of process that exited first
 		exit $?
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "connect-standalone" ]; then
+		echo "Starting KNet Connect standalone mode"
+		# Start zookeeper
+		dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+
+		# Wait for any process to exit
+		wait -n
+		
+		# Exit with status of process that exited first
+		exit $?
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "connect-standalone-full" ]; then
+		echo "Starting zookeeper"
+		# Start zookeeper
+		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties  &
+	
+		echo "Starting broker"   
+		# Start kafka broker
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties &
+		
+		echo "Starting KNet Connect standalone mode"
+		# Start zookeeper
+		dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+
+		# Wait for any process to exit
+		wait -n
+		
+		# Exit with status of process that exited first
+		exit $?
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "connect-distributed" ]; then
+		echo "Starting KNet Connect distributed mode"
+		# Start zookeeper
+		dotnet /app/MASES.KNetConnect.dll -d -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-distributed.properties &
+
+		# Wait for any process to exit
+		wait -n
+		
+		# Exit with status of process that exited first
+		exit $?
 	else
-		echo "KNET_RUNNING_MODE exist, but its value (${KNET_RUNNING_MODE}) is not zookeeper, broker or standalone"
+		echo "KNET_DOCKER_RUNNING_MODE exist, but its value (${KNET_DOCKER_RUNNING_MODE}) is not zookeeper, broker, server, connect-standalone, onnect-standalone-full or connect-distributed"
 	fi
 fi

@@ -5,14 +5,14 @@ _description: Describes the Docker images of .NET suite for Apache Kafka
 
 # KNet: Docker images
 
-.NET suite for Apache Kafka comes with some ready made Docker images:
+.NET suite for Apache Kafka comes with a ready made Docker image can work in multiple modes:
 - _knet_: 
   - it is a CLI invocable from Docker with the following command (see [KNet CLI usage](usageCLI.md) for command line information):
   > docker run -it knet [commands]
-  - it supports server mode execution if the environment variable **KNET_RUNNING_MODE** reports the following values:
+  - it supports server mode execution if the environment variable **KNET_DOCKER_RUNNING_MODE** reports the following values:
     - **zookeeper**: starts a zookeeper node, defaults to run a standalone zookeeper exposing on port 2181
 	- **broker**: starts an Apache Kafka node, defaults to run a standalone broker exposing on port 9092
-	- **standalone**: starts, within the container, both a zookeeper node and an Apache Kafka node, it defaults to run exposing zookeeper on port 2181 and Kafka on port 9092 
+	- **server**: starts, within the container, both a zookeeper node and an Apache Kafka node, it defaults to run exposing zookeeper on port 2181 and Kafka on port 9092 
 
 All kafka properties can be updated using environment variables in the following form:
 - Shall start with **KAFKA_**
