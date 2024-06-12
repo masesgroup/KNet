@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.IO;
 using MASES.JNet;
 using MASES.JCOBridge.C2JBridge;
+using System.Linq;
 
 namespace MASES.KNet
 {
@@ -339,15 +340,27 @@ namespace MASES.KNet
                 var execType = type;
                 do
                 {
-                    System.Reflection.MethodInfo method = execType.GetMethod("Main", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
-                    if (method != null)
+                    if (args.Length == 0)
                     {
-                        Java.Lang.String[] strings = new Java.Lang.String[args.Length];
-                        for (int i = 0; i < args.Length; i++)
+                        System.Reflection.MethodInfo method = execType.GetMethods().FirstOrDefault(method => method.Name == "SExecute" & method.GetParameters().Length == 2 & method.IsGenericMethod == false);
+                        if (method != null)
                         {
-                            strings[i] = args[i];
-                        }        
-                        method.Invoke(null, new object[] { strings });
+                            method.Invoke(null, new object[] { "main", new object[] { args } });
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        System.Reflection.MethodInfo method = execType.GetMethod("Main", new Type[] { typeof(Java.Lang.String[]) });
+                        if (method != null)
+                        {
+                            Java.Lang.String[] strings = new Java.Lang.String[args.Length];
+                            for (int i = 0; i < args.Length; i++)
+                            {
+                                strings[i] = args[i];
+                            }
+                            method.Invoke(null, new object[] { strings });
+                        }
                         return;
                     }
                     execType = execType.BaseType;
