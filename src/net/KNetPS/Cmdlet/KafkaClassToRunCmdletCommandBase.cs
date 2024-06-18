@@ -50,7 +50,7 @@ namespace MASES.KNetPS.Cmdlet
 
             try
             {
-                KNetPSHelper<KNetPSCore>.Launch(KNetPSCore.MainClassToRun, arguments);
+                JNetPSHelper<KNetPSCore>.Launch(KNetPSCore.MainClassToRun, arguments);
             }
             catch (TargetInvocationException tie)
             {
