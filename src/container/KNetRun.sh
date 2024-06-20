@@ -177,6 +177,34 @@ else
 		
 		# Exit with status of process that exited first
 		exit $?
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-standalone" ]; then
+		echo "Starting KNet Connect standalone mode"
+		# Start zookeeper
+		dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+
+		# Wait for any process to exit
+		wait -n
+		
+		# Exit with status of process that exited first
+		exit $?
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-standalone-full" ]; then
+		echo "Starting zookeeper"
+		# Start zookeeper
+		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties  &
+	
+		echo "Starting broker"   
+		# Start kafka broker
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties &
+		
+		echo "Starting KNet Connect standalone mode"
+		# Start zookeeper
+		dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+
+		# Wait for any process to exit
+		wait -n
+		
+		# Exit with status of process that exited first
+		exit $?
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "connect-standalone" ]; then
 		echo "Starting KNet Connect standalone mode"
 		# Start zookeeper
@@ -199,6 +227,16 @@ else
 		echo "Starting KNet Connect standalone mode"
 		# Start zookeeper
 		dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+
+		# Wait for any process to exit
+		wait -n
+		
+		# Exit with status of process that exited first
+		exit $?
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-distributed" ]; then
+		echo "Starting KNet Connect distributed mode"
+		# Start zookeeper
+		dotnet /app/MASES.KNetConnect.dll -d -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-distributed.properties &
 
 		# Wait for any process to exit
 		wait -n

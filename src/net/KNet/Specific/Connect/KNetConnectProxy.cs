@@ -134,15 +134,35 @@ namespace MASES.KNet.Connect
         {
             lock (globalInstanceLock)
             {
+                Type type;
                 try
                 {
-                    var type = Type.GetType(connectorClassName, true);
-                    SinkConnector = Activator.CreateInstance(type) as KNetConnector;
-                    RegisterCLRGlobal(SinkConnector.ConnectorName, SinkConnector);
-                    return true;
+                    type = Type.GetType(connectorClassName, true);
                 }
                 catch
                 {
+                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Unable to find {connectorClassName}");
+                    return false;
+                }
+
+                try
+                {
+                    SinkConnector = Activator.CreateInstance(type) as KNetConnector;
+                }
+                catch (Exception ex)
+                {
+                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to create an instance of {connectorClassName}: {ex}");
+                    return false;
+                }
+
+                try
+                {
+                    RegisterCLRGlobal(SinkConnector.ConnectorName, SinkConnector);
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to register the instance of {connectorClassName}: {ex}");
                     return false;
                 }
             }
@@ -156,15 +176,35 @@ namespace MASES.KNet.Connect
         {
             lock (globalInstanceLock)
             {
+                Type type;
                 try
                 {
-                    var type = Type.GetType(connectorClassName, true);
-                    SourceConnector = Activator.CreateInstance(type) as KNetConnector;
-                    RegisterCLRGlobal(SourceConnector.ConnectorName, SourceConnector);
-                    return true;
+                    type = Type.GetType(connectorClassName, true);
                 }
                 catch
                 {
+                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Unable to find {connectorClassName}");
+                    return false;
+                }
+
+                try
+                {
+                    SourceConnector = Activator.CreateInstance(type) as KNetConnector;
+                }
+                catch (Exception ex)
+                {
+                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to create an instance of {connectorClassName}: {ex}");
+                    return false;
+                }
+
+                try
+                {
+                    RegisterCLRGlobal(SourceConnector.ConnectorName, SourceConnector);
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to register the instance of {connectorClassName}: {ex}");
                     return false;
                 }
             }
