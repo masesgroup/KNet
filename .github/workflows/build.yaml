@@ -283,7 +283,7 @@ jobs:
         ports:
           - 9092:9092
         env:
-          KNET_RUNNING_MODE: standalone
+          KNET_RUNNING_MODE: server
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
           
     strategy:
