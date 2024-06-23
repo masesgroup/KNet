@@ -146,9 +146,9 @@ else
 				updateConfig "$connect_distributed_name" "${!env_var}" "/app/config_container/connect-distributed.properties"
 			fi
 			
-			if [[ $env_var =~ ^KNET_CONNECT_ ]]; then
-				knet_connect_specific_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
-				updateConfig "$knet_connect_specific_name" "${!env_var}" "/app/config_container/connect-knet-specific.properties"
+			if [[ $env_var =~ ^KNETCONNECT_ ]]; then
+				knetconnect_specific_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
+				updateConfig "$knetconnect_specific_name" "${!env_var}" "/app/config_container/connect-knet-specific.properties"
 			fi
 		done
 	)
