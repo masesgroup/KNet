@@ -197,7 +197,7 @@ else
 		
 		# Exit with status of process that exited first
 		exit $?
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-standalone-full" ]; then
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-standalone-server" ]; then
 		echo "Starting zookeeper"
 		# Start zookeeper
 		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties  &
@@ -215,7 +215,7 @@ else
 		
 		# Exit with status of process that exited first
 		exit $?
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "connect-standalone-full" ]; then
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "connect-standalone-server" ]; then
 		echo "Starting zookeeper"
 		# Start zookeeper
 		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties  &
@@ -254,6 +254,6 @@ else
 		# Exit with status of process that exited first
 		exit $?
 	else
-		echo "KNET_DOCKER_RUNNING_MODE exist, but its value (${KNET_DOCKER_RUNNING_MODE}) is not zookeeper, broker, server, (knet)connect-standalone, (knet)connect-distributed or (knet)connect-standalone-full"
+		echo "KNET_DOCKER_RUNNING_MODE exist, but its value (${KNET_DOCKER_RUNNING_MODE}) is not zookeeper, broker, server, (knet)connect-standalone, (knet)connect-distributed or (knet)connect-standalone-server"
 	fi
 fi
