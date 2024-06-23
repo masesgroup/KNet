@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-if [[ -z "${KNET_DOCKER_RUNNING_MODE}" ]]; then
+if [[ -z "${KNET_DOCKER_RUNNING_MODE}" || ${KNET_DOCKER_RUNNING_MODE} = "" ]]; then
 	echo "Starting command line execution of KNetCLI with arguments: $@"
 	# Generic execution
 	dotnet /app/MASES.KNetCLI.dll $@
