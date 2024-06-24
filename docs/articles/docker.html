@@ -81,21 +81,232 @@
         </div>
 
         <article data-uid="">
-<h1 id="knet-docker-images">KNet: Docker images</h1>
 
-<p>.NET suite for Apache Kafka comes with some ready made Docker images:</p>
-<ul>
-<li>KNet CLI: see <a href="usageCLI.html">KNet CLI usage</a></li>
-<li>KNet Connect: see <a href="usageConnect.html">KNet Connect usage</a></li>
-</ul>
+
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>The Docker images produced from this repository uses, as base image, the one available at mcr.microsoft.com/dotnet/runtime:6.0 (latest is mcr.microsoft.com/dotnet/runtime:6.0-jammy). Within <a href="https://github.com/microsoft/containerregistry">GitHub Container Registry</a> you can find many legal information, specifically read carefully the following before use the image:</p>
+<p>The Docker images produced from this repository uses, as base image, the one available at mcr.microsoft.com/dotnet/runtime:8.0 (latest is mcr.microsoft.com/dotnet/runtime:8.0-jammy). Within <a href="https://github.com/microsoft/containerregistry">GitHub Container Registry</a> you can find many legal information, specifically read carefully the following before use the image:</p>
 <ul>
 <li><a href="https://github.com/microsoft/containerregistry/blob/39d2e014897475ef6cdb08e29c08645f53f0dc93/legal/Container-Images-Legal-Notice.md">Container Images Legal Notice</a>: maybe an updated verion is available at <a href="https://github.com/microsoft/containerregistry/blob/main/legal/Container-Images-Legal-Notice.md">https://github.com/microsoft/containerregistry/blob/main/legal/Container-Images-Legal-Notice.md</a></li>
 <li><a href="https://github.com/microsoft/containerregistry/blob/39d2e014897475ef6cdb08e29c08645f53f0dc93/legal/Linux-Legal-Metadata.md">Linux-Legal-Metadata</a>: maybe a updated verion is available at <a href="https://github.com/microsoft/containerregistry/blob/main/legal/Linux-Legal-Metadata.md">https://github.com/microsoft/containerregistry/blob/main/legal/Linux-Legal-Metadata.md</a></li>
 </ul>
 </div>
+<h1 id="knet-docker-images">KNet: Docker images</h1>
+<p>.NET suite for Apache Kafka comes with a ready made Docker image can work in multiple modes, the image name is <em>knet</em>:</p>
+<ul>
+<li>it is avialble in the following registries:
+<ul>
+<li>GitHub: <a href="https://github.com/masesgroup/KNet/pkgs/container/knet">https://github.com/masesgroup/KNet/pkgs/container/knet</a></li>
+<li>Docker Hub: <a href="https://hub.docker.com/repository/docker/masesgroup/knet/general">https://hub.docker.com/repository/docker/masesgroup/knet/general</a></li>
+</ul>
+</li>
+</ul>
+<p>The container image can work in multiple modes based on the environment variable <strong>KNET_DOCKER_RUNNING_MODE</strong>:</p>
+<ul>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong> not existent or empty: the image expect to run in command-line mode and it is the default behavior. The Docker image invokes the command-line module <strong>KNetCLI</strong> using the same commands available in <a href="usageCLI.html">KNet CLI usage</a>:</p>
+<ul>
+<li>With the following:</li>
+</ul>
+<blockquote>
+<p>docker run -it knet [commands]</p>
+</blockquote>
+<ul>
+<li>the Docker image will issue the command:</li>
+</ul>
+<blockquote>
+<p>dotnet /app/MASES.KNetCLI.dll $@</p>
+</blockquote>
+</li>
+<li><p>The image can run <a href="https://zookeeper.apache.org/">ZooKeeper�</a> node and/or <a href="https://kafka.apache.org/">Apache Kafka�</a> broker node using specific values for <strong>KNET_DOCKER_RUNNING_MODE</strong>:</p>
+<ul>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>zookeeper</strong>: starts a <a href="https://zookeeper.apache.org/">ZooKeeper�</a> node, defaults to run a standalone <a href="https://zookeeper.apache.org/">ZooKeeper�</a> exposing on port 2181</p>
+<ul>
+<li>the Docker image will issue the command:</li>
+</ul>
+<blockquote>
+<p>dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties</p>
+</blockquote>
+<ul>
+<li>the image can add, or update, configuration variables of zookeeper.properties using the following pattern for environment variables:
+<ul>
+<li>Shall start with <strong>ZOOKEEPER_</strong></li>
+<li>Each property shall be capitalized and the '.' shall be replaced with '_'</li>
+<li>The value of the environment variable is the value will be used in the configuration file</li>
+<li>The default file is available at <a href="https://github.com/masesgroup/KNet/blob/master/src/container/config_container/zookeeper.properties">https://github.com/masesgroup/KNet/blob/master/src/container/config_container/zookeeper.properties</a>, all configuration information are available at <a href="https://zookeeper.apache.org/doc/r3.8.3/index.html">https://zookeeper.apache.org/doc/r3.8.3/index.html</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>broker</strong>: starts an <a href="https://kafka.apache.org/">Apache Kafka�</a> broker node, defaults to run a standalone broker exposing on port 9092</p>
+<ul>
+<li>the Docker image will issue the command:</li>
+</ul>
+<blockquote>
+<p>dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties</p>
+</blockquote>
+<ul>
+<li>the image can add, or update, configuration variables of server.properties using the following pattern for environment variables:
+<ul>
+<li>Shall start with <strong>KAFKA_</strong></li>
+<li>Each property shall be capitalized and the '.' shall be replaced with '_'</li>
+<li>The value of the environment variable is the value will be used in the configuration file</li>
+<li>As an example: the environment variable <strong>KAFKA_ADVERTISED_LISTENERS</strong> represents <strong>advertised.listeners</strong></li>
+<li>The default file is available at <a href="https://github.com/masesgroup/KNet/blob/master/src/container/config_container/server.properties">https://github.com/masesgroup/KNet/blob/master/src/container/config_container/server.properties</a>, all configuration information are available at <a href="https://kafka.apache.org/documentation/">https://kafka.apache.org/documentation/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>server</strong>: starts, within the container, both a <a href="https://zookeeper.apache.org/">ZooKeeper�</a> node and an <a href="https://kafka.apache.org/">Apache Kafka�</a> broker node, it defaults to run exposing <a href="https://zookeeper.apache.org/">ZooKeeper�</a> on port 2181 and <a href="https://kafka.apache.org/">Apache Kafka�</a> broker on port 9092; the image can add, or update, configuration variables of <a href="https://zookeeper.apache.org/">ZooKeeper�</a> and <a href="https://kafka.apache.org/">Apache Kafka�</a> using the same pattern of previous points.</p>
+</li>
+</ul>
+</li>
+<li><p>The image can run <a href="https://kafka.apache.org/">Apache Kafka�</a> in <a href="https://developer.confluent.io/learn/kraft/">KRaft</a> mode using specific values for <strong>KNET_DOCKER_RUNNING_MODE</strong>:</p>
+<ul>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>kraft-broker</strong>: starts a <a href="https://kafka.apache.org/">Apache Kafka�</a> as broker node</p>
+<ul>
+<li>the Docker image will issue the command:</li>
+</ul>
+<blockquote>
+<p>dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/broker.properties</p>
+</blockquote>
+<ul>
+<li>the image can add, or update, configuration variables of broker.properties using the following pattern for environment variables:
+<ul>
+<li>Shall start with <strong>KRAFT_</strong></li>
+<li>Each property shall be capitalized and the '.' shall be replaced with '_'</li>
+<li>The value of the environment variable is the value will be used in the configuration file</li>
+<li>The default file is available at <a href="https://github.com/masesgroup/KNet/blob/master/src/container/config_container/kraft/broker.properties">https://github.com/masesgroup/KNet/blob/master/src/container/config_container/kraft/broker.properties</a>, all configuration information are available at <a href="https://kafka.apache.org/documentation/">https://kafka.apache.org/documentation/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>kraft-controller</strong>: starts a <a href="https://kafka.apache.org/">Apache Kafka�</a> as controller node</p>
+<ul>
+<li>the Docker image will issue the command:</li>
+</ul>
+<blockquote>
+<p>dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/controller.properties</p>
+</blockquote>
+<ul>
+<li>the image can add, or update, configuration variables of controller.properties using the following pattern for environment variables:
+<ul>
+<li>Shall start with <strong>KRAFT_</strong></li>
+<li>Each property shall be capitalized and the '.' shall be replaced with '_'</li>
+<li>The value of the environment variable is the value will be used in the configuration file</li>
+<li>The default file is available at <a href="https://github.com/masesgroup/KNet/blob/master/src/container/config_container/kraft/controller.properties">https://github.com/masesgroup/KNet/blob/master/src/container/config_container/kraft/controller.properties</a>, all configuration information are available at <a href="https://kafka.apache.org/documentation/">https://kafka.apache.org/documentation/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>kraft-server</strong>: starts a <a href="https://kafka.apache.org/">Apache Kafka�</a> as server node</p>
+<ul>
+<li>the Docker image will issue the command:</li>
+</ul>
+<blockquote>
+<p>dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/server.properties</p>
+</blockquote>
+<ul>
+<li>the image can add, or update, configuration variables of server.properties using the following pattern for environment variables:
+<ul>
+<li>Shall start with <strong>KRAFT_</strong></li>
+<li>Each property shall be capitalized and the '.' shall be replaced with '_'</li>
+<li>The value of the environment variable is the value will be used in the configuration file</li>
+<li>The default file is available at <a href="https://github.com/masesgroup/KNet/blob/master/src/container/config_container/kraft/server.properties">https://github.com/masesgroup/KNet/blob/master/src/container/config_container/kraft/server.properties</a>, all configuration information are available at <a href="https://kafka.apache.org/documentation/">https://kafka.apache.org/documentation/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>The image can run both Apache Connect and KNet Connect using specific values for <strong>KNET_DOCKER_RUNNING_MODE</strong>:</p>
+<ul>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>knet-connect-standalone</strong>: starts, within the container, a standalone KNet Connect instance</p>
+<ul>
+<li>the Docker image will issue the command:</li>
+</ul>
+<blockquote>
+<p>dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties</p>
+</blockquote>
+<ul>
+<li>the image can add, or update, configuration variables of connect-standalone.properties using the following pattern for environment variables:
+<ul>
+<li>Shall start with <strong>CONNECT_</strong></li>
+<li>Each property shall be capitalized and the '.' shall be replaced with '_'</li>
+<li>The value of the environment variable is the value will be used in the configuration file</li>
+<li>The default file is available at <a href="https://github.com/masesgroup/KNet/blob/master/src/container/config_container/connect-standalone.properties">https://github.com/masesgroup/KNet/blob/master/src/container/config_container/connect-standalone.properties</a>, all configuration information are available at <a href="https://kafka.apache.org/documentation/">https://kafka.apache.org/documentation/</a></li>
+</ul>
+</li>
+<li>the image can add, or update, configuration variables of connect-knet-specific.properties using the following pattern for environment variables:
+<ul>
+<li>Shall start with <strong>KNETCONNECT_</strong></li>
+<li>Each property shall be capitalized and the '.' shall be replaced with '_'</li>
+<li>The value of the environment variable is the value will be used in the configuration file</li>
+<li>The default file is available at <a href="https://github.com/masesgroup/KNet/blob/master/src/container/config_container/connect-knet-specific.properties">https://github.com/masesgroup/KNet/blob/master/src/container/config_container/connect-knet-specific.properties</a>, all configuration information depends from the connector in use</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>connect-standalone</strong>: starts, within the container, a standalone Apache Connect instance</p>
+<ul>
+<li>the Docker image will issue the command:</li>
+</ul>
+<blockquote>
+<p>dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties</p>
+</blockquote>
+<ul>
+<li>the image can add, or update, configuration variables of connect-standalone.properties and connect-knet-specific.properties using the same pattern of <strong>knet-connect-standalone</strong>:</li>
+</ul>
+</li>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>knet-connect-standalone-server</strong>: starts, within the container, a <a href="https://zookeeper.apache.org/">ZooKeeper�</a> node and an <a href="https://kafka.apache.org/">Apache Kafka�</a> broker node like in <strong>server</strong>, then starts the same command of <strong>knet-connect-standalone</strong>; this is an autonoumous instance can be used for development or any other possible usage</p>
+<ul>
+<li>the image can add, or update, configuration variables of using the same pattern of <strong>zookeeper</strong>, <strong>broker</strong> and <strong>knet-connect-standalone</strong></li>
+</ul>
+</li>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>connect-standalone-server</strong>: starts, within the container, a <a href="https://zookeeper.apache.org/">ZooKeeper�</a> node and an <a href="https://kafka.apache.org/">Apache Kafka�</a> broker node like in <strong>server</strong>, then starts the same command of <strong>connect-standalone</strong>; this is an autonoumous instance can be used for development or any other possible usage</p>
+<ul>
+<li>the image can add, or update, configuration variables of using the same pattern of <strong>zookeeper</strong>, <strong>broker</strong> and <strong>connect-standalone</strong></li>
+</ul>
+</li>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>knet-connect-distributed</strong>: starts, within the container, a distributed KNet Connect instance</p>
+<ul>
+<li>the Docker image will issue the command:</li>
+</ul>
+<blockquote>
+<p>dotnet /app/MASES.KNetConnect.dll -d -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-distributed.properties</p>
+</blockquote>
+<ul>
+<li>the image can add, or update, configuration variables of connect-standalone.properties using the following pattern for environment variables:
+<ul>
+<li>Shall start with <strong>CONNECT_</strong></li>
+<li>Each property shall be capitalized and the '.' shall be replaced with '_'</li>
+<li>The value of the environment variable is the value will be used in the configuration file</li>
+<li>The default file is available at <a href="https://github.com/masesgroup/KNet/blob/master/src/container/config_container/connect-distributed.properties">https://github.com/masesgroup/KNet/blob/master/src/container/config_container/connect-distributed.properties</a>, all configuration information are available at <a href="https://kafka.apache.org/documentation/">https://kafka.apache.org/documentation/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>connect-distributed</strong>: starts, within the container, a distributed Apache Connect instance</p>
+<ul>
+<li>the Docker image will issue the command:</li>
+</ul>
+<blockquote>
+<p>dotnet /app/MASES.KNetConnect.dll -d -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-distributed.properties</p>
+</blockquote>
+<ul>
+<li>the image can add, or update, configuration variables of connect-distributed.propertiesusing the same pattern of <strong>knet-connect-distributed</strong>:</li>
+</ul>
+</li>
+<li><p>All previous commands use a single configuration file for logging; the image can add, or update, configuration variables of log4j.properties using the following pattern for environment variables:</p>
+<ul>
+<li>Shall start with <strong>LOG4J_</strong></li>
+<li>Each property shall be capitalized and the '.' shall be replaced with '_'</li>
+<li>The value of the environment variable is the value will be used in the configuration file</li>
+<li>The default file is available at <a href="https://github.com/masesgroup/KNet/blob/master/src/container/config_container/log4j.properties">https://github.com/masesgroup/KNet/blob/master/src/container/config_container/log4j.properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 </article>
 

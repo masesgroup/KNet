@@ -98,7 +98,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConsumerRecords : Iterable, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IEnumerable, IEnumerableExtension</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConsumerRecords : Iterable, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IEnumerable, IEnumerableExtension, IIterable</code></pre>
   </div>
 
 
@@ -128,6 +128,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
       <div><span class="xref">IEnumerableExtension</span></div>
+      <div><a class="xref" href="api/Java.Lang.IIterable.html">IIterable</a></div>
     </dd>
   </dl>
 
@@ -325,6 +326,12 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -492,7 +499,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerRecords__ctor" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords.#ctor">
   ConsumerRecords()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L786"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L829"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -552,7 +559,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerRecords__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords.#ctor(System.Object[])">
   ConsumerRecords(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L790"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L833"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -588,7 +595,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerRecords_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L797"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L841"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -652,7 +659,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerRecords_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L801"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L845"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -684,7 +691,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerRecords_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L805"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L849"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -716,7 +723,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerRecords_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L809"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L853"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -748,7 +755,7 @@ Class ConsumerRecords  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerRecords_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L813"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L857"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
