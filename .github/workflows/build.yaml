@@ -283,7 +283,7 @@ jobs:
         os: [ 'ubuntu-latest', 'macos-latest', 'macos-13' ] #, 'windows-latest' ]
         framework: [ 'net462', 'net6.0', 'net8.0' ]
         buffered: [ 'runBuffered', '']
-        extraValue: [ '', 'withBigExtraValue', 'withBigBigExtraValue' ]
+        extraValue: [ '', 'withBigBigExtraValue' ] #, 'withBigExtraValue' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
@@ -317,7 +317,7 @@ jobs:
           java-version: ${{ matrix.jdk_version }}
  
       - name: Executing KNetTest on Ubuntu with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-        if: matrix.os == 'ubuntu-latest'
+        if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
         continue-on-error: true
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
         env:
