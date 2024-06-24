@@ -283,7 +283,7 @@ jobs:
         os: [ 'ubuntu-latest' ] #, 'macos-latest', 'macos-13' , 'windows-latest' ]
         framework: [ 'net462', 'net6.0', 'net8.0' ]
         buffered: [ 'runBuffered', '']
-        extraValue: [ '', 'withBigBigExtraValue', 'withBigExtraValue' ]
+        extraValue: [ '', 'withBigExtraValue', 'withBigBigExtraValue' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
