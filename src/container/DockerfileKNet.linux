@@ -5,10 +5,13 @@ WORKDIR /app
 # Copy everything
 COPY ./src/net ./
 ENV KNET_DOCKER_BUILD_ACTIONS=true
+
 # Restore as distinct layers
 RUN dotnet restore KNetDocker.sln -a $TARGETARCH
+
 # Build and publish a release
 RUN dotnet publish ./KNetCLI/KNetCLI.csproj /p:NoWarn="0108%3B1030%3B0618" --framework net8.0 -c Release -o out -a $TARGETARCH
+RUN dotnet publish ./KNetConnect/KNetConnect.csproj /p:NoWarn="0108%3B1030%3B0618" --framework net8.0 -c Release -o out -a $TARGETARCH
 
 # Build runtime image
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/runtime:8.0-jammy
@@ -33,10 +36,7 @@ ADD ./src/container/KNetRun.sh /app
 ENV JCOBRIDGE_JVMPath=/usr/lib/jvm/java-17-openjdk-amd64/lib/server/libjvm.so
 ENV JCOBRIDGE_LicensePath=
 
-EXPOSE 2181
-EXPOSE 9092
-
 WORKDIR /app
 COPY --from=build-env /app/out .
 RUN chmod +x /app/KNetRun.sh
-CMD /app/KNetRun.sh
+ENTRYPOINT ["/app/KNetRun.sh"]

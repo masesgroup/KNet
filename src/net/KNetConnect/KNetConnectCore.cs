@@ -88,7 +88,10 @@ namespace MASES.KNetCLI
             {
                 _classToRun = ParsedArgs.Exist(CLIParam.KNetVersion) ? "KNetConnectStandalone" : "ConnectStandalone";
                 KNetConnectProxy.Initialize(this);
-                ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
+                if (Log4JPath == DefaultLog4JConfiguration())
+                {
+                    ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
+                }
                 ApplicationHeapSize = "2G";
                 ApplicationInitialHeapSize = "256M";
                 if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetConnect -[s|d] [-k] [-daemon] <connect-standalone.properties or env variable with connect-standalone.properties> [<connector1.properties or env variable with connector1.properties> <connector2.properties or env variable with connector2.properties> ...]");
@@ -108,7 +111,10 @@ namespace MASES.KNetCLI
             {
                 _classToRun = ParsedArgs.Exist(CLIParam.KNetVersion) ? "KNetConnectDistributed" : "ConnectDistributed";
                 KNetConnectProxy.Initialize(this);
-                ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
+                if (Log4JPath == DefaultLog4JConfiguration())
+                {
+                    ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
+                }
                 ApplicationHeapSize = "2G";
                 ApplicationInitialHeapSize = "256M";
                 if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetConnect -[s|d] [-k] [-daemon] <connect-distributed.properties or env variable with connect-distributed.properties>");

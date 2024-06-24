@@ -23,7 +23,6 @@ package org.mases.knet.developed.connect.cli;
 import org.apache.kafka.common.utils.Exit;
 import org.apache.kafka.common.utils.Time;
 import org.apache.kafka.common.utils.Utils;
-import org.apache.kafka.connect.cli.AbstractConnectCli;
 import org.apache.kafka.connect.connector.policy.ConnectorClientConfigOverridePolicy;
 import org.apache.kafka.connect.json.JsonConverter;
 import org.apache.kafka.connect.runtime.*;
@@ -53,14 +52,10 @@ import java.util.Map;
  * </p>
  */
 public class ConnectDistributed extends AbstractConnectCli<DistributedConfig> {
-    private final String[] args;
     private static final Logger log = LoggerFactory.getLogger(ConnectDistributed.class);
-    private static final String keyValueSeparator = "=";
-    private static final String elementSeparator = "||";
 
     public ConnectDistributed(String... args) {
         super(args);
-        this.args = args;
     }
 
     protected Herder createHerder(DistributedConfig config, String workerId, Plugins plugins, ConnectorClientConfigOverridePolicy connectorClientConfigOverridePolicy, RestServer restServer, RestClient restClient) {
@@ -87,29 +82,12 @@ public class ConnectDistributed extends AbstractConnectCli<DistributedConfig> {
         return "ConnectDistributed <Env of worker.properties>";
     }
 
-    protected DistributedConfig createConfig(Map<String, String> workerProps) {
-        return new DistributedConfig(workerProps);
+    protected void processExtraArgs(Herder herder, Connect connect, String[] extraArgs) {
+        // avoids this like in Apache Kafka
     }
 
-    @Override
-    public void run() {
-        if (this.args.length < 1 || Arrays.asList(this.args).contains("--help")) {
-            log.info("Usage: {}", this.usage());
-            Exit.exit(1);
-        }
-
-        try {
-            String workerPropsEnv = this.args[0];
-            String workerPropsData = System.getenv(workerPropsEnv);
-            Map<String, String> workerProps = !workerPropsData.isEmpty() ?
-                    Utils.parseMap(workerPropsData, keyValueSeparator, elementSeparator) : Collections.emptyMap();
-            String[] extraArgs = (String[]) Arrays.copyOfRange(this.args, 1, this.args.length);
-            Connect connect = this.startConnect(workerProps, extraArgs);
-            connect.awaitStop();
-        } catch (Throwable t) {
-            log.error("Stopping due to error", t);
-            Exit.exit(2);
-        }
+    protected DistributedConfig createConfig(Map<String, String> workerProps) {
+        return new DistributedConfig(workerProps);
     }
 
     public static void main(String[] args) {

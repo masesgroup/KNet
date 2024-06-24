@@ -97,16 +97,7 @@ jobs:
         
       - name: Compress KNet Docker Image
         run: gzip knet.linux.tar
-          
-      - name: Build KNetConnect Docker Image
-        run: docker build -t knetconnect -f ./src/container/DockerfileKNetConnect.linux .
 
-      - name: Save KNetConnect Docker Image
-        run: docker image save -o knetconnect.linux.tar knetconnect
-        
-      - name: Compress KNetConnect Docker Image
-        run: gzip knetconnect.linux.tar
-        
       - uses: actions/upload-artifact@v4
         with:
           name: Docker Images
@@ -283,7 +274,7 @@ jobs:
         ports:
           - 9092:9092
         env:
-          KNET_RUNNING_MODE: standalone
+          KNET_RUNNING_MODE: server
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
           
     strategy:

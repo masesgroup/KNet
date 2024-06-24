@@ -56,7 +56,11 @@ public class KNetConnectProxy implements KNetConnectLogging {
         String className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
         if (className == null)
             throw new ConfigException("'knet.dotnet.classname' in KNetSinkConnector configuration requires a definition");
-        return (boolean) getConnectProxy().Invoke("AllocateSinkConnector", className);
+        JCObject proxy = getConnectProxy();
+        if (proxy != null) {
+            return (boolean) proxy.Invoke("AllocateSinkConnector", className);
+        }
+        return false;
     }
 
     public static synchronized boolean initializeSourceConnector(Map<String, String> props) throws JCException, IOException {
@@ -64,12 +68,19 @@ public class KNetConnectProxy implements KNetConnectLogging {
         String className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
         if (className == null)
             throw new ConfigException("'knet.dotnet.classname' in KNetSourceConnector configuration requires a definition");
-        return (boolean) getConnectProxy().Invoke("AllocateSourceConnector", className);
+        JCObject proxy = getConnectProxy();
+        if (proxy != null) {
+            return (boolean) proxy.Invoke("AllocateSourceConnector", className);
+        }
+        return false;
     }
 
     public static synchronized JCObject getSinkConnector() throws JCException, IOException {
         if (sinkConnector == null) {
-            sinkConnectorName = (String) getConnectProxy().Invoke("SinkConnectorName");
+            JCObject proxy = getConnectProxy();
+            if (proxy != null) {
+                sinkConnectorName = (String) proxy.Invoke("SinkConnectorName");
+            }
             if (sinkConnectorName != null) {
                 sinkConnector = (JCObject) JCOBridge.GetCLRGlobal(sinkConnectorName);
             }
@@ -79,7 +90,10 @@ public class KNetConnectProxy implements KNetConnectLogging {
 
     public static synchronized JCObject getSourceConnector() throws JCException, IOException {
         if (sourceConnector == null) {
-            sourceConnectorName = (String) getConnectProxy().Invoke("SourceConnectorName");
+            JCObject proxy = getConnectProxy();
+            if (proxy != null) {
+                sourceConnectorName = (String) proxy.Invoke("SourceConnectorName");
+            }
             if (sourceConnectorName != null) {
                 sourceConnector = (JCObject) JCOBridge.GetCLRGlobal(sourceConnectorName);
             }
