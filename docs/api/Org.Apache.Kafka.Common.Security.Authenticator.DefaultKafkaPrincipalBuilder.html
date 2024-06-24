@@ -320,6 +320,12 @@ Class DefaultKafkaPrincipalBuilder  <a class="header-action link-secondary" titl
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -487,7 +493,7 @@ Class DefaultKafkaPrincipalBuilder  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Common_Security_Authenticator_DefaultKafkaPrincipalBuilder__ctor" data-uid="Org.Apache.Kafka.Common.Security.Authenticator.DefaultKafkaPrincipalBuilder.#ctor">
   DefaultKafkaPrincipalBuilder()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -514,7 +520,7 @@ Class DefaultKafkaPrincipalBuilder  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Common_Security_Authenticator_DefaultKafkaPrincipalBuilder__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Security.Authenticator.DefaultKafkaPrincipalBuilder.#ctor(System.Object[])">
   DefaultKafkaPrincipalBuilder(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L271"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -550,7 +556,7 @@ Class DefaultKafkaPrincipalBuilder  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Common_Security_Authenticator_DefaultKafkaPrincipalBuilder_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Security.Authenticator.DefaultKafkaPrincipalBuilder.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L279"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -582,7 +588,7 @@ Class DefaultKafkaPrincipalBuilder  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Common_Security_Authenticator_DefaultKafkaPrincipalBuilder_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Security.Authenticator.DefaultKafkaPrincipalBuilder.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -614,7 +620,7 @@ Class DefaultKafkaPrincipalBuilder  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Common_Security_Authenticator_DefaultKafkaPrincipalBuilder_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Security.Authenticator.DefaultKafkaPrincipalBuilder.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L287"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -646,7 +652,7 @@ Class DefaultKafkaPrincipalBuilder  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Common_Security_Authenticator_DefaultKafkaPrincipalBuilder_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Security.Authenticator.DefaultKafkaPrincipalBuilder.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L291"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -678,7 +684,7 @@ Class DefaultKafkaPrincipalBuilder  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Common_Security_Authenticator_DefaultKafkaPrincipalBuilder_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Security.Authenticator.DefaultKafkaPrincipalBuilder.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Authenticator/AllPackageClasses.cs/#L295"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
