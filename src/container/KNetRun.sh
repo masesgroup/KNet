@@ -89,6 +89,15 @@ else
 
 	#Issue newline to config file in case there is not one already
 	echo "" >> /app/config_container/connect-knet-specific.properties
+
+	#Issue newline to config file in case there is not one already
+	echo "" >> /app/config_container/kraft/broker.properties
+	
+	#Issue newline to config file in case there is not one already
+	echo "" >> /app/config_container/kraft/controller.properties
+	
+	#Issue newline to config file in case there is not one already
+	echo "" >> /app/config_container/kraft/server.properties
 	
 	(
 		function updateConfig() {
@@ -139,16 +148,24 @@ else
 			if [[ $env_var =~ ^CONNECT_ ]]; then
 				connect_standalone_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
 				updateConfig "$connect_standalone_name" "${!env_var}" "/app/config_container/connect-standalone.properties"
-			fi
-			
-			if [[ $env_var =~ ^CONNECT_ ]]; then
-				connect_distributed_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
 				updateConfig "$connect_distributed_name" "${!env_var}" "/app/config_container/connect-distributed.properties"
+			fi
+
+			if [[ $env_var =~ ^KNETCONNECT_ ]]; then
+				knetconnect_specific_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
+				updateConfig "$knetconnect_specific_name" "${!env_var}" "/app/config_container/connect-knet-specific.properties"
 			fi
 			
 			if [[ $env_var =~ ^KNETCONNECT_ ]]; then
 				knetconnect_specific_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
 				updateConfig "$knetconnect_specific_name" "${!env_var}" "/app/config_container/connect-knet-specific.properties"
+			fi
+			
+			if [[ $env_var =~ ^KRAFT_ ]]; then
+				kraft_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
+				updateConfig "$kraft_name" "${!env_var}" "/app/config_container/broker.properties"
+				updateConfig "$kraft_name" "${!env_var}" "/app/config_container/controller.properties"
+				updateConfig "$kraft_name" "${!env_var}" "/app/config_container/server.properties"
 			fi
 		done
 	)
@@ -253,6 +270,18 @@ else
 		
 		# Exit with status of process that exited first
 		exit $?
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-broker" ]; then
+		echo "Starting KRaft broker"
+		# Start kafka broker
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/broker.properties
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-controller" ]; then
+		echo "Starting KRaft controller"
+		# Start kafka broker
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/controller.properties
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-server" ]; then
+		echo "Starting KRaft server"
+		# Start kafka broker
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/server.properties
 	else
 		echo "KNET_DOCKER_RUNNING_MODE exist, but its value (${KNET_DOCKER_RUNNING_MODE}) is not zookeeper, broker, server, (knet)connect-standalone, (knet)connect-distributed or (knet)connect-standalone-server"
 	fi
