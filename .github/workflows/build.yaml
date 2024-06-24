@@ -280,7 +280,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'ubuntu-latest' ] #, 'windows-latest' ]
+        os: [ 'ubuntu-latest' ] #, 'macos-latest', 'macos-13' , 'windows-latest' ]
         framework: [ 'net462', 'net6.0', 'net8.0' ]
         buffered: [ 'runBuffered', '']
         extraValue: [ '', 'withBigExtraValue', 'withBigBigExtraValue' ]
@@ -289,6 +289,14 @@ jobs:
         exclude:
           - os: ubuntu-latest
             framework: net462
+          - os: macos-latest
+            framework: net462
+          - os: macos-latest
+            framework: net6.0
+          - os: macos-13
+            framework: net462
+          - os: macos-13
+            framework: net6.0
           - jdk_vendor: oracle
             jdk_version: 11
         
@@ -309,7 +317,7 @@ jobs:
           java-version: ${{ matrix.jdk_version }}
  
       - name: Executing KNetTest on Ubuntu with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-        if: matrix.os == 'ubuntu-latest'
+        if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
         continue-on-error: true
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
         env:
