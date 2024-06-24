@@ -3,9 +3,9 @@ title: .NET suite for Apache Kafka
 _description: Main page of .NET suite for Apache Kafka
 ---
 
-# KNet: .NET suite for Apache Kafka
+# KNet: .NET suite for [Apache Kafka™](https://kafka.apache.org/)
 
-KNet is a comprehensive .NET suite for [Apache Kafka](https://kafka.apache.org/) providing access to all [APIs](https://kafka.apache.org/documentation/#api) and features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).
+KNet is a comprehensive .NET suite for [Apache Kafka™](https://kafka.apache.org/) providing access to all [APIs](https://kafka.apache.org/documentation/#api) and features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).
 
 ### Libraries and Tools
 
@@ -33,7 +33,7 @@ Looking for the help of Apache Kafka experts? MASES Group can help you design, b
 
 ## Scope of the project
 
-This project aims to create a set of libraries and tools to direct access, from .NET, all the features available in the [Apache Kafka binary distribution](https://kafka.apache.org/downloads). 
+This project aims to create a set of libraries and tools to direct access, from .NET, all the features available in the [Apache Kafka™ binary distribution](https://kafka.apache.org/downloads). 
 
 There are many client libraries written to manage communication with Apache Kafka. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:
 * all implemented features are availables at no extra implementation costs, see [KNet usage](usage.md);
@@ -62,4 +62,4 @@ Do you want to help us?
 - open [issues](https://github.com/masesgroup/KNet/issues) to request features or report bugs :bug:
 - improves the project with Pull Requests
 
-This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.
+This project adheres to the Contributor [Covenant code of conduct](https://github.com/masesgroup/KNet/blob/master/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.

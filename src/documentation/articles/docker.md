@@ -17,13 +17,13 @@ _description: Describes the Docker images of .NET suite for Apache Kafka
   - Docker Hub: https://hub.docker.com/repository/docker/masesgroup/knet/general
   
 The container image can work in multiple modes based on the environment variable **KNET_DOCKER_RUNNING_MODE**:
-- **KNET_DOCKER_RUNNING_MODE** not existent or empty: the image expect to run in command-line mode and it is the default behavior. The Docker image invokes the command-line module **KNetCLI** with the same command available in [KNet CLI usage](usageCLI.md):
+- **KNET_DOCKER_RUNNING_MODE** not existent or empty: the image expect to run in command-line mode and it is the default behavior. The Docker image invokes the command-line module **KNetCLI** using the same commands available in [KNet CLI usage](usageCLI.md):
   - With the following:
   > docker run -it knet [commands]
   - the Docker image will issue the command:
   > dotnet /app/MASES.KNetCLI.dll $@
 
-- - **KNET_DOCKER_RUNNING_MODE**=**zookeeper**: starts a zookeeper node, defaults to run a standalone zookeeper exposing on port 2181
+- - **KNET_DOCKER_RUNNING_MODE**=**zookeeper**: starts a [ZooKeeper™](https://zookeeper.apache.org/) node, defaults to run a standalone [ZooKeeper™](https://zookeeper.apache.org/) exposing on port 2181
   -  the Docker image will issue the command:
   > dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties
   - the image can add, or update, configuration variables of zookeeper.properties using the following pattern for environment variables:
@@ -32,7 +32,7 @@ The container image can work in multiple modes based on the environment variable
     - The value of the environment variable is the value will be used in the configuration file
     - The default file is available at https://github.com/masesgroup/KNet/blob/master/src/container/config_container/zookeeper.properties
 
-- **KNET_DOCKER_RUNNING_MODE**=**broker**: starts an Apache Kafka node, defaults to run a standalone broker exposing on port 9092
+- **KNET_DOCKER_RUNNING_MODE**=**broker**: starts an [Apache Kafka™](https://kafka.apache.org/) broker node, defaults to run a standalone broker exposing on port 9092
   -  the Docker image will issue the command:
   > dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties
   - the image can add, or update, configuration variables of server.properties using the following pattern for environment variables:
@@ -42,7 +42,7 @@ The container image can work in multiple modes based on the environment variable
     - As an example: the environment variable **KAFKA_ADVERTISED_LISTENERS** represents **advertised.listeners**
     - The default file is available at https://github.com/masesgroup/KNet/blob/master/src/container/config_container/server.properties
 
-- **KNET_DOCKER_RUNNING_MODE**=**server**: starts, within the container, both a zookeeper node and an Apache Kafka node, it defaults to run exposing zookeeper on port 2181 and Kafka on port 9092; the image can add, or update, configuration variables of ZooKeeper and Apache Kafka using the same pattern of previous points.
+- **KNET_DOCKER_RUNNING_MODE**=**server**: starts, within the container, both a [ZooKeeper™](https://zookeeper.apache.org/) node and an [Apache Kafka™](https://kafka.apache.org/) broker node, it defaults to run exposing [ZooKeeper™](https://zookeeper.apache.org/) on port 2181 and [Apache Kafka™](https://kafka.apache.org/) broker on port 9092; the image can add, or update, configuration variables of [ZooKeeper™](https://zookeeper.apache.org/) and [Apache Kafka™](https://kafka.apache.org/) using the same pattern of previous points.
 
 - Then the image can run both Apache Connect and KNet Connect using specific values for **KNET_DOCKER_RUNNING_MODE**:
   - **KNET_DOCKER_RUNNING_MODE**=**knet-connect-standalone**: starts, within the container, a standalone KNet Connect instance
@@ -64,10 +64,10 @@ The container image can work in multiple modes based on the environment variable
     > dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties
     - the image can add, or update, configuration variables of connect-standalone.properties and connect-knet-specific.properties using the same pattern of **knet-connect-standalone**:
   
-  - **KNET_DOCKER_RUNNING_MODE**=**knet-connect-standalone-server**: starts, within the container, a zookeeper node and an Apache Kafka node like in **server**, then starts the same command of **knet-connect-standalone**; this is an autonoumous instance can be used for development or any other possible usage
+  - **KNET_DOCKER_RUNNING_MODE**=**knet-connect-standalone-server**: starts, within the container, a [ZooKeeper™](https://zookeeper.apache.org/) node and an [Apache Kafka™](https://kafka.apache.org/) broker node like in **server**, then starts the same command of **knet-connect-standalone**; this is an autonoumous instance can be used for development or any other possible usage
     - the image can add, or update, configuration variables of using the same pattern of **zookeeper**, **broker** and **knet-connect-standalone**
   
-  - **KNET_DOCKER_RUNNING_MODE**=**connect-standalone-server**: starts, within the container, a zookeeper node and an Apache Kafka node like in **server**, then starts the same command of **connect-standalone**; this is an autonoumous instance can be used for development or any other possible usage
+  - **KNET_DOCKER_RUNNING_MODE**=**connect-standalone-server**: starts, within the container, a [ZooKeeper™](https://zookeeper.apache.org/) node and an [Apache Kafka™](https://kafka.apache.org/) broker node like in **server**, then starts the same command of **connect-standalone**; this is an autonoumous instance can be used for development or any other possible usage
     - the image can add, or update, configuration variables of using the same pattern of **zookeeper**, **broker** and **connect-standalone**
   
   - **KNET_DOCKER_RUNNING_MODE**=**knet-connect-distributed**: starts, within the container, a distributed KNet Connect instance
