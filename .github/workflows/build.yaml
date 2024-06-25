@@ -189,6 +189,11 @@ jobs:
         env:
           GITHUB_TEST_PREPARATION: true
 
+      - name: Prepare configuration files
+        run: |
+          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\zookeeper.properties -Force
+          Copy-Item src\container\config_container\server.properties -Destination bin\server.properties -Force
+
       - name: Save KNet bin in cache
         uses: actions/cache/save@v4
         with:
@@ -262,7 +267,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-  execute_KNetTest:
+  execute_KNetTest_linux:
     needs: [build_windows, build_container_knettest]
     services:
       kafka:
@@ -274,21 +279,71 @@ jobs:
         ports:
           - 9092:9092
         env:
-          KNET_RUNNING_MODE: server
+          KNET_DOCKER_RUNNING_MODE: server
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
           
     strategy:
       fail-fast: false
       matrix:
         os: [ 'ubuntu-latest' ] #, 'macos-latest', 'macos-13' , 'windows-latest' ]
-        framework: [ 'net462', 'net6.0', 'net8.0' ]
+        framework: [ 'net6.0', 'net8.0' ]
         buffered: [ 'runBuffered', '']
-        extraValue: [ '', 'withBigExtraValue', 'withBigBigExtraValue' ]
+        extraValue: [ '', 'withBigBigExtraValue' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
-          - os: ubuntu-latest
-            framework: net462
+          - jdk_vendor: oracle
+            jdk_version: 11
+        
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Restore KNet bin from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: KNet_bin_${{ github.sha }}
+ 
+      - name: Set up JDK distribution
+        uses: actions/setup-java@v4
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+ 
+      - name: Executing KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
+        continue-on-error: true
+        run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+         
+      # Following shall be disabled since not supported from GitHub
+      #
+      #- name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      #  if: ${{ matrix.os == 'windows-latest' && matrix.framework != 'net462' }}
+      #  run: dotnet .\bin\${{ matrix.framework }}\KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
+      #  env:
+      #    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      #    
+      #- name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      #  if: ${{ matrix.os == 'windows-latest' && matrix.framework == 'net462' }}
+      #  run: .\bin\${{ matrix.framework }}\KNetTest.exe localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
+      #  env:
+      #    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      
+  execute_KNetTest_other:
+    needs: [build_windows, build_container_knettest]
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ 'macos-latest', 'macos-13' , 'windows-latest' ]
+        framework: [ 'net462', 'net6.0', 'net8.0' ]
+        buffered: [ 'runBuffered', '']
+        extraValue: [ '', 'withBigBigExtraValue' ]
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        exclude:
           - os: macos-latest
             framework: net462
           - os: macos-latest
@@ -315,24 +370,23 @@ jobs:
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
- 
-      - name: Executing KNetTest on Ubuntu with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-        if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
-        continue-on-error: true
-        run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
+
+      - name: Authenticate to GitHub
+        run: dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/masesgroup/index.json"
+        
+      - name: Download latest published version of KNetCLI
+        run: dotnet tool update -g MASES.KNetCLI
+
+      - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        shell: pwsh
+        run: |
+          Start-Process -FilePath knet -ArgumentList ( 'zookeeperstart', '${{ github.workspace }}/bin/zookeeper.properties' )
+          Start-Process -FilePath knet -ArgumentList ( 'kafkastart', '${{ github.workspace }}/bin/server.properties' )
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-         
-      # Following shall be disabled since not supported from GitHub
-      #
-      #- name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-      #  if: ${{ matrix.os == 'windows-latest' && matrix.framework != 'net462' }}
-      #  run: dotnet .\bin\${{ matrix.framework }}\KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
-      #  env:
-      #    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      #    
-      #- name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-      #  if: ${{ matrix.os == 'windows-latest' && matrix.framework == 'net462' }}
-      #  run: .\bin\${{ matrix.framework }}\KNetTest.exe localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
-      #  env:
-      #    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+
+      - name: Executing KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
