@@ -444,7 +444,7 @@ namespace MASES.KNetTest
                                 Console.WriteLine("SeekToBeginning");
                             }
                         }
-                        if (useConsumeCallback) manualResetEvent.WaitOne();
+                        if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
                         const int checkTime = 200;
                         const int waitTime = 2 * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
@@ -660,7 +660,7 @@ namespace MASES.KNetTest
                                 Console.WriteLine("SeekToBeginning");
                             }
                         }
-                        if (useConsumeCallback) manualResetEvent.WaitOne();
+                        if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
                         const int checkTime = 200;
                         const int waitTime = 2 * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
