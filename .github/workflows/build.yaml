@@ -396,8 +396,8 @@ jobs:
         if: ${{ matrix.os != 'windows-latest' }}
         shell: pwsh
         run: |
-          Start-Process -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/bin/${{ matrix.framework }}/KNetCLI.dll', 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/zookeeper.properties' )
-          Start-Process -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/bin/${{ matrix.framework }}/KNetCLI.dll', 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/server.properties' )
+          Start-Process -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/KNetCLI.dll', 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/zookeeper.properties' )
+          Start-Process -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/KNetCLI.dll', 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/server.properties' )
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
@@ -405,8 +405,8 @@ jobs:
         if: ${{ matrix.os == 'windows-latest' }}
         shell: pwsh
         run: |
-          Start-Process -FilePath ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetCLI.exe -ArgumentList ( 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/zookeeper.properties' )
-          Start-Process -FilePath ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetCLI.exe -ArgumentList ( 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/server.properties' )
+          Start-Process -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\KNetCLI.exe -ArgumentList ( 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/zookeeper.properties' )
+          Start-Process -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\KNetCLI.exe -ArgumentList ( 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/server.properties' )
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
