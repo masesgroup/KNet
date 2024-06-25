@@ -387,7 +387,7 @@ jobs:
       - name: Executing KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'windows-latest' }}
         shell: pwsh
-        run: ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.exe
+        run: ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTestSerDes.exe
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 

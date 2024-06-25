@@ -55,6 +55,7 @@ namespace MASES.KNetTest
 
         static int NonParallelLimit = 100000;
         static long _firstOffset = -1;
+        static int waitMultiplier = 5;
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
@@ -446,7 +447,7 @@ namespace MASES.KNetTest
                         }
                         if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
                         const int checkTime = 200;
-                        const int waitTime = 2 * 60 * 1000;
+                        int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
@@ -662,7 +663,7 @@ namespace MASES.KNetTest
                         }
                         if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
                         const int checkTime = 200;
-                        const int waitTime = 2 * 60 * 1000;
+                        int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
