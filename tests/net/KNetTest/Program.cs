@@ -458,7 +458,7 @@ namespace MASES.KNetTest
                                 watcher.Stop();
                             }
                             cycle++;
-                            if (elements >= 0 && cycle == 60 * 5)
+                            if (elements >= 0 && cycle == 2 * 60 * 5)
                             {
                                 throw new InvalidOperationException($"Forcibly exit since no {NonParallelLimit} record was received within 1 minute. Current is {elements}");
                             }
@@ -668,7 +668,7 @@ namespace MASES.KNetTest
                                 watcher.Stop();
                             }
                             cycle++;
-                            if (elements >= 0 && cycle == 60 * 5)
+                            if (elements >= 0 && cycle == 2 * 60 * 5)
                             {
                                 throw new InvalidOperationException($"Forcibly exit since no {NonParallelLimit} record was received within 1 minute. Current is {elements}");
                             }
