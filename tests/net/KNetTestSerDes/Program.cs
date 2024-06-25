@@ -112,8 +112,9 @@ namespace MASES.KNetTestAdmin
                     if (KNetSerialization.DeserializeDouble(true, "test", bb) != val) throw new System.Exception();
                 }
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
                 Environment.ExitCode = 1;
             }
         }
