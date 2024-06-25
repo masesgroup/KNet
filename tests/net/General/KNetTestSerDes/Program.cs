@@ -30,7 +30,11 @@ namespace MASES.KNetTestAdmin
             try
             {
                 SharedKNetCore.Create();
-
+#if NET462_OR_GREATER
+                // check why and if this is needed in Windows 
+                var str = new Java.Lang.String("test string");
+                Console.WriteLine(str);
+#endif
                 byte[] bb, bb1;
 
                 bb = KNetSerialization.SerializeBoolean(false, "test", false);
