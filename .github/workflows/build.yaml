@@ -193,6 +193,7 @@ jobs:
         run: |
           Copy-Item src\container\config_container\zookeeper.properties -Destination bin\zookeeper.properties -Force
           Copy-Item src\container\config_container\server.properties -Destination bin\server.properties -Force
+          Copy-Item src\container\config_container\log4j.properties -Destination bin\log4j.properties -Force
 
       - name: Save KNet bin in cache
         uses: actions/cache/save@v4
@@ -400,8 +401,8 @@ jobs:
       - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         shell: pwsh
         run: |
-          Start-Process -FilePath knet -ArgumentList ( 'zookeeperstart', '${{ github.workspace }}/bin/zookeeper.properties' )
-          Start-Process -FilePath knet -ArgumentList ( 'kafkastart', '${{ github.workspace }}/bin/server.properties' )
+          Start-Process -FilePath knet -ArgumentList ( 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/zookeeper.properties' )
+          Start-Process -FilePath knet -ArgumentList ( 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/server.properties' )
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
