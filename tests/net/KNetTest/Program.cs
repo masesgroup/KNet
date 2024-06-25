@@ -41,7 +41,8 @@ namespace MASES.KNetTest
         static bool withBigBigExtraValue = false;
         static bool consoleOutput = System.Diagnostics.Debugger.IsAttached ? true : false;
         static bool runBuffered = false;
-        static bool useCallback = false;
+        static bool useProduceCallback = false;
+        static bool useConsumeCallback = false;
         static bool onlyProduce = false;
         static bool flushWhileSend = false;
         static bool withAck = false;
@@ -120,7 +121,8 @@ namespace MASES.KNetTest
                     {
                         if (args[i] == "runBuffered") { runBuffered = true; continue; }
                         if (args[i] == "consoleOutput") { consoleOutput = true; continue; }
-                        if (args[i] == "useCallback") { useCallback = true; continue; }
+                        if (args[i] == "useProduceCallback") { useProduceCallback = true; continue; }
+                        if (args[i] == "useConsumeCallback") { useConsumeCallback = true; continue; }
                         if (args[i] == "withBigExtraValue") { withBigExtraValue = true; NonParallelLimit /= 10; continue; }
                         if (args[i] == "withBigBigExtraValue") { withBigBigExtraValue = true; NonParallelLimit /= 100; continue; }
                         if (args[i] == "onlyProduce") { onlyProduce = true; continue; }
@@ -305,7 +307,7 @@ namespace MASES.KNetTest
                     {
                         int i = 0;
                         Callback callback = null;
-                        if (useCallback)
+                        if (useProduceCallback)
                         {
                             callback = new Callback()
                             {
@@ -323,7 +325,7 @@ namespace MASES.KNetTest
                             {
                                 watcher.Start();
                                 var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withBigExtraValue, withBigBigExtraValue));
-                                var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
+                                var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
                                 if (!runInParallel && _firstOffset == -1)
                                 {
                                     _firstOffset = result.Get().Offset();
@@ -348,7 +350,7 @@ namespace MASES.KNetTest
                         }
                         finally
                         {
-                            if (useCallback) callback.Dispose();
+                            if (useProduceCallback) callback.Dispose();
                             if (i != 0) Console.WriteLine($"Flushed {i} elements in {watcher.Elapsed}, produce mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / i)} with mean JNI Calls {baseJNICalls / i}");
                         }
                     }
@@ -396,8 +398,9 @@ namespace MASES.KNetTest
                 var valueDeserializer = JsonSerDes.Value<TestType>.NewByteArraySerDes();
                 ConsumerRebalanceListener rebalanceListener = null;
                 KNetConsumer<string, TestType> consumer = null;
+                ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
-                if (useCallback)
+                if (useConsumeCallback)
                 {
                     rebalanceListener = new ConsumerRebalanceListener()
                     {
@@ -408,6 +411,7 @@ namespace MASES.KNetTest
                         OnOnPartitionsAssigned = (o) =>
                         {
                             Console.WriteLine("Assigned: {0}", o.ToString());
+                            manualResetEvent.Set();
                         }
                     };
                 }
@@ -422,7 +426,7 @@ namespace MASES.KNetTest
                     {
                         if (runInParallel)
                         {
-                            if (useCallback) consumer.Subscribe(topics, rebalanceListener);
+                            if (useConsumeCallback) consumer.Subscribe(topics, rebalanceListener);
                             else consumer.Subscribe(topics);
                         }
                         else
@@ -432,16 +436,21 @@ namespace MASES.KNetTest
                             if (_firstOffset != -1)
                             {
                                 consumer.Seek(tp, _firstOffset);
+                                Console.WriteLine("Seek to: {0}", _firstOffset);
                             }
                             else
                             {
                                 consumer.SeekToBeginning(Collections.Singleton(tp));
+                                Console.WriteLine("SeekToBeginning");
                             }
                         }
-                        int cycle = 0;
+                        if (useConsumeCallback) manualResetEvent.WaitOne();
+                        const int checkTime = 200;
+                        const int waitTime = 2 * 60 * 1000;
+                        Stopwatch swCycleTime = Stopwatch.StartNew();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
                             watcherTotal.Start();
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
@@ -457,10 +466,9 @@ namespace MASES.KNetTest
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
                             }
-                            cycle++;
-                            if (elements >= 0 && cycle == 2 * 60 * 5)
+                            if (!runInParallel && swCycleTime.ElapsedMilliseconds > waitTime)
                             {
-                                throw new InvalidOperationException($"Forcibly exit since no {NonParallelLimit} record was received within 1 minute. Current is {elements}");
+                                throw new InvalidOperationException($"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements}");
                             }
                         }
                         watcherTotal.Stop();
@@ -515,7 +523,7 @@ namespace MASES.KNetTest
                     {
                         int i = 0;
                         Callback callback = null;
-                        if (useCallback)
+                        if (useProduceCallback)
                         {
                             callback = new Callback()
                             {
@@ -533,7 +541,7 @@ namespace MASES.KNetTest
                             {
                                 watcher.Start();
                                 var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withBigExtraValue, withBigBigExtraValue));
-                                var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
+                                var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
                                 if (!runInParallel && _firstOffset == -1)
                                 {
                                     _firstOffset = result.Get().Offset();
@@ -558,7 +566,7 @@ namespace MASES.KNetTest
                         }
                         finally
                         {
-                            if (useCallback) callback.Dispose();
+                            if (useProduceCallback) callback.Dispose();
                             if (i != 0) Console.WriteLine($"Flushed {i} elements in {watcher.Elapsed}, produce mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / i)} with mean JNI Calls {baseJNICalls / i}");
                         }
                     }
@@ -606,8 +614,9 @@ namespace MASES.KNetTest
                 var valueDeserializer = JsonSerDes.Value<TestType>.NewByteBufferSerDes();
                 ConsumerRebalanceListener rebalanceListener = null;
                 KNetConsumerValueBuffered<string, TestType> consumer = null;
+                ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
-                if (useCallback)
+                if (useConsumeCallback)
                 {
                     rebalanceListener = new ConsumerRebalanceListener()
                     {
@@ -618,6 +627,7 @@ namespace MASES.KNetTest
                         OnOnPartitionsAssigned = (o) =>
                         {
                             Console.WriteLine("Assigned: {0}", o.ToString());
+                            manualResetEvent.Set();
                         }
                     };
                 }
@@ -632,7 +642,7 @@ namespace MASES.KNetTest
                     {
                         if (runInParallel)
                         {
-                            if (useCallback) consumer.Subscribe(topics, rebalanceListener);
+                            if (useConsumeCallback) consumer.Subscribe(topics, rebalanceListener);
                             else consumer.Subscribe(topics);
                         }
                         else
@@ -642,16 +652,21 @@ namespace MASES.KNetTest
                             if (_firstOffset != -1)
                             {
                                 consumer.Seek(tp, _firstOffset);
+                                Console.WriteLine("Seek to: {0}", _firstOffset);
                             }
                             else
                             {
                                 consumer.SeekToBeginning(Collections.Singleton(tp));
+                                Console.WriteLine("SeekToBeginning");
                             }
                         }
-                        int cycle = 0;
+                        if (useConsumeCallback) manualResetEvent.WaitOne();
+                        const int checkTime = 200;
+                        const int waitTime = 2 * 60 * 1000;
+                        Stopwatch swCycleTime = Stopwatch.StartNew();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
                             watcherTotal.Start();
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
@@ -667,10 +682,9 @@ namespace MASES.KNetTest
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
                             }
-                            cycle++;
-                            if (elements >= 0 && cycle == 2 * 60 * 5)
+                            if (!runInParallel && swCycleTime.ElapsedMilliseconds > waitTime)
                             {
-                                throw new InvalidOperationException($"Forcibly exit since no {NonParallelLimit} record was received within 1 minute. Current is {elements}");
+                                throw new InvalidOperationException($"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements}");
                             }
                         }
                         watcherTotal.Stop();
