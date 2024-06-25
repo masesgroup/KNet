@@ -333,7 +333,7 @@ jobs:
       #    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
       
   execute_KNetTest_other:
-    needs: [build_windows, build_container_knettest]
+    needs: [build_windows]
     strategy:
       fail-fast: false
       matrix:
