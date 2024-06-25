@@ -17,6 +17,7 @@
 */
 
 using Java.Lang;
+using Javax.Security.Auth.Login;
 using System;
 
 namespace MASES.KNet.TestCommon
@@ -27,6 +28,10 @@ namespace MASES.KNet.TestCommon
         {
             ApplicationJarRootPath = Const.DefaultJarsPath;
             CreateGlobalInstance();
+            if (GlobalInstance == null)
+            {
+                throw new InvalidOperationException("Failed to create GlobalInstance");
+            }
         }
 
         public static int ManageException(System.Exception e)

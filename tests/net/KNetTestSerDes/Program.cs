@@ -27,10 +27,10 @@ namespace MASES.KNetTestAdmin
     {
         static void Main(string[] args)
         {
-            SharedKNetCore.Create();
-
             try
             {
+                SharedKNetCore.Create();
+
                 byte[] bb, bb1;
 
                 bb = KNetSerialization.SerializeBoolean(false, "test", false);
