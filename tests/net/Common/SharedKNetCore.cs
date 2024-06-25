@@ -31,13 +31,16 @@ namespace MASES.KNet.TestCommon
             {
                 throw new InvalidOperationException("Failed to create GlobalInstance");
             }
+            if (JCOBridge.C2JBridge.JCOBridge.Global == null)
+            {
+                throw new InvalidOperationException("JCOBridge.C2JBridge.JCOBridge.Global is null!!!");
+            }
         }
 #if NET462_OR_GREATER
         public override bool Globalize
         {
             get
             {
-
                 Console.WriteLine($"Globalize was {base.Globalize}, set to true");
                 return true;
             }
