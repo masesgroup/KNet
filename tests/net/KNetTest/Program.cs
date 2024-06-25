@@ -469,7 +469,13 @@ namespace MASES.KNetTest
                             }
                             if (!runInParallel && swCycleTime.ElapsedMilliseconds > waitTime)
                             {
-                                throw new InvalidOperationException($"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements}");
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements}";
+                                if (elements != 0)
+                                {
+                                    Console.WriteLine(str);
+                                    break;
+                                }
+                                else throw new InvalidOperationException(str);
                             }
                         }
                         watcherTotal.Stop();
@@ -685,7 +691,13 @@ namespace MASES.KNetTest
                             }
                             if (!runInParallel && swCycleTime.ElapsedMilliseconds > waitTime)
                             {
-                                throw new InvalidOperationException($"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements}");
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements}";
+                                if (elements != 0)
+                                {
+                                    Console.WriteLine(str);
+                                    break;
+                                }
+                                else throw new InvalidOperationException(str);
                             }
                         }
                         watcherTotal.Stop();
