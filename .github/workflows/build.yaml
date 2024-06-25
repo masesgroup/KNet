@@ -201,6 +201,13 @@ jobs:
           enableCrossOsArchive: true
           path: ./bin/
           key: KNet_bin_${{ github.sha }}
+          
+      - name: Save KNetCLI bin in cache
+        uses: actions/cache/save@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./binCLI/
+          key: KNetCLI_bin_${{ github.sha }}
 
   build_container_knettest:
     needs: check_changes
@@ -391,17 +398,21 @@ jobs:
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
-      - name: Authenticate to GitHub
-        run: dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/masesgroup/index.json"
-        
-      - name: Download latest published version of KNetCLI
-        run: dotnet tool update -g MASES.KNetCLI
-
       - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        if: ${{ matrix.os != 'windows-latest' }}
         shell: pwsh
         run: |
-          Start-Process -FilePath knet -ArgumentList ( 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/zookeeper.properties' )
-          Start-Process -FilePath knet -ArgumentList ( 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/server.properties' )
+          Start-Process -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/bin/${{ matrix.framework }}/KNetCLI.dll', 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/zookeeper.properties' )
+          Start-Process -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/bin/${{ matrix.framework }}/KNetCLI.dll', 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/server.properties' )
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+
+      - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        if: ${{ matrix.os == 'windows-latest' }}
+        shell: pwsh
+        run: |
+          Start-Process -FilePath ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetCLI.exe -ArgumentList ( 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/zookeeper.properties' )
+          Start-Process -FilePath ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetCLI.exe -ArgumentList ( 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/server.properties' )
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 

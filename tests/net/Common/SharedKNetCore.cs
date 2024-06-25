@@ -17,7 +17,6 @@
 */
 
 using Java.Lang;
-using Javax.Security.Auth.Login;
 using System;
 
 namespace MASES.KNet.TestCommon
