@@ -202,7 +202,7 @@ jobs:
           path: ./bin/
           key: KNet_bin_${{ github.sha }}
           
-      - name: Save KNetCLI bin in cache
+      - name: Save KNetCLI binCLI in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
@@ -319,18 +319,18 @@ jobs:
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
  
+      - name: Executing KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
+        run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+ 
       - name: Executing KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
  
-      - name: Executing KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-        if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
-        run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-         
       # Following shall be disabled since not supported from GitHub
       #
       #- name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
@@ -377,26 +377,20 @@ jobs:
           enableCrossOsArchive: true
           path: ./bin/
           key: KNet_bin_${{ github.sha }}
- 
+
+      - name: Restore KNetCLI binCLI from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./binCLI/
+          key: KNetCLI_bin_${{ github.sha }}
+
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
-
-      - name: Executing KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-        if: ${{ matrix.os != 'windows-latest' }}
-        shell: pwsh
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-
-      - name: Executing KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-        if: ${{ matrix.os == 'windows-latest' }}
-        shell: pwsh
-        run: ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTestSerDes.exe
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
       - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
@@ -427,5 +421,19 @@ jobs:
         if: ${{ matrix.os == 'windows-latest' }}
         shell: pwsh
         run: ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+
+      - name: Executing KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        if: ${{ matrix.os != 'windows-latest' }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+
+      - name: Executing KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        if: ${{ matrix.os == 'windows-latest' }}
+        shell: pwsh
+        run: ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTestSerDes.exe
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
