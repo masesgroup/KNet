@@ -311,6 +311,12 @@ jobs:
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
  
+      - name: Executing KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+ 
       - name: Executing KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
         continue-on-error: true
@@ -371,6 +377,12 @@ jobs:
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
 
+      - name: Executing KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+
       - name: Authenticate to GitHub
         run: dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/masesgroup/index.json"
         
@@ -386,7 +398,15 @@ jobs:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
       - name: Executing KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        if: ${{ matrix.os != 'windows-latest' }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
+        env:
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
+      - name: Executing KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        if: ${{ matrix.os == 'windows-latest' }}
+        shell: pwsh
+        run: ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.exe localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}

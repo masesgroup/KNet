@@ -18,102 +18,103 @@
 
 using MASES.KNet.Serialization;
 using MASES.KNet.TestCommon;
+using System;
 using System.Linq;
 
 namespace MASES.KNetTestAdmin
 {
     class Program
     {
-        const string theServer = "localhost:9092";
-        const string theTopic = "myTopicAdmin";
-
-        static string serverToUse = theServer;
-        static string topicToUse = theTopic;
-
         static void Main(string[] args)
         {
             SharedKNetCore.Create();
-            var appArgs = SharedKNetCore.FilteredArgs;
 
-            byte[] bb, bb1;
-
-            bb = KNetSerialization.SerializeBoolean(false, "test", false);
-            bb1 = KNetSerialization.SerializeBoolean(true, "test", false);
-            if (!bb.SequenceEqual(bb1)) throw new System.Exception();
-
-            if (KNetSerialization.DeserializeBoolean(true, "test", bb) != false) throw new System.Exception();
-
-            bb = KNetSerialization.SerializeBoolean(false, "test", true);
-            bb1 = KNetSerialization.SerializeBoolean(true, "test", true);
-            if (!bb.SequenceEqual(bb1)) throw new System.Exception();
-
-            if (KNetSerialization.DeserializeBoolean(true, "test", bb) != true) throw new System.Exception();
-
-            const int cycles = 100;
-
-            long cycleDelta = short.MaxValue / cycles;
-
-            for (short i = 0; i < cycles; i++)
+            try
             {
-                short val = (short)(short.MinValue + i * (short)cycleDelta);
+                byte[] bb, bb1;
 
-                bb = KNetSerialization.SerializeShort(false, "test", val);
-                bb1 = KNetSerialization.SerializeShort(true, "test", val);
+                bb = KNetSerialization.SerializeBoolean(false, "test", false);
+                bb1 = KNetSerialization.SerializeBoolean(true, "test", false);
                 if (!bb.SequenceEqual(bb1)) throw new System.Exception();
 
-                if (KNetSerialization.DeserializeShort(true, "test", bb) != val) throw new System.Exception();
+                if (KNetSerialization.DeserializeBoolean(true, "test", bb) != false) throw new System.Exception();
+
+                bb = KNetSerialization.SerializeBoolean(false, "test", true);
+                bb1 = KNetSerialization.SerializeBoolean(true, "test", true);
+                if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+                if (KNetSerialization.DeserializeBoolean(true, "test", bb) != true) throw new System.Exception();
+
+                const int cycles = 100;
+
+                long cycleDelta = short.MaxValue / cycles;
+
+                for (short i = 0; i < cycles; i++)
+                {
+                    short val = (short)(short.MinValue + i * (short)cycleDelta);
+
+                    bb = KNetSerialization.SerializeShort(false, "test", val);
+                    bb1 = KNetSerialization.SerializeShort(true, "test", val);
+                    if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+                    if (KNetSerialization.DeserializeShort(true, "test", bb) != val) throw new System.Exception();
+                }
+
+                cycleDelta = int.MaxValue / cycles;
+
+                for (int i = 0; i < cycles; i++)
+                {
+                    int val = int.MinValue + i * (int)cycleDelta;
+
+                    bb = KNetSerialization.SerializeInt(false, "test", val);
+                    bb1 = KNetSerialization.SerializeInt(true, "test", val);
+                    if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+                    if (KNetSerialization.DeserializeInt(true, "test", bb) != val) throw new System.Exception();
+                }
+
+                cycleDelta = long.MaxValue / cycles;
+
+                for (long i = 0; i < cycles; i++)
+                {
+                    long val = long.MinValue + i * (long)cycleDelta;
+
+                    bb = KNetSerialization.SerializeLong(false, "test", val);
+                    bb1 = KNetSerialization.SerializeLong(true, "test", val);
+                    if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+                    if (KNetSerialization.DeserializeLong(true, "test", bb) != val) throw new System.Exception();
+                }
+
+                float cycleDeltaF = float.MaxValue / cycles;
+
+                for (long i = 0; i < cycles; i++)
+                {
+                    float val = float.MinValue + i * cycleDeltaF;
+
+                    bb = KNetSerialization.SerializeFloat(false, "test", val);
+                    bb1 = KNetSerialization.SerializeFloat(true, "test", val);
+                    if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+                    if (KNetSerialization.DeserializeFloat(true, "test", bb) != val) throw new System.Exception();
+                }
+
+                double cycleDeltaD = double.MaxValue / cycles;
+
+                for (long i = 0; i < cycles; i++)
+                {
+                    double val = double.MinValue + i * cycleDeltaD;
+
+                    bb = KNetSerialization.SerializeDouble(false, "test", val);
+                    bb1 = KNetSerialization.SerializeDouble(true, "test", val);
+                    if (!bb.SequenceEqual(bb1)) throw new System.Exception();
+
+                    if (KNetSerialization.DeserializeDouble(true, "test", bb) != val) throw new System.Exception();
+                }
             }
-
-            cycleDelta = int.MaxValue / cycles;
-
-            for (int i = 0; i < cycles; i++)
+            catch
             {
-                int val = int.MinValue + i * (int)cycleDelta;
-
-                bb = KNetSerialization.SerializeInt(false, "test", val);
-                bb1 = KNetSerialization.SerializeInt(true, "test", val);
-                if (!bb.SequenceEqual(bb1)) throw new System.Exception();
-
-                if (KNetSerialization.DeserializeInt(true, "test", bb) != val) throw new System.Exception();
-            }
-
-            cycleDelta = long.MaxValue / cycles;
-
-            for (long i = 0; i < cycles; i++)
-            {
-                long val = long.MinValue + i * (long)cycleDelta;
-
-                bb = KNetSerialization.SerializeLong(false, "test", val);
-                bb1 = KNetSerialization.SerializeLong(true, "test", val);
-                if (!bb.SequenceEqual(bb1)) throw new System.Exception();
-
-                if (KNetSerialization.DeserializeLong(true, "test", bb) != val) throw new System.Exception();
-            }
-
-            float cycleDeltaF = float.MaxValue / cycles;
-
-            for (long i = 0; i < cycles; i++)
-            {
-                float val = float.MinValue + i * cycleDeltaF;
-
-                bb = KNetSerialization.SerializeFloat(false, "test", val);
-                bb1 = KNetSerialization.SerializeFloat(true, "test", val);
-                if (!bb.SequenceEqual(bb1)) throw new System.Exception();
-
-                if (KNetSerialization.DeserializeFloat(true, "test", bb) != val) throw new System.Exception();
-            }
-
-            double cycleDeltaD = double.MaxValue / cycles;
-
-            for (long i = 0; i < cycles; i++)
-            {
-                double val = double.MinValue + i * cycleDeltaD;
-
-                bb = KNetSerialization.SerializeDouble(false, "test", val);
-                bb1 = KNetSerialization.SerializeDouble(true, "test", val);
-                if (!bb.SequenceEqual(bb1)) throw new System.Exception();
-
-                if (KNetSerialization.DeserializeDouble(true, "test", bb) != val) throw new System.Exception();
+                Environment.ExitCode = 1;
             }
         }
     }
