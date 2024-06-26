@@ -195,19 +195,47 @@ jobs:
           Copy-Item src\container\config_container\server.properties -Destination bin\server.properties -Force
           Copy-Item src\container\config_container\log4j.properties -Destination bin\log4j.properties -Force
 
-      - name: Save KNet bin in cache
+      - name: Save KNet net462 bin in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
-          path: ./bin/
-          key: KNet_bin_${{ github.sha }}
+          path: ./bin/net462/
+          key: KNet_net462_bin_${{ github.sha }}
           
-      - name: Save KNetCLI binCLI in cache
+      - name: Save KNet net6.0 bin in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
-          path: ./binCLI/
-          key: KNetCLI_bin_${{ github.sha }}
+          path: ./bin/net6.0/
+          key: KNet_net6.0_bin_${{ github.sha }}
+          
+      - name: Save KNet net8.0 bin in cache
+        uses: actions/cache/save@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/net8.0/
+          key: KNet_net8.0_bin_${{ github.sha }}
+
+      - name: Save KNet net462 binCLI in cache
+        uses: actions/cache/save@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./binCLI/net462/
+          key: KNet_net462_binCLI_${{ github.sha }}
+          
+      - name: Save KNet net6.0 binCLI in cache
+        uses: actions/cache/save@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./binCLI/net6.0/
+          key: KNet_net6.0_binCLI_${{ github.sha }}
+          
+      - name: Save KNet net8.0 binCLI in cache
+        uses: actions/cache/save@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./binCLI/net8.0/
+          key: KNet_net8.0_binCLI_${{ github.sha }}
 
   build_container_knettest:
     needs: check_changes
@@ -305,13 +333,13 @@ jobs:
         
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Restore KNet bin from cache
+      - name: Restore KNet ${{ matrix.framework }} bin from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./bin/
-          key: KNet_bin_${{ github.sha }}
+          path: ./bin/${{ matrix.framework }}/
+          key: KNet_${{ matrix.framework }}_bin_${{ github.sha }}
  
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -370,21 +398,21 @@ jobs:
         
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Restore KNet bin from cache
+      - name: Restore KNet ${{ matrix.framework }} bin from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./bin/
-          key: KNet_bin_${{ github.sha }}
+          path: ./bin/${{ matrix.framework }}/
+          key: KNet_${{ matrix.framework }}_bin_${{ github.sha }}
 
-      - name: Restore KNetCLI binCLI from cache
+      - name: Restore KNetCLI ${{ matrix.framework }} binCLI from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./binCLI/
-          key: KNetCLI_bin_${{ github.sha }}
+          path: ./binCLI/${{ matrix.framework }}/
+          key: KNetCLI_${{ matrix.framework }}_binCLI_${{ github.sha }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -456,7 +484,11 @@ jobs:
           
       - name: Clear caches
         run: |
-          gh actions-cache delete KNet_bin_${{ github.sha }} --confirm
-          gh actions-cache delete KNetCLI_bin_${{ github.sha }} --confirm
+          gh actions-cache delete KNet_net462_bin_${{ github.sha }} --confirm
+          gh actions-cache delete KNet_net6.0_bin_${{ github.sha }} --confirm
+          gh actions-cache delete KNet_net8.0_bin_${{ github.sha }} --confirm
+          gh actions-cache delete KNetCLI_net462_binCLI_${{ github.sha }} --confirm
+          gh actions-cache delete KNetCLI_net6.0_binCLI_${{ github.sha }} --confirm
+          gh actions-cache delete KNetCLI_net8.0_binCLI_${{ github.sha }} --confirm
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
