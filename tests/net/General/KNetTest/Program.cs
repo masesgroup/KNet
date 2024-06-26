@@ -137,12 +137,12 @@ namespace MASES.KNetTest
                 }
             }
 
-            SerDesRaw<TestType> serializer = new SerDesRaw<TestType>()
+            SerDesRaw<TestType> serializer = new()
             {
                 OnSerialize = (topic, type) => { return Array.Empty<byte>(); }
             };
 
-            SerDesRaw<TestType> deserializer = new SerDesRaw<TestType>()
+            SerDesRaw<TestType> deserializer = new()
             {
                 OnDeserialize = (topic, data) => { return new TestType(0, false, false); }
             };
