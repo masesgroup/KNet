@@ -383,7 +383,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static bool DeserializeBoolean(bool fallbackToKafka, string topic, byte[] data)
         {
-            if (data == null) return default;
+            if (data == null || data.Length == 0) return default;
             if (fallbackToKafka)
             {
                 var result = _BooleanDeserializer.Deserialize(topic, data);
@@ -410,7 +410,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static ByteBuffer DeserializeByteBuffer(bool fallbackToKafka, string topic, byte[] data)
         {
-            if (data == null) return default;
+            if (data == null || data.Length == 0) return default;
             return JVMBridgeBase.WrapsDirect<ByteBuffer>(_ByteBufferDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
@@ -420,7 +420,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static Bytes DeserializeBytes(bool fallbackToKafka, string topic, byte[] data)
         {
-            if (data == null) return default;
+            if (data == null || data.Length == 0) return default;
             return JVMBridgeBase.WrapsDirect<Bytes>(_BytesDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
@@ -430,7 +430,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static double DeserializeDouble(bool fallbackToKafka, string topic, byte[] data)
         {
-            if (data == null) return default;
+            if (data == null || data.Length == 0) return default;
             if (fallbackToKafka)
             {
                 var result = _DoubleDeserializer.Deserialize(topic, data);
@@ -450,7 +450,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static float DeserializeFloat(bool fallbackToKafka, string topic, byte[] data)
         {
-            if (data == null) return default;
+            if (data == null || data.Length == 0) return default;
             if (fallbackToKafka)
             {
                 var result = _FloatDeserializer.Deserialize(topic, data);
@@ -470,7 +470,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static int DeserializeInt(bool fallbackToKafka, string topic, byte[] data)
         {
-            if (data == null) return default;
+            if (data == null || data.Length == 0) return default;
             if (fallbackToKafka)
             {
                 var result = _IntDeserializer.Deserialize(topic, data);
@@ -515,7 +515,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static long DeserializeLong(bool fallbackToKafka, string topic, byte[] data)
         {
-            if (data == null) return default;
+            if (data == null || data.Length == 0) return default;
             if (fallbackToKafka)
             {
                 var result = _LongDeserializer.Deserialize(topic, data);
@@ -560,7 +560,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static short DeserializeShort(bool fallbackToKafka, string topic, byte[] data)
         {
-            if (data == null) return default;
+            if (data == null || data.Length == 0) return default;
             if (fallbackToKafka)
             {
                 var result = _ShortDeserializer.Deserialize(topic, data);
@@ -603,7 +603,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static string DeserializeString(bool fallbackToKafka, string topic, byte[] data)
         {
-            if (data == null) return default;
+            if (data == null || data.Length == 0) return default;
             return Encoding.UTF8.GetString(data);
         }
         /// <summary>
@@ -611,7 +611,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static Guid DeserializeGuid(bool fallbackToKafka, string topic, byte[] data)
         {
-            if (data == null) return Guid.Empty;
+            if (data == null || data.Length == 0) return Guid.Empty;
             return new Guid(data);
         }
         /// <summary>
@@ -619,7 +619,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public static Java.Lang.Void DeserializeVoid(bool fallbackToKafka, string topic, byte[] data)
         {
-            if (data != null)
+            if (data != null || data.Length != 0)
             {
                 JVMBridgeException<IllegalArgumentException>.ThrowNew("Data should be null for a VoidDeserializer.");
                 throw new IllegalArgumentException();

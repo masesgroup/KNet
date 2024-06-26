@@ -177,7 +177,7 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                     public override TData DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                     {
-                        if (data == null) return default;
+                        if (data == null || data.Length == 0) return default;
 
                         using MemoryStream memStream = new(data);
                         BinaryDecoder decoder = new(memStream);
@@ -358,7 +358,7 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                     public override TData DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                     {
-                        if (data == null) return default;
+                        if (data == null || data.Length == 0) return default;
 
                         using MemoryStream memStream = new(data);
                         JsonDecoder decoder = new(Schema, memStream);
@@ -546,7 +546,7 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                     public override TData DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                     {
-                        if (data == null) return default;
+                        if (data == null || data.Length == 0) return default;
 
                         using MemoryStream memStream = new(data);
                         BinaryDecoder decoder = new(memStream);
@@ -728,7 +728,7 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                     public override TData DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                     {
-                        if (data == null) return default;
+                        if (data == null || data.Length == 0) return default;
 
                         using MemoryStream memStream = new(data);
                         JsonDecoder decoder = new(Schema, memStream);
