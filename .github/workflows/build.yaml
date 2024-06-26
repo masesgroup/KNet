@@ -438,11 +438,11 @@ jobs:
 
       - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'windows-latest' }}
-        shell: pwsh
+        shell: cmd
         run: |
-          New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
-          Start-Job -ScriptBlock { ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'zookeeperstart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties', '${{ github.workspace }}\bin\${{ matrix.framework }}\zookeeper.properties' ) }
-          Start-Job -ScriptBlock { ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties', '${{ github.workspace }}\bin\${{ matrix.framework }}\server.properties' ) }
+          mkdir ${{ github.workspace }}\logfiles
+          START /B ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe zookeeperstart -LogPath ${{ github.workspace }}\logfiles\ -Log4JConfiguration ${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties ${{ github.workspace }}\bin\${{ matrix.framework }}\zookeeper.properties
+          START /B ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe kafkastart -LogPath ${{ github.workspace }}\logfiles\ -Log4JConfiguration ${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties ${{ github.workspace }}\bin\${{ matrix.framework }}\server.properties
         #  Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_zookeeper_err.log -RSO ${{ github.workspace }}\logfiles\PWSH_zookeeper_out.log -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'zookeeperstart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties', '${{ github.workspace }}\bin\${{ matrix.framework }}\zookeeper.properties' )
         #  Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}\logfiles\PWSH_kafka_out.log -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties', '${{ github.workspace }}\bin\${{ matrix.framework }}\server.properties' )
         env:
