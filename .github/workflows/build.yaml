@@ -412,7 +412,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./binCLI/${{ matrix.framework }}/
-          key: KNetCLI_${{ matrix.framework }}_binCLI_${{ github.sha }}
+          key: KNet_${{ matrix.framework }}_binCLI_${{ github.sha }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -487,8 +487,8 @@ jobs:
           gh actions-cache delete KNet_net462_bin_${{ github.sha }} --confirm
           gh actions-cache delete KNet_net6.0_bin_${{ github.sha }} --confirm
           gh actions-cache delete KNet_net8.0_bin_${{ github.sha }} --confirm
-          gh actions-cache delete KNetCLI_net462_binCLI_${{ github.sha }} --confirm
-          gh actions-cache delete KNetCLI_net6.0_binCLI_${{ github.sha }} --confirm
-          gh actions-cache delete KNetCLI_net8.0_binCLI_${{ github.sha }} --confirm
+          gh actions-cache delete KNet_net462_binCLI_${{ github.sha }} --confirm
+          gh actions-cache delete KNet_net6.0_binCLI_${{ github.sha }} --confirm
+          gh actions-cache delete KNet_net8.0_binCLI_${{ github.sha }} --confirm
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
