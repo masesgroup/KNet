@@ -184,8 +184,12 @@ jobs:
           name: KNet
           path: .\bin\*nupkg
 
-      - name: Compile tests
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
+      - name: Compile only specific tests (KNet.Serialization.Avro uses Apache.Avro which bind to an old version on Newtonsoft.Json)
+        shell: pwsh
+        run: |
+          Remove-Item .\bin\* -Recurse -Force
+          dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\General\KNetTest\KNetTest.csproj
+          dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\General\KNetTestSerDes\KNetTestSerDes.csproj
         env:
           GITHUB_TEST_PREPARATION: true
 
