@@ -115,7 +115,7 @@ namespace MASES.KNet.Serialization.Protobuf
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                 public override TData DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
-                    if (data == null) return default;
+                    if (data == null || data.Length == 0) return default;
                     return _parser.ParseFrom(data);
                 }
             }
@@ -253,7 +253,7 @@ namespace MASES.KNet.Serialization.Protobuf
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                 public override TData DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
-                    if (data == null) return default;
+                    if (data == null || data.Length == 0) return default;
                     return _parser.ParseFrom(data);
                 }
             }

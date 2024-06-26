@@ -117,7 +117,7 @@ namespace MASES.KNet.Serialization.MessagePack
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                 public override TData DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
-                    if (data == null) return default;
+                    if (data == null || data.Length == 0) return default;
                     using (MemoryStream stream = new MemoryStream(data))
                     {
                         return MessagePackSerializer.Deserialize<TData>(stream, MessagePackSerializerOptions);
@@ -266,7 +266,7 @@ namespace MASES.KNet.Serialization.MessagePack
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                 public override TData DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
-                    if (data == null) return default;
+                    if (data == null || data.Length == 0) return default;
                     using (MemoryStream stream = new MemoryStream(data))
                     {
                         return MessagePackSerializer.Deserialize<TData>(stream, MessagePackSerializerOptions);

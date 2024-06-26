@@ -144,7 +144,7 @@ namespace MASES.KNet.Serialization.Json
                 public override TData DeserializeWithHeaders(string topic, Headers headers, byte[] data)
                 {
                     if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
-                    if (data == null) return default;
+                    if (data == null || data.Length == 0) return default;
 #if NET462_OR_GREATER
                     var jsonStr = Encoding.UTF8.GetString(data);
                     return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
@@ -380,7 +380,7 @@ namespace MASES.KNet.Serialization.Json
                 {
                     if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
 
-                    if (data == null) return default;
+                    if (data == null || data.Length == 0) return default;
 #if NET462_OR_GREATER
                     var jsonStr = Encoding.UTF8.GetString(data);
                     return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
