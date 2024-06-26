@@ -11,6 +11,9 @@
 	  <Compile Include="..\..\Common\SharedKNetCore.cs" Link="SharedKNetCore.cs" />
 	</ItemGroup>
 	<ItemGroup>
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+	<ItemGroup>
 	  <ProjectReference Include="..\..\..\..\src\net\KNet.Serialization.Json\KNet.Serialization.Json.csproj" />
 	</ItemGroup>
 </Project>
