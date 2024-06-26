@@ -475,9 +475,11 @@ jobs:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
       - uses: actions/upload-artifact@v4
+        if: "always()"
         with:
           name: KNet_Server_${{ matrix.framework }}_${{ matrix.os }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
           path: ${{ github.workspace }}/binCLI/logfiles/
+          retention-days: 7
 
   final_cleanup:
     needs: [ execute_KNetTest_linux, execute_KNetTest_other ]
