@@ -437,7 +437,7 @@ jobs:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
       - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-        if: ${{ matrix.framework == 'windows-latest' }}
+        if: ${{ matrix.os == 'windows-latest' }}
         shell: pwsh
         run: |
           New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
