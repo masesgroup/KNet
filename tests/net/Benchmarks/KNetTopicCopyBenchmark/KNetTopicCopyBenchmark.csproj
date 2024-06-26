@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\Common\Common.props" />
+	<Import Project="..\..\Common\Common.props" />
 	<PropertyGroup>
 		<AssemblyName>KNetTopicCopyBenchmark</AssemblyName>
 		<OutputType>Exe</OutputType>

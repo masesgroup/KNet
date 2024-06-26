@@ -41,7 +41,8 @@ namespace MASES.KNetTest
         static bool withBigBigExtraValue = false;
         static bool consoleOutput = System.Diagnostics.Debugger.IsAttached ? true : false;
         static bool runBuffered = false;
-        static bool useCallback = false;
+        static bool useProduceCallback = false;
+        static bool useConsumeCallback = false;
         static bool onlyProduce = false;
         static bool flushWhileSend = false;
         static bool withAck = false;
@@ -54,6 +55,7 @@ namespace MASES.KNetTest
 
         static int NonParallelLimit = 100000;
         static long _firstOffset = -1;
+        static int waitMultiplier = 1;
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
@@ -120,7 +122,8 @@ namespace MASES.KNetTest
                     {
                         if (args[i] == "runBuffered") { runBuffered = true; continue; }
                         if (args[i] == "consoleOutput") { consoleOutput = true; continue; }
-                        if (args[i] == "useCallback") { useCallback = true; continue; }
+                        if (args[i] == "useProduceCallback") { useProduceCallback = true; continue; }
+                        if (args[i] == "useConsumeCallback") { useConsumeCallback = true; continue; }
                         if (args[i] == "withBigExtraValue") { withBigExtraValue = true; NonParallelLimit /= 10; continue; }
                         if (args[i] == "withBigBigExtraValue") { withBigBigExtraValue = true; NonParallelLimit /= 100; continue; }
                         if (args[i] == "onlyProduce") { onlyProduce = true; continue; }
@@ -134,12 +137,12 @@ namespace MASES.KNetTest
                 }
             }
 
-            SerDesRaw<TestType> serializer = new SerDesRaw<TestType>()
+            SerDesRaw<TestType> serializer = new()
             {
                 OnSerialize = (topic, type) => { return Array.Empty<byte>(); }
             };
 
-            SerDesRaw<TestType> deserializer = new SerDesRaw<TestType>()
+            SerDesRaw<TestType> deserializer = new()
             {
                 OnDeserialize = (topic, data) => { return new TestType(0, false, false); }
             };
@@ -305,7 +308,7 @@ namespace MASES.KNetTest
                     {
                         int i = 0;
                         Callback callback = null;
-                        if (useCallback)
+                        if (useProduceCallback)
                         {
                             callback = new Callback()
                             {
@@ -323,7 +326,7 @@ namespace MASES.KNetTest
                             {
                                 watcher.Start();
                                 var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withBigExtraValue, withBigBigExtraValue));
-                                var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
+                                var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
                                 if (!runInParallel && _firstOffset == -1)
                                 {
                                     _firstOffset = result.Get().Offset();
@@ -348,7 +351,7 @@ namespace MASES.KNetTest
                         }
                         finally
                         {
-                            if (useCallback) callback.Dispose();
+                            if (useProduceCallback) callback.Dispose();
                             if (i != 0) Console.WriteLine($"Flushed {i} elements in {watcher.Elapsed}, produce mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / i)} with mean JNI Calls {baseJNICalls / i}");
                         }
                     }
@@ -396,8 +399,9 @@ namespace MASES.KNetTest
                 var valueDeserializer = JsonSerDes.Value<TestType>.NewByteArraySerDes();
                 ConsumerRebalanceListener rebalanceListener = null;
                 KNetConsumer<string, TestType> consumer = null;
+                ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
-                if (useCallback)
+                if (useConsumeCallback)
                 {
                     rebalanceListener = new ConsumerRebalanceListener()
                     {
@@ -408,6 +412,7 @@ namespace MASES.KNetTest
                         OnOnPartitionsAssigned = (o) =>
                         {
                             Console.WriteLine("Assigned: {0}", o.ToString());
+                            manualResetEvent.Set();
                         }
                     };
                 }
@@ -422,7 +427,7 @@ namespace MASES.KNetTest
                     {
                         if (runInParallel)
                         {
-                            if (useCallback) consumer.Subscribe(topics, rebalanceListener);
+                            if (useConsumeCallback) consumer.Subscribe(topics, rebalanceListener);
                             else consumer.Subscribe(topics);
                         }
                         else
@@ -432,23 +437,31 @@ namespace MASES.KNetTest
                             if (_firstOffset != -1)
                             {
                                 consumer.Seek(tp, _firstOffset);
+                                Console.WriteLine("Seek to: {0}", _firstOffset);
                             }
                             else
                             {
                                 consumer.SeekToBeginning(Collections.Singleton(tp));
+                                Console.WriteLine("SeekToBeginning");
                             }
                         }
-                        int cycle = 0;
+                        if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
+                        const int checkTime = 200;
+                        int waitTime = waitMultiplier * 60 * 1000;
+                        Stopwatch swCycleTime = Stopwatch.StartNew();
+                        int emptyCycle = 0;
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
                             watcherTotal.Start();
+                            emptyCycle++;
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
 #else
                             foreach (var item in records)
 #endif
                             {
+                                emptyCycle = 0;
                                 elements++;
                                 watcherTotal.Start();
                                 var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
@@ -457,10 +470,18 @@ namespace MASES.KNetTest
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
                             }
-                            cycle++;
-                            if (elements >= 0 && cycle == 60 * 5)
+                            bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
+                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
+                            if (elapsedTimeout // exit for elapsed timeout or
+                                || tooManyEmptyCycles) // if we have at least 5 empty cycles after received something
                             {
-                                throw new InvalidOperationException($"Forcibly exit since no {NonParallelLimit} record was received within 1 minute.");
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                if (elements != 0)
+                                {
+                                    Console.WriteLine(str);
+                                    break;
+                                }
+                                else throw new InvalidOperationException(str);
                             }
                         }
                         watcherTotal.Stop();
@@ -515,7 +536,7 @@ namespace MASES.KNetTest
                     {
                         int i = 0;
                         Callback callback = null;
-                        if (useCallback)
+                        if (useProduceCallback)
                         {
                             callback = new Callback()
                             {
@@ -533,7 +554,7 @@ namespace MASES.KNetTest
                             {
                                 watcher.Start();
                                 var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withBigExtraValue, withBigBigExtraValue));
-                                var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
+                                var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
                                 if (!runInParallel && _firstOffset == -1)
                                 {
                                     _firstOffset = result.Get().Offset();
@@ -558,7 +579,7 @@ namespace MASES.KNetTest
                         }
                         finally
                         {
-                            if (useCallback) callback.Dispose();
+                            if (useProduceCallback) callback.Dispose();
                             if (i != 0) Console.WriteLine($"Flushed {i} elements in {watcher.Elapsed}, produce mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / i)} with mean JNI Calls {baseJNICalls / i}");
                         }
                     }
@@ -606,8 +627,9 @@ namespace MASES.KNetTest
                 var valueDeserializer = JsonSerDes.Value<TestType>.NewByteBufferSerDes();
                 ConsumerRebalanceListener rebalanceListener = null;
                 KNetConsumerValueBuffered<string, TestType> consumer = null;
+                ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
-                if (useCallback)
+                if (useConsumeCallback)
                 {
                     rebalanceListener = new ConsumerRebalanceListener()
                     {
@@ -618,6 +640,7 @@ namespace MASES.KNetTest
                         OnOnPartitionsAssigned = (o) =>
                         {
                             Console.WriteLine("Assigned: {0}", o.ToString());
+                            manualResetEvent.Set();
                         }
                     };
                 }
@@ -632,7 +655,7 @@ namespace MASES.KNetTest
                     {
                         if (runInParallel)
                         {
-                            if (useCallback) consumer.Subscribe(topics, rebalanceListener);
+                            if (useConsumeCallback) consumer.Subscribe(topics, rebalanceListener);
                             else consumer.Subscribe(topics);
                         }
                         else
@@ -642,23 +665,31 @@ namespace MASES.KNetTest
                             if (_firstOffset != -1)
                             {
                                 consumer.Seek(tp, _firstOffset);
+                                Console.WriteLine("Seek to: {0}", _firstOffset);
                             }
                             else
                             {
                                 consumer.SeekToBeginning(Collections.Singleton(tp));
+                                Console.WriteLine("SeekToBeginning");
                             }
                         }
-                        int cycle = 0;
+                        if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
+                        const int checkTime = 200;
+                        int waitTime = waitMultiplier * 60 * 1000;
+                        Stopwatch swCycleTime = Stopwatch.StartNew();
+                        int emptyCycle = 0;
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
                             watcherTotal.Start();
+                            emptyCycle++;
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
 #else
                             foreach (var item in records)
 #endif
                             {
+                                emptyCycle = 0;
                                 elements++;
                                 watcherTotal.Start();
                                 var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
@@ -667,10 +698,18 @@ namespace MASES.KNetTest
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
                             }
-                            cycle++;
-                            if (elements >= 0 && cycle == 60 * 5)
+                            bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
+                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
+                            if (elapsedTimeout // exit for elapsed timeout or
+                                || tooManyEmptyCycles) // if we have at least 5 empty cycles after received something
                             {
-                                throw new InvalidOperationException($"Forcibly exit since no {NonParallelLimit} record was received within 1 minute.");
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                if (elements != 0)
+                                {
+                                    Console.WriteLine(str);
+                                    break;
+                                }
+                                else throw new InvalidOperationException(str);
                             }
                         }
                         watcherTotal.Stop();

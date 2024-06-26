@@ -27,6 +27,14 @@ namespace MASES.KNet.TestCommon
         {
             ApplicationJarRootPath = Const.DefaultJarsPath;
             CreateGlobalInstance();
+            if (GlobalInstance == null)
+            {
+                throw new InvalidOperationException("Failed to create GlobalInstance");
+            }
+            if (JCOBridge.C2JBridge.JCOBridge.Global == null)
+            {
+                throw new InvalidOperationException("JCOBridge.C2JBridge.JCOBridge.Global is null!!!");
+            }
         }
 
         public static int ManageException(System.Exception e)

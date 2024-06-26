@@ -18,23 +18,30 @@
 
 using MASES.KNet.Serialization;
 using MASES.KNet.TestCommon;
+using System;
 using System.Linq;
 
 namespace MASES.KNetTestAdmin
 {
     class Program
     {
-        const string theServer = "localhost:9092";
-        const string theTopic = "myTopicAdmin";
-
-        static string serverToUse = theServer;
-        static string topicToUse = theTopic;
-
         static void Main(string[] args)
         {
-            SharedKNetCore.Create();
-            var appArgs = SharedKNetCore.FilteredArgs;
+            try
+            {
+                SharedKNetCore.Create();
 
+                ExecuteTests(); // call tests outside Main so KNetSerialization static initialization happens later and JCOBridge.Global is ready
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                Environment.ExitCode = 1;
+            }
+        }
+
+        static void ExecuteTests()
+        {
             byte[] bb, bb1;
 
             bb = KNetSerialization.SerializeBoolean(false, "test", false);
