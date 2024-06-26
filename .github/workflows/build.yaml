@@ -206,42 +206,42 @@ jobs:
         with:
           enableCrossOsArchive: true
           path: ./bin/net462/
-          key: KNet_net462_bin_${{ github.sha }}
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net462_bin_${{ github.sha }}
           
       - name: Save KNet net6.0 bin in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./bin/net6.0/
-          key: KNet_net6.0_bin_${{ github.sha }}
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net6.0_bin_${{ github.sha }}
           
       - name: Save KNet net8.0 bin in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./bin/net8.0/
-          key: KNet_net8.0_bin_${{ github.sha }}
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net8.0_bin_${{ github.sha }}
 
       - name: Save KNet net462 binCLI in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./binCLI/net462/
-          key: KNet_net462_binCLI_${{ github.sha }}
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net462_binCLI_${{ github.sha }}
           
       - name: Save KNet net6.0 binCLI in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./binCLI/net6.0/
-          key: KNet_net6.0_binCLI_${{ github.sha }}
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net6.0_binCLI_${{ github.sha }}
           
       - name: Save KNet net8.0 binCLI in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./binCLI/net8.0/
-          key: KNet_net8.0_binCLI_${{ github.sha }}
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net8.0_binCLI_${{ github.sha }}
 
   build_container_knettest:
     needs: check_changes
@@ -345,7 +345,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/${{ matrix.framework }}/
-          key: KNet_${{ matrix.framework }}_bin_${{ github.sha }}
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
  
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -364,21 +364,7 @@ jobs:
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
- 
-      # Following shall be disabled since not supported from GitHub
-      #
-      #- name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-      #  if: ${{ matrix.os == 'windows-latest' && matrix.framework != 'net462' }}
-      #  run: dotnet .\bin\${{ matrix.framework }}\KNetTest.dll localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
-      #  env:
-      #    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      #    
-      #- name: Executing KNetTest on Windows with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-      #  if: ${{ matrix.os == 'windows-latest' && matrix.framework == 'net462' }}
-      #  run: .\bin\${{ matrix.framework }}\KNetTest.exe localhost:9092 randomizeTopicName ${{ matrix.buffered }} ${{ matrix.extraValue }}
-      #  env:
-      #    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      
+
   execute_KNetTest_other:
     needs: [build_windows]
     strategy:
@@ -410,7 +396,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/${{ matrix.framework }}/
-          key: KNet_${{ matrix.framework }}_bin_${{ github.sha }}
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
 
       - name: Restore KNetCLI ${{ matrix.framework }} binCLI from cache
         uses: actions/cache/restore@v4
@@ -418,7 +404,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./binCLI/${{ matrix.framework }}/
-          key: KNet_${{ matrix.framework }}_binCLI_${{ github.sha }}
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_binCLI_${{ github.sha }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -435,18 +421,6 @@ jobs:
           Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}/logfiles/PWSH_kafka_out.log -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll', 'kafkastart', '-LogPath', '${{ github.workspace }}/logfiles/', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j.properties', '${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties' )
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-
-     # - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-     #   if: ${{ matrix.os == 'windows-latest' }}
-     #   shell: cmd
-     #   run: |
-     #     mkdir ${{ github.workspace }}\logfiles
-     #     START /B ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe zookeeperstart -LogPath ${{ github.workspace }}\logfiles\ -Log4JConfiguration ${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties ${{ github.workspace }}\bin\${{ matrix.framework }}\zookeeper.properties
-     #     START /B ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe kafkastart -LogPath ${{ github.workspace }}\logfiles\ -Log4JConfiguration ${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties ${{ github.workspace }}\bin\${{ matrix.framework }}\server.properties
-     #   #  Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_zookeeper_err.log -RSO ${{ github.workspace }}\logfiles\PWSH_zookeeper_out.log -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'zookeeperstart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties', '${{ github.workspace }}\bin\${{ matrix.framework }}\zookeeper.properties' )
-     #   #  Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}\logfiles\PWSH_kafka_out.log -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties', '${{ github.workspace }}\bin\${{ matrix.framework }}\server.properties' )
-     #   env:
-     #     JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
       - name: Executing KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
@@ -503,7 +477,7 @@ jobs:
         run: |
           gh extension install actions/gh-actions-cache
           echo "Fetching list of cache key"
-          cacheKeysForPR=$(gh actions-cache list --key KNet )
+          cacheKeysForPR=$(gh actions-cache list --key KNet_${{ github.run_number }}_${{ github.run_attempt }} )
           ## Setting this to not fail the workflow while deleting cache keys.
           set +e
           echo "Deleting caches..."
