@@ -55,7 +55,7 @@ namespace MASES.KNetTest
 
         static int NonParallelLimit = 100000;
         static long _firstOffset = -1;
-        static int waitMultiplier = 5;
+        static int waitMultiplier = 1;
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
@@ -449,16 +449,19 @@ namespace MASES.KNetTest
                         const int checkTime = 200;
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
+                        int emptyCycle = 0;
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
                             watcherTotal.Start();
+                            emptyCycle++;
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
 #else
                             foreach (var item in records)
 #endif
                             {
+                                emptyCycle = 0;
                                 elements++;
                                 watcherTotal.Start();
                                 var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
@@ -467,7 +470,8 @@ namespace MASES.KNetTest
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
                             }
-                            if (!runInParallel && swCycleTime.ElapsedMilliseconds > waitTime)
+                            if ((!runInParallel && swCycleTime.ElapsedMilliseconds > waitTime) // elapsed timeout or
+                                || (elements != 0 && emptyCycle > 5)) // if we have at least 5 empty cycle exit
                             {
                                 var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements}";
                                 if (elements != 0)
@@ -671,16 +675,19 @@ namespace MASES.KNetTest
                         const int checkTime = 200;
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
+                        int emptyCycle = 0;
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
                             watcherTotal.Start();
+                            emptyCycle++;
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
 #else
                             foreach (var item in records)
 #endif
                             {
+                                emptyCycle = 0;
                                 elements++;
                                 watcherTotal.Start();
                                 var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
@@ -689,7 +696,8 @@ namespace MASES.KNetTest
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
                             }
-                            if (!runInParallel && swCycleTime.ElapsedMilliseconds > waitTime)
+                            if ((!runInParallel && swCycleTime.ElapsedMilliseconds > waitTime) // elapsed timeout or
+                                || (elements != 0 && emptyCycle > 5)) // if we have at least 5 empty cycle after received something
                             {
                                 var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements}";
                                 if (elements != 0)
