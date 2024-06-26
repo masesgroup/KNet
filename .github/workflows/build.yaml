@@ -456,7 +456,7 @@ jobs:
           
       - name: Clear caches
         run: |
-          gh actions-cache delete KNet_bin_${{ github.sha }}
-          gh actions-cache delete KNetCLI_bin_${{ github.sha }}
+          gh actions-cache delete KNet_bin_${{ github.sha }} --confirm
+          gh actions-cache delete KNetCLI_bin_${{ github.sha }} --confirm
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
