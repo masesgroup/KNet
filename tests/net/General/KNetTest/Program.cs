@@ -470,10 +470,12 @@ namespace MASES.KNetTest
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
                             }
-                            if ((!runInParallel && swCycleTime.ElapsedMilliseconds > waitTime) // elapsed timeout or
-                                || (elements != 0 && emptyCycle > 5)) // if we have at least 5 empty cycle exit
+                            bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
+                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
+                            if (elapsedTimeout // exit for elapsed timeout or
+                                || tooManyEmptyCycles) // if we have at least 5 empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements}";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -696,10 +698,12 @@ namespace MASES.KNetTest
                                 if (consoleOutput) Console.WriteLine(str);
                                 watcher.Stop();
                             }
-                            if ((!runInParallel && swCycleTime.ElapsedMilliseconds > waitTime) // elapsed timeout or
-                                || (elements != 0 && emptyCycle > 5)) // if we have at least 5 empty cycle after received something
+                            bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
+                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
+                            if (elapsedTimeout // exit for elapsed timeout or
+                                || tooManyEmptyCycles) // if we have at least 5 empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements}";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
