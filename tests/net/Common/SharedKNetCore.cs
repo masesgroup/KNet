@@ -36,16 +36,7 @@ namespace MASES.KNet.TestCommon
                 throw new InvalidOperationException("JCOBridge.C2JBridge.JCOBridge.Global is null!!!");
             }
         }
-#if NET462_OR_GREATER
-        public override bool Globalize
-        {
-            get
-            {
-                Console.WriteLine($"Globalize was {base.Globalize}, set to true");
-                return true;
-            }
-        }
-#endif
+
         public static int ManageException(System.Exception e)
         {
             int retCode = 0;
