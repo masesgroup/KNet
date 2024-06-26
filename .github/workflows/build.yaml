@@ -437,3 +437,21 @@ jobs:
         run: ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTestSerDes.exe
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+
+  final_cleanup:
+    needs: [ execute_KNetTest_linux, execute_KNetTest_other ]
+    if: "always()"
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Install GH extension
+        run: gh extension install actions/gh-actions-cache
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Clear caches
+        run: |
+          gh actions-cache delete KNet_bin_${{ github.sha }}
+          gh actions-cache delete KNetCLI_bin_${{ github.sha }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
