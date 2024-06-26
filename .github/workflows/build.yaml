@@ -191,9 +191,15 @@ jobs:
 
       - name: Prepare configuration files
         run: |
-          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\zookeeper.properties -Force
-          Copy-Item src\container\config_container\server.properties -Destination bin\server.properties -Force
-          Copy-Item src\container\config_container\log4j.properties -Destination bin\log4j.properties -Force
+          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net462\zookeeper.properties -Force
+          Copy-Item src\container\config_container\server.properties -Destination bin\net462\server.properties -Force
+          Copy-Item src\container\config_container\log4j.properties -Destination bin\net462\log4j.properties -Force
+          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net6.0\zookeeper.properties -Force
+          Copy-Item src\container\config_container\server.properties -Destination bin\net6.0\server.properties -Force
+          Copy-Item src\container\config_container\log4j.properties -Destination bin\net6.0\log4j.properties -Force
+          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net8.0\zookeeper.properties -Force
+          Copy-Item src\container\config_container\server.properties -Destination bin\net8.0\server.properties -Force
+          Copy-Item src\container\config_container\log4j.properties -Destination bin\net8.0\log4j.properties -Force
 
       - name: Save KNet net462 bin in cache
         uses: actions/cache/save@v4
@@ -424,8 +430,8 @@ jobs:
         if: ${{ matrix.os != 'windows-latest' }}
         shell: pwsh
         run: |
-          Start-Process -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll', 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/zookeeper.properties' )
-          Start-Process -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll', 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/server.properties' )
+          Start-Process -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll', 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j.properties', '${{ github.workspace }}/bin/${{ matrix.framework }}/zookeeper.properties' )
+          Start-Process -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll', 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j.properties', '${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties' )
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
@@ -433,8 +439,8 @@ jobs:
         if: ${{ matrix.os == 'windows-latest' }}
         shell: pwsh
         run: |
-          Start-Process -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/zookeeper.properties' )
-          Start-Process -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/log4j.properties', '${{ github.workspace }}/bin/server.properties' )
+          Start-Process -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'zookeeperstart', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j.properties', '${{ github.workspace }}/bin/${{ matrix.framework }}/zookeeper.properties' )
+          Start-Process -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'kafkastart', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j.properties', '${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties' )
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
