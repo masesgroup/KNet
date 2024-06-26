@@ -475,9 +475,9 @@ jobs:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
       - uses: actions/upload-artifact@v4
-        if: "always()"
+        if: failure()
         with:
-          name: KNet_Server_${{ matrix.framework }}_${{ matrix.os }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          name: KNet_Server_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}_${{ matrix.buffered }}_${{ matrix.extraValue }}
           path: ${{ github.workspace }}/logfiles/
           retention-days: 7
 
