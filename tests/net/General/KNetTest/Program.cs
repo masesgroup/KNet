@@ -234,7 +234,9 @@ namespace MASES.KNetTest
                 topic.Configs(map);
                 *********/
                 topic = topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
-                                                                 .WithDeleteRetentionMs(100)
+                                                                 .WithDeleteRetentionMs(Environment.GetEnvironmentVariable("GITHUB_ACTIONS") != null // try to avoid the activation of log cleaner in windows within wotkflow
+                                                                                        && Environment.OSVersion.Platform != PlatformID.Unix ? 86400000 
+                                                                                                                                             : 100)
                                                                  .WithMinCleanableDirtyRatio(0.01)
                                                                  .WithMaxMessageBytes(100 * 1024 * 1024)
                                                                  .WithSegmentMs(100));
