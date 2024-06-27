@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\Common\Common.props" />
+	<PropertyGroup>
+		<AssemblyName>KNetStreamsTest</AssemblyName>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>MASES.KNetStreamsTest</RootNamespace>
+		<Title>KNetStreamsTest - a test tool for KNet Streams SDK</Title>
+		<Description>KNetStreamsTest - a test tool for KNet Streams SDK</Description>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Include="..\..\Common\SharedKNetCore.cs" Link="SharedKNetCore.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\..\src\net\KNet.Serialization.Json\KNet.Serialization.Json.csproj" />
+	</ItemGroup>
+</Project>
