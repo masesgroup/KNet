@@ -5,10 +5,9 @@ name: CI_DOCKER
 # Controls when the action will run. Triggers the workflow on release published or release edited request
 # events but only for the master branch
 on:
-  workflow_run:
-    workflows: ["CI_RELEASE"]
+  release:
     types: 
-      - completed
+      - published
   workflow_dispatch:
 
 jobs:
