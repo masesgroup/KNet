@@ -14,7 +14,8 @@ RUN dotnet publish ./KNetCLI/KNetCLI.csproj /p:NoWarn="0108%3B1030%3B0618" --fra
 RUN dotnet publish ./KNetConnect/KNetConnect.csproj /p:NoWarn="0108%3B1030%3B0618" --framework net8.0 -c Release -o out -a $TARGETARCH
 
 # Build runtime image
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/runtime:8.0-jammy
+FROM mcr.microsoft.com/dotnet/runtime:8.0-jammy
+ARG TARGETARCH
 
 LABEL org.opencontainers.image.authors='https://github.com/masesgroup', \
       org.opencontainers.image.url='https://knet.masesgroup.com' \
@@ -34,7 +35,7 @@ ADD ./src/container/config_container /app/config_container
 ADD ./src/container/config_container/kraft /app/config_container/kraft
 ADD ./src/container/KNetRun.sh /app
 
-ENV JCOBRIDGE_JVMPath=/usr/lib/jvm/java-17-openjdk-amd64/lib/server/libjvm.so
+ENV JCOBRIDGE_JVMPath=/usr/lib/jvm/java-17-openjdk-$TARGETARCH/lib/server/libjvm.so
 ENV JCOBRIDGE_LicensePath=
 
 WORKDIR /app
