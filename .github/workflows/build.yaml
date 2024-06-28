@@ -199,7 +199,7 @@ jobs:
           path: ./binCLI/net8.0/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net8.0_binCLI_${{ github.sha }}
 
-  build_container_knettest:
+  build_container_knet:
     needs: check_changes
     if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
     runs-on: ubuntu-latest
@@ -268,7 +268,7 @@ jobs:
           sbom: true
           
   execute_tests_linux:
-    needs: [build_windows, build_container_knettest]
+    needs: [build_windows, build_container_knet]
     services:
       kafka:
         # Private registry image
