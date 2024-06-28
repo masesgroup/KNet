@@ -55,54 +55,6 @@ jobs:
       - name: Get run_build_windows
         run: echo "The selected run_build_windows is ${{ steps.check_files.outputs.run_build_windows }}"
 
-  build_container_linux:
-    needs: check_changes
-    if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
-    runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:    
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: '1'
-          submodules: 'true'
-
-      - name: Pre compile
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src/net/KNet/KNet.csproj
-        
-      - name: Set up Apache Maven Central
-        uses: actions/setup-java@v4
-        with: # running setup-java again overwrites the settings.xml
-          distribution: temurin
-          java-version: 11
-          cache: 'maven'
-          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
-          server-username: MAVEN_USERNAME # env variable for username in deploy
-          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
-          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
-          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
-
-      - name: Create Jars
-        run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
-        env:
-          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
-          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
-          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
-        
-      - name: Build KNet Docker Image
-        run: docker build -t knet -f ./src/container/DockerfileKNet.linux .
-
-      - name: Save Docker Image
-        run: docker image save -o knet.linux.tar knet
-        
-      - name: Compress KNet Docker Image
-        run: gzip knet.linux.tar
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Docker Images
-          path: ./*.tar.gz
-
   # Now run "build_windows"
   build_windows:
     needs: check_changes
@@ -301,7 +253,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/${{ github.repository_owner }}/knettest
+            ghcr.io/${{ github.repository_owner }}/knet
 
       - name: Build and push
         uses: docker/build-push-action@v6
@@ -312,13 +264,15 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-  execute_KNetTest_linux:
+          provenance: true
+          sbom: true
+          
+  execute_tests_linux:
     needs: [build_windows, build_container_knettest]
     services:
       kafka:
         # Private registry image
-        image: ghcr.io/${{ github.repository_owner }}/knettest:${{ github.ref_name }}
+        image: ghcr.io/${{ github.repository_owner }}/knet:${{ github.ref_name }}
         credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
@@ -369,7 +323,7 @@ jobs:
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
-  execute_KNetTest_other:
+  execute_tests_other:
     needs: [build_windows]
     strategy:
       fail-fast: false
@@ -467,7 +421,7 @@ jobs:
           retention-days: 7
 
   final_cleanup:
-    needs: [ execute_KNetTest_linux, execute_KNetTest_other ]
+    needs: [ execute_tests_linux, execute_tests_other ]
     if: "always()"
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
