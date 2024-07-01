@@ -31,7 +31,7 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(java.lang.String,org.apache.kafka.streams.StreamsConfig,java.util.Properties)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(java.lang.String,org.apache.kafka.streams.StreamsConfig,java.util.Properties)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="StreamsConfigBuilder"/></param>
@@ -42,7 +42,7 @@ namespace MASES.KNet.Streams
             _factory = arg1;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(org.apache.kafka.streams.StreamsConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(org.apache.kafka.streams.StreamsConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="StreamsConfigBuilder"/></param>
         public TopologyConfig(StreamsConfigBuilder arg0)
@@ -72,47 +72,47 @@ namespace MASES.KNet.Streams
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#eosEnabled"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#eosEnabled"/>
         /// </summary>
         public bool EosEnabled => _inner.eosEnabled;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#maxBufferedSize"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#maxBufferedSize"/>
         /// </summary>
         public int MaxBufferedSize => _inner.maxBufferedSize;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#storeType"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#storeType"/>
         /// </summary>
         public string StoreType => _inner.storeType;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#topologyName"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#topologyName"/>
         /// </summary>
         public string TopologyName => _inner.topologyName;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#deserializationExceptionHandlerSupplier"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#deserializationExceptionHandlerSupplier"/>
         /// </summary>
         public Java.Util.Function.Supplier DeserializationExceptionHandlerSupplier => _inner.deserializationExceptionHandlerSupplier;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#timestampExtractorSupplier"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#timestampExtractorSupplier"/>
         /// </summary>
         public Java.Util.Function.Supplier TimestampExtractorSupplier => _inner.timestampExtractorSupplier;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#topologyOverrides"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#topologyOverrides"/>
         /// </summary>
         public Java.Util.Properties TopologyOverrides => _inner.topologyOverrides;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#cacheSize"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#cacheSize"/>
         /// </summary>
         public long CacheSize => _inner.cacheSize;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#maxTaskIdleMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#maxTaskIdleMs"/>
         /// </summary>
         public long MaxTaskIdleMs => _inner.maxTaskIdleMs;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#taskTimeoutMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#taskTimeoutMs"/>
         /// </summary>
         public long TaskTimeoutMs => _inner.taskTimeoutMs;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#applicationConfigs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#applicationConfigs"/>
         /// </summary>
         public Org.Apache.Kafka.Streams.StreamsConfig ApplicationConfigs => _inner.applicationConfigs;
 
@@ -120,15 +120,15 @@ namespace MASES.KNet.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#getTaskConfig--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#getTaskConfig--"/> 
         /// </summary>
         public Org.Apache.Kafka.Streams.TopologyConfig.TaskConfig TaskConfig => _inner.GetTaskConfig;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#isNamedTopology--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#isNamedTopology--"/>
         /// </summary>
         public bool IsNamedTopology => _inner.IsNamedTopology();
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/TopologyConfig.html#parseStoreType--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/TopologyConfig.html#parseStoreType--"/>
         /// </summary>
         public Org.Apache.Kafka.Streams.State.DslStoreSuppliers ResolveDslStoreSuppliers { get { var opt = _inner.ResolveDslStoreSuppliers(); return opt.IsPresent() ? opt.Get() : null; } }
 

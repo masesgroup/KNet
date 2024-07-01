@@ -38,7 +38,7 @@ namespace MASES.KNet.Streams.Processor
         ISerDes<K, TJVMK> _kSerializer = null;
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
         /// <remarks>If <see cref="StreamPartitionerNoValue{K, TJVMK}.OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<string, K, int, System.Collections.Generic.ICollection<int?>> OnPartitions { get; set; } = null;
@@ -72,7 +72,7 @@ namespace MASES.KNet.Streams.Processor
             return Optional<Set<Integer>>.Of(result);
         }
         /// <summary>
-        /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
+        /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
         /// <param name="arg0">The topic name this record is sent to</param>
         /// <param name="arg1">The key of the record</param>
