@@ -38,7 +38,7 @@ namespace MASES.KNet.Streams.State
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all--"/>
         /// </summary>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public virtual KeyValueIterator<K, V, TJVMK, TJVMV> All => new(Factory, Store.All());
+        public virtual KeyValueIterator<K, V, TJVMK, TJVMV> All() => new(Factory, Store.All());
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range-java.lang.Object-java.lang.Object-"/>
         /// </summary>

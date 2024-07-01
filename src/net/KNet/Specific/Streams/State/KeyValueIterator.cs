@@ -101,7 +101,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new KeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                            JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>> (obj),
+                                                            JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>>(obj),
                                                             _keySerDes,
                                                             _valueSerDes,
                                                             false);

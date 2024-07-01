@@ -33,7 +33,7 @@ namespace MASES.KNet.Streams.State
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all--"/>
         /// </summary>
         /// <returns><see cref="TimestampedWindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public virtual TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> All => new TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV>(Factory, Store.All());
+        public virtual TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> All() => new TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV>(Factory, Store.All());
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-"/>
         /// </summary>
