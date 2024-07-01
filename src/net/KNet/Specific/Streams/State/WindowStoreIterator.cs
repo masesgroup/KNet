@@ -44,7 +44,7 @@ namespace MASES.KNet.Streams.State
         public static implicit operator KeyValueIterator<long, V, Java.Lang.Long, TJVMV>(WindowStoreIterator<V, TJVMV> t) => new KeyValueIterator<long, V, Java.Lang.Long, TJVMV>(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, TJVMV>>());
 
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#close--"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/state/KeyValueIterator.html#close--"/>
         /// </summary>
         public void Close()
         {

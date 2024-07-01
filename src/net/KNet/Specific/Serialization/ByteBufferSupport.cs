@@ -57,7 +57,7 @@ namespace MASES.KNet.Serialization
 
         #region ByteBufferSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.1/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html"/>
+        /// KNet implementaion of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.0/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html"/>
         /// </summary>
         public partial class ByteBufferSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Nio.ByteBuffer>
         {

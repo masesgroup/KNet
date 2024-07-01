@@ -63,7 +63,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
         public new System.Func<ValueMapperWithKey<K, V, VR, TJVMK, TJVMV, TJVMVR>, VR> OnApply { get; set; } = null;
@@ -87,7 +87,7 @@ namespace MASES.KNet.Streams.Kstream
             return _vrSerializer.Serialize(null, res);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <returns><typeparamref name="VR"/></returns>
         public virtual VR Apply()
@@ -128,7 +128,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<VR, TJVMVR> _vrSerializer = null;
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
         public new System.Func<EnumerableValueMapperWithKey<K, V, VR, TJVMK, TJVMV, TJVMVR>, IEnumerable<VR>> OnApply { get; set; } = null;
@@ -153,7 +153,7 @@ namespace MASES.KNet.Streams.Kstream
             return result;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <returns><typeparamref name="VR"/></returns>
         public new virtual IEnumerable<VR> Apply()
