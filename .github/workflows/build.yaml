@@ -285,9 +285,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'ubuntu-latest' ] #, 'macos-latest', 'macos-13' , 'windows-latest' ]
+        os: [ 'ubuntu-latest' ] #, 'macos-latest', 'macos-13' , 'windows-latest' ] # not available services in this runners, checks done in execute_tests_other
         framework: [ 'net6.0', 'net8.0' ]
-        jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle'] #removed  to reduce matrix size
+        jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
@@ -346,7 +346,7 @@ jobs:
       matrix:
         os: [ 'macos-latest', 'macos-13' , 'windows-latest' ]
         framework: [ 'net462', 'net6.0', 'net8.0' ]
-        jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle'] #removed  to reduce matrix size
+        jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
           - os: macos-latest
