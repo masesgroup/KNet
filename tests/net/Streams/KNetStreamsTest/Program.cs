@@ -145,6 +145,8 @@ namespace MASES.KNetTestKNetStreams
             string storageId = $"Table_{_topicName}"; ;
             _storageId =  System.Diagnostics.Process.GetCurrentProcess().ProcessName + "-" + storageId;
 
+
+
             lock (_managedEntities)
             {
                 if (!_managedEntities.ContainsKey(_entityType))

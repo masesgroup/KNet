@@ -36,23 +36,6 @@ namespace MASES.KNetCompactedReplicatorTest
         static string topicToUse = theTopic;
         static readonly ManualResetEvent resetEvent = new(false);
 
-        public class TestType
-        {
-            public TestType(int i)
-            {
-                name = description = value = i.ToString();
-            }
-
-            public string name;
-            public string description;
-            public string value;
-
-            public override string ToString()
-            {
-                return $"name {name} - description {description} - value {value}";
-            }
-        }
-
         static void Main(string[] args)
         {
             SharedKNetCore.Create();
@@ -117,7 +100,7 @@ namespace MASES.KNetCompactedReplicatorTest
 
                 for (int i = 0; i < length; i++)
                 {
-                    replicator[i] = new TestType(i);
+                    replicator[i] = new TestType(i, false, false);
                 }
 
                 replicator.SyncWait();
@@ -146,7 +129,7 @@ namespace MASES.KNetCompactedReplicatorTest
 
                 for (int i = 0; i < length; i++)
                 {
-                    replicator[i] = new TestType(i);
+                    replicator[i] = new TestType(i, false, false);
                 }
 
                 replicator.SyncWait();
