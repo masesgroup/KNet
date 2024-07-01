@@ -137,16 +137,6 @@ namespace MASES.KNetTest
                 }
             }
 
-            SerDesRaw<TestType> serializer = new()
-            {
-                OnSerialize = (topic, type) => { return Array.Empty<byte>(); }
-            };
-
-            SerDesRaw<TestType> deserializer = new()
-            {
-                OnDeserialize = (topic, data) => { return new TestType(0, false, false); }
-            };
-
             if (randomizeTopicName)
             {
                 topicToUse += "-" + Guid.NewGuid().ToString();

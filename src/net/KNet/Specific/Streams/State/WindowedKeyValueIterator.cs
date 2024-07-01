@@ -122,7 +122,7 @@ namespace MASES.KNet.Streams.State
         ISerDes<V, TJVMV> _valueSerDes = null;
 
         internal WindowedKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> iterator)
-            :base(factory)
+            : base(factory)
         {
             _iterator = iterator;
         }
@@ -143,18 +143,15 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()"/> 
         /// </summary>
-        public bool HasNext => _iterator.HasNext();
+        public bool HasNext() => _iterator.HasNext();
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#next()"/> 
         /// </summary>
-        public WindowedKeyValue<K, V, TJVMK, TJVMV> Next
+        public WindowedKeyValue<K, V, TJVMK, TJVMV> Next()
         {
-            get
-            {
-                IGenericSerDesFactory factory = Factory;
-                _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
-                return new WindowedKeyValue<K, V, TJVMK, TJVMV>(factory, _iterator.Next(), _valueSerDes, false);
-            }
+            IGenericSerDesFactory factory = Factory;
+            _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
+            return new WindowedKeyValue<K, V, TJVMK, TJVMV>(factory, _iterator.Next(), _valueSerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
@@ -178,13 +175,10 @@ namespace MASES.KNet.Streams.State
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey--"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
-        public Windowed<K, TJVMK> PeekNextKey
+        public Windowed<K, TJVMK> PeekNextKey()
         {
-            get
-            {
-                var kk = _iterator.PeekNextKey();
-                return new Windowed<K, TJVMK>(Factory, kk);
-            }
+            var kk = _iterator.PeekNextKey();
+            return new Windowed<K, TJVMK>(Factory, kk);
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#close--"/>
