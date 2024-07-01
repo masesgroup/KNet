@@ -170,7 +170,7 @@ namespace MASES.KNet.Streams.State
             return GetEnumerator(false) as IEnumerator<TimestampedKeyValue<K, V, TJVMK, TJVMV>>;
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey--"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey--"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public K PeekNextKey()
@@ -180,7 +180,7 @@ namespace MASES.KNet.Streams.State
             return _keySerDes.Deserialize(null, kk);
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/state/KeyValueIterator.html#close--"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/state/KeyValueIterator.html#close--"/>
         /// </summary>
         public void Close()
         {

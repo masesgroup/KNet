@@ -57,7 +57,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#as-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Repartitioned.html#as-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Repartitioned{K, V, TJVMK, TJVMV}"/></returns>
@@ -67,7 +67,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Repartitioned<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#numberOfPartitions-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Repartitioned.html#numberOfPartitions-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Repartitioned{K, V, TJVMK, TJVMV}"/></returns>
@@ -77,7 +77,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Repartitioned<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#streamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Repartitioned.html#streamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
         /// <param name="arg0"><see cref="StreamPartitioner{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Repartitioned{K, V, TJVMK, TJVMV}"/></returns>
@@ -87,7 +87,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Repartitioned<K, V, TJVMK, TJVMV>(cons, arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Repartitioned.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
@@ -102,7 +102,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Repartitioned.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <returns><see cref="Repartitioned{K, V, TJVMK, TJVMV}"/></returns>
@@ -112,7 +112,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#withNumberOfPartitions-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Repartitioned.html#withNumberOfPartitions-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Repartitioned{K, V, TJVMK, TJVMV}"/></returns>
@@ -122,7 +122,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#withStreamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Repartitioned.html#withStreamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
         /// <param name="arg0"><see cref="StreamPartitioner{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Repartitioned{K, V, TJVMK, TJVMV}"/></returns>
@@ -134,7 +134,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.1/org/apache/kafka/streams/kstream/Repartitioned.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Repartitioned.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{V, TJVMV}"/></param>
         /// <returns><see cref="Repartitioned{K, V, TJVMK, TJVMV}"/></returns>
