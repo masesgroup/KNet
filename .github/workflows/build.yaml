@@ -137,7 +137,7 @@ jobs:
           Copy-Item .\src\net\KNetPS\MASES.KNetPS.psd1 -Destination .\MASES.KNetPS\MASES.KNetPS.psd1 -Force
           Copy-Item .\src\net\KNetPS\MASES.KNetPS.psm1 -Destination .\MASES.KNetPS\MASES.KNetPS.psm1 -Force
         shell: pwsh
-     
+    
       - name: Create PowerShell package
         run: |
           $env:DOTNET_CLI_UI_LANGUAGE="en_US"
