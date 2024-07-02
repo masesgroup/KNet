@@ -52,9 +52,9 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return  new KeyValue<K, V, TJVMK, TJVMV>(factory,
-                                                             JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>> (obj),
-                                                             keySerDes, valueSerDes, true);
+                    return new KeyValue<K, V, TJVMK, TJVMV>(factory,
+                                                            JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>>(obj),
+                                                            keySerDes, valueSerDes, true);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
