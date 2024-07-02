@@ -303,12 +303,14 @@ jobs:
           path: ./bin/${{ matrix.framework }}/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
  
-      - name: Set up JDK distribution
+      - name: Set up JRE distribution
         uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
- 
+          java-package: jre
+          check-latest: true
+
       - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName
@@ -378,11 +380,13 @@ jobs:
           path: ./binCLI/${{ matrix.framework }}/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_binCLI_${{ github.sha }}
 
-      - name: Set up JDK distribution
+      - name: Set up JRE distribution
         uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
+          java-package: jre
+          check-latest: true
 
       - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
