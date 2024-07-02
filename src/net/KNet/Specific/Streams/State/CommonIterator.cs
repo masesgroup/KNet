@@ -63,24 +63,38 @@ namespace MASES.KNet.Streams.State
         /// <inheritdoc/>
         public IEnumerator<TIteratorType> GetEnumerator()
         {
-            return GetEnumerator(false) as IEnumerator<TIteratorType>;
+            return GetEnumerator(false, UsePrefetch) as IEnumerator<TIteratorType>;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
            return GetEnumerator();
         }
+
         /// <inheritdoc/>
         public IAsyncEnumerator<TIteratorType> GetAsyncEnumerator(CancellationToken cancellationToken = default)
         {
-            return GetEnumerator(true, cancellationToken) as IAsyncEnumerator<TIteratorType>;
+            return GetEnumerator(true, UsePrefetch, cancellationToken) as IAsyncEnumerator<TIteratorType>;
         }
+
+        /// <summary>
+        /// Returns an <see cref="IEnumerator{E}"/> of <typeparamref name="TIteratorType"/>
+        /// </summary>
+        /// <param name="usePrefetch"><see langword="true"/> to return an <see cref="IEnumerator{T}"/> making preparation of <typeparamref name="TIteratorType"/> in parallel</param>
+        /// <returns>An <see cref="IEnumerator{T}"/> of <typeparamref name="TIteratorType"/></returns>
+        /// <remarks><paramref name="usePrefetch"/> is not considered with .NET 6 and .NET Framework</remarks>
+        public IEnumerator<TIteratorType> ToIEnumerator(bool usePrefetch = true)
+        {
+            return GetEnumerator(false, usePrefetch) as IEnumerator<TIteratorType>;
+        }
+
         /// <summary>
         /// Internally gets the <see cref="IEnumerable{T}"/> or <see cref="IAsyncEnumerable{T}"/>
         /// </summary>
-        /// <param name="isAsync">If requesting an <see cref="IAsyncEnumerator{T}"/></param>
+        /// <param name="isAsync"><see langword="true"/> if requesting an <see cref="IAsyncEnumerator{T}"/></param>
+        /// <param name="usePrefetch"><see langword="true"/> if requesting prefetch behavior</param>
         /// <param name="cancellationToken">The <see cref="CancellationToken"/> to be used in <see cref="IAsyncEnumerator{T}"/></param>
         /// <returns>An <see cref="IEnumerable{T}"/> or <see cref="IAsyncEnumerable{T}"/></returns>
-        protected abstract object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default);
+        protected abstract object GetEnumerator(bool isAsync, bool usePrefetch, CancellationToken cancellationToken = default);
     }
 }

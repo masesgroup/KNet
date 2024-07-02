@@ -128,12 +128,12 @@ namespace MASES.KNet.Streams.State
         }
 
         /// <inheritdoc/>
-        protected sealed override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
+        protected sealed override object GetEnumerator(bool isAsync, bool usePrefetch, CancellationToken cancellationToken = default)
         {
             IGenericSerDesFactory factory = Factory;
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
 #if NET7_0_OR_GREATER
-            if (UsePrefetch)
+            if (usePrefetch)
             {
                 return new PrefetchableLocalEnumerator(factory, _iterator.BridgeInstance, _valueSerDes, isAsync, cancellationToken);
             }
@@ -160,17 +160,6 @@ namespace MASES.KNet.Streams.State
         public void Remove()
         {
             _iterator.Remove();
-        }
-        /// <summary>
-        /// Returns an <see cref="IEnumerator{E}"/> of <see cref="WindowedKeyValue{K, V, TJVMK, TJVMV}"/>
-        /// </summary>
-        /// <param name="usePrefetch"><see langword="true"/> to return an <see cref="IEnumerator{T}"/> making preparation of <see cref="WindowedKeyValue{K, V, TJVMK, TJVMV}"/> in parallel</param>
-        /// <returns>An <see cref="IEnumerator{T}"/> of <see cref="WindowedKeyValue{K, V, TJVMK, TJVMV}"/></returns>
-        /// <remarks><paramref name="usePrefetch"/> is not considered with .NET 6 and .NET Framework</remarks>
-        public IEnumerator<WindowedKeyValue<K, V, TJVMK, TJVMV>> ToIEnumerator(bool usePrefetch = true)
-        {
-            UsePrefetch = usePrefetch;
-            return GetEnumerator(false) as IEnumerator<WindowedKeyValue<K, V, TJVMK, TJVMV>>;
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey--"/>
