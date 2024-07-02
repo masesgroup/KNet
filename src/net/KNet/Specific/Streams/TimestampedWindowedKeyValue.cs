@@ -31,14 +31,14 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public sealed class TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _valueInner;
+        readonly KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _valueInner;
         Windowed<K, TJVMK> _key = null;
         ValueAndTimestamp<V, TJVMV> _value = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         internal TimestampedWindowedKeyValue(IGenericSerDesFactory factory,
-                                                 Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value)
+                                             KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value)
         {
             _factory = factory;
             _valueInner = value;
@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                _key ??= new Windowed<K, TJVMK>(_factory, _valueInner.key);
+                _key ??= new Windowed<K, TJVMK>(_factory, _valueInner.Key);
                 return _key;
             }
         }
@@ -62,7 +62,7 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                _value ??= new ValueAndTimestamp<V, TJVMV>(_factory, _valueInner.value);
+                _value ??= new ValueAndTimestamp<V, TJVMV>(_factory, _valueInner.Value);
                 return _value;
             }
         }

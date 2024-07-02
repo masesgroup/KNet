@@ -53,8 +53,8 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new WindowedKeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                                  JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
-                                                                  valueSerDes, true);
+                                                                    new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(obj),
+                                                                    valueSerDes, true);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -98,8 +98,8 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new WindowedKeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                                  JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
-                                                                  _valueSerDes, false);
+                                                                    new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(obj),
+                                                                    _valueSerDes, false);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -151,7 +151,8 @@ namespace MASES.KNet.Streams.State
         {
             IGenericSerDesFactory factory = Factory;
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
-            return new WindowedKeyValue<K, V, TJVMK, TJVMV>(factory, _iterator.Next(), _valueSerDes, false);
+            var kv = _iterator.Next();
+            return new WindowedKeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(kv.BridgeInstance), _valueSerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>

@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(factory, JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(obj));
+                    return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(obj));
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -90,7 +90,7 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(_factory, JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(obj));
+                    return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(_factory, new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(obj));
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -136,7 +136,12 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#next()"/> 
         /// </summary>
-        public TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> Next() => new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(Factory, _iterator.Next());
+        public TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> Next()
+        {
+            var kv = _iterator.Next();
+            var kvs = new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(kv.BridgeInstance);
+            return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(Factory, kvs);
+        }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
         /// </summary>

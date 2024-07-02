@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new KeyValue<K, V, TJVMK, TJVMV>(factory,
-                                                            JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>>(obj),
+                                                            new KeyValueSupport<TJVMK, TJVMV>(obj),
                                                             keySerDes, valueSerDes, true);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
@@ -101,7 +101,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new KeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                            JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>>(obj),
+                                                            new KeyValueSupport<TJVMK, TJVMV>(obj),
                                                             _keySerDes,
                                                             _valueSerDes,
                                                             false);
@@ -160,7 +160,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
-            return new KeyValue<K, V, TJVMK, TJVMV>(factory, _iterator.Next(), _keySerDes, _valueSerDes, false);
+            var kv = _iterator.Next();
+            return new KeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<TJVMK, TJVMV>(kv.BridgeInstance), _keySerDes, _valueSerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
