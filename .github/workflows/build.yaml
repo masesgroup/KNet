@@ -76,8 +76,9 @@ jobs:
           submodules: 'true'
 
       - uses: actions/download-artifact@v4
+        continue-on-error: true
         with:
-          name: JNet
+          name: JNetNuGet
           github-token: ${{ secrets.GITHUB_TOKEN }} # token with actions:read permissions on target repo
           repository: masesgroup/JNet
           path: ./JNetNuGet
