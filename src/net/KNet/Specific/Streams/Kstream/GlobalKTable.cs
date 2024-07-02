@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.Kstream
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV>(GlobalKTable<K, V, TJVMK, TJVMV> t) => t._inner;
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName--"/>
         /// </summary>
         /// <returns><see cref="string"/></returns>
         public string QueryableStoreName => _inner.QueryableStoreName();
