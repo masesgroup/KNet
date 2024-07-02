@@ -48,7 +48,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#as-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#as-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
@@ -58,7 +58,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Joined<K, V, VO, TJVMK, TJVMV, TJVMVO>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#keySerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#keySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
@@ -68,7 +68,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Joined<K, V, VO, TJVMK, TJVMV, TJVMVO>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#otherValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{VO, TJVMVO}"/></param>
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
@@ -78,7 +78,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Joined<K, V, VO, TJVMK, TJVMV, TJVMVO>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#valueSerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#valueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{V, TJVMV}"/></param>
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
@@ -88,7 +88,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Joined<K, V, VO, TJVMK, TJVMV, TJVMVO>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
@@ -102,7 +102,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Joined<K, V, VO, TJVMK, TJVMV, TJVMVO>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
@@ -115,7 +115,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Joined<K, V, VO, TJVMK, TJVMV, TJVMVO>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
@@ -131,12 +131,12 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#gracePeriod--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#gracePeriod--"/>
         /// </summary>
         /// <returns><see cref="System.TimeSpan"/></returns>
         public System.TimeSpan GracePeriod => TimeSpan.FromMilliseconds(_inner.GracePeriod().ToMillis());
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#withGracePeriod-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withGracePeriod-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="System.TimeSpan"/></param>
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
@@ -146,7 +146,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
@@ -156,7 +156,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#withOtherValueSerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withOtherValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{VO, TJVMVO}"/></param>
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
@@ -166,7 +166,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.0/org/apache/kafka/streams/kstream/Joined.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{V, TJVMV}"/></param>
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
