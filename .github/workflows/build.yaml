@@ -303,12 +303,11 @@ jobs:
           path: ./bin/${{ matrix.framework }}/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
  
-      - name: Set up JRE distribution
+      - name: Set up JDK distribution
         uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
-          java-package: jre
           check-latest: true
 
       - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
@@ -380,12 +379,11 @@ jobs:
           path: ./binCLI/${{ matrix.framework }}/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_binCLI_${{ github.sha }}
 
-      - name: Set up JRE distribution
+      - name: Set up JDK distribution
         uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
-          java-package: jre
           check-latest: true
 
       - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
