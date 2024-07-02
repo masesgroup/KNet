@@ -75,6 +75,20 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
+      - uses: actions/download-artifact@v4
+        with:
+          name: JNet
+          github-token: ${{ secrets.GITHUB_TOKEN }} # token with actions:read permissions on target repo
+          repository: masesgroup/JNet
+          path: ./JNetNuGet
+
+      - name: List NuGet packages downloaded
+        shell: cmd
+        run: dir .\JNetNuGet\*nupkg
+
+      - name: Add local repo
+        run: dotnet nuget add source --name local "${{ github.workspace }}\JNetNuGet\"
+
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
         env:
