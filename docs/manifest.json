@@ -1514,6 +1514,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Streams.KeyValueSupport-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Streams.KeyValueSupport-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Streams.Kstream.Aggregator-3.yml",
       "output": {
         ".html": {
@@ -5544,10 +5554,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Clients.MetadataCache.yml",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.MetadataSnapshot.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Clients.MetadataCache.html"
+          "relative_path": "api/Org.Apache.Kafka.Clients.MetadataSnapshot.html"
         }
       },
       "version": ""
@@ -12234,6 +12244,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Connect.Mirror.CheckpointStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Connect.Mirror.CheckpointStore.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Connect.Mirror.ConfigPropertyFilter.yml",
       "output": {
         ".html": {
@@ -12588,6 +12608,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Connect.Mirror.OffsetSync.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Connect.Mirror.OffsetSyncStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Connect.Mirror.OffsetSyncStore.html"
         }
       },
       "version": ""
