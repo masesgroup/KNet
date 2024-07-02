@@ -29,7 +29,7 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public sealed class KeyValue<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> _inner = null;
+        readonly KeyValueSupport<TJVMK, TJVMV> _inner = null;
         K _key;
         bool _keyStored;
         V _value;
@@ -40,10 +40,10 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         internal KeyValue(IGenericSerDesFactory factory,
-                              Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> value,
-                              ISerDes<K, TJVMK> keySerDes,
-                              ISerDes<V, TJVMV> valueSerDes,
-                              bool fromPrefetched)
+                          KeyValueSupport<TJVMK, TJVMV> value,
+                          ISerDes<K, TJVMK> keySerDes,
+                          ISerDes<V, TJVMV> valueSerDes,
+                          bool fromPrefetched)
         {
             _factory = factory;
             _inner = value;
@@ -52,10 +52,10 @@ namespace MASES.KNet.Streams
             if (fromPrefetched)
             {
                 _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                _key = _keySerDes.Deserialize(null, _inner.key);
+                _key = _keySerDes.Deserialize(null, _inner.Key);
                 _keyStored = true;
                 _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
-                _value = _valueSerDes.Deserialize(null, _inner.value);
+                _value = _valueSerDes.Deserialize(null, _inner.Value);
                 _valueStored = true;
             }
         }
@@ -70,7 +70,7 @@ namespace MASES.KNet.Streams
                 if (!_keyStored)
                 {
                     _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                    _key = _keySerDes.Deserialize(null, _inner.key);
+                    _key = _keySerDes.Deserialize(null, _inner.Key);
                     _keyStored = true;
                 }
                 return _key;
@@ -86,7 +86,7 @@ namespace MASES.KNet.Streams
                 if (!_valueStored)
                 {
                     _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
-                    _value = _valueSerDes.Deserialize(null, _inner.value);
+                    _value = _valueSerDes.Deserialize(null, _inner.Value);
                     _valueStored = true;
                 }
                 return _value;

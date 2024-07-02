@@ -61,53 +61,6 @@ namespace MASES.KNetTest
         static string topicToUse = theTopic;
         static readonly ManualResetEvent resetEvent = new(false);
 
-        public class TestType
-        {
-            static byte[] _bigExtraValue = null;
-            static byte[] _bigBigExtraValue = null;
-            static TestType()
-            {
-                _bigExtraValue = new byte[100000];
-                for (int i = 0; i < _bigExtraValue.LongLength; i++)
-                {
-                    _bigExtraValue[i] = (byte)(i % byte.MaxValue);
-                }
-                _bigBigExtraValue = new byte[1000000];
-                for (int i = 0; i < _bigBigExtraValue.LongLength; i++)
-                {
-                    _bigBigExtraValue[i] = (byte)(i % byte.MaxValue);
-                }
-            }
-
-            public TestType()
-            {
-
-            }
-
-            public TestType(int i, bool withBigExtraValue, bool bigBigExtraValue)
-            {
-                name = description = value = i.ToString();
-                if (withBigExtraValue)
-                {
-                    extraValue = _bigExtraValue;
-                }
-                else if (bigBigExtraValue)
-                {
-                    extraValue = _bigBigExtraValue;
-                }
-            }
-
-            public string name { get; set; }
-            public string description { get; set; }
-            public string value { get; set; }
-            public byte[] extraValue { get; set; }
-
-            public override string ToString()
-            {
-                return $"name {name} - description {description} - value {value}";
-            }
-        }
-
         static void Main(string[] args)
         {
             SharedKNetCore.Create();

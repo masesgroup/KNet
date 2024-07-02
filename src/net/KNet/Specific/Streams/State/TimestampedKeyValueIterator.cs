@@ -52,7 +52,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(factory,
-                                                                       JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(obj),
+                                                                       new KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(obj),
                                                                        keySerDes, true);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
@@ -96,8 +96,8 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                                        JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(obj),
-                                                                        _keySerDes, false);
+                                                                       new KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(obj),
+                                                                       _keySerDes, false);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -126,12 +126,12 @@ namespace MASES.KNet.Streams.State
         }
 
         /// <inheritdoc/>
-        protected sealed override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
+        protected sealed override object GetEnumerator(bool isAsync, bool usePrefetch, CancellationToken cancellationToken = default)
         {
             IGenericSerDesFactory factory = Factory;
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
 #if NET7_0_OR_GREATER
-            if (UsePrefetch)
+            if (usePrefetch)
             {
                 return new PrefetchableLocalEnumerator(factory, _iterator.BridgeInstance, _keySerDes, isAsync, cancellationToken);
             }
@@ -149,7 +149,8 @@ namespace MASES.KNet.Streams.State
         {
             IGenericSerDesFactory factory = Factory;
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
-            return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(factory, _iterator.Next(), _keySerDes, false);
+            var kv = _iterator.Next();
+            return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(kv.BridgeInstance), _keySerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
@@ -157,17 +158,6 @@ namespace MASES.KNet.Streams.State
         public void Remove()
         {
             _iterator.Remove();
-        }
-        /// <summary>
-        /// Returns an <see cref="IEnumerator{E}"/> of <see cref="TimestampedKeyValue{K, V, TJVMK, TJVMV}"/>
-        /// </summary>
-        /// <param name="usePrefetch"><see langword="true"/> to return an <see cref="IEnumerator{T}"/> making preparation of <see cref="TimestampedKeyValue{K, V, TJVMK, TJVMV}"/> in parallel</param>
-        /// <returns>An <see cref="IEnumerator{T}"/> of <see cref="TimestampedKeyValue{K, V, TJVMK, TJVMV}"/></returns>
-        /// <remarks><paramref name="usePrefetch"/> is not considered with .NET 6 and .NET Framework</remarks>
-        public IEnumerator<TimestampedKeyValue<K, V, TJVMK, TJVMV>> ToIEnumerator(bool usePrefetch = true)
-        {
-            UsePrefetch = usePrefetch;
-            return GetEnumerator(false) as IEnumerator<TimestampedKeyValue<K, V, TJVMK, TJVMV>>;
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey--"/>

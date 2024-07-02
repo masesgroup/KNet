@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(factory, JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(obj));
+                    return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(obj));
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -90,7 +90,7 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(_factory, JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(obj));
+                    return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(_factory, new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(obj));
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -118,11 +118,11 @@ namespace MASES.KNet.Streams.State
         }
 
         /// <inheritdoc/>
-        protected sealed override object GetEnumerator(bool isAsync, CancellationToken cancellationToken = default)
+        protected sealed override object GetEnumerator(bool isAsync, bool usePrefetch, CancellationToken cancellationToken = default)
         {
             IGenericSerDesFactory factory = Factory;
 #if NET7_0_OR_GREATER
-            if (UsePrefetch)
+            if (usePrefetch)
             {
                 return new PrefetchableLocalEnumerator(factory, _iterator.BridgeInstance, isAsync, cancellationToken);
             }
@@ -136,24 +136,18 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#next()"/> 
         /// </summary>
-        public TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> Next() => new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(Factory, _iterator.Next());
+        public TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> Next()
+        {
+            var kv = _iterator.Next();
+            var kvs = new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(kv.BridgeInstance);
+            return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(Factory, kvs);
+        }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
         /// </summary>
         public void Remove()
         {
             _iterator.Remove();
-        }
-        /// <summary>
-        /// Returns an <see cref="IEnumerator{E}"/> of <see cref="TimestampedWindowedKeyValue{K, V, TJVMK, TJVMV}"/>
-        /// </summary>
-        /// <param name="usePrefetch"><see langword="true"/> to return an <see cref="IEnumerator{T}"/> making preparation of <see cref="TimestampedWindowedKeyValue{K, V, TJVMK, TJVMV}"/> in parallel</param>
-        /// <returns>An <see cref="IEnumerator{T}"/> of <see cref="TimestampedWindowedKeyValue{K, V, TJVMK, TJVMV}"/></returns>
-        /// <remarks><paramref name="usePrefetch"/> is not considered with .NET 6 and .NET Framework</remarks>
-        public IEnumerator<TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>> ToIEnumerator(bool usePrefetch = true)
-        {
-            UsePrefetch = usePrefetch;
-            return GetEnumerator(false) as IEnumerator<TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>>;
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey--"/>

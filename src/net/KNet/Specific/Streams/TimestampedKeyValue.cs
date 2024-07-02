@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public sealed class TimestampedKeyValue<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _inner = null;
+        readonly KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _inner = null;
 
         K _key;
         bool _keyStored = false;
@@ -40,9 +40,9 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
 
         internal TimestampedKeyValue(IGenericSerDesFactory factory,
-                                         Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value,
-                                         ISerDes<K, TJVMK> keySerDes,
-                                         bool fromPrefetched)
+                                     KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value,
+                                     ISerDes<K, TJVMK> keySerDes,
+                                     bool fromPrefetched)
         {
             _factory = factory;
             _inner = value;
@@ -50,7 +50,7 @@ namespace MASES.KNet.Streams
             if (fromPrefetched)
             {
                 _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                _key = _keySerDes.Deserialize(null, _inner.key);
+                _key = _keySerDes.Deserialize(null, _inner.Key);
                 _keyStored = true;
             }
         }
@@ -65,7 +65,7 @@ namespace MASES.KNet.Streams
                 if (!_keyStored)
                 {
                     _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                    _key = _keySerDes.Deserialize(null, _inner.key);
+                    _key = _keySerDes.Deserialize(null, _inner.Key);
                     _keyStored = true;
                 }
                 return _key;
@@ -78,7 +78,7 @@ namespace MASES.KNet.Streams
         {
             get
             {
-                _value ??= new ValueAndTimestamp<V, TJVMV>(_factory, _inner.value);
+                _value ??= new ValueAndTimestamp<V, TJVMV>(_factory, _inner.Value);
                 return _value;
             }
         }
