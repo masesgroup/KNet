@@ -82,6 +82,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }} # token with actions:read permissions on target repo
           repository: masesgroup/JNet
           path: ./JNetNuGet
+          run-id: 366
 
       - name: List NuGet packages downloaded
         shell: cmd
