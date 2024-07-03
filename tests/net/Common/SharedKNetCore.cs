@@ -84,7 +84,11 @@ namespace MASES.KNet.TestCommon
         public static int ManageException(System.Exception e)
         {
             int retCode = 0;
-            if (e is ClassNotFoundException cnfe)
+            if (e is TypeInitializationException tie)
+            {
+                return ManageException(tie.InnerException);
+            }
+            else if (e is ClassNotFoundException cnfe)
             {
                 Console.WriteLine($"Failed with {cnfe}, current ClassPath is {SharedKNetCore.GlobalInstance.ClassPath}");
                 retCode = 1;
