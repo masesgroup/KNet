@@ -80,30 +80,9 @@ jobs:
         run: echo "JNET_LAST_RUN=$(curl -sL https://api.github.com/repos/masesgroup/JNet/actions/workflows/build.yaml/runs | jq -r '.workflow_runs[0].id?')" >> $GITHUB_ENV
 
       - name: Download artifact
-        run: gh run download ${{ env.JNET_LAST_RUN }} --name JNetNuGet --repo masesgroup/JNet
+        run: gh run download ${{ env.JNET_LAST_RUN }} --name JNetNuGet --repo masesgroup/JNet --dir JNetNuGet
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: List packages downloaded
-        shell: cmd
-        run: dir .\
-
-      - name: Unzip packages downloaded
-        run: 7z x JNetNuGet.zip
-
-    #  - uses: actions/download-artifact@v4
-    #    continue-on-error: true
-    #    # run: gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /repos/masesgroup/JNet/actions/artifacts/ARTIFACT_ID
-    #    with:
-    #      name: JNetNuGet
-    #      github-token: ${{ secrets.GITHUB_TOKEN }} # token with actions:read permissions on target repo
-    #      repository: masesgroup/JNet
-    #      path: ./JNetNuGet
-    #      run-id: ${{ env.JNET_LAST_RUN }}
-
-      - name: List packages downloaded
-        shell: cmd
-        run: dir .\
 
       - name: List NuGet packages downloaded
         continue-on-error: true
