@@ -8,6 +8,13 @@ on:
   push:
     # only trigger on branches, not on tags
     branches: '**'
+  workflow_dispatch:
+    inputs:
+      UseLastRepositoryBuild:
+        description: 'Use latest NuGet packages from JNet'
+        required: true
+        default: false
+        type: boolean
 
 # This workflow contains two jobs called "check_changes", "build_windows"
 jobs:
@@ -76,10 +83,12 @@ jobs:
           submodules: 'true'
 
       - name: Get last workflow run of JNet
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
         shell: bash
         run: echo "JNET_LAST_RUN=$(curl -sL https://api.github.com/repos/masesgroup/JNet/actions/workflows/build.yaml/runs | jq -r '.workflow_runs[0].id?')" >> $GITHUB_ENV
 
       - name: Download artifact
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
         run: gh run download ${{ env.JNET_LAST_RUN }} --name JNetNuGet --repo masesgroup/JNet --dir JNetNuGet
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -90,7 +99,7 @@ jobs:
         run: dir .\JNetNuGet\*nupkg
 
       - name: Add local repo
-        if: success()
+        if: ${{ success() && inputs.UseLastRepositoryBuild == true }}
         run: dotnet nuget add source --name local "${{ github.workspace }}\JNetNuGet\"
 
       - name: Pre compile
@@ -155,7 +164,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: KNet
+          name: KNetNuGet
           path: .\bin\*nupkg
 
       - name: Compile tests
