@@ -111,7 +111,7 @@ jobs:
         run: dir .\JNetNuGet\*nupkg
 
       - name: Add local repo
-        if: succeded()
+        if: success()
         run: dotnet nuget add source --name local "${{ github.workspace }}\JNetNuGet\"
 
       - name: Pre compile
