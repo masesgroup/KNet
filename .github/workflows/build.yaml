@@ -30,11 +30,13 @@ jobs:
         if: ${{ github.event_name != 'push' }}
         run: echo "run_build_windows=true" >> $GITHUB_OUTPUT
       - name: Create modified file list
+        if: ${{ github.event_name == 'push' }}
         id: get_changed_files
         uses: masesgroup/retrieve-changed-files@v3
         with:
           format: 'csv'
       - name: Check modified file list
+        if: ${{ github.event_name == 'push' }}
         id: check_files
         run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
