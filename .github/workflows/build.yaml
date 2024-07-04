@@ -9,6 +9,10 @@ on:
     # only trigger on branches, not on tags
     branches: '**'
 
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
 # This workflow contains two jobs called "check_changes", "build_windows"
 jobs:
   # Verify if a build is needed

@@ -13,13 +13,21 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - release/**
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ master ]
+    branches:
+      - master
+      - release/**
 # Disabled to avoid error on schedule from check_changes job
 #  schedule:
 #    - cron: '26 23 * * 3'
+
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
 
 jobs:
   # Verify if a check is needed
