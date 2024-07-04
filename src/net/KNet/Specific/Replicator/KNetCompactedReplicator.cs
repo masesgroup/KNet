@@ -535,7 +535,7 @@ namespace MASES.KNet.Replicator
         private AccessRightsType _accessrights = AccessRightsType.ReadWrite;
         private UpdateModeTypes _updateMode = UpdateModeTypes.OnDelivery;
         private Tuple<K, ManualResetEvent> _OnConsumeSyncWaiter = null;
-        private System.Collections.Generic.Dictionary<int, System.Collections.Generic.IList<int>> _consumerAssociatedPartition = new();
+        private Dictionary<int, System.Collections.Generic.IList<int>> _consumerAssociatedPartition = new();
         private ManualResetEvent[] _assignmentWaiters;
         private bool[] _assignmentWaitersStatus;
         private long[] _lastPartitionLags = null;
