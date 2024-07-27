@@ -11,7 +11,7 @@ updates:
       interval: "weekly"
       
   - package-ecosystem: maven
-    directory: "/src/java/knet"
+    directory: "/src/jvm/knet"
     schedule:
       interval: "weekly"
 

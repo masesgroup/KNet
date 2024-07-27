@@ -7,7 +7,7 @@
 		<Title>KNet Core - .NET suite for Apache Kafka</Title>
 		<Description>Core of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
 		<Product>KNet</Product>
-		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
+		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 net8 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNet</PackageId>
 		<PackageReadmeFile>usage.md</PackageReadmeFile>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
