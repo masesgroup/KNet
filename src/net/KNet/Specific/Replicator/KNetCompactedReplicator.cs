@@ -535,7 +535,7 @@ namespace MASES.KNet.Replicator
         private AccessRightsType _accessrights = AccessRightsType.ReadWrite;
         private UpdateModeTypes _updateMode = UpdateModeTypes.OnDelivery;
         private Tuple<K, ManualResetEvent> _OnConsumeSyncWaiter = null;
-        private System.Collections.Generic.Dictionary<int, System.Collections.Generic.IList<int>> _consumerAssociatedPartition = new();
+        private Dictionary<int, System.Collections.Generic.IList<int>> _consumerAssociatedPartition = new();
         private ManualResetEvent[] _assignmentWaiters;
         private bool[] _assignmentWaitersStatus;
         private long[] _lastPartitionLags = null;
@@ -600,7 +600,7 @@ namespace MASES.KNet.Replicator
         public int Partitions { get { return _partitions; } set { CheckStarted(); _partitions = value; } }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.ConsumerInstances"/>
-        public int? ConsumerInstances { get { return _consumerInstances.HasValue ? _consumerInstances.Value : _partitions; } set { CheckStarted(); _consumerInstances = value; } }
+        public int? ConsumerInstances { get { return _consumerInstances ?? _partitions; } set { CheckStarted(); _consumerInstances = value; } }
 
         /// <inheritdoc cref="IKNetCompactedReplicator{K, V, TJVMK, TJVMV}.ReplicationFactor"/>
         public short ReplicationFactor { get { return _replicationFactor; } set { CheckStarted(); _replicationFactor = value; } }
@@ -731,7 +731,7 @@ namespace MASES.KNet.Replicator
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         int ConsumersToAllocate()
         {
-            return ConsumerInstances.HasValue ? ConsumerInstances.Value : Partitions;
+            return ConsumerInstances ?? Partitions;
         }
 
         bool UpdateModeOnDelivery => (UpdateMode & UpdateModeTypes.OnDelivery) == UpdateModeTypes.OnDelivery;
@@ -1094,7 +1094,12 @@ namespace MASES.KNet.Replicator
         bool CheckConsumerSyncState(int index)
         {
             bool lagInSync = true;
-            foreach (var partitionIndex in _consumerAssociatedPartition[index])
+            int[] partitionIndexes;
+            lock (_consumerAssociatedPartition)
+            {
+                partitionIndexes = _consumerAssociatedPartition[index].ToArray();
+            }
+            foreach (var partitionIndex in partitionIndexes)
             {
                 var partitionLag = Interlocked.Read(ref _lastPartitionLags[partitionIndex]);
                 lagInSync &= partitionLag == 0;
@@ -1245,10 +1250,11 @@ namespace MASES.KNet.Replicator
             ValidateStarted();
             Stopwatch watcher = Stopwatch.StartNew();
             bool sync = false;
+            int matrixLength = ConsumersToAllocate();
+            bool[] syncs = new bool[matrixLength];
             while (!sync && watcher.ElapsedMilliseconds < (uint)timeout)
             {
-                bool[] syncs = new bool[ConsumersToAllocate()];
-                for (int i = 0; i < ConsumersToAllocate(); i++)
+                for (int i = 0; i < matrixLength; i++)
                 {
                     syncs[i] = CheckConsumerSyncState(i);
                 }

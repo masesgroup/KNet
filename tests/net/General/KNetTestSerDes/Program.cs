@@ -35,8 +35,7 @@ namespace MASES.KNetTestAdmin
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
-                Environment.ExitCode = 1;
+                Environment.ExitCode = SharedKNetCore.ManageException(e);
             }
         }
 
