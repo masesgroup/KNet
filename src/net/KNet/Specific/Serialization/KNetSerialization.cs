@@ -16,13 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Lang;
-using Java.Nio;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using Org.Apache.Kafka.Common.Errors;
-using Org.Apache.Kafka.Common.Serialization;
-using Org.Apache.Kafka.Common.Utils;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -35,6 +30,44 @@ namespace MASES.KNet.Serialization
     /// </summary>
     public static class KNetSerialization
     {
+        #region Private fields
+        static readonly Org.Apache.Kafka.Common.Serialization.BooleanSerializer _BooleanSerializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.ByteBufferSerializer _ByteBufferSerializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.BytesSerializer _BytesSerializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.DoubleSerializer _DoubleSerializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.FloatSerializer _FloatSerializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.IntegerSerializer _IntSerializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.LongSerializer _LongSerializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.ShortSerializer _ShortSerializer = new();
+
+        static readonly Org.Apache.Kafka.Common.Serialization.BooleanDeserializer _BooleanDeserializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.ByteBufferDeserializer _ByteBufferDeserializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.BytesDeserializer _BytesDeserializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.DoubleDeserializer _DoubleDeserializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.FloatDeserializer _FloatDeserializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.IntegerDeserializer _IntDeserializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.LongDeserializer _LongDeserializer = new();
+        static readonly Org.Apache.Kafka.Common.Serialization.ShortDeserializer _ShortDeserializer = new();
+
+        static bool CheckRevert(byte[] dotnet, byte[] java)
+        {
+            bool main = !dotnet.SequenceEqual(java);
+            if (main)
+            {
+                Array.Reverse(dotnet); // revert and check consistency
+                if (!dotnet.SequenceEqual(java)) throw new InvalidOperationException($"The sequence {BitConverter.ToString(dotnet)} is not equal to {BitConverter.ToString(java)}");
+            }
+            return main;
+        }
+        static readonly bool ShallRevertByteOrderShort = CheckRevert(BitConverter.GetBytes((short)1), _ShortSerializer.Serialize("", Java.Lang.Short.ValueOf(1)));
+        static readonly bool ShallRevertByteOrderInt = CheckRevert(BitConverter.GetBytes(1), _IntSerializer.Serialize("", Java.Lang.Integer.ValueOf(1)));
+        static readonly bool ShallRevertByteOrderLong = CheckRevert(BitConverter.GetBytes((long)1), _LongSerializer.Serialize("", Java.Lang.Long.ValueOf(1)));
+        static readonly bool ShallRevertByteOrderFloat = CheckRevert(BitConverter.GetBytes(1.1F), _FloatSerializer.Serialize("", Java.Lang.Float.ValueOf(1.1F)));
+        static readonly bool ShallRevertByteOrderDouble = CheckRevert(BitConverter.GetBytes(1.1), _DoubleSerializer.Serialize("", Java.Lang.Double.ValueOf(1.1)));
+
+        #endregion
+
+        #region Public properties
         /// <summary>
         /// Identity the type of the key used
         /// </summary>
@@ -42,7 +75,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Identity the type of the key used using a <see cref="Java.Lang.String"/>
         /// </summary>
-        public static readonly Java.Lang.String KeyTypeIdentifierJVM = new Java.Lang.String(KeyTypeIdentifier);
+        public static readonly Java.Lang.String KeyTypeIdentifierJVM = new(KeyTypeIdentifier);
         /// <summary>
         /// Identity the serializer for the key
         /// </summary>
@@ -50,7 +83,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Identity the serializer for the key using a <see cref="Java.Lang.String"/>
         /// </summary>
-        public static readonly Java.Lang.String KeySerializerIdentifierJVM = new Java.Lang.String(KeySerializerIdentifier);
+        public static readonly Java.Lang.String KeySerializerIdentifierJVM = new(KeySerializerIdentifier);
         /// <summary>
         /// Identity the type of the value used
         /// </summary>
@@ -58,7 +91,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Identity the type of the value used using a <see cref="Java.Lang.String"/>
         /// </summary>
-        public static readonly Java.Lang.String ValueTypeIdentifierJVM = new Java.Lang.String(ValueTypeIdentifier);
+        public static readonly Java.Lang.String ValueTypeIdentifierJVM = new(ValueTypeIdentifier);
         /// <summary>
         /// Identity the serializer for the value
         /// </summary>
@@ -66,16 +99,16 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Identity the serializer for the value using a <see cref="Java.Lang.String"/>
         /// </summary>
-        public static readonly Java.Lang.String ValueSerializerIdentifierJVM = new Java.Lang.String(ValueSerializerIdentifier);
+        public static readonly Java.Lang.String ValueSerializerIdentifierJVM = new(ValueSerializerIdentifier);
+
+        #endregion
+
         /// <summary>
         /// Returns the typename with the assembly qualification to help reload better the types
         /// </summary>
         /// <param name="type">The <see cref="Type"/> to be converted</param>
         /// <returns>A string with <see cref="Type.FullName"/> along with <see cref="Assembly.FullName"/></returns>
-        public static string ToAssemblyQualified(this Type type)
-        {
-            return $"{type.FullName}, {type.Assembly.GetName().Name}";
-        }
+        public static string ToAssemblyQualified(this Type type) => $"{type.FullName}, {type.Assembly.GetName().Name}";
 
         /// <summary>
         /// Serializer types
@@ -140,10 +173,8 @@ namespace MASES.KNet.Serialization
         /// </summary>
         /// <typeparam name="TData">The type to check</typeparam>
         /// <returns><see langword="true"/> if managed</returns>
-        public static bool IsInternalManaged<TData>()
-        {
-            return IsInternalManaged(typeof(TData));
-        }
+        public static bool IsInternalManaged<TData>() => IsInternalManaged(typeof(TData));
+
         /// <summary>
         /// Check if a serializer is available for <paramref name="type"/>
         /// </summary>
@@ -151,7 +182,7 @@ namespace MASES.KNet.Serialization
         /// <returns><see langword="true"/> if managed</returns>
         public static bool IsInternalManaged(Type type)
         {
-            if (type == typeof(bool) || type == typeof(byte[]) || type == typeof(ByteBuffer) || type == typeof(Bytes)
+            if (type == typeof(bool) || type == typeof(byte[]) || type == typeof(Java.Nio.ByteBuffer) || type == typeof(Org.Apache.Kafka.Common.Utils.Bytes)
                 || type == typeof(double) || type == typeof(float) || type == typeof(int) || type == typeof(long) || type == typeof(short) || type == typeof(string)
                 || type == typeof(Guid) || type == typeof(void))
             {
@@ -165,10 +196,8 @@ namespace MASES.KNet.Serialization
         /// </summary>
         /// <typeparam name="TData">The type to check</typeparam>
         /// <returns><see langword="true"/> if managed</returns>
-        public static bool IsJVMInternalManaged<TData>()
-        {
-            return IsJVMInternalManaged(typeof(TData));
-        }
+        public static bool IsJVMInternalManaged<TData>() => IsJVMInternalManaged(typeof(TData));
+
         /// <summary>
         /// Check if a JVM serializer is available for <paramref name="type"/>
         /// </summary>
@@ -176,8 +205,8 @@ namespace MASES.KNet.Serialization
         /// <returns><see langword="true"/> if managed</returns>
         public static bool IsJVMInternalManaged(Type type)
         {
-            if (type == typeof(Java.Lang.Boolean) || type == typeof(byte[]) || type == typeof(ByteBuffer) || type == typeof(Bytes)
-                || type == typeof(Java.Lang.Double) || type == typeof(Java.Lang.Float) || type == typeof(Java.Lang.Integer) || type == typeof(Java.Lang.Long) 
+            if (type == typeof(Java.Lang.Boolean) || type == typeof(byte[]) || type == typeof(Java.Nio.ByteBuffer) || type == typeof(Org.Apache.Kafka.Common.Utils.Bytes)
+                || type == typeof(Java.Lang.Double) || type == typeof(Java.Lang.Float) || type == typeof(Java.Lang.Integer) || type == typeof(Java.Lang.Long)
                 || type == typeof(Java.Lang.Short) || type == typeof(Java.Lang.String)
                 || type == typeof(Java.Util.UUID) || type == typeof(Java.Lang.Void))
             {
@@ -191,10 +220,8 @@ namespace MASES.KNet.Serialization
         /// </summary>
         /// <typeparam name="TData">The type to check</typeparam>
         /// <returns><see cref="SerializationType"/></returns>
-        public static SerializationType InternalSerDesType<TData>()
-        {
-            return InternalSerDesType(typeof(TData));
-        }
+        public static SerializationType InternalSerDesType<TData>() => InternalSerDesType(typeof(TData));
+
         /// <summary>
         /// Returns the serializer <see cref="SerializationType"/> for <paramref name="type"/>
         /// </summary>
@@ -204,8 +231,8 @@ namespace MASES.KNet.Serialization
         {
             if (type == typeof(bool)) return SerializationType.Boolean;
             else if (type == typeof(byte[])) return SerializationType.ByteArray;
-            else if (type == typeof(ByteBuffer)) return SerializationType.ByteBuffer;
-            else if (type == typeof(Bytes)) return SerializationType.Bytes;
+            else if (type == typeof(Java.Nio.ByteBuffer)) return SerializationType.ByteBuffer;
+            else if (type == typeof(Org.Apache.Kafka.Common.Utils.Bytes)) return SerializationType.Bytes;
             else if (type == typeof(double)) return SerializationType.Double;
             else if (type == typeof(float)) return SerializationType.Float;
             else if (type == typeof(int)) return SerializationType.Integer;
@@ -223,10 +250,8 @@ namespace MASES.KNet.Serialization
         /// </summary>
         /// <typeparam name="TData">The type to check</typeparam>
         /// <returns><see cref="SerializationType"/></returns>
-        public static SerializationType InternalJVMSerDesType<TData>()
-        {
-            return InternalJVMSerDesType(typeof(TData));
-        }
+        public static SerializationType InternalJVMSerDesType<TData>()=> InternalJVMSerDesType(typeof(TData));
+
         /// <summary>
         /// Returns the JVM serializer <see cref="SerializationType"/> for <paramref name="type"/>
         /// </summary>
@@ -236,8 +261,8 @@ namespace MASES.KNet.Serialization
         {
             if (type == typeof(Java.Lang.Boolean)) return SerializationType.Boolean;
             else if (type == typeof(byte[])) return SerializationType.ByteArray;
-            else if (type == typeof(ByteBuffer)) return SerializationType.ByteBuffer;
-            else if (type == typeof(Bytes)) return SerializationType.Bytes;
+            else if (type == typeof(Java.Nio.ByteBuffer)) return SerializationType.ByteBuffer;
+            else if (type == typeof(Org.Apache.Kafka.Common.Utils.Bytes)) return SerializationType.Bytes;
             else if (type == typeof(Java.Lang.Double)) return SerializationType.Double;
             else if (type == typeof(Java.Lang.Float)) return SerializationType.Float;
             else if (type == typeof(Java.Lang.Integer)) return SerializationType.Integer;
@@ -250,7 +275,6 @@ namespace MASES.KNet.Serialization
             return SerializationType.External;
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.BooleanSerializer _BooleanSerializer = new Org.Apache.Kafka.Common.Serialization.BooleanSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Boolean"/>
         /// </summary>
@@ -268,26 +292,23 @@ namespace MASES.KNet.Serialization
             return data;
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.ByteBufferSerializer _ByteBufferSerializer = new Org.Apache.Kafka.Common.Serialization.ByteBufferSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.ByteBuffer"/>
         /// </summary>
-        public static byte[] SerializeByteBuffer(bool fallbackToKafka, string topic, ByteBuffer data)
+        public static byte[] SerializeByteBuffer(bool fallbackToKafka, string topic, Java.Nio.ByteBuffer data)
         {
             if (fallbackToKafka) return _ByteBufferSerializer.Serialize(topic, data);
             return data.ToArray(true);
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.BytesSerializer _BytesSerializer = new Org.Apache.Kafka.Common.Serialization.BytesSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Bytes"/>
         /// </summary>
-        public static byte[] SerializeBytes(bool fallbackToKafka, string topic, Bytes data)
+        public static byte[] SerializeBytes(bool fallbackToKafka, string topic, Org.Apache.Kafka.Common.Utils.Bytes data)
         {
             return _BytesSerializer.Serialize(topic, data);
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.DoubleSerializer _DoubleSerializer = new Org.Apache.Kafka.Common.Serialization.DoubleSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Double"/>
         /// </summary>
@@ -299,7 +320,6 @@ namespace MASES.KNet.Serialization
             return array;
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.FloatSerializer _FloatSerializer = new Org.Apache.Kafka.Common.Serialization. FloatSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Float"/>
         /// </summary>
@@ -311,7 +331,6 @@ namespace MASES.KNet.Serialization
             return array;
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.IntegerSerializer _IntSerializer = new Org.Apache.Kafka.Common.Serialization.IntegerSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Integer"/>
         /// </summary>
@@ -326,7 +345,6 @@ namespace MASES.KNet.Serialization
             //return new byte[] { (byte)(data >>> 24), (byte)(data >>> 16), (byte)(data >>> 8), ((byte)data) };
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.LongSerializer _LongSerializer = new Org.Apache.Kafka.Common.Serialization.LongSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Long"/>
         /// </summary>
@@ -341,7 +359,6 @@ namespace MASES.KNet.Serialization
             //return new byte[] { (byte)((int)(data >>> 56)), (byte)((int)(data >>> 48)), (byte)((int)(data >>> 40)), (byte)((int)(data >>> 32)), (byte)((int)(data >>> 24)), (byte)((int)(data >>> 16)), (byte)((int)(data >>> 8)), ((byte)data) };
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.ShortSerializer _ShortSerializer = new Org.Apache.Kafka.Common.Serialization.ShortSerializer();
         /// <summary>
         /// Serialize a <see cref="SerializationType.Short"/>
         /// </summary>
@@ -377,7 +394,6 @@ namespace MASES.KNet.Serialization
             return null;
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.BooleanDeserializer _BooleanDeserializer = new Org.Apache.Kafka.Common.Serialization.BooleanDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Boolean"/>
         /// </summary>
@@ -404,27 +420,24 @@ namespace MASES.KNet.Serialization
             return data;
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.ByteBufferDeserializer _ByteBufferDeserializer = new Org.Apache.Kafka.Common.Serialization.ByteBufferDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.ByteBuffer"/>
         /// </summary>
-        public static ByteBuffer DeserializeByteBuffer(bool fallbackToKafka, string topic, byte[] data)
+        public static Java.Nio.ByteBuffer DeserializeByteBuffer(bool fallbackToKafka, string topic, byte[] data)
         {
             if (data == null || data.Length == 0) return default;
-            return JVMBridgeBase.WrapsDirect<ByteBuffer>(_ByteBufferDeserializer.Deserialize(topic, data) as IJavaObject);
+            return JVMBridgeBase.WrapsDirect<Java.Nio.ByteBuffer>(_ByteBufferDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.BytesDeserializer _BytesDeserializer = new Org.Apache.Kafka.Common.Serialization.BytesDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Bytes"/>
         /// </summary>
-        public static Bytes DeserializeBytes(bool fallbackToKafka, string topic, byte[] data)
+        public static Org.Apache.Kafka.Common.Utils.Bytes DeserializeBytes(bool fallbackToKafka, string topic, byte[] data)
         {
             if (data == null || data.Length == 0) return default;
-            return JVMBridgeBase.WrapsDirect<Bytes>(_BytesDeserializer.Deserialize(topic, data) as IJavaObject);
+            return JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Common.Utils.Bytes>(_BytesDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.DoubleDeserializer _DoubleDeserializer = new Org.Apache.Kafka.Common.Serialization.DoubleDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Double"/>
         /// </summary>
@@ -444,7 +457,6 @@ namespace MASES.KNet.Serialization
             return BitConverter.ToDouble(data, 0);
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.FloatDeserializer _FloatDeserializer = new Org.Apache.Kafka.Common.Serialization.FloatDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Float"/>
         /// </summary>
@@ -464,7 +476,6 @@ namespace MASES.KNet.Serialization
             return BitConverter.ToSingle(data, 0);
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.IntegerDeserializer _IntDeserializer = new Org.Apache.Kafka.Common.Serialization.IntegerDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Integer"/>
         /// </summary>
@@ -509,7 +520,6 @@ namespace MASES.KNet.Serialization
             //}
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.LongDeserializer _LongDeserializer = new Org.Apache.Kafka.Common.Serialization.LongDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Long"/>
         /// </summary>
@@ -554,7 +564,6 @@ namespace MASES.KNet.Serialization
             //}
         }
 
-        static readonly Org.Apache.Kafka.Common.Serialization.ShortDeserializer _ShortDeserializer = new Org.Apache.Kafka.Common.Serialization.ShortDeserializer();
         /// <summary>
         /// Deserialize a <see cref="SerializationType.Short"/>
         /// </summary>
@@ -621,19 +630,13 @@ namespace MASES.KNet.Serialization
         {
             if (data != null || data.Length != 0)
             {
-                JVMBridgeException<IllegalArgumentException>.ThrowNew("Data should be null for a VoidDeserializer.");
-                throw new IllegalArgumentException();
+                JVMBridgeException<Java.Lang.IllegalArgumentException>.ThrowNew("Data should be null for a VoidDeserializer.");
+                throw new Java.Lang.IllegalArgumentException();
             }
             else
             {
                 return null;
             }
         }
-
-        static readonly bool ShallRevertByteOrderShort = !SerializeShort(false, "", 1).SequenceEqual(SerializeShort(true, "", 1));
-        static readonly bool ShallRevertByteOrderInt = !SerializeInt(false, "", 1).SequenceEqual(SerializeInt(true, "", 1));
-        static readonly bool ShallRevertByteOrderLong = !SerializeLong(false, "", 1).SequenceEqual(SerializeLong(true, "", 1));
-        static readonly bool ShallRevertByteOrderFloat = !SerializeFloat(false, "", 1.1F).SequenceEqual(SerializeFloat(true, "", 1.1F));
-        static readonly bool ShallRevertByteOrderDouble = !SerializeDouble(false, "", 1.1).SequenceEqual(SerializeDouble(true, "", 1.1));
     }
 }
