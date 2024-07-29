@@ -17,6 +17,11 @@ on:
         required: true
         default: false
         type: boolean
+      ContinueOnLatestJNetReflectorError:
+        description: 'Shall continue execution in case of failure of build from latest unpublished version of JNetReflector'
+        required: true
+        default: false
+        type: boolean
 
 # This workflow contains one job called "build_documentation"
 jobs:
@@ -106,6 +111,7 @@ jobs:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
       - name: Try compilation
+        continue-on-error: ${{ inputs.ContinueOnLatestJNetReflectorError == true }}
         if: ${{ inputs.UseLatestJNetReflector == true }}
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
 
