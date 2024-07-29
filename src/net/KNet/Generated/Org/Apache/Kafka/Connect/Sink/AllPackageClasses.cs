@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 {
     #region ErrantRecordReporter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/ErrantRecordReporter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/ErrantRecordReporter.html"/>
     /// </summary>
     public partial class ErrantRecordReporter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ErrantRecordReporter>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
     #region SinkConnector
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkConnector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkConnector.html"/>
     /// </summary>
     public partial class SinkConnector : Org.Apache.Kafka.Connect.Connector.Connector
     {
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
     #region SinkConnectorContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkConnectorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkConnectorContext.html"/>
     /// </summary>
     public partial class SinkConnectorContext : Org.Apache.Kafka.Connect.Connector.ConnectorContext
     {
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
     #region SinkRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkRecord.html"/>
     /// </summary>
     public partial class SinkRecord : Org.Apache.Kafka.Connect.Connector.ConnectRecord<Org.Apache.Kafka.Connect.Sink.SinkRecord>
     {
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
     #region SinkTask
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTask.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTask.html"/>
     /// </summary>
     public partial class SinkTask : Org.Apache.Kafka.Connect.Connector.Task
     {
@@ -261,7 +261,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
     #region SinkTaskContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTaskContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTaskContext.html"/>
     /// </summary>
     public partial class SinkTaskContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SinkTaskContext>
     {

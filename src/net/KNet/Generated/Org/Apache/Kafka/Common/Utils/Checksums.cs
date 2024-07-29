@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Checksums.html#update-java.util.zip.Checksum-java.nio.ByteBuffer-int-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Checksums.html#update-java.util.zip.Checksum-java.nio.ByteBuffer-int-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Zip.Checksum"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -53,7 +53,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecute(LocalBridgeClazz, "update", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Checksums.html#update-java.util.zip.Checksum-java.nio.ByteBuffer-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Checksums.html#update-java.util.zip.Checksum-java.nio.ByteBuffer-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Zip.Checksum"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecute(LocalBridgeClazz, "update", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Checksums.html#updateInt-java.util.zip.Checksum-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Checksums.html#updateInt-java.util.zip.Checksum-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Zip.Checksum"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecute(LocalBridgeClazz, "updateInt", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Checksums.html#updateLong-java.util.zip.Checksum-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Checksums.html#updateLong-java.util.zip.Checksum-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Zip.Checksum"/></param>
         /// <param name="arg1"><see cref="long"/></param>

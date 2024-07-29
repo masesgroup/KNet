@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
 {
     #region StickyTaskAssignor
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html"/>
     /// </summary>
     public partial class StickyTaskAssignor : Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor
     {

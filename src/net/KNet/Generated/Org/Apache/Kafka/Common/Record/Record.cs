@@ -56,7 +56,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#EMPTY_HEADERS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#EMPTY_HEADERS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Header.Header[] EMPTY_HEADERS { get { if (!_EMPTY_HEADERSReady) { _EMPTY_HEADERSContent = SGetFieldArray<Org.Apache.Kafka.Common.Header.Header>(LocalBridgeClazz, "EMPTY_HEADERS"); _EMPTY_HEADERSReady = true; } return _EMPTY_HEADERSContent; } }
         private static Org.Apache.Kafka.Common.Header.Header[] _EMPTY_HEADERSContent = default;
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#hasKey--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#hasKey--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasKey()
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<bool>("hasKey", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#hasMagic-byte-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#hasMagic-byte-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<bool>("hasMagic", "(B)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#hasTimestampType-org.apache.kafka.common.record.TimestampType-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#hasTimestampType-org.apache.kafka.common.record.TimestampType-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<bool>("hasTimestampType", "(Lorg/apache/kafka/common/record/TimestampType;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#hasValue--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#hasValue--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasValue()
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<bool>("hasValue", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#isCompressed--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#isCompressed--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsCompressed()
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<bool>("isCompressed", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#keySize--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#keySize--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int KeySize()
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<int>("keySize", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#sequence--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#sequence--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Sequence()
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<int>("sequence", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#sizeInBytes--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#sizeInBytes--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int SizeInBytes()
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<int>("sizeInBytes", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#valueSize--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#valueSize--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int ValueSize()
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<int>("valueSize", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#key--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#key--"/>
         /// </summary>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
         public Java.Nio.ByteBuffer Key()
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<Java.Nio.ByteBuffer>("key", "()Ljava/nio/ByteBuffer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#value--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#value--"/>
         /// </summary>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
         public Java.Nio.ByteBuffer Value()
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<Java.Nio.ByteBuffer>("value", "()Ljava/nio/ByteBuffer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#offset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#offset--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Offset()
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<long>("offset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#timestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#timestamp--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Timestamp()
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<long>("timestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#headers--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#headers--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Header"/></returns>
         public Org.Apache.Kafka.Common.Header.Header[] Headers()
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignatureArray<Org.Apache.Kafka.Common.Header.Header>("headers", "()[Lorg/apache/kafka/common/header/Header;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/Record.html#ensureValid--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/Record.html#ensureValid--"/>
         /// </summary>
         public void EnsureValid()
         {

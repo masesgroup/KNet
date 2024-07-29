@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/AbstractLogin.html#login--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/AbstractLogin.html#login--"/>
         /// </summary>
         /// <returns><see cref="Javax.Security.Auth.Login.LoginContext"/></returns>
         /// <exception cref="Javax.Security.Auth.Login.LoginException"/>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             return IExecuteWithSignature<Javax.Security.Auth.Login.LoginContext>("login", "()Ljavax/security/auth/login/LoginContext;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/AbstractLogin.html#subject--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/AbstractLogin.html#subject--"/>
         /// </summary>
         /// <returns><see cref="Javax.Security.Auth.Subject"/></returns>
         public Javax.Security.Auth.Subject Subject()
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             return IExecuteWithSignature<Javax.Security.Auth.Subject>("subject", "()Ljavax/security/auth/Subject;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/AbstractLogin.html#configure-java.util.Map-java.lang.String-javax.security.auth.login.Configuration-org.apache.kafka.common.security.auth.AuthenticateCallbackHandler-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/AbstractLogin.html#configure-java.util.Map-java.lang.String-javax.security.auth.login.Configuration-org.apache.kafka.common.security.auth.AuthenticateCallbackHandler-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -98,14 +98,14 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/AbstractLogin.DefaultLoginCallbackHandler.html#close--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/AbstractLogin.DefaultLoginCallbackHandler.html#close--"/>
             /// </summary>
             public void Close()
             {
                 IExecuteWithSignature("close", "()V");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/AbstractLogin.DefaultLoginCallbackHandler.html#configure-java.util.Map-java.lang.String-java.util.List-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/AbstractLogin.DefaultLoginCallbackHandler.html#configure-java.util.Map-java.lang.String-java.util.List-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
                 IExecute("configure", arg0, arg1, arg2);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/AbstractLogin.DefaultLoginCallbackHandler.html#handle-javax.security.auth.callback.Callback[]-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/AbstractLogin.DefaultLoginCallbackHandler.html#handle-javax.security.auth.callback.Callback[]-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Javax.Security.Auth.Callback.Callback"/></param>
             /// <exception cref="Javax.Security.Auth.Callback.UnsupportedCallbackException"/>

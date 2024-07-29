@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 {
     #region BasicAuthSecurityRestExtension
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.7.1/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.8.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html"/>
     /// </summary>
     public partial class BasicAuthSecurityRestExtension : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BasicAuthSecurityRestExtension>
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 
     #region JaasBasicAuthFilter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.7.1/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.8.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html"/>
     /// </summary>
     public partial class JaasBasicAuthFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JaasBasicAuthFilter>
     {
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         // TODO: complete the class
         #region BasicAuthCallBackHandler
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.7.1/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.BasicAuthCallBackHandler.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.8.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.BasicAuthCallBackHandler.html"/>
         /// </summary>
         public partial class BasicAuthCallBackHandler : Javax.Security.Auth.Callback.CallbackHandler
         {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 
     #region PropertyFileLoginModule
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.7.1/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.8.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html"/>
     /// </summary>
     public partial class PropertyFileLoginModule : Javax.Security.Auth.Spi.LoginModule
     {

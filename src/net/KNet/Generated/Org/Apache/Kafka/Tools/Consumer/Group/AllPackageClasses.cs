@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 {
     #region ConsumerGroupCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/ConsumerGroupCommand.html"/>
     /// </summary>
     public partial class ConsumerGroupCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 
     #region ConsumerGroupCommandOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommandOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/ConsumerGroupCommandOptions.html"/>
     /// </summary>
     public partial class ConsumerGroupCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupCommandOptions>
     {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 
     #region CsvUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.html"/>
     /// </summary>
     public partial class CsvUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CsvUtils>
     {
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
         // TODO: complete the class
         #region CsvRecordNoGroup
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html"/>
         /// </summary>
         public partial class CsvRecordNoGroup : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CsvRecordNoGroup>
         {
@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 
         #region CsvRecordWithGroup
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html"/>
         /// </summary>
         public partial class CsvRecordWithGroup : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CsvRecordWithGroup>
         {

@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
 {
     #region PlainAuthenticateCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html"/>
     /// </summary>
     public partial class PlainAuthenticateCallback : Javax.Security.Auth.Callback.Callback
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
 
     #region PlainLoginModule
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/plain/PlainLoginModule.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/plain/PlainLoginModule.html"/>
     /// </summary>
     public partial class PlainLoginModule : Javax.Security.Auth.Spi.LoginModule
     {

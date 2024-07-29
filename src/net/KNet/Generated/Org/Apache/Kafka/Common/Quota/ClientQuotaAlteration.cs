@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Quota
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/quota/ClientQuotaAlteration.html#org.apache.kafka.common.quota.ClientQuotaAlteration(org.apache.kafka.common.quota.ClientQuotaEntity,java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/quota/ClientQuotaAlteration.html#org.apache.kafka.common.quota.ClientQuotaAlteration(org.apache.kafka.common.quota.ClientQuotaEntity,java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaEntity"/></param>
         /// <param name="arg1"><see cref="Java.Util.Collection"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/quota/ClientQuotaAlteration.html#ops--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/quota/ClientQuotaAlteration.html#ops--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration.Op> Ops()
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Quota
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration.Op>>("ops", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/quota/ClientQuotaAlteration.html#entity--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/quota/ClientQuotaAlteration.html#entity--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaEntity"/></returns>
         public Org.Apache.Kafka.Common.Quota.ClientQuotaEntity Entity()
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Quota
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#org.apache.kafka.common.quota.ClientQuotaAlteration$Op(java.lang.String,java.lang.Double)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#org.apache.kafka.common.quota.ClientQuotaAlteration$Op(java.lang.String,java.lang.Double)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="Java.Lang.Double"/></param>
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Quota
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#value--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#value--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Double"/></returns>
             public Java.Lang.Double Value()
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Quota
                 return IExecuteWithSignature<Java.Lang.Double>("value", "()Ljava/lang/Double;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#key--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#key--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String Key()

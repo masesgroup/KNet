@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region CheckpointStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/CheckpointStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/CheckpointStore.html"/>
     /// </summary>
     public partial class CheckpointStore : Java.Lang.AutoCloseable
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region ConfigPropertyFilter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html"/>
     /// </summary>
     public partial class ConfigPropertyFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigPropertyFilter>
     {
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region DefaultConfigPropertyFilter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/DefaultConfigPropertyFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/DefaultConfigPropertyFilter.html"/>
     /// </summary>
     public partial class DefaultConfigPropertyFilter : Org.Apache.Kafka.Connect.Mirror.ConfigPropertyFilter
     {
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region DefaultGroupFilter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/DefaultGroupFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/DefaultGroupFilter.html"/>
     /// </summary>
     public partial class DefaultGroupFilter : Org.Apache.Kafka.Connect.Mirror.GroupFilter
     {
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region DefaultTopicFilter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html"/>
     /// </summary>
     public partial class DefaultTopicFilter : Org.Apache.Kafka.Connect.Mirror.TopicFilter
     {
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region GroupFilter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/GroupFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/GroupFilter.html"/>
     /// </summary>
     public partial class GroupFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<GroupFilter>
     {
@@ -302,7 +302,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorCheckpointConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorCheckpointConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorCheckpointConfig.html"/>
     /// </summary>
     public partial class MirrorCheckpointConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -347,7 +347,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorCheckpointConnector
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorCheckpointConnector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorCheckpointConnector.html"/>
     /// </summary>
     public partial class MirrorCheckpointConnector : Org.Apache.Kafka.Connect.Source.SourceConnector
     {
@@ -392,7 +392,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorCheckpointTask
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorCheckpointTask.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorCheckpointTask.html"/>
     /// </summary>
     public partial class MirrorCheckpointTask : Org.Apache.Kafka.Connect.Source.SourceTask
     {
@@ -437,7 +437,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorCheckpointTaskConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorCheckpointTaskConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorCheckpointTaskConfig.html"/>
     /// </summary>
     public partial class MirrorCheckpointTaskConfig : Org.Apache.Kafka.Connect.Mirror.MirrorCheckpointConfig
     {
@@ -482,7 +482,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorConnectorConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorConnectorConfig.html"/>
     /// </summary>
     public partial class MirrorConnectorConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -529,7 +529,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorHeartbeatConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html"/>
     /// </summary>
     public partial class MirrorHeartbeatConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -574,7 +574,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorHeartbeatConnector
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorHeartbeatConnector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConnector.html"/>
     /// </summary>
     public partial class MirrorHeartbeatConnector : Org.Apache.Kafka.Connect.Source.SourceConnector
     {
@@ -619,7 +619,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorHeartbeatTask
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorHeartbeatTask.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorHeartbeatTask.html"/>
     /// </summary>
     public partial class MirrorHeartbeatTask : Org.Apache.Kafka.Connect.Source.SourceTask
     {
@@ -664,7 +664,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorHerder
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorHerder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorHerder.html"/>
     /// </summary>
     public partial class MirrorHerder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MirrorHerder>
     {
@@ -709,7 +709,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorMaker
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorMaker.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorMaker.html"/>
     /// </summary>
     public partial class MirrorMaker : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MirrorMaker>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -754,7 +754,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorMakerConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorMakerConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorMakerConfig.html"/>
     /// </summary>
     public partial class MirrorMakerConfig : Org.Apache.Kafka.Common.Config.AbstractConfig
     {
@@ -799,7 +799,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorSourceConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorSourceConfig.html"/>
     /// </summary>
     public partial class MirrorSourceConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -844,7 +844,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorSourceConnector
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorSourceConnector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorSourceConnector.html"/>
     /// </summary>
     public partial class MirrorSourceConnector : Org.Apache.Kafka.Connect.Source.SourceConnector
     {
@@ -889,7 +889,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorSourceTask
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorSourceTask.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorSourceTask.html"/>
     /// </summary>
     public partial class MirrorSourceTask : Org.Apache.Kafka.Connect.Source.SourceTask
     {
@@ -934,7 +934,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorSourceTaskConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorSourceTaskConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorSourceTaskConfig.html"/>
     /// </summary>
     public partial class MirrorSourceTaskConfig : Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig
     {
@@ -979,7 +979,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/MirrorUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/MirrorUtils.html"/>
     /// </summary>
     public partial class MirrorUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MirrorUtils>
     {
@@ -1024,7 +1024,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region OffsetSync
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/OffsetSync.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/OffsetSync.html"/>
     /// </summary>
     public partial class OffsetSync : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetSync>
     {
@@ -1069,7 +1069,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region OffsetSyncStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/OffsetSyncStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html"/>
     /// </summary>
     public partial class OffsetSyncStore : Java.Lang.AutoCloseable
     {
@@ -1114,7 +1114,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region TopicFilter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/TopicFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/TopicFilter.html"/>
     /// </summary>
     public partial class TopicFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicFilter>
     {
@@ -1161,7 +1161,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region Checkpoint
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.7.1/org/apache/kafka/connect/mirror/Checkpoint.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/org/apache/kafka/connect/mirror/Checkpoint.html"/>
     /// </summary>
     public partial class Checkpoint : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Checkpoint>
     {
@@ -1206,7 +1206,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region DefaultReplicationPolicy
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.7.1/org/apache/kafka/connect/mirror/DefaultReplicationPolicy.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/org/apache/kafka/connect/mirror/DefaultReplicationPolicy.html"/>
     /// </summary>
     public partial class DefaultReplicationPolicy : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DefaultReplicationPolicy>
     {
@@ -1251,7 +1251,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region Heartbeat
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.7.1/org/apache/kafka/connect/mirror/Heartbeat.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/org/apache/kafka/connect/mirror/Heartbeat.html"/>
     /// </summary>
     public partial class Heartbeat : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Heartbeat>
     {
@@ -1296,7 +1296,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region IdentityReplicationPolicy
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.7.1/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html"/>
     /// </summary>
     public partial class IdentityReplicationPolicy : Org.Apache.Kafka.Connect.Mirror.DefaultReplicationPolicy
     {
@@ -1341,7 +1341,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorClient
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.7.1/org/apache/kafka/connect/mirror/MirrorClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/org/apache/kafka/connect/mirror/MirrorClient.html"/>
     /// </summary>
     public partial class MirrorClient : Java.Lang.AutoCloseable
     {
@@ -1386,7 +1386,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region MirrorClientConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.7.1/org/apache/kafka/connect/mirror/MirrorClientConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html"/>
     /// </summary>
     public partial class MirrorClientConfig : Org.Apache.Kafka.Common.Config.AbstractConfig
     {
@@ -1431,7 +1431,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region RemoteClusterUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.7.1/org/apache/kafka/connect/mirror/RemoteClusterUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html"/>
     /// </summary>
     public partial class RemoteClusterUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RemoteClusterUtils>
     {
@@ -1476,7 +1476,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region ReplicationPolicy
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.7.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html"/>
     /// </summary>
     public partial class ReplicationPolicy : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicationPolicy>
     {
@@ -1523,7 +1523,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region SourceAndTarget
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.7.1/org/apache/kafka/connect/mirror/SourceAndTarget.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/org/apache/kafka/connect/mirror/SourceAndTarget.html"/>
     /// </summary>
     public partial class SourceAndTarget : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SourceAndTarget>
     {

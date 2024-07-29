@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.html#isDebugEnabled--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html#isDebugEnabled--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public static bool IsDebugEnabled()
@@ -50,7 +50,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "isDebugEnabled", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.html#isTraceEnabled--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html#isTraceEnabled--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public static bool IsTraceEnabled()
@@ -58,7 +58,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "isTraceEnabled", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.html#BrokerDefaultEntityName--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html#BrokerDefaultEntityName--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public static Java.Lang.String BrokerDefaultEntityName()
@@ -66,7 +66,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "BrokerDefaultEntityName", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.html#BrokerLoggerConfigType--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html#BrokerLoggerConfigType--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public static Java.Lang.String BrokerLoggerConfigType()
@@ -74,7 +74,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "BrokerLoggerConfigType", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.html#parseConfigsToBeAdded-kafka.admin.ConfigCommand.ConfigCommandOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html#parseConfigsToBeAdded-kafka.admin.ConfigCommand.ConfigCommandOptions-"/>
         /// </summary>
         /// <param name="opts"><see cref="Kafka.Admin.ConfigCommand.ConfigCommandOptions"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
@@ -83,7 +83,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<Java.Util.Properties>(LocalBridgeClazz, "parseConfigsToBeAdded", "(Lkafka/admin/ConfigCommand$ConfigCommandOptions;)Ljava/util/Properties;", opts);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.html#parseEntity-kafka.admin.ConfigCommand.ConfigCommandOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html#parseEntity-kafka.admin.ConfigCommand.ConfigCommandOptions-"/>
         /// </summary>
         /// <param name="opts"><see cref="Kafka.Admin.ConfigCommand.ConfigCommandOptions"/></param>
         /// <returns><see cref="Kafka.Admin.ConfigCommand.ConfigEntity"/></returns>
@@ -92,7 +92,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<Kafka.Admin.ConfigCommand.ConfigEntity>(LocalBridgeClazz, "parseEntity", "(Lkafka/admin/ConfigCommand$ConfigCommandOptions;)Lkafka/admin/ConfigCommand$ConfigEntity;", opts);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.html#alterConfig-org.apache.kafka.clients.admin.Admin-kafka.admin.ConfigCommand.ConfigCommandOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html#alterConfig-org.apache.kafka.clients.admin.Admin-kafka.admin.ConfigCommand.ConfigCommandOptions-"/>
         /// </summary>
         /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="opts"><see cref="Kafka.Admin.ConfigCommand.ConfigCommandOptions"/></param>
@@ -101,7 +101,7 @@ namespace Kafka.Admin
             SExecute(LocalBridgeClazz, "alterConfig", adminClient, opts);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.html#describeConfig-org.apache.kafka.clients.admin.Admin-kafka.admin.ConfigCommand.ConfigCommandOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html#describeConfig-org.apache.kafka.clients.admin.Admin-kafka.admin.ConfigCommand.ConfigCommandOptions-"/>
         /// </summary>
         /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="opts"><see cref="Kafka.Admin.ConfigCommand.ConfigCommandOptions"/></param>
@@ -110,7 +110,7 @@ namespace Kafka.Admin
             SExecute(LocalBridgeClazz, "describeConfig", adminClient, opts);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html#main-java.lang.String[]-"/>
         /// </summary>
         /// <param name="args"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] args)
@@ -130,7 +130,7 @@ namespace Kafka.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigCommandOptions.html#kafka.admin.ConfigCommand$ConfigCommandOptions(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html#kafka.admin.ConfigCommand$ConfigCommandOptions(java.lang.String[])"/>
             /// </summary>
             /// <param name="args"><see cref="Java.Lang.String"/></param>
             public ConfigCommandOptions(Java.Lang.String[] args)
@@ -154,7 +154,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigCommandOptions.html#nl--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html#nl--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String Nl()
@@ -162,7 +162,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("nl", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigCommandOptions.html#checkArgs--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html#checkArgs--"/>
             /// </summary>
             public void CheckArgs()
             {
@@ -204,7 +204,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigEntity.html#canEqual-java.lang.Object-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigEntity.html#canEqual-java.lang.Object-"/>
             /// </summary>
             /// <param name="x_1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -213,7 +213,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<bool>("canEqual", "(Ljava/lang/Object;)Z", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigEntity.html#productArity--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigEntity.html#productArity--"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int ProductArity()
@@ -221,7 +221,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<int>("productArity", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigEntity.html#productElement-int-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigEntity.html#productElement-int-"/>
             /// </summary>
             /// <param name="x_1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -230,7 +230,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature("productElement", "(I)Ljava/lang/Object;", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigEntity.html#fullSanitizedName--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigEntity.html#fullSanitizedName--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String FullSanitizedName()
@@ -238,7 +238,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("fullSanitizedName", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigEntity.html#productElementName-int-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigEntity.html#productElementName-int-"/>
             /// </summary>
             /// <param name="x_1"><see cref="int"/></param>
             /// <returns><see cref="Java.Lang.String"/></returns>
@@ -247,7 +247,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("productElementName", "(I)Ljava/lang/String;", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigEntity.html#productPrefix--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigEntity.html#productPrefix--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String ProductPrefix()
@@ -255,7 +255,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("productPrefix", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigEntity.html#root--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigEntity.html#root--"/>
             /// </summary>
             /// <returns><see cref="Kafka.Admin.ConfigCommand.Entity"/></returns>
             public Kafka.Admin.ConfigCommand.Entity Root()
@@ -298,7 +298,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.Entity.html#canEqual-java.lang.Object-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.Entity.html#canEqual-java.lang.Object-"/>
             /// </summary>
             /// <param name="x_1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -307,7 +307,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<bool>("canEqual", "(Ljava/lang/Object;)Z", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.Entity.html#productArity--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.Entity.html#productArity--"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int ProductArity()
@@ -315,7 +315,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<int>("productArity", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.Entity.html#productElement-int-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.Entity.html#productElement-int-"/>
             /// </summary>
             /// <param name="x_1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -324,7 +324,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature("productElement", "(I)Ljava/lang/Object;", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.Entity.html#entityPath--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.Entity.html#entityPath--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String EntityPath()
@@ -332,7 +332,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("entityPath", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.Entity.html#entityType--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.Entity.html#entityType--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String EntityType()
@@ -340,7 +340,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("entityType", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.Entity.html#productElementName-int-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.Entity.html#productElementName-int-"/>
             /// </summary>
             /// <param name="x_1"><see cref="int"/></param>
             /// <returns><see cref="Java.Lang.String"/></returns>
@@ -349,7 +349,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("productElementName", "(I)Ljava/lang/String;", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.Entity.html#productPrefix--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.Entity.html#productPrefix--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String ProductPrefix()

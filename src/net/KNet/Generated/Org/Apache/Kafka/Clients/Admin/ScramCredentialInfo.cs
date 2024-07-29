@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ScramCredentialInfo.html#org.apache.kafka.clients.admin.ScramCredentialInfo(org.apache.kafka.clients.admin.ScramMechanism,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html#org.apache.kafka.clients.admin.ScramCredentialInfo(org.apache.kafka.clients.admin.ScramMechanism,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ScramMechanism"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ScramCredentialInfo.html#iterations--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html#iterations--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Iterations()
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("iterations", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ScramCredentialInfo.html#mechanism--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html#mechanism--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ScramMechanism"/></returns>
         public Org.Apache.Kafka.Clients.Admin.ScramMechanism Mechanism()

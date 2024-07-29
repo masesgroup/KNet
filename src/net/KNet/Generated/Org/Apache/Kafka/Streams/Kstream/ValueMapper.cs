@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<object, object> OnApply { get; set; } = null;
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region IValueMapper<V, VR>
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueMapper implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueMapper.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueMapper implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/ValueMapper.html"/>
     /// </summary>
     public partial interface IValueMapper<V, VR>
     {
@@ -175,7 +175,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<V, VR> OnApply { get; set; } = null;
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="V"/></param>
         /// <returns><typeparamref name="VR"/></returns>
@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="V"/></param>
         /// <returns><typeparamref name="VR"/></returns>

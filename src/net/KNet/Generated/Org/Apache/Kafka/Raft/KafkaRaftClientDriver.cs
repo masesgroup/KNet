@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/KafkaRaftClientDriver.html#client--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClientDriver.html#client--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.KafkaRaftClient"/></returns>
         public Org.Apache.Kafka.Raft.KafkaRaftClient Client()
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/KafkaRaftClientDriver.html#client--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClientDriver.html#client--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.KafkaRaftClient"/></returns>
         public Org.Apache.Kafka.Raft.KafkaRaftClient<T> Client()

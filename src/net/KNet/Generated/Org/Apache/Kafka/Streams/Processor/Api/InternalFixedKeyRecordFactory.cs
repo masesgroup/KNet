@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/api/InternalFixedKeyRecordFactory.html#create-org.apache.kafka.streams.processor.api.Record-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/api/InternalFixedKeyRecordFactory.html#create-org.apache.kafka.streams.processor.api.Record-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         /// <typeparam name="KIn"></typeparam>

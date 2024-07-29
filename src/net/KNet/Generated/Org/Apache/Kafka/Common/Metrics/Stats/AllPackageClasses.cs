@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 {
     #region Avg
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Avg.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Avg.html"/>
     /// </summary>
     public partial class Avg : Org.Apache.Kafka.Common.Metrics.Stats.SampledStat
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region CumulativeCount
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/CumulativeCount.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/CumulativeCount.html"/>
     /// </summary>
     public partial class CumulativeCount : Org.Apache.Kafka.Common.Metrics.Stats.CumulativeSum
     {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region CumulativeSum
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/CumulativeSum.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/CumulativeSum.html"/>
     /// </summary>
     public partial class CumulativeSum : Org.Apache.Kafka.Common.Metrics.MeasurableStat
     {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region Frequencies
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Frequencies.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Frequencies.html"/>
     /// </summary>
     public partial class Frequencies : Org.Apache.Kafka.Common.Metrics.Stats.SampledStat
     {
@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region Frequency
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Frequency.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Frequency.html"/>
     /// </summary>
     public partial class Frequency : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Frequency>
     {
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region Histogram
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Histogram.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Histogram.html"/>
     /// </summary>
     public partial class Histogram : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Histogram>
     {
@@ -294,7 +294,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         // TODO: complete the class
         #region BinScheme
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html"/>
         /// </summary>
         public partial class BinScheme : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BinScheme>
         {
@@ -341,7 +341,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region ConstantBinScheme
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html"/>
         /// </summary>
         public partial class ConstantBinScheme : Org.Apache.Kafka.Common.Metrics.Stats.Histogram.BinScheme
         {
@@ -386,7 +386,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region LinearBinScheme
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html"/>
         /// </summary>
         public partial class LinearBinScheme : Org.Apache.Kafka.Common.Metrics.Stats.Histogram.BinScheme
         {
@@ -435,7 +435,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region Max
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Max.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Max.html"/>
     /// </summary>
     public partial class Max : Org.Apache.Kafka.Common.Metrics.Stats.SampledStat
     {
@@ -480,7 +480,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region Meter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Meter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Meter.html"/>
     /// </summary>
     public partial class Meter : Org.Apache.Kafka.Common.Metrics.CompoundStat
     {
@@ -525,7 +525,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region Min
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Min.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Min.html"/>
     /// </summary>
     public partial class Min : Org.Apache.Kafka.Common.Metrics.Stats.SampledStat
     {
@@ -570,7 +570,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region Percentile
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Percentile.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Percentile.html"/>
     /// </summary>
     public partial class Percentile : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Percentile>
     {
@@ -615,7 +615,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region Percentiles
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Percentiles.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Percentiles.html"/>
     /// </summary>
     public partial class Percentiles : Org.Apache.Kafka.Common.Metrics.Stats.SampledStat
     {
@@ -656,7 +656,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         // TODO: complete the class
         #region BucketSizing
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html"/>
         /// </summary>
         public partial class BucketSizing : Java.Lang.Enum<Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing>
         {
@@ -705,7 +705,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region Rate
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Rate.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Rate.html"/>
     /// </summary>
     public partial class Rate : Org.Apache.Kafka.Common.Metrics.MeasurableStat
     {
@@ -750,7 +750,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region SampledStat
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/SampledStat.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/SampledStat.html"/>
     /// </summary>
     public partial class SampledStat : Org.Apache.Kafka.Common.Metrics.MeasurableStat
     {
@@ -797,7 +797,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region SimpleRate
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/SimpleRate.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/SimpleRate.html"/>
     /// </summary>
     public partial class SimpleRate : Org.Apache.Kafka.Common.Metrics.Stats.Rate
     {
@@ -842,7 +842,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region TokenBucket
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/TokenBucket.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/TokenBucket.html"/>
     /// </summary>
     public partial class TokenBucket : Org.Apache.Kafka.Common.Metrics.MeasurableStat
     {
@@ -887,7 +887,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region Value
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/Value.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Value.html"/>
     /// </summary>
     public partial class Value : Org.Apache.Kafka.Common.Metrics.MeasurableStat
     {
@@ -932,7 +932,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region WindowedCount
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/WindowedCount.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/WindowedCount.html"/>
     /// </summary>
     public partial class WindowedCount : Org.Apache.Kafka.Common.Metrics.Stats.WindowedSum
     {
@@ -977,7 +977,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
     #region WindowedSum
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/WindowedSum.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/WindowedSum.html"/>
     /// </summary>
     public partial class WindowedSum : Org.Apache.Kafka.Common.Metrics.Stats.SampledStat
     {

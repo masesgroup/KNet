@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/SupportedVersionRange.html#maxVersion--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#maxVersion--"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short MaxVersion()
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<short>("maxVersion", "()S");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/SupportedVersionRange.html#minVersion--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#minVersion--"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short MinVersion()

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Streams
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/KeyQueryMetadata.html#org.apache.kafka.streams.KeyQueryMetadata(org.apache.kafka.streams.state.HostInfo,java.util.Set,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/KeyQueryMetadata.html#org.apache.kafka.streams.KeyQueryMetadata(org.apache.kafka.streams.state.HostInfo,java.util.Set,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.HostInfo"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -48,7 +48,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/KeyQueryMetadata.html#NOT_AVAILABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/KeyQueryMetadata.html#NOT_AVAILABLE"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.KeyQueryMetadata NOT_AVAILABLE { get { if (!_NOT_AVAILABLEReady) { _NOT_AVAILABLEContent = SGetField<Org.Apache.Kafka.Streams.KeyQueryMetadata>(LocalBridgeClazz, "NOT_AVAILABLE"); _NOT_AVAILABLEReady = true; } return _NOT_AVAILABLEContent; } }
         private static Org.Apache.Kafka.Streams.KeyQueryMetadata _NOT_AVAILABLEContent = default;
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/KeyQueryMetadata.html#partition--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/KeyQueryMetadata.html#partition--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Partition()
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<int>("partition", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/KeyQueryMetadata.html#standbyHosts--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/KeyQueryMetadata.html#standbyHosts--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Streams.State.HostInfo> StandbyHosts()
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Streams.State.HostInfo>>("standbyHosts", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/KeyQueryMetadata.html#activeHost--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/KeyQueryMetadata.html#activeHost--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.HostInfo"/></returns>
         public Org.Apache.Kafka.Streams.State.HostInfo ActiveHost()

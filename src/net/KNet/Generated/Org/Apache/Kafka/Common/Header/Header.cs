@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Header
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/header/Header.html#value--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/header/Header.html#value--"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte[] Value()
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Header
             return IExecuteWithSignatureArray<byte>("value", "()[B");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/header/Header.html#key--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/header/Header.html#key--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Key()

@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/LazyDownConversionRecords.html#sizeInBytes--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#sizeInBytes--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int SizeInBytes()
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<int>("sizeInBytes", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/LazyDownConversionRecords.html#topicPartition--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#topicPartition--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
         public Org.Apache.Kafka.Common.TopicPartition TopicPartition()

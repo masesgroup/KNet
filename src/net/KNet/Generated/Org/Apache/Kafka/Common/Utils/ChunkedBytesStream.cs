@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ChunkedBytesStream.html#org.apache.kafka.common.utils.ChunkedBytesStream(java.io.InputStream,org.apache.kafka.common.utils.BufferSupplier,int,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ChunkedBytesStream.html#org.apache.kafka.common.utils.ChunkedBytesStream(java.io.InputStream,org.apache.kafka.common.utils.BufferSupplier,int,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.InputStream"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Utils.BufferSupplier"/></param>
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ChunkedBytesStream.html#sourceStream--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ChunkedBytesStream.html#sourceStream--"/>
         /// </summary>
         /// <returns><see cref="Java.Io.InputStream"/></returns>
         public Java.Io.InputStream SourceStream()

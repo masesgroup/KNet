@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Telemetry
 {
     #region ClientTelemetryState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/telemetry/ClientTelemetryState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/telemetry/ClientTelemetryState.html"/>
     /// </summary>
     public partial class ClientTelemetryState : Java.Lang.Enum<Org.Apache.Kafka.Common.Telemetry.ClientTelemetryState>
     {

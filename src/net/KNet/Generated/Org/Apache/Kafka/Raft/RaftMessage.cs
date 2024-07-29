@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftMessage.html#correlationId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftMessage.html#correlationId--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int CorrelationId()

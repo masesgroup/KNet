@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region AbstractIterator
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/AbstractIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/AbstractIterator.html"/>
     /// </summary>
     public partial class AbstractIterator : Java.Util.Iterator
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region AbstractIterator<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/AbstractIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/AbstractIterator.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class AbstractIterator<T> : Java.Util.Iterator<T>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region AppInfoParser
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/AppInfoParser.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/AppInfoParser.html"/>
     /// </summary>
     public partial class AppInfoParser : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AppInfoParser>
     {
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Common.Utils
         // TODO: complete the class
         #region AppInfo
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/AppInfoParser.AppInfo.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/AppInfoParser.AppInfo.html"/>
         /// </summary>
         public partial class AppInfo : Org.Apache.Kafka.Common.Utils.AppInfoParser.AppInfoMBean
         {
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region AppInfoMBean
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/AppInfoParser.AppInfoMBean.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/AppInfoParser.AppInfoMBean.html"/>
         /// </summary>
         public partial class AppInfoMBean : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AppInfoMBean>
         {
@@ -260,7 +260,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region BufferSupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/BufferSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/BufferSupplier.html"/>
     /// </summary>
     public partial class BufferSupplier : Java.Lang.AutoCloseable
     {
@@ -303,7 +303,7 @@ namespace Org.Apache.Kafka.Common.Utils
         // TODO: complete the class
         #region GrowableBufferSupplier
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/BufferSupplier.GrowableBufferSupplier.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/BufferSupplier.GrowableBufferSupplier.html"/>
         /// </summary>
         public partial class GrowableBufferSupplier : Org.Apache.Kafka.Common.Utils.BufferSupplier
         {
@@ -352,7 +352,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ByteBufferInputStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ByteBufferInputStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ByteBufferInputStream.html"/>
     /// </summary>
     public partial class ByteBufferInputStream : Java.Io.InputStream
     {
@@ -397,7 +397,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ByteBufferOutputStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ByteBufferOutputStream.html"/>
     /// </summary>
     public partial class ByteBufferOutputStream : Java.Io.OutputStream
     {
@@ -442,7 +442,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ByteBufferUnmapper
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ByteBufferUnmapper.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ByteBufferUnmapper.html"/>
     /// </summary>
     public partial class ByteBufferUnmapper : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteBufferUnmapper>
     {
@@ -487,7 +487,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region Bytes
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Bytes.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Bytes.html"/>
     /// </summary>
     public partial class Bytes : Java.Lang.Comparable<Org.Apache.Kafka.Common.Utils.Bytes>
     {
@@ -532,7 +532,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ByteUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ByteUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ByteUtils.html"/>
     /// </summary>
     public partial class ByteUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteUtils>
     {
@@ -577,7 +577,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region Checksums
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Checksums.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Checksums.html"/>
     /// </summary>
     public partial class Checksums : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Checksums>
     {
@@ -622,7 +622,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ChildFirstClassLoader
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ChildFirstClassLoader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ChildFirstClassLoader.html"/>
     /// </summary>
     public partial class ChildFirstClassLoader : Java.Net.URLClassLoader
     {
@@ -667,7 +667,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ChunkedBytesStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ChunkedBytesStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ChunkedBytesStream.html"/>
     /// </summary>
     public partial class ChunkedBytesStream : Java.Io.FilterInputStream
     {
@@ -712,7 +712,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region CircularIterator
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/CircularIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/CircularIterator.html"/>
     /// </summary>
     public partial class CircularIterator : Java.Util.Iterator
     {
@@ -757,7 +757,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region CircularIterator<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/CircularIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/CircularIterator.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class CircularIterator<T> : Java.Util.Iterator<T>
@@ -803,7 +803,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region CloseableIterator
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/CloseableIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/CloseableIterator.html"/>
     /// </summary>
     public partial class CloseableIterator : Java.Util.Iterator
     {
@@ -850,7 +850,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region CloseableIterator<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/CloseableIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/CloseableIterator.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class CloseableIterator<T> : Java.Util.Iterator<T>
@@ -898,7 +898,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region CollectionUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/CollectionUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/CollectionUtils.html"/>
     /// </summary>
     public partial class CollectionUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CollectionUtils>
     {
@@ -943,7 +943,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ConfigUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ConfigUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ConfigUtils.html"/>
     /// </summary>
     public partial class ConfigUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigUtils>
     {
@@ -988,7 +988,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region CopyOnWriteMap
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/CopyOnWriteMap.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/CopyOnWriteMap.html"/>
     /// </summary>
     public partial class CopyOnWriteMap : Java.Util.Concurrent.ConcurrentMap
     {
@@ -1033,7 +1033,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region CopyOnWriteMap<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/CopyOnWriteMap.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/CopyOnWriteMap.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1080,7 +1080,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region Crc32C
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Crc32C.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Crc32C.html"/>
     /// </summary>
     public partial class Crc32C : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Crc32C>
     {
@@ -1125,7 +1125,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region Exit
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Exit.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Exit.html"/>
     /// </summary>
     public partial class Exit : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Exit>
     {
@@ -1166,7 +1166,7 @@ namespace Org.Apache.Kafka.Common.Utils
         // TODO: complete the class
         #region Procedure
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Exit.Procedure.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Exit.Procedure.html"/>
         /// </summary>
         public partial class Procedure : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Procedure>
         {
@@ -1213,7 +1213,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region ShutdownHookAdder
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Exit.ShutdownHookAdder.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Exit.ShutdownHookAdder.html"/>
         /// </summary>
         public partial class ShutdownHookAdder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ShutdownHookAdder>
         {
@@ -1264,7 +1264,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ExponentialBackoff
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ExponentialBackoff.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ExponentialBackoff.html"/>
     /// </summary>
     public partial class ExponentialBackoff : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ExponentialBackoff>
     {
@@ -1309,7 +1309,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region FixedOrderMap
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/FixedOrderMap.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/FixedOrderMap.html"/>
     /// </summary>
     public partial class FixedOrderMap : Java.Util.LinkedHashMap
     {
@@ -1354,7 +1354,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region FixedOrderMap<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/FixedOrderMap.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/FixedOrderMap.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1401,7 +1401,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region FlattenedIterator
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/FlattenedIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/FlattenedIterator.html"/>
     /// </summary>
     public partial class FlattenedIterator : Org.Apache.Kafka.Common.Utils.AbstractIterator
     {
@@ -1446,7 +1446,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region FlattenedIterator<O, I>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/FlattenedIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/FlattenedIterator.html"/>
     /// </summary>
     /// <typeparam name="O"></typeparam>
     /// <typeparam name="I"></typeparam>
@@ -1493,7 +1493,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region KafkaThread
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/KafkaThread.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/KafkaThread.html"/>
     /// </summary>
     public partial class KafkaThread : Java.Lang.Thread
     {
@@ -1538,7 +1538,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region LogContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/LogContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/LogContext.html"/>
     /// </summary>
     public partial class LogContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogContext>
     {
@@ -1583,7 +1583,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region LoggingSignalHandler
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/LoggingSignalHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/LoggingSignalHandler.html"/>
     /// </summary>
     public partial class LoggingSignalHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LoggingSignalHandler>
     {
@@ -1628,7 +1628,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region MappedIterator
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/MappedIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/MappedIterator.html"/>
     /// </summary>
     public partial class MappedIterator : Java.Util.Iterator
     {
@@ -1673,7 +1673,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region MappedIterator<F, T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/MappedIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/MappedIterator.html"/>
     /// </summary>
     /// <typeparam name="F"></typeparam>
     /// <typeparam name="T"></typeparam>
@@ -1720,7 +1720,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region OperatingSystem
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/OperatingSystem.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/OperatingSystem.html"/>
     /// </summary>
     public partial class OperatingSystem : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OperatingSystem>
     {
@@ -1765,7 +1765,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region PrimitiveRef
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/PrimitiveRef.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/PrimitiveRef.html"/>
     /// </summary>
     public partial class PrimitiveRef : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PrimitiveRef>
     {
@@ -1806,7 +1806,7 @@ namespace Org.Apache.Kafka.Common.Utils
         // TODO: complete the class
         #region IntRef
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/PrimitiveRef.IntRef.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/PrimitiveRef.IntRef.html"/>
         /// </summary>
         public partial class IntRef : MASES.JCOBridge.C2JBridge.JVMBridgeBase<IntRef>
         {
@@ -1851,7 +1851,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region LongRef
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/PrimitiveRef.LongRef.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/PrimitiveRef.LongRef.html"/>
         /// </summary>
         public partial class LongRef : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LongRef>
         {
@@ -1900,7 +1900,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ProducerIdAndEpoch
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ProducerIdAndEpoch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html"/>
     /// </summary>
     public partial class ProducerIdAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerIdAndEpoch>
     {
@@ -1945,7 +1945,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region PureJavaCrc32C
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/PureJavaCrc32C.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/PureJavaCrc32C.html"/>
     /// </summary>
     public partial class PureJavaCrc32C : Java.Util.Zip.Checksum
     {
@@ -1990,7 +1990,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region Sanitizer
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Sanitizer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Sanitizer.html"/>
     /// </summary>
     public partial class Sanitizer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Sanitizer>
     {
@@ -2035,7 +2035,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region Scheduler
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Scheduler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Scheduler.html"/>
     /// </summary>
     public partial class Scheduler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Scheduler>
     {
@@ -2082,7 +2082,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region SecurityUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/SecurityUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/SecurityUtils.html"/>
     /// </summary>
     public partial class SecurityUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SecurityUtils>
     {
@@ -2127,7 +2127,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region Shell
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Shell.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Shell.html"/>
     /// </summary>
     public partial class Shell : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Shell>
     {
@@ -2170,7 +2170,7 @@ namespace Org.Apache.Kafka.Common.Utils
         // TODO: complete the class
         #region ExitCodeException
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Shell.ExitCodeException.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Shell.ExitCodeException.html"/>
         /// </summary>
         public partial class ExitCodeException : Java.Io.IOException
         {
@@ -2187,7 +2187,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region ShellCommandExecutor
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html"/>
         /// </summary>
         public partial class ShellCommandExecutor : Org.Apache.Kafka.Common.Utils.Shell
         {
@@ -2236,7 +2236,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region SystemScheduler
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/SystemScheduler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/SystemScheduler.html"/>
     /// </summary>
     public partial class SystemScheduler : Org.Apache.Kafka.Common.Utils.Scheduler
     {
@@ -2281,7 +2281,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region SystemTime
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/SystemTime.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/SystemTime.html"/>
     /// </summary>
     public partial class SystemTime : Org.Apache.Kafka.Common.Utils.Time
     {
@@ -2326,7 +2326,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ThreadUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ThreadUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ThreadUtils.html"/>
     /// </summary>
     public partial class ThreadUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ThreadUtils>
     {
@@ -2371,7 +2371,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region Time
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Time.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Time.html"/>
     /// </summary>
     public partial class Time : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Time>
     {
@@ -2418,7 +2418,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region Timer
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Timer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Timer.html"/>
     /// </summary>
     public partial class Timer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Timer>
     {
@@ -2463,7 +2463,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region Utils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Utils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html"/>
     /// </summary>
     public partial class Utils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Utils>
     {
@@ -2504,7 +2504,7 @@ namespace Org.Apache.Kafka.Common.Utils
         // TODO: complete the class
         #region SwallowAction
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Utils.SwallowAction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.SwallowAction.html"/>
         /// </summary>
         public partial class SwallowAction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SwallowAction>
         {
@@ -2551,7 +2551,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region ThrowingRunnable
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Utils.ThrowingRunnable.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.ThrowingRunnable.html"/>
         /// </summary>
         public partial class ThrowingRunnable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ThrowingRunnable>
         {
@@ -2598,7 +2598,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region UncheckedCloseable
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/Utils.UncheckedCloseable.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.UncheckedCloseable.html"/>
         /// </summary>
         public partial class UncheckedCloseable : Java.Lang.AutoCloseable
         {

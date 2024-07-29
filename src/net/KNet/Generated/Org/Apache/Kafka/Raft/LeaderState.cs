@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#isResignRequested--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#isResignRequested--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsResignRequested()
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isResignRequested", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#updateLocalState-org.apache.kafka.raft.LogOffsetMetadata-java.util.Set-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#updateLocalState-org.apache.kafka.raft.LogOffsetMetadata-java.util.Set-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.LogOffsetMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecute<bool>("updateLocalState", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#updateReplicaState-int-long-org.apache.kafka.raft.LogOffsetMetadata-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#updateReplicaState-int-long-org.apache.kafka.raft.LogOffsetMetadata-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecute<bool>("updateReplicaState", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#epoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#epoch--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Epoch()
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("epoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#localId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#localId--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LocalId()
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("localId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#name--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#name--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#nonLeaderVotersByDescendingFetchOffset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#nonLeaderVotersByDescendingFetchOffset--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List NonLeaderVotersByDescendingFetchOffset()
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.List>("nonLeaderVotersByDescendingFetchOffset", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#highWatermark--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#highWatermark--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional HighWatermark()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional>("highWatermark", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#grantingVoters--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#grantingVoters--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set GrantingVoters()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Set>("grantingVoters", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#nonAcknowledgingVoters--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#nonAcknowledgingVoters--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set NonAcknowledgingVoters()
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Set>("nonAcknowledgingVoters", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#epochStartOffset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#epochStartOffset--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long EpochStartOffset()
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("epochStartOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#timeUntilCheckQuorumExpires-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#timeUntilCheckQuorumExpires-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="long"/></returns>
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("timeUntilCheckQuorumExpires", "(J)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#election--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#election--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ElectionState"/></returns>
         public Org.Apache.Kafka.Raft.ElectionState Election()
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.ElectionState>("election", "()Lorg/apache/kafka/raft/ElectionState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#addAcknowledgementFrom-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#addAcknowledgementFrom-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void AddAcknowledgementFrom(int arg0)
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("addAcknowledgementFrom", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#appendLeaderChangeMessage-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#appendLeaderChangeMessage-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void AppendLeaderChangeMessage(long arg0)
@@ -172,21 +172,21 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("appendLeaderChangeMessage", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#requestResign--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#requestResign--"/>
         /// </summary>
         public void RequestResign()
         {
             IExecuteWithSignature("requestResign", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#updateCheckQuorumForFollowingVoter-int-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#updateCheckQuorumForFollowingVoter-int-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -230,7 +230,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#isResignRequested--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#isResignRequested--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsResignRequested()
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isResignRequested", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#updateLocalState-org.apache.kafka.raft.LogOffsetMetadata-java.util.Set-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#updateLocalState-org.apache.kafka.raft.LogOffsetMetadata-java.util.Set-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.LogOffsetMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -248,7 +248,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecute<bool>("updateLocalState", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#updateReplicaState-int-long-org.apache.kafka.raft.LogOffsetMetadata-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#updateReplicaState-int-long-org.apache.kafka.raft.LogOffsetMetadata-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -259,7 +259,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecute<bool>("updateReplicaState", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#epoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#epoch--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Epoch()
@@ -267,7 +267,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("epoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#localId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#localId--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LocalId()
@@ -275,7 +275,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("localId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#name--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#name--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#nonLeaderVotersByDescendingFetchOffset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#nonLeaderVotersByDescendingFetchOffset--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Java.Lang.Integer> NonLeaderVotersByDescendingFetchOffset()
@@ -291,7 +291,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.List<Java.Lang.Integer>>("nonLeaderVotersByDescendingFetchOffset", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#highWatermark--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#highWatermark--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata> HighWatermark()
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata>>("highWatermark", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#grantingVoters--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#grantingVoters--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.Integer> GrantingVoters()
@@ -307,7 +307,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.Integer>>("grantingVoters", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#nonAcknowledgingVoters--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#nonAcknowledgingVoters--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.Integer> NonAcknowledgingVoters()
@@ -315,7 +315,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.Integer>>("nonAcknowledgingVoters", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#epochStartOffset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#epochStartOffset--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long EpochStartOffset()
@@ -323,7 +323,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("epochStartOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#timeUntilCheckQuorumExpires-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#timeUntilCheckQuorumExpires-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="long"/></returns>
@@ -332,7 +332,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("timeUntilCheckQuorumExpires", "(J)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#election--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#election--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ElectionState"/></returns>
         public Org.Apache.Kafka.Raft.ElectionState Election()
@@ -340,7 +340,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.ElectionState>("election", "()Lorg/apache/kafka/raft/ElectionState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#addAcknowledgementFrom-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#addAcknowledgementFrom-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void AddAcknowledgementFrom(int arg0)
@@ -348,7 +348,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("addAcknowledgementFrom", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#appendLeaderChangeMessage-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#appendLeaderChangeMessage-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void AppendLeaderChangeMessage(long arg0)
@@ -356,21 +356,21 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("appendLeaderChangeMessage", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#requestResign--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#requestResign--"/>
         /// </summary>
         public void RequestResign()
         {
             IExecuteWithSignature("requestResign", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html#updateCheckQuorumForFollowingVoter-int-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#updateCheckQuorumForFollowingVoter-int-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="long"/></param>

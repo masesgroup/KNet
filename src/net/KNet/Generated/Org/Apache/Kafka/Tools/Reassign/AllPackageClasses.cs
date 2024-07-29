@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
 {
     #region ReassignPartitionsCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html"/>
     /// </summary>
     public partial class ReassignPartitionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReassignPartitionsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
 
     #region ReassignPartitionsCommandOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/reassign/ReassignPartitionsCommandOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommandOptions.html"/>
     /// </summary>
     public partial class ReassignPartitionsCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReassignPartitionsCommandOptions>
     {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
 
     #region VerifyAssignmentResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html"/>
     /// </summary>
     public partial class VerifyAssignmentResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifyAssignmentResult>
     {

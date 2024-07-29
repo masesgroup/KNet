@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/health/ConnectClusterDetails.html#kafkaClusterId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/health/ConnectClusterDetails.html#kafkaClusterId--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String KafkaClusterId()

@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 {
     #region CheckpointFormatter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/formatters/CheckpointFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/formatters/CheckpointFormatter.html"/>
     /// </summary>
     public partial class CheckpointFormatter : Org.Apache.Kafka.Common.MessageFormatter
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 
     #region HeartbeatFormatter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/formatters/HeartbeatFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/formatters/HeartbeatFormatter.html"/>
     /// </summary>
     public partial class HeartbeatFormatter : Org.Apache.Kafka.Common.MessageFormatter
     {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 
     #region OffsetSyncFormatter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/formatters/OffsetSyncFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/formatters/OffsetSyncFormatter.html"/>
     /// </summary>
     public partial class OffsetSyncFormatter : Org.Apache.Kafka.Common.MessageFormatter
     {

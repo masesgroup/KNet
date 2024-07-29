@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Config
 {
     #region AbstractConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/AbstractConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/AbstractConfig.html"/>
     /// </summary>
     public partial class AbstractConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AbstractConfig>
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region Config
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/Config.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/Config.html"/>
     /// </summary>
     public partial class Config : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Config>
     {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region ConfigChangeCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigChangeCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigChangeCallback.html"/>
     /// </summary>
     public partial class ConfigChangeCallback : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region ConfigData
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigData.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigData.html"/>
     /// </summary>
     public partial class ConfigData : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigData>
     {
@@ -230,7 +230,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region ConfigDef
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html"/>
     /// </summary>
     public partial class ConfigDef : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigDef>
     {
@@ -271,7 +271,7 @@ namespace Org.Apache.Kafka.Common.Config
         // TODO: complete the class
         #region CaseInsensitiveValidString
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.CaseInsensitiveValidString.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.CaseInsensitiveValidString.html"/>
         /// </summary>
         public partial class CaseInsensitiveValidString : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -316,7 +316,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region CompositeValidator
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.CompositeValidator.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.CompositeValidator.html"/>
         /// </summary>
         public partial class CompositeValidator : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -361,7 +361,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region ConfigKey
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.ConfigKey.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.ConfigKey.html"/>
         /// </summary>
         public partial class ConfigKey : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigKey>
         {
@@ -406,7 +406,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Importance
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.Importance.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.Importance.html"/>
         /// </summary>
         public partial class Importance : Java.Lang.Enum<Org.Apache.Kafka.Common.Config.ConfigDef.Importance>
         {
@@ -451,7 +451,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region LambdaValidator
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.LambdaValidator.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.LambdaValidator.html"/>
         /// </summary>
         public partial class LambdaValidator : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -496,7 +496,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region ListSize
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.ListSize.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.ListSize.html"/>
         /// </summary>
         public partial class ListSize : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -541,7 +541,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region NonEmptyString
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.NonEmptyString.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.NonEmptyString.html"/>
         /// </summary>
         public partial class NonEmptyString : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -586,7 +586,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region NonEmptyStringWithoutControlChars
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.NonEmptyStringWithoutControlChars.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.NonEmptyStringWithoutControlChars.html"/>
         /// </summary>
         public partial class NonEmptyStringWithoutControlChars : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -631,7 +631,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region NonNullValidator
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.NonNullValidator.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.NonNullValidator.html"/>
         /// </summary>
         public partial class NonNullValidator : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -676,7 +676,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Range
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.Range.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.Range.html"/>
         /// </summary>
         public partial class Range : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -721,7 +721,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Recommender
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.Recommender.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.Recommender.html"/>
         /// </summary>
         public partial class Recommender : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Recommender>
         {
@@ -768,7 +768,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Type
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.Type.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.Type.html"/>
         /// </summary>
         public partial class Type : Java.Lang.Enum<Org.Apache.Kafka.Common.Config.ConfigDef.Type>
         {
@@ -813,7 +813,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Validator
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.Validator.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.Validator.html"/>
         /// </summary>
         public partial class Validator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Validator>
         {
@@ -860,7 +860,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region ValidList
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.ValidList.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.ValidList.html"/>
         /// </summary>
         public partial class ValidList : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -905,7 +905,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region ValidString
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.ValidString.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.ValidString.html"/>
         /// </summary>
         public partial class ValidString : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -950,7 +950,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Width
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigDef.Width.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.Width.html"/>
         /// </summary>
         public partial class Width : Java.Lang.Enum<Org.Apache.Kafka.Common.Config.ConfigDef.Width>
         {
@@ -999,7 +999,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region ConfigException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigException.html"/>
     /// </summary>
     public partial class ConfigException : Org.Apache.Kafka.Common.KafkaException
     {
@@ -1016,7 +1016,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region ConfigResource
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigResource.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigResource.html"/>
     /// </summary>
     public partial class ConfigResource : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigResource>
     {
@@ -1057,7 +1057,7 @@ namespace Org.Apache.Kafka.Common.Config
         // TODO: complete the class
         #region Type
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigResource.Type.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigResource.Type.html"/>
         /// </summary>
         public partial class Type : Java.Lang.Enum<Org.Apache.Kafka.Common.Config.ConfigResource.Type>
         {
@@ -1106,7 +1106,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region ConfigTransformer
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigTransformer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigTransformer.html"/>
     /// </summary>
     public partial class ConfigTransformer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigTransformer>
     {
@@ -1151,7 +1151,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region ConfigTransformerResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigTransformerResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigTransformerResult.html"/>
     /// </summary>
     public partial class ConfigTransformerResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigTransformerResult>
     {
@@ -1196,7 +1196,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region ConfigValue
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/ConfigValue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigValue.html"/>
     /// </summary>
     public partial class ConfigValue : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigValue>
     {
@@ -1241,7 +1241,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region LogLevelConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/LogLevelConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/LogLevelConfig.html"/>
     /// </summary>
     public partial class LogLevelConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogLevelConfig>
     {
@@ -1286,7 +1286,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region SaslConfigs
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/SaslConfigs.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/SaslConfigs.html"/>
     /// </summary>
     public partial class SaslConfigs : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslConfigs>
     {
@@ -1331,7 +1331,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region SecurityConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/SecurityConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/SecurityConfig.html"/>
     /// </summary>
     public partial class SecurityConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SecurityConfig>
     {
@@ -1376,7 +1376,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region SslClientAuth
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/SslClientAuth.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/SslClientAuth.html"/>
     /// </summary>
     public partial class SslClientAuth : Java.Lang.Enum<Org.Apache.Kafka.Common.Config.SslClientAuth>
     {
@@ -1421,7 +1421,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region SslConfigs
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/SslConfigs.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/SslConfigs.html"/>
     /// </summary>
     public partial class SslConfigs : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SslConfigs>
     {
@@ -1466,7 +1466,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region TopicConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/TopicConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/TopicConfig.html"/>
     /// </summary>
     public partial class TopicConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicConfig>
     {

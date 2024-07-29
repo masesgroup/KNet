@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Collection"/></param>
@@ -45,7 +45,7 @@ namespace Org.Apache.Kafka.Common
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,java.util.Set,org.apache.kafka.common.Node)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Collection"/></param>
@@ -59,7 +59,7 @@ namespace Org.Apache.Kafka.Common
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,org.apache.kafka.common.Node)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set,org.apache.kafka.common.Node)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Collection"/></param>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#org.apache.kafka.common.Cluster(java.lang.String,java.util.Collection,java.util.Collection,java.util.Set,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Collection"/></param>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#bootstrap-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#bootstrap-java.util.List-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Cluster"/></returns>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Cluster>(LocalBridgeClazz, "bootstrap", "(Ljava/util/List;)Lorg/apache/kafka/common/Cluster;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#empty--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#empty--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Cluster"/></returns>
         public static Org.Apache.Kafka.Common.Cluster Empty()
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#isBootstrapConfigured--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#isBootstrapConfigured--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsBootstrapConfigured()
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<bool>("isBootstrapConfigured", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#partitionCountForTopic-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#partitionCountForTopic-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Lang.Integer>("partitionCountForTopic", "(Ljava/lang/String;)Ljava/lang/Integer;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#topicName-org.apache.kafka.common.Uuid-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#topicName-org.apache.kafka.common.Uuid-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Lang.String>("topicName", "(Lorg/apache/kafka/common/Uuid;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#topicIds--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#topicIds--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<Org.Apache.Kafka.Common.Uuid> TopicIds()
@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Common.Uuid>>("topicIds", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#nodes--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#nodes--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Common.Node> Nodes()
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Node>>("nodes", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#availablePartitionsForTopic-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#availablePartitionsForTopic-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>("availablePartitionsForTopic", "(Ljava/lang/String;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#partitionsForNode-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#partitionsForNode-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -177,7 +177,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>("partitionsForNode", "(I)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#partitionsForTopic-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#partitionsForTopic-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -186,7 +186,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>("partitionsForTopic", "(Ljava/lang/String;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#nodeIfOnline-org.apache.kafka.common.TopicPartition-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#nodeIfOnline-org.apache.kafka.common.TopicPartition-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Node>>("nodeIfOnline", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#internalTopics--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#internalTopics--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> InternalTopics()
@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("internalTopics", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#invalidTopics--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#invalidTopics--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> InvalidTopics()
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("invalidTopics", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#topics--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#topics--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> Topics()
@@ -220,7 +220,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("topics", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#unauthorizedTopics--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#unauthorizedTopics--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> UnauthorizedTopics()
@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("unauthorizedTopics", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#withPartitions-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#withPartitions-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Cluster"/></returns>
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Cluster>("withPartitions", "(Ljava/util/Map;)Lorg/apache/kafka/common/Cluster;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#clusterResource--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#clusterResource--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.ClusterResource"/></returns>
         public Org.Apache.Kafka.Common.ClusterResource ClusterResource()
@@ -245,7 +245,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Org.Apache.Kafka.Common.ClusterResource>("clusterResource", "()Lorg/apache/kafka/common/ClusterResource;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#controller--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#controller--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node Controller()
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Node>("controller", "()Lorg/apache/kafka/common/Node;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#leaderFor-org.apache.kafka.common.TopicPartition-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#leaderFor-org.apache.kafka.common.TopicPartition-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
@@ -262,7 +262,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Node>("leaderFor", "(Lorg/apache/kafka/common/TopicPartition;)Lorg/apache/kafka/common/Node;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#nodeById-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#nodeById-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
@@ -271,7 +271,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Node>("nodeById", "(I)Lorg/apache/kafka/common/Node;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#partition-org.apache.kafka.common.TopicPartition-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#partition-org.apache.kafka.common.TopicPartition-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.PartitionInfo"/></returns>
@@ -280,7 +280,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Org.Apache.Kafka.Common.PartitionInfo>("partition", "(Lorg/apache/kafka/common/TopicPartition;)Lorg/apache/kafka/common/PartitionInfo;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Cluster.html#topicId-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#topicId-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>

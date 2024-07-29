@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region IOffsetCommitCallback
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.consumer.OffsetCommitCallback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/OffsetCommitCallback.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.consumer.OffsetCommitCallback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html"/>
     /// </summary>
     public partial interface IOffsetCommitCallback
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnComplete"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnComplete { get; set; } = null;
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete-java.util.Map-java.lang.Exception-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>

@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region Batch
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/Batch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/Batch.html"/>
     /// </summary>
     public partial class Batch : Java.Lang.Iterable
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region Batch<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/Batch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/Batch.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class Batch<T> : Java.Lang.Iterable<T>
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region BatchReader
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/BatchReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/BatchReader.html"/>
     /// </summary>
     public partial class BatchReader : Java.Util.Iterator
     {
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region BatchReader<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/BatchReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/BatchReader.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class BatchReader<T> : Java.Util.Iterator<Org.Apache.Kafka.Raft.Batch<T>>
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region CandidateState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/CandidateState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/CandidateState.html"/>
     /// </summary>
     public partial class CandidateState : Org.Apache.Kafka.Raft.EpochState
     {
@@ -259,7 +259,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region ControlRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/ControlRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ControlRecord.html"/>
     /// </summary>
     public partial class ControlRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ControlRecord>
     {
@@ -304,7 +304,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region ElectionState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/ElectionState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ElectionState.html"/>
     /// </summary>
     public partial class ElectionState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ElectionState>
     {
@@ -349,7 +349,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region EpochState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/EpochState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/EpochState.html"/>
     /// </summary>
     public partial class EpochState : Java.Io.Closeable
     {
@@ -396,7 +396,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region ExpirationService
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/ExpirationService.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ExpirationService.html"/>
     /// </summary>
     public partial class ExpirationService : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ExpirationService>
     {
@@ -443,7 +443,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region FileQuorumStateStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/FileQuorumStateStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/FileQuorumStateStore.html"/>
     /// </summary>
     public partial class FileQuorumStateStore : Org.Apache.Kafka.Raft.QuorumStateStore
     {
@@ -488,7 +488,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region FollowerState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/FollowerState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/FollowerState.html"/>
     /// </summary>
     public partial class FollowerState : Org.Apache.Kafka.Raft.EpochState
     {
@@ -533,7 +533,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region Isolation
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/Isolation.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/Isolation.html"/>
     /// </summary>
     public partial class Isolation : Java.Lang.Enum<Org.Apache.Kafka.Raft.Isolation>
     {
@@ -578,7 +578,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region KafkaNetworkChannel
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/KafkaNetworkChannel.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaNetworkChannel.html"/>
     /// </summary>
     public partial class KafkaNetworkChannel : Org.Apache.Kafka.Raft.NetworkChannel
     {
@@ -623,7 +623,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region KafkaRaftClient
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/KafkaRaftClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClient.html"/>
     /// </summary>
     public partial class KafkaRaftClient : Org.Apache.Kafka.Raft.RaftClient
     {
@@ -668,7 +668,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region KafkaRaftClient<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/KafkaRaftClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClient.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class KafkaRaftClient<T> : Org.Apache.Kafka.Raft.RaftClient<T>
@@ -714,7 +714,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region KafkaRaftClientDriver
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/KafkaRaftClientDriver.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClientDriver.html"/>
     /// </summary>
     public partial class KafkaRaftClientDriver : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaRaftClientDriver>
     {
@@ -759,7 +759,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region KafkaRaftClientDriver<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/KafkaRaftClientDriver.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClientDriver.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class KafkaRaftClientDriver<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaRaftClientDriver<T>>
@@ -805,7 +805,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region LeaderAndEpoch
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderAndEpoch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderAndEpoch.html"/>
     /// </summary>
     public partial class LeaderAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderAndEpoch>
     {
@@ -850,7 +850,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region LeaderState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html"/>
     /// </summary>
     public partial class LeaderState : Org.Apache.Kafka.Raft.EpochState
     {
@@ -895,7 +895,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region LeaderState<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LeaderState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class LeaderState<T> : Org.Apache.Kafka.Raft.EpochState
@@ -941,7 +941,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region LogAppendInfo
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LogAppendInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LogAppendInfo.html"/>
     /// </summary>
     public partial class LogAppendInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogAppendInfo>
     {
@@ -986,7 +986,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region LogFetchInfo
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LogFetchInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LogFetchInfo.html"/>
     /// </summary>
     public partial class LogFetchInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogFetchInfo>
     {
@@ -1031,7 +1031,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region LogOffsetMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/LogOffsetMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LogOffsetMetadata.html"/>
     /// </summary>
     public partial class LogOffsetMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogOffsetMetadata>
     {
@@ -1076,7 +1076,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region NetworkChannel
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/NetworkChannel.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/NetworkChannel.html"/>
     /// </summary>
     public partial class NetworkChannel : Java.Lang.AutoCloseable
     {
@@ -1123,7 +1123,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region OffsetAndEpoch
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/OffsetAndEpoch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/OffsetAndEpoch.html"/>
     /// </summary>
     public partial class OffsetAndEpoch : Java.Lang.Comparable<Org.Apache.Kafka.Raft.OffsetAndEpoch>
     {
@@ -1168,7 +1168,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region OffsetMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/OffsetMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/OffsetMetadata.html"/>
     /// </summary>
     public partial class OffsetMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetMetadata>
     {
@@ -1215,7 +1215,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region QuorumConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/QuorumConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/QuorumConfig.html"/>
     /// </summary>
     public partial class QuorumConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumConfig>
     {
@@ -1256,7 +1256,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region ControllerQuorumBootstrapServersValidator
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumBootstrapServersValidator.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/QuorumConfig.ControllerQuorumBootstrapServersValidator.html"/>
         /// </summary>
         public partial class ControllerQuorumBootstrapServersValidator : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -1301,7 +1301,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region ControllerQuorumVotersValidator
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumVotersValidator.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/QuorumConfig.ControllerQuorumVotersValidator.html"/>
         /// </summary>
         public partial class ControllerQuorumVotersValidator : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -1350,7 +1350,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region QuorumState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/QuorumState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/QuorumState.html"/>
     /// </summary>
     public partial class QuorumState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumState>
     {
@@ -1395,7 +1395,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region QuorumStateStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/QuorumStateStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/QuorumStateStore.html"/>
     /// </summary>
     public partial class QuorumStateStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumStateStore>
     {
@@ -1442,7 +1442,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region RaftClient
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftClient.html"/>
     /// </summary>
     public partial class RaftClient : Java.Lang.AutoCloseable
     {
@@ -1485,7 +1485,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region Listener
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftClient.Listener.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftClient.Listener.html"/>
         /// </summary>
         public partial class Listener : MASES.JCOBridge.C2JBridge.JVMBridgeListener
         {
@@ -1552,7 +1552,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Listener<T>
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftClient.Listener.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftClient.Listener.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         public partial class Listener<T> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
@@ -1624,7 +1624,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region RaftClient<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftClient.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class RaftClient<T> : Java.Lang.AutoCloseable
@@ -1672,7 +1672,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region RaftMessage
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftMessage.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftMessage.html"/>
     /// </summary>
     public partial class RaftMessage : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RaftMessage>
     {
@@ -1719,7 +1719,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region RaftMessageQueue
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftMessageQueue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftMessageQueue.html"/>
     /// </summary>
     public partial class RaftMessageQueue : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RaftMessageQueue>
     {
@@ -1766,7 +1766,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region RaftRequest
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftRequest.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftRequest.html"/>
     /// </summary>
     public partial class RaftRequest : Org.Apache.Kafka.Raft.RaftMessage
     {
@@ -1809,7 +1809,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region Inbound
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftRequest.Inbound.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftRequest.Inbound.html"/>
         /// </summary>
         public partial class Inbound : Org.Apache.Kafka.Raft.RaftRequest
         {
@@ -1854,7 +1854,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Outbound
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftRequest.Outbound.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftRequest.Outbound.html"/>
         /// </summary>
         public partial class Outbound : Org.Apache.Kafka.Raft.RaftRequest
         {
@@ -1903,7 +1903,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region RaftResponse
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftResponse.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftResponse.html"/>
     /// </summary>
     public partial class RaftResponse : Org.Apache.Kafka.Raft.RaftMessage
     {
@@ -1946,7 +1946,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region Inbound
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftResponse.Inbound.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftResponse.Inbound.html"/>
         /// </summary>
         public partial class Inbound : Org.Apache.Kafka.Raft.RaftResponse
         {
@@ -1991,7 +1991,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Outbound
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftResponse.Outbound.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftResponse.Outbound.html"/>
         /// </summary>
         public partial class Outbound : Org.Apache.Kafka.Raft.RaftResponse
         {
@@ -2040,7 +2040,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region RaftUtil
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RaftUtil.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RaftUtil.html"/>
     /// </summary>
     public partial class RaftUtil : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RaftUtil>
     {
@@ -2085,7 +2085,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region ReplicatedCounter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/ReplicatedCounter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ReplicatedCounter.html"/>
     /// </summary>
     public partial class ReplicatedCounter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicatedCounter>
     {
@@ -2130,7 +2130,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region ReplicatedLog
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/ReplicatedLog.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ReplicatedLog.html"/>
     /// </summary>
     public partial class ReplicatedLog : Java.Lang.AutoCloseable
     {
@@ -2177,7 +2177,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region RequestManager
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html"/>
     /// </summary>
     public partial class RequestManager : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RequestManager>
     {
@@ -2222,7 +2222,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region ResignedState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/ResignedState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ResignedState.html"/>
     /// </summary>
     public partial class ResignedState : Org.Apache.Kafka.Raft.EpochState
     {
@@ -2267,7 +2267,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region UnattachedState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/UnattachedState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/UnattachedState.html"/>
     /// </summary>
     public partial class UnattachedState : Org.Apache.Kafka.Raft.EpochState
     {
@@ -2312,7 +2312,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region ValidOffsetAndEpoch
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/ValidOffsetAndEpoch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ValidOffsetAndEpoch.html"/>
     /// </summary>
     public partial class ValidOffsetAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValidOffsetAndEpoch>
     {
@@ -2353,7 +2353,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region Kind
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html"/>
         /// </summary>
         public partial class Kind : Java.Lang.Enum<Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind>
         {
@@ -2402,7 +2402,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region VotedState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/VotedState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/VotedState.html"/>
     /// </summary>
     public partial class VotedState : Org.Apache.Kafka.Raft.EpochState
     {

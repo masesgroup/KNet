@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Connect.Header
 {
     #region ConnectHeaders
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/header/ConnectHeaders.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html"/>
     /// </summary>
     public partial class ConnectHeaders : Org.Apache.Kafka.Connect.Header.Headers
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Header
 
     #region Header
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/header/Header.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/Header.html"/>
     /// </summary>
     public partial class Header : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Header>
     {
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Connect.Header
 
     #region Headers
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/header/Headers.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/Headers.html"/>
     /// </summary>
     public partial class Headers : Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header>
     {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Connect.Header
         // TODO: complete the class
         #region HeaderTransform
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/header/Headers.HeaderTransform.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/Headers.HeaderTransform.html"/>
         /// </summary>
         public partial class HeaderTransform : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HeaderTransform>
         {

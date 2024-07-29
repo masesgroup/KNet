@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Connect.Components
 {
     #region Versioned
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/components/Versioned.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/components/Versioned.html"/>
     /// </summary>
     public partial class Versioned : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Versioned>
     {

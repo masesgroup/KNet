@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#hasNext--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#hasNext--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasNext()
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<bool>("hasNext", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogEpoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogEpoch--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LastContainedLogEpoch()
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<int>("lastContainedLogEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#next--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#next--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Next()
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature("next", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogOffset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogOffset--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LastContainedLogOffset()
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("lastContainedLogOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogTimestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogTimestamp--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LastContainedLogTimestamp()
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("lastContainedLogTimestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#snapshotId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#snapshotId--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.OffsetAndEpoch SnapshotId()
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.OffsetAndEpoch>("snapshotId", "()Lorg/apache/kafka/raft/OffsetAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#close--"/>
         /// </summary>
         public void Close()
         {
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#hasNext--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#hasNext--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasNext()
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<bool>("hasNext", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogEpoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogEpoch--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LastContainedLogEpoch()
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<int>("lastContainedLogEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#next--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#next--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Next()
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature("next", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogOffset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogOffset--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LastContainedLogOffset()
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("lastContainedLogOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogTimestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#lastContainedLogTimestamp--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LastContainedLogTimestamp()
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("lastContainedLogTimestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#snapshotId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#snapshotId--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.OffsetAndEpoch SnapshotId()
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.OffsetAndEpoch>("snapshotId", "()Lorg/apache/kafka/raft/OffsetAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html#close--"/>
         /// </summary>
         public void Close()
         {

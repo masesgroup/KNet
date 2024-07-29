@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Streams.State
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/DslKeyValueParams.html#org.apache.kafka.streams.state.DslKeyValueParams(java.lang.String,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/DslKeyValueParams.html#org.apache.kafka.streams.state.DslKeyValueParams(java.lang.String,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/DslKeyValueParams.html#isTimestamped--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/DslKeyValueParams.html#isTimestamped--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsTimestamped()
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<bool>("isTimestamped", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/DslKeyValueParams.html#name--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/DslKeyValueParams.html#name--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()

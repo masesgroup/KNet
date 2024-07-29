@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 {
     #region ConfigProvider
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/provider/ConfigProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/provider/ConfigProvider.html"/>
     /// </summary>
     public partial class ConfigProvider : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigProvider>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 
     #region DirectoryConfigProvider
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/provider/DirectoryConfigProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/provider/DirectoryConfigProvider.html"/>
     /// </summary>
     public partial class DirectoryConfigProvider : Org.Apache.Kafka.Common.Config.Provider.ConfigProvider
     {
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 
     #region EnvVarConfigProvider
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html"/>
     /// </summary>
     public partial class EnvVarConfigProvider : Org.Apache.Kafka.Common.Config.Provider.ConfigProvider
     {
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 
     #region FileConfigProvider
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/config/provider/FileConfigProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/provider/FileConfigProvider.html"/>
     /// </summary>
     public partial class FileConfigProvider : Org.Apache.Kafka.Common.Config.Provider.ConfigProvider
     {

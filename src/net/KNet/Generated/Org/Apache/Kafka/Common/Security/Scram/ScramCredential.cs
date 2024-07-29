@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/scram/ScramCredential.html#org.apache.kafka.common.security.scram.ScramCredential(byte[],byte[],byte[],int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/scram/ScramCredential.html#org.apache.kafka.common.security.scram.ScramCredential(byte[],byte[],byte[],int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/scram/ScramCredential.html#salt--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/scram/ScramCredential.html#salt--"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte[] Salt()
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecuteWithSignatureArray<byte>("salt", "()[B");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/scram/ScramCredential.html#serverKey--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/scram/ScramCredential.html#serverKey--"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte[] ServerKey()
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecuteWithSignatureArray<byte>("serverKey", "()[B");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/scram/ScramCredential.html#storedKey--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/scram/ScramCredential.html#storedKey--"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte[] StoredKey()
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecuteWithSignatureArray<byte>("storedKey", "()[B");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/scram/ScramCredential.html#iterations--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/scram/ScramCredential.html#iterations--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Iterations()

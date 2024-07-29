@@ -41,30 +41,12 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#of-org.apache.kafka.streams.processor.assignment.ProcessId-java.util.Set-"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId"/></param>
-        /// <param name="arg1"><see cref="Java.Util.Set"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment"/></returns>
-        public static Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment Of(Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId arg0, Java.Util.Set<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask> arg1)
-        {
-            return SExecute<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment>(LocalBridgeClazz, "of", arg0, arg1);
-        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#tasks--"/>
-        /// </summary>
-        /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Streams.Processor.TaskId, Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask> Tasks()
-        {
-            return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Streams.Processor.TaskId, Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask>>("tasks", "()Ljava/util/Map;");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#followupRebalanceDeadline--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#followupRebalanceDeadline--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Time.Instant> FollowupRebalanceDeadline()
@@ -72,7 +54,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.Optional<Java.Time.Instant>>("followupRebalanceDeadline", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#withFollowupRebalance-java.time.Instant-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#withFollowupRebalance-java.time.Instant-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment"/></returns>
@@ -81,150 +63,18 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment>("withFollowupRebalance", "(Ljava/time/Instant;)Lorg/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#processId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#processId--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId"/></returns>
         public Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId ProcessId()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId>("processId", "()Lorg/apache/kafka/streams/processor/assignment/ProcessId;");
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#assignTask-org.apache.kafka.streams.processor.assignment.KafkaStreamsAssignment.AssignedTask-"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask"/></param>
-        public void AssignTask(Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask arg0)
-        {
-            IExecuteWithSignature("assignTask", "(Lorg/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment$AssignedTask;)V", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#removeTask-org.apache.kafka.streams.processor.assignment.KafkaStreamsAssignment.AssignedTask-"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask"/></param>
-        public void RemoveTask(Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask arg0)
-        {
-            IExecuteWithSignature("removeTask", "(Lorg/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment$AssignedTask;)V", arg0);
-        }
 
         #endregion
 
         #region Nested classes
-        #region AssignedTask
-        public partial class AssignedTask
-        {
-            #region Constructors
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.AssignedTask.html#org.apache.kafka.streams.processor.assignment.KafkaStreamsAssignment$AssignedTask(org.apache.kafka.streams.processor.TaskId,org.apache.kafka.streams.processor.assignment.KafkaStreamsAssignment.AssignedTask.Type)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></param>
-            /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type"/></param>
-            public AssignedTask(Org.Apache.Kafka.Streams.Processor.TaskId arg0, Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type arg1)
-                : base(arg0, arg1)
-            {
-            }
 
-            #endregion
-
-            #region Class/Interface conversion operators
-
-            #endregion
-
-            #region Fields
-
-            #endregion
-
-            #region Static methods
-
-            #endregion
-
-            #region Instance methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.AssignedTask.html#type--"/>
-            /// </summary>
-            /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type"/></returns>
-            public Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type Type()
-            {
-                return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type>("type", "()Lorg/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment$AssignedTask$Type;");
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.AssignedTask.html#id--"/>
-            /// </summary>
-            /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
-            public Org.Apache.Kafka.Streams.Processor.TaskId Id()
-            {
-                return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.TaskId>("id", "()Lorg/apache/kafka/streams/processor/TaskId;");
-            }
-
-            #endregion
-
-            #region Nested classes
-            #region Type
-            public partial class Type
-            {
-                #region Constructors
-
-                #endregion
-
-                #region Class/Interface conversion operators
-
-                #endregion
-
-                #region Fields
-                /// <summary>
-                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.AssignedTask.Type.html#ACTIVE"/>
-                /// </summary>
-                public static Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type ACTIVE { get { if (!_ACTIVEReady) { _ACTIVEContent = SGetField<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type>(LocalBridgeClazz, "ACTIVE"); _ACTIVEReady = true; } return _ACTIVEContent; } }
-                private static Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type _ACTIVEContent = default;
-                private static bool _ACTIVEReady = false; // this is used because in case of generics 
-                /// <summary>
-                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.AssignedTask.Type.html#STANDBY"/>
-                /// </summary>
-                public static Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type STANDBY { get { if (!_STANDBYReady) { _STANDBYContent = SGetField<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type>(LocalBridgeClazz, "STANDBY"); _STANDBYReady = true; } return _STANDBYContent; } }
-                private static Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type _STANDBYContent = default;
-                private static bool _STANDBYReady = false; // this is used because in case of generics 
-
-                #endregion
-
-                #region Static methods
-                /// <summary>
-                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.AssignedTask.Type.html#valueOf-java.lang.String-"/>
-                /// </summary>
-                /// <param name="arg0"><see cref="Java.Lang.String"/></param>
-                /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type"/></returns>
-                public static Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type ValueOf(Java.Lang.String arg0)
-                {
-                    return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment$AssignedTask$Type;", arg0);
-                }
-                /// <summary>
-                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.AssignedTask.Type.html#values--"/>
-                /// </summary>
-                /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type"/></returns>
-                public static Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type[] Values()
-                {
-                    return SExecuteWithSignatureArray<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type>(LocalBridgeClazz, "values", "()[Lorg/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment$AssignedTask$Type;");
-                }
-
-                #endregion
-
-                #region Instance methods
-
-                #endregion
-
-                #region Nested classes
-
-                #endregion
-
-                // TODO: complete the class
-            }
-            #endregion
-
-        
-            #endregion
-
-            // TODO: complete the class
-        }
-        #endregion
-
-    
         #endregion
 
         // TODO: complete the class

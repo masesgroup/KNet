@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/BrokerApiVersionsCommand.html#execute-java.lang.String[]-java.io.PrintStream-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/BrokerApiVersionsCommand.html#execute-java.lang.String[]-java.io.PrintStream-"/>
         /// </summary>
         /// <param name="args"><see cref="Java.Lang.String"/></param>
         /// <param name="_out"><see cref="Java.Io.PrintStream"/></param>
@@ -51,7 +51,7 @@ namespace Kafka.Admin
             SExecute(LocalBridgeClazz, "execute", args, _out);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/BrokerApiVersionsCommand.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/BrokerApiVersionsCommand.html#main-java.lang.String[]-"/>
         /// </summary>
         /// <param name="args"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] args)

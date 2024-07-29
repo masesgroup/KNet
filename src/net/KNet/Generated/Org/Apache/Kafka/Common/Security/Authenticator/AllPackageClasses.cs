@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 {
     #region AbstractLogin
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/AbstractLogin.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/AbstractLogin.html"/>
     /// </summary>
     public partial class AbstractLogin : Org.Apache.Kafka.Common.Security.Auth.Login
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         // TODO: complete the class
         #region DefaultLoginCallbackHandler
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/AbstractLogin.DefaultLoginCallbackHandler.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/AbstractLogin.DefaultLoginCallbackHandler.html"/>
         /// </summary>
         public partial class DefaultLoginCallbackHandler : Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler
         {
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
     #region CredentialCache
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.html"/>
     /// </summary>
     public partial class CredentialCache : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CredentialCache>
     {
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         // TODO: complete the class
         #region Cache
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html"/>
         /// </summary>
         public partial class Cache : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Cache>
         {
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Cache<C>
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html"/>
         /// </summary>
         /// <typeparam name="C"></typeparam>
         public partial class Cache<C> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Cache<C>>
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
     #region DefaultKafkaPrincipalBuilder
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/DefaultKafkaPrincipalBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/DefaultKafkaPrincipalBuilder.html"/>
     /// </summary>
     public partial class DefaultKafkaPrincipalBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DefaultKafkaPrincipalBuilder>
     {
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
     #region DefaultLogin
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/DefaultLogin.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/DefaultLogin.html"/>
     /// </summary>
     public partial class DefaultLogin : Org.Apache.Kafka.Common.Security.Authenticator.AbstractLogin
     {
@@ -346,7 +346,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
     #region LoginManager
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/LoginManager.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/LoginManager.html"/>
     /// </summary>
     public partial class LoginManager : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LoginManager>
     {
@@ -391,7 +391,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
     #region SaslClientAuthenticator
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html"/>
     /// </summary>
     public partial class SaslClientAuthenticator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslClientAuthenticator>
     {
@@ -432,7 +432,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         // TODO: complete the class
         #region SaslState
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.SaslState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.SaslState.html"/>
         /// </summary>
         public partial class SaslState : Java.Lang.Enum<Org.Apache.Kafka.Common.Security.Authenticator.SaslClientAuthenticator.SaslState>
         {
@@ -481,7 +481,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
     #region SaslClientCallbackHandler
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/SaslClientCallbackHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/SaslClientCallbackHandler.html"/>
     /// </summary>
     public partial class SaslClientCallbackHandler : Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler
     {
@@ -526,7 +526,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
     #region SaslInternalConfigs
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/SaslInternalConfigs.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/SaslInternalConfigs.html"/>
     /// </summary>
     public partial class SaslInternalConfigs : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslInternalConfigs>
     {
@@ -571,7 +571,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
     #region SaslServerAuthenticator
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html"/>
     /// </summary>
     public partial class SaslServerAuthenticator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslServerAuthenticator>
     {
@@ -616,7 +616,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
     #region SaslServerCallbackHandler
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/SaslServerCallbackHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/SaslServerCallbackHandler.html"/>
     /// </summary>
     public partial class SaslServerCallbackHandler : Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler
     {

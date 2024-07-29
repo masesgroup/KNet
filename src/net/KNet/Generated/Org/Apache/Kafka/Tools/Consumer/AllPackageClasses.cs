@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
 {
     #region ConsoleConsumer
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/ConsoleConsumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/ConsoleConsumer.html"/>
     /// </summary>
     public partial class ConsoleConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsoleConsumer>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
         // TODO: complete the class
         #region ConsumerWrapper
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/ConsoleConsumer.ConsumerWrapper.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/ConsoleConsumer.ConsumerWrapper.html"/>
         /// </summary>
         public partial class ConsumerWrapper : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerWrapper>
         {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
 
     #region ConsoleConsumerOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/ConsoleConsumerOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/ConsoleConsumerOptions.html"/>
     /// </summary>
     public partial class ConsoleConsumerOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsoleConsumerOptions>
     {

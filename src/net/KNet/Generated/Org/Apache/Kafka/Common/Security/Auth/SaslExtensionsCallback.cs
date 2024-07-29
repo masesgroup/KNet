@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/auth/SaslExtensionsCallback.html#extensions--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/auth/SaslExtensionsCallback.html#extensions--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SaslExtensions"/></returns>
         public Org.Apache.Kafka.Common.Security.Auth.SaslExtensions Extensions()
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Security.Auth.SaslExtensions>("extensions", "()Lorg/apache/kafka/common/security/auth/SaslExtensions;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/auth/SaslExtensionsCallback.html#extensions-org.apache.kafka.common.security.auth.SaslExtensions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/auth/SaslExtensionsCallback.html#extensions-org.apache.kafka.common.security.auth.SaslExtensions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Auth.SaslExtensions"/></param>
         public void Extensions(Org.Apache.Kafka.Common.Security.Auth.SaslExtensions arg0)

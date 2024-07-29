@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region AbortTransactionOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AbortTransactionOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AbortTransactionOptions.html"/>
     /// </summary>
     public partial class AbortTransactionOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AbortTransactionOptions>
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AbortTransactionResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AbortTransactionResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AbortTransactionResult.html"/>
     /// </summary>
     public partial class AbortTransactionResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AbortTransactionResult>
     {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AbortTransactionSpec
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AbortTransactionSpec.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html"/>
     /// </summary>
     public partial class AbortTransactionSpec : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AbortTransactionSpec>
     {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AbstractOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AbstractOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AbstractOptions.html"/>
     /// </summary>
     public partial class AbstractOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AbstractOptions>
     {
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AbstractOptions<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AbstractOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AbstractOptions.html"/>
     /// </summary>
     /// <typeparam name="T"><see cref="Org.Apache.Kafka.Clients.Admin.AbstractOptions"/></typeparam>
     public partial class AbstractOptions<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AbstractOptions<T>> where T : Org.Apache.Kafka.Clients.Admin.AbstractOptions<T>
@@ -258,7 +258,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region Admin
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/Admin.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/Admin.html"/>
     /// </summary>
     public partial class Admin : Java.Lang.AutoCloseable
     {
@@ -305,7 +305,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AdminClient
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AdminClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AdminClient.html"/>
     /// </summary>
     public partial class AdminClient : Org.Apache.Kafka.Clients.Admin.Admin
     {
@@ -352,7 +352,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AdminClientConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AdminClientConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AdminClientConfig.html"/>
     /// </summary>
     public partial class AdminClientConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -397,7 +397,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterClientQuotasOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterClientQuotasOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterClientQuotasOptions.html"/>
     /// </summary>
     public partial class AlterClientQuotasOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterClientQuotasOptions>
     {
@@ -442,7 +442,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterClientQuotasResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterClientQuotasResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterClientQuotasResult.html"/>
     /// </summary>
     public partial class AlterClientQuotasResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterClientQuotasResult>
     {
@@ -487,7 +487,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterConfigOp
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterConfigOp.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterConfigOp.html"/>
     /// </summary>
     public partial class AlterConfigOp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterConfigOp>
     {
@@ -528,7 +528,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region OpType
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html"/>
         /// </summary>
         public partial class OpType : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType>
         {
@@ -577,7 +577,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterConfigsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterConfigsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterConfigsOptions.html"/>
     /// </summary>
     public partial class AlterConfigsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions>
     {
@@ -622,7 +622,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterConfigsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterConfigsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterConfigsResult.html"/>
     /// </summary>
     public partial class AlterConfigsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterConfigsResult>
     {
@@ -667,7 +667,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterConsumerGroupOffsetsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsOptions.html"/>
     /// </summary>
     public partial class AlterConsumerGroupOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsOptions>
     {
@@ -712,7 +712,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterConsumerGroupOffsetsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsResult.html"/>
     /// </summary>
     public partial class AlterConsumerGroupOffsetsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterConsumerGroupOffsetsResult>
     {
@@ -757,7 +757,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterPartitionReassignmentsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html"/>
     /// </summary>
     public partial class AlterPartitionReassignmentsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions>
     {
@@ -802,7 +802,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterPartitionReassignmentsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterPartitionReassignmentsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsResult.html"/>
     /// </summary>
     public partial class AlterPartitionReassignmentsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterPartitionReassignmentsResult>
     {
@@ -847,7 +847,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterReplicaLogDirsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterReplicaLogDirsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsOptions.html"/>
     /// </summary>
     public partial class AlterReplicaLogDirsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions>
     {
@@ -892,7 +892,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterReplicaLogDirsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html"/>
     /// </summary>
     public partial class AlterReplicaLogDirsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterReplicaLogDirsResult>
     {
@@ -937,7 +937,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterUserScramCredentialsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterUserScramCredentialsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsOptions.html"/>
     /// </summary>
     public partial class AlterUserScramCredentialsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsOptions>
     {
@@ -982,7 +982,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region AlterUserScramCredentialsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/AlterUserScramCredentialsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsResult.html"/>
     /// </summary>
     public partial class AlterUserScramCredentialsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterUserScramCredentialsResult>
     {
@@ -1027,7 +1027,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ClientMetricsResourceListing
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ClientMetricsResourceListing.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ClientMetricsResourceListing.html"/>
     /// </summary>
     public partial class ClientMetricsResourceListing : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientMetricsResourceListing>
     {
@@ -1072,7 +1072,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region Config
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/Config.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/Config.html"/>
     /// </summary>
     public partial class Config : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Config>
     {
@@ -1117,7 +1117,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ConfigEntry
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ConfigEntry.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ConfigEntry.html"/>
     /// </summary>
     public partial class ConfigEntry : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigEntry>
     {
@@ -1158,7 +1158,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region ConfigSource
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ConfigEntry.ConfigSource.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSource.html"/>
         /// </summary>
         public partial class ConfigSource : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>
         {
@@ -1203,7 +1203,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region ConfigSynonym
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html"/>
         /// </summary>
         public partial class ConfigSynonym : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigSynonym>
         {
@@ -1248,7 +1248,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region ConfigType
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ConfigEntry.ConfigType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigType.html"/>
         /// </summary>
         public partial class ConfigType : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType>
         {
@@ -1297,7 +1297,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ConsumerGroupDescription
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html"/>
     /// </summary>
     public partial class ConsumerGroupDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupDescription>
     {
@@ -1342,7 +1342,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ConsumerGroupListing
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html"/>
     /// </summary>
     public partial class ConsumerGroupListing : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupListing>
     {
@@ -1387,7 +1387,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region CreateAclsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/CreateAclsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/CreateAclsOptions.html"/>
     /// </summary>
     public partial class CreateAclsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.CreateAclsOptions>
     {
@@ -1432,7 +1432,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region CreateAclsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/CreateAclsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/CreateAclsResult.html"/>
     /// </summary>
     public partial class CreateAclsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CreateAclsResult>
     {
@@ -1477,7 +1477,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region CreateDelegationTokenOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html"/>
     /// </summary>
     public partial class CreateDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions>
     {
@@ -1522,7 +1522,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region CreateDelegationTokenResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html"/>
     /// </summary>
     public partial class CreateDelegationTokenResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CreateDelegationTokenResult>
     {
@@ -1567,7 +1567,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region CreatePartitionsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/CreatePartitionsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/CreatePartitionsOptions.html"/>
     /// </summary>
     public partial class CreatePartitionsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions>
     {
@@ -1612,7 +1612,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region CreatePartitionsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/CreatePartitionsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/CreatePartitionsResult.html"/>
     /// </summary>
     public partial class CreatePartitionsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CreatePartitionsResult>
     {
@@ -1657,7 +1657,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region CreateTopicsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/CreateTopicsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html"/>
     /// </summary>
     public partial class CreateTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions>
     {
@@ -1702,7 +1702,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region CreateTopicsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/CreateTopicsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/CreateTopicsResult.html"/>
     /// </summary>
     public partial class CreateTopicsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CreateTopicsResult>
     {
@@ -1743,7 +1743,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region TopicMetadataAndConfig
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html"/>
         /// </summary>
         public partial class TopicMetadataAndConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicMetadataAndConfig>
         {
@@ -1792,7 +1792,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DeleteAclsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteAclsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteAclsOptions.html"/>
     /// </summary>
     public partial class DeleteAclsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteAclsOptions>
     {
@@ -1837,7 +1837,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DeleteAclsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteAclsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteAclsResult.html"/>
     /// </summary>
     public partial class DeleteAclsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteAclsResult>
     {
@@ -1878,7 +1878,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region FilterResult
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResult.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResult.html"/>
         /// </summary>
         public partial class FilterResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FilterResult>
         {
@@ -1923,7 +1923,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region FilterResults
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResults.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResults.html"/>
         /// </summary>
         public partial class FilterResults : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FilterResults>
         {
@@ -1972,7 +1972,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DeleteConsumerGroupOffsetsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsOptions.html"/>
     /// </summary>
     public partial class DeleteConsumerGroupOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions>
     {
@@ -2017,7 +2017,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DeleteConsumerGroupOffsetsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html"/>
     /// </summary>
     public partial class DeleteConsumerGroupOffsetsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteConsumerGroupOffsetsResult>
     {
@@ -2062,7 +2062,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DeleteConsumerGroupsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteConsumerGroupsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteConsumerGroupsOptions.html"/>
     /// </summary>
     public partial class DeleteConsumerGroupsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions>
     {
@@ -2107,7 +2107,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DeleteConsumerGroupsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteConsumerGroupsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteConsumerGroupsResult.html"/>
     /// </summary>
     public partial class DeleteConsumerGroupsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteConsumerGroupsResult>
     {
@@ -2152,7 +2152,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DeletedRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeletedRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeletedRecords.html"/>
     /// </summary>
     public partial class DeletedRecords : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeletedRecords>
     {
@@ -2197,7 +2197,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DeleteRecordsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteRecordsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteRecordsOptions.html"/>
     /// </summary>
     public partial class DeleteRecordsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteRecordsOptions>
     {
@@ -2242,7 +2242,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DeleteRecordsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteRecordsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteRecordsResult.html"/>
     /// </summary>
     public partial class DeleteRecordsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsResult>
     {
@@ -2287,7 +2287,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DeleteTopicsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteTopicsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteTopicsOptions.html"/>
     /// </summary>
     public partial class DeleteTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions>
     {
@@ -2332,7 +2332,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DeleteTopicsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteTopicsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteTopicsResult.html"/>
     /// </summary>
     public partial class DeleteTopicsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteTopicsResult>
     {
@@ -2377,7 +2377,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeAclsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeAclsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeAclsOptions.html"/>
     /// </summary>
     public partial class DescribeAclsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeAclsOptions>
     {
@@ -2422,7 +2422,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeAclsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeAclsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeAclsResult.html"/>
     /// </summary>
     public partial class DescribeAclsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeAclsResult>
     {
@@ -2467,7 +2467,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeClientQuotasOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeClientQuotasOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeClientQuotasOptions.html"/>
     /// </summary>
     public partial class DescribeClientQuotasOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasOptions>
     {
@@ -2512,7 +2512,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeClientQuotasResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html"/>
     /// </summary>
     public partial class DescribeClientQuotasResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeClientQuotasResult>
     {
@@ -2557,7 +2557,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeClusterOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeClusterOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeClusterOptions.html"/>
     /// </summary>
     public partial class DescribeClusterOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeClusterOptions>
     {
@@ -2602,7 +2602,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeClusterResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeClusterResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeClusterResult.html"/>
     /// </summary>
     public partial class DescribeClusterResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeClusterResult>
     {
@@ -2647,7 +2647,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeConfigsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeConfigsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeConfigsOptions.html"/>
     /// </summary>
     public partial class DescribeConfigsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeConfigsOptions>
     {
@@ -2692,7 +2692,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeConfigsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeConfigsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeConfigsResult.html"/>
     /// </summary>
     public partial class DescribeConfigsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeConfigsResult>
     {
@@ -2737,7 +2737,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeConsumerGroupsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeConsumerGroupsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsOptions.html"/>
     /// </summary>
     public partial class DescribeConsumerGroupsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions>
     {
@@ -2782,7 +2782,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeConsumerGroupsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html"/>
     /// </summary>
     public partial class DescribeConsumerGroupsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeConsumerGroupsResult>
     {
@@ -2827,7 +2827,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeDelegationTokenOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeDelegationTokenOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeDelegationTokenOptions.html"/>
     /// </summary>
     public partial class DescribeDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenOptions>
     {
@@ -2872,7 +2872,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeDelegationTokenResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeDelegationTokenResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeDelegationTokenResult.html"/>
     /// </summary>
     public partial class DescribeDelegationTokenResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeDelegationTokenResult>
     {
@@ -2917,7 +2917,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeFeaturesOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeFeaturesOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeFeaturesOptions.html"/>
     /// </summary>
     public partial class DescribeFeaturesOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeFeaturesOptions>
     {
@@ -2962,7 +2962,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeFeaturesResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeFeaturesResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeFeaturesResult.html"/>
     /// </summary>
     public partial class DescribeFeaturesResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeFeaturesResult>
     {
@@ -3007,7 +3007,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeLogDirsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeLogDirsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeLogDirsOptions.html"/>
     /// </summary>
     public partial class DescribeLogDirsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions>
     {
@@ -3052,7 +3052,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeLogDirsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeLogDirsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeLogDirsResult.html"/>
     /// </summary>
     public partial class DescribeLogDirsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeLogDirsResult>
     {
@@ -3097,7 +3097,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeMetadataQuorumOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeMetadataQuorumOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumOptions.html"/>
     /// </summary>
     public partial class DescribeMetadataQuorumOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumOptions>
     {
@@ -3142,7 +3142,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeMetadataQuorumResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html"/>
     /// </summary>
     public partial class DescribeMetadataQuorumResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeMetadataQuorumResult>
     {
@@ -3187,7 +3187,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeProducersOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeProducersOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeProducersOptions.html"/>
     /// </summary>
     public partial class DescribeProducersOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeProducersOptions>
     {
@@ -3232,7 +3232,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeProducersResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeProducersResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeProducersResult.html"/>
     /// </summary>
     public partial class DescribeProducersResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeProducersResult>
     {
@@ -3273,7 +3273,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region PartitionProducerState
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeProducersResult.PartitionProducerState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeProducersResult.PartitionProducerState.html"/>
         /// </summary>
         public partial class PartitionProducerState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionProducerState>
         {
@@ -3322,7 +3322,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeReplicaLogDirsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeReplicaLogDirsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsOptions.html"/>
     /// </summary>
     public partial class DescribeReplicaLogDirsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsOptions>
     {
@@ -3367,7 +3367,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeReplicaLogDirsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.html"/>
     /// </summary>
     public partial class DescribeReplicaLogDirsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeReplicaLogDirsResult>
     {
@@ -3408,7 +3408,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region ReplicaLogDirInfo
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.ReplicaLogDirInfo.html"/>
         /// </summary>
         public partial class ReplicaLogDirInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicaLogDirInfo>
         {
@@ -3457,7 +3457,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeTopicsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeTopicsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeTopicsOptions.html"/>
     /// </summary>
     public partial class DescribeTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions>
     {
@@ -3502,7 +3502,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeTopicsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeTopicsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html"/>
     /// </summary>
     public partial class DescribeTopicsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeTopicsResult>
     {
@@ -3547,7 +3547,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeTransactionsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeTransactionsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeTransactionsOptions.html"/>
     /// </summary>
     public partial class DescribeTransactionsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions>
     {
@@ -3592,7 +3592,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeTransactionsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeTransactionsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeTransactionsResult.html"/>
     /// </summary>
     public partial class DescribeTransactionsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeTransactionsResult>
     {
@@ -3637,7 +3637,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeUserScramCredentialsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeUserScramCredentialsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeUserScramCredentialsOptions.html"/>
     /// </summary>
     public partial class DescribeUserScramCredentialsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions>
     {
@@ -3682,7 +3682,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region DescribeUserScramCredentialsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DescribeUserScramCredentialsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DescribeUserScramCredentialsResult.html"/>
     /// </summary>
     public partial class DescribeUserScramCredentialsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeUserScramCredentialsResult>
     {
@@ -3727,7 +3727,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ElectLeadersOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ElectLeadersOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ElectLeadersOptions.html"/>
     /// </summary>
     public partial class ElectLeadersOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ElectLeadersOptions>
     {
@@ -3772,7 +3772,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ElectLeadersResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ElectLeadersResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ElectLeadersResult.html"/>
     /// </summary>
     public partial class ElectLeadersResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ElectLeadersResult>
     {
@@ -3817,7 +3817,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region EndpointType
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/EndpointType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/EndpointType.html"/>
     /// </summary>
     public partial class EndpointType : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.EndpointType>
     {
@@ -3862,7 +3862,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ExpireDelegationTokenOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ExpireDelegationTokenOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ExpireDelegationTokenOptions.html"/>
     /// </summary>
     public partial class ExpireDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenOptions>
     {
@@ -3907,7 +3907,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ExpireDelegationTokenResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ExpireDelegationTokenResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ExpireDelegationTokenResult.html"/>
     /// </summary>
     public partial class ExpireDelegationTokenResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ExpireDelegationTokenResult>
     {
@@ -3952,7 +3952,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region FeatureMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/FeatureMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/FeatureMetadata.html"/>
     /// </summary>
     public partial class FeatureMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureMetadata>
     {
@@ -3997,7 +3997,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region FeatureUpdate
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/FeatureUpdate.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/FeatureUpdate.html"/>
     /// </summary>
     public partial class FeatureUpdate : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureUpdate>
     {
@@ -4038,7 +4038,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region UpgradeType
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html"/>
         /// </summary>
         public partial class UpgradeType : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>
         {
@@ -4087,7 +4087,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region FenceProducersOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/FenceProducersOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/FenceProducersOptions.html"/>
     /// </summary>
     public partial class FenceProducersOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.FenceProducersOptions>
     {
@@ -4132,7 +4132,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region FenceProducersResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/FenceProducersResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/FenceProducersResult.html"/>
     /// </summary>
     public partial class FenceProducersResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FenceProducersResult>
     {
@@ -4177,7 +4177,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region FinalizedVersionRange
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/FinalizedVersionRange.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html"/>
     /// </summary>
     public partial class FinalizedVersionRange : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FinalizedVersionRange>
     {
@@ -4222,7 +4222,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ForwardingAdmin
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ForwardingAdmin.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ForwardingAdmin.html"/>
     /// </summary>
     public partial class ForwardingAdmin : Org.Apache.Kafka.Clients.Admin.Admin
     {
@@ -4267,7 +4267,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region KafkaAdminClient
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/KafkaAdminClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/KafkaAdminClient.html"/>
     /// </summary>
     public partial class KafkaAdminClient : Org.Apache.Kafka.Clients.Admin.AdminClient
     {
@@ -4312,7 +4312,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListClientMetricsResourcesOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListClientMetricsResourcesOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListClientMetricsResourcesOptions.html"/>
     /// </summary>
     public partial class ListClientMetricsResourcesOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesOptions>
     {
@@ -4357,7 +4357,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListClientMetricsResourcesResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListClientMetricsResourcesResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListClientMetricsResourcesResult.html"/>
     /// </summary>
     public partial class ListClientMetricsResourcesResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListClientMetricsResourcesResult>
     {
@@ -4402,7 +4402,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListConsumerGroupOffsetsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions.html"/>
     /// </summary>
     public partial class ListConsumerGroupOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions>
     {
@@ -4447,7 +4447,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListConsumerGroupOffsetsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsResult.html"/>
     /// </summary>
     public partial class ListConsumerGroupOffsetsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListConsumerGroupOffsetsResult>
     {
@@ -4492,7 +4492,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListConsumerGroupOffsetsSpec
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsSpec.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsSpec.html"/>
     /// </summary>
     public partial class ListConsumerGroupOffsetsSpec : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListConsumerGroupOffsetsSpec>
     {
@@ -4537,7 +4537,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListConsumerGroupsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html"/>
     /// </summary>
     public partial class ListConsumerGroupsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions>
     {
@@ -4582,7 +4582,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListConsumerGroupsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html"/>
     /// </summary>
     public partial class ListConsumerGroupsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListConsumerGroupsResult>
     {
@@ -4627,7 +4627,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListOffsetsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListOffsetsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html"/>
     /// </summary>
     public partial class ListOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListOffsetsOptions>
     {
@@ -4672,7 +4672,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListOffsetsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListOffsetsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListOffsetsResult.html"/>
     /// </summary>
     public partial class ListOffsetsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsResult>
     {
@@ -4713,7 +4713,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region ListOffsetsResultInfo
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html"/>
         /// </summary>
         public partial class ListOffsetsResultInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsResultInfo>
         {
@@ -4762,7 +4762,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListPartitionReassignmentsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListPartitionReassignmentsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListPartitionReassignmentsOptions.html"/>
     /// </summary>
     public partial class ListPartitionReassignmentsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions>
     {
@@ -4807,7 +4807,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListPartitionReassignmentsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListPartitionReassignmentsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListPartitionReassignmentsResult.html"/>
     /// </summary>
     public partial class ListPartitionReassignmentsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListPartitionReassignmentsResult>
     {
@@ -4852,7 +4852,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListTopicsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListTopicsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListTopicsOptions.html"/>
     /// </summary>
     public partial class ListTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListTopicsOptions>
     {
@@ -4897,7 +4897,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListTopicsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListTopicsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListTopicsResult.html"/>
     /// </summary>
     public partial class ListTopicsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListTopicsResult>
     {
@@ -4942,7 +4942,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListTransactionsOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListTransactionsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html"/>
     /// </summary>
     public partial class ListTransactionsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions>
     {
@@ -4987,7 +4987,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ListTransactionsResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListTransactionsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListTransactionsResult.html"/>
     /// </summary>
     public partial class ListTransactionsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListTransactionsResult>
     {
@@ -5032,7 +5032,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region LogDirDescription
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/LogDirDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/LogDirDescription.html"/>
     /// </summary>
     public partial class LogDirDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirDescription>
     {
@@ -5077,7 +5077,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region MemberAssignment
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/MemberAssignment.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/MemberAssignment.html"/>
     /// </summary>
     public partial class MemberAssignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MemberAssignment>
     {
@@ -5122,7 +5122,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region MemberDescription
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/MemberDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/MemberDescription.html"/>
     /// </summary>
     public partial class MemberDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MemberDescription>
     {
@@ -5167,7 +5167,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region MemberToRemove
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/MemberToRemove.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/MemberToRemove.html"/>
     /// </summary>
     public partial class MemberToRemove : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MemberToRemove>
     {
@@ -5212,7 +5212,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region NewPartitionReassignment
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/NewPartitionReassignment.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/NewPartitionReassignment.html"/>
     /// </summary>
     public partial class NewPartitionReassignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NewPartitionReassignment>
     {
@@ -5257,7 +5257,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region NewPartitions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/NewPartitions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/NewPartitions.html"/>
     /// </summary>
     public partial class NewPartitions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NewPartitions>
     {
@@ -5302,7 +5302,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region NewTopic
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/NewTopic.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/NewTopic.html"/>
     /// </summary>
     public partial class NewTopic : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NewTopic>
     {
@@ -5347,7 +5347,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region OffsetSpec
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/OffsetSpec.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/OffsetSpec.html"/>
     /// </summary>
     public partial class OffsetSpec : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetSpec>
     {
@@ -5388,7 +5388,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region EarliestSpec
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/OffsetSpec.EarliestSpec.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/OffsetSpec.EarliestSpec.html"/>
         /// </summary>
         public partial class EarliestSpec : Org.Apache.Kafka.Clients.Admin.OffsetSpec
         {
@@ -5433,7 +5433,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region LatestSpec
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/OffsetSpec.LatestSpec.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/OffsetSpec.LatestSpec.html"/>
         /// </summary>
         public partial class LatestSpec : Org.Apache.Kafka.Clients.Admin.OffsetSpec
         {
@@ -5478,7 +5478,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region MaxTimestampSpec
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/OffsetSpec.MaxTimestampSpec.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/OffsetSpec.MaxTimestampSpec.html"/>
         /// </summary>
         public partial class MaxTimestampSpec : Org.Apache.Kafka.Clients.Admin.OffsetSpec
         {
@@ -5523,7 +5523,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region TimestampSpec
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/OffsetSpec.TimestampSpec.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/OffsetSpec.TimestampSpec.html"/>
         /// </summary>
         public partial class TimestampSpec : Org.Apache.Kafka.Clients.Admin.OffsetSpec
         {
@@ -5572,7 +5572,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region PartitionReassignment
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/PartitionReassignment.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/PartitionReassignment.html"/>
     /// </summary>
     public partial class PartitionReassignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionReassignment>
     {
@@ -5617,7 +5617,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ProducerState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ProducerState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ProducerState.html"/>
     /// </summary>
     public partial class ProducerState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerState>
     {
@@ -5662,7 +5662,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region QuorumInfo
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/QuorumInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/QuorumInfo.html"/>
     /// </summary>
     public partial class QuorumInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumInfo>
     {
@@ -5703,7 +5703,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region ReplicaState
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html"/>
         /// </summary>
         public partial class ReplicaState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicaState>
         {
@@ -5752,7 +5752,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region RecordsToDelete
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/RecordsToDelete.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/RecordsToDelete.html"/>
     /// </summary>
     public partial class RecordsToDelete : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordsToDelete>
     {
@@ -5797,7 +5797,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region RemoveMembersFromConsumerGroupOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html"/>
     /// </summary>
     public partial class RemoveMembersFromConsumerGroupOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions>
     {
@@ -5842,7 +5842,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region RemoveMembersFromConsumerGroupResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupResult.html"/>
     /// </summary>
     public partial class RemoveMembersFromConsumerGroupResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RemoveMembersFromConsumerGroupResult>
     {
@@ -5887,7 +5887,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region RenewDelegationTokenOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html"/>
     /// </summary>
     public partial class RenewDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenOptions>
     {
@@ -5932,7 +5932,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region RenewDelegationTokenResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/RenewDelegationTokenResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/RenewDelegationTokenResult.html"/>
     /// </summary>
     public partial class RenewDelegationTokenResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RenewDelegationTokenResult>
     {
@@ -5977,7 +5977,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ReplicaInfo
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ReplicaInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ReplicaInfo.html"/>
     /// </summary>
     public partial class ReplicaInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicaInfo>
     {
@@ -6022,7 +6022,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ScramCredentialInfo
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ScramCredentialInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html"/>
     /// </summary>
     public partial class ScramCredentialInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ScramCredentialInfo>
     {
@@ -6067,7 +6067,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region ScramMechanism
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ScramMechanism.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ScramMechanism.html"/>
     /// </summary>
     public partial class ScramMechanism : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.ScramMechanism>
     {
@@ -6112,7 +6112,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region SupportedVersionRange
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/SupportedVersionRange.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/SupportedVersionRange.html"/>
     /// </summary>
     public partial class SupportedVersionRange : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SupportedVersionRange>
     {
@@ -6157,7 +6157,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region TopicDescription
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/TopicDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/TopicDescription.html"/>
     /// </summary>
     public partial class TopicDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicDescription>
     {
@@ -6202,7 +6202,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region TopicListing
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/TopicListing.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/TopicListing.html"/>
     /// </summary>
     public partial class TopicListing : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicListing>
     {
@@ -6247,7 +6247,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region TransactionDescription
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/TransactionDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/TransactionDescription.html"/>
     /// </summary>
     public partial class TransactionDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionDescription>
     {
@@ -6292,7 +6292,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region TransactionListing
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/TransactionListing.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/TransactionListing.html"/>
     /// </summary>
     public partial class TransactionListing : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionListing>
     {
@@ -6337,7 +6337,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region TransactionState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/TransactionState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/TransactionState.html"/>
     /// </summary>
     public partial class TransactionState : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.TransactionState>
     {
@@ -6382,7 +6382,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region UnregisterBrokerOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/UnregisterBrokerOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/UnregisterBrokerOptions.html"/>
     /// </summary>
     public partial class UnregisterBrokerOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions>
     {
@@ -6427,7 +6427,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region UnregisterBrokerResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/UnregisterBrokerResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/UnregisterBrokerResult.html"/>
     /// </summary>
     public partial class UnregisterBrokerResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UnregisterBrokerResult>
     {
@@ -6472,7 +6472,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region UpdateFeaturesOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html"/>
     /// </summary>
     public partial class UpdateFeaturesOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions>
     {
@@ -6517,7 +6517,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region UpdateFeaturesResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/UpdateFeaturesResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/UpdateFeaturesResult.html"/>
     /// </summary>
     public partial class UpdateFeaturesResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UpdateFeaturesResult>
     {
@@ -6562,7 +6562,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region UserScramCredentialAlteration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/UserScramCredentialAlteration.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/UserScramCredentialAlteration.html"/>
     /// </summary>
     public partial class UserScramCredentialAlteration : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UserScramCredentialAlteration>
     {
@@ -6609,7 +6609,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region UserScramCredentialDeletion
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/UserScramCredentialDeletion.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/UserScramCredentialDeletion.html"/>
     /// </summary>
     public partial class UserScramCredentialDeletion : Org.Apache.Kafka.Clients.Admin.UserScramCredentialAlteration
     {
@@ -6654,7 +6654,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region UserScramCredentialsDescription
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/UserScramCredentialsDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/UserScramCredentialsDescription.html"/>
     /// </summary>
     public partial class UserScramCredentialsDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UserScramCredentialsDescription>
     {
@@ -6699,7 +6699,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
     #region UserScramCredentialUpsertion
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html"/>
     /// </summary>
     public partial class UserScramCredentialUpsertion : Org.Apache.Kafka.Clients.Admin.UserScramCredentialAlteration
     {

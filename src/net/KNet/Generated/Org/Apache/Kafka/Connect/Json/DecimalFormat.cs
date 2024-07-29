@@ -38,13 +38,13 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/DecimalFormat.html#BASE64"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/DecimalFormat.html#BASE64"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Json.DecimalFormat BASE64 { get { if (!_BASE64Ready) { _BASE64Content = SGetField<Org.Apache.Kafka.Connect.Json.DecimalFormat>(LocalBridgeClazz, "BASE64"); _BASE64Ready = true; } return _BASE64Content; } }
         private static Org.Apache.Kafka.Connect.Json.DecimalFormat _BASE64Content = default;
         private static bool _BASE64Ready = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/DecimalFormat.html#NUMERIC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/DecimalFormat.html#NUMERIC"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Json.DecimalFormat NUMERIC { get { if (!_NUMERICReady) { _NUMERICContent = SGetField<Org.Apache.Kafka.Connect.Json.DecimalFormat>(LocalBridgeClazz, "NUMERIC"); _NUMERICReady = true; } return _NUMERICContent; } }
         private static Org.Apache.Kafka.Connect.Json.DecimalFormat _NUMERICContent = default;
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/DecimalFormat.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/DecimalFormat.html#valueOf-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Json.DecimalFormat"/></returns>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Json.DecimalFormat>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/connect/json/DecimalFormat;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/DecimalFormat.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/DecimalFormat.html#values--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Json.DecimalFormat"/></returns>
         public static Org.Apache.Kafka.Connect.Json.DecimalFormat[] Values()

@@ -28,7 +28,7 @@ namespace Kafka.Admin
 {
     #region AclCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.html"/>
     /// </summary>
     public partial class AclCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -69,7 +69,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region AclCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AclCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AclCommandOptions.html"/>
         /// </summary>
         public partial class AclCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommandOptions>
         {
@@ -114,7 +114,7 @@ namespace Kafka.Admin
 
         #region AclCommandService
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AclCommandService.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AclCommandService.html"/>
         /// </summary>
         public partial class AclCommandService : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommandService>
         {
@@ -161,7 +161,7 @@ namespace Kafka.Admin
 
         #region AuthorizerService
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html"/>
         /// </summary>
         public partial class AuthorizerService : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AuthorizerService>
         {
@@ -210,7 +210,7 @@ namespace Kafka.Admin
 
     #region BrokerApiVersionsCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/BrokerApiVersionsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/BrokerApiVersionsCommand.html"/>
     /// </summary>
     public partial class BrokerApiVersionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BrokerApiVersionsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -255,7 +255,7 @@ namespace Kafka.Admin
 
     #region ConfigCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html"/>
     /// </summary>
     public partial class ConfigCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -296,7 +296,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region ConfigCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html"/>
         /// </summary>
         public partial class ConfigCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommandOptions>
         {
@@ -341,7 +341,7 @@ namespace Kafka.Admin
 
         #region ConfigEntity
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.ConfigEntity.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.ConfigEntity.html"/>
         /// </summary>
         public partial class ConfigEntity : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigEntity>
         {
@@ -386,7 +386,7 @@ namespace Kafka.Admin
 
         #region Entity
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ConfigCommand.Entity.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.Entity.html"/>
         /// </summary>
         public partial class Entity : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Entity>
         {
@@ -435,7 +435,7 @@ namespace Kafka.Admin
 
     #region FeatureCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/FeatureCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/FeatureCommand.html"/>
     /// </summary>
     public partial class FeatureCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -480,7 +480,7 @@ namespace Kafka.Admin
 
     #region RackAwareMode
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/RackAwareMode.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/RackAwareMode.html"/>
     /// </summary>
     public partial class RackAwareMode : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RackAwareMode>
     {
@@ -527,7 +527,7 @@ namespace Kafka.Admin
 
     #region ZkSecurityMigrator
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/ZkSecurityMigrator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ZkSecurityMigrator.html"/>
     /// </summary>
     public partial class ZkSecurityMigrator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ZkSecurityMigrator>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {

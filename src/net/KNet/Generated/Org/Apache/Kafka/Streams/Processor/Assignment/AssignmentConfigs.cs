@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#org.apache.kafka.streams.processor.assignment.AssignmentConfigs(java.lang.Long,java.lang.Integer,java.lang.Integer,java.lang.Long,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#org.apache.kafka.streams.processor.assignment.AssignmentConfigs(java.lang.Long,java.lang.Integer,java.lang.Integer,java.lang.Long,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#org.apache.kafka.streams.processor.assignment.AssignmentConfigs(long,int,int,long,java.util.List,int,int,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#org.apache.kafka.streams.processor.assignment.AssignmentConfigs(long,int,int,long,java.util.List,int,int,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#org.apache.kafka.streams.processor.assignment.AssignmentConfigs(long,int,int,long,java.util.List,java.util.OptionalInt,java.util.OptionalInt,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#org.apache.kafka.streams.processor.assignment.AssignmentConfigs(long,int,int,long,java.util.List,java.util.OptionalInt,java.util.OptionalInt,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#of-org.apache.kafka.streams.StreamsConfig-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#of-org.apache.kafka.streams.StreamsConfig-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.StreamsConfig"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.AssignmentConfigs"/></returns>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#maxWarmupReplicas--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#maxWarmupReplicas--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int MaxWarmupReplicas()
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<int>("maxWarmupReplicas", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#numStandbyReplicas--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#numStandbyReplicas--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int NumStandbyReplicas()
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<int>("numStandbyReplicas", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#rackAwareAssignmentStrategy--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#rackAwareAssignmentStrategy--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String RackAwareAssignmentStrategy()
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Lang.String>("rackAwareAssignmentStrategy", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#rackAwareAssignmentTags--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#rackAwareAssignmentTags--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Java.Lang.String> RackAwareAssignmentTags()
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.List<Java.Lang.String>>("rackAwareAssignmentTags", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#rackAwareNonOverlapCost--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#rackAwareNonOverlapCost--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt RackAwareNonOverlapCost()
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.OptionalInt>("rackAwareNonOverlapCost", "()Ljava/util/OptionalInt;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#rackAwareTrafficCost--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#rackAwareTrafficCost--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt RackAwareTrafficCost()
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.OptionalInt>("rackAwareTrafficCost", "()Ljava/util/OptionalInt;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#acceptableRecoveryLag--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#acceptableRecoveryLag--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long AcceptableRecoveryLag()
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<long>("acceptableRecoveryLag", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#probingRebalanceIntervalMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html#probingRebalanceIntervalMs--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long ProbingRebalanceIntervalMs()

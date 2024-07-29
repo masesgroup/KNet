@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Resource
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourcePatternFilter.html#org.apache.kafka.common.resource.ResourcePatternFilter(org.apache.kafka.common.resource.ResourceType,java.lang.String,org.apache.kafka.common.resource.PatternType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#org.apache.kafka.common.resource.ResourcePatternFilter(org.apache.kafka.common.resource.ResourceType,java.lang.String,org.apache.kafka.common.resource.PatternType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -48,7 +48,7 @@ namespace Org.Apache.Kafka.Common.Resource
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourcePatternFilter.html#ANY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#ANY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Resource.ResourcePatternFilter ANY { get { if (!_ANYReady) { _ANYContent = SGetField<Org.Apache.Kafka.Common.Resource.ResourcePatternFilter>(LocalBridgeClazz, "ANY"); _ANYReady = true; } return _ANYContent; } }
         private static Org.Apache.Kafka.Common.Resource.ResourcePatternFilter _ANYContent = default;
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Common.Resource
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourcePatternFilter.html#isUnknown--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#isUnknown--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsUnknown()
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecuteWithSignature<bool>("isUnknown", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourcePatternFilter.html#matches-org.apache.kafka.common.resource.ResourcePattern-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#matches-org.apache.kafka.common.resource.ResourcePattern-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Resource.ResourcePattern"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecuteWithSignature<bool>("matches", "(Lorg/apache/kafka/common/resource/ResourcePattern;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourcePatternFilter.html#matchesAtMostOne--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#matchesAtMostOne--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool MatchesAtMostOne()
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecuteWithSignature<bool>("matchesAtMostOne", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourcePatternFilter.html#findIndefiniteField--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#findIndefiniteField--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String FindIndefiniteField()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecuteWithSignature<Java.Lang.String>("findIndefiniteField", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourcePatternFilter.html#name--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#name--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourcePatternFilter.html#patternType--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#patternType--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Resource.PatternType"/></returns>
         public Org.Apache.Kafka.Common.Resource.PatternType PatternType()
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Resource.PatternType>("patternType", "()Lorg/apache/kafka/common/resource/PatternType;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourcePatternFilter.html#resourceType--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#resourceType--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></returns>
         public Org.Apache.Kafka.Common.Resource.ResourceType ResourceType()
