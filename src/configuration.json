@@ -7,18 +7,18 @@
   "DisableInterfaceMethodGeneration": true,
   "CreateInterfaceInheritance": true,
   "JarList": [
-    "kafka_2.13-3.7.1.jar",
-    "kafka-clients-3.7.1.jar",
-    "kafka-streams-3.7.1.jar",
-    "kafka-tools-3.7.1.jar",
-    "kafka-raft-3.7.1.jar",
-    "connect-api-3.7.1.jar",
-    "connect-basic-auth-extension-3.7.1.jar",
-    "connect-json-3.7.1.jar",
-    "connect-mirror-3.7.1.jar",
-    "connect-mirror-client-3.7.1.jar",
-    "connect-runtime-3.7.1.jar",
-    "connect-transforms-3.7.1.jar"
+    "kafka_2.13-3.8.0.jar",
+    "kafka-clients-3.8.0.jar",
+    "kafka-streams-3.8.0.jar",
+    "kafka-tools-3.8.0.jar",
+    "kafka-raft-3.8.0.jar",
+    "connect-api-3.8.0.jar",
+    "connect-basic-auth-extension-3.8.0.jar",
+    "connect-json-3.8.0.jar",
+    "connect-mirror-3.8.0.jar",
+    "connect-mirror-client-3.8.0.jar",
+    "connect-runtime-3.8.0.jar",
+    "connect-transforms-3.8.0.jar"
   ],
   "OriginJavadocJARVersionAndUrls": [
     {
