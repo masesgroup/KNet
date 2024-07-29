@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/TokenBucket.html#org.apache.kafka.common.metrics.stats.TokenBucket(java.util.concurrent.TimeUnit)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/TokenBucket.html#org.apache.kafka.common.metrics.stats.TokenBucket(java.util.concurrent.TimeUnit)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.TimeUnit"/></param>
         public TokenBucket(Java.Util.Concurrent.TimeUnit arg0)
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/TokenBucket.html#measure-org.apache.kafka.common.metrics.MetricConfig-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/TokenBucket.html#measure-org.apache.kafka.common.metrics.MetricConfig-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             return IExecute<double>("measure", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/metrics/stats/TokenBucket.html#record-org.apache.kafka.common.metrics.MetricConfig-double-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/TokenBucket.html#record-org.apache.kafka.common.metrics.MetricConfig-double-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="double"/></param>

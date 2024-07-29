@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.html#cache-java.lang.String-java.lang.Class-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.html#cache-java.lang.String-java.lang.Class-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Class"/></param>
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             return IExecute<Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache.Cache<C>>("cache", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.html#createCache-java.lang.String-java.lang.Class-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.html#createCache-java.lang.String-java.lang.Class-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Class"/></param>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#org.apache.kafka.common.security.authenticator.CredentialCache$Cache(java.lang.Class)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#org.apache.kafka.common.security.authenticator.CredentialCache$Cache(java.lang.Class)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
             public Cache(Java.Lang.Class arg0)
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#get-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#get-java.lang.String-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="object"/></returns>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
                 return IExecuteWithSignature("get", "(Ljava/lang/String;)Ljava/lang/Object;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#put-java.lang.String-java.lang.Object-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#put-java.lang.String-java.lang.Object-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="object"/></param>
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
                 return IExecute("put", arg0, arg1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#remove-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#remove-java.lang.String-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="object"/></returns>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
                 return IExecuteWithSignature("remove", "(Ljava/lang/String;)Ljava/lang/Object;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#credentialClass--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#credentialClass--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Class"/></returns>
             public Java.Lang.Class CredentialClass()
@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#org.apache.kafka.common.security.authenticator.CredentialCache$Cache(java.lang.Class)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#org.apache.kafka.common.security.authenticator.CredentialCache$Cache(java.lang.Class)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
             public Cache(Java.Lang.Class arg0)
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#get-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#get-java.lang.String-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><typeparamref name="C"/></returns>
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
                 return IExecuteWithSignature<C>("get", "(Ljava/lang/String;)Ljava/lang/Object;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#put-java.lang.String-java.lang.Object-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#put-java.lang.String-java.lang.Object-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><typeparamref name="C"/></param>
@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
                 return IExecute<C>("put", arg0, arg1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#remove-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#remove-java.lang.String-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><typeparamref name="C"/></returns>
@@ -207,7 +207,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
                 return IExecuteWithSignature<C>("remove", "(Ljava/lang/String;)Ljava/lang/Object;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#credentialClass--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#credentialClass--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Class"/></returns>
             public Java.Lang.Class CredentialClass()

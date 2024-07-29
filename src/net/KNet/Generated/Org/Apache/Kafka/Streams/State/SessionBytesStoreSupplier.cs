@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#retentionPeriod--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#retentionPeriod--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long RetentionPeriod()
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<long>("retentionPeriod", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#segmentIntervalMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#segmentIntervalMs--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long SegmentIntervalMs()

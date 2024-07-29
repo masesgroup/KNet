@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.1/org/apache/kafka/connect/util/ConcreteSubClassValidator.html#forSuperClass-java.lang.Class-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConcreteSubClassValidator.html#forSuperClass-java.lang.Class-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.ConcreteSubClassValidator"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.1/org/apache/kafka/connect/util/ConcreteSubClassValidator.html#ensureValid-java.lang.String-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConcreteSubClassValidator.html#ensureValid-java.lang.String-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>

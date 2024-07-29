@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Connect.Data
 {
     #region ConnectSchema
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/ConnectSchema.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/ConnectSchema.html"/>
     /// </summary>
     public partial class ConnectSchema : Org.Apache.Kafka.Connect.Data.Schema
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
     #region Date
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/Date.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/Date.html"/>
     /// </summary>
     public partial class Date : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Date>
     {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
     #region Decimal
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/Decimal.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/Decimal.html"/>
     /// </summary>
     public partial class Decimal : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Decimal>
     {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
     #region Field
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/Field.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/Field.html"/>
     /// </summary>
     public partial class Field : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Field>
     {
@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
     #region Schema
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/Schema.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/Schema.html"/>
     /// </summary>
     public partial class Schema : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Schema>
     {
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Connect.Data
         // TODO: complete the class
         #region Type
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/Schema.Type.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/Schema.Type.html"/>
         /// </summary>
         public partial class Type : Java.Lang.Enum<Org.Apache.Kafka.Connect.Data.Schema.Type>
         {
@@ -300,7 +300,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
     #region SchemaAndValue
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/SchemaAndValue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/SchemaAndValue.html"/>
     /// </summary>
     public partial class SchemaAndValue : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SchemaAndValue>
     {
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
     #region SchemaBuilder
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/SchemaBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/SchemaBuilder.html"/>
     /// </summary>
     public partial class SchemaBuilder : Org.Apache.Kafka.Connect.Data.Schema
     {
@@ -390,7 +390,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
     #region SchemaProjector
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/SchemaProjector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/SchemaProjector.html"/>
     /// </summary>
     public partial class SchemaProjector : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SchemaProjector>
     {
@@ -435,7 +435,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
     #region Struct
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/Struct.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/Struct.html"/>
     /// </summary>
     public partial class Struct : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Struct>
     {
@@ -480,7 +480,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
     #region Time
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/Time.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/Time.html"/>
     /// </summary>
     public partial class Time : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Time>
     {
@@ -525,7 +525,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
     #region Timestamp
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/Timestamp.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/Timestamp.html"/>
     /// </summary>
     public partial class Timestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Timestamp>
     {
@@ -570,7 +570,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
     #region Values
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/data/Values.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/Values.html"/>
     /// </summary>
     public partial class Values : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Values>
     {

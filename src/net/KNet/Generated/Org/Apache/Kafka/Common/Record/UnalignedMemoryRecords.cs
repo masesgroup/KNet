@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/UnalignedMemoryRecords.html#org.apache.kafka.common.record.UnalignedMemoryRecords(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/UnalignedMemoryRecords.html#org.apache.kafka.common.record.UnalignedMemoryRecords(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public UnalignedMemoryRecords(Java.Nio.ByteBuffer arg0)
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/UnalignedMemoryRecords.html#sizeInBytes--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/UnalignedMemoryRecords.html#sizeInBytes--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int SizeInBytes()
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<int>("sizeInBytes", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/record/UnalignedMemoryRecords.html#buffer--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/UnalignedMemoryRecords.html#buffer--"/>
         /// </summary>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
         public Java.Nio.ByteBuffer Buffer()

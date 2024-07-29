@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Util
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.1/org/apache/kafka/connect/util/ConnectorTaskId.html#org.apache.kafka.connect.util.ConnectorTaskId(java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConnectorTaskId.html#org.apache.kafka.connect.util.ConnectorTaskId(java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.1/org/apache/kafka/connect/util/ConnectorTaskId.html#compareTo-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConnectorTaskId.html#compareTo-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="int"/></returns>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<int>("compareTo", "(Ljava/lang/Object;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.1/org/apache/kafka/connect/util/ConnectorTaskId.html#compareTo-org.apache.kafka.connect.util.ConnectorTaskId-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConnectorTaskId.html#compareTo-org.apache.kafka.connect.util.ConnectorTaskId-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></param>
         /// <returns><see cref="int"/></returns>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<int>("compareTo", "(Lorg/apache/kafka/connect/util/ConnectorTaskId;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.1/org/apache/kafka/connect/util/ConnectorTaskId.html#task--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConnectorTaskId.html#task--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Task()
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<int>("task", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.1/org/apache/kafka/connect/util/ConnectorTaskId.html#connector--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConnectorTaskId.html#connector--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Connector()

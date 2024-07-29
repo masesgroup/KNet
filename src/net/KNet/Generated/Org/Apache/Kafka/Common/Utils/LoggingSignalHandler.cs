@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/LoggingSignalHandler.html#register--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/LoggingSignalHandler.html#register--"/>
         /// </summary>
         /// <exception cref="Java.Lang.ReflectiveOperationException"/>
         public void Register()

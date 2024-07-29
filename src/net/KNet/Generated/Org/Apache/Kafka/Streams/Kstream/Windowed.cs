@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Windowed.html#org.apache.kafka.streams.kstream.Windowed(java.lang.Object,org.apache.kafka.streams.kstream.Window)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/Windowed.html#org.apache.kafka.streams.kstream.Windowed(java.lang.Object,org.apache.kafka.streams.kstream.Window)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Windowed.html#key--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/Windowed.html#key--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Key()
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Windowed.html#window--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/Windowed.html#window--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.Window Window()
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Windowed.html#org.apache.kafka.streams.kstream.Windowed(java.lang.Object,org.apache.kafka.streams.kstream.Window)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/Windowed.html#org.apache.kafka.streams.kstream.Windowed(java.lang.Object,org.apache.kafka.streams.kstream.Window)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></param>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Windowed.html#key--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/Windowed.html#key--"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public K Key()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<K>("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Windowed.html#window--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/Windowed.html#window--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.Window Window()

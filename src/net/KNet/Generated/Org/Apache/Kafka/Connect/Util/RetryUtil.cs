@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.1/org/apache/kafka/connect/util/RetryUtil.html#retryUntilTimeout-java.util.concurrent.Callable-java.util.function.Supplier-java.time.Duration-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/RetryUtil.html#retryUntilTimeout-java.util.concurrent.Callable-java.util.function.Supplier-java.time.Duration-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.Callable"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Supplier"/></param>

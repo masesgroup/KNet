@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/ControlRecord.html#type--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ControlRecord.html#type--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
         public Org.Apache.Kafka.Common.Record.ControlRecordType Type()
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Record.ControlRecordType>("type", "()Lorg/apache/kafka/common/record/ControlRecordType;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/ControlRecord.html#version--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ControlRecord.html#version--"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short Version()

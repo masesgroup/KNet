@@ -64,14 +64,14 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/source/TransactionContext.html#abortTransaction--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/source/TransactionContext.html#abortTransaction--"/>
         /// </summary>
         public void AbortTransaction()
         {
             IExecuteWithSignature("abortTransaction", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/source/TransactionContext.html#abortTransaction-org.apache.kafka.connect.source.SourceRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/source/TransactionContext.html#abortTransaction-org.apache.kafka.connect.source.SourceRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Source.SourceRecord"/></param>
         public void AbortTransaction(Org.Apache.Kafka.Connect.Source.SourceRecord arg0)
@@ -79,14 +79,14 @@ namespace Org.Apache.Kafka.Connect.Source
             IExecuteWithSignature("abortTransaction", "(Lorg/apache/kafka/connect/source/SourceRecord;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/source/TransactionContext.html#commitTransaction--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/source/TransactionContext.html#commitTransaction--"/>
         /// </summary>
         public void CommitTransaction()
         {
             IExecuteWithSignature("commitTransaction", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/source/TransactionContext.html#commitTransaction-org.apache.kafka.connect.source.SourceRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/source/TransactionContext.html#commitTransaction-org.apache.kafka.connect.source.SourceRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Source.SourceRecord"/></param>
         public void CommitTransaction(Org.Apache.Kafka.Connect.Source.SourceRecord arg0)

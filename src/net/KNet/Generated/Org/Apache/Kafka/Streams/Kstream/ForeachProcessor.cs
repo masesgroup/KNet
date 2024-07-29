@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#org.apache.kafka.streams.kstream.ForeachProcessor(org.apache.kafka.streams.kstream.ForeachAction)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/ForeachProcessor.html#org.apache.kafka.streams.kstream.ForeachProcessor(org.apache.kafka.streams.kstream.ForeachAction)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ForeachAction"/></param>
         public ForeachProcessor(Org.Apache.Kafka.Streams.Kstream.ForeachAction arg0)
@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#process-org.apache.kafka.streams.processor.api.Record-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/ForeachProcessor.html#process-org.apache.kafka.streams.processor.api.Record-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         public void Process(Org.Apache.Kafka.Streams.Processor.Api.Record arg0)
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#org.apache.kafka.streams.kstream.ForeachProcessor(org.apache.kafka.streams.kstream.ForeachAction)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/ForeachProcessor.html#org.apache.kafka.streams.kstream.ForeachProcessor(org.apache.kafka.streams.kstream.ForeachAction)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ForeachAction"/></param>
         public ForeachProcessor(Org.Apache.Kafka.Streams.Kstream.ForeachAction<K, V> arg0)
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#process-org.apache.kafka.streams.processor.api.Record-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/ForeachProcessor.html#process-org.apache.kafka.streams.processor.api.Record-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         public void Process(Org.Apache.Kafka.Streams.Processor.Api.Record<K, V> arg0)

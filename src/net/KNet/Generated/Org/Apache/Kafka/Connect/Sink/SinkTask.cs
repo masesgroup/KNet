@@ -38,13 +38,13 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTask.html#TOPICS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTask.html#TOPICS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TOPICS_CONFIG { get { if (!_TOPICS_CONFIGReady) { _TOPICS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_CONFIG"); _TOPICS_CONFIGReady = true; } return _TOPICS_CONFIGContent; } }
         private static Java.Lang.String _TOPICS_CONFIGContent = default;
         private static bool _TOPICS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTask.html#TOPICS_REGEX_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTask.html#TOPICS_REGEX_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TOPICS_REGEX_CONFIG { get { if (!_TOPICS_REGEX_CONFIGReady) { _TOPICS_REGEX_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_REGEX_CONFIG"); _TOPICS_REGEX_CONFIGReady = true; } return _TOPICS_REGEX_CONFIGContent; } }
         private static Java.Lang.String _TOPICS_REGEX_CONFIGContent = default;
@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTask.html#put-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTask.html#put-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Put(Java.Util.Collection<Org.Apache.Kafka.Connect.Sink.SinkRecord> arg0)
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             IExecuteWithSignature("put", "(Ljava/util/Collection;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTask.html#start-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTask.html#start-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Start(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
@@ -74,14 +74,14 @@ namespace Org.Apache.Kafka.Connect.Sink
             IExecuteWithSignature("start", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTask.html#stop--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTask.html#stop--"/>
         /// </summary>
         public void Stop()
         {
             IExecuteWithSignature("stop", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTask.html#preCommit-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTask.html#preCommit-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("preCommit", "(Ljava/util/Map;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTask.html#close-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTask.html#close-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Close(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             IExecuteWithSignature("close", "(Ljava/util/Collection;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTask.html#flush-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTask.html#flush-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Flush(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg0)
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             IExecuteWithSignature("flush", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTask.html#initialize-org.apache.kafka.connect.sink.SinkTaskContext-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTask.html#initialize-org.apache.kafka.connect.sink.SinkTaskContext-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Sink.SinkTaskContext"/></param>
         public void Initialize(Org.Apache.Kafka.Connect.Sink.SinkTaskContext arg0)
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             IExecuteWithSignature("initialize", "(Lorg/apache/kafka/connect/sink/SinkTaskContext;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/SinkTask.html#open-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTask.html#open-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Open(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)

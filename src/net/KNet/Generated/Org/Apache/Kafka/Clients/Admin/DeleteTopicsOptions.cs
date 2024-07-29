@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteTopicsOptions.html#shouldRetryOnQuotaViolation--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteTopicsOptions.html#shouldRetryOnQuotaViolation--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool ShouldRetryOnQuotaViolation()
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<bool>("shouldRetryOnQuotaViolation", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/DeleteTopicsOptions.html#retryOnQuotaViolation-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/DeleteTopicsOptions.html#retryOnQuotaViolation-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions"/></returns>

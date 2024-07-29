@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#org.apache.kafka.clients.consumer.OffsetAndTimestamp(long,long,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#org.apache.kafka.clients.consumer.OffsetAndTimestamp(long,long,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#org.apache.kafka.clients.consumer.OffsetAndTimestamp(long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#org.apache.kafka.clients.consumer.OffsetAndTimestamp(long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#leaderEpoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#leaderEpoch--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.Integer> LeaderEpoch()
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Integer>>("leaderEpoch", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#offset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#offset--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Offset()
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<long>("offset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#timestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#timestamp--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Timestamp()

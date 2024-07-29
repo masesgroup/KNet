@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#org.apache.kafka.streams.processor.assignment.assignors.StickyTaskAssignor(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#org.apache.kafka.streams.processor.assignment.assignors.StickyTaskAssignor(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public StickyTaskAssignor(bool arg0)
@@ -46,13 +46,13 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#DEFAULT_STICKY_NON_OVERLAP_COST"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#DEFAULT_STICKY_NON_OVERLAP_COST"/>
         /// </summary>
         public static int DEFAULT_STICKY_NON_OVERLAP_COST { get { if (!_DEFAULT_STICKY_NON_OVERLAP_COSTReady) { _DEFAULT_STICKY_NON_OVERLAP_COSTContent = SGetField<int>(LocalBridgeClazz, "DEFAULT_STICKY_NON_OVERLAP_COST"); _DEFAULT_STICKY_NON_OVERLAP_COSTReady = true; } return _DEFAULT_STICKY_NON_OVERLAP_COSTContent; } }
         private static int _DEFAULT_STICKY_NON_OVERLAP_COSTContent = default;
         private static bool _DEFAULT_STICKY_NON_OVERLAP_COSTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#DEFAULT_STICKY_TRAFFIC_COST"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#DEFAULT_STICKY_TRAFFIC_COST"/>
         /// </summary>
         public static int DEFAULT_STICKY_TRAFFIC_COST { get { if (!_DEFAULT_STICKY_TRAFFIC_COSTReady) { _DEFAULT_STICKY_TRAFFIC_COSTContent = SGetField<int>(LocalBridgeClazz, "DEFAULT_STICKY_TRAFFIC_COST"); _DEFAULT_STICKY_TRAFFIC_COSTReady = true; } return _DEFAULT_STICKY_TRAFFIC_COSTContent; } }
         private static int _DEFAULT_STICKY_TRAFFIC_COSTContent = default;
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#assign-org.apache.kafka.streams.processor.assignment.ApplicationState-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#assign-org.apache.kafka.streams.processor.assignment.ApplicationState-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.ApplicationState"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.TaskAssignment"/></returns>

@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html#open-java.nio.file.Path-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#open-java.nio.file.Path-org.apache.kafka.raft.OffsetAndEpoch-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.File.Path"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html#sizeInBytes--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#sizeInBytes--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long SizeInBytes()
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("sizeInBytes", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html#slice-long-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#slice-long-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecute<Org.Apache.Kafka.Common.Record.UnalignedRecords>("slice", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html#snapshotId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#snapshotId--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.OffsetAndEpoch SnapshotId()
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.OffsetAndEpoch>("snapshotId", "()Lorg/apache/kafka/raft/OffsetAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#close--"/>
         /// </summary>
         public void Close()
         {

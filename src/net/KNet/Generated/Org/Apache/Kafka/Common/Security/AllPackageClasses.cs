@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Security
 {
     #region JaasContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/JaasContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/JaasContext.html"/>
     /// </summary>
     public partial class JaasContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JaasContext>
     {
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Common.Security
         // TODO: complete the class
         #region Type
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/JaasContext.Type.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/JaasContext.Type.html"/>
         /// </summary>
         public partial class Type : Java.Lang.Enum<Org.Apache.Kafka.Common.Security.JaasContext.Type>
         {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Security
 
     #region JaasUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/JaasUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/JaasUtils.html"/>
     /// </summary>
     public partial class JaasUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JaasUtils>
     {

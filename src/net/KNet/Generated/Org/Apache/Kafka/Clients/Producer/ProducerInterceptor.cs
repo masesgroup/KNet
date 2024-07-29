@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnSend"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<Org.Apache.Kafka.Clients.Producer.ProducerRecord, Org.Apache.Kafka.Clients.Producer.ProducerRecord> OnOnSend { get; set; } = null;
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></returns>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action OnClose { get; set; } = null;
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
         /// </summary>
         public virtual void Close()
         {
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnAcknowledgement"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnAcknowledgement { get; set; } = null;
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Java.Util.Map> OnConfigure { get; set; } = null;
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public virtual void Configure(Java.Util.Map arg0)
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></returns>
@@ -183,14 +183,14 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Producer.ProducerRecord>("onSend", "(Lorg/apache/kafka/clients/producer/ProducerRecord;)Lorg/apache/kafka/clients/producer/ProducerRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
         /// </summary>
         public override void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("onAcknowledgement", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public override void Configure(Java.Util.Map arg0)
@@ -219,7 +219,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region IProducerInterceptor<K, V>
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.producer.ProducerInterceptor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.producer.ProducerInterceptor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html"/>
     /// </summary>
     public partial interface IProducerInterceptor<K, V>
     {
@@ -268,7 +268,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnSend"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>, Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>> OnOnSend { get; set; } = null;
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></returns>
@@ -291,7 +291,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action OnClose { get; set; } = null;
@@ -303,7 +303,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
         /// </summary>
         public virtual void Close()
         {
@@ -311,7 +311,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnAcknowledgement"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnAcknowledgement { get; set; } = null;
@@ -323,7 +323,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
@@ -333,7 +333,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public virtual void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -384,7 +384,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend-org.apache.kafka.clients.producer.ProducerRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></returns>
@@ -393,14 +393,14 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>>("onSend", "(Lorg/apache/kafka/clients/producer/ProducerRecord;)Lorg/apache/kafka/clients/producer/ProducerRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close--"/>
         /// </summary>
         public override void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
@@ -409,7 +409,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("onAcknowledgement", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public override void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

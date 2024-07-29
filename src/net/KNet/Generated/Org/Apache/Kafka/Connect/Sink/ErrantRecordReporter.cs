@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/sink/ErrantRecordReporter.html#report-org.apache.kafka.connect.sink.SinkRecord-java.lang.Throwable-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/ErrantRecordReporter.html#report-org.apache.kafka.connect.sink.SinkRecord-java.lang.Throwable-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Sink.SinkRecord"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Throwable"/></param>

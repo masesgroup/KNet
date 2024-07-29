@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/LeastLoadedNode.html#org.apache.kafka.clients.LeastLoadedNode(org.apache.kafka.common.Node,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/LeastLoadedNode.html#org.apache.kafka.clients.LeastLoadedNode(org.apache.kafka.common.Node,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/LeastLoadedNode.html#hasNodeAvailableOrConnectionReady--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/LeastLoadedNode.html#hasNodeAvailableOrConnectionReady--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasNodeAvailableOrConnectionReady()
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<bool>("hasNodeAvailableOrConnectionReady", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/LeastLoadedNode.html#node--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/LeastLoadedNode.html#node--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node Node()

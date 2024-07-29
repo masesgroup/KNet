@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/GroupFilter.html#shouldReplicateGroup-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/GroupFilter.html#shouldReplicateGroup-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -81,14 +81,14 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<bool>("shouldReplicateGroup", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/GroupFilter.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/GroupFilter.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/GroupFilter.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/GroupFilter.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

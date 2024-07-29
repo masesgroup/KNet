@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#org.apache.kafka.raft.RequestManager(java.util.Collection,int,int,java.util.Random)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#org.apache.kafka.raft.RequestManager(java.util.Collection,int,int,java.util.Random)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#hasAnyInflightRequest-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#hasAnyInflightRequest-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("hasAnyInflightRequest", "(J)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#hasRequestTimedOut-org.apache.kafka.common.Node-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#hasRequestTimedOut-org.apache.kafka.common.Node-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecute<bool>("hasRequestTimedOut", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#isBackingOff-org.apache.kafka.common.Node-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#isBackingOff-org.apache.kafka.common.Node-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecute<bool>("isBackingOff", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#isReady-org.apache.kafka.common.Node-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#isReady-org.apache.kafka.common.Node-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecute<bool>("isReady", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#isResponseExpected-org.apache.kafka.common.Node-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#isResponseExpected-org.apache.kafka.common.Node-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecute<bool>("isResponseExpected", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#findReadyBootstrapServer-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#findReadyBootstrapServer-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Common.Node>>("findReadyBootstrapServer", "(J)Ljava/util/Optional;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#backoffBeforeAvailableBootstrapServer-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#backoffBeforeAvailableBootstrapServer-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="long"/></returns>
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("backoffBeforeAvailableBootstrapServer", "(J)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#remainingBackoffMs-org.apache.kafka.common.Node-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#remainingBackoffMs-org.apache.kafka.common.Node-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecute<long>("remainingBackoffMs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#remainingRequestTimeMs-org.apache.kafka.common.Node-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#remainingRequestTimeMs-org.apache.kafka.common.Node-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecute<long>("remainingRequestTimeMs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#onRequestSent-org.apache.kafka.common.Node-long-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#onRequestSent-org.apache.kafka.common.Node-long-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Raft
             IExecute("onRequestSent", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#onResponseResult-org.apache.kafka.common.Node-long-boolean-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#onResponseResult-org.apache.kafka.common.Node-long-boolean-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Raft
             IExecute("onResponseResult", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#reset-org.apache.kafka.common.Node-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#reset-org.apache.kafka.common.Node-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         public void Reset(Org.Apache.Kafka.Common.Node arg0)
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("reset", "(Lorg/apache/kafka/common/Node;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/RequestManager.html#resetAll--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/RequestManager.html#resetAll--"/>
         /// </summary>
         public void ResetAll()
         {

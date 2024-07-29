@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/MemberAssignment.html#org.apache.kafka.clients.admin.MemberAssignment(java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/MemberAssignment.html#org.apache.kafka.clients.admin.MemberAssignment(java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         public MemberAssignment(Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/MemberAssignment.html#topicPartitions--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/MemberAssignment.html#topicPartitions--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> TopicPartitions()

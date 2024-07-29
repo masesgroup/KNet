@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -68,13 +68,13 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_SIZE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_SIZE"/>
         /// </summary>
         public static int NULL_SIZE { get { if (!_NULL_SIZEReady) { _NULL_SIZEContent = SGetField<int>(LocalBridgeClazz, "NULL_SIZE"); _NULL_SIZEReady = true; } return _NULL_SIZEContent; } }
         private static int _NULL_SIZEContent = default;
         private static bool _NULL_SIZEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#NO_TIMESTAMP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#NO_TIMESTAMP"/>
         /// </summary>
         public static long NO_TIMESTAMP { get { if (!_NO_TIMESTAMPReady) { _NO_TIMESTAMPContent = SGetField<long>(LocalBridgeClazz, "NO_TIMESTAMP"); _NO_TIMESTAMPReady = true; } return _NO_TIMESTAMPContent; } }
         private static long _NO_TIMESTAMPContent = default;
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#partition--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#partition--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Partition()
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<int>("partition", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedKeySize--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedKeySize--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int SerializedKeySize()
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<int>("serializedKeySize", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedValueSize--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedValueSize--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int SerializedValueSize()
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<int>("serializedValueSize", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#topic--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#topic--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Topic()
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#leaderEpoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#leaderEpoch--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional LeaderEpoch()
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Optional>("leaderEpoch", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#key--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#key--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Key()
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#offset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#offset--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Offset()
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<long>("offset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestamp--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Timestamp()
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<long>("timestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#headers--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#headers--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         public Org.Apache.Kafka.Common.Header.Headers Headers()
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Header.Headers>("headers", "()Lorg/apache/kafka/common/header/Headers;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestampType--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestampType--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
         public Org.Apache.Kafka.Common.Record.TimestampType TimestampType()
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Record.TimestampType>("timestampType", "()Lorg/apache/kafka/common/record/TimestampType;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#value--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#value--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Value()
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -203,7 +203,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -233,13 +233,13 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_SIZE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_SIZE"/>
         /// </summary>
         public static int NULL_SIZE { get { if (!_NULL_SIZEReady) { _NULL_SIZEContent = SGetField<int>(LocalBridgeClazz, "NULL_SIZE"); _NULL_SIZEReady = true; } return _NULL_SIZEContent; } }
         private static int _NULL_SIZEContent = default;
         private static bool _NULL_SIZEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#NO_TIMESTAMP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#NO_TIMESTAMP"/>
         /// </summary>
         public static long NO_TIMESTAMP { get { if (!_NO_TIMESTAMPReady) { _NO_TIMESTAMPContent = SGetField<long>(LocalBridgeClazz, "NO_TIMESTAMP"); _NO_TIMESTAMPReady = true; } return _NO_TIMESTAMPContent; } }
         private static long _NO_TIMESTAMPContent = default;
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#partition--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#partition--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Partition()
@@ -261,7 +261,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<int>("partition", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedKeySize--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedKeySize--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int SerializedKeySize()
@@ -269,7 +269,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<int>("serializedKeySize", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedValueSize--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#serializedValueSize--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int SerializedValueSize()
@@ -277,7 +277,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<int>("serializedValueSize", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#topic--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#topic--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Topic()
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#leaderEpoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#leaderEpoch--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.Integer> LeaderEpoch()
@@ -293,7 +293,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Integer>>("leaderEpoch", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#key--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#key--"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public K Key()
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<K>("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#offset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#offset--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Offset()
@@ -309,7 +309,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<long>("offset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestamp--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Timestamp()
@@ -317,7 +317,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<long>("timestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#headers--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#headers--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         public Org.Apache.Kafka.Common.Header.Headers Headers()
@@ -325,7 +325,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Header.Headers>("headers", "()Lorg/apache/kafka/common/header/Headers;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestampType--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestampType--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
         public Org.Apache.Kafka.Common.Record.TimestampType TimestampType()
@@ -333,7 +333,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Record.TimestampType>("timestampType", "()Lorg/apache/kafka/common/record/TimestampType;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/ConsumerRecord.html#value--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#value--"/>
         /// </summary>
         /// <returns><typeparamref name="V"/></returns>
         public V Value()

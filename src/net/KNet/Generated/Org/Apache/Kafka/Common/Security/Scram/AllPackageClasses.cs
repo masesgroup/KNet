@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 {
     #region ScramCredential
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/scram/ScramCredential.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/scram/ScramCredential.html"/>
     /// </summary>
     public partial class ScramCredential : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ScramCredential>
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
     #region ScramCredentialCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/scram/ScramCredentialCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/scram/ScramCredentialCallback.html"/>
     /// </summary>
     public partial class ScramCredentialCallback : Javax.Security.Auth.Callback.Callback
     {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
     #region ScramExtensionsCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html"/>
     /// </summary>
     public partial class ScramExtensionsCallback : Javax.Security.Auth.Callback.Callback
     {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
     #region ScramLoginModule
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/scram/ScramLoginModule.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/scram/ScramLoginModule.html"/>
     /// </summary>
     public partial class ScramLoginModule : Javax.Security.Auth.Spi.LoginModule
     {

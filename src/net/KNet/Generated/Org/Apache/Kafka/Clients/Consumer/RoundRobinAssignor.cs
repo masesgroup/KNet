@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/RoundRobinAssignor.html#ROUNDROBIN_ASSIGNOR_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/RoundRobinAssignor.html#ROUNDROBIN_ASSIGNOR_NAME"/>
         /// </summary>
         public static Java.Lang.String ROUNDROBIN_ASSIGNOR_NAME { get { if (!_ROUNDROBIN_ASSIGNOR_NAMEReady) { _ROUNDROBIN_ASSIGNOR_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ROUNDROBIN_ASSIGNOR_NAME"); _ROUNDROBIN_ASSIGNOR_NAMEReady = true; } return _ROUNDROBIN_ASSIGNOR_NAMEContent; } }
         private static Java.Lang.String _ROUNDROBIN_ASSIGNOR_NAMEContent = default;

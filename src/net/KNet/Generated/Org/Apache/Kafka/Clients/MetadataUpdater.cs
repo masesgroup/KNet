@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/MetadataUpdater.html#isUpdateDue-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/MetadataUpdater.html#isUpdateDue-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<bool>("isUpdateDue", "(J)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/MetadataUpdater.html#fetchNodes--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/MetadataUpdater.html#fetchNodes--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Common.Node> FetchNodes()
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Node>>("fetchNodes", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/MetadataUpdater.html#maybeUpdate-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/MetadataUpdater.html#maybeUpdate-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="long"/></returns>
@@ -90,14 +90,14 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<long>("maybeUpdate", "(J)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/MetadataUpdater.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/MetadataUpdater.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/MetadataUpdater.html#handleFailedRequest-long-java.util.Optional-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/MetadataUpdater.html#handleFailedRequest-long-java.util.Optional-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Clients
             IExecute("handleFailedRequest", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/MetadataUpdater.html#handleServerDisconnect-long-java.lang.String-java.util.Optional-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/MetadataUpdater.html#handleServerDisconnect-long-java.lang.String-java.util.Optional-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>

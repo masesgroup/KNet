@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/token/delegation/DelegationToken.html#org.apache.kafka.common.security.token.delegation.DelegationToken(org.apache.kafka.common.security.token.delegation.TokenInformation,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html#org.apache.kafka.common.security.token.delegation.DelegationToken(org.apache.kafka.common.security.token.delegation.TokenInformation,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/token/delegation/DelegationToken.html#hmac--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html#hmac--"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte[] Hmac()
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignatureArray<byte>("hmac", "()[B");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/token/delegation/DelegationToken.html#hmacAsBase64String--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html#hmacAsBase64String--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String HmacAsBase64String()
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<Java.Lang.String>("hmacAsBase64String", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/token/delegation/DelegationToken.html#tokenInfo--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html#tokenInfo--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation"/></returns>
         public Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation TokenInfo()

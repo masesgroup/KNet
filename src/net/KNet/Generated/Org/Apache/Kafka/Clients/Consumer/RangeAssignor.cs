@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/consumer/RangeAssignor.html#RANGE_ASSIGNOR_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/RangeAssignor.html#RANGE_ASSIGNOR_NAME"/>
         /// </summary>
         public static Java.Lang.String RANGE_ASSIGNOR_NAME { get { if (!_RANGE_ASSIGNOR_NAMEReady) { _RANGE_ASSIGNOR_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RANGE_ASSIGNOR_NAME"); _RANGE_ASSIGNOR_NAMEReady = true; } return _RANGE_ASSIGNOR_NAMEContent; } }
         private static Java.Lang.String _RANGE_ASSIGNOR_NAMEContent = default;

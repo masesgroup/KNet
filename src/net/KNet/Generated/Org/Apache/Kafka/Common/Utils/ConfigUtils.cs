@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ConfigUtils.html#translateDeprecatedConfigs-java.util.Map-java.lang.String[][]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ConfigUtils.html#translateDeprecatedConfigs-java.util.Map-java.lang.String[][]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -53,7 +53,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<Java.Util.Map<Java.Lang.String, T>>(LocalBridgeClazz, "translateDeprecatedConfigs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ConfigUtils.html#translateDeprecatedConfigs-java.util.Map-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ConfigUtils.html#translateDeprecatedConfigs-java.util.Map-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<Java.Util.Map<Java.Lang.String, T>>(LocalBridgeClazz, "translateDeprecatedConfigs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ConfigUtils.html#getBoolean-java.util.Map-java.lang.String-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ConfigUtils.html#getBoolean-java.util.Map-java.lang.String-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<bool>(LocalBridgeClazz, "getBoolean", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ConfigUtils.html#configMapToRedactedString-java.util.Map-org.apache.kafka.common.config.ConfigDef-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ConfigUtils.html#configMapToRedactedString-java.util.Map-org.apache.kafka.common.config.ConfigDef-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>

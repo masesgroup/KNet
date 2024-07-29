@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region IStandbyUpdateListener
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.StandbyUpdateListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.StandbyUpdateListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html"/>
     /// </summary>
     public partial interface IStandbyUpdateListener
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onBatchLoaded-org.apache.kafka.common.TopicPartition-java.lang.String-org.apache.kafka.streams.processor.TaskId-long-long-long-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onBatchLoaded-org.apache.kafka.common.TopicPartition-java.lang.String-org.apache.kafka.streams.processor.TaskId-long-long-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnBatchLoaded"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, Org.Apache.Kafka.Streams.Processor.TaskId, long, long, long> OnOnBatchLoaded { get; set; } = null;
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onBatchLoaded-org.apache.kafka.common.TopicPartition-java.lang.String-org.apache.kafka.streams.processor.TaskId-long-long-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onBatchLoaded-org.apache.kafka.common.TopicPartition-java.lang.String-org.apache.kafka.streams.processor.TaskId-long-long-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnUpdateStart"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long> OnOnUpdateStart { get; set; } = null;
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateSuspended-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-org.apache.kafka.streams.processor.StandbyUpdateListener.SuspendReason-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateSuspended-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-org.apache.kafka.streams.processor.StandbyUpdateListener.SuspendReason-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnUpdateSuspended"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long, long, Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason> OnOnUpdateSuspended { get; set; } = null;
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateSuspended-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-org.apache.kafka.streams.processor.StandbyUpdateListener.SuspendReason-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateSuspended-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-org.apache.kafka.streams.processor.StandbyUpdateListener.SuspendReason-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -164,13 +164,13 @@ namespace Org.Apache.Kafka.Streams.Processor
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.SuspendReason.html#MIGRATED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.SuspendReason.html#MIGRATED"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason MIGRATED { get { if (!_MIGRATEDReady) { _MIGRATEDContent = SGetField<Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason>(LocalBridgeClazz, "MIGRATED"); _MIGRATEDReady = true; } return _MIGRATEDContent; } }
             private static Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason _MIGRATEDContent = default;
             private static bool _MIGRATEDReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.SuspendReason.html#PROMOTED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.SuspendReason.html#PROMOTED"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason PROMOTED { get { if (!_PROMOTEDReady) { _PROMOTEDContent = SGetField<Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason>(LocalBridgeClazz, "PROMOTED"); _PROMOTEDReady = true; } return _PROMOTEDContent; } }
             private static Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason _PROMOTEDContent = default;
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.SuspendReason.html#valueOf-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.SuspendReason.html#valueOf-java.lang.String-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason"/></returns>
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Streams.Processor
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/processor/StandbyUpdateListener$SuspendReason;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.SuspendReason.html#values--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.SuspendReason.html#values--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason"/></returns>
             public static Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener.SuspendReason[] Values()
@@ -239,7 +239,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onBatchLoaded-org.apache.kafka.common.TopicPartition-java.lang.String-org.apache.kafka.streams.processor.TaskId-long-long-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onBatchLoaded-org.apache.kafka.common.TopicPartition-java.lang.String-org.apache.kafka.streams.processor.TaskId-long-long-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -252,7 +252,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             IExecute("onBatchLoaded", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -262,7 +262,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             IExecute("onUpdateStart", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateSuspended-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-org.apache.kafka.streams.processor.StandbyUpdateListener.SuspendReason-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/StandbyUpdateListener.html#onUpdateSuspended-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-org.apache.kafka.streams.processor.StandbyUpdateListener.SuspendReason-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>

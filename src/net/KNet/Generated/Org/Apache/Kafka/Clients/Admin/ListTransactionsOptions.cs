@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filteredProducerIds--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filteredProducerIds--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.Long> FilteredProducerIds()
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.Long>>("filteredProducerIds", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filteredStates--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filteredStates--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Clients.Admin.TransactionState> FilteredStates()
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Clients.Admin.TransactionState>>("filteredStates", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filteredDuration--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filteredDuration--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long FilteredDuration()
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<long>("filteredDuration", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filterOnDuration-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filterOnDuration-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions"/></returns>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions>("filterOnDuration", "(J)Lorg/apache/kafka/clients/admin/ListTransactionsOptions;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filterProducerIds-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filterProducerIds-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions"/></returns>
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions>("filterProducerIds", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/ListTransactionsOptions;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filterStates-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filterStates-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions"/></returns>

@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#formatAsReassignmentJson-java.util.Map-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#formatAsReassignmentJson-java.util.Map-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -53,7 +53,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
             return SExecute<Java.Lang.String>(LocalBridgeClazz, "formatAsReassignmentJson", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#generateAssignment-org.apache.kafka.clients.admin.Admin-java.lang.String-java.lang.String-java.lang.Boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#generateAssignment-org.apache.kafka.clients.admin.Admin-java.lang.String-java.lang.String-java.lang.Boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
             return SExecute<Java.Util.Map.Entry<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Java.Lang.Integer>>, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Java.Lang.Integer>>>>(LocalBridgeClazz, "generateAssignment", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#executeAssignment-org.apache.kafka.clients.admin.Admin-java.lang.Boolean-java.lang.String-java.lang.Long-java.lang.Long-java.lang.Long-org.apache.kafka.common.utils.Time-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#executeAssignment-org.apache.kafka.clients.admin.Admin-java.lang.Boolean-java.lang.String-java.lang.Long-java.lang.Long-java.lang.Long-org.apache.kafka.common.utils.Time-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Boolean"/></param>
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
             SExecute(LocalBridgeClazz, "executeAssignment", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#main-java.lang.String[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)

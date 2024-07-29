@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/UnlimitedWindows.html#startMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/UnlimitedWindows.html#startMs"/>
         /// </summary>
         public long startMs { get { if (!_startMsReady) { _startMsContent = IGetField<long>("startMs"); _startMsReady = true; } return _startMsContent; } }
         private long _startMsContent = default;
@@ -48,7 +48,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/UnlimitedWindows.html#of--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/UnlimitedWindows.html#of--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.UnlimitedWindows"/></returns>
         public static Org.Apache.Kafka.Streams.Kstream.UnlimitedWindows Of()
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/UnlimitedWindows.html#startOn-java.time.Instant-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/UnlimitedWindows.html#startOn-java.time.Instant-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.UnlimitedWindows"/></returns>

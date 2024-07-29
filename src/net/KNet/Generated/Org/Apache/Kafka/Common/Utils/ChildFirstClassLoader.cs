@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/utils/ChildFirstClassLoader.html#org.apache.kafka.common.utils.ChildFirstClassLoader(java.lang.String,java.lang.ClassLoader)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/ChildFirstClassLoader.html#org.apache.kafka.common.utils.ChildFirstClassLoader(java.lang.String,java.lang.ClassLoader)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.ClassLoader"/></param>

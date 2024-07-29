@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ToolsUtils.html#duplicates-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ToolsUtils.html#duplicates-java.util.List-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <typeparam name="T"></typeparam>
@@ -52,7 +52,7 @@ namespace Org.Apache.Kafka.Tools
             return SExecuteWithSignature<Java.Util.Set<T>>(LocalBridgeClazz, "duplicates", "(Ljava/util/List;)Ljava/util/Set;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ToolsUtils.html#minus-java.util.Set-java.lang.Object[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ToolsUtils.html#minus-java.util.Set-java.lang.Object[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <param name="arg1"><typeparamref name="T"/></param>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Tools
             if (arg1.Length == 0) return SExecute<Java.Util.Set<T>>(LocalBridgeClazz, "minus", arg0); else return SExecute<Java.Util.Set<T>>(LocalBridgeClazz, "minus", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ToolsUtils.html#prettyPrintTable-java.util.List-java.util.List-java.io.PrintStream-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ToolsUtils.html#prettyPrintTable-java.util.List-java.util.List-java.io.PrintStream-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
             SExecute(LocalBridgeClazz, "prettyPrintTable", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ToolsUtils.html#printMetrics-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ToolsUtils.html#printMetrics-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <typeparam name="Arg0ExtendsOrg_Apache_Kafka_Common_Metric"><see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Tools
             SExecuteWithSignature(LocalBridgeClazz, "printMetrics", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ToolsUtils.html#validateBootstrapServer-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ToolsUtils.html#validateBootstrapServer-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>

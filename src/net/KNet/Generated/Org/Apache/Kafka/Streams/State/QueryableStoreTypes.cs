@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.html#timestampedKeyValueStore--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.html#timestampedKeyValueStore--"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -52,7 +52,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecute<Org.Apache.Kafka.Streams.State.QueryableStoreType<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<K, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<V>>>>(LocalBridgeClazz, "timestampedKeyValueStore");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.html#keyValueStore--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.html#keyValueStore--"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecute<Org.Apache.Kafka.Streams.State.QueryableStoreType<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<K, V>>>(LocalBridgeClazz, "keyValueStore");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.html#sessionStore--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.html#sessionStore--"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecute<Org.Apache.Kafka.Streams.State.QueryableStoreType<Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<K, V>>>(LocalBridgeClazz, "sessionStore");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.html#timestampedWindowStore--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.html#timestampedWindowStore--"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecute<Org.Apache.Kafka.Streams.State.QueryableStoreType<Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<K, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<V>>>>(LocalBridgeClazz, "timestampedWindowStore");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.html#windowStore--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.html#windowStore--"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>

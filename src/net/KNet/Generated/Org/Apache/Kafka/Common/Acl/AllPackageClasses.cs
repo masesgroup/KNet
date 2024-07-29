@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Acl
 {
     #region AccessControlEntry
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/acl/AccessControlEntry.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/acl/AccessControlEntry.html"/>
     /// </summary>
     public partial class AccessControlEntry : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AccessControlEntry>
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Acl
 
     #region AccessControlEntryFilter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/acl/AccessControlEntryFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html"/>
     /// </summary>
     public partial class AccessControlEntryFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AccessControlEntryFilter>
     {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Acl
 
     #region AclBinding
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/acl/AclBinding.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/acl/AclBinding.html"/>
     /// </summary>
     public partial class AclBinding : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclBinding>
     {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Acl
 
     #region AclBindingFilter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/acl/AclBindingFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/acl/AclBindingFilter.html"/>
     /// </summary>
     public partial class AclBindingFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclBindingFilter>
     {
@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Common.Acl
 
     #region AclOperation
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/acl/AclOperation.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/acl/AclOperation.html"/>
     /// </summary>
     public partial class AclOperation : Java.Lang.Enum<Org.Apache.Kafka.Common.Acl.AclOperation>
     {
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Common.Acl
 
     #region AclPermissionType
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/acl/AclPermissionType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/acl/AclPermissionType.html"/>
     /// </summary>
     public partial class AclPermissionType : Java.Lang.Enum<Org.Apache.Kafka.Common.Acl.AclPermissionType>
     {

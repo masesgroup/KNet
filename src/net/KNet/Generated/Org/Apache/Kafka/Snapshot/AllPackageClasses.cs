@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Snapshot
 {
     #region FileRawSnapshotReader
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html"/>
     /// </summary>
     public partial class FileRawSnapshotReader : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FileRawSnapshotReader>
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region FileRawSnapshotWriter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/FileRawSnapshotWriter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/FileRawSnapshotWriter.html"/>
     /// </summary>
     public partial class FileRawSnapshotWriter : Org.Apache.Kafka.Snapshot.RawSnapshotWriter
     {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region NotifyingRawSnapshotWriter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html"/>
     /// </summary>
     public partial class NotifyingRawSnapshotWriter : Org.Apache.Kafka.Snapshot.RawSnapshotWriter
     {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region RawSnapshotReader
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RawSnapshotReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RawSnapshotReader.html"/>
     /// </summary>
     public partial class RawSnapshotReader : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RawSnapshotReader>
     {
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region RawSnapshotWriter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RawSnapshotWriter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RawSnapshotWriter.html"/>
     /// </summary>
     public partial class RawSnapshotWriter : Java.Lang.AutoCloseable
     {
@@ -257,7 +257,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region RecordsSnapshotReader
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html"/>
     /// </summary>
     public partial class RecordsSnapshotReader : Org.Apache.Kafka.Snapshot.SnapshotReader
     {
@@ -302,7 +302,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region RecordsSnapshotReader<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotReader.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class RecordsSnapshotReader<T> : Org.Apache.Kafka.Snapshot.SnapshotReader<T>
@@ -348,7 +348,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region RecordsSnapshotWriter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotWriter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html"/>
     /// </summary>
     public partial class RecordsSnapshotWriter : Org.Apache.Kafka.Snapshot.SnapshotWriter
     {
@@ -389,7 +389,7 @@ namespace Org.Apache.Kafka.Snapshot
         // TODO: complete the class
         #region Builder
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html"/>
         /// </summary>
         public partial class Builder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Builder>
         {
@@ -438,7 +438,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region RecordsSnapshotWriter<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/RecordsSnapshotWriter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class RecordsSnapshotWriter<T> : Org.Apache.Kafka.Snapshot.SnapshotWriter<T>
@@ -484,7 +484,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region SnapshotPath
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/SnapshotPath.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/SnapshotPath.html"/>
     /// </summary>
     public partial class SnapshotPath : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SnapshotPath>
     {
@@ -529,7 +529,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region SnapshotReader
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/SnapshotReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/SnapshotReader.html"/>
     /// </summary>
     public partial class SnapshotReader : Java.Util.Iterator
     {
@@ -576,7 +576,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region SnapshotReader<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/SnapshotReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/SnapshotReader.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class SnapshotReader<T> : Java.Util.Iterator<Org.Apache.Kafka.Raft.Batch<T>>
@@ -624,7 +624,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region Snapshots
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/Snapshots.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/Snapshots.html"/>
     /// </summary>
     public partial class Snapshots : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Snapshots>
     {
@@ -669,7 +669,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region SnapshotWriter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/SnapshotWriter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/SnapshotWriter.html"/>
     /// </summary>
     public partial class SnapshotWriter : Java.Lang.AutoCloseable
     {
@@ -716,7 +716,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region SnapshotWriter<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/snapshot/SnapshotWriter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/SnapshotWriter.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class SnapshotWriter<T> : Java.Lang.AutoCloseable

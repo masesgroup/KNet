@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 {
     #region ApplicationState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/ApplicationState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/ApplicationState.html"/>
     /// </summary>
     public partial class ApplicationState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ApplicationState>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
     #region AssignmentConfigs
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/AssignmentConfigs.html"/>
     /// </summary>
     public partial class AssignmentConfigs : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AssignmentConfigs>
     {
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
     #region KafkaStreamsAssignment
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html"/>
     /// </summary>
     public partial class KafkaStreamsAssignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaStreamsAssignment>
     {
@@ -159,103 +159,13 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         public override bool IsBridgeStatic => false;
 
         // TODO: complete the class
-        #region AssignedTask
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.AssignedTask.html"/>
-        /// </summary>
-        public partial class AssignedTask : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AssignedTask>
-        {
-            const string _bridgeClassName = "org.apache.kafka.streams.processor.assignment.KafkaStreamsAssignment$AssignedTask";
-            /// <summary>
-            /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-            /// </summary>
-            public AssignedTask() { }
-            /// <summary>
-            /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-            /// </summary>
-            public AssignedTask(params object[] args) : base(args) { }
 
-            private static readonly IJavaType _LocalBridgeClazz = ClazzOf(_bridgeClassName);
-            private static IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new InvalidOperationException($"Class {_bridgeClassName} was not found.");
-
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-            /// </summary>
-            public override string BridgeClassName => _bridgeClassName;
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-            /// </summary>
-            public override bool IsBridgeAbstract => false;
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-            /// </summary>
-            public override bool IsBridgeCloseable => false;
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-            /// </summary>
-            public override bool IsBridgeInterface => false;
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-            /// </summary>
-            public override bool IsBridgeStatic => true;
-
-            // TODO: complete the class
-            #region Type
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.AssignedTask.Type.html"/>
-            /// </summary>
-            public partial class Type : Java.Lang.Enum<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment.AssignedTask.Type>
-            {
-                const string _bridgeClassName = "org.apache.kafka.streams.processor.assignment.KafkaStreamsAssignment$AssignedTask$Type";
-                /// <summary>
-                /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-                /// </summary>
-                public Type() { }
-                /// <summary>
-                /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-                /// </summary>
-                public Type(params object[] args) : base(args) { }
-
-                private static readonly IJavaType _LocalBridgeClazz = ClazzOf(_bridgeClassName);
-                private static IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new InvalidOperationException($"Class {_bridgeClassName} was not found.");
-
-                /// <summary>
-                /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-                /// </summary>
-                public override string BridgeClassName => _bridgeClassName;
-                /// <summary>
-                /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-                /// </summary>
-                public override bool IsBridgeAbstract => false;
-                /// <summary>
-                /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-                /// </summary>
-                public override bool IsBridgeCloseable => false;
-                /// <summary>
-                /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-                /// </summary>
-                public override bool IsBridgeInterface => false;
-                /// <summary>
-                /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-                /// </summary>
-                public override bool IsBridgeStatic => true;
-
-                // TODO: complete the class
-
-            }
-            #endregion
-
-        
-        }
-        #endregion
-
-    
     }
     #endregion
 
     #region KafkaStreamsState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html"/>
     /// </summary>
     public partial class KafkaStreamsState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaStreamsState>
     {
@@ -302,7 +212,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
     #region ProcessId
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/ProcessId.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/ProcessId.html"/>
     /// </summary>
     public partial class ProcessId : Java.Lang.Comparable<Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId>
     {
@@ -347,7 +257,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
     #region TaskAssignmentUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignmentUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignmentUtils.html"/>
     /// </summary>
     public partial class TaskAssignmentUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskAssignmentUtils>
     {
@@ -388,7 +298,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         // TODO: complete the class
         #region MoveStandbyTaskPredicate
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignmentUtils.MoveStandbyTaskPredicate.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignmentUtils.MoveStandbyTaskPredicate.html"/>
         /// </summary>
         public partial class MoveStandbyTaskPredicate : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MoveStandbyTaskPredicate>
         {
@@ -435,7 +345,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
         #region RackAwareOptimizationParams
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignmentUtils.RackAwareOptimizationParams.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignmentUtils.RackAwareOptimizationParams.html"/>
         /// </summary>
         public partial class RackAwareOptimizationParams : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RackAwareOptimizationParams>
         {
@@ -484,7 +394,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
     #region TaskAssignor
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.html"/>
     /// </summary>
     public partial class TaskAssignor : Org.Apache.Kafka.Common.Configurable
     {
@@ -527,7 +437,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         // TODO: complete the class
         #region AssignmentError
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html"/>
         /// </summary>
         public partial class AssignmentError : Java.Lang.Enum<Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError>
         {
@@ -572,7 +482,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
         #region TaskAssignment
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.TaskAssignment.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.TaskAssignment.html"/>
         /// </summary>
         public partial class TaskAssignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskAssignment>
         {
@@ -621,7 +531,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
     #region TaskInfo
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskInfo.html"/>
     /// </summary>
     public partial class TaskInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskInfo>
     {
@@ -668,7 +578,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
     #region TaskTopicPartition
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html"/>
     /// </summary>
     public partial class TaskTopicPartition : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskTopicPartition>
     {

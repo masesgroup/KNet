@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/ExpirationService.html#failAfter-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ExpirationService.html#failAfter-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <typeparam name="T"></typeparam>

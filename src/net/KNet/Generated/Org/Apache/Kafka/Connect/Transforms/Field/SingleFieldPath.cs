@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Field
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.1/org/apache/kafka/connect/transforms/field/SingleFieldPath.html#org.apache.kafka.connect.transforms.field.SingleFieldPath(java.lang.String,org.apache.kafka.connect.transforms.field.FieldSyntaxVersion)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.8.0/org/apache/kafka/connect/transforms/field/SingleFieldPath.html#org.apache.kafka.connect.transforms.field.SingleFieldPath(java.lang.String,org.apache.kafka.connect.transforms.field.FieldSyntaxVersion)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Transforms.Field.FieldSyntaxVersion"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Field
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.1/org/apache/kafka/connect/transforms/field/SingleFieldPath.html#valueFrom-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.8.0/org/apache/kafka/connect/transforms/field/SingleFieldPath.html#valueFrom-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="object"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Field
             return IExecuteWithSignature("valueFrom", "(Ljava/util/Map;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.1/org/apache/kafka/connect/transforms/field/SingleFieldPath.html#valueFrom-org.apache.kafka.connect.data.Struct-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.8.0/org/apache/kafka/connect/transforms/field/SingleFieldPath.html#valueFrom-org.apache.kafka.connect.data.Struct-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Struct"/></param>
         /// <returns><see cref="object"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Field
             return IExecuteWithSignature("valueFrom", "(Lorg/apache/kafka/connect/data/Struct;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.1/org/apache/kafka/connect/transforms/field/SingleFieldPath.html#fieldFrom-org.apache.kafka.connect.data.Schema-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.8.0/org/apache/kafka/connect/transforms/field/SingleFieldPath.html#fieldFrom-org.apache.kafka.connect.data.Schema-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Field"/></returns>

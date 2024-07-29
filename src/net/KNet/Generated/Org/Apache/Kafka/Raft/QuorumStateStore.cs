@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/QuorumStateStore.html#path--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/QuorumStateStore.html#path--"/>
         /// </summary>
         /// <returns><see cref="Java.Nio.File.Path"/></returns>
         public Java.Nio.File.Path Path()
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Nio.File.Path>("path", "()Ljava/nio/file/Path;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/QuorumStateStore.html#readElectionState--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/QuorumStateStore.html#readElectionState--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Raft.ElectionState> ReadElectionState()
@@ -80,14 +80,14 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.ElectionState>>("readElectionState", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/QuorumStateStore.html#clear--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/QuorumStateStore.html#clear--"/>
         /// </summary>
         public void Clear()
         {
             IExecuteWithSignature("clear", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/org/apache/kafka/raft/QuorumStateStore.html#writeElectionState-org.apache.kafka.raft.ElectionState-short-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/QuorumStateStore.html#writeElectionState-org.apache.kafka.raft.ElectionState-short-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.ElectionState"/></param>
         /// <param name="arg1"><see cref="short"/></param>

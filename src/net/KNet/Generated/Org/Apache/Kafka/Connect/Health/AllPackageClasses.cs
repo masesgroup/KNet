@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Connect.Health
 {
     #region AbstractState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/health/AbstractState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/health/AbstractState.html"/>
     /// </summary>
     public partial class AbstractState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AbstractState>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
     #region ConnectClusterDetails
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/health/ConnectClusterDetails.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/health/ConnectClusterDetails.html"/>
     /// </summary>
     public partial class ConnectClusterDetails : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectClusterDetails>
     {
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
     #region ConnectClusterState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/health/ConnectClusterState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/health/ConnectClusterState.html"/>
     /// </summary>
     public partial class ConnectClusterState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectClusterState>
     {
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
     #region ConnectorHealth
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/health/ConnectorHealth.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/health/ConnectorHealth.html"/>
     /// </summary>
     public partial class ConnectorHealth : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectorHealth>
     {
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
     #region ConnectorState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/health/ConnectorState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/health/ConnectorState.html"/>
     /// </summary>
     public partial class ConnectorState : Org.Apache.Kafka.Connect.Health.AbstractState
     {
@@ -259,7 +259,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
     #region ConnectorType
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/health/ConnectorType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/health/ConnectorType.html"/>
     /// </summary>
     public partial class ConnectorType : Java.Lang.Enum<Org.Apache.Kafka.Connect.Health.ConnectorType>
     {
@@ -304,7 +304,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
     #region TaskState
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/health/TaskState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/health/TaskState.html"/>
     /// </summary>
     public partial class TaskState : Org.Apache.Kafka.Connect.Health.AbstractState
     {

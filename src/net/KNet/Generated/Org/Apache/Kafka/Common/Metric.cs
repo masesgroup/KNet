@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Metric.html#metricValue--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Metric.html#metricValue--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object MetricValue()
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature("metricValue", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/Metric.html#metricName--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Metric.html#metricName--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
         public Org.Apache.Kafka.Common.MetricName MetricName()

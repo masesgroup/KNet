@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.html#isDebugEnabled--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.html#isDebugEnabled--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public static bool IsDebugEnabled()
@@ -50,7 +50,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "isDebugEnabled", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.html#isTraceEnabled--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.html#isTraceEnabled--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public static bool IsTraceEnabled()
@@ -58,7 +58,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "isTraceEnabled", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.html#main-java.lang.String[]-"/>
         /// </summary>
         /// <param name="args"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] args)
@@ -78,7 +78,7 @@ namespace Kafka.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AclCommandOptions.html#kafka.admin.AclCommand$AclCommandOptions(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AclCommandOptions.html#kafka.admin.AclCommand$AclCommandOptions(java.lang.String[])"/>
             /// </summary>
             /// <param name="args"><see cref="Java.Lang.String"/></param>
             public AclCommandOptions(Java.Lang.String[] args)
@@ -102,7 +102,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AclCommandOptions.html#CommandConfigDoc--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AclCommandOptions.html#CommandConfigDoc--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String CommandConfigDoc()
@@ -110,7 +110,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("CommandConfigDoc", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AclCommandOptions.html#checkArgs--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AclCommandOptions.html#checkArgs--"/>
             /// </summary>
             public void CheckArgs()
             {
@@ -148,21 +148,21 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AclCommandService.html#addAcls--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AclCommandService.html#addAcls--"/>
             /// </summary>
             public void AddAcls()
             {
                 IExecuteWithSignature("addAcls", "()V");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AclCommandService.html#listAcls--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AclCommandService.html#listAcls--"/>
             /// </summary>
             public void ListAcls()
             {
                 IExecuteWithSignature("listAcls", "()V");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AclCommandService.html#removeAcls--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AclCommandService.html#removeAcls--"/>
             /// </summary>
             public void RemoveAcls()
             {
@@ -184,7 +184,7 @@ namespace Kafka.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html#kafka.admin.AclCommand$AuthorizerService(java.lang.String,kafka.admin.AclCommand.AclCommandOptions)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html#kafka.admin.AclCommand$AuthorizerService(java.lang.String,kafka.admin.AclCommand.AclCommandOptions)"/>
             /// </summary>
             /// <param name="authorizerClassName"><see cref="Java.Lang.String"/></param>
             /// <param name="opts"><see cref="Kafka.Admin.AclCommand.AclCommandOptions"/></param>
@@ -209,7 +209,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html#isDebugEnabled--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html#isDebugEnabled--"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool IsDebugEnabled()
@@ -217,7 +217,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<bool>("isDebugEnabled", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html#isTraceEnabled--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html#isTraceEnabled--"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool IsTraceEnabled()
@@ -225,7 +225,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<bool>("isTraceEnabled", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html#authorizerClassName--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html#authorizerClassName--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String AuthorizerClassName()
@@ -233,7 +233,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("authorizerClassName", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html#loggerName--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html#loggerName--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String LoggerName()
@@ -241,7 +241,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("loggerName", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html#logIdent--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html#logIdent--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String LogIdent()
@@ -249,7 +249,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("logIdent", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html#msgWithLogIdent-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html#msgWithLogIdent-java.lang.String-"/>
             /// </summary>
             /// <param name="msg"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Java.Lang.String"/></returns>
@@ -258,7 +258,7 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Java.Lang.String>("msgWithLogIdent", "(Ljava/lang/String;)Ljava/lang/String;", msg);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html#opts--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html#opts--"/>
             /// </summary>
             /// <returns><see cref="Kafka.Admin.AclCommand.AclCommandOptions"/></returns>
             public Kafka.Admin.AclCommand.AclCommandOptions Opts()
@@ -266,21 +266,21 @@ namespace Kafka.Admin
                 return IExecuteWithSignature<Kafka.Admin.AclCommand.AclCommandOptions>("opts", "()Lkafka/admin/AclCommand$AclCommandOptions;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html#addAcls--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html#addAcls--"/>
             /// </summary>
             public void AddAcls()
             {
                 IExecuteWithSignature("addAcls", "()V");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html#listAcls--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html#listAcls--"/>
             /// </summary>
             public void ListAcls()
             {
                 IExecuteWithSignature("listAcls", "()V");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/kafka/admin/AclCommand.AuthorizerService.html#removeAcls--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/AclCommand.AuthorizerService.html#removeAcls--"/>
             /// </summary>
             public void RemoveAcls()
             {

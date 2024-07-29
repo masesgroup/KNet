@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/OffsetSyncStore.html#translateDownstream-java.lang.String-org.apache.kafka.common.TopicPartition-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html#translateDownstream-java.lang.String-org.apache.kafka.common.TopicPartition-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
@@ -57,14 +57,14 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Java.Util.OptionalLong>("translateDownstream", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/OffsetSyncStore.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/org/apache/kafka/connect/mirror/OffsetSyncStore.html#start-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html#start-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public void Start(bool arg0)

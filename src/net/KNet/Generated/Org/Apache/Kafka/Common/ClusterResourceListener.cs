@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region IClusterResourceListener
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.ClusterResourceListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/ClusterResourceListener.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.ClusterResourceListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/ClusterResourceListener.html"/>
     /// </summary>
     public partial interface IClusterResourceListener
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/ClusterResourceListener.html#onUpdate-org.apache.kafka.common.ClusterResource-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/ClusterResourceListener.html#onUpdate-org.apache.kafka.common.ClusterResource-"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnUpdate"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Common.ClusterResource> OnOnUpdate { get; set; } = null;
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Common
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/ClusterResourceListener.html#onUpdate-org.apache.kafka.common.ClusterResource-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/ClusterResourceListener.html#onUpdate-org.apache.kafka.common.ClusterResource-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.ClusterResource"/></param>
         public virtual void OnUpdate(Org.Apache.Kafka.Common.ClusterResource arg0)
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/ClusterResourceListener.html#onUpdate-org.apache.kafka.common.ClusterResource-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/ClusterResourceListener.html#onUpdate-org.apache.kafka.common.ClusterResource-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.ClusterResource"/></param>
         public override void OnUpdate(Org.Apache.Kafka.Common.ClusterResource arg0)

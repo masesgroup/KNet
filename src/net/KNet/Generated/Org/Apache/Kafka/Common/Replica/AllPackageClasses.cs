@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Replica
 {
     #region ClientMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/replica/ClientMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/replica/ClientMetadata.html"/>
     /// </summary>
     public partial class ClientMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientMetadata>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Replica
         // TODO: complete the class
         #region DefaultClientMetadata
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html"/>
         /// </summary>
         public partial class DefaultClientMetadata : Org.Apache.Kafka.Common.Replica.ClientMetadata
         {
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
     #region PartitionView
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/replica/PartitionView.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/replica/PartitionView.html"/>
     /// </summary>
     public partial class PartitionView : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionView>
     {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Replica
         // TODO: complete the class
         #region DefaultPartitionView
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html"/>
         /// </summary>
         public partial class DefaultPartitionView : Org.Apache.Kafka.Common.Replica.PartitionView
         {
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
     #region RackAwareReplicaSelector
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/replica/RackAwareReplicaSelector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/replica/RackAwareReplicaSelector.html"/>
     /// </summary>
     public partial class RackAwareReplicaSelector : Org.Apache.Kafka.Common.Replica.ReplicaSelector
     {
@@ -257,7 +257,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
     #region ReplicaSelector
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/replica/ReplicaSelector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/replica/ReplicaSelector.html"/>
     /// </summary>
     public partial class ReplicaSelector : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicaSelector>
     {
@@ -304,7 +304,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
     #region ReplicaView
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/replica/ReplicaView.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/replica/ReplicaView.html"/>
     /// </summary>
     public partial class ReplicaView : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicaView>
     {
@@ -347,7 +347,7 @@ namespace Org.Apache.Kafka.Common.Replica
         // TODO: complete the class
         #region DefaultReplicaView
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html"/>
         /// </summary>
         public partial class DefaultReplicaView : Org.Apache.Kafka.Common.Replica.ReplicaView
         {

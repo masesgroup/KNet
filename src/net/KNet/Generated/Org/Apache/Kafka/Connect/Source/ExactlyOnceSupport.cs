@@ -38,13 +38,13 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/source/ExactlyOnceSupport.html#SUPPORTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/source/ExactlyOnceSupport.html#SUPPORTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport SUPPORTED { get { if (!_SUPPORTEDReady) { _SUPPORTEDContent = SGetField<Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport>(LocalBridgeClazz, "SUPPORTED"); _SUPPORTEDReady = true; } return _SUPPORTEDContent; } }
         private static Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport _SUPPORTEDContent = default;
         private static bool _SUPPORTEDReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/source/ExactlyOnceSupport.html#UNSUPPORTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/source/ExactlyOnceSupport.html#UNSUPPORTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport UNSUPPORTED { get { if (!_UNSUPPORTEDReady) { _UNSUPPORTEDContent = SGetField<Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport>(LocalBridgeClazz, "UNSUPPORTED"); _UNSUPPORTEDReady = true; } return _UNSUPPORTEDContent; } }
         private static Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport _UNSUPPORTEDContent = default;
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/source/ExactlyOnceSupport.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/source/ExactlyOnceSupport.html#valueOf-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport"/></returns>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Connect.Source
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/connect/source/ExactlyOnceSupport;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/source/ExactlyOnceSupport.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/source/ExactlyOnceSupport.html#values--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport"/></returns>
         public static Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport[] Values()

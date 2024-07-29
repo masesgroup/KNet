@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Json
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/JsonConverter.html#org.apache.kafka.connect.json.JsonConverter(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/JsonConverter.html#org.apache.kafka.connect.json.JsonConverter(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public JsonConverter(bool arg0)
@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/JsonConverter.html#fromConnectData-java.lang.String-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/JsonConverter.html#fromConnectData-java.lang.String-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecuteArray<byte>("fromConnectData", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/JsonConverter.html#fromConnectHeader-java.lang.String-java.lang.String-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/JsonConverter.html#fromConnectHeader-java.lang.String-java.lang.String-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecuteArray<byte>("fromConnectHeader", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/JsonConverter.html#version--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/JsonConverter.html#version--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/JsonConverter.html#config--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/JsonConverter.html#config--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Config()
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/JsonConverter.html#toConnectData-java.lang.String-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/JsonConverter.html#toConnectData-java.lang.String-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecute<Org.Apache.Kafka.Connect.Data.SchemaAndValue>("toConnectData", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/JsonConverter.html#toConnectHeader-java.lang.String-java.lang.String-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/JsonConverter.html#toConnectHeader-java.lang.String-java.lang.String-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -118,14 +118,14 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecute<Org.Apache.Kafka.Connect.Data.SchemaAndValue>("toConnectHeader", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/JsonConverter.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/JsonConverter.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/JsonConverter.html#configure-java.util.Map-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/JsonConverter.html#configure-java.util.Map-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Connect.Json
             IExecute("configure", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/org/apache/kafka/connect/json/JsonConverter.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/org/apache/kafka/connect/json/JsonConverter.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

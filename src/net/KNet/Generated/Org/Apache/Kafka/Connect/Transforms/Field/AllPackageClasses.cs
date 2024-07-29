@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Field
 {
     #region FieldSyntaxVersion
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.1/org/apache/kafka/connect/transforms/field/FieldSyntaxVersion.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.8.0/org/apache/kafka/connect/transforms/field/FieldSyntaxVersion.html"/>
     /// </summary>
     public partial class FieldSyntaxVersion : Java.Lang.Enum<Org.Apache.Kafka.Connect.Transforms.Field.FieldSyntaxVersion>
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Field
 
     #region SingleFieldPath
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.1/org/apache/kafka/connect/transforms/field/SingleFieldPath.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.8.0/org/apache/kafka/connect/transforms/field/SingleFieldPath.html"/>
     /// </summary>
     public partial class SingleFieldPath : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SingleFieldPath>
     {

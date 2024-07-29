@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/source/SourceTaskContext.html#configs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/source/SourceTaskContext.html#configs--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> Configs()
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Source
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("configs", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/org/apache/kafka/connect/source/SourceTaskContext.html#transactionContext--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/source/SourceTaskContext.html#transactionContext--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Source.TransactionContext"/></returns>
         public Org.Apache.Kafka.Connect.Source.TransactionContext TransactionContext()

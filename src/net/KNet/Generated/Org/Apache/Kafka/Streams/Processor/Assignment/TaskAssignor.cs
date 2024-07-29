@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.html#assign-org.apache.kafka.streams.processor.assignment.ApplicationState-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.html#assign-org.apache.kafka.streams.processor.assignment.ApplicationState-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.ApplicationState"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.TaskAssignment"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.TaskAssignment>("assign", "(Lorg/apache/kafka/streams/processor/assignment/ApplicationState;)Lorg/apache/kafka/streams/processor/assignment/TaskAssignor$TaskAssignment;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             IExecuteWithSignature("configure", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.html#onAssignmentComputed-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription-org.apache.kafka.streams.processor.assignment.TaskAssignor.AssignmentError-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.html#onAssignmentComputed-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupAssignment-org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription-org.apache.kafka.streams.processor.assignment.TaskAssignor.AssignmentError-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupAssignment"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupSubscription"/></param>
@@ -107,37 +107,37 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#ACTIVE_TASK_ASSIGNED_MULTIPLE_TIMES"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#ACTIVE_TASK_ASSIGNED_MULTIPLE_TIMES"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError ACTIVE_TASK_ASSIGNED_MULTIPLE_TIMES { get { if (!_ACTIVE_TASK_ASSIGNED_MULTIPLE_TIMESReady) { _ACTIVE_TASK_ASSIGNED_MULTIPLE_TIMESContent = SGetField<Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError>(LocalBridgeClazz, "ACTIVE_TASK_ASSIGNED_MULTIPLE_TIMES"); _ACTIVE_TASK_ASSIGNED_MULTIPLE_TIMESReady = true; } return _ACTIVE_TASK_ASSIGNED_MULTIPLE_TIMESContent; } }
             private static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError _ACTIVE_TASK_ASSIGNED_MULTIPLE_TIMESContent = default;
             private static bool _ACTIVE_TASK_ASSIGNED_MULTIPLE_TIMESReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#INVALID_STANDBY_TASK"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#INVALID_STANDBY_TASK"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError INVALID_STANDBY_TASK { get { if (!_INVALID_STANDBY_TASKReady) { _INVALID_STANDBY_TASKContent = SGetField<Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError>(LocalBridgeClazz, "INVALID_STANDBY_TASK"); _INVALID_STANDBY_TASKReady = true; } return _INVALID_STANDBY_TASKContent; } }
             private static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError _INVALID_STANDBY_TASKContent = default;
             private static bool _INVALID_STANDBY_TASKReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#MISSING_PROCESS_ID"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#MISSING_PROCESS_ID"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError MISSING_PROCESS_ID { get { if (!_MISSING_PROCESS_IDReady) { _MISSING_PROCESS_IDContent = SGetField<Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError>(LocalBridgeClazz, "MISSING_PROCESS_ID"); _MISSING_PROCESS_IDReady = true; } return _MISSING_PROCESS_IDContent; } }
             private static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError _MISSING_PROCESS_IDContent = default;
             private static bool _MISSING_PROCESS_IDReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#NONE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#NONE"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError NONE { get { if (!_NONEReady) { _NONEContent = SGetField<Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError>(LocalBridgeClazz, "NONE"); _NONEReady = true; } return _NONEContent; } }
             private static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError _NONEContent = default;
             private static bool _NONEReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#UNKNOWN_PROCESS_ID"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#UNKNOWN_PROCESS_ID"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError UNKNOWN_PROCESS_ID { get { if (!_UNKNOWN_PROCESS_IDReady) { _UNKNOWN_PROCESS_IDContent = SGetField<Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError>(LocalBridgeClazz, "UNKNOWN_PROCESS_ID"); _UNKNOWN_PROCESS_IDReady = true; } return _UNKNOWN_PROCESS_IDContent; } }
             private static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError _UNKNOWN_PROCESS_IDContent = default;
             private static bool _UNKNOWN_PROCESS_IDReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#UNKNOWN_TASK_ID"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#UNKNOWN_TASK_ID"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError UNKNOWN_TASK_ID { get { if (!_UNKNOWN_TASK_IDReady) { _UNKNOWN_TASK_IDContent = SGetField<Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError>(LocalBridgeClazz, "UNKNOWN_TASK_ID"); _UNKNOWN_TASK_IDReady = true; } return _UNKNOWN_TASK_IDContent; } }
             private static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError _UNKNOWN_TASK_IDContent = default;
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#valueOf-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#valueOf-java.lang.String-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError"/></returns>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/processor/assignment/TaskAssignor$AssignmentError;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#values--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.AssignmentError.html#values--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError"/></returns>
             public static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError[] Values()
@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.TaskAssignment.html#org.apache.kafka.streams.processor.assignment.TaskAssignor$TaskAssignment(java.util.Collection)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.TaskAssignment.html#org.apache.kafka.streams.processor.assignment.TaskAssignor$TaskAssignment(java.util.Collection)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
             public TaskAssignment(Java.Util.Collection<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment> arg0)
@@ -207,7 +207,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.TaskAssignment.html#assignment--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignor.TaskAssignment.html#assignment--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Collection"/></returns>
             public Java.Util.Collection<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment> Assignment()

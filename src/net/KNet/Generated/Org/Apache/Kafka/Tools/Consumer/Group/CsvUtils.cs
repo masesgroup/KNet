@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#org.apache.kafka.tools.consumer.group.CsvUtils$CsvRecordNoGroup(java.lang.String,int,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#org.apache.kafka.tools.consumer.group.CsvUtils$CsvRecordNoGroup(java.lang.String,int,long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="int"/></param>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#FIELDS"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#FIELDS"/>
             /// </summary>
             public static Java.Lang.String[] FIELDS { get { if (!_FIELDSReady) { _FIELDSContent = SGetFieldArray<Java.Lang.String>(LocalBridgeClazz, "FIELDS"); _FIELDSReady = true; } return _FIELDSContent; } }
             private static Java.Lang.String[] _FIELDSContent = default;
@@ -86,21 +86,21 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#getOffset--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#setOffset-long-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#getOffset--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#setOffset-long-"/>
             /// </summary>
             public long Offset
             {
                 get { return IExecuteWithSignature<long>("getOffset", "()J"); } set { IExecuteWithSignature("setOffset", "(J)V", value); }
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#getPartition--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#setPartition-int-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#getPartition--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#setPartition-int-"/>
             /// </summary>
             public int Partition
             {
                 get { return IExecuteWithSignature<int>("getPartition", "()I"); } set { IExecuteWithSignature("setPartition", "(I)V", value); }
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#getTopic--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#setTopic-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#getTopic--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html#setTopic-java.lang.String-"/>
             /// </summary>
             public Java.Lang.String Topic
             {
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#org.apache.kafka.tools.consumer.group.CsvUtils$CsvRecordWithGroup(java.lang.String,java.lang.String,int,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#org.apache.kafka.tools.consumer.group.CsvUtils$CsvRecordWithGroup(java.lang.String,java.lang.String,int,long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#FIELDS"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#FIELDS"/>
             /// </summary>
             public static Java.Lang.String[] FIELDS { get { if (!_FIELDSReady) { _FIELDSContent = SGetFieldArray<Java.Lang.String>(LocalBridgeClazz, "FIELDS"); _FIELDSReady = true; } return _FIELDSContent; } }
             private static Java.Lang.String[] _FIELDSContent = default;
@@ -155,28 +155,28 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#getGroup--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#setGroup-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#getGroup--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#setGroup-java.lang.String-"/>
             /// </summary>
             public Java.Lang.String Group
             {
                 get { return IExecuteWithSignature<Java.Lang.String>("getGroup", "()Ljava/lang/String;"); } set { IExecuteWithSignature("setGroup", "(Ljava/lang/String;)V", value); }
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#getOffset--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#setOffset-long-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#getOffset--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#setOffset-long-"/>
             /// </summary>
             public long Offset
             {
                 get { return IExecuteWithSignature<long>("getOffset", "()J"); } set { IExecuteWithSignature("setOffset", "(J)V", value); }
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#getPartition--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#setPartition-int-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#getPartition--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#setPartition-int-"/>
             /// </summary>
             public int Partition
             {
                 get { return IExecuteWithSignature<int>("getPartition", "()I"); } set { IExecuteWithSignature("setPartition", "(I)V", value); }
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#getTopic--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#setTopic-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#getTopic--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html#setTopic-java.lang.String-"/>
             /// </summary>
             public Java.Lang.String Topic
             {

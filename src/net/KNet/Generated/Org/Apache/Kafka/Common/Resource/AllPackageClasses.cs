@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Common.Resource
 {
     #region PatternType
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/PatternType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/PatternType.html"/>
     /// </summary>
     public partial class PatternType : Java.Lang.Enum<Org.Apache.Kafka.Common.Resource.PatternType>
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Resource
 
     #region Resource
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/Resource.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/Resource.html"/>
     /// </summary>
     public partial class Resource : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Resource>
     {
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Resource
 
     #region ResourcePattern
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourcePattern.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourcePattern.html"/>
     /// </summary>
     public partial class ResourcePattern : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ResourcePattern>
     {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Resource
 
     #region ResourcePatternFilter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourcePatternFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourcePatternFilter.html"/>
     /// </summary>
     public partial class ResourcePatternFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ResourcePatternFilter>
     {
@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Common.Resource
 
     #region ResourceType
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/resource/ResourceType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/resource/ResourceType.html"/>
     /// </summary>
     public partial class ResourceType : Java.Lang.Enum<Org.Apache.Kafka.Common.Resource.ResourceType>
     {

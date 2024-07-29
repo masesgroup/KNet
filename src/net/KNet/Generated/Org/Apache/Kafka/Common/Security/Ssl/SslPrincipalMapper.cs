@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#org.apache.kafka.common.security.ssl.SslPrincipalMapper(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#org.apache.kafka.common.security.ssl.SslPrincipalMapper(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public SslPrincipalMapper(Java.Lang.String arg0)
@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#fromRules-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#fromRules-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Ssl.SslPrincipalMapper"/></returns>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#getName-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#getName-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>

@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region BuiltInDslStoreSuppliers
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.html"/>
     /// </summary>
     public partial class BuiltInDslStoreSuppliers : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BuiltInDslStoreSuppliers>
     {
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Streams.State
         // TODO: complete the class
         #region InMemoryDslStoreSuppliers
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.InMemoryDslStoreSuppliers.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.InMemoryDslStoreSuppliers.html"/>
         /// </summary>
         public partial class InMemoryDslStoreSuppliers : Org.Apache.Kafka.Streams.State.DslStoreSuppliers
         {
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region RocksDBDslStoreSuppliers
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.RocksDBDslStoreSuppliers.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.RocksDBDslStoreSuppliers.html"/>
         /// </summary>
         public partial class RocksDBDslStoreSuppliers : Org.Apache.Kafka.Streams.State.DslStoreSuppliers
         {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region DslKeyValueParams
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/DslKeyValueParams.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/DslKeyValueParams.html"/>
     /// </summary>
     public partial class DslKeyValueParams : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DslKeyValueParams>
     {
@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region DslSessionParams
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/DslSessionParams.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/DslSessionParams.html"/>
     /// </summary>
     public partial class DslSessionParams : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DslSessionParams>
     {
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region DslStoreSuppliers
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/DslStoreSuppliers.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/DslStoreSuppliers.html"/>
     /// </summary>
     public partial class DslStoreSuppliers : Org.Apache.Kafka.Common.Configurable
     {
@@ -300,7 +300,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region DslWindowParams
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/DslWindowParams.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/DslWindowParams.html"/>
     /// </summary>
     public partial class DslWindowParams : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DslWindowParams>
     {
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region HostInfo
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/HostInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/HostInfo.html"/>
     /// </summary>
     public partial class HostInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HostInfo>
     {
@@ -390,7 +390,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region KeyValueBytesStoreSupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/KeyValueBytesStoreSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/KeyValueBytesStoreSupplier.html"/>
     /// </summary>
     public partial class KeyValueBytesStoreSupplier : Org.Apache.Kafka.Streams.State.StoreSupplier<Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>
     {
@@ -437,7 +437,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region KeyValueIterator
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/KeyValueIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/KeyValueIterator.html"/>
     /// </summary>
     public partial class KeyValueIterator : Java.Util.Iterator
     {
@@ -484,7 +484,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region KeyValueIterator<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/KeyValueIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/KeyValueIterator.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -533,7 +533,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region KeyValueStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/KeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/KeyValueStore.html"/>
     /// </summary>
     public partial class KeyValueStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValueStore>
     {
@@ -580,7 +580,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region KeyValueStore<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/KeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/KeyValueStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -629,7 +629,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region QueryableStoreType
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreType.html"/>
     /// </summary>
     public partial class QueryableStoreType : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryableStoreType>
     {
@@ -676,7 +676,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region QueryableStoreType<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreType.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class QueryableStoreType<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryableStoreType<T>>
@@ -724,7 +724,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region QueryableStoreTypes
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.html"/>
     /// </summary>
     public partial class QueryableStoreTypes : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryableStoreTypes>
     {
@@ -765,7 +765,7 @@ namespace Org.Apache.Kafka.Streams.State
         // TODO: complete the class
         #region KeyValueStoreType
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.KeyValueStoreType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.KeyValueStoreType.html"/>
         /// </summary>
         public partial class KeyValueStoreType : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValueStoreType>
         {
@@ -810,7 +810,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region KeyValueStoreType<K, V>
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.KeyValueStoreType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.KeyValueStoreType.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -857,7 +857,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region SessionStoreType
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.SessionStoreType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.SessionStoreType.html"/>
         /// </summary>
         public partial class SessionStoreType : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionStoreType>
         {
@@ -902,7 +902,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region SessionStoreType<K, V>
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.SessionStoreType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.SessionStoreType.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -949,7 +949,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region WindowStoreType
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.WindowStoreType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.WindowStoreType.html"/>
         /// </summary>
         public partial class WindowStoreType : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowStoreType>
         {
@@ -994,7 +994,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region WindowStoreType<K, V>
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/QueryableStoreTypes.WindowStoreType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/QueryableStoreTypes.WindowStoreType.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -1045,7 +1045,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ReadOnlyKeyValueStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html"/>
     /// </summary>
     public partial class ReadOnlyKeyValueStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReadOnlyKeyValueStore>
     {
@@ -1092,7 +1092,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ReadOnlyKeyValueStore<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1141,7 +1141,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ReadOnlySessionStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html"/>
     /// </summary>
     public partial class ReadOnlySessionStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReadOnlySessionStore>
     {
@@ -1188,7 +1188,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ReadOnlySessionStore<K, AGG>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="AGG"></typeparam>
@@ -1237,7 +1237,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ReadOnlyWindowStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html"/>
     /// </summary>
     public partial class ReadOnlyWindowStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReadOnlyWindowStore>
     {
@@ -1284,7 +1284,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ReadOnlyWindowStore<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1333,7 +1333,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region RocksDBConfigSetter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/RocksDBConfigSetter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html"/>
     /// </summary>
     public partial class RocksDBConfigSetter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RocksDBConfigSetter>
     {
@@ -1380,7 +1380,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region SessionBytesStoreSupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html"/>
     /// </summary>
     public partial class SessionBytesStoreSupplier : Org.Apache.Kafka.Streams.State.StoreSupplier<Org.Apache.Kafka.Streams.State.SessionStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>
     {
@@ -1427,7 +1427,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region SessionStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/SessionStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/SessionStore.html"/>
     /// </summary>
     public partial class SessionStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionStore>
     {
@@ -1474,7 +1474,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region SessionStore<K, AGG>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/SessionStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/SessionStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="AGG"></typeparam>
@@ -1523,7 +1523,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region StateSerdes
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/StateSerdes.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/StateSerdes.html"/>
     /// </summary>
     public partial class StateSerdes : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateSerdes>
     {
@@ -1568,7 +1568,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region StateSerdes<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/StateSerdes.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/StateSerdes.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1615,7 +1615,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region StoreBuilder
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/StoreBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/StoreBuilder.html"/>
     /// </summary>
     public partial class StoreBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StoreBuilder>
     {
@@ -1662,7 +1662,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region StoreBuilder<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/StoreBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/StoreBuilder.html"/>
     /// </summary>
     /// <typeparam name="T"><see cref="Org.Apache.Kafka.Streams.Processor.IStateStore"/></typeparam>
     public partial class StoreBuilder<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StoreBuilder<T>> where T : Org.Apache.Kafka.Streams.Processor.IStateStore, new()
@@ -1710,7 +1710,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region Stores
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/Stores.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/Stores.html"/>
     /// </summary>
     public partial class Stores : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Stores>
     {
@@ -1755,7 +1755,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region StoreSupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/StoreSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/StoreSupplier.html"/>
     /// </summary>
     public partial class StoreSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StoreSupplier>
     {
@@ -1802,7 +1802,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region StoreSupplier<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/StoreSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/StoreSupplier.html"/>
     /// </summary>
     /// <typeparam name="T"><see cref="Org.Apache.Kafka.Streams.Processor.IStateStore"/></typeparam>
     public partial class StoreSupplier<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StoreSupplier<T>> where T : Org.Apache.Kafka.Streams.Processor.IStateStore, new()
@@ -1850,7 +1850,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region TimestampedBytesStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/TimestampedBytesStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/TimestampedBytesStore.html"/>
     /// </summary>
     public partial class TimestampedBytesStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimestampedBytesStore>
     {
@@ -1897,7 +1897,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region TimestampedKeyValueStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/TimestampedKeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/TimestampedKeyValueStore.html"/>
     /// </summary>
     public partial class TimestampedKeyValueStore : Org.Apache.Kafka.Streams.State.KeyValueStore
     {
@@ -1944,7 +1944,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region TimestampedKeyValueStore<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/TimestampedKeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/TimestampedKeyValueStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1993,7 +1993,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region TimestampedWindowStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/TimestampedWindowStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/TimestampedWindowStore.html"/>
     /// </summary>
     public partial class TimestampedWindowStore : Org.Apache.Kafka.Streams.State.WindowStore
     {
@@ -2040,7 +2040,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region TimestampedWindowStore<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/TimestampedWindowStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/TimestampedWindowStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -2089,7 +2089,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ValueAndTimestamp
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/ValueAndTimestamp.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/ValueAndTimestamp.html"/>
     /// </summary>
     public partial class ValueAndTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueAndTimestamp>
     {
@@ -2134,7 +2134,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ValueAndTimestamp<V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/ValueAndTimestamp.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/ValueAndTimestamp.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     public partial class ValueAndTimestamp<V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueAndTimestamp<V>>
@@ -2180,7 +2180,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region VersionedBytesStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/VersionedBytesStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/VersionedBytesStore.html"/>
     /// </summary>
     public partial class VersionedBytesStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VersionedBytesStore>
     {
@@ -2227,7 +2227,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region VersionedBytesStoreSupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/VersionedBytesStoreSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/VersionedBytesStoreSupplier.html"/>
     /// </summary>
     public partial class VersionedBytesStoreSupplier : Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier
     {
@@ -2274,7 +2274,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region VersionedKeyValueStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html"/>
     /// </summary>
     public partial class VersionedKeyValueStore : Org.Apache.Kafka.Streams.Processor.StateStore
     {
@@ -2321,7 +2321,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region VersionedKeyValueStore<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -2370,7 +2370,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region VersionedRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/VersionedRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/VersionedRecord.html"/>
     /// </summary>
     public partial class VersionedRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VersionedRecord>
     {
@@ -2415,7 +2415,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region VersionedRecord<V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/VersionedRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/VersionedRecord.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     public partial class VersionedRecord<V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VersionedRecord<V>>
@@ -2461,7 +2461,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region VersionedRecordIterator
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/VersionedRecordIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/VersionedRecordIterator.html"/>
     /// </summary>
     public partial class VersionedRecordIterator : Java.Util.Iterator
     {
@@ -2508,7 +2508,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region VersionedRecordIterator<V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/VersionedRecordIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/VersionedRecordIterator.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     public partial class VersionedRecordIterator<V> : Java.Util.Iterator<Org.Apache.Kafka.Streams.State.VersionedRecord<V>>
@@ -2556,7 +2556,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region WindowBytesStoreSupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html"/>
     /// </summary>
     public partial class WindowBytesStoreSupplier : Org.Apache.Kafka.Streams.State.StoreSupplier<Org.Apache.Kafka.Streams.State.WindowStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>
     {
@@ -2603,7 +2603,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region WindowStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/WindowStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/WindowStore.html"/>
     /// </summary>
     public partial class WindowStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowStore>
     {
@@ -2650,7 +2650,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region WindowStore<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/WindowStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/WindowStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -2699,7 +2699,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region WindowStoreIterator
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/WindowStoreIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/WindowStoreIterator.html"/>
     /// </summary>
     public partial class WindowStoreIterator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowStoreIterator>
     {
@@ -2746,7 +2746,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region WindowStoreIterator<V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/WindowStoreIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/WindowStoreIterator.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     public partial class WindowStoreIterator<V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowStoreIterator<V>>

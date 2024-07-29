@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region ClientCompatibilityTest
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ClientCompatibilityTest.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ClientCompatibilityTest.html"/>
     /// </summary>
     public partial class ClientCompatibilityTest : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientCompatibilityTest>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region ClientMetricsCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ClientMetricsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ClientMetricsCommand.html"/>
     /// </summary>
     public partial class ClientMetricsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientMetricsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region ClientMetricsCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html"/>
         /// </summary>
         public partial class ClientMetricsCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientMetricsCommandOptions>
         {
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region ClientMetricsService
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html"/>
         /// </summary>
         public partial class ClientMetricsService : Java.Lang.AutoCloseable
         {
@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region ClusterTool
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ClusterTool.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ClusterTool.html"/>
     /// </summary>
     public partial class ClusterTool : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClusterTool>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region ConnectPluginPath
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ConnectPluginPath.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ConnectPluginPath.html"/>
     /// </summary>
     public partial class ConnectPluginPath : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectPluginPath>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region ConsumerPerformance
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ConsumerPerformance.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ConsumerPerformance.html"/>
     /// </summary>
     public partial class ConsumerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerPerformance>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -343,7 +343,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region DelegationTokenCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/DelegationTokenCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/DelegationTokenCommand.html"/>
     /// </summary>
     public partial class DelegationTokenCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DelegationTokenCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -388,7 +388,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region DeleteRecordsCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/DeleteRecordsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/DeleteRecordsCommand.html"/>
     /// </summary>
     public partial class DeleteRecordsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -433,7 +433,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region EndToEndLatency
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/EndToEndLatency.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/EndToEndLatency.html"/>
     /// </summary>
     public partial class EndToEndLatency : MASES.JCOBridge.C2JBridge.JVMBridgeBase<EndToEndLatency>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -478,7 +478,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region FeatureCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/FeatureCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/FeatureCommand.html"/>
     /// </summary>
     public partial class FeatureCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -523,7 +523,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region GetOffsetShell
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/GetOffsetShell.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/GetOffsetShell.html"/>
     /// </summary>
     public partial class GetOffsetShell : MASES.JCOBridge.C2JBridge.JVMBridgeBase<GetOffsetShell>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -568,7 +568,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region JmxTool
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/JmxTool.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/JmxTool.html"/>
     /// </summary>
     public partial class JmxTool : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JmxTool>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -613,7 +613,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region LeaderElectionCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/LeaderElectionCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/LeaderElectionCommand.html"/>
     /// </summary>
     public partial class LeaderElectionCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderElectionCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -658,7 +658,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region LogDirsCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/LogDirsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/LogDirsCommand.html"/>
     /// </summary>
     public partial class LogDirsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -703,7 +703,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region ManifestWorkspace
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ManifestWorkspace.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ManifestWorkspace.html"/>
     /// </summary>
     public partial class ManifestWorkspace : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ManifestWorkspace>
     {
@@ -744,7 +744,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region SourceWorkspace
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html"/>
         /// </summary>
         public partial class SourceWorkspace : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SourceWorkspace>
         {
@@ -791,7 +791,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region SourceWorkspace<T>
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         public partial class SourceWorkspace<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SourceWorkspace<T>>
@@ -843,7 +843,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region MetadataQuorumCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/MetadataQuorumCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/MetadataQuorumCommand.html"/>
     /// </summary>
     public partial class MetadataQuorumCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetadataQuorumCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -888,7 +888,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region OAuthCompatibilityTool
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/OAuthCompatibilityTool.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/OAuthCompatibilityTool.html"/>
     /// </summary>
     public partial class OAuthCompatibilityTool : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthCompatibilityTool>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -933,7 +933,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region ProducerPerformance
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ProducerPerformance.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ProducerPerformance.html"/>
     /// </summary>
     public partial class ProducerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerPerformance>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -978,7 +978,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region PushHttpMetricsReporter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/PushHttpMetricsReporter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/PushHttpMetricsReporter.html"/>
     /// </summary>
     public partial class PushHttpMetricsReporter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PushHttpMetricsReporter>
     {
@@ -1023,7 +1023,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region ReplicaVerificationTool
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ReplicaVerificationTool.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ReplicaVerificationTool.html"/>
     /// </summary>
     public partial class ReplicaVerificationTool : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicaVerificationTool>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -1068,7 +1068,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region StreamsResetter
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/StreamsResetter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/StreamsResetter.html"/>
     /// </summary>
     public partial class StreamsResetter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsResetter>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -1113,7 +1113,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region TerseException
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/TerseException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/TerseException.html"/>
     /// </summary>
     public partial class TerseException : Java.Lang.Exception
     {
@@ -1130,7 +1130,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region ToolsUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/ToolsUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ToolsUtils.html"/>
     /// </summary>
     public partial class ToolsUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ToolsUtils>
     {
@@ -1175,7 +1175,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region TopicCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/TopicCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/TopicCommand.html"/>
     /// </summary>
     public partial class TopicCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -1218,7 +1218,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region TopicCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html"/>
         /// </summary>
         public partial class TopicCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCommandOptions>
         {
@@ -1263,7 +1263,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region TopicService
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/TopicCommand.TopicService.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/TopicCommand.TopicService.html"/>
         /// </summary>
         public partial class TopicService : Java.Lang.AutoCloseable
         {
@@ -1312,7 +1312,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region TransactionalMessageCopier
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/TransactionalMessageCopier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/TransactionalMessageCopier.html"/>
     /// </summary>
     public partial class TransactionalMessageCopier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionalMessageCopier>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -1357,7 +1357,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region TransactionsCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/TransactionsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/TransactionsCommand.html"/>
     /// </summary>
     public partial class TransactionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -1404,7 +1404,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region VerifiableConsumer
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/VerifiableConsumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/VerifiableConsumer.html"/>
     /// </summary>
     public partial class VerifiableConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableConsumer>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -1449,7 +1449,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region VerifiableLog4jAppender
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/VerifiableLog4jAppender.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/VerifiableLog4jAppender.html"/>
     /// </summary>
     public partial class VerifiableLog4jAppender : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableLog4jAppender>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -1494,7 +1494,7 @@ namespace Org.Apache.Kafka.Tools
 
     #region VerifiableProducer
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/org/apache/kafka/tools/VerifiableProducer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/VerifiableProducer.html"/>
     /// </summary>
     public partial class VerifiableProducer : Java.Lang.AutoCloseable, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {

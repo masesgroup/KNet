@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/MetadataSnapshot.html#leaderEpochFor-org.apache.kafka.common.TopicPartition-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/MetadataSnapshot.html#leaderEpochFor-org.apache.kafka.common.TopicPartition-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<Java.Util.OptionalInt>("leaderEpochFor", "(Lorg/apache/kafka/common/TopicPartition;)Ljava/util/OptionalInt;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/clients/MetadataSnapshot.html#cluster--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/MetadataSnapshot.html#cluster--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Cluster"/></returns>
         public Org.Apache.Kafka.Common.Cluster Cluster()
