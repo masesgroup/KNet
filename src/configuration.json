@@ -23,51 +23,51 @@
   "OriginJavadocJARVersionAndUrls": [
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.8.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.7.1/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.8.0/"
     }
   ],
   "NamespacesToAvoid": [
