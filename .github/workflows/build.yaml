@@ -8,6 +8,8 @@ on:
   push:
     # only trigger on branches, not on tags
     branches: '**'
+    paths-ignore:
+      - 'docs/**'
   workflow_dispatch:
     inputs:
       UseLastRepositoryBuild:
