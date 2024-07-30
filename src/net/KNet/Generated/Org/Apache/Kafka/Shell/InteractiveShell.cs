@@ -29,15 +29,6 @@ namespace Org.Apache.Kafka.Shell
     public partial class InteractiveShell
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.7.1/org/apache/kafka/shell/InteractiveShell.html#org.apache.kafka.shell.InteractiveShell(org.apache.kafka.shell.state.MetadataShellState)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Shell.State.MetadataShellState"/></param>
-        /// <exception cref="Java.Io.IOException"/>
-        public InteractiveShell(Org.Apache.Kafka.Shell.State.MetadataShellState arg0)
-            : base(arg0)
-        {
-        }
 
         #endregion
 
