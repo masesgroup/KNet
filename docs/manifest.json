@@ -14964,6 +14964,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Shell.InteractiveShell.HistoryIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Shell.InteractiveShell.HistoryIterator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Shell.InteractiveShell.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Shell.InteractiveShell.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Shell.MetadataShell.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Shell.MetadataShell.Builder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Shell.MetadataShell.yml",
       "output": {
         ".html": {
