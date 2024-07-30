@@ -13,6 +13,6 @@
 	</ItemGroup>
 	<ItemGroup Condition="!Exists('$(ProjectDir)..\..\..\KNet\KNet.csproj')">
 		<!--Outside GitHub repo-->
-		<PackageReference Include="MASES.KNet" Version="2.7.6" IncludeAssets="All" PrivateAssets="None" />
+		<PackageReference Include="MASES.KNet" Version="2.7.7" IncludeAssets="All" PrivateAssets="None" />
 	</ItemGroup>
 </Project>
