@@ -302,9 +302,14 @@ namespace MASES.KNet
                     version = version.Substring(0, version.LastIndexOf(".0"));
                     knetFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(assembly.Location), JARsSubFolder, $"knet-{version}.jar");
                 }
-                // 3. add knet at this version first...
+                // 3. check if knet jar exist...
+                if (!System.IO.File.Exists(knetFile))
+                {
+                    throw new System.IO.FileNotFoundException("Unable to identify KNet Jar location", knetFile);
+                }
+                // 4. add knet jar at this version first...
                 lst.Add(knetFile);
-                // 2. ...then add everything else
+                // 5. ...then add everything else
                 lst.Add(JarRootPath != null ? Path.Combine(JarRootPath, "*.jar") : JarRootPath);
                 return lst;
             }
