@@ -45,9 +45,9 @@ namespace Org.Apache.Kafka.Tools
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/LogDirsCommand.html#main-java.lang.String[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
-        public static void Main(params Java.Lang.String[] arg0)
+        public static void Main(Java.Lang.String[] arg0)
         {
-            if (arg0.Length == 0) SExecuteWithSignature(LocalBridgeClazz, "main", "([Ljava/lang/String;)V"); else SExecuteWithSignature(LocalBridgeClazz, "main", "([Ljava/lang/String;)V", arg0);
+            SExecuteWithSignature(LocalBridgeClazz, "main", "([Ljava/lang/String;)V", new object[] { arg0 });
         }
 
         #endregion
