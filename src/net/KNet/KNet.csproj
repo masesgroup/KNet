@@ -31,8 +31,7 @@
 		<Copy SourceFiles="@(knetcore_config)" DestinationFolder="$(OutDir)\config" />
 		<Copy SourceFiles="@(knetcore_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
-	
-	
+
 	<ItemGroup>
 		<None Include="mases.knet.targets" Pack="true" PackagePath="build" />
 		<None Include="..\..\..\jars\*.jar" Pack="true" PackagePath="build\jars" />
