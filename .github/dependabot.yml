@@ -9,13 +9,67 @@ updates:
     directory: "/src/net" # Location of package manifests
     schedule:
       interval: "weekly"
+    reviewers:
+      - "masesdevelopers"
+      
+  - package-ecosystem: "nuget" # See documentation for possible values
+    directory: "/src/net" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "masesdevelopers"
+    target-branch: "release/2.6.X"
+    
+  - package-ecosystem: "nuget" # See documentation for possible values
+    directory: "/src/net" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "masesdevelopers"
+    target-branch: "release/2.7.X"
       
   - package-ecosystem: maven
     directory: "/src/jvm/knet"
     schedule:
       interval: "weekly"
+    reviewers:
+      - "masesdevelopers"
 
+  - package-ecosystem: maven
+    directory: "/src/jvm/knet"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "masesdevelopers"
+    target-branch: "release/2.6.X"
+    
+  - package-ecosystem: maven
+    directory: "/src/jvm/knet"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "masesdevelopers"
+    target-branch: "release/2.7.X"
+    
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: weekly
+      interval: "weekly"
+    reviewers:
+      - "masesdevelopers"
+      
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "masesdevelopers"
+    target-branch: "release/2.6.X"
+    
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "masesdevelopers"
+    target-branch: "release/2.7.X"
