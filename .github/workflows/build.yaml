@@ -115,6 +115,7 @@ jobs:
             ghcr.io/${{ github.repository_owner }}/knet
 
       - name: Build and push
+        id: push
         uses: docker/build-push-action@v6
         with:
           file: ./src/container/DockerfileKNet.linux
