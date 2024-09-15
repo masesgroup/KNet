@@ -1,14 +1,13 @@
 ﻿FROM mcr.microsoft.com/dotnet/sdk:6.0-jammy AS build-env
-ARG TARGETARCH
 WORKDIR /app
 
 # Copy everything
 COPY ./src/net ./
 ENV KNET_DOCKER_BUILD_ACTIONS=true
 # Restore as distinct layers
-RUN dotnet restore KNetDocker.sln -a $TARGETARCH
+RUN dotnet restore KNetDocker.sln
 # Build and publish a release
-RUN dotnet publish ./KNetCLI/KNetCLI.csproj --framework net6.0 -c Release -o out -a $TARGETARCH
+RUN dotnet publish ./KNetCLI/KNetCLI.csproj --framework net6.0 -c Release -o out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/runtime:6.0-jammy
