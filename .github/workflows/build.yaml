@@ -55,10 +55,15 @@ jobs:
       - name: Get run_build_windows
         run: echo "The selected run_build_windows is ${{ steps.check_files.outputs.run_build_windows }}"
 
-  build_container_linux:
+  build_container_knet:
     needs: check_changes
     if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      packages: write
+      contents: read
+      attestations: write
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -69,7 +74,7 @@ jobs:
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src/net/KNet/KNet.csproj
-        
+
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
@@ -89,20 +94,46 @@ jobs:
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
         
-      - name: Build KNet Docker Image
-        run: docker build -t knet -f ./src/container/DockerfileKNet.linux .
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-      - name: Save Docker Image
-        run: docker image save -o knet.linux.tar knet
-        
-      - name: Compress KNet Docker Image
-        run: gzip knet.linux.tar
-        
-      - uses: actions/upload-artifact@v4
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
         with:
-          name: Docker Images
-          path: ./*.tar.gz
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ghcr.io/${{ github.repository_owner }}/knet
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          file: ./src/container/DockerfileKNet.linux
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          provenance: true
+          sbom: true
+          
+      - name: Attest GitHub
+        uses: actions/attest-build-provenance@v1
+        id: attest
+        with:
+          subject-name: ghcr.io/${{ github.repository_owner }}/knet
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
+          
   # Now run "build_windows"
   build_windows:
     needs: check_changes
