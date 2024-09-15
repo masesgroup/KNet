@@ -11,13 +11,16 @@ RUN dotnet publish ./KNetCLI/KNetCLI.csproj --framework net6.0 -c Release -o out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/runtime:6.0-jammy
+ARG TARGETARCH
 
 # Add JRE
-RUN apt update
-RUN apt install -y openjdk-11-jre-headless
+RUN apt-get update && apt-get install -y --no-install-recommends openjdk-11-jre-headless && rm -rf /var/lib/apt/lists/*
 
 ADD ./jars /app/jars
 ADD ./src/config /app/config
+
+ENV JCOBRIDGE_JVMPath=/usr/lib/jvm/java-11-openjdk-$TARGETARCH/lib/server/libjvm.so
+ENV JCOBRIDGE_LicensePath=
 
 WORKDIR /app
 COPY --from=build-env /app/out .
