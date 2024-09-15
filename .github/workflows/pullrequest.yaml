@@ -93,9 +93,6 @@ jobs:
         
       - name: Build Docker Image
         run: docker build -t knet -f ./src/container/DockerfileKNet.linux .
-        
-      - name: Build Docker Image
-        run: docker build -t knetconnect -f ./src/container/DockerfileKNetConnect.linux .
 
   # This workflow contains a single job called "build_release"
   build_pullrequest:
