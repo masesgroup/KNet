@@ -17,6 +17,7 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using System.Threading;
 
 namespace MASES.KNet
 {
@@ -26,9 +27,11 @@ namespace MASES.KNet
         {
             UsePrefetch = true;
             UseThread = true;
+            ThreadPriority = ThreadPriority.AboveNormal;
         }
         public bool UsePrefetch { get; set; }
         public bool UseThread { get; set; }
+        public ThreadPriority ThreadPriority { get; set; }
         public IConverterBridge ConverterBridge { get; set; }
     }
 }

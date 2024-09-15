@@ -42,8 +42,7 @@
         <classpathfile>${basedir}/classpathfile.classpath</classpathfile>
         <kafkaVersion>3.6.2</kafkaVersion>
         <knetVersion>2.6.5.0</knetVersion>
-        <jcobridgeVersion>2.5.11</jcobridgeVersion>
-		<jcobridgepath>../../../bin/net6.0/JCOBridge.jar</jcobridgepath>
+        <jcobridgepath>../../../bin/net6.0/JCOBridge.jar</jcobridgepath>
     </properties>
     <distributionManagement>
         <snapshotRepository>
@@ -161,33 +160,6 @@
                                 <exclude>**/*.zip</exclude>
                             </excludes>
                         </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.6.0</version>
-                <configuration>
-                    <links>
-                        <link>https://www.jcobridge.com/api-java</link>
-                    </links>
-                    <quiet>true</quiet>
-                    <source>8</source>
-                    <additionalDependencies>
-                        <additionalDependency>
-                            <groupId>JCOBridge</groupId>
-                            <artifactId>JCOBridge</artifactId>
-                            <version>${jcobridgeVersion}</version>
-                        </additionalDependency>
-                    </additionalDependencies>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
                     </execution>
                 </executions>
             </plugin>
