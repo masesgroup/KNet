@@ -13,10 +13,18 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - release/**
+    paths-ignore:
+      - 'docs/**'
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ master ]
+    branches:
+      - master
+      - release/**
+    paths-ignore:
+      - 'docs/**'
 # Disabled to avoid error on schedule from check_changes job
 #  schedule:
 #    - cron: '26 23 * * 3'

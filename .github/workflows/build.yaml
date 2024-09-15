@@ -8,6 +8,8 @@ on:
   push:
     # only trigger on branches, not on tags
     branches: '**'
+    paths-ignore:
+      - 'docs/**'
 
 # This workflow contains two jobs called "check_changes", "build_windows"
 jobs:

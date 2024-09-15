@@ -6,7 +6,11 @@ name: CI_PULLREQUEST
 # events but only for the master branch
 on:
   pull_request:
-    branches: [ master ]
+    branches: 
+      - master
+      - release/**
+    paths-ignore:
+      - 'docs/**'
 
 jobs:
   # Verify if a build is needed
