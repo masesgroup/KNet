@@ -1,6 +1,6 @@
 ---
-title: Docker images of .NET suite for Apache Kafka
-_description: Describes the Docker images of .NET suite for Apache Kafka
+title: Docker images of .NET suite for Apache Kafka™
+_description: Describes the Docker images of .NET suite for Apache Kafka™
 ---
 
 
@@ -11,7 +11,7 @@ _description: Describes the Docker images of .NET suite for Apache Kafka
 
 # KNet: Docker images
 
-.NET suite for Apache Kafka comes with a ready made Docker image can work in multiple modes, the image name is _knet_:
+.NET suite for Apache Kafka™ comes with a ready made Docker image can work in multiple modes, the image name is _knet_:
 - it is avialble in the following registries:
   - GitHub: https://github.com/masesgroup/KNet/pkgs/container/knet
   - Docker Hub: https://hub.docker.com/repository/docker/masesgroup/knet/general

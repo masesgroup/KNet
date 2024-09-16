@@ -1,6 +1,6 @@
 ---
-title: CLI interface of .NET suite for Apache Kafka
-_description: Describes how to use CLI interface of .NET suite for Apache Kafka
+title: CLI interface of .NET suite for Apache Kafka™
+_description: Describes how to use CLI interface of .NET suite for Apache Kafka™
 ---
 
 # KNet: CLI
@@ -17,7 +17,7 @@ KNet CLI is available in two different formats:
 
 ## Usage
 
-### Execute an Apache Kafka command
+### Execute an Apache Kafka™ command
 
 To use the CLI interface (KNetCLI) runs a command like the following:
 

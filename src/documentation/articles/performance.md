@@ -1,6 +1,6 @@
 ---
-title: Performance of .NET suite for Apache Kafka
-_description: Describes the performance evaluation of .NET suite for Apache Kafka
+title: Performance of .NET suite for Apache Kafka™
+_description: Describes the performance evaluation of .NET suite for Apache Kafka™
 ---
 
 # KNet: performance evaluation
@@ -12,10 +12,10 @@ The benchmarks are:
 
 ## Initial considerations
 
-Apache Kafka is a client-server architecture which relies on the network for communication. 
+Apache Kafka™ is a client-server architecture which relies on the network for communication. 
 The entire infrastructure performance depends on some elements:
-  1. The HW where Apache Kafka server is running on: see https://kafka.apache.org/documentation/#hwandos for further information
-  2. The settings of Apache Kafka server installation
+  1. The HW where Apache Kafka™ server is running on: see https://kafka.apache.org/documentation/#hwandos for further information
+  2. The settings of Apache Kafka™ server installation
   3. The network between clients and servers
   4. The client library with its configuration parameters
   5. The user application
@@ -27,21 +27,21 @@ The benchmark made in KNet try to focus on the point 3: the benchmarks of the po
 
 With the considerations made in the previous chapter we are going to focus on the point 3: client library. 
 An absolute approach cannot be followed: as stated before HW and network have an high impact, so the benchmark test program was designed with a compare approach.
-Looking in the Apache Kafka clients page the client library which is under development is the one mantained from Confluent.
-The benchmark was designed to compare performances between KNet and Confluent.Kafka. The comparison between both libraries is listed below:
-- KNet uses official JARs from The Apache Foundation while Confluent.Kafka is a layer over librdkafka;
+Looking in the Apache Kafka™ clients page the client library which is under development is the one mantained from Confluent.
+The benchmark was designed to compare performances between KNet and Confluent.Kafka™. The comparison between both libraries is listed below:
+- KNet uses official JARs from The Apache Foundation while Confluent.Kafka™ is a layer over librdkafka;
 - thread model and data enqueing is different;
 - serializer/deserializer are different;
 - the libraries share many configuration parameters.
 
 ## Produce and Consume Benchmark
 
-The test analyze both produce and consume capability of KNet and Confluent.Kafka, then compares results.
+The test analyze both produce and consume capability of KNet and Confluent.Kafka™, then compares results.
 
 ### Produce and Consume Benchmark test program
 
 To create a well-done comparison some configuration parameters are set in the same way during each test: e.g. linger time, batch size, etc.
-Others have different meaning: KNet use the concept of memory pool to store messages (bytes that fills the buffer), while Confluent.Kafka (i.e. librdkafka) can configure how many messages stores (maximum messages to be stored); to reduce the impact from these specific parameters the tests were made to finalize the send/receive so all messages shall be sent or received.
+Others have different meaning: KNet use the concept of memory pool to store messages (bytes that fills the buffer), while Confluent.Kafka™ (i.e. librdkafka) can configure how many messages stores (maximum messages to be stored); to reduce the impact from these specific parameters the tests were made to finalize the send/receive so all messages shall be sent or received.
 
 The tests:
 - are divided in two different main areas: produce and consume;
@@ -54,7 +54,7 @@ The tests:
 - to reduce impacts from different implementations of serializer/deserializer the most simple data types are used in the messages:
   - **key** is a long and represents the incremental ordinal of the message sent starting from 0 which is the first message sent;
   - **value** (payload) is a byte array of data built from the application so the data does not have to be manipulated from the library;
-- the tests are repeated multiple times (with a command line specific option: Repeat) and alternate the usage of KNet and Confluent.Kafka to statistically distribute external effects;
+- the tests are repeated multiple times (with a command line specific option: Repeat) and alternate the usage of KNet and Confluent.Kafka™ to statistically distribute external effects;
 - stores info in a CSV for other external processing;
 - finally reports an aggregated info comparing total execution time of the overall tests done.
 
@@ -89,8 +89,8 @@ The information collected are analyzed with statistics in mind; for every test t
 
 These values are absolute and affected from the external conditions. To have a compare vision the application reports the percentile ratio between previous listed values:
 - **a value less than 100% means a better performance of KNet**
-- **a value higher than 100% means a better performance of Confluent.Kafka**
-- **a value around 100% means comparable performance of KNet and Confluent.Kafka**
+- **a value higher than 100% means a better performance of Confluent.Kafka™**
+- **a value around 100% means comparable performance of KNet and Confluent.Kafka™**
 
 The most important are Average, Standard deviation and Coefficient of Variation.
 
@@ -98,7 +98,7 @@ The most important are Average, Standard deviation and Coefficient of Variation.
 
 The tests was done with:
 - different payload length: from 100 bytes to 100 kbytes
-- a set of 1000/10000 messages to have enough statistics data; we cannot go over: using 100000 messages Confluent.Kafka reports the same error of https://github.com/confluentinc/confluent-kafka-dotnet/issues/703 and KNet uses a lot of memeory;
+- a set of 1000/10000 messages to have enough statistics data; we cannot go over: using 100000 messages Confluent.Kafka™ reports the same error of https://github.com/confluentinc/confluent-kafka-dotnet/issues/703 and KNet uses a lot of memeory;
 - for each benchmark execution the tests are repeated at least 20 times.
 
 The configuration is:
@@ -112,14 +112,14 @@ The configuration is:
 
 Here below a set of results using 1000/10000 messages, in bold the results which are better using KNet 2.4.3:
 
-- KNet/Confluent.Kafka Produce Average ratio percentage (SD ratio percentage):
+- KNet/Confluent.Kafka™ Produce Average ratio percentage (SD ratio percentage):
 
 |  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
 | 1000 messages | 217,8 (193,16) | **82,5 (158,72)** | **84,45 (65,53)** | **86,78 (115,88)** |
 | 10000 messages | 251,97 (357,5) | **73,4 (164,51)** | 104,41 (32,73) | **90,28 (155,2)** |
 
-- KNet/Confluent.Kafka Consume Average ratio percentage (SD ratio percentage):
+- KNet/Confluent.Kafka™ Consume Average ratio percentage (SD ratio percentage):
 
 |  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
@@ -128,21 +128,21 @@ Here below a set of results using 1000/10000 messages, in bold the results which
 
 #### Analysis
 
-KNet Produce is more efficient when the length of packets is high: this is related to the overhead introduced from JVM method invocations. With 10000 messages and 10000 bytes the result is better with Confluent.Kafka, we have not yet identified if some parameters are limiting KNet or really Conflent.Kafka is more efficient.
+KNet Produce is more efficient when the length of packets is high: this is related to the overhead introduced from JVM method invocations. With 10000 messages and 10000 bytes the result is better with Confluent.Kafka™, we have not yet identified if some parameters are limiting KNet or really Conflent.Kafka™ is more efficient.
 
-KNet Consume is more efficient when the length of packets is small; when the length of packets is higher Confluent.Kafka becomes more efficient, however less are the packets better KNet performs, so there is a kind of bottleneck to be identified which limits KNet efficency.
+KNet Consume is more efficient when the length of packets is small; when the length of packets is higher Confluent.Kafka™ becomes more efficient, however less are the packets better KNet performs, so there is a kind of bottleneck to be identified which limits KNet efficency.
 
 > [!NOTE]
-> These are results from some tests done using the configuration reported in previous chapter. With different combination of parameters Confluent.Kafka can perform better than KNet in all tests. 
+> These are results from some tests done using the configuration reported in previous chapter. With different combination of parameters Confluent.Kafka™ can perform better than KNet in all tests. 
 
 ## Roundtrip Benchmark
 
-The test analyze the ability of KNet and Confluent.Kafka to produce and consume from a topic. The test is done within the same process using different threads becuase it is based on the machine [TSC](https://en.wikipedia.org/wiki/Time_Stamp_Counter).
+The test analyze the ability of KNet and Confluent.Kafka™ to produce and consume from a topic. The test is done within the same process using different threads becuase it is based on the machine [TSC](https://en.wikipedia.org/wiki/Time_Stamp_Counter).
 
 ### Roundtrip Benchmark test program
 
 To create a well-done comparison some configuration parameters are set in the same way during each test: e.g. linger time, batch size, etc.
-Others have different meaning: KNet use the concept of memory pool to store messages (bytes that fills the buffer), while Confluent.Kafka (i.e. librdkafka) can configure how many messages stores (maximum messages to be stored); to reduce the impact from these specific parameters the tests were made to finalize the send/receive so all messages shall be sent or received.
+Others have different meaning: KNet use the concept of memory pool to store messages (bytes that fills the buffer), while Confluent.Kafka™ (i.e. librdkafka) can configure how many messages stores (maximum messages to be stored); to reduce the impact from these specific parameters the tests were made to finalize the send/receive so all messages shall be sent or received.
 
 The tests:
 - are divided in two different main areas: produce and consume;
@@ -155,7 +155,7 @@ The tests:
 - to reduce impacts from different implementations of serializer/deserializer the most simple data types are used in the messages:
   - **key** is a long and represents the machine tick counter when the message is generated, this value will be compared with the tick counter when the message will be received during consume;
   - **value** (payload) is a byte array of data built from the application so the data does not have to be manipulated from the library;
-- the tests are repeated multiple times (with a command line specific option: Repeat) and alternate the usage of KNet and Confluent.Kafka to statistically distribute external effects;
+- the tests are repeated multiple times (with a command line specific option: Repeat) and alternate the usage of KNet and Confluent.Kafka™ to statistically distribute external effects;
 - stores info in a CSV for other external processing;
 - finally reports an aggregated info comparing total execution time of the overall tests done.
 
@@ -166,9 +166,9 @@ Many configuration parameters can be applied in the command-line to manipulate b
 The approach followed in the benchmark test is to:
 1. create a topic
 2. start consumption from the topic in a separated thread
-3. when the assignment is done from Apache Kafka the produce starts
+3. when the assignment is done from Apache Kafka™ the produce starts
 4. the produce cycle produces messages and put in the key the current TSC ticks, the cycle produces the number of messages set on command line then waits the end of consumption
-5. the consumer thread receives the messages from Apache Kafka and, for each message, compares the key (originating ticks) with current system ticks: **this measure represents the ticks elapsed from produce to consume**
+5. the consumer thread receives the messages from Apache Kafka™ and, for each message, compares the key (originating ticks) with current system ticks: **this measure represents the ticks elapsed from produce to consume**
 6. the measures are stored in a list to be analyzed later
 
 The produce cycle is like the following one:
@@ -195,8 +195,8 @@ The information collected are analyzed with statistics in mind; for every test t
 
 These values are absolute and affected from the external conditions. To have a compare vision the application reports the percentile ratio between previous listed values:
 - **a value less than 100% means a better performance of KNet**
-- **a value higher than 100% means a better performance of Confluent.Kafka**
-- **a value around 100% means comparable performance of KNet and Confluent.Kafka**
+- **a value higher than 100% means a better performance of Confluent.Kafka™**
+- **a value around 100% means comparable performance of KNet and Confluent.Kafka™**
 
 The most important are Average, Standard deviation and Coefficient of Variation.
 
@@ -204,7 +204,7 @@ The most important are Average, Standard deviation and Coefficient of Variation.
 
 The tests was done with:
 - different payload length: from 100 bytes to 100 kbytes
-- a set of 1000/10000 messages to have enough statistics data; we cannot go over: using 100000 messages Confluent.Kafka reports the same error of https://github.com/confluentinc/confluent-kafka-dotnet/issues/703 and KNet uses a lot of memeory;
+- a set of 1000/10000 messages to have enough statistics data; we cannot go over: using 100000 messages Confluent.Kafka™ reports the same error of https://github.com/confluentinc/confluent-kafka-dotnet/issues/703 and KNet uses a lot of memeory;
 - for each benchmark execution the tests are repeated at least 20 times.
 
 The configuration is:
@@ -218,7 +218,7 @@ The configuration is:
 
 Here below a set of results using 1000/10000 messages, in bold the results which are better using KNet 2.4.3:
 
-- KNet/Confluent.Kafka Roundtrip Average ratio percentage (SD ratio percentage):
+- KNet/Confluent.Kafka™ Roundtrip Average ratio percentage (SD ratio percentage):
 
 |  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
@@ -227,14 +227,14 @@ Here below a set of results using 1000/10000 messages, in bold the results which
 
 #### Analysis
 
-Looking at the above table KNet performs better than Confluent.Kafka.
+Looking at the above table KNet performs better than Confluent.Kafka™.
 
 > [!NOTE]
-> These are results from some tests done using the configuration reported in previous chapter. With different combination of parameters Confluent.Kafka can perform better than KNet in all tests. 
+> These are results from some tests done using the configuration reported in previous chapter. With different combination of parameters Confluent.Kafka™ can perform better than KNet in all tests. 
 
 ## Final considerations
 
-The KNet library performs better when the massages are larger; when the messages are small Confluent.Kafka performs better.
+The KNet library performs better when the massages are larger; when the messages are small Confluent.Kafka™ performs better.
 KNet suffers the JNI interface overhead needed to performs the operations (the user can activate JNI calls measurement): the evidence comes from the difference between KNetProducer and KafkaProducer (without _UseKNetProducer_ command-line switch).
 Using KNetProducer the numbers of JNI invocation are less than using KafkaProducer, so reducing the number of JNI calls have a great impact on overall performance.
 The same consideration can be applied on the consume side: KNetConsumer does not reduce the impact of JNI interface and it does not give any great improvement.

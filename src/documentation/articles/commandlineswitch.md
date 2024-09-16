@@ -1,6 +1,6 @@
 ---
-title: Command-line switches of .NET suite for Apache Kafka
-_description: Describes the command-line switches of .NET suite for Apache Kafka
+title: Command-line switches of .NET suite for Apache Kafka™
+_description: Describes the command-line switches of .NET suite for Apache Kafka™
 ---
 
 # KNet: Command line switches available
@@ -50,8 +50,8 @@ _knet_ accepts the following command-line switches:
 		* KNetConnectDistributed: available into KNetConnect (see [KNetConnect](usageConnect.md))
 		* KNetConnectStandalone: available into KNetConnect (see [KNetConnect](usageConnect.md))
 		* MirrorMaker2
-* **KafkaLocation**: represents the path to the root folder of Apache Kafka binary distribution; default value consider that KNetCLI uses the Apache Kafka jars available under the jars folder prepared from the package;
-* **ScalaVersion**: the scala version to be used. The default version (_2.13.6_) is binded to the deafult Apache Kafka version available in the package;
+* **KafkaLocation**: represents the path to the root folder of Apache Kafka™ binary distribution; default value consider that KNetCLI uses the Apache Kafka™ jars available under the jars folder prepared from the package;
+* **ScalaVersion**: the scala version to be used. The default version (_2.13.6_) is binded to the deafult Apache Kafka™ version available in the package;
 * **Log4JConfiguration**: the log4j configuration file; the default uses the file within the package;
 * **LogPath**: the path where the logs are stored;
 * **DisableJMX**: disable JMX, JMX is enabled by default.

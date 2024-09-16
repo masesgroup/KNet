@@ -1,6 +1,6 @@
 ---
-title: PowerShell module of .NET suite for Apache Kafka
-_description: Describes how to use PowerShell module of .NET suite for Apache Kafka
+title: PowerShell module of .NET suite for Apache Kafka™
+_description: Describes how to use PowerShell module of .NET suite for Apache Kafka™
 ---
 
 # KNet: PowerShell Module
@@ -34,12 +34,12 @@ Start-KNetPS [arguments]
 then the user can use objects created using **New-KObject** and other cmdlets, otherwise it is possible to invoke the desired Main-Class command which automatically executes **Start-KNetPS**.
 
 Here below two simple examples of producer/consumer from PowerShell.
-The examples are very minimal, but demonstrate how send to and receive from an Apache Kafka cluster.
-The terms __MY_KAFKA_CLUSTER__ shall be replaced with the address of Apache Kafka cluster.
+The examples are very minimal, but demonstrate how send to and receive from an Apache Kafka™ cluster.
+The terms __MY_KAFKA_CLUSTER__ shall be replaced with the address of Apache Kafka™ cluster.
 
 ### Producer
 
-The following snippet builds needed objects to send a record to an Apache Kafka cluster:
+The following snippet builds needed objects to send a record to an Apache Kafka™ cluster:
 
 ```powershell
 
@@ -54,7 +54,7 @@ $sendResult = Invoke-Send -Producer $producer -ProducerRecord $record
 
 ### Consumer 
 
-The following snippet builds needed objects to subscribe to an Apache Kafka cluster and receives records from the specified topic:
+The following snippet builds needed objects to subscribe to an Apache Kafka™ cluster and receives records from the specified topic:
 
 ```powershell
 
@@ -96,7 +96,7 @@ Here a list of cmdlets usable within a script:
 
 ### Main-Class command cmdlets
 
-Here a list of cmdlets which executes well known tasks defined from Apache Kafka like you use the scripts available in the Apache Kafka release:
+Here a list of cmdlets which executes well known tasks defined from Apache Kafka™ like you use the scripts available in the Apache Kafka™ release:
 
 * **Start-KNetPS**: Initialize the engine and can be the first command to be invoked. The arguments are:
   * Inherited from JnetPS:
