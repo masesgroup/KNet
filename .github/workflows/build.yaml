@@ -325,7 +325,12 @@ jobs:
           subject-name: ghcr.io/${{ github.repository_owner }}/knet
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
-     
+
+      - name: Extract branch name
+        run: |
+          echo "GITHUB_REF_NAME_FOR_DOCKER=$(echo $GITHUB_REF_NAME_FOR_DOCKER | tr xyz _)" >> $GITHUB_ENV
+        shell: bash
+          
   execute_tests_linux:
     needs: [build_windows, build_container_knet]
     services:
