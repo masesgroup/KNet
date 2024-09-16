@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4" class="text-break">
-Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L169"><i class="bi bi-code-slash"></i></a>
+Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L223"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -144,6 +144,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
     <dt>Derived</dt>
     <dd>
       <div><a class="xref" href="MASES.KNet.Streams.Processor.Api.Processor-8.html">Processor&lt;KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut&gt;</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorDirect-4.html">ProcessorDirect&lt;KIn, VIn, KOut, VOut&gt;</a></div>
     </dd>
   </dl>
 
@@ -337,6 +338,9 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -355,6 +359,12 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -367,7 +377,10 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -519,7 +532,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4__ctor" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4.#ctor">
   Processor()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/AllPackageClasses.cs/#L576"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/AllPackageClasses.cs/#L721"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -550,7 +563,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/AllPackageClasses.cs/#L581"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/AllPackageClasses.cs/#L730"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -582,7 +595,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4_OnClose" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4.OnClose">
   OnClose
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L286"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#close--</a></p>
@@ -617,7 +630,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4_OnInit" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4.OnInit">
   OnInit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L316"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-</a></p>
@@ -652,7 +665,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4_OnProcess" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4.OnProcess">
   OnProcess
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L257"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#process-org.apache.kafka.streams.processor.api.Record-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#process-org.apache.kafka.streams.processor.api.Record-</a></p>
@@ -691,7 +704,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4_Close" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L298"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#close--</a></p>
@@ -721,7 +734,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4_CloseDefault" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4.CloseDefault">
   CloseDefault()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L277"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#close--</a></p>
@@ -751,7 +764,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4_Init_Org_Apache_Kafka_Streams_Processor_Api_ProcessorContext__2__3__" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4.Init(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{`2,`3})">
   Init(ProcessorContext&lt;KOut, VOut&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L329"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-</a></p>
@@ -787,7 +800,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4_InitDefault_Org_Apache_Kafka_Streams_Processor_Api_ProcessorContext__2__3__" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4.InitDefault(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{`2,`3})">
   InitDefault(ProcessorContext&lt;KOut, VOut&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L307"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-</a></p>
@@ -823,7 +836,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4_InitializeHandlers" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4.InitializeHandlers">
   InitializeHandlers()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L245"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handlers initializer for <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Processor.html">Processor</a></p>
@@ -850,7 +863,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_Processor_4_Process_Org_Apache_Kafka_Streams_Processor_Api_Record__0__1__" data-uid="Org.Apache.Kafka.Streams.Processor.Api.Processor`4.Process(Org.Apache.Kafka.Streams.Processor.Api.Record{`0,`1})">
   Process(Record&lt;KIn, VIn&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L269"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#process-org.apache.kafka.streams.processor.api.Record-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/api/Processor.html#process-org.apache.kafka.streams.processor.api.Record-</a></p>
@@ -883,7 +896,7 @@ Class Processor&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-action link-second
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L169" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/Processor.cs/#L223" class="edit-link">Edit this page</a>
         </div>
 
 

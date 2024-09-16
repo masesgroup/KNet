@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -308,6 +308,9 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -326,6 +329,12 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -338,7 +347,10 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -490,7 +502,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool__ctor" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.#ctor">
   SimpleMemoryPool()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -559,7 +571,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.#ctor(System.Object[])">
   SimpleMemoryPool(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -595,7 +607,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -627,7 +639,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -659,7 +671,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -691,7 +703,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -723,7 +735,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/AllPackageClasses.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -759,7 +771,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_AvailableMemory" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.AvailableMemory">
   AvailableMemory()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/memory/SimpleMemoryPool.html#availableMemory--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/memory/SimpleMemoryPool.html#availableMemory--</a></p>
@@ -792,7 +804,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_IsOutOfMemory" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.IsOutOfMemory">
   IsOutOfMemory()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/memory/SimpleMemoryPool.html#isOutOfMemory--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/memory/SimpleMemoryPool.html#isOutOfMemory--</a></p>
@@ -825,7 +837,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_Release_Java_Nio_ByteBuffer_" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.Release(Java.Nio.ByteBuffer)">
   Release(ByteBuffer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/memory/SimpleMemoryPool.html#release-java.nio.ByteBuffer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/memory/SimpleMemoryPool.html#release-java.nio.ByteBuffer-</a></p>
@@ -838,8 +850,8 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 
@@ -858,7 +870,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_Size" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.Size">
   Size()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/memory/SimpleMemoryPool.html#size--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/memory/SimpleMemoryPool.html#size--</a></p>
@@ -891,7 +903,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_TryAllocate_System_Int32_" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.TryAllocate(System.Int32)">
   TryAllocate(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/memory/SimpleMemoryPool.html#tryAllocate-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/memory/SimpleMemoryPool.html#tryAllocate-int-</a></p>
@@ -911,8 +923,8 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 

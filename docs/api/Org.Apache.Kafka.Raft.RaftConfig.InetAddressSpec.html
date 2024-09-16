@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Raft_RaftConfig_InetAddressSpec" data-uid="Org.Apache.Kafka.Raft.RaftConfig.InetAddressSpec" class="text-break">
-Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftConfig.cs/#L383"><i class="bi bi-code-slash"></i></a>
+Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftConfig.cs/#L375"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -298,6 +298,9 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -316,6 +319,12 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -328,7 +337,10 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -480,7 +492,7 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Raft_RaftConfig_InetAddressSpec__ctor" data-uid="Org.Apache.Kafka.Raft.RaftConfig.InetAddressSpec.#ctor">
   InetAddressSpec()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1425"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1545"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -507,7 +519,7 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Raft_RaftConfig_InetAddressSpec__ctor_Java_Net_InetSocketAddress_" data-uid="Org.Apache.Kafka.Raft.RaftConfig.InetAddressSpec.#ctor(Java.Net.InetSocketAddress)">
   InetAddressSpec(InetSocketAddress)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftConfig.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftConfig.cs/#L382"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/RaftConfig.InetAddressSpec.html#org.apache.kafka.raft.RaftConfig$InetAddressSpec(java.net.InetSocketAddress)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/RaftConfig.InetAddressSpec.html#org.apache.kafka.raft.RaftConfig$InetAddressSpec(java.net.InetSocketAddress)</a></p>
@@ -520,8 +532,8 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Net.InetSocketAddress.html">InetSocketAddress</a></dt>
-    <dd><p><a class="xref" href="api/Java.Net.InetSocketAddress.html">InetSocketAddress</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Net.InetSocketAddress.html">InetSocketAddress</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Net.InetSocketAddress.html">InetSocketAddress</a></p>
 </dd>
   </dl>
 
@@ -540,7 +552,7 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Raft_RaftConfig_InetAddressSpec__ctor_System_Object___" data-uid="Org.Apache.Kafka.Raft.RaftConfig.InetAddressSpec.#ctor(System.Object[])">
   InetAddressSpec(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1429"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1549"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -576,7 +588,7 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Raft_RaftConfig_InetAddressSpec_BridgeClassName" data-uid="Org.Apache.Kafka.Raft.RaftConfig.InetAddressSpec.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1436"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1557"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -608,7 +620,7 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Raft_RaftConfig_InetAddressSpec_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Raft.RaftConfig.InetAddressSpec.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1440"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1561"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -640,7 +652,7 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Raft_RaftConfig_InetAddressSpec_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Raft.RaftConfig.InetAddressSpec.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1444"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1565"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -672,7 +684,7 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Raft_RaftConfig_InetAddressSpec_IsBridgeInterface" data-uid="Org.Apache.Kafka.Raft.RaftConfig.InetAddressSpec.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1448"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1569"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -704,7 +716,7 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Raft_RaftConfig_InetAddressSpec_IsBridgeStatic" data-uid="Org.Apache.Kafka.Raft.RaftConfig.InetAddressSpec.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1452"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L1573"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -736,7 +748,7 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Raft_RaftConfig_InetAddressSpec_address" data-uid="Org.Apache.Kafka.Raft.RaftConfig.InetAddressSpec.address">
   address
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftConfig.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftConfig.cs/#L397"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/RaftConfig.InetAddressSpec.html#address">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/RaftConfig.InetAddressSpec.html#address</a></p>
@@ -753,7 +765,7 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Net.InetSocketAddress.html">InetSocketAddress</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Net.InetSocketAddress.html">InetSocketAddress</a></dt>
     <dd></dd>
   </dl>
 
@@ -768,7 +780,7 @@ Class RaftConfig.InetAddressSpec  <a class="header-action link-secondary" title=
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftConfig.cs/#L383" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/RaftConfig.cs/#L375" class="edit-link">Edit this page</a>
         </div>
 
 

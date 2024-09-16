@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3" class="text-break">
-Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L254"><i class="bi bi-code-slash"></i></a>
+Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L250"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -307,6 +307,9 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -325,6 +328,12 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -337,7 +346,10 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -489,7 +501,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3__ctor" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.#ctor">
   Materialized()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1558"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1947"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -516,7 +528,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.#ctor(System.Object[])">
   Materialized(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1562"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1951"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -552,7 +564,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1569"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1959"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -584,7 +596,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1573"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1963"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -616,7 +628,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1577"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1967"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -648,7 +660,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1581"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1971"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -680,7 +692,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1585"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L1975"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -712,7 +724,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_storeType" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.storeType">
   storeType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L268"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#storeType">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#storeType</a></p>
@@ -748,7 +760,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_As_Java_Lang_String_" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.As(Java.Lang.String)">
   As(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L278"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#as-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#as-java.lang.String-</a></p>
@@ -761,8 +773,8 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -787,7 +799,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_As_Org_Apache_Kafka_Streams_Kstream_Materialized_StoreType_" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.As(Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType)">
   As(StoreType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L287"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.kstream.Materialized.StoreType-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.kstream.Materialized.StoreType-</a></p>
@@ -826,7 +838,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_As_Org_Apache_Kafka_Streams_State_KeyValueBytesStoreSupplier_" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.As(Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier)">
   As(KeyValueBytesStoreSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L306"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.KeyValueBytesStoreSupplier-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.KeyValueBytesStoreSupplier-</a></p>
@@ -865,7 +877,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_As_Org_Apache_Kafka_Streams_State_SessionBytesStoreSupplier_" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.As(Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier)">
   As(SessionBytesStoreSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L315"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.SessionBytesStoreSupplier-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.SessionBytesStoreSupplier-</a></p>
@@ -904,7 +916,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_As_Org_Apache_Kafka_Streams_State_WindowBytesStoreSupplier_" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.As(Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier)">
   As(WindowBytesStoreSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.WindowBytesStoreSupplier-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#as-org.apache.kafka.streams.state.WindowBytesStoreSupplier-</a></p>
@@ -943,7 +955,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_With_Org_Apache_Kafka_Common_Serialization_Serde__0__Org_Apache_Kafka_Common_Serialization_Serde__1__" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.With(Org.Apache.Kafka.Common.Serialization.Serde{`0},Org.Apache.Kafka.Common.Serialization.Serde{`1})">
   With(Serde&lt;K&gt;, Serde&lt;V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L297"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-</a></p>
@@ -985,7 +997,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_WithCachingDisabled" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.WithCachingDisabled">
   WithCachingDisabled()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L336"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled--</a></p>
@@ -1018,7 +1030,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_WithCachingEnabled" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.WithCachingEnabled">
   WithCachingEnabled()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L344"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled--</a></p>
@@ -1051,7 +1063,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_WithKeySerde_Org_Apache_Kafka_Common_Serialization_Serde__0__" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.WithKeySerde(Org.Apache.Kafka.Common.Serialization.Serde{`0})">
   WithKeySerde(Serde&lt;K&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L353"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde-org.apache.kafka.common.serialization.Serde-</a></p>
@@ -1090,7 +1102,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_WithLoggingDisabled" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.WithLoggingDisabled">
   WithLoggingDisabled()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L368"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L361"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled--</a></p>
@@ -1123,7 +1135,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_WithLoggingEnabled_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.WithLoggingEnabled(Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   WithLoggingEnabled(Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L370"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled-java.util.Map-</a></p>
@@ -1136,8 +1148,8 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1162,7 +1174,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_WithRetention_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.WithRetention(Java.Time.Duration)">
   WithRetention(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L380"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withRetention-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withRetention-java.time.Duration-</a></p>
@@ -1175,8 +1187,8 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
@@ -1196,7 +1208,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1206,7 +1218,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_WithStoreType_Org_Apache_Kafka_Streams_Kstream_Materialized_StoreType_" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.WithStoreType(Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType)">
   WithStoreType(StoreType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L397"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L390"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withStoreType-org.apache.kafka.streams.kstream.Materialized.StoreType-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withStoreType-org.apache.kafka.streams.kstream.Materialized.StoreType-</a></p>
@@ -1240,7 +1252,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1250,7 +1262,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_WithValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__1__" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.WithValueSerde(Org.Apache.Kafka.Common.Serialization.Serde{`1})">
   WithValueSerde(Serde&lt;V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L399"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
@@ -1293,7 +1305,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_Materialized_3_op_Implicit_Org_Apache_Kafka_Streams_Kstream_Materialized__0__1__2___Org_Apache_Kafka_Streams_Kstream_Materialized" data-uid="Org.Apache.Kafka.Streams.Kstream.Materialized`3.op_Implicit(Org.Apache.Kafka.Streams.Kstream.Materialized{`0,`1,`2})~Org.Apache.Kafka.Streams.Kstream.Materialized">
   implicit operator Materialized(Materialized&lt;K, V, S&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L260"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized-3.html">Materialized&lt;K, V, S&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Materialized.html">Materialized</a></p>
@@ -1330,7 +1342,7 @@ Class Materialized&lt;K, V, S&gt;  <a class="header-action link-secondary" title
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L254" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/Materialized.cs/#L250" class="edit-link">Edit this page</a>
         </div>
 
 

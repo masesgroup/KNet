@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1" class="text-break">
-Class SetSchemaMetadata&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L254"><i class="bi bi-code-slash"></i></a>
+Class SetSchemaMetadata&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L252"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -312,6 +312,9 @@ Class SetSchemaMetadata&lt;R&gt;  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -330,6 +333,12 @@ Class SetSchemaMetadata&lt;R&gt;  <a class="header-action link-secondary" title=
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -342,7 +351,10 @@ Class SetSchemaMetadata&lt;R&gt;  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -494,7 +506,7 @@ Class SetSchemaMetadata&lt;R&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1__ctor" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.#ctor">
   SetSchemaMetadata()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2881"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2944"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -522,7 +534,7 @@ public SetSchemaMetadata()</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.#ctor(System.Object[])">
   SetSchemaMetadata(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2886"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2949"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -559,7 +571,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2894"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2958"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -591,7 +603,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_CONFIG_DEF" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.CONFIG_DEF">
   CONFIG_DEF
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L284"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#CONFIG_DEF">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#CONFIG_DEF</a></p>
@@ -623,7 +635,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2898"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2962"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -655,7 +667,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2902"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2966"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -687,7 +699,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2906"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2970"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -719,7 +731,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2910"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L2974"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -751,7 +763,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_OVERVIEW_DOC" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.OVERVIEW_DOC">
   OVERVIEW_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L278"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#OVERVIEW_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#OVERVIEW_DOC</a></p>
@@ -768,7 +780,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -787,7 +799,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_Apply__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.Apply(`0)">
   Apply(R)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L320"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L316"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#apply-org.apache.kafka.connect.connector.ConnectRecord-">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#apply-org.apache.kafka.connect.connector.ConnectRecord-</a></p>
@@ -826,7 +838,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_Close" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L323"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#close--">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#close--</a></p>
@@ -853,7 +865,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_Config" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.Config">
   Config()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L307"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#config--">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#config--</a></p>
@@ -886,7 +898,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
   Configure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L331"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#configure-java.util.Map-</a></p>
@@ -899,8 +911,8 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -919,7 +931,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_Version" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.Version">
   Version()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L299"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#version--">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/SetSchemaMetadata.html#version--</a></p>
@@ -933,8 +945,8 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -956,7 +968,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata__0___Org_Apache_Kafka_Connect_Components_Versioned" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata{`0})~Org.Apache.Kafka.Connect.Components.Versioned">
   implicit operator Versioned(SetSchemaMetadata&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L266"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata-1.html">SetSchemaMetadata&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></p>
@@ -993,7 +1005,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata__0___Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata{`0})~Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata">
   implicit operator SetSchemaMetadata(SetSchemaMetadata&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L270"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata-1.html">SetSchemaMetadata&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata.html">SetSchemaMetadata</a></p>
@@ -1030,7 +1042,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_SetSchemaMetadata__0___Org_Apache_Kafka_Connect_Transforms_Transformation__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata{`0})~Org.Apache.Kafka.Connect.Transforms.Transformation{`0}">
   implicit operator Transformation&lt;R&gt;(SetSchemaMetadata&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L262"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.SetSchemaMetadata-1.html">SetSchemaMetadata&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation&lt;R&gt;</a></p>
@@ -1067,7 +1079,7 @@ public SetSchemaMetadata(params object[] args)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L254" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/SetSchemaMetadata.cs/#L252" class="edit-link">Edit this page</a>
         </div>
 
 

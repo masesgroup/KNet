@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -298,6 +298,9 @@ Class StateStoreContext  <a class="header-action link-secondary" title="View sou
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -316,6 +319,12 @@ Class StateStoreContext  <a class="header-action link-secondary" title="View sou
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -328,7 +337,10 @@ Class StateStoreContext  <a class="header-action link-secondary" title="View sou
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -480,7 +492,7 @@ Class StateStoreContext  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext__ctor" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.#ctor">
   StateStoreContext()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L535"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L724"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -508,7 +520,7 @@ public StateStoreContext()</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.#ctor(System.Object[])">
   StateStoreContext(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L540"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L729"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -545,7 +557,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L548"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L738"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -577,7 +589,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L552"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L742"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -609,7 +621,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L556"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L746"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -641,7 +653,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L560"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L750"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -673,7 +685,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L564"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L754"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -709,7 +721,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_AppConfigs" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.AppConfigs">
   AppConfigs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#appConfigs--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#appConfigs--</a></p>
@@ -723,8 +735,8 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -742,7 +754,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_AppConfigsWithPrefix_Java_Lang_String_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.AppConfigsWithPrefix(Java.Lang.String)">
   AppConfigsWithPrefix(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#appConfigsWithPrefix-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#appConfigsWithPrefix-java.lang.String-</a></p>
@@ -755,15 +767,15 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -781,7 +793,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_ApplicationId" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.ApplicationId">
   ApplicationId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#applicationId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#applicationId--</a></p>
@@ -795,8 +807,8 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -814,7 +826,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_KeySerde" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.KeySerde">
   KeySerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#keySerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#keySerde--</a></p>
@@ -843,11 +855,44 @@ public StateStoreContext(params object[] args)</code></pre>
 
 
 
+  <a id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_KeySerdeDirect_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.KeySerdeDirect*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_KeySerdeDirect" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.KeySerdeDirect">
+  KeySerdeDirect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#keySerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#keySerde--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Serde&lt;object&gt; KeySerdeDirect()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_Metrics_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.Metrics*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_Metrics" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.Metrics">
   Metrics()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#metrics--</a></p>
@@ -880,7 +925,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_RecordMetadata" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.RecordMetadata">
   RecordMetadata()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#recordMetadata--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#recordMetadata--</a></p>
@@ -894,8 +939,8 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Optional.html">Optional</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata.html">RecordMetadata</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
 </dd>
   </dl>
 
@@ -913,7 +958,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_Register_Org_Apache_Kafka_Streams_Processor_StateStore_Org_Apache_Kafka_Streams_Processor_StateRestoreCallback_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.Register(Org.Apache.Kafka.Streams.Processor.StateStore,Org.Apache.Kafka.Streams.Processor.StateRestoreCallback)">
   Register(StateStore, StateRestoreCallback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#register-org.apache.kafka.streams.processor.StateStore-org.apache.kafka.streams.processor.StateRestoreCallback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#register-org.apache.kafka.streams.processor.StateStore-org.apache.kafka.streams.processor.StateRestoreCallback-</a></p>
@@ -949,7 +994,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_Register_Org_Apache_Kafka_Streams_Processor_StateStore_Org_Apache_Kafka_Streams_Processor_StateRestoreCallback_Org_Apache_Kafka_Streams_Processor_CommitCallback_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.Register(Org.Apache.Kafka.Streams.Processor.StateStore,Org.Apache.Kafka.Streams.Processor.StateRestoreCallback,Org.Apache.Kafka.Streams.Processor.CommitCallback)">
   Register(StateStore, StateRestoreCallback, CommitCallback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#register-org.apache.kafka.streams.processor.StateStore-org.apache.kafka.streams.processor.StateRestoreCallback-org.apache.kafka.streams.processor.CommitCallback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#register-org.apache.kafka.streams.processor.StateStore-org.apache.kafka.streams.processor.StateRestoreCallback-org.apache.kafka.streams.processor.CommitCallback-</a></p>
@@ -988,7 +1033,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_StateDir" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.StateDir">
   StateDir()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#stateDir--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#stateDir--</a></p>
@@ -1002,8 +1047,8 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.File.html">File</a></dt>
-    <dd><p><a class="xref" href="api/Java.Io.File.html">File</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.File.html">File</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.File.html">File</a></p>
 </dd>
   </dl>
 
@@ -1021,7 +1066,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_TaskId" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.TaskId">
   TaskId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#taskId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#taskId--</a></p>
@@ -1054,7 +1099,7 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_ValueSerde" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.ValueSerde">
   ValueSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#valueSerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#valueSerde--</a></p>
@@ -1063,6 +1108,39 @@ public StateStoreContext(params object[] args)</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Serde&lt;object&gt; ValueSerde()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde-1.html">Serde</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_ValueSerdeDirect_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.ValueSerdeDirect*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Processor_StateStoreContext_ValueSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Processor.StateStoreContext.ValueSerdeDirect">
+  ValueSerdeDirect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStoreContext.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#valueSerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/StateStoreContext.html#valueSerde--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Serde&lt;object&gt; ValueSerdeDirect()</code></pre>
   </div>
 
 

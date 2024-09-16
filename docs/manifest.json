@@ -4974,6 +4974,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptorDirect-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptorDirect-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptorDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptorDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment.yml",
       "output": {
         ".html": {
@@ -5034,10 +5054,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignorDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignorDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener.yml",
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListenerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListenerDirect.html"
         }
       },
       "version": ""
@@ -5248,6 +5288,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallbackDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallbackDirect.html"
         }
       },
       "version": ""
@@ -5494,6 +5544,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Producer.CallbackDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Producer.CallbackDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Clients.Producer.ICallback.yml",
       "output": {
         ".html": {
@@ -5594,6 +5654,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Producer.PartitionerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Producer.PartitionerDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Clients.Producer.Producer-2.yml",
       "output": {
         ".html": {
@@ -5638,6 +5708,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Clients.Producer.ProducerInterceptor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Producer.ProducerInterceptorDirect-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Producer.ProducerInterceptorDirect-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Producer.ProducerInterceptorDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Producer.ProducerInterceptorDirect.html"
         }
       },
       "version": ""
@@ -5954,6 +6044,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.ClusterResourceListenerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.ClusterResourceListenerDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.Compress.KafkaLZ4BlockInputStream.yml",
       "output": {
         ".html": {
@@ -6048,6 +6148,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Common.Config.ConfigChangeCallback.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Config.ConfigChangeCallbackDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Config.ConfigChangeCallbackDirect.html"
         }
       },
       "version": ""
@@ -8294,6 +8404,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.Metrics.Quota.yml",
       "output": {
         ".html": {
@@ -9984,6 +10104,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Serialization.DeserializerDirect-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Serialization.DeserializerDirect-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Serialization.DeserializerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Serialization.DeserializerDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.Serialization.DoubleDeserializer.yml",
       "output": {
         ".html": {
@@ -10174,6 +10314,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Serialization.SerdeDirect-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Serialization.SerdeDirect-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Serialization.SerdeDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Serialization.SerdeDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.Serialization.Serdes.BooleanSerde.yml",
       "output": {
         ".html": {
@@ -10358,6 +10518,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Common.Serialization.Serializer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Serialization.SerializerDirect-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Serialization.SerializerDirect-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Serialization.SerializerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Serialization.SerializerDirect.html"
         }
       },
       "version": ""
@@ -14234,6 +14414,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Raft.RaftClient.ListenerDirect-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Raft.RaftClient.ListenerDirect-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Raft.RaftClient.ListenerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Raft.RaftClient.ListenerDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Raft.RaftClient.yml",
       "output": {
         ".html": {
@@ -14934,6 +15134,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandlerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandlerDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.TaskAssignmentException.yml",
       "output": {
         ".html": {
@@ -15084,6 +15294,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.KafkaClientSupplierDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.KafkaClientSupplierDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions.yml",
       "output": {
         ".html": {
@@ -15118,6 +15338,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.KafkaStreams.StateListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.KafkaStreams.StateListenerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.KafkaStreams.StateListenerDirect.html"
         }
       },
       "version": ""
@@ -15178,6 +15408,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.Aggregator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.AggregatorDirect-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.AggregatorDirect-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.AggregatorDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.AggregatorDirect.html"
         }
       },
       "version": ""
@@ -15298,6 +15548,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ForeachAction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ForeachActionDirect-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ForeachActionDirect-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ForeachActionDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ForeachActionDirect.html"
         }
       },
       "version": ""
@@ -15694,6 +15964,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.InitializerDirect-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.InitializerDirect-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.InitializerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.InitializerDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.Internals.TimeWindow.yml",
       "output": {
         ".html": {
@@ -15854,6 +16144,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.Materialized-3.yml",
       "output": {
         ".html": {
@@ -15904,6 +16214,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.MergerDirect-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.MergerDirect-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.MergerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.MergerDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.Named.yml",
       "output": {
         ".html": {
@@ -15948,6 +16278,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.Predicate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.PredicateDirect-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.PredicateDirect-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.PredicateDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.PredicateDirect.html"
         }
       },
       "version": ""
@@ -16008,6 +16358,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.Reducer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ReducerDirect-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ReducerDirect-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ReducerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ReducerDirect.html"
         }
       },
       "version": ""
@@ -16344,6 +16714,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.TransformerDirect-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.TransformerDirect-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.TransformerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.TransformerDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.TransformerSupplier-3.yml",
       "output": {
         ".html": {
@@ -16384,6 +16774,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerDirect-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerDirect-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey-4.yml",
       "output": {
         ".html": {
@@ -16398,6 +16808,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKeyDirect-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKeyDirect-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKeyDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKeyDirect.html"
         }
       },
       "version": ""
@@ -16424,6 +16854,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueMapperDirect-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueMapperDirect-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueMapperDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueMapperDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey-3.yml",
       "output": {
         ".html": {
@@ -16444,6 +16894,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKeyDirect-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKeyDirect-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKeyDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKeyDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueTransformer-2.yml",
       "output": {
         ".html": {
@@ -16458,6 +16928,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueTransformer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerDirect-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerDirect-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerDirect.html"
         }
       },
       "version": ""
@@ -16488,6 +16978,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeyDirect-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeyDirect-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeyDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeyDirect.html"
         }
       },
       "version": ""
@@ -16704,6 +17214,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorDirect-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorDirect-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier-3.yml",
       "output": {
         ".html": {
@@ -16874,6 +17404,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorDirect-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorDirect-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.yml",
       "output": {
         ".html": {
@@ -16928,6 +17478,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Processor.BatchingStateRestoreCallback.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.BatchingStateRestoreCallbackDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.BatchingStateRestoreCallbackDirect.html"
         }
       },
       "version": ""
@@ -17164,6 +17724,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.PunctuatorDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.PunctuatorDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.RecordContext.yml",
       "output": {
         ".html": {
@@ -17184,10 +17754,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.StateRestoreCallbackDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.StateRestoreCallbackDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.StateRestoreListener.yml",
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Processor.StateRestoreListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.StateRestoreListenerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.StateRestoreListenerDirect.html"
         }
       },
       "version": ""
@@ -17234,6 +17824,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.StreamPartitionerDirect-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.StreamPartitionerDirect-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.StreamPartitionerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.StreamPartitionerDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.TaskId.yml",
       "output": {
         ".html": {
@@ -17248,6 +17858,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Processor.TimestampExtractor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.TimestampExtractorDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.TimestampExtractorDirect.html"
         }
       },
       "version": ""
@@ -17278,6 +17898,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Processor.TopicNameExtractor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect.html"
         }
       },
       "version": ""

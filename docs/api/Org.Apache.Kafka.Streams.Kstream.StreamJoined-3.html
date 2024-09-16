@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3" class="text-break">
-Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L162"><i class="bi bi-code-slash"></i></a>
+Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -306,6 +306,9 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -324,6 +327,12 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -336,7 +345,10 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -488,7 +500,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3__ctor" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.#ctor">
   StreamJoined()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L2554"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L3232"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -515,7 +527,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.#ctor(System.Object[])">
   StreamJoined(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L2558"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L3236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -551,7 +563,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L2565"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L3244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -583,7 +595,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L2569"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L3248"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -615,7 +627,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L2573"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L3252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -647,7 +659,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L2577"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L3256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -679,7 +691,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L2581"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L3260"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -715,7 +727,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_As_Java_Lang_String_" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.As(Java.Lang.String)">
   As(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#as-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#as-java.lang.String-</a></p>
@@ -728,8 +740,8 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -754,7 +766,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_With_Org_Apache_Kafka_Common_Serialization_Serde__0__Org_Apache_Kafka_Common_Serialization_Serde__1__Org_Apache_Kafka_Common_Serialization_Serde__2__" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.With(Org.Apache.Kafka.Common.Serialization.Serde{`0},Org.Apache.Kafka.Common.Serialization.Serde{`1},Org.Apache.Kafka.Common.Serialization.Serde{`2})">
   With(Serde&lt;K&gt;, Serde&lt;V1&gt;, Serde&lt;V2&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-</a></p>
@@ -799,7 +811,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_With_Org_Apache_Kafka_Streams_State_WindowBytesStoreSupplier_Org_Apache_Kafka_Streams_State_WindowBytesStoreSupplier_" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.With(Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier,Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier)">
   With(WindowBytesStoreSupplier, WindowBytesStoreSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L206"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#with-org.apache.kafka.streams.state.WindowBytesStoreSupplier-org.apache.kafka.streams.state.WindowBytesStoreSupplier-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#with-org.apache.kafka.streams.state.WindowBytesStoreSupplier-org.apache.kafka.streams.state.WindowBytesStoreSupplier-</a></p>
@@ -841,7 +853,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_WithKeySerde_Org_Apache_Kafka_Common_Serialization_Serde__0__" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.WithKeySerde(Org.Apache.Kafka.Common.Serialization.Serde{`0})">
   WithKeySerde(Serde&lt;K&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-</a></p>
@@ -880,7 +892,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_WithLoggingDisabled" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.WithLoggingDisabled">
   WithLoggingDisabled()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled--</a></p>
@@ -913,7 +925,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_WithLoggingEnabled_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.WithLoggingEnabled(Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   WithLoggingEnabled(Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled-java.util.Map-</a></p>
@@ -926,8 +938,8 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -952,7 +964,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_WithOtherStoreSupplier_Org_Apache_Kafka_Streams_State_WindowBytesStoreSupplier_" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.WithOtherStoreSupplier(Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier)">
   WithOtherStoreSupplier(WindowBytesStoreSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L245"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherStoreSupplier-org.apache.kafka.streams.state.WindowBytesStoreSupplier-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherStoreSupplier-org.apache.kafka.streams.state.WindowBytesStoreSupplier-</a></p>
@@ -991,7 +1003,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_WithOtherValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__2__" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.WithOtherValueSerde(Org.Apache.Kafka.Common.Serialization.Serde{`2})">
   WithOtherValueSerde(Serde&lt;V2&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L254"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherValueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherValueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
@@ -1030,7 +1042,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_WithStoreName_Java_Lang_String_" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.WithStoreName(Java.Lang.String)">
   WithStoreName(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L263"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName-java.lang.String-</a></p>
@@ -1043,8 +1055,8 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1069,7 +1081,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_WithThisStoreSupplier_Org_Apache_Kafka_Streams_State_WindowBytesStoreSupplier_" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.WithThisStoreSupplier(Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier)">
   WithThisStoreSupplier(WindowBytesStoreSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L272"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withThisStoreSupplier-org.apache.kafka.streams.state.WindowBytesStoreSupplier-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withThisStoreSupplier-org.apache.kafka.streams.state.WindowBytesStoreSupplier-</a></p>
@@ -1108,7 +1120,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_WithValueSerde_Org_Apache_Kafka_Common_Serialization_Serde__1__" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.WithValueSerde(Org.Apache.Kafka.Common.Serialization.Serde{`1})">
   WithValueSerde(Serde&lt;V1&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L281"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withValueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/StreamJoined.html#withValueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
@@ -1151,7 +1163,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_StreamJoined_3_op_Implicit_Org_Apache_Kafka_Streams_Kstream_StreamJoined__0__1__2___Org_Apache_Kafka_Streams_Kstream_StreamJoined" data-uid="Org.Apache.Kafka.Streams.Kstream.StreamJoined`3.op_Implicit(Org.Apache.Kafka.Streams.Kstream.StreamJoined{`0,`1,`2})~Org.Apache.Kafka.Streams.Kstream.StreamJoined">
   implicit operator StreamJoined(StreamJoined&lt;K, V1, V2&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.StreamJoined-3.html">StreamJoined&lt;K, V1, V2&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.StreamJoined.html">StreamJoined</a></p>
@@ -1188,7 +1200,7 @@ Class StreamJoined&lt;K, V1, V2&gt;  <a class="header-action link-secondary" tit
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L162" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/StreamJoined.cs/#L161" class="edit-link">Edit this page</a>
         </div>
 
 

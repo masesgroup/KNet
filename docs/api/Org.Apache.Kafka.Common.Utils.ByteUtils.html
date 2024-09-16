@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -297,6 +297,9 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -315,6 +318,12 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -327,7 +336,10 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -479,7 +491,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Utils_ByteUtils__ctor" data-uid="Org.Apache.Kafka.Common.Utils.ByteUtils.#ctor">
   ByteUtils()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L532"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L543"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -506,7 +518,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Utils_ByteUtils__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Utils.ByteUtils.#ctor(System.Object[])">
   ByteUtils(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L536"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L547"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -542,7 +554,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Utils_ByteUtils_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Utils.ByteUtils.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L543"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L555"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -591,7 +603,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
     <dd></dd>
   </dl>
 
@@ -606,7 +618,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Utils_ByteUtils_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Utils.ByteUtils.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L547"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L559"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -638,7 +650,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Utils_ByteUtils_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Utils.ByteUtils.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L551"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L563"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -670,7 +682,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Utils_ByteUtils_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Utils.ByteUtils.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L555"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L567"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -702,7 +714,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Utils_ByteUtils_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Utils.ByteUtils.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L559"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L571"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -751,8 +763,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Io.DataInput.html">DataInput</a></dt>
-    <dd><p><a class="xref" href="api/Java.Io.DataInput.html">DataInput</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.DataInput.html">DataInput</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.DataInput.html">DataInput</a></p>
 </dd>
   </dl>
 
@@ -772,7 +784,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.IOException.html">IOException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.IOException.html">IOException</a></dt>
     <dd></dd>
   </dl>
 
@@ -795,8 +807,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 
@@ -876,8 +888,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 
@@ -915,8 +927,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
@@ -957,8 +969,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Io.InputStream.html">InputStream</a></dt>
-    <dd><p><a class="xref" href="api/Java.Io.InputStream.html">InputStream</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.InputStream.html">InputStream</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.InputStream.html">InputStream</a></p>
 </dd>
   </dl>
 
@@ -978,7 +990,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.IOException.html">IOException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.IOException.html">IOException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1043,8 +1055,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 
@@ -1082,8 +1094,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Io.InputStream.html">InputStream</a></dt>
-    <dd><p><a class="xref" href="api/Java.Io.InputStream.html">InputStream</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.InputStream.html">InputStream</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.InputStream.html">InputStream</a></p>
 </dd>
   </dl>
 
@@ -1103,7 +1115,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.IOException.html">IOException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.IOException.html">IOException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1126,8 +1138,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 
@@ -1165,8 +1177,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Io.InputStream.html">InputStream</a></dt>
-    <dd><p><a class="xref" href="api/Java.Io.InputStream.html">InputStream</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.InputStream.html">InputStream</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.InputStream.html">InputStream</a></p>
 </dd>
   </dl>
 
@@ -1186,7 +1198,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.IOException.html">IOException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.IOException.html">IOException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1209,8 +1221,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 
@@ -1407,8 +1419,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Io.DataOutput.html">DataOutput</a></dt>
-    <dd><p><a class="xref" href="api/Java.Io.DataOutput.html">DataOutput</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.DataOutput.html">DataOutput</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.DataOutput.html">DataOutput</a></p>
 </dd>
   </dl>
 
@@ -1422,7 +1434,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.IOException.html">IOException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.IOException.html">IOException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1448,8 +1460,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 
@@ -1481,8 +1493,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
@@ -1520,8 +1532,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
@@ -1556,8 +1568,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Io.OutputStream.html">OutputStream</a></dt>
-    <dd><p><a class="xref" href="api/Java.Io.OutputStream.html">OutputStream</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.OutputStream.html">OutputStream</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.OutputStream.html">OutputStream</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
@@ -1574,7 +1586,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.IOException.html">IOException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.IOException.html">IOException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1639,8 +1651,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Io.DataOutput.html">DataOutput</a></dt>
-    <dd><p><a class="xref" href="api/Java.Io.DataOutput.html">DataOutput</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.DataOutput.html">DataOutput</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.DataOutput.html">DataOutput</a></p>
 </dd>
   </dl>
 
@@ -1654,7 +1666,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.IOException.html">IOException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.IOException.html">IOException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1680,8 +1692,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 
@@ -1716,8 +1728,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 
@@ -1752,8 +1764,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Io.DataOutput.html">DataOutput</a></dt>
-    <dd><p><a class="xref" href="api/Java.Io.DataOutput.html">DataOutput</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.DataOutput.html">DataOutput</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.DataOutput.html">DataOutput</a></p>
 </dd>
   </dl>
 
@@ -1767,7 +1779,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.IOException.html">IOException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.IOException.html">IOException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1793,8 +1805,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 
@@ -1829,8 +1841,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Io.DataOutput.html">DataOutput</a></dt>
-    <dd><p><a class="xref" href="api/Java.Io.DataOutput.html">DataOutput</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.DataOutput.html">DataOutput</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.DataOutput.html">DataOutput</a></p>
 </dd>
   </dl>
 
@@ -1844,7 +1856,7 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.IOException.html">IOException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.IOException.html">IOException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1870,8 +1882,8 @@ Class ByteUtils  <a class="header-action link-secondary" title="View source" hre
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </dd>
   </dl>
 

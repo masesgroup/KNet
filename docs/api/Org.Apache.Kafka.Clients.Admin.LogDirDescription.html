@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -297,6 +297,9 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -315,6 +318,12 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -327,7 +336,10 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -479,7 +491,7 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_LogDirDescription__ctor" data-uid="Org.Apache.Kafka.Clients.Admin.LogDirDescription.#ctor">
   LogDirDescription()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4756"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4863"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -522,8 +534,8 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
     <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Errors.ApiException.html">ApiException</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Errors.ApiException.html">ApiException</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ReplicaInfo.html">ReplicaInfo</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ReplicaInfo.html">ReplicaInfo</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -558,8 +570,8 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
     <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Errors.ApiException.html">ApiException</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Errors.ApiException.html">ApiException</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ReplicaInfo.html">ReplicaInfo</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ReplicaInfo.html">ReplicaInfo</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
@@ -584,7 +596,7 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_LogDirDescription__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Admin.LogDirDescription.#ctor(System.Object[])">
   LogDirDescription(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4760"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4867"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -620,7 +632,7 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_LogDirDescription_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Admin.LogDirDescription.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4767"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4875"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -652,7 +664,7 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_LogDirDescription_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Admin.LogDirDescription.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4771"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4879"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -684,7 +696,7 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_LogDirDescription_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.Admin.LogDirDescription.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4775"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4883"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -716,7 +728,7 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_LogDirDescription_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Admin.LogDirDescription.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4779"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4887"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -748,7 +760,7 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_LogDirDescription_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Admin.LogDirDescription.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4783"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4891"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -784,7 +796,7 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_LogDirDescription_Error" data-uid="Org.Apache.Kafka.Clients.Admin.LogDirDescription.Error">
   Error()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/LogDirDescription.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/LogDirDescription.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/LogDirDescription.html#error--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/LogDirDescription.html#error--</a></p>
@@ -817,7 +829,7 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_LogDirDescription_ReplicaInfos" data-uid="Org.Apache.Kafka.Clients.Admin.LogDirDescription.ReplicaInfos">
   ReplicaInfos()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/LogDirDescription.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/LogDirDescription.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/LogDirDescription.html#replicaInfos--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/LogDirDescription.html#replicaInfos--</a></p>
@@ -831,8 +843,8 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ReplicaInfo.html">ReplicaInfo</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ReplicaInfo.html">ReplicaInfo</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -850,7 +862,7 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_LogDirDescription_TotalBytes" data-uid="Org.Apache.Kafka.Clients.Admin.LogDirDescription.TotalBytes">
   TotalBytes()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/LogDirDescription.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/LogDirDescription.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/LogDirDescription.html#totalBytes--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/LogDirDescription.html#totalBytes--</a></p>
@@ -864,8 +876,8 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.OptionalLong.html">OptionalLong</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.OptionalLong.html">OptionalLong</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.OptionalLong.html">OptionalLong</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.OptionalLong.html">OptionalLong</a></p>
 </dd>
   </dl>
 
@@ -883,7 +895,7 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_LogDirDescription_UsableBytes" data-uid="Org.Apache.Kafka.Clients.Admin.LogDirDescription.UsableBytes">
   UsableBytes()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/LogDirDescription.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/LogDirDescription.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/LogDirDescription.html#usableBytes--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/LogDirDescription.html#usableBytes--</a></p>
@@ -897,8 +909,8 @@ Class LogDirDescription  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.OptionalLong.html">OptionalLong</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.OptionalLong.html">OptionalLong</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.OptionalLong.html">OptionalLong</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.OptionalLong.html">OptionalLong</a></p>
 </dd>
   </dl>
 

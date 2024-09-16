@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -382,6 +382,9 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -400,6 +403,12 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -412,7 +421,10 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -564,7 +576,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig__ctor" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.#ctor">
   MirrorMakerConfig()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L705"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L720"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -604,8 +616,8 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -624,7 +636,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.#ctor(System.Object[])">
   MirrorMakerConfig(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L709"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L724"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -660,7 +672,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L716"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L732"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -709,7 +721,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -741,7 +753,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -756,7 +768,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L720"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L736"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -788,7 +800,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L724"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L740"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -820,7 +832,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L728"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L744"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -852,7 +864,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L732"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/AllPackageClasses.cs/#L748"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -888,7 +900,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig_ClientConfig_Java_Lang_String_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.ClientConfig(Java.Lang.String)">
   ClientConfig(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#clientConfig-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#clientConfig-java.lang.String-</a></p>
@@ -901,8 +913,8 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -927,7 +939,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig_ClusterPairs" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.ClusterPairs">
   ClusterPairs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#clusterPairs--">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#clusterPairs--</a></p>
@@ -941,8 +953,8 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Mirror.SourceAndTarget.html">SourceAndTarget</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Mirror.SourceAndTarget.html">SourceAndTarget</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
   </dl>
 
@@ -960,7 +972,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig_Clusters" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.Clusters">
   Clusters()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#clusters--">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#clusters--</a></p>
@@ -974,8 +986,8 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -993,7 +1005,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig_ConnectorBaseConfig_Org_Apache_Kafka_Connect_Mirror_SourceAndTarget_Java_Lang_Class_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.ConnectorBaseConfig(Org.Apache.Kafka.Connect.Mirror.SourceAndTarget,Java.Lang.Class)">
   ConnectorBaseConfig(SourceAndTarget, Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#connectorBaseConfig-org.apache.kafka.connect.mirror.SourceAndTarget-java.lang.Class-">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#connectorBaseConfig-org.apache.kafka.connect.mirror.SourceAndTarget-java.lang.Class-</a></p>
@@ -1009,15 +1021,15 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
     <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Connect.Mirror.SourceAndTarget.html">SourceAndTarget</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Connect.Mirror.SourceAndTarget.html">SourceAndTarget</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.Class.html">Class</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.Class.html">Class</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1035,7 +1047,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig_EnableInternalRest" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.EnableInternalRest">
   EnableInternalRest()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#enableInternalRest--">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#enableInternalRest--</a></p>
@@ -1068,7 +1080,7 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorMakerConfig_WorkerConfig_Org_Apache_Kafka_Connect_Mirror_SourceAndTarget_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig.WorkerConfig(Org.Apache.Kafka.Connect.Mirror.SourceAndTarget)">
   WorkerConfig(SourceAndTarget)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorMakerConfig.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#workerConfig-org.apache.kafka.connect.mirror.SourceAndTarget-">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.6.2/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#workerConfig-org.apache.kafka.connect.mirror.SourceAndTarget-</a></p>
@@ -1088,8 +1100,8 @@ Class MirrorMakerConfig  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 

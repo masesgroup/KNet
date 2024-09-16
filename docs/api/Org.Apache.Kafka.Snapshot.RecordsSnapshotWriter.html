@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -110,8 +110,8 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
-      <div><a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Snapshot.SnapshotWriter.html">SnapshotWriter</a></div>
       <div><span class="xref">RecordsSnapshotWriter</span></div>
     </dd>
@@ -126,7 +126,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
       <div><span class="xref">IJVMBridgeBaseStatic</span></div>
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
-      <div><a class="xref" href="api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
   </dl>
 
@@ -300,6 +300,9 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -318,6 +321,12 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -330,7 +339,10 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -482,7 +494,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter__ctor" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.#ctor">
   RecordsSnapshotWriter()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L314"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -509,7 +521,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter__ctor_System_Object___" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.#ctor(System.Object[])">
   RecordsSnapshotWriter(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L312"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L318"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -545,7 +557,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_BridgeClassName" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L326"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -577,7 +589,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L330"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -609,7 +621,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L334"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -641,7 +653,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_IsBridgeInterface" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L338"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -673,7 +685,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_IsBridgeStatic" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/AllPackageClasses.cs/#L342"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -709,7 +721,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_Append_Java_Util_List_" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Append(Java.Util.List)">
   Append(List)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#append-java.util.List-">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#append-java.util.List-</a></p>
@@ -722,8 +734,8 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.List.html">List</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
   </dl>
 
@@ -742,7 +754,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_Close" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#close--</a></p>
@@ -769,7 +781,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_Freeze" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Freeze">
   Freeze()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#freeze--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#freeze--</a></p>
@@ -802,7 +814,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_IsFrozen" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.IsFrozen">
   IsFrozen()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#isFrozen--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#isFrozen--</a></p>
@@ -835,7 +847,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_LastContainedLogEpoch" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.LastContainedLogEpoch">
   LastContainedLogEpoch()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogEpoch--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogEpoch--</a></p>
@@ -868,7 +880,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_LastContainedLogOffset" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.LastContainedLogOffset">
   LastContainedLogOffset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogOffset--</a></p>
@@ -901,7 +913,7 @@ Class RecordsSnapshotWriter  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_RecordsSnapshotWriter_SnapshotId" data-uid="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.SnapshotId">
   SnapshotId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/RecordsSnapshotWriter.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#snapshotId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#snapshotId--</a></p>
