@@ -22,9 +22,6 @@ concurrency:
   group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
   cancel-in-progress: true
 
-env:
-  GITHUB_REF_NAME_FOR_DOCKER: ${{ github.ref_name }}
-
 # This workflow contains two jobs called "check_changes", "build_windows"
 jobs:
   # Verify if a build is needed
@@ -330,7 +327,7 @@ jobs:
 
       - name: Extract branch name
         run: |
-          echo "GITHUB_REF_NAME_FOR_DOCKER=$(echo $GITHUB_REF_NAME_FOR_DOCKER | tr xyz _)" >> $GITHUB_ENV
+          echo "GITHUB_REF_NAME_FOR_DOCKER=$(echo ${{ github.ref_name }} | tr "/" _)" >> $GITHUB_ENV
         shell: bash
           
   execute_tests_linux:
