@@ -1,11 +1,11 @@
 ---
-title: Usage of .NET suite for Apache Kafka
-_description: Describes how to use .NET suite for Apache Kafka
+title: Usage of .NET suite for Apache Kafka™
+_description: Describes how to use .NET suite for Apache Kafka™
 ---
 
 # KNet: library usage
 
-To use KNet classes the developer can write code in .NET using the same classes available in the official Apache Kafka package.
+To use KNet classes the developer can write code in .NET using the same classes available in the official Apache Kafka™ package.
 If classes or methods are not available yet it is possible to use the approach synthetized in [What to do if an API was not yet implemented](API_extensibility.md)
 
 ## Environment setup
@@ -62,7 +62,7 @@ A basic producer can be like the following one:
 
 ```C#
 using MASES.KNet;
-using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka™.Clients.Producer;
 using Java.Util;
 using System;
 using System.Threading;
@@ -146,7 +146,7 @@ Surf [JVM callbacks]() to go into detail in the callback management from JVM.
 
 ```C#
 using MASES.KNet;
-using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka™.Clients.Producer;
 using Java.Util;
 using System;
 using System.Threading;
@@ -239,7 +239,7 @@ A basic consumer can be like the following one:
 
 ```C#
 using MASES.KNet;
-using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka™.Clients.Consumer;
 using Java.Util;
 using System;
 

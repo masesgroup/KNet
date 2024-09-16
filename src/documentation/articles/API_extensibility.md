@@ -1,6 +1,6 @@
 ---
-title: APIs extendibility of .NET suite for Apache Kafka
-_description: Describes how to extend available APIs of .NET suite for Apache Kafka
+title: APIs extendibility of .NET suite for Apache Kafka™
+_description: Describes how to extend available APIs of .NET suite for Apache Kafka™
 ---
 
 # KNet: APIs extendibility

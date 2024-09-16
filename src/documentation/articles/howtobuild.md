@@ -1,5 +1,5 @@
 ---
-title: How to build .NET suite for Apache Kafka
+title: How to build .NET suite for Apache Kafka™
 _description: Describes how to build the Java/JVM suite for .NET from scatch
 ---
 

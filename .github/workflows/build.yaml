@@ -245,6 +245,13 @@ jobs:
     needs: check_changes
     if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
     runs-on: ubuntu-latest
+    outputs:
+      GITHUB_REF_NAME_FOR_DOCKER: ${{ env.GITHUB_REF_NAME_FOR_DOCKER }}
+    permissions:
+      id-token: write
+      packages: write
+      contents: read
+      attestations: write
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -298,6 +305,7 @@ jobs:
             ghcr.io/${{ github.repository_owner }}/knet
 
       - name: Build and push
+        id: push
         uses: docker/build-push-action@v6
         with:
           file: ./src/container/DockerfileKNet.linux
@@ -308,13 +316,26 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           provenance: true
           sbom: true
-          
+
+      - name: Attest GitHub
+        uses: actions/attest-build-provenance@v1
+        id: attest
+        with:
+          subject-name: ghcr.io/${{ github.repository_owner }}/knet
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
+
+      - name: Extract branch name
+        run: |
+          echo "GITHUB_REF_NAME_FOR_DOCKER=$(echo ${{ github.ref_name }} | tr "/" -)" >> $GITHUB_ENV
+        shell: bash
+
   execute_tests_linux:
     needs: [build_windows, build_container_knet]
     services:
       kafka:
         # Private registry image
-        image: ghcr.io/${{ github.repository_owner }}/knet:${{ github.ref_name }}
+        image: ghcr.io/${{ github.repository_owner }}/knet:${{ needs.build_container_knet.outputs.GITHUB_REF_NAME_FOR_DOCKER }}
         credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}

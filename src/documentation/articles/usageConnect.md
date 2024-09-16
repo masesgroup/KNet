@@ -1,6 +1,6 @@
 ---
-title: Kafka Connect SDK of .NET suite for Apache Kafka
-_description: Describes how to use Kafka Connect SDK of .NET suite for Apache Kafka
+title: Kafka™ Connect SDK of .NET suite for Apache Kafka™
+_description: Describes how to use Kafka™ Connect SDK of .NET suite for Apache Kafka™
 ---
 
 # KNet: KNet Connect SDK
@@ -54,7 +54,7 @@ _knetconnect_ accepts the following command-line switch to identify its behavior
 - **s**: starts a standalone version of Connector defined in the file identified from the subsequent parameter
 - **k**: starts a KNet version (Distributed or Standalone) accepting environment variables names containing the data associated to the parameters expected from the stanard version
 - other parameters in sequence are:
-  - Apache Kafka Connect configuration file
+  - Apache Kafka™ Connect configuration file
   - KNet Connector configuration file
   - or in case of **k** switch is used the parameters are the environemnt variables containing the configuration data in the following form:
 	- key and value separated with **=**

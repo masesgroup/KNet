@@ -1,31 +1,31 @@
 ---
-title: Streams SDK of .NET suite for Apache Kafka
-_description: Describes how to use Streams SDK of .NET suite for Apache Kafka
+title: Streams SDK of .NET suite for Apache Kafka™
+_description: Describes how to use Streams SDK of .NET suite for Apache Kafka™
 ---
 
 # KNet: Streams SDK
 
-This is only a quick introduction to KNet Streams SDK, many other information related to Apache Kafka Streams can be found at the following links: https://kafka.apache.org/documentation/#streams and https://kafka.apache.org/documentation/streams/
+This is only a quick introduction to KNet Streams SDK, many other information related to Apache Kafka™ Streams can be found at the following links: https://kafka.apache.org/documentation/#streams and https://kafka.apache.org/documentation/streams/
 
 ## Why KNet Streams SDK
 
-KNet Streams SDK adds the ability to manage complex .NET types in Apache Kafka Streams without manage them in the JVM. 
-**The Apache Kafka Streams APIs available in .NET suite for Apache Kafka works well if the types used are known within the JVM.**
+KNet Streams SDK adds the ability to manage complex .NET types in Apache Kafka™ Streams without manage them in the JVM. 
+**The Apache Kafka™ Streams APIs available in .NET suite for Apache Kafka™ works well if the types used are known within the JVM.**
 Starting from the previous sentence, it works well using native types (bool, string, long, int, and so on), however it does not work if the type in .NET does not have a JVM counterpart.
 
 To solve this limitation there are two ways:
 1. if there is the need of a complex type in .NET, an equivalent class shall be avalable in the JVM; so the right steps are:
    - create the JVM class (in Java or any other language supported)
    - reflect the JVM class with JNetReflector, or manually create it, in .NET
-   - use the generated .NET class as key, or value, type in Apache Kafka Streams API available in _.NET suite for Apache Kafka_
+   - use the generated .NET class as key, or value, type in Apache Kafka™ Streams API available in _.NET suite for Apache Kafka_
 2. otherwise use directly the .NET types in the KNet Streams API available in _.NET suite for Apache Kafka_; this implies:
    - the developer does not need any knowledge of the JVM
    - everything is mananged, behind the scene, from KNet Streams API
 
 ## General 
 
-The KNet Streams SDK is a set of API which expose, in .NET, the one available in Apache Kafka Streams and adds the feature to directly manages serializable types of .NET:
-- The implementation is backed by a standard Apache Kafka Streams which is instructed to work with raw data (i.e. array of bytes);
+The KNet Streams SDK is a set of API which expose, in .NET, the one available in Apache Kafka™ Streams and adds the feature to directly manages serializable types of .NET:
+- The implementation is backed by a standard Apache Kafka™ Streams which is instructed to work with raw data (i.e. array of bytes);
 - The data are exposed, in .NET, using the types assigned, most of translation jobs are supported by [KNet serializers](usageSerDes.md).
 
 ## API set
@@ -44,7 +44,7 @@ All KNet Streams SDK APIs starts with the KNet prefix to avoid confusion during 
   - **MASES.KNet.Streams.State.TimestampedKeyValueIterator<TKey, TValue>** uses an _org.apache.kafka.streams.state.KeyValueIterator<K, V>_ applying byte[] on K and _org.apache.kafka.streams.state.ValueAndTimestamp<byte[]>_ on V;
   - **MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator<TKey, TValue>** uses an _org.apache.kafka.streams.state.KeyValueIterator<K, V>_ applying _org.apache.kafka.streams.kstream.Windowed<byte[]>_ on K and _org.apache.kafka.streams.state.ValueAndTimestamp<byte[]>_ on V;
 
-**Current available APIs cover a subset of the full APIs available in Apache Kafka Streams and some classes are only placeholder for some implemented APIs.**
+**Current available APIs cover a subset of the full APIs available in Apache Kafka™ Streams and some classes are only placeholder for some implemented APIs.**
 
 ## Examples
 
@@ -61,7 +61,7 @@ string storageId = "myStorage";
 StreamsConfigBuilder streamsConfig = StreamsConfigBuilder.Create();
 StreamsBuilder builder = new StreamsBuilder(streamsConfig);
 
-Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka.Streams.State.Stores.InMemoryKeyValueStore(storageId);
+Org.Apache.Kafka™.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka™.Streams.State.Stores.InMemoryKeyValueStore(storageId);
 Materialized<string, string> materialized = Materialized<string, string>.As(storeSupplier);
 GlobalKTable<string, string> globalTable = builder.GlobalTable(topicName, materialized);
 Topology topology = builder.Build();
@@ -114,7 +114,7 @@ streamsConfig.KNetValueSerDes = typeof(JsonSerDes.Value<>);
 
 StreamsBuilder builder = new StreamsBuilder(streamsConfig);
 
-Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka.Streams.State.Stores.InMemoryKeyValueStore(storageId);
+Org.Apache.Kafka™.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka™.Streams.State.Stores.InMemoryKeyValueStore(storageId);
 Materialized<int, TestType> materialized = Materialized<int, TestType>.As(storeSupplier);
 GlobalKTable<int, TestType> globalTable = builder.GlobalTable(topicName, materialized);
 Topology topology = builder.Build();
