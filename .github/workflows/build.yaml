@@ -317,7 +317,7 @@ jobs:
         
       - name: Print Image Id
         run: |
-          echo "${{ env.DOCKER_IMAGE_ID }}"
+          echo "${{ steps.push.outputs.imageid }}"
         shell: bash
 
       - name: Attest GitHub
