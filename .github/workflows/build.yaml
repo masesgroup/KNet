@@ -333,7 +333,7 @@ jobs:
     services:
       kafka:
         # Private registry image
-        image: ghcr.io/${{ github.repository_owner }}/knet:${{ env.DOCKER_IMAGE_ID }}
+        image: ghcr.io/${{ github.repository_owner }}/knet:$DOCKER_IMAGE_ID
         credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
