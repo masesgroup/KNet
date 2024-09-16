@@ -245,6 +245,11 @@ jobs:
     needs: check_changes
     if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      packages: write
+      contents: read
+      attestations: write
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -310,16 +315,6 @@ jobs:
           provenance: true
           sbom: true
 
-      - name: Extract Image Id
-        run: |
-          echo "DOCKER_IMAGE_ID=$(echo ${{ steps.push.outputs.imageid }})" >> $GITHUB_ENV
-        shell: bash
-        
-      - name: Print Image Id
-        run: |
-          echo "${{ steps.push.outputs.imageid }}"
-        shell: bash
-
       - name: Attest GitHub
         uses: actions/attest-build-provenance@v1
         id: attest
@@ -333,7 +328,7 @@ jobs:
     services:
       kafka:
         # Private registry image
-        image: ghcr.io/${{ github.repository_owner }}/knet:$DOCKER_IMAGE_ID
+        image: ghcr.io/${{ github.repository_owner }}/knet:release-2.7.X
         credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
