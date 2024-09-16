@@ -248,6 +248,8 @@ jobs:
     needs: check_changes
     if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
     runs-on: ubuntu-latest
+    outputs:
+      GITHUB_REF_NAME_FOR_DOCKER: ${{ env.GITHUB_REF_NAME_FOR_DOCKER }}
     permissions:
       id-token: write
       packages: write
@@ -336,7 +338,7 @@ jobs:
     services:
       kafka:
         # Private registry image
-        image: ghcr.io/${{ github.repository_owner }}/knet:$GITHUB_REF_NAME_FOR_DOCKER
+        image: ghcr.io/${{ github.repository_owner }}/knet:${{ needs.build_container_knet.outputs.GITHUB_REF_NAME_FOR_DOCKER }}
         credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
