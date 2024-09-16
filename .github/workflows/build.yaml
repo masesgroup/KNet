@@ -22,6 +22,9 @@ concurrency:
   group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
   cancel-in-progress: true
 
+env:
+  GITHUB_REF_NAME_FOR_DOCKER: ${{ github.ref_name }}
+
 # This workflow contains two jobs called "check_changes", "build_windows"
 jobs:
   # Verify if a build is needed
@@ -322,13 +325,13 @@ jobs:
           subject-name: ghcr.io/${{ github.repository_owner }}/knet
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
-          
+     
   execute_tests_linux:
     needs: [build_windows, build_container_knet]
     services:
       kafka:
         # Private registry image
-        image: ghcr.io/${{ github.repository_owner }}/knet:release-2.7.X
+        image: ghcr.io/${{ github.repository_owner }}/knet:${{ env.GITHUB_REF_NAME_FOR_DOCKER }}
         credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
