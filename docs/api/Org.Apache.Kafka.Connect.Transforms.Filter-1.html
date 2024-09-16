@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Connect_Transforms_Filter_1" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1" class="text-break">
-Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L122"><i class="bi bi-code-slash"></i></a>
+Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -305,6 +305,9 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -323,6 +326,12 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -335,7 +344,10 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -487,7 +499,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1__ctor" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.#ctor">
   Filter()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L808"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L825"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -514,7 +526,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.#ctor(System.Object[])">
   Filter(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L812"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L829"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -550,7 +562,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L819"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L837"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -582,7 +594,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_CONFIG_DEF" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.CONFIG_DEF">
   CONFIG_DEF
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#CONFIG_DEF">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#CONFIG_DEF</a></p>
@@ -614,7 +626,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L823"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L841"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -646,7 +658,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L827"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L845"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -678,7 +690,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L831"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L849"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -710,7 +722,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L835"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/AllPackageClasses.cs/#L853"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -742,7 +754,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_OVERVIEW_DOC" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.OVERVIEW_DOC">
   OVERVIEW_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#OVERVIEW_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#OVERVIEW_DOC</a></p>
@@ -759,7 +771,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -778,7 +790,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_Apply__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.Apply(`0)">
   Apply(R)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#apply-org.apache.kafka.connect.connector.ConnectRecord-">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#apply-org.apache.kafka.connect.connector.ConnectRecord-</a></p>
@@ -817,7 +829,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_Close" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L191"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#close--">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#close--</a></p>
@@ -844,7 +856,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_Config" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.Config">
   Config()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#config--">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#config--</a></p>
@@ -877,7 +889,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
   Configure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L199"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#configure-java.util.Map-</a></p>
@@ -890,8 +902,8 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -910,7 +922,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_Version" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.Version">
   Version()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L167"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#version--">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.6.2/org/apache/kafka/connect/transforms/Filter.html#version--</a></p>
@@ -924,8 +936,8 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -947,7 +959,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_Filter__0___Org_Apache_Kafka_Connect_Components_Versioned" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.Filter{`0})~Org.Apache.Kafka.Connect.Components.Versioned">
   implicit operator Versioned(Filter&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Filter-1.html">Filter&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></p>
@@ -984,7 +996,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_Filter__0___Org_Apache_Kafka_Connect_Transforms_Filter" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.Filter{`0})~Org.Apache.Kafka.Connect.Transforms.Filter">
   implicit operator Filter(Filter&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Filter-1.html">Filter&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Filter.html">Filter</a></p>
@@ -1021,7 +1033,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Filter_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_Filter__0___Org_Apache_Kafka_Connect_Transforms_Transformation__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.Filter`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.Filter{`0})~Org.Apache.Kafka.Connect.Transforms.Transformation{`0}">
   implicit operator Transformation&lt;R&gt;(Filter&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Filter-1.html">Filter&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation&lt;R&gt;</a></p>
@@ -1058,7 +1070,7 @@ Class Filter&lt;R&gt;  <a class="header-action link-secondary" title="View sourc
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L122" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Filter.cs/#L120" class="edit-link">Edit this page</a>
         </div>
 
 

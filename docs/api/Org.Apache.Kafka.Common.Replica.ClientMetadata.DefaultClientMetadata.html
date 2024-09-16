@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata" class="text-break">
-Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L116"><i class="bi bi-code-slash"></i></a>
+Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -299,6 +299,9 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -317,6 +320,12 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -329,7 +338,10 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -481,7 +493,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata__ctor" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.#ctor">
   DefaultClientMetadata()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -508,7 +520,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata__ctor_Java_Lang_String_Java_Lang_String_Java_Net_InetAddress_Org_Apache_Kafka_Common_Security_Auth_KafkaPrincipal_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.#ctor(Java.Lang.String,Java.Lang.String,Java.Net.InetAddress,Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal,Java.Lang.String)">
   DefaultClientMetadata(String, String, InetAddress, KafkaPrincipal, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#org.apache.kafka.common.replica.ClientMetadata$DefaultClientMetadata(java.lang.String,java.lang.String,java.net.InetAddress,org.apache.kafka.common.security.auth.KafkaPrincipal,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#org.apache.kafka.common.replica.ClientMetadata$DefaultClientMetadata(java.lang.String,java.lang.String,java.net.InetAddress,org.apache.kafka.common.security.auth.KafkaPrincipal,java.lang.String)</a></p>
@@ -521,20 +533,20 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Net.InetAddress.html">InetAddress</a></dt>
-    <dd><p><a class="xref" href="api/Java.Net.InetAddress.html">InetAddress</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Net.InetAddress.html">InetAddress</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Net.InetAddress.html">InetAddress</a></p>
 </dd>
     <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></p>
 </dd>
-    <dt><code>arg4</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg4</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -553,7 +565,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.#ctor(System.Object[])">
   DefaultClientMetadata(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -589,7 +601,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -621,7 +633,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -653,7 +665,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -685,7 +697,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -717,7 +729,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/AllPackageClasses.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -753,7 +765,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata_ClientAddress" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.ClientAddress">
   ClientAddress()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientAddress--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientAddress--</a></p>
@@ -767,8 +779,8 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Net.InetAddress.html">InetAddress</a></dt>
-    <dd><p><a class="xref" href="api/Java.Net.InetAddress.html">InetAddress</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Net.InetAddress.html">InetAddress</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Net.InetAddress.html">InetAddress</a></p>
 </dd>
   </dl>
 
@@ -786,7 +798,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata_ClientId" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.ClientId">
   ClientId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientId--</a></p>
@@ -800,8 +812,8 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -819,7 +831,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata_ListenerName" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.ListenerName">
   ListenerName()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#listenerName--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#listenerName--</a></p>
@@ -833,8 +845,8 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -852,7 +864,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata_Principal" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.Principal">
   Principal()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#principal--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#principal--</a></p>
@@ -885,7 +897,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h3 id="Org_Apache_Kafka_Common_Replica_ClientMetadata_DefaultClientMetadata_RackId" data-uid="Org.Apache.Kafka.Common.Replica.ClientMetadata.DefaultClientMetadata.RackId">
   RackId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#rackId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#rackId--</a></p>
@@ -899,8 +911,8 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -918,7 +930,7 @@ Class ClientMetadata.DefaultClientMetadata  <a class="header-action link-seconda
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L116" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Replica/ClientMetadata.cs/#L111" class="edit-link">Edit this page</a>
         </div>
 
 

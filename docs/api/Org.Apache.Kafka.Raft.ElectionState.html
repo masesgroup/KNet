@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -297,6 +297,9 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -315,6 +318,12 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -327,7 +336,10 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -479,7 +491,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState__ctor" data-uid="Org.Apache.Kafka.Raft.ElectionState.#ctor">
   ElectionState()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L315"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -506,7 +518,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState__ctor_System_Object___" data-uid="Org.Apache.Kafka.Raft.ElectionState.#ctor(System.Object[])">
   ElectionState(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L319"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -542,7 +554,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_BridgeClassName" data-uid="Org.Apache.Kafka.Raft.ElectionState.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L320"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L327"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -574,7 +586,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Raft.ElectionState.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L324"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L331"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -606,7 +618,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Raft.ElectionState.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L335"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -638,7 +650,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_IsBridgeInterface" data-uid="Org.Apache.Kafka.Raft.ElectionState.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L339"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -670,7 +682,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_IsBridgeStatic" data-uid="Org.Apache.Kafka.Raft.ElectionState.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L343"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -751,7 +763,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.OptionalInt.html">OptionalInt</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.OptionalInt.html">OptionalInt</a></dt>
     <dd></dd>
   </dl>
 
@@ -783,7 +795,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.OptionalInt.html">OptionalInt</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.OptionalInt.html">OptionalInt</a></dt>
     <dd></dd>
   </dl>
 
@@ -802,7 +814,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_HasLeader" data-uid="Org.Apache.Kafka.Raft.ElectionState.HasLeader">
   HasLeader()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#hasLeader--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#hasLeader--</a></p>
@@ -835,7 +847,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_HasVoted" data-uid="Org.Apache.Kafka.Raft.ElectionState.HasVoted">
   HasVoted()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#hasVoted--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#hasVoted--</a></p>
@@ -868,7 +880,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_IsLeader_System_Int32_" data-uid="Org.Apache.Kafka.Raft.ElectionState.IsLeader(System.Int32)">
   IsLeader(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#isLeader-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#isLeader-int-</a></p>
@@ -907,7 +919,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_IsVotedCandidate_System_Int32_" data-uid="Org.Apache.Kafka.Raft.ElectionState.IsVotedCandidate(System.Int32)">
   IsVotedCandidate(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#isVotedCandidate-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#isVotedCandidate-int-</a></p>
@@ -946,7 +958,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_LeaderId" data-uid="Org.Apache.Kafka.Raft.ElectionState.LeaderId">
   LeaderId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#leaderId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#leaderId--</a></p>
@@ -979,7 +991,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_LeaderIdOrSentinel" data-uid="Org.Apache.Kafka.Raft.ElectionState.LeaderIdOrSentinel">
   LeaderIdOrSentinel()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#leaderIdOrSentinel--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#leaderIdOrSentinel--</a></p>
@@ -1012,7 +1024,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_VotedId" data-uid="Org.Apache.Kafka.Raft.ElectionState.VotedId">
   VotedId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#votedId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#votedId--</a></p>
@@ -1045,7 +1057,7 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Raft_ElectionState_Voters" data-uid="Org.Apache.Kafka.Raft.ElectionState.Voters">
   Voters()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/ElectionState.cs/#L160"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#voters--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/ElectionState.html#voters--</a></p>
@@ -1059,8 +1071,8 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.Integer.html">Integer</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -1097,8 +1109,8 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.Integer.html">Integer</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -1139,8 +1151,8 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.Integer.html">Integer</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -1184,8 +1196,8 @@ Class ElectionState  <a class="header-action link-secondary" title="View source"
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.Integer.html">Integer</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 

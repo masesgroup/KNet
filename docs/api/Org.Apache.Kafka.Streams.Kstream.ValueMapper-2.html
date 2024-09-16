@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Kstream_ValueMapper_2" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueMapper`2" class="text-break">
-Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueMapper.cs/#L109"><i class="bi bi-code-slash"></i></a>
+Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueMapper.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -140,6 +140,7 @@ Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="V
     <dt>Derived</dt>
     <dd>
       <div><a class="xref" href="MASES.KNet.Streams.Kstream.ValueMapper-4.html">ValueMapper&lt;V, VR, TJVMV, TJVMVR&gt;</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueMapperDirect-2.html">ValueMapperDirect&lt;V, VR&gt;</a></div>
     </dd>
   </dl>
 
@@ -333,6 +334,9 @@ Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="V
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -351,6 +355,12 @@ Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="V
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -363,7 +373,10 @@ Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="V
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -518,7 +531,7 @@ Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_ValueMapper_2__ctor" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueMapper`2.#ctor">
   ValueMapper()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L3585"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L4597"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -549,7 +562,7 @@ Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_ValueMapper_2_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueMapper`2.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L3590"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/AllPackageClasses.cs/#L4606"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -581,7 +594,7 @@ Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_ValueMapper_2_OnApply" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueMapper`2.OnApply">
   OnApply
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueMapper.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueMapper.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-</a></p>
@@ -620,7 +633,7 @@ Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_ValueMapper_2_Apply__0_" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueMapper`2.Apply(`0)">
   Apply(V)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueMapper.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueMapper.cs/#L195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/kstream/ValueMapper.html#apply-java.lang.Object-</a></p>
@@ -659,7 +672,7 @@ Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Streams_Kstream_ValueMapper_2_InitializeHandlers" data-uid="Org.Apache.Kafka.Streams.Kstream.ValueMapper`2.InitializeHandlers">
   InitializeHandlers()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueMapper.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueMapper.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handlers initializer for <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ValueMapper.html">ValueMapper</a></p>
@@ -686,7 +699,7 @@ Class ValueMapper&lt;V, VR&gt;  <a class="header-action link-secondary" title="V
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueMapper.cs/#L109" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ValueMapper.cs/#L149" class="edit-link">Edit this page</a>
         </div>
 
 

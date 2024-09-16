@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -297,6 +297,9 @@ Class ReadOnlyWindowStore  <a class="header-action link-secondary" title="View s
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -315,6 +318,12 @@ Class ReadOnlyWindowStore  <a class="header-action link-secondary" title="View s
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -327,7 +336,10 @@ Class ReadOnlyWindowStore  <a class="header-action link-secondary" title="View s
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -479,7 +491,7 @@ Class ReadOnlyWindowStore  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore__ctor" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.#ctor">
   ReadOnlyWindowStore()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L912"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L931"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -507,7 +519,7 @@ public ReadOnlyWindowStore()</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.#ctor(System.Object[])">
   ReadOnlyWindowStore(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L917"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L936"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -544,7 +556,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L925"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L945"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -576,7 +588,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L929"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L949"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -608,7 +620,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L933"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L953"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -640,7 +652,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L937"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L957"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -672,7 +684,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L941"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L961"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -708,7 +720,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_All" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.All">
   All()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all--</a></p>
@@ -741,7 +753,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_BackwardAll" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.BackwardAll">
   BackwardAll()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll--</a></p>
@@ -774,7 +786,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_BackwardFetch_System_Object_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.BackwardFetch(System.Object,Java.Time.Instant,Java.Time.Instant)">
   BackwardFetch(object, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
@@ -790,11 +802,11 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -814,7 +826,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -824,7 +836,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_BackwardFetch_System_Object_System_Object_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.BackwardFetch(System.Object,System.Object,Java.Time.Instant,Java.Time.Instant)">
   BackwardFetch(object, object, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
@@ -843,11 +855,11 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -867,7 +879,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -877,7 +889,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_BackwardFetchAll_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.BackwardFetchAll(Java.Time.Instant,Java.Time.Instant)">
   BackwardFetchAll(Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll-java.time.Instant-java.time.Instant-</a></p>
@@ -890,11 +902,11 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -914,7 +926,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -924,7 +936,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_Fetch_System_Object_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.Fetch(System.Object,Java.Time.Instant,Java.Time.Instant)">
   Fetch(object, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
@@ -940,11 +952,11 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -964,7 +976,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -974,7 +986,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_Fetch_System_Object_System_Int64_" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.Fetch(System.Object,System.Int64)">
   Fetch(object, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-long-</a></p>
@@ -1016,7 +1028,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_Fetch_System_Object_System_Object_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.Fetch(System.Object,System.Object,Java.Time.Instant,Java.Time.Instant)">
   Fetch(object, object, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch-java.lang.Object-java.lang.Object-java.time.Instant-java.time.Instant-</a></p>
@@ -1035,11 +1047,11 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -1059,7 +1071,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 
@@ -1069,7 +1081,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_State_ReadOnlyWindowStore_FetchAll_Java_Time_Instant_Java_Time_Instant_" data-uid="Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore.FetchAll(Java.Time.Instant,Java.Time.Instant)">
   FetchAll(Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/ReadOnlyWindowStore.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll-java.time.Instant-java.time.Instant-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll-java.time.Instant-java.time.Instant-</a></p>
@@ -1082,11 +1094,11 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Instant.html">Instant</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Instant.html">Instant</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Instant.html">Instant</a></p>
 </dd>
   </dl>
 
@@ -1106,7 +1118,7 @@ public ReadOnlyWindowStore(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IllegalArgumentException.html">IllegalArgumentException</a></dt>
     <dd></dd>
   </dl>
 

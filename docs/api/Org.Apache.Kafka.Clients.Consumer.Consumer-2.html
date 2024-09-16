@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2" class="text-break">
-Class Consumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L465"><i class="bi bi-code-slash"></i></a>
+Class Consumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L459"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -117,9 +117,9 @@ Class Consumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
-      <div><a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
-      <div><a class="xref" href="api/Java.Io.Closeable.html">Closeable</a></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.Closeable.html">Closeable</a></div>
       <div><span class="xref">Consumer&lt;K, V&gt;</span></div>
     </dd>
   </dl>
@@ -135,8 +135,8 @@ Class Consumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><a class="xref" href="api/Java.Io.ICloseable.html">ICloseable</a></div>
-      <div><a class="xref" href="api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html">ICloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
   </dl>
 
@@ -317,6 +317,9 @@ Class Consumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -335,6 +338,12 @@ Class Consumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -347,7 +356,10 @@ Class Consumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -509,7 +521,7 @@ Class Consumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2__ctor" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.#ctor">
   Consumer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -537,7 +549,7 @@ public Consumer()</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.#ctor(System.Object[])">
   Consumer(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -574,7 +586,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -606,7 +618,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -638,7 +650,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -670,7 +682,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -702,7 +714,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/AllPackageClasses.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -738,7 +750,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Assign_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Assign(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   Assign(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L688"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L676"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#assign-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#assign-java.util.Collection-</a></p>
@@ -751,8 +763,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
@@ -771,7 +783,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Assignment" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Assignment">
   Assignment()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L634"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L624"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#assignment--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#assignment--</a></p>
@@ -785,8 +797,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -804,7 +816,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_BeginningOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.BeginningOffsets(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   BeginningOffsets(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L550"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L542"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#beginningOffsets-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#beginningOffsets-java.util.Collection-</a></p>
@@ -817,15 +829,15 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="api/Java.Lang.Long.html">Long</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -843,7 +855,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_BeginningOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.BeginningOffsets(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition},Java.Time.Duration)">
   BeginningOffsets(Collection&lt;TopicPartition&gt;, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L541"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L533"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#beginningOffsets-java.util.Collection-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#beginningOffsets-java.util.Collection-java.time.Duration-</a></p>
@@ -856,18 +868,18 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="api/Java.Lang.Long.html">Long</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -885,7 +897,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Close" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L695"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L683"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#close--</a></p>
@@ -912,7 +924,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Close_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Close(Java.Time.Duration)">
   Close(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L703"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L691"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#close-java.time.Duration-</a></p>
@@ -925,8 +937,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
@@ -945,7 +957,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_CommitAsync" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.CommitAsync">
   CommitAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L710"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L698"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitAsync--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitAsync--</a></p>
@@ -972,7 +984,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_CommitAsync_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__Org_Apache_Kafka_Clients_Consumer_OffsetCommitCallback_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.CommitAsync(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata},Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback)">
   CommitAsync(Map&lt;TopicPartition, OffsetAndMetadata&gt;, OffsetCommitCallback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L719"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L707"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitAsync-java.util.Map-org.apache.kafka.clients.consumer.OffsetCommitCallback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitAsync-java.util.Map-org.apache.kafka.clients.consumer.OffsetCommitCallback-</a></p>
@@ -985,8 +997,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback.html">OffsetCommitCallback</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback.html">OffsetCommitCallback</a></p>
@@ -1008,7 +1020,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_CommitAsync_Org_Apache_Kafka_Clients_Consumer_OffsetCommitCallback_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.CommitAsync(Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback)">
   CommitAsync(OffsetCommitCallback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L727"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L715"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitAsync-org.apache.kafka.clients.consumer.OffsetCommitCallback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitAsync-org.apache.kafka.clients.consumer.OffsetCommitCallback-</a></p>
@@ -1041,7 +1053,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_CommitSync" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.CommitSync">
   CommitSync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L734"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L722"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitSync--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitSync--</a></p>
@@ -1068,7 +1080,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_CommitSync_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.CommitSync(Java.Time.Duration)">
   CommitSync(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L742"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L730"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitSync-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitSync-java.time.Duration-</a></p>
@@ -1081,8 +1093,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
@@ -1101,7 +1113,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_CommitSync_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.CommitSync(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata})">
   CommitSync(Map&lt;TopicPartition, OffsetAndMetadata&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L759"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L747"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitSync-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitSync-java.util.Map-</a></p>
@@ -1114,8 +1126,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1134,7 +1146,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_CommitSync_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.CommitSync(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata},Java.Time.Duration)">
   CommitSync(Map&lt;TopicPartition, OffsetAndMetadata&gt;, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L751"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L739"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitSync-java.util.Map-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#commitSync-java.util.Map-java.time.Duration-</a></p>
@@ -1147,11 +1159,11 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
@@ -1170,7 +1182,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Committed_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Committed(Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition})">
   Committed(Set&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L588"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L580"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#committed-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#committed-java.util.Set-</a></p>
@@ -1183,15 +1195,15 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1209,7 +1221,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Committed_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Committed(Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition},Java.Time.Duration)">
   Committed(Set&lt;TopicPartition&gt;, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L579"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L571"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#committed-java.util.Set-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#committed-java.util.Set-java.time.Duration-</a></p>
@@ -1222,18 +1234,18 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1251,7 +1263,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_CurrentLag_Org_Apache_Kafka_Common_TopicPartition_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.CurrentLag(Org.Apache.Kafka.Common.TopicPartition)">
   CurrentLag(TopicPartition)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L616"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L608"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#currentLag-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#currentLag-org.apache.kafka.common.TopicPartition-</a></p>
@@ -1271,8 +1283,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.OptionalLong.html">OptionalLong</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.OptionalLong.html">OptionalLong</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.OptionalLong.html">OptionalLong</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.OptionalLong.html">OptionalLong</a></p>
 </dd>
   </dl>
 
@@ -1290,7 +1302,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_EndOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.EndOffsets(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   EndOffsets(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L569"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L561"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#endOffsets-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#endOffsets-java.util.Collection-</a></p>
@@ -1303,15 +1315,15 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="api/Java.Lang.Long.html">Long</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1329,7 +1341,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_EndOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.EndOffsets(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition},Java.Time.Duration)">
   EndOffsets(Collection&lt;TopicPartition&gt;, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L560"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L552"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#endOffsets-java.util.Collection-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#endOffsets-java.util.Collection-java.time.Duration-</a></p>
@@ -1342,18 +1354,18 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="api/Java.Lang.Long.html">Long</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1371,7 +1383,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_EnforceRebalance" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.EnforceRebalance">
   EnforceRebalance()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L766"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L754"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#enforceRebalance--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#enforceRebalance--</a></p>
@@ -1398,7 +1410,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_EnforceRebalance_Java_Lang_String_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.EnforceRebalance(Java.Lang.String)">
   EnforceRebalance(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L774"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L762"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#enforceRebalance-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#enforceRebalance-java.lang.String-</a></p>
@@ -1411,8 +1423,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1431,7 +1443,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_GroupMetadata" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.GroupMetadata">
   GroupMetadata()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L671"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L659"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#groupMetadata--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#groupMetadata--</a></p>
@@ -1464,7 +1476,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_ListTopics" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.ListTopics">
   ListTopics()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L512"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L505"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#listTopics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#listTopics--</a></p>
@@ -1478,8 +1490,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1497,7 +1509,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_ListTopics_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.ListTopics(Java.Time.Duration)">
   ListTopics(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L521"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L514"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#listTopics-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#listTopics-java.time.Duration-</a></p>
@@ -1510,15 +1522,15 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1536,7 +1548,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Metrics__1" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Metrics``1">
   Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L531"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L523"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#metrics--</a></p>
@@ -1550,8 +1562,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1575,7 +1587,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_OffsetsForTimes_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.OffsetsForTimes(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Java.Lang.Long})">
   OffsetsForTimes(Map&lt;TopicPartition, Long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L607"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L599"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#offsetsForTimes-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#offsetsForTimes-java.util.Map-</a></p>
@@ -1588,15 +1600,15 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="api/Java.Lang.Long.html">Long</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp.html">OffsetAndTimestamp</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp.html">OffsetAndTimestamp</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1614,7 +1626,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_OffsetsForTimes_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.OffsetsForTimes(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Java.Lang.Long},Java.Time.Duration)">
   OffsetsForTimes(Map&lt;TopicPartition, Long&gt;, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L598"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L590"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#offsetsForTimes-java.util.Map-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#offsetsForTimes-java.util.Map-java.time.Duration-</a></p>
@@ -1627,18 +1639,18 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="api/Java.Lang.Long.html">Long</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp.html">OffsetAndTimestamp</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp.html">OffsetAndTimestamp</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1656,7 +1668,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_PartitionsFor_Java_Lang_String_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.PartitionsFor(Java.Lang.String)">
   PartitionsFor(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L503"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L497"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#partitionsFor-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#partitionsFor-java.lang.String-</a></p>
@@ -1669,15 +1681,15 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
   </dl>
 
@@ -1695,7 +1707,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_PartitionsFor_Java_Lang_String_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.PartitionsFor(Java.Lang.String,Java.Time.Duration)">
   PartitionsFor(String, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L494"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L488"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#partitionsFor-java.lang.String-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#partitionsFor-java.lang.String-java.time.Duration-</a></p>
@@ -1708,18 +1720,18 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.PartitionInfo.html">PartitionInfo</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
   </dl>
 
@@ -1737,7 +1749,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Pause_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Pause(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   Pause(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L782"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L770"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#pause-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#pause-java.util.Collection-</a></p>
@@ -1750,8 +1762,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
@@ -1770,7 +1782,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Paused" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Paused">
   Paused()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L643"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L632"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#paused--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#paused--</a></p>
@@ -1784,8 +1796,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -1803,7 +1815,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Poll_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Poll(Java.Time.Duration)">
   Poll(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L680"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L668"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#poll-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#poll-java.time.Duration-</a></p>
@@ -1816,8 +1828,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
@@ -1842,7 +1854,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Position_Org_Apache_Kafka_Common_TopicPartition_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Position(Org.Apache.Kafka.Common.TopicPartition)">
   Position(TopicPartition)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L662"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L651"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#position-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#position-org.apache.kafka.common.TopicPartition-</a></p>
@@ -1881,7 +1893,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Position_Org_Apache_Kafka_Common_TopicPartition_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Position(Org.Apache.Kafka.Common.TopicPartition,Java.Time.Duration)">
   Position(TopicPartition, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L653"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L642"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#position-org.apache.kafka.common.TopicPartition-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#position-org.apache.kafka.common.TopicPartition-java.time.Duration-</a></p>
@@ -1897,8 +1909,8 @@ public Consumer(params object[] args)</code></pre>
     <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
@@ -1923,7 +1935,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Resume_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Resume(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   Resume(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L790"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L778"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#resume-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#resume-java.util.Collection-</a></p>
@@ -1936,8 +1948,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
@@ -1956,7 +1968,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Seek_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Seek(Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata)">
   Seek(TopicPartition, OffsetAndMetadata)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L808"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L796"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#seek-org.apache.kafka.common.TopicPartition-org.apache.kafka.clients.consumer.OffsetAndMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#seek-org.apache.kafka.common.TopicPartition-org.apache.kafka.clients.consumer.OffsetAndMetadata-</a></p>
@@ -1992,7 +2004,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Seek_Org_Apache_Kafka_Common_TopicPartition_System_Int64_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Seek(Org.Apache.Kafka.Common.TopicPartition,System.Int64)">
   Seek(TopicPartition, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L799"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L787"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#seek-org.apache.kafka.common.TopicPartition-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#seek-org.apache.kafka.common.TopicPartition-long-</a></p>
@@ -2028,7 +2040,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_SeekToBeginning_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.SeekToBeginning(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   SeekToBeginning(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L816"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L804"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#seekToBeginning-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#seekToBeginning-java.util.Collection-</a></p>
@@ -2041,8 +2053,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
@@ -2061,7 +2073,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_SeekToEnd_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.SeekToEnd(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   SeekToEnd(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L824"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L812"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#seekToEnd-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#seekToEnd-java.util.Collection-</a></p>
@@ -2074,8 +2086,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
@@ -2094,7 +2106,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Subscribe_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Subscribe(Java.Util.Collection{Java.Lang.String})">
   Subscribe(Collection&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L841"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L829"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#subscribe-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#subscribe-java.util.Collection-</a></p>
@@ -2107,8 +2119,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
@@ -2127,7 +2139,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Subscribe_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Subscribe(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener)">
   Subscribe(Collection&lt;String&gt;, ConsumerRebalanceListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L833"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L821"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#subscribe-java.util.Collection-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#subscribe-java.util.Collection-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-</a></p>
@@ -2140,8 +2152,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener.html">ConsumerRebalanceListener</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener.html">ConsumerRebalanceListener</a></p>
@@ -2163,7 +2175,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Subscribe_Java_Util_Regex_Pattern_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Subscribe(Java.Util.Regex.Pattern)">
   Subscribe(Pattern)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L858"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L846"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#subscribe-java.util.regex.Pattern-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#subscribe-java.util.regex.Pattern-</a></p>
@@ -2176,8 +2188,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Regex.Pattern.html">Pattern</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Regex.Pattern.html">Pattern</a></p>
 </dd>
   </dl>
 
@@ -2196,7 +2208,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Subscribe_Java_Util_Regex_Pattern_Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Subscribe(Java.Util.Regex.Pattern,Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener)">
   Subscribe(Pattern, ConsumerRebalanceListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L850"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L838"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#subscribe-java.util.regex.Pattern-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#subscribe-java.util.regex.Pattern-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-</a></p>
@@ -2209,8 +2221,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.Regex.Pattern.html">Pattern</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Regex.Pattern.html">Pattern</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Regex.Pattern.html">Pattern</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener.html">ConsumerRebalanceListener</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener.html">ConsumerRebalanceListener</a></p>
@@ -2232,7 +2244,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Subscription" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Subscription">
   Subscription()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L625"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L616"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#subscription--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#subscription--</a></p>
@@ -2246,8 +2258,8 @@ public Consumer(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -2265,7 +2277,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Unsubscribe" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Unsubscribe">
   Unsubscribe()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L865"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L853"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#unsubscribe--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#unsubscribe--</a></p>
@@ -2292,7 +2304,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_Wakeup" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.Wakeup">
   Wakeup()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L872"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L860"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#wakeup--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/consumer/Consumer.html#wakeup--</a></p>
@@ -2323,7 +2335,7 @@ public Consumer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_Consumer_2_op_Implicit_Org_Apache_Kafka_Clients_Consumer_Consumer__0__1___Org_Apache_Kafka_Clients_Consumer_Consumer" data-uid="Org.Apache.Kafka.Clients.Consumer.Consumer`2.op_Implicit(Org.Apache.Kafka.Clients.Consumer.Consumer{`0,`1})~Org.Apache.Kafka.Clients.Consumer.Consumer">
   implicit operator Consumer(Consumer&lt;K, V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L475"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L469"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer-2.html">Consumer&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer.html">Consumer</a></p>
@@ -2360,7 +2372,7 @@ public Consumer(params object[] args)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L465" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/Consumer.cs/#L459" class="edit-link">Edit this page</a>
         </div>
 
 

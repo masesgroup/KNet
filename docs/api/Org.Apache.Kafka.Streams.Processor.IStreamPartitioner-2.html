@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Processor_IStreamPartitioner_2" data-uid="Org.Apache.Kafka.Streams.Processor.IStreamPartitioner`2" class="text-break">
-Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StreamPartitioner.cs/#L111"><i class="bi bi-code-slash"></i></a>
+Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StreamPartitioner.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -120,6 +120,12 @@ Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <span class="xref">IJVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">IJVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -132,7 +138,10 @@ Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary
       <span class="xref">IJVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">IJVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">IJVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">IJVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">IJVMBridgeBase.DynBridgeInstance</span>
@@ -186,7 +195,7 @@ Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>topic</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><code>topic</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd><p>The StreamPartitioner object</p>
 </dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
@@ -234,7 +243,7 @@ Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>topic</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><code>topic</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd><p>The StreamPartitioner object</p>
 </dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
@@ -250,7 +259,7 @@ Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.Integer.html">Integer</a>&gt;&gt;</dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a>&gt;&gt;</dt>
     <dd><p>an Optional of Set of integers between 0 and <code class="paramref">numPartitions</code> -1, Empty optional means using default partitioner</p>
 </dd>
   </dl>
@@ -269,7 +278,7 @@ Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StreamPartitioner.cs/#L111" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StreamPartitioner.cs/#L154" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -305,6 +305,9 @@ Class Schema  <a class="header-action link-secondary" title="View source" href="
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -323,6 +326,12 @@ Class Schema  <a class="header-action link-secondary" title="View source" href="
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -335,7 +344,10 @@ Class Schema  <a class="header-action link-secondary" title="View source" href="
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -487,7 +499,7 @@ Class Schema  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema__ctor" data-uid="Org.Apache.Kafka.Connect.Data.Schema.#ctor">
   Schema()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -515,7 +527,7 @@ public Schema()</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Data.Schema.#ctor(System.Object[])">
   Schema(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -616,7 +628,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Data.Schema.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -840,7 +852,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Data.Schema.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L237"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -872,7 +884,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Data.Schema.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -904,7 +916,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Data.Schema.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L245"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -936,7 +948,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Data.Schema.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/AllPackageClasses.cs/#L249"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -1292,7 +1304,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_DefaultValue" data-uid="Org.Apache.Kafka.Connect.Data.Schema.DefaultValue">
   DefaultValue()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#defaultValue--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#defaultValue--</a></p>
@@ -1325,7 +1337,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_Doc" data-uid="Org.Apache.Kafka.Connect.Data.Schema.Doc">
   Doc()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#doc--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#doc--</a></p>
@@ -1339,8 +1351,8 @@ public Schema(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1358,7 +1370,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_Field_Java_Lang_String_" data-uid="Org.Apache.Kafka.Connect.Data.Schema.Field(Java.Lang.String)">
   Field(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#field-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#field-java.lang.String-</a></p>
@@ -1371,8 +1383,8 @@ public Schema(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1397,7 +1409,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_Fields" data-uid="Org.Apache.Kafka.Connect.Data.Schema.Fields">
   Fields()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#fields--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#fields--</a></p>
@@ -1411,8 +1423,8 @@ public Schema(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Data.Field.html">Field</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Data.Field.html">Field</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
   </dl>
 
@@ -1430,7 +1442,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_IsOptional" data-uid="Org.Apache.Kafka.Connect.Data.Schema.IsOptional">
   IsOptional()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#isOptional--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#isOptional--</a></p>
@@ -1463,7 +1475,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_KeySchema" data-uid="Org.Apache.Kafka.Connect.Data.Schema.KeySchema">
   KeySchema()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#keySchema--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#keySchema--</a></p>
@@ -1496,7 +1508,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_Name" data-uid="Org.Apache.Kafka.Connect.Data.Schema.Name">
   Name()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#name--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#name--</a></p>
@@ -1510,8 +1522,8 @@ public Schema(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1529,7 +1541,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_Parameters" data-uid="Org.Apache.Kafka.Connect.Data.Schema.Parameters">
   Parameters()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L226"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#parameters--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#parameters--</a></p>
@@ -1543,8 +1555,8 @@ public Schema(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1562,7 +1574,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_SchemaMethod" data-uid="Org.Apache.Kafka.Connect.Data.Schema.SchemaMethod">
   SchemaMethod()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#schema--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#schema--</a></p>
@@ -1595,7 +1607,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_TypeMethod" data-uid="Org.Apache.Kafka.Connect.Data.Schema.TypeMethod">
   TypeMethod()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#type--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#type--</a></p>
@@ -1628,7 +1640,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_ValueSchema" data-uid="Org.Apache.Kafka.Connect.Data.Schema.ValueSchema">
   ValueSchema()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L259"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#valueSchema--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#valueSchema--</a></p>
@@ -1661,7 +1673,7 @@ public Schema(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Data_Schema_Version" data-uid="Org.Apache.Kafka.Connect.Data.Schema.Version">
   Version()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Data/Schema.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#version--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/data/Schema.html#version--</a></p>
@@ -1675,8 +1687,8 @@ public Schema(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.Integer.html">Integer</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.Integer.html">Integer</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></p>
 </dd>
   </dl>
 

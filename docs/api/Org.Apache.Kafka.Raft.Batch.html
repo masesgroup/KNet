@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -98,7 +98,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Batch : Iterable, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IEnumerable, IEnumerableExtension</code></pre>
+    <pre><code class="lang-csharp hljs">public class Batch : Iterable, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IEnumerable, IEnumerableExtension, IIterable</code></pre>
   </div>
 
 
@@ -110,9 +110,9 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="api/Java.Lang.Iterable.html">Iterable</a>&gt;</div>
-      <div><span class="xref">JVMBridgeBaseEnumerable</span>&lt;<a class="xref" href="api/Java.Lang.Iterable.html">Iterable</a>&gt;</div>
-      <div><a class="xref" href="api/Java.Lang.Iterable.html">Iterable</a></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable.html">Iterable</a>&gt;</div>
+      <div><span class="xref">JVMBridgeBaseEnumerable</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable.html">Iterable</a>&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable.html">Iterable</a></div>
       <div><span class="xref">Batch</span></div>
     </dd>
   </dl>
@@ -128,6 +128,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
       <div><span class="xref">IEnumerableExtension</span></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IIterable.html">IIterable</a></div>
     </dd>
   </dl>
 
@@ -304,6 +305,9 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -322,6 +326,12 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -334,7 +344,10 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -549,7 +562,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_BridgeClassName" data-uid="Org.Apache.Kafka.Raft.Batch.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -581,7 +594,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Raft.Batch.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -613,7 +626,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Raft.Batch.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -645,7 +658,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_IsBridgeInterface" data-uid="Org.Apache.Kafka.Raft.Batch.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -677,7 +690,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_IsBridgeStatic" data-uid="Org.Apache.Kafka.Raft.Batch.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/AllPackageClasses.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -713,7 +726,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_AppendTimestamp" data-uid="Org.Apache.Kafka.Raft.Batch.AppendTimestamp">
   AppendTimestamp()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#appendTimestamp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#appendTimestamp--</a></p>
@@ -746,7 +759,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_BaseOffset" data-uid="Org.Apache.Kafka.Raft.Batch.BaseOffset">
   BaseOffset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#baseOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#baseOffset--</a></p>
@@ -804,8 +817,8 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
     <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
 </dd>
-    <dt><code>arg4</code> <a class="xref" href="api/Java.Util.List.html">List</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><code>arg4</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
   </dl>
 
@@ -830,7 +843,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_ControlRecords" data-uid="Org.Apache.Kafka.Raft.Batch.ControlRecords">
   ControlRecords()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#controlRecords--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#controlRecords--</a></p>
@@ -844,8 +857,8 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.List.html">List</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
   </dl>
 
@@ -888,8 +901,8 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
     <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
 </dd>
-    <dt><code>arg4</code> <a class="xref" href="api/Java.Util.List.html">List</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><code>arg4</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
   </dl>
 
@@ -914,7 +927,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_Epoch" data-uid="Org.Apache.Kafka.Raft.Batch.Epoch">
   Epoch()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#epoch--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#epoch--</a></p>
@@ -947,7 +960,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_Iterator" data-uid="Org.Apache.Kafka.Raft.Batch.Iterator">
   Iterator()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#iterator--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#iterator--</a></p>
@@ -961,8 +974,8 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Iterator.html">Iterator</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.Iterator.html">Iterator</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Iterator.html">Iterator</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Iterator.html">Iterator</a></p>
 </dd>
   </dl>
 
@@ -980,7 +993,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_LastOffset" data-uid="Org.Apache.Kafka.Raft.Batch.LastOffset">
   LastOffset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#lastOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#lastOffset--</a></p>
@@ -1013,7 +1026,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_Records" data-uid="Org.Apache.Kafka.Raft.Batch.Records">
   Records()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#records--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#records--</a></p>
@@ -1027,8 +1040,8 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.List.html">List</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
   </dl>
 
@@ -1046,7 +1059,7 @@ Class Batch  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Org_Apache_Kafka_Raft_Batch_SizeInBytes" data-uid="Org.Apache.Kafka.Raft.Batch.SizeInBytes">
   SizeInBytes()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Raft/Batch.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#sizeInBytes--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.6.2/org/apache/kafka/raft/Batch.html#sizeInBytes--</a></p>

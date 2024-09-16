@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Processor_TopicNameExtractor_2" data-uid="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor`2" class="text-break">
-Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/TopicNameExtractor.cs/#L111"><i class="bi bi-code-slash"></i></a>
+Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/TopicNameExtractor.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -141,6 +141,7 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
     <dt>Derived</dt>
     <dd>
       <div><a class="xref" href="MASES.KNet.Streams.Processor.TopicNameExtractor-4.html">TopicNameExtractor&lt;K, V, TJVMK, TJVMV&gt;</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect-2.html">TopicNameExtractorDirect&lt;K, V&gt;</a></div>
     </dd>
   </dl>
 
@@ -334,6 +335,9 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -352,6 +356,12 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -364,7 +374,10 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -519,7 +532,7 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_TopicNameExtractor_2__ctor" data-uid="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor`2.#ctor">
   TopicNameExtractor()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L760"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L1132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -550,7 +563,7 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_TopicNameExtractor_2_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor`2.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L765"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/AllPackageClasses.cs/#L1141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -582,7 +595,7 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_TopicNameExtractor_2_OnExtract" data-uid="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor`2.OnExtract">
   OnExtract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/TopicNameExtractor.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/TopicNameExtractor.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-</a></p>
@@ -599,7 +612,7 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;K, V, <a class="xref" href="Org.Apache.Kafka.Streams.Processor.RecordContext.html">RecordContext</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;K, V, <a class="xref" href="Org.Apache.Kafka.Streams.Processor.RecordContext.html">RecordContext</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -621,7 +634,7 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_TopicNameExtractor_2_Extract__0__1_Org_Apache_Kafka_Streams_Processor_RecordContext_" data-uid="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor`2.Extract(`0,`1,Org.Apache.Kafka.Streams.Processor.RecordContext)">
   Extract(K, V, RecordContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/TopicNameExtractor.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/TopicNameExtractor.cs/#L201"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-</a></p>
@@ -647,8 +660,8 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -666,7 +679,7 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_TopicNameExtractor_2_InitializeHandlers" data-uid="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor`2.InitializeHandlers">
   InitializeHandlers()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/TopicNameExtractor.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/TopicNameExtractor.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handlers initializer for <a class="xref" href="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor.html">TopicNameExtractor</a></p>
@@ -693,7 +706,7 @@ Class TopicNameExtractor&lt;K, V&gt;  <a class="header-action link-secondary" ti
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/TopicNameExtractor.cs/#L111" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/TopicNameExtractor.cs/#L153" class="edit-link">Edit this page</a>
         </div>
 
 

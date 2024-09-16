@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -110,8 +110,10 @@ Class PrincipalDeserializationException  <a class="header-action link-secondary"
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></div>
       <div><span class="xref">JVMBridgeException</span></div>
-      <div><span class="xref">JVMBridgeException</span>&lt;<a class="xref" href="api/Java.Lang.RuntimeException.html">RuntimeException</a>&gt;</div>
-      <div><a class="xref" href="api/Java.Lang.RuntimeException.html">RuntimeException</a></div>
+      <div><span class="xref">JVMBridgeException</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Throwable.html">Throwable</a>&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Throwable.html">Throwable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Exception.html">Exception</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.RuntimeException.html">RuntimeException</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.KafkaException.html">KafkaException</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.Errors.ApiException.html">ApiException</a></div>
       <div><span class="xref">PrincipalDeserializationException</span></div>
@@ -132,16 +134,31 @@ Class PrincipalDeserializationException  <a class="header-action link-secondary"
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <span class="xref">JVMBridgeException&lt;RuntimeException&gt;.Convert(JavaException)</span>
+      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Throwable.html#Java_Lang_Throwable_AddSuppressed_Java_Lang_Throwable_">Throwable.AddSuppressed(Throwable)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeException&lt;RuntimeException&gt;.Create(params object[])</a>
+      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Throwable.html#Java_Lang_Throwable_FillInStackTrace">Throwable.FillInStackTrace()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeException&lt;RuntimeException&gt;.CreateWithSignature(string, params object[])</a>
+      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Throwable.html#Java_Lang_Throwable_Cause">Throwable.Cause</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeException&lt;RuntimeException&gt;.ThrowNew(params object[])</a>
+      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Throwable.html#Java_Lang_Throwable_LocalizedMessage">Throwable.LocalizedMessage</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Throwable.html#Java_Lang_Throwable_Message">Throwable.Message</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeException&lt;Throwable&gt;.Convert(JavaException)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeException&lt;Throwable&gt;.Create(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeException&lt;Throwable&gt;.CreateWithSignature(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeException&lt;Throwable&gt;.ThrowNew(params object[])</a>
     </div>
     <div>
       <span class="xref">JVMBridgeException.New(IJavaObject)</span>
@@ -166,9 +183,6 @@ Class PrincipalDeserializationException  <a class="header-action link-secondary"
     </div>
     <div>
       <span class="xref">JVMBridgeException.IsInstanceOf&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">JVMBridgeException.Message</span>
     </div>
     <div>
       <span class="xref">JVMBridgeException.StackTrace</span>

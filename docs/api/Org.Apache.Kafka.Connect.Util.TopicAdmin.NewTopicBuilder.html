@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -297,6 +297,9 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -315,6 +318,12 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -327,7 +336,10 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -479,7 +491,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder__ctor" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.#ctor">
   NewTopicBuilder()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L888"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L907"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -506,7 +518,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.#ctor(System.Object[])">
   NewTopicBuilder(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L892"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L911"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -542,7 +554,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L899"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L919"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -574,7 +586,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L903"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L923"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -606,7 +618,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L907"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L927"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -638,7 +650,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L911"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L931"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -670,7 +682,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L915"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/AllPackageClasses.cs/#L935"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -706,7 +718,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_Build" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.Build">
   Build()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L250"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#build--">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#build--</a></p>
@@ -739,7 +751,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_Compacted" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.Compacted">
   Compacted()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#compacted--">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#compacted--</a></p>
@@ -772,7 +784,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_Config_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.Config(Java.Util.Map{Java.Lang.String,System.Object})">
   Config(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#config-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#config-java.util.Map-</a></p>
@@ -785,8 +797,8 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -811,7 +823,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_DefaultPartitions" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.DefaultPartitions">
   DefaultPartitions()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L275"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#defaultPartitions--">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#defaultPartitions--</a></p>
@@ -844,7 +856,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_DefaultReplicationFactor" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.DefaultReplicationFactor">
   DefaultReplicationFactor()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#defaultReplicationFactor--">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#defaultReplicationFactor--</a></p>
@@ -877,7 +889,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_MinInSyncReplicas_System_Int16_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.MinInSyncReplicas(System.Int16)">
   MinInSyncReplicas(short)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L292"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#minInSyncReplicas-short-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#minInSyncReplicas-short-</a></p>
@@ -916,7 +928,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_Partitions_System_Int32_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.Partitions(System.Int32)">
   Partitions(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L301"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#partitions-int-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#partitions-int-</a></p>
@@ -955,7 +967,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_ReplicationFactor_System_Int16_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.ReplicationFactor(System.Int16)">
   ReplicationFactor(short)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L310"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#replicationFactor-short-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#replicationFactor-short-</a></p>
@@ -994,7 +1006,7 @@ Class TopicAdmin.NewTopicBuilder  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Connect_Util_TopicAdmin_NewTopicBuilder_UncleanLeaderElection_System_Boolean_" data-uid="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder.UncleanLeaderElection(System.Boolean)">
   UncleanLeaderElection(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Util/TopicAdmin.cs/#L319"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#uncleanLeaderElection-boolean-">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.6.2/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#uncleanLeaderElection-boolean-</a></p>

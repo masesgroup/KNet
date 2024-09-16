@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -118,8 +118,8 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
       <div><span class="xref">JVMBridgeBase</span></div>
       <div><span class="xref">JVMBridgeBase</span>&lt;<span class="xref">JVMBridgeListener</span>&gt;</div>
       <div><span class="xref">JVMBridgeListener</span></div>
-      <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.StreamPartitioner-2.html">StreamPartitioner</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="api/Java.Lang.Void.html">Void</a>&gt;</div>
-      <div><a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitioner-4.html">StreamPartitioner</a>&lt;K, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="api/Java.Lang.Void.html">Void</a>&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.StreamPartitioner-2.html">StreamPartitioner</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitioner-4.html">StreamPartitioner</a>&lt;K, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>&gt;</div>
       <div><a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitionerNoValue-2.html">StreamPartitionerNoValue</a>&lt;K, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
       <div><span class="xref">StreamPartitionerNoValue&lt;K&gt;</span></div>
     </dd>
@@ -132,7 +132,7 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
       <div><span class="xref">IJVMBridgeCore</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><span class="xref">IJVMBridgeBaseStatic</span></div>
-      <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.IStreamPartitioner-2.html">IStreamPartitioner</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="api/Java.Lang.Void.html">Void</a>&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.IStreamPartitioner-2.html">IStreamPartitioner</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>&gt;</div>
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
@@ -378,6 +378,9 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -396,6 +399,12 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -408,7 +417,10 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -705,14 +717,14 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
     <dd><p><code class="typeparamref">K</code></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.Void.html">Void</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.Void.html">Void</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a></p>
 </dd>
     <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
@@ -721,8 +733,8 @@ Class StreamPartitionerNoValue&lt;K&gt;  <a class="header-action link-secondary"
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.Integer.html">Integer</a>&gt;&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Optional.html">Optional</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a>&gt;&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
 </dd>
   </dl>
 

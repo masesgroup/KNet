@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -297,6 +297,9 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -315,6 +318,12 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -327,7 +336,10 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -479,7 +491,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes__ctor" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.#ctor">
   StateSerdes()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1192"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1217"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -519,8 +531,8 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
@@ -545,7 +557,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.#ctor(System.Object[])">
   StateSerdes(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1196"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1221"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -613,7 +625,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -645,7 +657,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -677,7 +689,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1211"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1237"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -709,7 +721,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -741,7 +753,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1219"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/AllPackageClasses.cs/#L1245"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -809,7 +821,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_KeyDeserializer" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeyDeserializer">
   KeyDeserializer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keyDeserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keyDeserializer--</a></p>
@@ -838,11 +850,44 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <a id="Org_Apache_Kafka_Streams_State_StateSerdes_KeyDeserializerDirect_" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeyDeserializerDirect*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_KeyDeserializerDirect" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeyDeserializerDirect">
+  KeyDeserializerDirect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keyDeserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keyDeserializer--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Deserializer KeyDeserializerDirect()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_State_StateSerdes_KeyFrom_" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeyFrom*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_KeyFrom_System_Byte___" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeyFrom(System.Byte[])">
   KeyFrom(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keyFrom-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keyFrom-byte[]-</a></p>
@@ -881,7 +926,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_KeySerde" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeySerde">
   KeySerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keySerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keySerde--</a></p>
@@ -910,11 +955,44 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <a id="Org_Apache_Kafka_Streams_State_StateSerdes_KeySerdeDirect_" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeySerdeDirect*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_KeySerdeDirect" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeySerdeDirect">
+  KeySerdeDirect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keySerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keySerde--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Serde KeySerdeDirect()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_State_StateSerdes_KeySerializer_" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeySerializer*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_KeySerializer" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeySerializer">
   KeySerializer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keySerializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keySerializer--</a></p>
@@ -923,6 +1001,39 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Serializer KeySerializer()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serializer.html">Serializer</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serializer.html">Serializer</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_StateSerdes_KeySerializerDirect_" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeySerializerDirect*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_KeySerializerDirect" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.KeySerializerDirect">
+  KeySerializerDirect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keySerializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#keySerializer--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Serializer KeySerializerDirect()</code></pre>
   </div>
 
 
@@ -1025,7 +1136,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_Topic" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.Topic">
   Topic()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#topic--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#topic--</a></p>
@@ -1039,8 +1150,8 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1058,7 +1169,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueDeserializer" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueDeserializer">
   ValueDeserializer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueDeserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueDeserializer--</a></p>
@@ -1087,11 +1198,44 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <a id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueDeserializerDirect_" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueDeserializerDirect*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueDeserializerDirect" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueDeserializerDirect">
+  ValueDeserializerDirect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueDeserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueDeserializer--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Deserializer ValueDeserializerDirect()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueFrom_" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueFrom*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueFrom_System_Byte___" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueFrom(System.Byte[])">
   ValueFrom(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L217"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueFrom-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueFrom-byte[]-</a></p>
@@ -1130,7 +1274,7 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueSerde" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueSerde">
   ValueSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueSerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueSerde--</a></p>
@@ -1159,11 +1303,44 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <a id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueSerdeDirect_" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueSerdeDirect*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueSerdeDirect" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueSerdeDirect">
+  ValueSerdeDirect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueSerde--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueSerde--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Serde ValueSerdeDirect()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueSerializer_" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueSerializer*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueSerializer" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueSerializer">
   ValueSerializer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueSerializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueSerializer--</a></p>
@@ -1172,6 +1349,39 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Serializer ValueSerializer()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serializer.html">Serializer</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serializer.html">Serializer</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueSerializerDirect_" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueSerializerDirect*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_StateSerdes_ValueSerializerDirect" data-uid="Org.Apache.Kafka.Streams.State.StateSerdes.ValueSerializerDirect">
+  ValueSerializerDirect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/State/StateSerdes.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueSerializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/state/StateSerdes.html#valueSerializer--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Serializer ValueSerializerDirect()</code></pre>
   </div>
 
 
@@ -1209,14 +1419,14 @@ Class StateSerdes  <a class="header-action link-secondary" title="View source" h
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.Class.html">Class</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.Class.html">Class</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.Class.html">Class</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.Class.html">Class</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></p>
 </dd>
   </dl>
 

@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig" class="text-break">
-Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L919"><i class="bi bi-code-slash"></i></a>
+Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L937"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -297,6 +297,9 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -315,6 +318,12 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -327,7 +336,10 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -479,7 +491,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig__ctor" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.#ctor">
   InternalConfig()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L566"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L667"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -506,7 +518,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.#ctor(System.Object[])">
   InternalConfig(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L570"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L671"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -542,7 +554,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_ASSIGNMENT_LISTENER" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.ASSIGNMENT_LISTENER">
   ASSIGNMENT_LISTENER
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L933"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L951"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#ASSIGNMENT_LISTENER">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#ASSIGNMENT_LISTENER</a></p>
@@ -559,7 +571,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -574,7 +586,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L577"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L679"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -606,7 +618,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_EMIT_INTERVAL_MS_KSTREAMS_OUTER_JOIN_SPURIOUS_RESULTS_FIX" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.EMIT_INTERVAL_MS_KSTREAMS_OUTER_JOIN_SPURIOUS_RESULTS_FIX">
   EMIT_INTERVAL_MS_KSTREAMS_OUTER_JOIN_SPURIOUS_RESULTS_FIX
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L939"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L957"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#EMIT_INTERVAL_MS_KSTREAMS_OUTER_JOIN_SPURIOUS_RESULTS_FIX">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#EMIT_INTERVAL_MS_KSTREAMS_OUTER_JOIN_SPURIOUS_RESULTS_FIX</a></p>
@@ -623,7 +635,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -638,7 +650,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_EMIT_INTERVAL_MS_KSTREAMS_WINDOWED_AGGREGATION" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.EMIT_INTERVAL_MS_KSTREAMS_WINDOWED_AGGREGATION">
   EMIT_INTERVAL_MS_KSTREAMS_WINDOWED_AGGREGATION
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L945"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L963"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#EMIT_INTERVAL_MS_KSTREAMS_WINDOWED_AGGREGATION">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#EMIT_INTERVAL_MS_KSTREAMS_WINDOWED_AGGREGATION</a></p>
@@ -655,7 +667,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -670,7 +682,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_INTERNAL_TASK_ASSIGNOR_CLASS" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.INTERNAL_TASK_ASSIGNOR_CLASS">
   INTERNAL_TASK_ASSIGNOR_CLASS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L951"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L969"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#INTERNAL_TASK_ASSIGNOR_CLASS">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#INTERNAL_TASK_ASSIGNOR_CLASS</a></p>
@@ -687,7 +699,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -702,7 +714,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_IQ_CONSISTENCY_OFFSET_VECTOR_ENABLED" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.IQ_CONSISTENCY_OFFSET_VECTOR_ENABLED">
   IQ_CONSISTENCY_OFFSET_VECTOR_ENABLED
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L957"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L975"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#IQ_CONSISTENCY_OFFSET_VECTOR_ENABLED">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#IQ_CONSISTENCY_OFFSET_VECTOR_ENABLED</a></p>
@@ -719,7 +731,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -734,7 +746,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L581"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L683"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -766,7 +778,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L585"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L687"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -798,7 +810,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L589"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L691"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -830,7 +842,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L593"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L695"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -862,7 +874,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_REFERENCE_CONTAINER_PARTITION_ASSIGNOR" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.REFERENCE_CONTAINER_PARTITION_ASSIGNOR">
   REFERENCE_CONTAINER_PARTITION_ASSIGNOR
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L963"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L981"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#REFERENCE_CONTAINER_PARTITION_ASSIGNOR">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#REFERENCE_CONTAINER_PARTITION_ASSIGNOR</a></p>
@@ -879,7 +891,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -894,7 +906,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_STATE_UPDATER_ENABLED" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.STATE_UPDATER_ENABLED">
   STATE_UPDATER_ENABLED
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L969"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L987"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#STATE_UPDATER_ENABLED">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#STATE_UPDATER_ENABLED</a></p>
@@ -911,7 +923,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -926,7 +938,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_TOPIC_PREFIX_ALTERNATIVE" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.TOPIC_PREFIX_ALTERNATIVE">
   TOPIC_PREFIX_ALTERNATIVE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L975"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L993"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#TOPIC_PREFIX_ALTERNATIVE">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#TOPIC_PREFIX_ALTERNATIVE</a></p>
@@ -943,7 +955,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
     <dd></dd>
   </dl>
 
@@ -962,7 +974,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_GetBoolean_Java_Util_Map_Java_Lang_String_System_Object__Java_Lang_String_System_Boolean_" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.GetBoolean(Java.Util.Map{Java.Lang.String,System.Object},Java.Lang.String,System.Boolean)">
   GetBoolean(Map&lt;String, object&gt;, String, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L989"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L1007"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getBoolean-java.util.Map-java.lang.String-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getBoolean-java.util.Map-java.lang.String-boolean-</a></p>
@@ -975,11 +987,11 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
@@ -1007,7 +1019,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_GetLong_Java_Util_Map_Java_Lang_String_System_Object__Java_Lang_String_System_Int64_" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.GetLong(Java.Util.Map{Java.Lang.String,System.Object},Java.Lang.String,System.Int64)">
   GetLong(Map&lt;String, object&gt;, String, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L1011"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L1029"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getLong-java.util.Map-java.lang.String-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getLong-java.util.Map-java.lang.String-long-</a></p>
@@ -1020,11 +1032,11 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
@@ -1052,7 +1064,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsConfig_InternalConfig_GetString_Java_Util_Map_Java_Lang_String_System_Object__Java_Lang_String_Java_Lang_String_" data-uid="Org.Apache.Kafka.Streams.StreamsConfig.InternalConfig.GetString(Java.Util.Map{Java.Lang.String,System.Object},Java.Lang.String,Java.Lang.String)">
   GetString(Map&lt;String, object&gt;, String, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L1000"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L1018"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getString-java.util.Map-java.lang.String-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getString-java.util.Map-java.lang.String-java.lang.String-</a></p>
@@ -1065,21 +1077,21 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1097,7 +1109,7 @@ Class StreamsConfig.InternalConfig  <a class="header-action link-secondary" titl
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L919" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsConfig.cs/#L937" class="edit-link">Edit this page</a>
         </div>
 
 

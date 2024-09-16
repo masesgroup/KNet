@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -110,8 +110,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
-      <div><a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html">Admin</a></div>
       <div><span class="xref">ForwardingAdmin</span></div>
     </dd>
@@ -127,7 +127,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><a class="xref" href="api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
   </dl>
 
@@ -463,6 +463,9 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -481,6 +484,12 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -493,7 +502,10 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -925,7 +937,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin__ctor" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.#ctor">
   ForwardingAdmin()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4052"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -965,8 +977,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -985,7 +997,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.#ctor(System.Object[])">
   ForwardingAdmin(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4056"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -1021,7 +1033,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4063"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -1053,7 +1065,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4067"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -1085,7 +1097,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4071"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -1117,7 +1129,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4075"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4167"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -1149,7 +1161,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4079"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L4171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -1185,7 +1197,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_AbortTransaction_Org_Apache_Kafka_Clients_Admin_AbortTransactionSpec_Org_Apache_Kafka_Clients_Admin_AbortTransactionOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.AbortTransaction(Org.Apache.Kafka.Clients.Admin.AbortTransactionSpec,Org.Apache.Kafka.Clients.Admin.AbortTransactionOptions)">
   AbortTransaction(AbortTransactionSpec, AbortTransactionOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#abortTransaction-org.apache.kafka.clients.admin.AbortTransactionSpec-org.apache.kafka.clients.admin.AbortTransactionOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#abortTransaction-org.apache.kafka.clients.admin.AbortTransactionSpec-org.apache.kafka.clients.admin.AbortTransactionOptions-</a></p>
@@ -1227,7 +1239,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_AlterClientQuotas_Java_Util_Collection_Org_Apache_Kafka_Common_Quota_ClientQuotaAlteration__Org_Apache_Kafka_Clients_Admin_AlterClientQuotasOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.AlterClientQuotas(Java.Util.Collection{Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration},Org.Apache.Kafka.Clients.Admin.AlterClientQuotasOptions)">
   AlterClientQuotas(Collection&lt;ClientQuotaAlteration&gt;, AlterClientQuotasOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterClientQuotas-java.util.Collection-org.apache.kafka.clients.admin.AlterClientQuotasOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterClientQuotas-java.util.Collection-org.apache.kafka.clients.admin.AlterClientQuotasOptions-</a></p>
@@ -1240,8 +1252,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration.html">ClientQuotaAlteration</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration.html">ClientQuotaAlteration</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterClientQuotasOptions.html">AlterClientQuotasOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterClientQuotasOptions.html">AlterClientQuotasOptions</a></p>
@@ -1269,7 +1281,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_AlterConsumerGroupOffsets_Java_Lang_String_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__Org_Apache_Kafka_Clients_Admin_AlterConsumerGroupOffsetsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.AlterConsumerGroupOffsets(Java.Lang.String,Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata},Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsOptions)">
   AlterConsumerGroupOffsets(String, Map&lt;TopicPartition, OffsetAndMetadata&gt;, AlterConsumerGroupOffsetsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterConsumerGroupOffsets-java.lang.String-java.util.Map-org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterConsumerGroupOffsets-java.lang.String-java.util.Map-org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions-</a></p>
@@ -1282,11 +1294,11 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsOptions.html">AlterConsumerGroupOffsetsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsOptions.html">AlterConsumerGroupOffsetsOptions</a></p>
@@ -1314,7 +1326,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_AlterPartitionReassignments_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Util_Optional_Org_Apache_Kafka_Clients_Admin_NewPartitionReassignment___Org_Apache_Kafka_Clients_Admin_AlterPartitionReassignmentsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.AlterPartitionReassignments(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Java.Util.Optional{Org.Apache.Kafka.Clients.Admin.NewPartitionReassignment}},Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions)">
   AlterPartitionReassignments(Map&lt;TopicPartition, Optional&lt;NewPartitionReassignment&gt;&gt;, AlterPartitionReassignmentsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterPartitionReassignments-java.util.Map-org.apache.kafka.clients.admin.AlterPartitionReassignmentsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterPartitionReassignments-java.util.Map-org.apache.kafka.clients.admin.AlterPartitionReassignmentsOptions-</a></p>
@@ -1327,8 +1339,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewPartitionReassignment.html">NewPartitionReassignment</a>&gt;&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewPartitionReassignment.html">NewPartitionReassignment</a>&gt;&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions.html">AlterPartitionReassignmentsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions.html">AlterPartitionReassignmentsOptions</a></p>
@@ -1356,7 +1368,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_AlterReplicaLogDirs_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartitionReplica_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_AlterReplicaLogDirsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.AlterReplicaLogDirs(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartitionReplica,Java.Lang.String},Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions)">
   AlterReplicaLogDirs(Map&lt;TopicPartitionReplica, String&gt;, AlterReplicaLogDirsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterReplicaLogDirs-java.util.Map-org.apache.kafka.clients.admin.AlterReplicaLogDirsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterReplicaLogDirs-java.util.Map-org.apache.kafka.clients.admin.AlterReplicaLogDirsOptions-</a></p>
@@ -1369,8 +1381,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartitionReplica.html">TopicPartitionReplica</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartitionReplica.html">TopicPartitionReplica</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions.html">AlterReplicaLogDirsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions.html">AlterReplicaLogDirsOptions</a></p>
@@ -1398,7 +1410,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_AlterUserScramCredentials_Java_Util_List_Org_Apache_Kafka_Clients_Admin_UserScramCredentialAlteration__Org_Apache_Kafka_Clients_Admin_AlterUserScramCredentialsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.AlterUserScramCredentials(Java.Util.List{Org.Apache.Kafka.Clients.Admin.UserScramCredentialAlteration},Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsOptions)">
   AlterUserScramCredentials(List&lt;UserScramCredentialAlteration&gt;, AlterUserScramCredentialsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterUserScramCredentials-java.util.List-org.apache.kafka.clients.admin.AlterUserScramCredentialsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterUserScramCredentials-java.util.List-org.apache.kafka.clients.admin.AlterUserScramCredentialsOptions-</a></p>
@@ -1411,8 +1423,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Admin.UserScramCredentialAlteration.html">UserScramCredentialAlteration</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Admin.UserScramCredentialAlteration.html">UserScramCredentialAlteration</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsOptions.html">AlterUserScramCredentialsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsOptions.html">AlterUserScramCredentialsOptions</a></p>
@@ -1440,7 +1452,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_Close_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.Close(Java.Time.Duration)">
   Close(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L495"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L494"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#close-java.time.Duration-</a></p>
@@ -1453,8 +1465,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Time.Duration.html">Duration</a></dt>
-    <dd><p><a class="xref" href="api/Java.Time.Duration.html">Duration</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
 </dd>
   </dl>
 
@@ -1473,7 +1485,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_CreateAcls_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBinding__Org_Apache_Kafka_Clients_Admin_CreateAclsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.CreateAcls(Java.Util.Collection{Org.Apache.Kafka.Common.Acl.AclBinding},Org.Apache.Kafka.Clients.Admin.CreateAclsOptions)">
   CreateAcls(Collection&lt;AclBinding&gt;, CreateAclsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#createAcls-java.util.Collection-org.apache.kafka.clients.admin.CreateAclsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#createAcls-java.util.Collection-org.apache.kafka.clients.admin.CreateAclsOptions-</a></p>
@@ -1486,8 +1498,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Acl.AclBinding.html">AclBinding</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Acl.AclBinding.html">AclBinding</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateAclsOptions.html">CreateAclsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateAclsOptions.html">CreateAclsOptions</a></p>
@@ -1515,7 +1527,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_CreateDelegationToken_Org_Apache_Kafka_Clients_Admin_CreateDelegationTokenOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.CreateDelegationToken(Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions)">
   CreateDelegationToken(CreateDelegationTokenOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#createDelegationToken-org.apache.kafka.clients.admin.CreateDelegationTokenOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#createDelegationToken-org.apache.kafka.clients.admin.CreateDelegationTokenOptions-</a></p>
@@ -1554,7 +1566,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_CreatePartitions_Java_Util_Map_Java_Lang_String_Org_Apache_Kafka_Clients_Admin_NewPartitions__Org_Apache_Kafka_Clients_Admin_CreatePartitionsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.CreatePartitions(Java.Util.Map{Java.Lang.String,Org.Apache.Kafka.Clients.Admin.NewPartitions},Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions)">
   CreatePartitions(Map&lt;String, NewPartitions&gt;, CreatePartitionsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#createPartitions-java.util.Map-org.apache.kafka.clients.admin.CreatePartitionsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#createPartitions-java.util.Map-org.apache.kafka.clients.admin.CreatePartitionsOptions-</a></p>
@@ -1567,8 +1579,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewPartitions.html">NewPartitions</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewPartitions.html">NewPartitions</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions.html">CreatePartitionsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions.html">CreatePartitionsOptions</a></p>
@@ -1596,7 +1608,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_CreateTopics_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_NewTopic__Org_Apache_Kafka_Clients_Admin_CreateTopicsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.CreateTopics(Java.Util.Collection{Org.Apache.Kafka.Clients.Admin.NewTopic},Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions)">
   CreateTopics(Collection&lt;NewTopic&gt;, CreateTopicsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#createTopics-java.util.Collection-org.apache.kafka.clients.admin.CreateTopicsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#createTopics-java.util.Collection-org.apache.kafka.clients.admin.CreateTopicsOptions-</a></p>
@@ -1609,8 +1621,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewTopic.html">NewTopic</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Admin.NewTopic.html">NewTopic</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions.html">CreateTopicsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions.html">CreateTopicsOptions</a></p>
@@ -1638,7 +1650,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DeleteAcls_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBindingFilter__Org_Apache_Kafka_Clients_Admin_DeleteAclsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DeleteAcls(Java.Util.Collection{Org.Apache.Kafka.Common.Acl.AclBindingFilter},Org.Apache.Kafka.Clients.Admin.DeleteAclsOptions)">
   DeleteAcls(Collection&lt;AclBindingFilter&gt;, DeleteAclsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteAcls-java.util.Collection-org.apache.kafka.clients.admin.DeleteAclsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteAcls-java.util.Collection-org.apache.kafka.clients.admin.DeleteAclsOptions-</a></p>
@@ -1651,8 +1663,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Acl.AclBindingFilter.html">AclBindingFilter</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Acl.AclBindingFilter.html">AclBindingFilter</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteAclsOptions.html">DeleteAclsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteAclsOptions.html">DeleteAclsOptions</a></p>
@@ -1680,7 +1692,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DeleteConsumerGroupOffsets_Java_Lang_String_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_DeleteConsumerGroupOffsetsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DeleteConsumerGroupOffsets(Java.Lang.String,Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition},Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions)">
   DeleteConsumerGroupOffsets(String, Set&lt;TopicPartition&gt;, DeleteConsumerGroupOffsetsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteConsumerGroupOffsets-java.lang.String-java.util.Set-org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteConsumerGroupOffsets-java.lang.String-java.util.Set-org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions-</a></p>
@@ -1693,11 +1705,11 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions.html">DeleteConsumerGroupOffsetsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions.html">DeleteConsumerGroupOffsetsOptions</a></p>
@@ -1725,7 +1737,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DeleteConsumerGroups_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DeleteConsumerGroupsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DeleteConsumerGroups(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions)">
   DeleteConsumerGroups(Collection&lt;String&gt;, DeleteConsumerGroupsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteConsumerGroups-java.util.Collection-org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteConsumerGroups-java.util.Collection-org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions-</a></p>
@@ -1738,8 +1750,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions.html">DeleteConsumerGroupsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions.html">DeleteConsumerGroupsOptions</a></p>
@@ -1767,7 +1779,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DeleteRecords_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_RecordsToDelete__Org_Apache_Kafka_Clients_Admin_DeleteRecordsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DeleteRecords(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Admin.RecordsToDelete},Org.Apache.Kafka.Clients.Admin.DeleteRecordsOptions)">
   DeleteRecords(Map&lt;TopicPartition, RecordsToDelete&gt;, DeleteRecordsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteRecords-java.util.Map-org.apache.kafka.clients.admin.DeleteRecordsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteRecords-java.util.Map-org.apache.kafka.clients.admin.DeleteRecordsOptions-</a></p>
@@ -1780,8 +1792,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.RecordsToDelete.html">RecordsToDelete</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.RecordsToDelete.html">RecordsToDelete</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteRecordsOptions.html">DeleteRecordsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DeleteRecordsOptions.html">DeleteRecordsOptions</a></p>
@@ -1809,7 +1821,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DeleteTopics_Org_Apache_Kafka_Common_TopicCollection_Org_Apache_Kafka_Clients_Admin_DeleteTopicsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DeleteTopics(Org.Apache.Kafka.Common.TopicCollection,Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions)">
   DeleteTopics(TopicCollection, DeleteTopicsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteTopics-org.apache.kafka.common.TopicCollection-org.apache.kafka.clients.admin.DeleteTopicsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteTopics-org.apache.kafka.common.TopicCollection-org.apache.kafka.clients.admin.DeleteTopicsOptions-</a></p>
@@ -1851,7 +1863,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeAcls_Org_Apache_Kafka_Common_Acl_AclBindingFilter_Org_Apache_Kafka_Clients_Admin_DescribeAclsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeAcls(Org.Apache.Kafka.Common.Acl.AclBindingFilter,Org.Apache.Kafka.Clients.Admin.DescribeAclsOptions)">
   DescribeAcls(AclBindingFilter, DescribeAclsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L232"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeAcls-org.apache.kafka.common.acl.AclBindingFilter-org.apache.kafka.clients.admin.DescribeAclsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeAcls-org.apache.kafka.common.acl.AclBindingFilter-org.apache.kafka.clients.admin.DescribeAclsOptions-</a></p>
@@ -1893,7 +1905,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeClientQuotas_Org_Apache_Kafka_Common_Quota_ClientQuotaFilter_Org_Apache_Kafka_Clients_Admin_DescribeClientQuotasOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeClientQuotas(Org.Apache.Kafka.Common.Quota.ClientQuotaFilter,Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasOptions)">
   DescribeClientQuotas(ClientQuotaFilter, DescribeClientQuotasOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L242"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeClientQuotas-org.apache.kafka.common.quota.ClientQuotaFilter-org.apache.kafka.clients.admin.DescribeClientQuotasOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeClientQuotas-org.apache.kafka.common.quota.ClientQuotaFilter-org.apache.kafka.clients.admin.DescribeClientQuotasOptions-</a></p>
@@ -1935,7 +1947,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeCluster_Org_Apache_Kafka_Clients_Admin_DescribeClusterOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeCluster(Org.Apache.Kafka.Clients.Admin.DescribeClusterOptions)">
   DescribeCluster(DescribeClusterOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeCluster-org.apache.kafka.clients.admin.DescribeClusterOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeCluster-org.apache.kafka.clients.admin.DescribeClusterOptions-</a></p>
@@ -1974,7 +1986,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeConfigs_Java_Util_Collection_Org_Apache_Kafka_Common_Config_ConfigResource__Org_Apache_Kafka_Clients_Admin_DescribeConfigsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeConfigs(Java.Util.Collection{Org.Apache.Kafka.Common.Config.ConfigResource},Org.Apache.Kafka.Clients.Admin.DescribeConfigsOptions)">
   DescribeConfigs(Collection&lt;ConfigResource&gt;, DescribeConfigsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L261"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeConfigs-java.util.Collection-org.apache.kafka.clients.admin.DescribeConfigsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeConfigs-java.util.Collection-org.apache.kafka.clients.admin.DescribeConfigsOptions-</a></p>
@@ -1987,8 +1999,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Config.ConfigResource.html">ConfigResource</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Config.ConfigResource.html">ConfigResource</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConfigsOptions.html">DescribeConfigsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConfigsOptions.html">DescribeConfigsOptions</a></p>
@@ -2016,7 +2028,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeConsumerGroups_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DescribeConsumerGroupsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeConsumerGroups(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions)">
   DescribeConsumerGroups(Collection&lt;String&gt;, DescribeConsumerGroupsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L271"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeConsumerGroups-java.util.Collection-org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeConsumerGroups-java.util.Collection-org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions-</a></p>
@@ -2029,8 +2041,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions.html">DescribeConsumerGroupsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions.html">DescribeConsumerGroupsOptions</a></p>
@@ -2058,7 +2070,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeDelegationToken_Org_Apache_Kafka_Clients_Admin_DescribeDelegationTokenOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeDelegationToken(Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenOptions)">
   DescribeDelegationToken(DescribeDelegationTokenOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L280"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeDelegationToken-org.apache.kafka.clients.admin.DescribeDelegationTokenOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeDelegationToken-org.apache.kafka.clients.admin.DescribeDelegationTokenOptions-</a></p>
@@ -2097,7 +2109,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeFeatures_Org_Apache_Kafka_Clients_Admin_DescribeFeaturesOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeFeatures(Org.Apache.Kafka.Clients.Admin.DescribeFeaturesOptions)">
   DescribeFeatures(DescribeFeaturesOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L289"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeFeatures-org.apache.kafka.clients.admin.DescribeFeaturesOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeFeatures-org.apache.kafka.clients.admin.DescribeFeaturesOptions-</a></p>
@@ -2136,7 +2148,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeLogDirs_Java_Util_Collection_Java_Lang_Integer__Org_Apache_Kafka_Clients_Admin_DescribeLogDirsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeLogDirs(Java.Util.Collection{Java.Lang.Integer},Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions)">
   DescribeLogDirs(Collection&lt;Integer&gt;, DescribeLogDirsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L299"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeLogDirs-java.util.Collection-org.apache.kafka.clients.admin.DescribeLogDirsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeLogDirs-java.util.Collection-org.apache.kafka.clients.admin.DescribeLogDirsOptions-</a></p>
@@ -2149,8 +2161,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="api/Java.Lang.Integer.html">Integer</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions.html">DescribeLogDirsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions.html">DescribeLogDirsOptions</a></p>
@@ -2178,7 +2190,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeMetadataQuorum_Org_Apache_Kafka_Clients_Admin_DescribeMetadataQuorumOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeMetadataQuorum(Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumOptions)">
   DescribeMetadataQuorum(DescribeMetadataQuorumOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L308"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeMetadataQuorum-org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeMetadataQuorum-org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions-</a></p>
@@ -2217,7 +2229,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeProducers_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_DescribeProducersOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeProducers(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition},Org.Apache.Kafka.Clients.Admin.DescribeProducersOptions)">
   DescribeProducers(Collection&lt;TopicPartition&gt;, DescribeProducersOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L318"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeProducers-java.util.Collection-org.apache.kafka.clients.admin.DescribeProducersOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeProducers-java.util.Collection-org.apache.kafka.clients.admin.DescribeProducersOptions-</a></p>
@@ -2230,8 +2242,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeProducersOptions.html">DescribeProducersOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeProducersOptions.html">DescribeProducersOptions</a></p>
@@ -2259,7 +2271,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeReplicaLogDirs_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartitionReplica__Org_Apache_Kafka_Clients_Admin_DescribeReplicaLogDirsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeReplicaLogDirs(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartitionReplica},Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsOptions)">
   DescribeReplicaLogDirs(Collection&lt;TopicPartitionReplica&gt;, DescribeReplicaLogDirsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L328"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeReplicaLogDirs-java.util.Collection-org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeReplicaLogDirs-java.util.Collection-org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions-</a></p>
@@ -2272,8 +2284,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartitionReplica.html">TopicPartitionReplica</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartitionReplica.html">TopicPartitionReplica</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsOptions.html">DescribeReplicaLogDirsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsOptions.html">DescribeReplicaLogDirsOptions</a></p>
@@ -2301,7 +2313,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeTopics_Org_Apache_Kafka_Common_TopicCollection_Org_Apache_Kafka_Clients_Admin_DescribeTopicsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeTopics(Org.Apache.Kafka.Common.TopicCollection,Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions)">
   DescribeTopics(TopicCollection, DescribeTopicsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L338"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeTopics-org.apache.kafka.common.TopicCollection-org.apache.kafka.clients.admin.DescribeTopicsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeTopics-org.apache.kafka.common.TopicCollection-org.apache.kafka.clients.admin.DescribeTopicsOptions-</a></p>
@@ -2343,7 +2355,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeTransactions_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DescribeTransactionsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeTransactions(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions)">
   DescribeTransactions(Collection&lt;String&gt;, DescribeTransactionsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L348"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeTransactions-java.util.Collection-org.apache.kafka.clients.admin.DescribeTransactionsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeTransactions-java.util.Collection-org.apache.kafka.clients.admin.DescribeTransactionsOptions-</a></p>
@@ -2356,8 +2368,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions.html">DescribeTransactionsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions.html">DescribeTransactionsOptions</a></p>
@@ -2385,7 +2397,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_DescribeUserScramCredentials_Java_Util_List_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DescribeUserScramCredentialsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.DescribeUserScramCredentials(Java.Util.List{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions)">
   DescribeUserScramCredentials(List&lt;String&gt;, DescribeUserScramCredentialsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L358"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeUserScramCredentials-java.util.List-org.apache.kafka.clients.admin.DescribeUserScramCredentialsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeUserScramCredentials-java.util.List-org.apache.kafka.clients.admin.DescribeUserScramCredentialsOptions-</a></p>
@@ -2398,8 +2410,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions.html">DescribeUserScramCredentialsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions.html">DescribeUserScramCredentialsOptions</a></p>
@@ -2427,7 +2439,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_ElectLeaders_Org_Apache_Kafka_Common_ElectionType_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_ElectLeadersOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.ElectLeaders(Org.Apache.Kafka.Common.ElectionType,Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition},Org.Apache.Kafka.Clients.Admin.ElectLeadersOptions)">
   ElectLeaders(ElectionType, Set&lt;TopicPartition&gt;, ElectLeadersOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L369"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#electLeaders-org.apache.kafka.common.ElectionType-java.util.Set-org.apache.kafka.clients.admin.ElectLeadersOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#electLeaders-org.apache.kafka.common.ElectionType-java.util.Set-org.apache.kafka.clients.admin.ElectLeadersOptions-</a></p>
@@ -2443,8 +2455,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
     <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.ElectionType.html">ElectionType</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.ElectionType.html">ElectionType</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ElectLeadersOptions.html">ElectLeadersOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ElectLeadersOptions.html">ElectLeadersOptions</a></p>
@@ -2472,7 +2484,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_ExpireDelegationToken_System_Byte___Org_Apache_Kafka_Clients_Admin_ExpireDelegationTokenOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.ExpireDelegationToken(System.Byte[],Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenOptions)">
   ExpireDelegationToken(byte[], ExpireDelegationTokenOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L380"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L379"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#expireDelegationToken-byte[]-org.apache.kafka.clients.admin.ExpireDelegationTokenOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#expireDelegationToken-byte[]-org.apache.kafka.clients.admin.ExpireDelegationTokenOptions-</a></p>
@@ -2514,7 +2526,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_FenceProducers_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_FenceProducersOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.FenceProducers(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.FenceProducersOptions)">
   FenceProducers(Collection&lt;String&gt;, FenceProducersOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L389"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#fenceProducers-java.util.Collection-org.apache.kafka.clients.admin.FenceProducersOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#fenceProducers-java.util.Collection-org.apache.kafka.clients.admin.FenceProducersOptions-</a></p>
@@ -2527,8 +2539,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.FenceProducersOptions.html">FenceProducersOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.FenceProducersOptions.html">FenceProducersOptions</a></p>
@@ -2556,7 +2568,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_IncrementalAlterConfigs_Java_Util_Map_Org_Apache_Kafka_Common_Config_ConfigResource_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_AlterConfigOp___Org_Apache_Kafka_Clients_Admin_AlterConfigsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.IncrementalAlterConfigs(Java.Util.Map{Org.Apache.Kafka.Common.Config.ConfigResource,Java.Util.Collection{Org.Apache.Kafka.Clients.Admin.AlterConfigOp}},Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions)">
   IncrementalAlterConfigs(Map&lt;ConfigResource, Collection&lt;AlterConfigOp&gt;&gt;, AlterConfigsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#incrementalAlterConfigs-java.util.Map-org.apache.kafka.clients.admin.AlterConfigsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#incrementalAlterConfigs-java.util.Map-org.apache.kafka.clients.admin.AlterConfigsOptions-</a></p>
@@ -2569,8 +2581,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Config.ConfigResource.html">ConfigResource</a>, <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigOp.html">AlterConfigOp</a>&gt;&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Config.ConfigResource.html">ConfigResource</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigOp.html">AlterConfigOp</a>&gt;&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions.html">AlterConfigsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions.html">AlterConfigsOptions</a></p>
@@ -2598,7 +2610,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_ListConsumerGroupOffsets_Java_Util_Map_Java_Lang_String_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupOffsetsSpec__Org_Apache_Kafka_Clients_Admin_ListConsumerGroupOffsetsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.ListConsumerGroupOffsets(Java.Util.Map{Java.Lang.String,Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec},Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions)">
   ListConsumerGroupOffsets(Map&lt;String, ListConsumerGroupOffsetsSpec&gt;, ListConsumerGroupOffsetsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L400"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L399"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listConsumerGroupOffsets-java.util.Map-org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listConsumerGroupOffsets-java.util.Map-org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions-</a></p>
@@ -2611,8 +2623,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec.html">ListConsumerGroupOffsetsSpec</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec.html">ListConsumerGroupOffsetsSpec</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions.html">ListConsumerGroupOffsetsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions.html">ListConsumerGroupOffsetsOptions</a></p>
@@ -2640,7 +2652,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_ListConsumerGroups_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.ListConsumerGroups(Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions)">
   ListConsumerGroups(ListConsumerGroupsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L409"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L408"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listConsumerGroups-org.apache.kafka.clients.admin.ListConsumerGroupsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listConsumerGroups-org.apache.kafka.clients.admin.ListConsumerGroupsOptions-</a></p>
@@ -2679,7 +2691,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_ListOffsets_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_OffsetSpec__Org_Apache_Kafka_Clients_Admin_ListOffsetsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.ListOffsets(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Admin.OffsetSpec},Org.Apache.Kafka.Clients.Admin.ListOffsetsOptions)">
   ListOffsets(Map&lt;TopicPartition, OffsetSpec&gt;, ListOffsetsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L418"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listOffsets-java.util.Map-org.apache.kafka.clients.admin.ListOffsetsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listOffsets-java.util.Map-org.apache.kafka.clients.admin.ListOffsetsOptions-</a></p>
@@ -2692,8 +2704,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.html">OffsetSpec</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.OffsetSpec.html">OffsetSpec</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListOffsetsOptions.html">ListOffsetsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListOffsetsOptions.html">ListOffsetsOptions</a></p>
@@ -2721,7 +2733,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_ListPartitionReassignments_Java_Util_Optional_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition___Org_Apache_Kafka_Clients_Admin_ListPartitionReassignmentsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.ListPartitionReassignments(Java.Util.Optional{Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition}},Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions)">
   ListPartitionReassignments(Optional&lt;Set&lt;TopicPartition&gt;&gt;, ListPartitionReassignmentsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L429"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L428"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listPartitionReassignments-java.util.Optional-org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listPartitionReassignments-java.util.Optional-org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions-</a></p>
@@ -2734,8 +2746,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Optional.html">Optional</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>&gt;&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions.html">ListPartitionReassignmentsOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions.html">ListPartitionReassignmentsOptions</a></p>
@@ -2763,7 +2775,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_ListTopics_Org_Apache_Kafka_Clients_Admin_ListTopicsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.ListTopics(Org.Apache.Kafka.Clients.Admin.ListTopicsOptions)">
   ListTopics(ListTopicsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L437"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listTopics-org.apache.kafka.clients.admin.ListTopicsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listTopics-org.apache.kafka.clients.admin.ListTopicsOptions-</a></p>
@@ -2802,7 +2814,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_ListTransactions_Org_Apache_Kafka_Clients_Admin_ListTransactionsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.ListTransactions(Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions)">
   ListTransactions(ListTransactionsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L446"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listTransactions-org.apache.kafka.clients.admin.ListTransactionsOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#listTransactions-org.apache.kafka.clients.admin.ListTransactionsOptions-</a></p>
@@ -2841,7 +2853,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_Metrics__1" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.Metrics``1">
   Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#metrics--</a></p>
@@ -2855,8 +2867,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -2880,7 +2892,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_RemoveMembersFromConsumerGroup_Java_Lang_String_Org_Apache_Kafka_Clients_Admin_RemoveMembersFromConsumerGroupOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.RemoveMembersFromConsumerGroup(Java.Lang.String,Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions)">
   RemoveMembersFromConsumerGroup(String, RemoveMembersFromConsumerGroupOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L457"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L456"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#removeMembersFromConsumerGroup-java.lang.String-org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#removeMembersFromConsumerGroup-java.lang.String-org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions-</a></p>
@@ -2893,8 +2905,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions.html">RemoveMembersFromConsumerGroupOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions.html">RemoveMembersFromConsumerGroupOptions</a></p>
@@ -2922,7 +2934,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_RenewDelegationToken_System_Byte___Org_Apache_Kafka_Clients_Admin_RenewDelegationTokenOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.RenewDelegationToken(System.Byte[],Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenOptions)">
   RenewDelegationToken(byte[], RenewDelegationTokenOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L467"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L466"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#renewDelegationToken-byte[]-org.apache.kafka.clients.admin.RenewDelegationTokenOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#renewDelegationToken-byte[]-org.apache.kafka.clients.admin.RenewDelegationTokenOptions-</a></p>
@@ -2964,7 +2976,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_UnregisterBroker_System_Int32_Org_Apache_Kafka_Clients_Admin_UnregisterBrokerOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.UnregisterBroker(System.Int32,Org.Apache.Kafka.Clients.Admin.UnregisterBrokerOptions)">
   UnregisterBroker(int, UnregisterBrokerOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L477"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L476"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#unregisterBroker-int-org.apache.kafka.clients.admin.UnregisterBrokerOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#unregisterBroker-int-org.apache.kafka.clients.admin.UnregisterBrokerOptions-</a></p>
@@ -3006,7 +3018,7 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_ForwardingAdmin_UpdateFeatures_Java_Util_Map_Java_Lang_String_Org_Apache_Kafka_Clients_Admin_FeatureUpdate__Org_Apache_Kafka_Clients_Admin_UpdateFeaturesOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin.UpdateFeatures(Java.Util.Map{Java.Lang.String,Org.Apache.Kafka.Clients.Admin.FeatureUpdate},Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions)">
   UpdateFeatures(Map&lt;String, FeatureUpdate&gt;, UpdateFeaturesOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L487"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ForwardingAdmin.cs/#L486"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#updateFeatures-java.util.Map-org.apache.kafka.clients.admin.UpdateFeaturesOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/clients/admin/ForwardingAdmin.html#updateFeatures-java.util.Map-org.apache.kafka.clients.admin.UpdateFeaturesOptions-</a></p>
@@ -3019,8 +3031,8 @@ Class ForwardingAdmin  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.html">FeatureUpdate</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.html">FeatureUpdate</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions.html">UpdateFeaturesOptions</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions.html">UpdateFeaturesOptions</a></p>

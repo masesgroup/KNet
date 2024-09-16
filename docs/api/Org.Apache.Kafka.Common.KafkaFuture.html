@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -110,8 +110,8 @@ Class KafkaFuture  <a class="header-action link-secondary" title="View source" h
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="api/Java.Util.Concurrent.Future.html">Future</a>&gt;</div>
-      <div><a class="xref" href="api/Java.Util.Concurrent.Future.html">Future</a></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.Future.html">Future</a>&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.Future.html">Future</a></div>
       <div><span class="xref">KafkaFuture</span></div>
     </dd>
   </dl>
@@ -298,6 +298,9 @@ Class KafkaFuture  <a class="header-action link-secondary" title="View source" h
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -316,6 +319,12 @@ Class KafkaFuture  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -328,7 +337,10 @@ Class KafkaFuture  <a class="header-action link-secondary" title="View source" h
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -480,7 +492,7 @@ Class KafkaFuture  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture__ctor" data-uid="Org.Apache.Kafka.Common.KafkaFuture.#ctor">
   KafkaFuture()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L457"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -508,7 +520,7 @@ public KafkaFuture()</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.KafkaFuture.#ctor(System.Object[])">
   KafkaFuture(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L410"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L462"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -545,7 +557,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_BridgeClassName" data-uid="Org.Apache.Kafka.Common.KafkaFuture.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L418"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L471"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -577,7 +589,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.KafkaFuture.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L422"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L475"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -609,7 +621,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.KafkaFuture.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L479"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -641,7 +653,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.KafkaFuture.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L430"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L483"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -673,7 +685,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.KafkaFuture.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L434"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/AllPackageClasses.cs/#L487"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -826,7 +838,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_Get" data-uid="Org.Apache.Kafka.Common.KafkaFuture.Get">
   Get()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#get--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#get--</a></p>
@@ -854,9 +866,9 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.InterruptedException.html">InterruptedException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.InterruptedException.html">InterruptedException</a></dt>
     <dd></dd>
-    <dt><a class="xref" href="api/Java.Util.Concurrent.ExecutionException.html">ExecutionException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.ExecutionException.html">ExecutionException</a></dt>
     <dd></dd>
   </dl>
 
@@ -866,7 +878,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_Get_System_Int64_Java_Util_Concurrent_TimeUnit_" data-uid="Org.Apache.Kafka.Common.KafkaFuture.Get(System.Int64,Java.Util.Concurrent.TimeUnit)">
   Get(long, TimeUnit)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#get-long-java.util.concurrent.TimeUnit-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#get-long-java.util.concurrent.TimeUnit-</a></p>
@@ -882,8 +894,8 @@ public KafkaFuture(params object[] args)</code></pre>
     <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Concurrent.TimeUnit.html">TimeUnit</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.Concurrent.TimeUnit.html">TimeUnit</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.TimeUnit.html">TimeUnit</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.TimeUnit.html">TimeUnit</a></p>
 </dd>
   </dl>
 
@@ -903,11 +915,11 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.InterruptedException.html">InterruptedException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.InterruptedException.html">InterruptedException</a></dt>
     <dd></dd>
-    <dt><a class="xref" href="api/Java.Util.Concurrent.ExecutionException.html">ExecutionException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.ExecutionException.html">ExecutionException</a></dt>
     <dd></dd>
-    <dt><a class="xref" href="api/Java.Util.Concurrent.TimeoutException.html">TimeoutException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.TimeoutException.html">TimeoutException</a></dt>
     <dd></dd>
   </dl>
 
@@ -917,7 +929,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_GetNow_System_Object_" data-uid="Org.Apache.Kafka.Common.KafkaFuture.GetNow(System.Object)">
   GetNow(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#getNow-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#getNow-java.lang.Object-</a></p>
@@ -951,9 +963,9 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.InterruptedException.html">InterruptedException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.InterruptedException.html">InterruptedException</a></dt>
     <dd></dd>
-    <dt><a class="xref" href="api/Java.Util.Concurrent.ExecutionException.html">ExecutionException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.ExecutionException.html">ExecutionException</a></dt>
     <dd></dd>
   </dl>
 
@@ -963,7 +975,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_IsCancelled" data-uid="Org.Apache.Kafka.Common.KafkaFuture.IsCancelled">
   IsCancelled()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#isCancelled--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#isCancelled--</a></p>
@@ -996,7 +1008,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_IsCompletedExceptionally" data-uid="Org.Apache.Kafka.Common.KafkaFuture.IsCompletedExceptionally">
   IsCompletedExceptionally()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#isCompletedExceptionally--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#isCompletedExceptionally--</a></p>
@@ -1029,7 +1041,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_IsDone" data-uid="Org.Apache.Kafka.Common.KafkaFuture.IsDone">
   IsDone()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#isDone--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#isDone--</a></p>
@@ -1101,7 +1113,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_ToCompletionStage" data-uid="Org.Apache.Kafka.Common.KafkaFuture.ToCompletionStage">
   ToCompletionStage()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#toCompletionStage--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#toCompletionStage--</a></p>
@@ -1115,8 +1127,8 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Concurrent.CompletionStage.html">CompletionStage</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.Concurrent.CompletionStage.html">CompletionStage</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.CompletionStage.html">CompletionStage</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Concurrent.CompletionStage.html">CompletionStage</a></p>
 </dd>
   </dl>
 
@@ -1134,7 +1146,7 @@ public KafkaFuture(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_KafkaFuture_WhenComplete_Org_Apache_Kafka_Common_KafkaFuture_BiConsumer_" data-uid="Org.Apache.Kafka.Common.KafkaFuture.WhenComplete(Org.Apache.Kafka.Common.KafkaFuture.BiConsumer)">
   WhenComplete(BiConsumer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/KafkaFuture.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#whenComplete-org.apache.kafka.common.KafkaFuture.BiConsumer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/KafkaFuture.html#whenComplete-org.apache.kafka.common.KafkaFuture.BiConsumer-</a></p>

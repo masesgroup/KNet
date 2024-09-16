@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1" class="text-break">
-Class Predicate&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L111"><i class="bi bi-code-slash"></i></a>
+Class Predicate&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -132,7 +132,7 @@ Class Predicate&lt;R&gt;  <a class="header-action link-secondary" title="View so
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.IPredicate-1.html">IPredicate</a>&lt;R&gt;</div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.IConfigurable.html">IConfigurable</a></div>
-      <div><a class="xref" href="api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
   </dl>
 
@@ -306,6 +306,9 @@ Class Predicate&lt;R&gt;  <a class="header-action link-secondary" title="View so
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -324,6 +327,12 @@ Class Predicate&lt;R&gt;  <a class="header-action link-secondary" title="View so
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -336,7 +345,10 @@ Class Predicate&lt;R&gt;  <a class="header-action link-secondary" title="View so
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -488,7 +500,7 @@ Class Predicate&lt;R&gt;  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1__ctor" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.#ctor">
   Predicate()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -516,7 +528,7 @@ public Predicate()</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.#ctor(System.Object[])">
   Predicate(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -553,7 +565,7 @@ public Predicate(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -585,7 +597,7 @@ public Predicate(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -617,7 +629,7 @@ public Predicate(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -649,7 +661,7 @@ public Predicate(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -681,7 +693,7 @@ public Predicate(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/AllPackageClasses.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -717,7 +729,7 @@ public Predicate(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1_Close" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/transforms/predicates/Predicate.html#close--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/transforms/predicates/Predicate.html#close--</a></p>
@@ -744,7 +756,7 @@ public Predicate(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1_Config" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.Config">
   Config()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/transforms/predicates/Predicate.html#config--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/transforms/predicates/Predicate.html#config--</a></p>
@@ -777,7 +789,7 @@ public Predicate(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1_Test__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.Test(`0)">
   Test(R)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/transforms/predicates/Predicate.html#test-org.apache.kafka.connect.connector.ConnectRecord-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.6.2/org/apache/kafka/connect/transforms/predicates/Predicate.html#test-org.apache.kafka.connect.connector.ConnectRecord-</a></p>
@@ -820,10 +832,10 @@ public Predicate(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate__0___Java_Lang_AutoCloseable" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate{`0})~Java.Lang.AutoCloseable">
   implicit operator AutoCloseable(Predicate&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate-1.html">Predicate&lt;R&gt;</a> to <a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a></p>
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate-1.html">Predicate&lt;R&gt;</a> to <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -839,7 +851,7 @@ public Predicate(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></dt>
     <dd></dd>
   </dl>
 
@@ -857,7 +869,7 @@ public Predicate(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate__0___Org_Apache_Kafka_Common_Configurable" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate{`0})~Org.Apache.Kafka.Common.Configurable">
   implicit operator Configurable(Predicate&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate-1.html">Predicate&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Common.Configurable.html">Configurable</a></p>
@@ -894,7 +906,7 @@ public Predicate(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate__0___Org_Apache_Kafka_Connect_Transforms_Predicates_Predicate" data-uid="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate{`0})~Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate">
   implicit operator Predicate(Predicate&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate-1.html">Predicate&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate.html">Predicate</a></p>
@@ -931,7 +943,7 @@ public Predicate(params object[] args)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L111" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/Predicates/Predicate.cs/#L110" class="edit-link">Edit this page</a>
         </div>
 
 

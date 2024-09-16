@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -297,6 +297,9 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -315,6 +318,12 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -327,7 +336,10 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -479,7 +491,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation__ctor" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.#ctor">
   TokenInformation()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -519,14 +531,14 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
@@ -567,8 +579,8 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></p>
@@ -576,8 +588,8 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
     <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
@@ -605,7 +617,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.#ctor(System.Object[])">
   TokenInformation(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -641,7 +653,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -673,7 +685,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -705,7 +717,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -737,7 +749,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -769,7 +781,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/AllPackageClasses.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -805,7 +817,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_ExpiryTimestamp" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.ExpiryTimestamp">
   ExpiryTimestamp()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#expiryTimestamp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#expiryTimestamp--</a></p>
@@ -851,8 +863,8 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></p>
@@ -860,8 +872,8 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
     <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
     <dt><code>arg4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
@@ -895,7 +907,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_IssueTimestamp" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.IssueTimestamp">
   IssueTimestamp()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#issueTimestamp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#issueTimestamp--</a></p>
@@ -928,7 +940,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_MaxTimestamp" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.MaxTimestamp">
   MaxTimestamp()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#maxTimestamp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#maxTimestamp--</a></p>
@@ -961,7 +973,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_Owner" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.Owner">
   Owner()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L167"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#owner--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#owner--</a></p>
@@ -994,7 +1006,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_OwnerAsString" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.OwnerAsString">
   OwnerAsString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#ownerAsString--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#ownerAsString--</a></p>
@@ -1008,8 +1020,8 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1066,7 +1078,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_Renewers" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.Renewers">
   Renewers()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#renewers--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#renewers--</a></p>
@@ -1080,8 +1092,8 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal.html">KafkaPrincipal</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
@@ -1099,7 +1111,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_RenewersAsString" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.RenewersAsString">
   RenewersAsString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#renewersAsString--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#renewersAsString--</a></p>
@@ -1113,8 +1125,8 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Collection.html">Collection</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
 </dd>
   </dl>
 
@@ -1132,7 +1144,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_SetExpiryTimestamp_System_Int64_" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.SetExpiryTimestamp(System.Int64)">
   SetExpiryTimestamp(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#setExpiryTimestamp-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#setExpiryTimestamp-long-</a></p>
@@ -1165,7 +1177,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_TokenId" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.TokenId">
   TokenId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenId--</a></p>
@@ -1179,8 +1191,8 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1198,7 +1210,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_TokenRequester" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.TokenRequester">
   TokenRequester()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenRequester--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenRequester--</a></p>
@@ -1231,7 +1243,7 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Security_Token_Delegation_TokenInformation_TokenRequesterAsString" data-uid="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation.TokenRequesterAsString">
   TokenRequesterAsString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Token/Delegation/TokenInformation.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenRequesterAsString--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenRequesterAsString--</a></p>
@@ -1245,8 +1257,8 @@ Class TokenInformation  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 

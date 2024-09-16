@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -298,6 +298,9 @@ Class StreamsMetrics  <a class="header-action link-secondary" title="View source
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -316,6 +319,12 @@ Class StreamsMetrics  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -328,7 +337,10 @@ Class StreamsMetrics  <a class="header-action link-secondary" title="View source
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -480,7 +492,7 @@ Class StreamsMetrics  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics__ctor" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.#ctor">
   StreamsMetrics()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L660"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L763"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -508,7 +520,7 @@ public StreamsMetrics()</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.#ctor(System.Object[])">
   StreamsMetrics(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L665"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L768"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -545,7 +557,7 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L673"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L777"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -577,7 +589,7 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L677"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L781"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -609,7 +621,7 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L681"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L785"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -641,7 +653,7 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L685"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L789"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -673,7 +685,7 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L689"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L793"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -709,7 +721,7 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics_AddLatencyRateTotalSensor_Java_Lang_String_Java_Lang_String_Java_Lang_String_Org_Apache_Kafka_Common_Metrics_Sensor_RecordingLevel_Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.AddLatencyRateTotalSensor(Java.Lang.String,Java.Lang.String,Java.Lang.String,Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel,Java.Lang.String[])">
   AddLatencyRateTotalSensor(String, String, String, RecordingLevel, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#addLatencyRateTotalSensor-java.lang.String-java.lang.String-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-java.lang.String[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#addLatencyRateTotalSensor-java.lang.String-java.lang.String-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-java.lang.String[]-</a></p>
@@ -722,20 +734,20 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.html">Sensor</a>.<a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">RecordingLevel</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">Sensor.RecordingLevel</a></p>
 </dd>
-    <dt><code>arg4</code> <a class="xref" href="api/Java.Lang.String.html">String</a>[]</dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg4</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>[]</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -760,7 +772,7 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics_AddRateTotalSensor_Java_Lang_String_Java_Lang_String_Java_Lang_String_Org_Apache_Kafka_Common_Metrics_Sensor_RecordingLevel_Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.AddRateTotalSensor(Java.Lang.String,Java.Lang.String,Java.Lang.String,Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel,Java.Lang.String[])">
   AddRateTotalSensor(String, String, String, RecordingLevel, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#addRateTotalSensor-java.lang.String-java.lang.String-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-java.lang.String[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#addRateTotalSensor-java.lang.String-java.lang.String-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-java.lang.String[]-</a></p>
@@ -773,20 +785,20 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.html">Sensor</a>.<a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">RecordingLevel</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">Sensor.RecordingLevel</a></p>
 </dd>
-    <dt><code>arg4</code> <a class="xref" href="api/Java.Lang.String.html">String</a>[]</dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg4</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>[]</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -811,7 +823,7 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics_AddSensor_Java_Lang_String_Org_Apache_Kafka_Common_Metrics_Sensor_RecordingLevel_" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.AddSensor(Java.Lang.String,Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel)">
   AddSensor(String, RecordingLevel)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#addSensor-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#addSensor-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-</a></p>
@@ -824,8 +836,8 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.html">Sensor</a>.<a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">RecordingLevel</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">Sensor.RecordingLevel</a></p>
@@ -853,7 +865,7 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics_AddSensor_Java_Lang_String_Org_Apache_Kafka_Common_Metrics_Sensor_RecordingLevel_Org_Apache_Kafka_Common_Metrics_Sensor___" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.AddSensor(Java.Lang.String,Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel,Org.Apache.Kafka.Common.Metrics.Sensor[])">
   AddSensor(String, RecordingLevel, params Sensor[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#addSensor-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-org.apache.kafka.common.metrics.Sensor[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#addSensor-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-org.apache.kafka.common.metrics.Sensor[]-</a></p>
@@ -866,8 +878,8 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.html">Sensor</a>.<a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">RecordingLevel</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">Sensor.RecordingLevel</a></p>
@@ -898,7 +910,7 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics_Metrics__1" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.Metrics``1">
   Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#metrics--</a></p>
@@ -912,8 +924,8 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -937,7 +949,7 @@ public StreamsMetrics(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_StreamsMetrics_RemoveSensor_Org_Apache_Kafka_Common_Metrics_Sensor_" data-uid="Org.Apache.Kafka.Streams.StreamsMetrics.RemoveSensor(Org.Apache.Kafka.Common.Metrics.Sensor)">
   RemoveSensor(Sensor)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/StreamsMetrics.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#removeSensor-org.apache.kafka.common.metrics.Sensor-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.6.2/org/apache/kafka/streams/StreamsMetrics.html#removeSensor-org.apache.kafka.common.metrics.Sensor-</a></p>

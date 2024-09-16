@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -110,9 +110,9 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
-      <div><a class="xref" href="api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
-      <div><a class="xref" href="api/Java.Io.Closeable.html">Closeable</a></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.Closeable.html">Closeable</a></div>
       <div><span class="xref">Metrics</span></div>
     </dd>
   </dl>
@@ -126,8 +126,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
       <div><span class="xref">IJVMBridgeBaseStatic</span></div>
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
-      <div><a class="xref" href="api/Java.Io.ICloseable.html">ICloseable</a></div>
-      <div><a class="xref" href="api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html">ICloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
   </dl>
 
@@ -301,6 +301,9 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -319,6 +322,12 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -331,7 +340,10 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -483,7 +495,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics__ctor" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.#ctor">
   Metrics()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L490"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L500"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -559,8 +571,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
     <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></p>
@@ -598,8 +610,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
     <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></p>
@@ -640,8 +652,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
     <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></p>
@@ -682,8 +694,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
     <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
     <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></p>
@@ -780,7 +792,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.#ctor(System.Object[])">
   Metrics(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L494"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L504"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -816,7 +828,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L501"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L512"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -848,7 +860,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L505"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L516"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -880,7 +892,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L509"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L520"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -912,7 +924,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L513"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L524"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -944,7 +956,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L517"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/AllPackageClasses.cs/#L528"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -980,7 +992,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_AddMetric_Org_Apache_Kafka_Common_MetricName_Org_Apache_Kafka_Common_Metrics_Measurable_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.AddMetric(Org.Apache.Kafka.Common.MetricName,Org.Apache.Kafka.Common.Metrics.Measurable)">
   AddMetric(MetricName, Measurable)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L374"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addMetric-org.apache.kafka.common.MetricName-org.apache.kafka.common.metrics.Measurable-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addMetric-org.apache.kafka.common.MetricName-org.apache.kafka.common.metrics.Measurable-</a></p>
@@ -1016,7 +1028,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_AddMetric_Org_Apache_Kafka_Common_MetricName_Org_Apache_Kafka_Common_Metrics_MetricConfig_Org_Apache_Kafka_Common_Metrics_Measurable_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.AddMetric(Org.Apache.Kafka.Common.MetricName,Org.Apache.Kafka.Common.Metrics.MetricConfig,Org.Apache.Kafka.Common.Metrics.Measurable)">
   AddMetric(MetricName, MetricConfig, Measurable)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L384"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addMetric-org.apache.kafka.common.MetricName-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.Measurable-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addMetric-org.apache.kafka.common.MetricName-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.Measurable-</a></p>
@@ -1055,7 +1067,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_AddMetric_Org_Apache_Kafka_Common_MetricName_Org_Apache_Kafka_Common_Metrics_MetricConfig_Org_Apache_Kafka_Common_Metrics_MetricValueProvider_System_Object__" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.AddMetric(Org.Apache.Kafka.Common.MetricName,Org.Apache.Kafka.Common.Metrics.MetricConfig,Org.Apache.Kafka.Common.Metrics.MetricValueProvider{System.Object})">
   AddMetric(MetricName, MetricConfig, MetricValueProvider&lt;object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L397"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L394"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addMetric-org.apache.kafka.common.MetricName-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.MetricValueProvider-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addMetric-org.apache.kafka.common.MetricName-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.MetricValueProvider-</a></p>
@@ -1094,7 +1106,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_AddMetric_Org_Apache_Kafka_Common_MetricName_Org_Apache_Kafka_Common_Metrics_MetricValueProvider_System_Object__" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.AddMetric(Org.Apache.Kafka.Common.MetricName,Org.Apache.Kafka.Common.Metrics.MetricValueProvider{System.Object})">
   AddMetric(MetricName, MetricValueProvider&lt;object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L403"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addMetric-org.apache.kafka.common.MetricName-org.apache.kafka.common.metrics.MetricValueProvider-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addMetric-org.apache.kafka.common.MetricName-org.apache.kafka.common.metrics.MetricValueProvider-</a></p>
@@ -1130,7 +1142,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_AddMetricIfAbsent_Org_Apache_Kafka_Common_MetricName_Org_Apache_Kafka_Common_Metrics_MetricConfig_Org_Apache_Kafka_Common_Metrics_MetricValueProvider_System_Object__" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.AddMetricIfAbsent(Org.Apache.Kafka.Common.MetricName,Org.Apache.Kafka.Common.Metrics.MetricConfig,Org.Apache.Kafka.Common.Metrics.MetricValueProvider{System.Object})">
   AddMetricIfAbsent(MetricName, MetricConfig, MetricValueProvider&lt;object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L226"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addMetricIfAbsent-org.apache.kafka.common.MetricName-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.MetricValueProvider-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addMetricIfAbsent-org.apache.kafka.common.MetricName-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.MetricValueProvider-</a></p>
@@ -1175,7 +1187,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_AddReporter_Org_Apache_Kafka_Common_Metrics_MetricsReporter_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.AddReporter(Org.Apache.Kafka.Common.Metrics.MetricsReporter)">
   AddReporter(MetricsReporter)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L357"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addReporter-org.apache.kafka.common.metrics.MetricsReporter-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#addReporter-org.apache.kafka.common.metrics.MetricsReporter-</a></p>
@@ -1208,7 +1220,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Close" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L413"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L410"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#close--</a></p>
@@ -1235,7 +1247,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Config" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Config">
   Config()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#config--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#config--</a></p>
@@ -1268,7 +1280,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_GetSensor_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.GetSensor(Java.Lang.String)">
   GetSensor(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#getSensor-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#getSensor-java.lang.String-</a></p>
@@ -1281,8 +1293,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1307,7 +1319,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Metric_Org_Apache_Kafka_Common_MetricName_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Metric(Org.Apache.Kafka.Common.MetricName)">
   Metric(MetricName)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metric-org.apache.kafka.common.MetricName-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metric-org.apache.kafka.common.MetricName-</a></p>
@@ -1346,7 +1358,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_MetricInstance_Org_Apache_Kafka_Common_MetricNameTemplate_Java_Lang_String___" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.MetricInstance(Org.Apache.Kafka.Common.MetricNameTemplate,Java.Lang.String[])">
   MetricInstance(MetricNameTemplate, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricInstance-org.apache.kafka.common.MetricNameTemplate-java.lang.String[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricInstance-org.apache.kafka.common.MetricNameTemplate-java.lang.String[]-</a></p>
@@ -1362,8 +1374,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
     <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.MetricNameTemplate.html">MetricNameTemplate</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.MetricNameTemplate.html">MetricNameTemplate</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a>[]</dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>[]</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1388,7 +1400,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_MetricInstance_Org_Apache_Kafka_Common_MetricNameTemplate_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.MetricInstance(Org.Apache.Kafka.Common.MetricNameTemplate,Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   MetricInstance(MetricNameTemplate, Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricInstance-org.apache.kafka.common.MetricNameTemplate-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricInstance-org.apache.kafka.common.MetricNameTemplate-java.util.Map-</a></p>
@@ -1404,8 +1416,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
     <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.MetricNameTemplate.html">MetricNameTemplate</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.MetricNameTemplate.html">MetricNameTemplate</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1430,7 +1442,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_MetricName_Java_Lang_String_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.MetricName(Java.Lang.String,Java.Lang.String)">
   MetricName(String, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L215"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-</a></p>
@@ -1443,11 +1455,11 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1472,7 +1484,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_MetricName_Java_Lang_String_Java_Lang_String_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.MetricName(Java.Lang.String,Java.Lang.String,Java.Lang.String)">
   MetricName(String, String, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.lang.String-</a></p>
@@ -1485,14 +1497,14 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1517,7 +1529,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_MetricName_Java_Lang_String_Java_Lang_String_Java_Lang_String_Java_Lang_String___" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.MetricName(Java.Lang.String,Java.Lang.String,Java.Lang.String,Java.Lang.String[])">
   MetricName(String, String, String, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.lang.String-java.lang.String[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.lang.String-java.lang.String[]-</a></p>
@@ -1530,17 +1542,17 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="api/Java.Lang.String.html">String</a>[]</dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>[]</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1565,7 +1577,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_MetricName_Java_Lang_String_Java_Lang_String_Java_Lang_String_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.MetricName(Java.Lang.String,Java.Lang.String,Java.Lang.String,Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   MetricName(String, String, String, Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.lang.String-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.lang.String-java.util.Map-</a></p>
@@ -1578,17 +1590,17 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg3</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1613,7 +1625,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_MetricName_Java_Lang_String_Java_Lang_String_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.MetricName(Java.Lang.String,Java.Lang.String,Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   MetricName(String, String, Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metricName-java.lang.String-java.lang.String-java.util.Map-</a></p>
@@ -1626,14 +1638,14 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg2</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1658,7 +1670,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_MetricsMethod" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.MetricsMethod">
   MetricsMethod()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#metrics--</a></p>
@@ -1672,8 +1684,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, <a class="xref" href="Org.Apache.Kafka.Common.Metrics.KafkaMetric.html">KafkaMetric</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, <a class="xref" href="Org.Apache.Kafka.Common.Metrics.KafkaMetric.html">KafkaMetric</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1691,7 +1703,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_RemoveMetric_Org_Apache_Kafka_Common_MetricName_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.RemoveMetric(Org.Apache.Kafka.Common.MetricName)">
   RemoveMetric(MetricName)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L301"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#removeMetric-org.apache.kafka.common.MetricName-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#removeMetric-org.apache.kafka.common.MetricName-</a></p>
@@ -1730,7 +1742,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_RemoveReporter_Org_Apache_Kafka_Common_Metrics_MetricsReporter_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.RemoveReporter(Org.Apache.Kafka.Common.Metrics.MetricsReporter)">
   RemoveReporter(MetricsReporter)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L368"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L365"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#removeReporter-org.apache.kafka.common.metrics.MetricsReporter-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#removeReporter-org.apache.kafka.common.metrics.MetricsReporter-</a></p>
@@ -1763,7 +1775,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_RemoveSensor_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.RemoveSensor(Java.Lang.String)">
   RemoveSensor(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L421"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L418"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#removeSensor-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#removeSensor-java.lang.String-</a></p>
@@ -1776,8 +1788,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1796,7 +1808,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Reporters" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Reporters">
   Reporters()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#reporters--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#reporters--</a></p>
@@ -1810,8 +1822,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.List.html">List</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
 </dd>
   </dl>
 
@@ -1829,7 +1841,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Sensor_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Sensor(Java.Lang.String)">
   Sensor(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L292"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-</a></p>
@@ -1842,8 +1854,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -1868,7 +1880,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Sensor_Java_Lang_String_Org_Apache_Kafka_Common_Metrics_MetricConfig_Org_Apache_Kafka_Common_Metrics_Sensor_RecordingLevel_Org_Apache_Kafka_Common_Metrics_Sensor___" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Sensor(Java.Lang.String,Org.Apache.Kafka.Common.Metrics.MetricConfig,Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel,Org.Apache.Kafka.Common.Metrics.Sensor[])">
   Sensor(String, MetricConfig, RecordingLevel, params Sensor[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L349"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.Sensor.RecordingLevel-org.apache.kafka.common.metrics.Sensor[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.Sensor.RecordingLevel-org.apache.kafka.common.metrics.Sensor[]-</a></p>
@@ -1881,8 +1893,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></p>
@@ -1916,7 +1928,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Sensor_Java_Lang_String_Org_Apache_Kafka_Common_Metrics_MetricConfig_Org_Apache_Kafka_Common_Metrics_Sensor___" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Sensor(Java.Lang.String,Org.Apache.Kafka.Common.Metrics.MetricConfig,Org.Apache.Kafka.Common.Metrics.Sensor[])">
   Sensor(String, MetricConfig, params Sensor[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L337"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.Sensor[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-org.apache.kafka.common.metrics.Sensor[]-</a></p>
@@ -1929,8 +1941,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></p>
@@ -1961,7 +1973,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Sensor_Java_Lang_String_Org_Apache_Kafka_Common_Metrics_MetricConfig_System_Int64_Org_Apache_Kafka_Common_Metrics_Sensor_RecordingLevel_Org_Apache_Kafka_Common_Metrics_Sensor___" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Sensor(Java.Lang.String,Org.Apache.Kafka.Common.Metrics.MetricConfig,System.Int64,Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel,Org.Apache.Kafka.Common.Metrics.Sensor[])">
   Sensor(String, MetricConfig, long, RecordingLevel, params Sensor[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L326"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-long-org.apache.kafka.common.metrics.Sensor.RecordingLevel-org.apache.kafka.common.metrics.Sensor[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-long-org.apache.kafka.common.metrics.Sensor.RecordingLevel-org.apache.kafka.common.metrics.Sensor[]-</a></p>
@@ -1974,8 +1986,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></p>
@@ -2012,7 +2024,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Sensor_Java_Lang_String_Org_Apache_Kafka_Common_Metrics_MetricConfig_System_Int64_Org_Apache_Kafka_Common_Metrics_Sensor___" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Sensor(Java.Lang.String,Org.Apache.Kafka.Common.Metrics.MetricConfig,System.Int64,Org.Apache.Kafka.Common.Metrics.Sensor[])">
   Sensor(String, MetricConfig, long, params Sensor[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L313"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-long-org.apache.kafka.common.metrics.Sensor[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.MetricConfig-long-org.apache.kafka.common.metrics.Sensor[]-</a></p>
@@ -2025,8 +2037,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricConfig.html">MetricConfig</a></p>
@@ -2060,7 +2072,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Sensor_Java_Lang_String_Org_Apache_Kafka_Common_Metrics_Sensor_RecordingLevel_" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Sensor(Java.Lang.String,Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel)">
   Sensor(String, RecordingLevel)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-</a></p>
@@ -2073,8 +2085,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.html">Sensor</a>.<a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">RecordingLevel</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">Sensor.RecordingLevel</a></p>
@@ -2102,7 +2114,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Sensor_Java_Lang_String_Org_Apache_Kafka_Common_Metrics_Sensor_RecordingLevel_Org_Apache_Kafka_Common_Metrics_Sensor___" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Sensor(Java.Lang.String,Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel,Org.Apache.Kafka.Common.Metrics.Sensor[])">
   Sensor(String, RecordingLevel, params Sensor[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L273"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-org.apache.kafka.common.metrics.Sensor[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.Sensor.RecordingLevel-org.apache.kafka.common.metrics.Sensor[]-</a></p>
@@ -2115,8 +2127,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.html">Sensor</a>.<a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">RecordingLevel</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel.html">Sensor.RecordingLevel</a></p>
@@ -2147,7 +2159,7 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_Metrics_Sensor_Java_Lang_String_Org_Apache_Kafka_Common_Metrics_Sensor___" data-uid="Org.Apache.Kafka.Common.Metrics.Metrics.Sensor(Java.Lang.String,Org.Apache.Kafka.Common.Metrics.Sensor[])">
   Sensor(String, params Sensor[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/Metrics.cs/#L262"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.Sensor[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/metrics/Metrics.html#sensor-java.lang.String-org.apache.kafka.common.metrics.Sensor[]-</a></p>
@@ -2160,8 +2172,8 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.html">Sensor</a>[]</dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.Sensor.html">Sensor</a></p>
@@ -2202,18 +2214,18 @@ Class Metrics  <a class="header-action link-secondary" title="View source" href=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
-    <dt><code>arg1</code> <a class="xref" href="api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricNameTemplate.html">MetricNameTemplate</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Lang.Iterable.html">Iterable</a></p>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricNameTemplate.html">MetricNameTemplate</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable.html">Iterable</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 

@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -126,8 +126,8 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.IReconfigurable.html">IReconfigurable</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.IConfigurable.html">IConfigurable</a></div>
-      <div><a class="xref" href="api/Java.Io.ICloseable.html">ICloseable</a></div>
-      <div><a class="xref" href="api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html">ICloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
   </dl>
 
@@ -301,6 +301,9 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -319,6 +322,12 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -331,7 +340,10 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -483,7 +495,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory__ctor" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.#ctor">
   SslFactory()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -510,7 +522,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.#ctor(System.Object[])">
   SslFactory(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -546,7 +558,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -578,7 +590,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -610,7 +622,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -642,7 +654,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -674,7 +686,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/AllPackageClasses.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -710,7 +722,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_Close" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#close--</a></p>
@@ -737,7 +749,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
   Configure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#configure-java.util.Map-</a></p>
@@ -750,8 +762,8 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -775,7 +787,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_CreateSslEngine_Java_Lang_String_System_Int32_" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.CreateSslEngine(Java.Lang.String,System.Int32)">
   CreateSslEngine(String, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#createSslEngine-java.lang.String-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#createSslEngine-java.lang.String-int-</a></p>
@@ -788,8 +800,8 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
@@ -798,8 +810,8 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Javax.Net.Ssl.SSLEngine.html">SSLEngine</a></dt>
-    <dd><p><a class="xref" href="api/Javax.Net.Ssl.SSLEngine.html">SSLEngine</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Javax.Net.Ssl.SSLEngine.html">SSLEngine</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Javax.Net.Ssl.SSLEngine.html">SSLEngine</a></p>
 </dd>
   </dl>
 
@@ -817,7 +829,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_CreateSslEngine_Java_Net_Socket_" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.CreateSslEngine(Java.Net.Socket)">
   CreateSslEngine(Socket)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#createSslEngine-java.net.Socket-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#createSslEngine-java.net.Socket-</a></p>
@@ -830,15 +842,15 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Net.Socket.html">Socket</a></dt>
-    <dd><p><a class="xref" href="api/Java.Net.Socket.html">Socket</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Net.Socket.html">Socket</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Net.Socket.html">Socket</a></p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Javax.Net.Ssl.SSLEngine.html">SSLEngine</a></dt>
-    <dd><p><a class="xref" href="api/Javax.Net.Ssl.SSLEngine.html">SSLEngine</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Javax.Net.Ssl.SSLEngine.html">SSLEngine</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Javax.Net.Ssl.SSLEngine.html">SSLEngine</a></p>
 </dd>
   </dl>
 
@@ -856,7 +868,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_ReconfigurableConfigs" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.ReconfigurableConfigs">
   ReconfigurableConfigs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#reconfigurableConfigs--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#reconfigurableConfigs--</a></p>
@@ -870,8 +882,8 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Set.html">Set</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
 </dd>
   </dl>
 
@@ -889,7 +901,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_Reconfigure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.Reconfigure(Java.Util.Map{Java.Lang.String,System.Object})">
   Reconfigure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#reconfigure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#reconfigure-java.util.Map-</a></p>
@@ -902,8 +914,8 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -927,7 +939,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_SslEngineFactory" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.SslEngineFactory">
   SslEngineFactory()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#sslEngineFactory--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#sslEngineFactory--</a></p>
@@ -960,7 +972,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Org_Apache_Kafka_Common_Security_Ssl_SslFactory_ValidateReconfiguration_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.ValidateReconfiguration(Java.Util.Map{Java.Lang.String,System.Object})">
   ValidateReconfiguration(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#validateReconfiguration-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/security/ssl/SslFactory.html#validateReconfiguration-java.util.Map-</a></p>
@@ -973,8 +985,8 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
   </dl>
 
@@ -1000,7 +1012,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Security/Ssl/SslFactory.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.html">SslFactory</a> to <a class="xref" href="api/Java.Io.Closeable.html">Closeable</a></p>
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Common.Security.Ssl.SslFactory.html">SslFactory</a> to <a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.Closeable.html">Closeable</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1016,7 +1028,7 @@ Class SslFactory  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.Closeable.html">Closeable</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.Closeable.html">Closeable</a></dt>
     <dd></dd>
   </dl>
 

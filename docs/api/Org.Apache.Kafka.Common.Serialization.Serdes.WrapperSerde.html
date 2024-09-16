@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde" class="text-break">
-Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L649"><i class="bi bi-code-slash"></i></a>
+Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L765"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -305,6 +305,9 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -323,6 +326,12 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -335,7 +344,10 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -487,7 +499,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde__ctor" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.#ctor">
   WrapperSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1668"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1883"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -514,7 +526,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde__ctor_Org_Apache_Kafka_Common_Serialization_Serializer_Org_Apache_Kafka_Common_Serialization_Deserializer_" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.#ctor(Org.Apache.Kafka.Common.Serialization.Serializer,Org.Apache.Kafka.Common.Serialization.Deserializer)">
   WrapperSerde(Serializer, Deserializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L657"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L773"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#org.apache.kafka.common.serialization.Serdes$WrapperSerde(org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Deserializer)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#org.apache.kafka.common.serialization.Serdes$WrapperSerde(org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Deserializer)</a></p>
@@ -550,7 +562,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.#ctor(System.Object[])">
   WrapperSerde(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1672"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1887"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -586,7 +598,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1679"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1895"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -618,7 +630,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1683"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1899"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -650,7 +662,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1687"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1903"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -682,7 +694,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1691"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1907"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -714,7 +726,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1695"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/AllPackageClasses.cs/#L1911"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -750,7 +762,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_Close" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L702"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L832"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#close--</a></p>
@@ -777,7 +789,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_Configure_Java_Util_Map_System_Boolean_" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.Configure(Java.Util.Map,System.Boolean)">
   Configure(Map, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L711"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L841"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#configure-java.util.Map-boolean-</a></p>
@@ -790,8 +802,8 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Util.Map.html">Map</a></dt>
-    <dd><p><a class="xref" href="api/Java.Util.Map.html">Map</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
@@ -813,7 +825,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_Deserializer" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.Deserializer">
   Deserializer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L686"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L801"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#deserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#deserializer--</a></p>
@@ -842,11 +854,44 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
 
 
+  <a id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_DeserializerDirect_" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.DeserializerDirect*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_DeserializerDirect" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.DeserializerDirect">
+  DeserializerDirect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L809"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#deserializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#deserializer--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Deserializer DeserializerDirect()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_Serializer_" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.Serializer*"></a>
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_Serializer" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.Serializer">
   Serializer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L695"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L817"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#serializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#serializer--</a></p>
@@ -875,6 +920,39 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
 
 
+  <a id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_SerializerDirect_" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.SerializerDirect*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_SerializerDirect" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.SerializerDirect">
+  SerializerDirect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L825"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#serializer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#serializer--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Serializer SerializerDirect()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serializer.html">Serializer</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serializer.html">Serializer</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="operators">Operators
 </h2>
 
@@ -883,7 +961,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde_op_Implicit_Org_Apache_Kafka_Common_Serialization_Serdes_WrapperSerde__Org_Apache_Kafka_Common_Serialization_Serde" data-uid="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.op_Implicit(Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde)~Org.Apache.Kafka.Common.Serialization.Serde">
   implicit operator Serde(WrapperSerde)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L668"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L784"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde.html">Serdes.WrapperSerde</a> to <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serde.html">Serde</a></p>
@@ -920,7 +998,7 @@ Class Serdes.WrapperSerde  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L649" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serdes.cs/#L765" class="edit-link">Edit this page</a>
         </div>
 
 

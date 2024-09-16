@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Common_Utils_Shell_ShellCommandExecutor" data-uid="Org.Apache.Kafka.Common.Utils.Shell.ShellCommandExecutor" class="text-break">
-Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/Shell.cs/#L131"><i class="bi bi-code-slash"></i></a>
+Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/Shell.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -310,6 +310,9 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
       <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
     </div>
     <div>
@@ -328,6 +331,12 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
@@ -340,7 +349,10 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
       <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.CastTo&lt;TNewClass&gt;(bool)</a>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.Dispose()</span>
@@ -492,7 +504,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Common_Utils_Shell_ShellCommandExecutor__ctor" data-uid="Org.Apache.Kafka.Common.Utils.Shell.ShellCommandExecutor.#ctor">
   ShellCommandExecutor()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -519,7 +531,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Common_Utils_Shell_ShellCommandExecutor__ctor_Java_Lang_String___System_Int64_" data-uid="Org.Apache.Kafka.Common.Utils.Shell.ShellCommandExecutor.#ctor(Java.Lang.String[],System.Int64)">
   ShellCommandExecutor(String[], long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/Shell.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/Shell.cs/#L137"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#org.apache.kafka.common.utils.Shell$ShellCommandExecutor(java.lang.String[],long)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#org.apache.kafka.common.utils.Shell$ShellCommandExecutor(java.lang.String[],long)</a></p>
@@ -532,8 +544,8 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="api/Java.Lang.String.html">String</a>[]</dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>[]</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
@@ -555,7 +567,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Common_Utils_Shell_ShellCommandExecutor__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Utils.Shell.ShellCommandExecutor.#ctor(System.Object[])">
   ShellCommandExecutor(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2155"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -591,7 +603,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Common_Utils_Shell_ShellCommandExecutor_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Utils.Shell.ShellCommandExecutor.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -623,7 +635,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Common_Utils_Shell_ShellCommandExecutor_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Utils.Shell.ShellCommandExecutor.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2166"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2214"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -655,7 +667,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Common_Utils_Shell_ShellCommandExecutor_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Utils.Shell.ShellCommandExecutor.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
@@ -687,7 +699,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Common_Utils_Shell_ShellCommandExecutor_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Utils.Shell.ShellCommandExecutor.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
@@ -719,7 +731,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Common_Utils_Shell_ShellCommandExecutor_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Utils.Shell.ShellCommandExecutor.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/AllPackageClasses.cs/#L2226"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
@@ -755,7 +767,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Common_Utils_Shell_ShellCommandExecutor_Execute" data-uid="Org.Apache.Kafka.Common.Utils.Shell.ShellCommandExecutor.Execute">
   Execute()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/Shell.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/Shell.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#execute--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#execute--</a></p>
@@ -777,7 +789,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Io.IOException.html">IOException</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.IOException.html">IOException</a></dt>
     <dd></dd>
   </dl>
 
@@ -787,7 +799,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h3 id="Org_Apache_Kafka_Common_Utils_Shell_ShellCommandExecutor_Output" data-uid="Org.Apache.Kafka.Common.Utils.Shell.ShellCommandExecutor.Output">
   Output()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/Shell.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/Shell.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#output--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.2/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#output--</a></p>
@@ -801,8 +813,8 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="api/Java.Lang.String.html">String</a></dt>
-    <dd><p><a class="xref" href="api/Java.Lang.String.html">String</a></p>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -820,7 +832,7 @@ Class Shell.ShellCommandExecutor  <a class="header-action link-secondary" title=
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/Shell.cs/#L131" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.6.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/Shell.cs/#L129" class="edit-link">Edit this page</a>
         </div>
 
 
