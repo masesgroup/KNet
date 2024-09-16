@@ -327,7 +327,7 @@ jobs:
 
       - name: Extract branch name
         run: |
-          echo "GITHUB_REF_NAME_FOR_DOCKER=$(echo ${{ github.ref_name }} | tr "/" _)" >> $GITHUB_ENV
+          echo "GITHUB_REF_NAME_FOR_DOCKER=$(echo ${{ github.ref_name }} | tr "/" -)" >> $GITHUB_ENV
         shell: bash
           
   execute_tests_linux:
