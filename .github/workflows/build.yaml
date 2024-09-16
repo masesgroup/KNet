@@ -331,13 +331,14 @@ jobs:
     services:
       kafka:
         # Private registry image
-        image: ghcr.io/${{ github.repository_owner }}/knet:${{ env.GITHUB_REF_NAME_FOR_DOCKER }}
+        image: ghcr.io/${{ github.repository_owner }}/knet:$GITHUB_REF_NAME_FOR_DOCKER
         credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
         ports:
           - 9092:9092
         env:
+          GITHUB_REF_NAME_FOR_DOCKER: ${{ env.GITHUB_REF_NAME_FOR_DOCKER }}
           KNET_DOCKER_RUNNING_MODE: server
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
           
