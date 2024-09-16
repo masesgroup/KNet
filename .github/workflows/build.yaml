@@ -309,7 +309,17 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           provenance: true
           sbom: true
-          
+
+      - name: Extract Image Id
+        run: |
+          echo "DOCKER_IMAGE_ID=$(echo ${{ steps.push.outputs.imageid }})" >> $GITHUB_ENV
+        shell: bash
+        
+      - name: Print Image Id
+        run: |
+          echo ${{ env.DOCKER_IMAGE_ID }}
+        shell: bash
+
       - name: Attest GitHub
         uses: actions/attest-build-provenance@v1
         id: attest
@@ -323,7 +333,7 @@ jobs:
     services:
       kafka:
         # Private registry image
-        image: ghcr.io/${{ github.repository_owner }}/knet:${{ github.ref_name }}
+        image: ghcr.io/${{ github.repository_owner }}/knet:${{ env.DOCKER_IMAGE_ID }}
         credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
