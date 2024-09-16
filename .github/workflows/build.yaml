@@ -329,14 +329,6 @@ jobs:
         run: |
           echo "GITHUB_REF_NAME_FOR_DOCKER=$(echo ${{ github.ref_name }} | tr "/" -)" >> $GITHUB_ENV
         shell: bash
-          
-      - name: Attest GitHub
-        uses: actions/attest-build-provenance@v1
-        id: attest
-        with:
-          subject-name: ghcr.io/${{ github.repository_owner }}/knet
-          subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true
 
   execute_tests_linux:
     needs: [build_windows, build_container_knet]
