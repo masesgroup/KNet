@@ -135,7 +135,7 @@
 				<configuration>
 					<compilerArgs>
 						<arg>-cp</arg>
-						<arg>${originalClassPath}${path.separator}${basedir}/${jcobridgepath}${path.separator}${basedir}/${jnetpath}</arg>
+						<arg>"${originalClassPath}${path.separator}${basedir}/${jcobridgepath}${path.separator}${basedir}/${jnetpath}"</arg>
 					</compilerArgs>
 				</configuration>
 			</plugin>
