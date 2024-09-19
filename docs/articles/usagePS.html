@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>PowerShell module of .NET suite for Apache Kafka | MASES Group - KNet </title>
+      <title>PowerShell module of .NET suite for Apache Kafka™ | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="PowerShell module of .NET suite for Apache Kafka | MASES Group - KNet ">
-      <meta name="description" content="Describes how to use PowerShell module of .NET suite for Apache Kafka">
+      <meta name="title" content="PowerShell module of .NET suite for Apache Kafka™ | MASES Group - KNet ">
+      <meta name="description" content="Describes how to use PowerShell module of .NET suite for Apache Kafka™">
       
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -98,10 +98,10 @@
 </code></pre>
 <p>then the user can use objects created using <strong>New-KObject</strong> and other cmdlets, otherwise it is possible to invoke the desired Main-Class command which automatically executes <strong>Start-KNetPS</strong>.</p>
 <p>Here below two simple examples of producer/consumer from PowerShell.
-The examples are very minimal, but demonstrate how send to and receive from an Apache Kafka cluster.
-The terms <strong>MY_KAFKA_CLUSTER</strong> shall be replaced with the address of Apache Kafka cluster.</p>
+The examples are very minimal, but demonstrate how send to and receive from an Apache Kafka™ cluster.
+The terms <strong>MY_KAFKA_CLUSTER</strong> shall be replaced with the address of Apache Kafka™ cluster.</p>
 <h3 id="producer">Producer</h3>
-<p>The following snippet builds needed objects to send a record to an Apache Kafka cluster:</p>
+<p>The following snippet builds needed objects to send a record to an Apache Kafka™ cluster:</p>
 <pre><code class="lang-powershell">
 Start-KNetPS
 $prodConfig = New-ProducerConfigBuilder
@@ -112,7 +112,7 @@ $sendResult = Invoke-Send -Producer $producer -ProducerRecord $record
 
 </code></pre>
 <h3 id="consumer">Consumer</h3>
-<p>The following snippet builds needed objects to subscribe to an Apache Kafka cluster and receives records from the specified topic:</p>
+<p>The following snippet builds needed objects to subscribe to an Apache Kafka™ cluster and receives records from the specified topic:</p>
 <pre><code class="lang-powershell">
 Start-KNetPS
 $builder = New-ConsumerConfigBuilder
@@ -147,7 +147,7 @@ $record = Get-ConsumerRecord -KeyClass &quot;System.String&quot; -ValueClass &qu
 <li><strong>Invoke-Send</strong>: sends an instance of ProducerRecord to an instance of KafkaProducer</li>
 </ul>
 <h3 id="main-class-command-cmdlets">Main-Class command cmdlets</h3>
-<p>Here a list of cmdlets which executes well known tasks defined from Apache Kafka like you use the scripts available in the Apache Kafka release:</p>
+<p>Here a list of cmdlets which executes well known tasks defined from Apache Kafka™ like you use the scripts available in the Apache Kafka™ release:</p>
 <ul>
 <li><strong>Start-KNetPS</strong>: Initialize the engine and can be the first command to be invoked. The arguments are:
 <ul>
