@@ -60,7 +60,7 @@ jobs:
       - name: Clear Java generated files
         run: Remove-Item .\src\jvm\knet\src\main\java\org\mases\knet\generated\* -Recurse -Force -Exclude README.md
 
-      - run: dotnet tool update --version 2.5.8 -g MASES.JNetReflector
+      - run: dotnet tool update --version 2.5.9 -g MASES.JNetReflector
 
       - name: Build classes
         shell: cmd
