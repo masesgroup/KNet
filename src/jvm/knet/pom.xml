@@ -43,6 +43,7 @@
 		<kafkaVersion>3.8.0</kafkaVersion>
 		<knetVersion>2.8.0.0</knetVersion>
 		<jcobridgepath>../../../bin/net8.0/JCOBridge.jar</jcobridgepath>
+		<jnetpath>../../../bin/net8.0/jars/jnet-2.5.9.0.jar</jnetpath>
 	</properties>
 	<distributionManagement>
 		<snapshotRepository>
@@ -134,7 +135,7 @@
 				<configuration>
 					<compilerArgs>
 						<arg>-cp</arg>
-						<arg>${originalClassPath}${path.separator}${basedir}/${jcobridgepath}</arg>
+						<arg>${originalClassPath}${path.separator}${basedir}/${jcobridgepath}${path.separator}${basedir}/${jnetpath}</arg>
 					</compilerArgs>
 				</configuration>
 			</plugin>
