@@ -91,7 +91,7 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
       - name: Download latest published version of JNetReflector
-        run: dotnet tool update --version 2.5.8 -g MASES.JNetReflector
+        run: dotnet tool update --version 2.5.9 -g MASES.JNetReflector
         if: ${{ inputs.UseLatestJNetReflector == false }}
 
       - name: Build classes with unpublished JNetReflector
@@ -110,7 +110,12 @@ jobs:
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
-      - name: Try compilation
+      - name: Try compilation of Jars
+        continue-on-error: ${{ inputs.ContinueOnLatestJNetReflectorError == true }}
+        if: ${{ inputs.UseLatestJNetReflector == true }}
+        run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
+
+      - name: Try compilation of C#
         continue-on-error: ${{ inputs.ContinueOnLatestJNetReflectorError == true }}
         if: ${{ inputs.UseLatestJNetReflector == true }}
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
