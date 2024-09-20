@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>Streams SDK of .NET suite for Apache Kafka | MASES Group - KNet </title>
+      <title>Streams SDK of .NET suite for Apache Kafka™ | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Streams SDK of .NET suite for Apache Kafka | MASES Group - KNet ">
-      <meta name="description" content="Describes how to use Streams SDK of .NET suite for Apache Kafka">
+      <meta name="title" content="Streams SDK of .NET suite for Apache Kafka™ | MASES Group - KNet ">
+      <meta name="description" content="Describes how to use Streams SDK of .NET suite for Apache Kafka™">
       
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -83,10 +83,10 @@
         <article data-uid="">
 <h1 id="knet-streams-sdk">KNet: Streams SDK</h1>
 
-<p>This is only a quick introduction to KNet Streams SDK, many other information related to Apache Kafka Streams can be found at the following links: <a href="https://kafka.apache.org/documentation/#streams">https://kafka.apache.org/documentation/#streams</a> and <a href="https://kafka.apache.org/documentation/streams/">https://kafka.apache.org/documentation/streams/</a></p>
+<p>This is only a quick introduction to KNet Streams SDK, many other information related to Apache Kafka™ Streams can be found at the following links: <a href="https://kafka.apache.org/documentation/#streams">https://kafka.apache.org/documentation/#streams</a> and <a href="https://kafka.apache.org/documentation/streams/">https://kafka.apache.org/documentation/streams/</a></p>
 <h2 id="why-knet-streams-sdk">Why KNet Streams SDK</h2>
-<p>KNet Streams SDK adds the ability to manage complex .NET types in Apache Kafka Streams without manage them in the JVM.
-<strong>The Apache Kafka Streams APIs available in .NET suite for Apache Kafka works well if the types used are known within the JVM.</strong>
+<p>KNet Streams SDK adds the ability to manage complex .NET types in Apache Kafka™ Streams without manage them in the JVM.
+<strong>The Apache Kafka™ Streams APIs available in .NET suite for Apache Kafka™ works well if the types used are known within the JVM.</strong>
 Starting from the previous sentence, it works well using native types (bool, string, long, int, and so on), however it does not work if the type in .NET does not have a JVM counterpart.</p>
 <p>To solve this limitation there are two ways:</p>
 <ol>
@@ -94,7 +94,7 @@ Starting from the previous sentence, it works well using native types (bool, str
 <ul>
 <li>create the JVM class (in Java or any other language supported)</li>
 <li>reflect the JVM class with JNetReflector, or manually create it, in .NET</li>
-<li>use the generated .NET class as key, or value, type in Apache Kafka Streams API available in <em>.NET suite for Apache Kafka</em></li>
+<li>use the generated .NET class as key, or value, type in Apache Kafka™ Streams API available in <em>.NET suite for Apache Kafka</em></li>
 </ul>
 </li>
 <li>otherwise use directly the .NET types in the KNet Streams API available in <em>.NET suite for Apache Kafka</em>; this implies:
@@ -105,9 +105,9 @@ Starting from the previous sentence, it works well using native types (bool, str
 </li>
 </ol>
 <h2 id="general">General</h2>
-<p>The KNet Streams SDK is a set of API which expose, in .NET, the one available in Apache Kafka Streams and adds the feature to directly manages serializable types of .NET:</p>
+<p>The KNet Streams SDK is a set of API which expose, in .NET, the one available in Apache Kafka™ Streams and adds the feature to directly manages serializable types of .NET:</p>
 <ul>
-<li>The implementation is backed by a standard Apache Kafka Streams which is instructed to work with raw data (i.e. array of bytes);</li>
+<li>The implementation is backed by a standard Apache Kafka™ Streams which is instructed to work with raw data (i.e. array of bytes);</li>
 <li>The data are exposed, in .NET, using the types assigned, most of translation jobs are supported by <a href="usageSerDes.html">KNet serializers</a>.</li>
 </ul>
 <h2 id="api-set">API set</h2>
@@ -130,7 +130,7 @@ Starting from the previous sentence, it works well using native types (bool, str
 </ul>
 </li>
 </ul>
-<p><strong>Current available APIs cover a subset of the full APIs available in Apache Kafka Streams and some classes are only placeholder for some implemented APIs.</strong></p>
+<p><strong>Current available APIs cover a subset of the full APIs available in Apache Kafka™ Streams and some classes are only placeholder for some implemented APIs.</strong></p>
 <h2 id="examples">Examples</h2>
 <p>Following two examples describing two different cases.</p>
 <h3 id="simple-types-example">Simple types example</h3>
@@ -141,7 +141,7 @@ string storageId = &quot;myStorage&quot;;
 StreamsConfigBuilder streamsConfig = StreamsConfigBuilder.Create();
 StreamsBuilder builder = new StreamsBuilder(streamsConfig);
 
-Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka.Streams.State.Stores.InMemoryKeyValueStore(storageId);
+Org.Apache.Kafka™.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka™.Streams.State.Stores.InMemoryKeyValueStore(storageId);
 Materialized&lt;string, string&gt; materialized = Materialized&lt;string, string&gt;.As(storeSupplier);
 GlobalKTable&lt;string, string&gt; globalTable = builder.GlobalTable(topicName, materialized);
 Topology topology = builder.Build();
@@ -189,7 +189,7 @@ streamsConfig.KNetValueSerDes = typeof(JsonSerDes.Value&lt;&gt;);
 
 StreamsBuilder builder = new StreamsBuilder(streamsConfig);
 
-Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka.Streams.State.Stores.InMemoryKeyValueStore(storageId);
+Org.Apache.Kafka™.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka™.Streams.State.Stores.InMemoryKeyValueStore(storageId);
 Materialized&lt;int, TestType&gt; materialized = Materialized&lt;int, TestType&gt;.As(storeSupplier);
 GlobalKTable&lt;int, TestType&gt; globalTable = builder.GlobalTable(topicName, materialized);
 Topology topology = builder.Build();
