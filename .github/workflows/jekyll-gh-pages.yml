@@ -46,6 +46,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -57,10 +59,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy
     steps:
-      - name: IndexNow Action for JNet
+      - name: IndexNow Action
         uses: bojieyang/indexnow-action@v2
         with:
-          sitemap-location: 'https://knet.masesgroup.com/sitemap.xml'
+          sitemap-location: '${{ needs.deploy.outputs.page_url }}sitemap.xml'
           key: ${{ secrets.INDEXNOW_KEY }}
           limit: 10000
           timeout: 600000
