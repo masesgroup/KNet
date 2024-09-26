@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="long"/></returns>
         public static long Compute(byte[] arg0, int arg1, int arg2)
         {
-            return SExecute<long>(LocalBridgeClazz, "compute", arg0, arg1, arg2);
+            return SExecuteWithSignature<long>(LocalBridgeClazz, "compute", "([BII)J", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Crc32C.html#compute-java.nio.ByteBuffer-int-int-"/>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="long"/></returns>
         public static long Compute(Java.Nio.ByteBuffer arg0, int arg1, int arg2)
         {
-            return SExecute<long>(LocalBridgeClazz, "compute", arg0, arg1, arg2);
+            return SExecuteWithSignature<long>(LocalBridgeClazz, "compute", "(Ljava/nio/ByteBuffer;II)J", arg0, arg1, arg2);
         }
 
         #endregion

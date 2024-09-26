@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Clients
         /// <returns><see cref="Java.Util.List"/></returns>
         public static Java.Util.List ConfiguredInterceptors(Org.Apache.Kafka.Common.Config.AbstractConfig arg0, Java.Lang.String arg1, Java.Lang.Class arg2)
         {
-            return SExecute<Java.Util.List>(LocalBridgeClazz, "configuredInterceptors", arg0, arg1, arg2);
+            return SExecuteWithSignature<Java.Util.List>(LocalBridgeClazz, "configuredInterceptors", "(Lorg/apache/kafka/common/config/AbstractConfig;Ljava/lang/String;Ljava/lang/Class;)Ljava/util/List;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/ClientUtils.html#parseAndValidateAddresses-java.util.List-java.lang.String-"/>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Clients
         /// <returns><see cref="Java.Util.List"/></returns>
         public static Java.Util.List<Java.Net.InetSocketAddress> ParseAndValidateAddresses(Java.Util.List<Java.Lang.String> arg0, Java.Lang.String arg1)
         {
-            return SExecute<Java.Util.List<Java.Net.InetSocketAddress>>(LocalBridgeClazz, "parseAndValidateAddresses", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.List<Java.Net.InetSocketAddress>>(LocalBridgeClazz, "parseAndValidateAddresses", "(Ljava/util/List;Ljava/lang/String;)Ljava/util/List;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/ClientUtils.html#parseAndValidateAddresses-java.util.List-org.apache.kafka.clients.ClientDnsLookup-"/>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Clients
         /// <returns><see cref="Java.Util.List"/></returns>
         public static Java.Util.List<Java.Net.InetSocketAddress> ParseAndValidateAddresses(Java.Util.List<Java.Lang.String> arg0, Org.Apache.Kafka.Clients.ClientDnsLookup arg1)
         {
-            return SExecute<Java.Util.List<Java.Net.InetSocketAddress>>(LocalBridgeClazz, "parseAndValidateAddresses", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.List<Java.Net.InetSocketAddress>>(LocalBridgeClazz, "parseAndValidateAddresses", "(Ljava/util/List;Lorg/apache/kafka/clients/ClientDnsLookup;)Ljava/util/List;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/ClientUtils.html#parseAndValidateAddresses-org.apache.kafka.common.config.AbstractConfig-"/>

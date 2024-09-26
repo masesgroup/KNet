@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         public void Error(Java.Lang.String arg0, Java.Lang.String arg1)
         {
-            IExecute("error", arg0, arg1);
+            IExecuteWithSignature("error", "(Ljava/lang/String;Ljava/lang/String;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerExtensionsValidatorCallback.html#valid-java.lang.String-"/>

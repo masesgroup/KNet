@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// <returns><see cref="Javax.Net.Ssl.SSLEngine"/></returns>
         public Javax.Net.Ssl.SSLEngine CreateClientSslEngine(Java.Lang.String arg0, int arg1, Java.Lang.String arg2)
         {
-            return IExecute<Javax.Net.Ssl.SSLEngine>("createClientSslEngine", arg0, arg1, arg2);
+            return IExecuteWithSignature<Javax.Net.Ssl.SSLEngine>("createClientSslEngine", "(Ljava/lang/String;ILjava/lang/String;)Ljavax/net/ssl/SSLEngine;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#createServerSslEngine-java.lang.String-int-"/>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// <returns><see cref="Javax.Net.Ssl.SSLEngine"/></returns>
         public Javax.Net.Ssl.SSLEngine CreateServerSslEngine(Java.Lang.String arg0, int arg1)
         {
-            return IExecute<Javax.Net.Ssl.SSLEngine>("createServerSslEngine", arg0, arg1);
+            return IExecuteWithSignature<Javax.Net.Ssl.SSLEngine>("createServerSslEngine", "(Ljava/lang/String;I)Ljavax/net/ssl/SSLEngine;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#close--"/>

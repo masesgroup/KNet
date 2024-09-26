@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Tools
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         public void Send(Java.Lang.String arg0, Java.Lang.String arg1)
         {
-            IExecute("send", arg0, arg1);
+            IExecuteWithSignature("send", "(Ljava/lang/String;Ljava/lang/String;)V", arg0, arg1);
         }
 
         #endregion

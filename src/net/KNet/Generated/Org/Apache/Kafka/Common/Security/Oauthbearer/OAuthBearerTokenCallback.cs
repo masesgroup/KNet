@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         public void Error(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         {
-            IExecute("error", arg0, arg1, arg2);
+            IExecuteWithSignature("error", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerTokenCallback.html#token-org.apache.kafka.common.security.oauthbearer.OAuthBearerToken-"/>

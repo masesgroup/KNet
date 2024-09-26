@@ -177,7 +177,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static Java.Lang.String ExecCommand(Java.Lang.String[] arg0, long arg1)
         {
-            return SExecute<Java.Lang.String>(LocalBridgeClazz, "execCommand", arg0, arg1);
+            return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "execCommand", "([Ljava/lang/String;J)Ljava/lang/String;", arg0, arg1);
         }
 
         #endregion

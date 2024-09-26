@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation"/></returns>
         public static Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation FromRecord(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg2, Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg3, long arg4, long arg5, long arg6)
         {
-            return SExecute<Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation>(LocalBridgeClazz, "fromRecord", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+            return SExecuteWithSignature<Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation>(LocalBridgeClazz, "fromRecord", "(Ljava/lang/String;Lorg/apache/kafka/common/security/auth/KafkaPrincipal;Lorg/apache/kafka/common/security/auth/KafkaPrincipal;Ljava/util/Collection;JJJ)Lorg/apache/kafka/common/security/token/delegation/TokenInformation;", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
 
         #endregion

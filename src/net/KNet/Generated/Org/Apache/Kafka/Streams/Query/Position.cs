@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.Position"/></returns>
         public Org.Apache.Kafka.Streams.Query.Position WithComponent(Java.Lang.String arg0, int arg1, long arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Query.Position>("withComponent", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.Position>("withComponent", "(Ljava/lang/String;IJ)Lorg/apache/kafka/streams/query/Position;", arg0, arg1, arg2);
         }
 
         #endregion

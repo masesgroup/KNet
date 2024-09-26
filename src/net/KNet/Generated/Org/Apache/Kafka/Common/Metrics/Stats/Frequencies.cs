@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Stats.Frequencies"/></returns>
         public static Org.Apache.Kafka.Common.Metrics.Stats.Frequencies ForBooleanValues(Org.Apache.Kafka.Common.MetricName arg0, Org.Apache.Kafka.Common.MetricName arg1)
         {
-            return SExecute<Org.Apache.Kafka.Common.Metrics.Stats.Frequencies>(LocalBridgeClazz, "forBooleanValues", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Stats.Frequencies>(LocalBridgeClazz, "forBooleanValues", "(Lorg/apache/kafka/common/MetricName;Lorg/apache/kafka/common/MetricName;)Lorg/apache/kafka/common/metrics/stats/Frequencies;", arg0, arg1);
         }
 
         #endregion
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <returns><see cref="double"/></returns>
         public double Frequency(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, long arg1, double arg2)
         {
-            return IExecute<double>("frequency", arg0, arg1, arg2);
+            return IExecuteWithSignature<double>("frequency", "(Lorg/apache/kafka/common/metrics/MetricConfig;JD)D", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Frequencies.html#stats--"/>

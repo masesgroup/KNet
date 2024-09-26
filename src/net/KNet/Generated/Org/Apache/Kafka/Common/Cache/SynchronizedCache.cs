@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// <param name="arg1"><see cref="object"/></param>
         public void Put(object arg0, object arg1)
         {
-            IExecute("put", arg0, arg1);
+            IExecuteWithSignature("put", "(Ljava/lang/Object;Ljava/lang/Object;)V", arg0, arg1);
         }
 
         #endregion
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// <param name="arg1"><typeparamref name="V"/></param>
         public void Put(K arg0, V arg1)
         {
-            IExecute("put", arg0, arg1);
+            IExecuteWithSignature("put", "(Ljava/lang/Object;Ljava/lang/Object;)V", arg0, arg1);
         }
 
         #endregion

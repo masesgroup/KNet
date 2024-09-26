@@ -257,7 +257,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Set"/></returns>
         public static Java.Util.Set<E> Diff<E>(Java.Util.Function.Supplier<Java.Util.Set<E>> arg0, Java.Util.Set<E> arg1, Java.Util.Set<E> arg2)
         {
-            return SExecute<Java.Util.Set<E>>(LocalBridgeClazz, "diff", arg0, arg1, arg2);
+            return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "diff", "(Ljava/util/function/Supplier;Ljava/util/Set;Ljava/util/Set;)Ljava/util/Set;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#intersection-java.util.function.Supplier-java.util.Set-java.util.Set[]-"/>
@@ -269,7 +269,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Set"/></returns>
         public static Java.Util.Set<E> Intersection<E>(Java.Util.Function.Supplier<Java.Util.Set<E>> arg0, Java.Util.Set<E> arg1, params Java.Util.Set<E>[] arg2)
         {
-            if (arg2.Length == 0) return SExecute<Java.Util.Set<E>>(LocalBridgeClazz, "intersection", arg0, arg1); else return SExecute<Java.Util.Set<E>>(LocalBridgeClazz, "intersection", arg0, arg1, arg2);
+            if (arg2.Length == 0) return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "intersection", "(Ljava/util/function/Supplier;Ljava/util/Set;[Ljava/util/Set;)Ljava/util/Set;", arg0, arg1); else return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "intersection", "(Ljava/util/function/Supplier;Ljava/util/Set;[Ljava/util/Set;)Ljava/util/Set;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#union-java.util.function.Supplier-java.util.Set[]-"/>
@@ -280,7 +280,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Set"/></returns>
         public static Java.Util.Set<E> Union<E>(Java.Util.Function.Supplier<Java.Util.Set<E>> arg0, params Java.Util.Set<E>[] arg1)
         {
-            if (arg1.Length == 0) return SExecute<Java.Util.Set<E>>(LocalBridgeClazz, "union", arg0); else return SExecute<Java.Util.Set<E>>(LocalBridgeClazz, "union", arg0, arg1);
+            if (arg1.Length == 0) return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "union", "(Ljava/util/function/Supplier;[Ljava/util/Set;)Ljava/util/Set;", arg0); else return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "union", "(Ljava/util/function/Supplier;[Ljava/util/Set;)Ljava/util/Set;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#entriesToMap-java.util.function.Supplier-"/>
@@ -307,7 +307,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Lang.String"/></returns>
         public static Java.Lang.String MkString<K, V>(Java.Util.Map<K, V> arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Lang.String arg3, Java.Lang.String arg4)
         {
-            return SExecute<Java.Lang.String>(LocalBridgeClazz, "mkString", arg0, arg1, arg2, arg3, arg4);
+            return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "mkString", "(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#filterMap-java.util.Map-java.util.function.Predicate-"/>
@@ -319,7 +319,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Map"/></returns>
         public static Java.Util.Map<K, V> FilterMap<K, V>(Java.Util.Map<K, V> arg0, Java.Util.Function.Predicate<Java.Util.Map.Entry<K, V>> arg1)
         {
-            return SExecute<Java.Util.Map<K, V>>(LocalBridgeClazz, "filterMap", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.Map<K, V>>(LocalBridgeClazz, "filterMap", "(Ljava/util/Map;Ljava/util/function/Predicate;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#mkMap-java.util.Map.Entry[]-"/>
@@ -330,7 +330,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Map"/></returns>
         public static Java.Util.Map<K, V> MkMap<K, V>(params Java.Util.Map.Entry<K, V>[] arg0)
         {
-            if (arg0.Length == 0) return SExecute<Java.Util.Map<K, V>>(LocalBridgeClazz, "mkMap"); else return SExecute<Java.Util.Map<K, V>>(LocalBridgeClazz, "mkMap", arg0);
+            if (arg0.Length == 0) return SExecuteWithSignature<Java.Util.Map<K, V>>(LocalBridgeClazz, "mkMap", "([Ljava/util/Map$Entry;)Ljava/util/Map;"); else return SExecuteWithSignature<Java.Util.Map<K, V>>(LocalBridgeClazz, "mkMap", "([Ljava/util/Map$Entry;)Ljava/util/Map;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#mkEntry-java.lang.Object-java.lang.Object-"/>
@@ -342,7 +342,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Map.Entry"/></returns>
         public static Java.Util.Map.Entry<K, V> MkEntry<K, V>(K arg0, V arg1)
         {
-            return SExecute<Java.Util.Map.Entry<K, V>>(LocalBridgeClazz, "mkEntry", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.Map.Entry<K, V>>(LocalBridgeClazz, "mkEntry", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#covariantCast-java.util.Iterator-"/>
@@ -366,7 +366,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Lang.ClassNotFoundException"/>
         public static Java.Lang.Class LoadClass<ReturnExtendsT, T>(Java.Lang.String arg0, Java.Lang.Class arg1) where ReturnExtendsT : T
         {
-            return SExecute<Java.Lang.Class>(LocalBridgeClazz, "loadClass", arg0, arg1);
+            return SExecuteWithSignature<Java.Lang.Class>(LocalBridgeClazz, "loadClass", "(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Class;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#safe-java.util.List-"/>
@@ -407,7 +407,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.List"/></returns>
         public static Java.Util.List<T> ToList<T>(Java.Util.Iterator<T> arg0, Java.Util.Function.Predicate<T> arg1)
         {
-            return SExecute<Java.Util.List<T>>(LocalBridgeClazz, "toList", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.List<T>>(LocalBridgeClazz, "toList", "(Ljava/util/Iterator;Ljava/util/function/Predicate;)Ljava/util/List;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#toList-java.util.Iterator-"/>
@@ -448,7 +448,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><typeparamref name="T"/></returns>
         public static T NewInstance<T>(Java.Lang.Class arg0, Java.Lang.Class arg1)
         {
-            return SExecute<T>(LocalBridgeClazz, "newInstance", arg0, arg1);
+            return SExecuteWithSignature<T>(LocalBridgeClazz, "newInstance", "(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#newInstance-java.lang.Class-"/>
@@ -470,7 +470,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Lang.ClassNotFoundException"/>
         public static T NewInstance<T>(Java.Lang.String arg0, Java.Lang.Class arg1)
         {
-            return SExecute<T>(LocalBridgeClazz, "newInstance", arg0, arg1);
+            return SExecuteWithSignature<T>(LocalBridgeClazz, "newInstance", "(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#newParameterizedInstance-java.lang.String-java.lang.Object[]-"/>
@@ -482,7 +482,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Lang.ClassNotFoundException"/>
         public static T NewParameterizedInstance<T>(Java.Lang.String arg0, params object[] arg1)
         {
-            if (arg1.Length == 0) return SExecute<T>(LocalBridgeClazz, "newParameterizedInstance", arg0); else return SExecute<T>(LocalBridgeClazz, "newParameterizedInstance", arg0, arg1);
+            if (arg1.Length == 0) return SExecuteWithSignature<T>(LocalBridgeClazz, "newParameterizedInstance", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;", arg0); else return SExecuteWithSignature<T>(LocalBridgeClazz, "newParameterizedInstance", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#entriesWithPrefix-java.util.Map-java.lang.String-boolean-"/>
@@ -494,7 +494,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Map"/></returns>
         public static Java.Util.Map<Java.Lang.String, V> EntriesWithPrefix<V>(Java.Util.Map<Java.Lang.String, V> arg0, Java.Lang.String arg1, bool arg2)
         {
-            return SExecute<Java.Util.Map<Java.Lang.String, V>>(LocalBridgeClazz, "entriesWithPrefix", arg0, arg1, arg2);
+            return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, V>>(LocalBridgeClazz, "entriesWithPrefix", "(Ljava/util/Map;Ljava/lang/String;Z)Ljava/util/Map;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#entriesWithPrefix-java.util.Map-java.lang.String-"/>
@@ -505,7 +505,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Map"/></returns>
         public static Java.Util.Map<Java.Lang.String, V> EntriesWithPrefix<V>(Java.Util.Map<Java.Lang.String, V> arg0, Java.Lang.String arg1)
         {
-            return SExecute<Java.Util.Map<Java.Lang.String, V>>(LocalBridgeClazz, "entriesWithPrefix", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, V>>(LocalBridgeClazz, "entriesWithPrefix", "(Ljava/util/Map;Ljava/lang/String;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#isBlank-java.lang.String-"/>
@@ -524,7 +524,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="bool"/></returns>
         public static bool IsEqualConstantTime(char[] arg0, char[] arg1)
         {
-            return SExecute<bool>(LocalBridgeClazz, "isEqualConstantTime", arg0, arg1);
+            return SExecuteWithSignature<bool>(LocalBridgeClazz, "isEqualConstantTime", "([C[C)Z", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#validHostPattern-java.lang.String-"/>
@@ -552,7 +552,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="byte"/></returns>
         public static byte[] GetNullableArray(Java.Nio.ByteBuffer arg0, int arg1)
         {
-            return SExecuteArray<byte>(LocalBridgeClazz, "getNullableArray", arg0, arg1);
+            return SExecuteWithSignatureArray<byte>(LocalBridgeClazz, "getNullableArray", "(Ljava/nio/ByteBuffer;I)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#getNullableSizePrefixedArray-java.nio.ByteBuffer-"/>
@@ -572,7 +572,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="byte"/></returns>
         public static byte[] ReadBytes(Java.Nio.ByteBuffer arg0, int arg1, int arg2)
         {
-            return SExecuteArray<byte>(LocalBridgeClazz, "readBytes", arg0, arg1, arg2);
+            return SExecuteWithSignatureArray<byte>(LocalBridgeClazz, "readBytes", "(Ljava/nio/ByteBuffer;II)[B", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#readBytes-java.nio.ByteBuffer-"/>
@@ -592,7 +592,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="byte"/></returns>
         public static byte[] ToArray(Java.Nio.ByteBuffer arg0, int arg1, int arg2)
         {
-            return SExecuteArray<byte>(LocalBridgeClazz, "toArray", arg0, arg1, arg2);
+            return SExecuteWithSignatureArray<byte>(LocalBridgeClazz, "toArray", "(Ljava/nio/ByteBuffer;II)[B", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#toArray-java.nio.ByteBuffer-int-"/>
@@ -602,7 +602,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="byte"/></returns>
         public static byte[] ToArray(Java.Nio.ByteBuffer arg0, int arg1)
         {
-            return SExecuteArray<byte>(LocalBridgeClazz, "toArray", arg0, arg1);
+            return SExecuteWithSignatureArray<byte>(LocalBridgeClazz, "toArray", "(Ljava/nio/ByteBuffer;I)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#toArray-java.nio.ByteBuffer-"/>
@@ -658,7 +658,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static int ReadFully(Java.Io.InputStream arg0, Java.Nio.ByteBuffer arg1)
         {
-            return SExecute<int>(LocalBridgeClazz, "readFully", arg0, arg1);
+            return SExecuteWithSignature<int>(LocalBridgeClazz, "readFully", "(Ljava/io/InputStream;Ljava/nio/ByteBuffer;)I", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#to32BitField-java.util.Set-"/>
@@ -704,7 +704,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Lang.String"/></returns>
         public static Java.Lang.String FormatAddress(Java.Lang.String arg0, Java.Lang.Integer arg1)
         {
-            return SExecute<Java.Lang.String>(LocalBridgeClazz, "formatAddress", arg0, arg1);
+            return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "formatAddress", "(Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/String;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#formatBytes-long-"/>
@@ -743,7 +743,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Lang.String"/></returns>
         public static Java.Lang.String ReplaceSuffix(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         {
-            return SExecute<Java.Lang.String>(LocalBridgeClazz, "replaceSuffix", arg0, arg1, arg2);
+            return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "replaceSuffix", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#stackTrace-java.lang.Throwable-"/>
@@ -781,7 +781,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Lang.String"/></returns>
         public static Java.Lang.String Utf8(Java.Nio.ByteBuffer arg0, int arg1, int arg2)
         {
-            return SExecute<Java.Lang.String>(LocalBridgeClazz, "utf8", arg0, arg1, arg2);
+            return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "utf8", "(Ljava/nio/ByteBuffer;II)Ljava/lang/String;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#utf8-java.nio.ByteBuffer-int-"/>
@@ -791,7 +791,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Lang.String"/></returns>
         public static Java.Lang.String Utf8(Java.Nio.ByteBuffer arg0, int arg1)
         {
-            return SExecute<Java.Lang.String>(LocalBridgeClazz, "utf8", arg0, arg1);
+            return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "utf8", "(Ljava/nio/ByteBuffer;I)Ljava/lang/String;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#utf8-java.nio.ByteBuffer-"/>
@@ -819,7 +819,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
         public static Java.Nio.ByteBuffer EnsureCapacity(Java.Nio.ByteBuffer arg0, int arg1)
         {
-            return SExecute<Java.Nio.ByteBuffer>(LocalBridgeClazz, "ensureCapacity", arg0, arg1);
+            return SExecuteWithSignature<Java.Nio.ByteBuffer>(LocalBridgeClazz, "ensureCapacity", "(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#readBytes-java.nio.ByteBuffer-int-"/>
@@ -829,7 +829,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
         public static Java.Nio.ByteBuffer ReadBytes(Java.Nio.ByteBuffer arg0, int arg1)
         {
-            return SExecute<Java.Nio.ByteBuffer>(LocalBridgeClazz, "readBytes", arg0, arg1);
+            return SExecuteWithSignature<Java.Nio.ByteBuffer>(LocalBridgeClazz, "readBytes", "(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#sizeDelimited-java.nio.ByteBuffer-int-"/>
@@ -839,7 +839,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
         public static Java.Nio.ByteBuffer SizeDelimited(Java.Nio.ByteBuffer arg0, int arg1)
         {
-            return SExecute<Java.Nio.ByteBuffer>(LocalBridgeClazz, "sizeDelimited", arg0, arg1);
+            return SExecuteWithSignature<Java.Nio.ByteBuffer>(LocalBridgeClazz, "sizeDelimited", "(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#wrapNullable-byte[]-"/>
@@ -877,7 +877,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Map"/></returns>
         public static Java.Util.Map<Java.Lang.String, Java.Lang.String> ParseMap(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         {
-            return SExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>(LocalBridgeClazz, "parseMap", arg0, arg1, arg2);
+            return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>(LocalBridgeClazz, "parseMap", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#propsToStringMap-java.util.Properties-"/>
@@ -897,7 +897,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static Java.Util.Properties LoadProps(Java.Lang.String arg0, Java.Util.List<Java.Lang.String> arg1)
         {
-            return SExecute<Java.Util.Properties>(LocalBridgeClazz, "loadProps", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.Properties>(LocalBridgeClazz, "loadProps", "(Ljava/lang/String;Ljava/util/List;)Ljava/util/Properties;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#loadProps-java.lang.String-"/>
@@ -955,7 +955,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="long"/></returns>
         public static long Max(long arg0, params long[] arg1)
         {
-            if (arg1.Length == 0) return SExecute<long>(LocalBridgeClazz, "max", arg0); else return SExecute<long>(LocalBridgeClazz, "max", arg0, arg1);
+            if (arg1.Length == 0) return SExecuteWithSignature<long>(LocalBridgeClazz, "max", "(J[J)J", arg0); else return SExecuteWithSignature<long>(LocalBridgeClazz, "max", "(J[J)J", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#min-long-long[]-"/>
@@ -965,7 +965,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="long"/></returns>
         public static long Min(long arg0, params long[] arg1)
         {
-            if (arg1.Length == 0) return SExecute<long>(LocalBridgeClazz, "min", arg0); else return SExecute<long>(LocalBridgeClazz, "min", arg0, arg1);
+            if (arg1.Length == 0) return SExecuteWithSignature<long>(LocalBridgeClazz, "min", "(J[J)J", arg0); else return SExecuteWithSignature<long>(LocalBridgeClazz, "min", "(J[J)J", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#min-short-short-"/>
@@ -975,7 +975,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="short"/></returns>
         public static short Min(short arg0, short arg1)
         {
-            return SExecute<short>(LocalBridgeClazz, "min", arg0, arg1);
+            return SExecuteWithSignature<short>(LocalBridgeClazz, "min", "(SS)S", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#atomicMoveWithFallback-java.nio.file.Path-java.nio.file.Path-boolean-"/>
@@ -986,7 +986,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static void AtomicMoveWithFallback(Java.Nio.File.Path arg0, Java.Nio.File.Path arg1, bool arg2)
         {
-            SExecute(LocalBridgeClazz, "atomicMoveWithFallback", arg0, arg1, arg2);
+            SExecuteWithSignature(LocalBridgeClazz, "atomicMoveWithFallback", "(Ljava/nio/file/Path;Ljava/nio/file/Path;Z)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#atomicMoveWithFallback-java.nio.file.Path-java.nio.file.Path-"/>
@@ -996,7 +996,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static void AtomicMoveWithFallback(Java.Nio.File.Path arg0, Java.Nio.File.Path arg1)
         {
-            SExecute(LocalBridgeClazz, "atomicMoveWithFallback", arg0, arg1);
+            SExecuteWithSignature(LocalBridgeClazz, "atomicMoveWithFallback", "(Ljava/nio/file/Path;Ljava/nio/file/Path;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#closeAll-java.io.Closeable[]-"/>
@@ -1015,7 +1015,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <param name="arg2"><see cref="Java.Lang.AutoCloseable"/></param>
         public static void CloseAllQuietly(Java.Util.Concurrent.Atomic.AtomicReference<Java.Lang.Throwable> arg0, Java.Lang.String arg1, params Java.Lang.AutoCloseable[] arg2)
         {
-            if (arg2.Length == 0) SExecute(LocalBridgeClazz, "closeAllQuietly", arg0, arg1); else SExecute(LocalBridgeClazz, "closeAllQuietly", arg0, arg1, arg2);
+            if (arg2.Length == 0) SExecuteWithSignature(LocalBridgeClazz, "closeAllQuietly", "(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;[Ljava/lang/AutoCloseable;)V", arg0, arg1); else SExecuteWithSignature(LocalBridgeClazz, "closeAllQuietly", "(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;[Ljava/lang/AutoCloseable;)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#closeQuietly-java.lang.AutoCloseable-java.lang.String-java.util.concurrent.atomic.AtomicReference-"/>
@@ -1025,7 +1025,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <param name="arg2"><see cref="Java.Util.Concurrent.Atomic.AtomicReference"/></param>
         public static void CloseQuietly(Java.Lang.AutoCloseable arg0, Java.Lang.String arg1, Java.Util.Concurrent.Atomic.AtomicReference<Java.Lang.Throwable> arg2)
         {
-            SExecute(LocalBridgeClazz, "closeQuietly", arg0, arg1, arg2);
+            SExecuteWithSignature(LocalBridgeClazz, "closeQuietly", "(Ljava/lang/AutoCloseable;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicReference;)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#closeQuietly-java.lang.AutoCloseable-java.lang.String-"/>
@@ -1034,7 +1034,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         public static void CloseQuietly(Java.Lang.AutoCloseable arg0, Java.Lang.String arg1)
         {
-            SExecute(LocalBridgeClazz, "closeQuietly", arg0, arg1);
+            SExecuteWithSignature(LocalBridgeClazz, "closeQuietly", "(Ljava/lang/AutoCloseable;Ljava/lang/String;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#delete-java.io.File-"/>
@@ -1088,7 +1088,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         public static void MaybeCloseQuietly(object arg0, Java.Lang.String arg1)
         {
-            SExecute(LocalBridgeClazz, "maybeCloseQuietly", arg0, arg1);
+            SExecuteWithSignature(LocalBridgeClazz, "maybeCloseQuietly", "(Ljava/lang/Object;Ljava/lang/String;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#readFully-java.nio.channels.FileChannel-java.nio.ByteBuffer-long-"/>
@@ -1099,7 +1099,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static void ReadFully(Java.Nio.Channels.FileChannel arg0, Java.Nio.ByteBuffer arg1, long arg2)
         {
-            SExecute(LocalBridgeClazz, "readFully", arg0, arg1, arg2);
+            SExecuteWithSignature(LocalBridgeClazz, "readFully", "(Ljava/nio/channels/FileChannel;Ljava/nio/ByteBuffer;J)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#readFullyOrFail-java.nio.channels.FileChannel-java.nio.ByteBuffer-long-java.lang.String-"/>
@@ -1111,7 +1111,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static void ReadFullyOrFail(Java.Nio.Channels.FileChannel arg0, Java.Nio.ByteBuffer arg1, long arg2, Java.Lang.String arg3)
         {
-            SExecute(LocalBridgeClazz, "readFullyOrFail", arg0, arg1, arg2, arg3);
+            SExecuteWithSignature(LocalBridgeClazz, "readFullyOrFail", "(Ljava/nio/channels/FileChannel;Ljava/nio/ByteBuffer;JLjava/lang/String;)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#require-boolean-"/>
@@ -1146,7 +1146,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static void WriteFully(Java.Nio.Channels.FileChannel arg0, Java.Nio.ByteBuffer arg1)
         {
-            SExecute(LocalBridgeClazz, "writeFully", arg0, arg1);
+            SExecuteWithSignature(LocalBridgeClazz, "writeFully", "(Ljava/nio/channels/FileChannel;Ljava/nio/ByteBuffer;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Utils.html#writeTo-java.io.DataOutput-java.nio.ByteBuffer-int-"/>
@@ -1157,7 +1157,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static void WriteTo(Java.Io.DataOutput arg0, Java.Nio.ByteBuffer arg1, int arg2)
         {
-            SExecute(LocalBridgeClazz, "writeTo", arg0, arg1, arg2);
+            SExecuteWithSignature(LocalBridgeClazz, "writeTo", "(Ljava/io/DataOutput;Ljava/nio/ByteBuffer;I)V", arg0, arg1, arg2);
         }
 
         #endregion

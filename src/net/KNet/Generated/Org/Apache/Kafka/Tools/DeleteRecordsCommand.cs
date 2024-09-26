@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Tools
         /// <exception cref="Java.Io.IOException"/>
         public static void Execute(Java.Lang.String[] arg0, Java.Io.PrintStream arg1)
         {
-            SExecute(LocalBridgeClazz, "execute", arg0, arg1);
+            SExecuteWithSignature(LocalBridgeClazz, "execute", "([Ljava/lang/String;Ljava/io/PrintStream;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/DeleteRecordsCommand.html#main-java.lang.String[]-"/>

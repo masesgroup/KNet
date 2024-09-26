@@ -343,7 +343,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
         public override void OnAcknowledgement(Org.Apache.Kafka.Clients.Producer.RecordMetadata arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
-            IExecute("onAcknowledgement", arg0, arg1);
+            IExecuteWithSignature("onAcknowledgement", "(Lorg/apache/kafka/clients/producer/RecordMetadata;Ljava/lang/Exception;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
@@ -564,7 +564,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
         public override void OnAcknowledgement(Org.Apache.Kafka.Clients.Producer.RecordMetadata arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
-            IExecute("onAcknowledgement", arg0, arg1);
+            IExecuteWithSignature("onAcknowledgement", "(Lorg/apache/kafka/clients/producer/RecordMetadata;Ljava/lang/Exception;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>

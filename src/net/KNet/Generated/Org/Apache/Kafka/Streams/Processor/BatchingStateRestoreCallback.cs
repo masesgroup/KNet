@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public void RestoreDefault(byte[] arg0, byte[] arg1)
         {
-            IExecute("restoreDefault", arg0, arg1);
+            IExecuteWithSignature("restoreDefault", "([B[B)V", arg0, arg1);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg1"><see cref="byte"/></param>
         public override void Restore(byte[] arg0, byte[] arg1)
         {
-            IExecute("restore", arg0, arg1);
+            IExecuteWithSignature("restore", "([B[B)V", arg0, arg1);
         }
 
         #endregion

@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Clients
         /// <returns><see cref="Org.Apache.Kafka.Clients.NodeApiVersions"/></returns>
         public static Org.Apache.Kafka.Clients.NodeApiVersions Create(short arg0, short arg1, short arg2)
         {
-            return SExecute<Org.Apache.Kafka.Clients.NodeApiVersions>(LocalBridgeClazz, "create", arg0, arg1, arg2);
+            return SExecuteWithSignature<Org.Apache.Kafka.Clients.NodeApiVersions>(LocalBridgeClazz, "create", "(SSS)Lorg/apache/kafka/clients/NodeApiVersions;", arg0, arg1, arg2);
         }
 
         #endregion

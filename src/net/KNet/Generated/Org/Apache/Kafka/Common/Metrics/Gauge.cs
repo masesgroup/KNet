@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><see cref="object"/></returns>
         public object Value(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, long arg1)
         {
-            return IExecute("value", arg0, arg1);
+            return IExecuteWithSignature("value", "(Lorg/apache/kafka/common/metrics/MetricConfig;J)Ljava/lang/Object;", arg0, arg1);
         }
 
         #endregion
@@ -211,7 +211,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><typeparamref name="T"/></returns>
         public T Value(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, long arg1)
         {
-            return IExecute<T>("value", arg0, arg1);
+            return IExecuteWithSignature<T>("value", "(Lorg/apache/kafka/common/metrics/MetricConfig;J)Ljava/lang/Object;", arg0, arg1);
         }
 
         #endregion

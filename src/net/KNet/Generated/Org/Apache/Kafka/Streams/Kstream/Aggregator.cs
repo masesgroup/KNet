@@ -257,7 +257,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="object"/></returns>
         public override object Apply(object arg0, object arg1, object arg2)
         {
-            return IExecute("apply", arg0, arg1, arg2);
+            return IExecuteWithSignature("apply", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
 
         #endregion
@@ -383,7 +383,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><typeparamref name="VAgg"/></returns>
         public override VAgg Apply(K arg0, V arg1, VAgg arg2)
         {
-            return IExecute<VAgg>("apply", arg0, arg1, arg2);
+            return IExecuteWithSignature<VAgg>("apply", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
 
         #endregion

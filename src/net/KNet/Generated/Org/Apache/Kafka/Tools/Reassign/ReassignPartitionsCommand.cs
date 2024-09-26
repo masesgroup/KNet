@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
         /// <exception cref="Com.Fasterxml.Jackson.Core.JsonProcessingException"/>
         public static Java.Lang.String FormatAsReassignmentJson(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Java.Lang.Integer>> arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Java.Lang.String> arg1)
         {
-            return SExecute<Java.Lang.String>(LocalBridgeClazz, "formatAsReassignmentJson", arg0, arg1);
+            return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "formatAsReassignmentJson", "(Ljava/util/Map;Ljava/util/Map;)Ljava/lang/String;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#generateAssignment-org.apache.kafka.clients.admin.Admin-java.lang.String-java.lang.String-java.lang.Boolean-"/>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
         /// <exception cref="Com.Fasterxml.Jackson.Core.JsonProcessingException"/>
         public static Java.Util.Map.Entry<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Java.Lang.Integer>>, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Java.Lang.Integer>>> GenerateAssignment(Org.Apache.Kafka.Clients.Admin.Admin arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Lang.Boolean arg3)
         {
-            return SExecute<Java.Util.Map.Entry<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Java.Lang.Integer>>, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Java.Lang.Integer>>>>(LocalBridgeClazz, "generateAssignment", arg0, arg1, arg2, arg3);
+            return SExecuteWithSignature<Java.Util.Map.Entry<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Java.Lang.Integer>>, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Java.Lang.Integer>>>>(LocalBridgeClazz, "generateAssignment", "(Lorg/apache/kafka/clients/admin/Admin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/util/Map$Entry;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#executeAssignment-org.apache.kafka.clients.admin.Admin-java.lang.Boolean-java.lang.String-java.lang.Long-java.lang.Long-java.lang.Long-org.apache.kafka.common.utils.Time-"/>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
         /// <exception cref="Org.Apache.Kafka.Tools.TerseException"/>
         public static void ExecuteAssignment(Org.Apache.Kafka.Clients.Admin.Admin arg0, Java.Lang.Boolean arg1, Java.Lang.String arg2, Java.Lang.Long arg3, Java.Lang.Long arg4, Java.Lang.Long arg5, Org.Apache.Kafka.Common.Utils.Time arg6)
         {
-            SExecute(LocalBridgeClazz, "executeAssignment", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+            SExecuteWithSignature(LocalBridgeClazz, "executeAssignment", "(Lorg/apache/kafka/clients/admin/Admin;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Lorg/apache/kafka/common/utils/Time;)V", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#main-java.lang.String[]-"/>

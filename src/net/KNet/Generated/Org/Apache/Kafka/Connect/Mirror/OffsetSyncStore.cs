@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong TranslateDownstream(Java.Lang.String arg0, Org.Apache.Kafka.Common.TopicPartition arg1, long arg2)
         {
-            return IExecute<Java.Util.OptionalLong>("translateDownstream", arg0, arg1, arg2);
+            return IExecuteWithSignature<Java.Util.OptionalLong>("translateDownstream", "(Ljava/lang/String;Lorg/apache/kafka/common/TopicPartition;J)Ljava/util/OptionalLong;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html#close--"/>

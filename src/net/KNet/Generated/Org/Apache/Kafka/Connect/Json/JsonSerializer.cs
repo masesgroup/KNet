@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <returns><see cref="byte"/></returns>
         public byte[] Serialize(Java.Lang.String arg0, object arg1)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
 
         #endregion

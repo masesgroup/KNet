@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Lang.InterruptedException"/>
         public void WaitObject(object arg0, Java.Util.Function.Supplier<Java.Lang.Boolean> arg1, long arg2)
         {
-            IExecute("waitObject", arg0, arg1, arg2);
+            IExecuteWithSignature("waitObject", "(Ljava/lang/Object;Ljava/util/function/Supplier;J)V", arg0, arg1, arg2);
         }
 
         #endregion

@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Tools
         /// <returns><see cref="Java.Util.Set"/></returns>
         public static Java.Util.Set<T> Minus<T>(Java.Util.Set<T> arg0, params T[] arg1)
         {
-            if (arg1.Length == 0) return SExecute<Java.Util.Set<T>>(LocalBridgeClazz, "minus", arg0); else return SExecute<Java.Util.Set<T>>(LocalBridgeClazz, "minus", arg0, arg1);
+            if (arg1.Length == 0) return SExecuteWithSignature<Java.Util.Set<T>>(LocalBridgeClazz, "minus", "(Ljava/util/Set;[Ljava/lang/Object;)Ljava/util/Set;", arg0); else return SExecuteWithSignature<Java.Util.Set<T>>(LocalBridgeClazz, "minus", "(Ljava/util/Set;[Ljava/lang/Object;)Ljava/util/Set;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ToolsUtils.html#prettyPrintTable-java.util.List-java.util.List-java.io.PrintStream-"/>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Tools
         /// <param name="arg2"><see cref="Java.Io.PrintStream"/></param>
         public static void PrettyPrintTable(Java.Util.List<Java.Lang.String> arg0, Java.Util.List<Java.Util.List<Java.Lang.String>> arg1, Java.Io.PrintStream arg2)
         {
-            SExecute(LocalBridgeClazz, "prettyPrintTable", arg0, arg1, arg2);
+            SExecuteWithSignature(LocalBridgeClazz, "prettyPrintTable", "(Ljava/util/List;Ljava/util/List;Ljava/io/PrintStream;)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ToolsUtils.html#printMetrics-java.util.Map-"/>

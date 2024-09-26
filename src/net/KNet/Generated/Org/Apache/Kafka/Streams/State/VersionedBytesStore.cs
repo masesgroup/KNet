@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <returns><see cref="byte"/></returns>
         public byte[] Delete(Org.Apache.Kafka.Common.Utils.Bytes arg0, long arg1)
         {
-            return IExecuteArray<byte>("delete", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("delete", "(Lorg/apache/kafka/common/utils/Bytes;J)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/VersionedBytesStore.html#get-org.apache.kafka.common.utils.Bytes-long-"/>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <returns><see cref="byte"/></returns>
         public byte[] Get(Org.Apache.Kafka.Common.Utils.Bytes arg0, long arg1)
         {
-            return IExecuteArray<byte>("get", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("get", "(Lorg/apache/kafka/common/utils/Bytes;J)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/state/VersionedBytesStore.html#put-org.apache.kafka.common.utils.Bytes-byte[]-long-"/>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <returns><see cref="long"/></returns>
         public long Put(Org.Apache.Kafka.Common.Utils.Bytes arg0, byte[] arg1, long arg2)
         {
-            return IExecute<long>("put", arg0, arg1, arg2);
+            return IExecuteWithSignature<long>("put", "(Lorg/apache/kafka/common/utils/Bytes;[BJ)J", arg0, arg1, arg2);
         }
 
         #endregion

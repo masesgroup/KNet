@@ -290,7 +290,7 @@ namespace Org.Apache.Kafka.Clients
         /// <returns><see cref="bool"/></returns>
         public bool UpdateLastSeenEpochIfNewer(Org.Apache.Kafka.Common.TopicPartition arg0, int arg1)
         {
-            return IExecute<bool>("updateLastSeenEpochIfNewer", arg0, arg1);
+            return IExecuteWithSignature<bool>("updateLastSeenEpochIfNewer", "(Lorg/apache/kafka/common/TopicPartition;I)Z", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/Metadata.html#updateRequested--"/>
@@ -333,7 +333,7 @@ namespace Org.Apache.Kafka.Clients
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> UpdatePartitionLeadership(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Metadata.LeaderIdAndEpoch> arg0, Java.Util.List<Org.Apache.Kafka.Common.Node> arg1)
         {
-            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("updatePartitionLeadership", arg0, arg1);
+            return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("updatePartitionLeadership", "(Ljava/util/Map;Ljava/util/List;)Ljava/util/Set;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/Metadata.html#lastSuccessfulUpdate--"/>

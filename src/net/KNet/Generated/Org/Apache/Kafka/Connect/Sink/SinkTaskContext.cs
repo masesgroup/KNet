@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <param name="arg1"><see cref="long"/></param>
         public void Offset(Org.Apache.Kafka.Common.TopicPartition arg0, long arg1)
         {
-            IExecute("offset", arg0, arg1);
+            IExecuteWithSignature("offset", "(Lorg/apache/kafka/common/TopicPartition;J)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/sink/SinkTaskContext.html#pause-org.apache.kafka.common.TopicPartition[]-"/>

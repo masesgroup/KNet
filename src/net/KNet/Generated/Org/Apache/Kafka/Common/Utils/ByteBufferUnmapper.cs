@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static void Unmap(Java.Lang.String arg0, Java.Nio.ByteBuffer arg1)
         {
-            SExecute(LocalBridgeClazz, "unmap", arg0, arg1);
+            SExecuteWithSignature(LocalBridgeClazz, "unmap", "(Ljava/lang/String;Ljava/nio/ByteBuffer;)V", arg0, arg1);
         }
 
         #endregion

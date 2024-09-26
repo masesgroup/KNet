@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></param>
         public override void OnChange(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigData arg1)
         {
-            IExecute("onChange", arg0, arg1);
+            IExecuteWithSignature("onChange", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigData;)V", arg0, arg1);
         }
 
         #endregion

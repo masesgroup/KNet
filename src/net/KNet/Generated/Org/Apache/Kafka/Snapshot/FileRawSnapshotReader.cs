@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Snapshot
         /// <returns><see cref="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader"/></returns>
         public static Org.Apache.Kafka.Snapshot.FileRawSnapshotReader Open(Java.Nio.File.Path arg0, Org.Apache.Kafka.Raft.OffsetAndEpoch arg1)
         {
-            return SExecute<Org.Apache.Kafka.Snapshot.FileRawSnapshotReader>(LocalBridgeClazz, "open", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Snapshot.FileRawSnapshotReader>(LocalBridgeClazz, "open", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)Lorg/apache/kafka/snapshot/FileRawSnapshotReader;", arg0, arg1);
         }
 
         #endregion
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Snapshot
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.UnalignedRecords"/></returns>
         public Org.Apache.Kafka.Common.Record.UnalignedRecords Slice(long arg0, int arg1)
         {
-            return IExecute<Org.Apache.Kafka.Common.Record.UnalignedRecords>("slice", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Record.UnalignedRecords>("slice", "(JI)Lorg/apache/kafka/common/record/UnalignedRecords;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#snapshotId--"/>

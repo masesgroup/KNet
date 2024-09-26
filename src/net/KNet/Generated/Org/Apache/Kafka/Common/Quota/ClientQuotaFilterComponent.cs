@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Quota
         /// <returns><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent"/></returns>
         public static Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent OfEntity(Java.Lang.String arg0, Java.Lang.String arg1)
         {
-            return SExecute<Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent>(LocalBridgeClazz, "ofEntity", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent>(LocalBridgeClazz, "ofEntity", "(Ljava/lang/String;Ljava/lang/String;)Lorg/apache/kafka/common/quota/ClientQuotaFilterComponent;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#ofEntityType-java.lang.String-"/>

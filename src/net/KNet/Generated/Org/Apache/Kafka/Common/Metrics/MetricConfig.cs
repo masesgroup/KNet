@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></returns>
         public Org.Apache.Kafka.Common.Metrics.MetricConfig TimeWindow(long arg0, Java.Util.Concurrent.TimeUnit arg1)
         {
-            return IExecute<Org.Apache.Kafka.Common.Metrics.MetricConfig>("timeWindow", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.MetricConfig>("timeWindow", "(JLjava/util/concurrent/TimeUnit;)Lorg/apache/kafka/common/metrics/MetricConfig;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/MetricConfig.html#quota--"/>

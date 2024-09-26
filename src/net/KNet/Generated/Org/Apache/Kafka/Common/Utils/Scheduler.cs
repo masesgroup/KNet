@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
         public Java.Util.Concurrent.Future<T> Schedule<T>(Java.Util.Concurrent.ScheduledExecutorService arg0, Java.Util.Concurrent.Callable<T> arg1, long arg2)
         {
-            return IExecute<Java.Util.Concurrent.Future<T>>("schedule", arg0, arg1, arg2);
+            return IExecuteWithSignature<Java.Util.Concurrent.Future<T>>("schedule", "(Ljava/util/concurrent/ScheduledExecutorService;Ljava/util/concurrent/Callable;J)Ljava/util/concurrent/Future;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/Scheduler.html#time--"/>

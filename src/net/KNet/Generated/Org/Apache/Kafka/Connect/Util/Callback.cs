@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg1"><see cref="object"/></param>
         public void OnCompletion(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0, object arg1)
         {
-            IExecute("onCompletion", arg0, arg1);
+            IExecuteWithSignature("onCompletion", "(Ljava/lang/Throwable;Ljava/lang/Object;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/Callback.html#chainStaging-org.apache.kafka.connect.util.Callback-"/>
@@ -226,7 +226,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg1"><typeparamref name="V"/></param>
         public void OnCompletion(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0, V arg1)
         {
-            IExecute("onCompletion", arg0, arg1);
+            IExecuteWithSignature("onCompletion", "(Ljava/lang/Throwable;Ljava/lang/Object;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/Callback.html#chainStaging-org.apache.kafka.connect.util.Callback-"/>

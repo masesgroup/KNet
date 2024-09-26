@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><typeparamref name="C"/></returns>
         public static C CombineCollections<C, I, T>(Java.Util.Collection<I> arg0, Java.Util.Function.Function<I, Java.Util.Collection<T>> arg1, Java.Util.Stream.Collector<T, object, C> arg2)
         {
-            return SExecute<C>(LocalBridgeClazz, "combineCollections", arg0, arg1, arg2);
+            return SExecuteWithSignature<C>(LocalBridgeClazz, "combineCollections", "(Ljava/util/Collection;Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections-java.util.Collection-java.util.function.Function-"/>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Java.Util.List"/></returns>
         public static Java.Util.List<T> CombineCollections<T, I>(Java.Util.Collection<I> arg0, Java.Util.Function.Function<I, Java.Util.Collection<T>> arg1)
         {
-            return SExecute<Java.Util.List<T>>(LocalBridgeClazz, "combineCollections", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.List<T>>(LocalBridgeClazz, "combineCollections", "(Ljava/util/Collection;Ljava/util/function/Function;)Ljava/util/List;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections-java.util.Collection-"/>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Java.Util.Map"/></returns>
         public static Java.Util.Map<K, O> TransformValues<K, O, I>(Java.Util.Map<K, I> arg0, Java.Util.Function.Function<I, O> arg1)
         {
-            return SExecute<Java.Util.Map<K, O>>(LocalBridgeClazz, "transformValues", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.Map<K, O>>(LocalBridgeClazz, "transformValues", "(Ljava/util/Map;Ljava/util/function/Function;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConnectUtils.html#isSinkConnector-org.apache.kafka.connect.connector.Connector-"/>
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Java.Util.Map"/></returns>
         public static Java.Util.Map<Java.Lang.String, Java.Lang.String> PatchConfig(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg1)
         {
-            return SExecute<Java.Util.Map<Java.Lang.String, Java.Lang.String>>(LocalBridgeClazz, "patchConfig", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>(LocalBridgeClazz, "patchConfig", "(Ljava/util/Map;Ljava/util/Map;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConnectUtils.html#maybeWrap-java.lang.Throwable-java.lang.String-"/>
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Org.Apache.Kafka.Connect.Errors.ConnectException"/></returns>
         public static Org.Apache.Kafka.Connect.Errors.ConnectException MaybeWrap(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0, Java.Lang.String arg1)
         {
-            var obj = SExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>(LocalBridgeClazz, "maybeWrap", arg0, arg1); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Connect.Errors.ConnectException>(obj);
+            var obj = SExecuteWithSignature<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>(LocalBridgeClazz, "maybeWrap", "(Ljava/lang/Throwable;Ljava/lang/String;)Lorg/apache/kafka/connect/errors/ConnectException;", arg0, arg1); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Connect.Errors.ConnectException>(obj);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConnectUtils.html#ensureProperty-java.util.Map-java.lang.String-java.lang.String-java.lang.String-boolean-"/>
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <typeparam name="Arg0objectSuperJava_Lang_String"><see cref="Java.Lang.String"/></typeparam>
         public static void EnsureProperty<Arg0objectSuperJava_Lang_String>(Java.Util.Map<Java.Lang.String, Arg0objectSuperJava_Lang_String> arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Lang.String arg3, bool arg4) where Arg0objectSuperJava_Lang_String : Java.Lang.String
         {
-            SExecute(LocalBridgeClazz, "ensureProperty", arg0, arg1, arg2, arg3, arg4);
+            SExecuteWithSignature(LocalBridgeClazz, "ensureProperty", "(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V", arg0, arg1, arg2, arg3, arg4);
         }
 
         #endregion

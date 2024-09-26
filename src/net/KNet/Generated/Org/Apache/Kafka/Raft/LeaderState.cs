@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="bool"/></returns>
         public bool UpdateLocalState(Org.Apache.Kafka.Raft.LogOffsetMetadata arg0, Java.Util.Set arg1)
         {
-            return IExecute<bool>("updateLocalState", arg0, arg1);
+            return IExecuteWithSignature<bool>("updateLocalState", "(Lorg/apache/kafka/raft/LogOffsetMetadata;Ljava/util/Set;)Z", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#updateReplicaState-int-long-org.apache.kafka.raft.LogOffsetMetadata-"/>
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="bool"/></returns>
         public bool UpdateReplicaState(int arg0, long arg1, Org.Apache.Kafka.Raft.LogOffsetMetadata arg2)
         {
-            return IExecute<bool>("updateReplicaState", arg0, arg1, arg2);
+            return IExecuteWithSignature<bool>("updateReplicaState", "(IJLorg/apache/kafka/raft/LogOffsetMetadata;)Z", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#epoch--"/>
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Raft
         /// <param name="arg1"><see cref="long"/></param>
         public void UpdateCheckQuorumForFollowingVoter(int arg0, long arg1)
         {
-            IExecute("updateCheckQuorumForFollowingVoter", arg0, arg1);
+            IExecuteWithSignature("updateCheckQuorumForFollowingVoter", "(IJ)V", arg0, arg1);
         }
 
         #endregion
@@ -336,7 +336,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="bool"/></returns>
         public bool UpdateLocalState(Org.Apache.Kafka.Raft.LogOffsetMetadata arg0, Java.Util.Set<Java.Lang.Integer> arg1)
         {
-            return IExecute<bool>("updateLocalState", arg0, arg1);
+            return IExecuteWithSignature<bool>("updateLocalState", "(Lorg/apache/kafka/raft/LogOffsetMetadata;Ljava/util/Set;)Z", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#updateReplicaState-int-long-org.apache.kafka.raft.LogOffsetMetadata-"/>
@@ -347,7 +347,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="bool"/></returns>
         public bool UpdateReplicaState(int arg0, long arg1, Org.Apache.Kafka.Raft.LogOffsetMetadata arg2)
         {
-            return IExecute<bool>("updateReplicaState", arg0, arg1, arg2);
+            return IExecuteWithSignature<bool>("updateReplicaState", "(IJLorg/apache/kafka/raft/LogOffsetMetadata;)Z", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/LeaderState.html#epoch--"/>
@@ -467,7 +467,7 @@ namespace Org.Apache.Kafka.Raft
         /// <param name="arg1"><see cref="long"/></param>
         public void UpdateCheckQuorumForFollowingVoter(int arg0, long arg1)
         {
-            IExecute("updateCheckQuorumForFollowingVoter", arg0, arg1);
+            IExecuteWithSignature("updateCheckQuorumForFollowingVoter", "(IJ)V", arg0, arg1);
         }
 
         #endregion

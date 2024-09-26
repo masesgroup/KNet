@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Snapshot
         /// <returns><see cref="bool"/></returns>
         public static bool DeleteIfExists(Java.Nio.File.Path arg0, Org.Apache.Kafka.Raft.OffsetAndEpoch arg1)
         {
-            return SExecute<bool>(LocalBridgeClazz, "deleteIfExists", arg0, arg1);
+            return SExecuteWithSignature<bool>(LocalBridgeClazz, "deleteIfExists", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)Z", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/Snapshots.html#filenameFromSnapshotId-org.apache.kafka.raft.OffsetAndEpoch-"/>
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Snapshot
         /// <returns><see cref="Java.Nio.File.Path"/></returns>
         public static Java.Nio.File.Path CreateTempFile(Java.Nio.File.Path arg0, Org.Apache.Kafka.Raft.OffsetAndEpoch arg1)
         {
-            return SExecute<Java.Nio.File.Path>(LocalBridgeClazz, "createTempFile", arg0, arg1);
+            return SExecuteWithSignature<Java.Nio.File.Path>(LocalBridgeClazz, "createTempFile", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)Ljava/nio/file/Path;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/Snapshots.html#markForDelete-java.nio.file.Path-org.apache.kafka.raft.OffsetAndEpoch-"/>
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Snapshot
         /// <returns><see cref="Java.Nio.File.Path"/></returns>
         public static Java.Nio.File.Path MarkForDelete(Java.Nio.File.Path arg0, Org.Apache.Kafka.Raft.OffsetAndEpoch arg1)
         {
-            return SExecute<Java.Nio.File.Path>(LocalBridgeClazz, "markForDelete", arg0, arg1);
+            return SExecuteWithSignature<Java.Nio.File.Path>(LocalBridgeClazz, "markForDelete", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)Ljava/nio/file/Path;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/Snapshots.html#snapshotPath-java.nio.file.Path-org.apache.kafka.raft.OffsetAndEpoch-"/>
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Snapshot
         /// <returns><see cref="Java.Nio.File.Path"/></returns>
         public static Java.Nio.File.Path SnapshotPath(Java.Nio.File.Path arg0, Org.Apache.Kafka.Raft.OffsetAndEpoch arg1)
         {
-            return SExecute<Java.Nio.File.Path>(LocalBridgeClazz, "snapshotPath", arg0, arg1);
+            return SExecuteWithSignature<Java.Nio.File.Path>(LocalBridgeClazz, "snapshotPath", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)Ljava/nio/file/Path;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/Snapshots.html#parse-java.nio.file.Path-"/>
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Snapshot
         /// <returns><see cref="long"/></returns>
         public static long LastContainedLogTimestamp(Java.Nio.File.Path arg0, Org.Apache.Kafka.Raft.OffsetAndEpoch arg1)
         {
-            return SExecute<long>(LocalBridgeClazz, "lastContainedLogTimestamp", arg0, arg1);
+            return SExecuteWithSignature<long>(LocalBridgeClazz, "lastContainedLogTimestamp", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)J", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/snapshot/Snapshots.html#lastContainedLogTimestamp-org.apache.kafka.snapshot.RawSnapshotReader-"/>

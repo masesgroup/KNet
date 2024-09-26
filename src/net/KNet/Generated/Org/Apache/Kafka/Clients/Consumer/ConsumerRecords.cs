@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
         public static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords Empty()
         {
-            return SExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>(LocalBridgeClazz, "empty");
+            return SExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>(LocalBridgeClazz, "empty", "()Lorg/apache/kafka/clients/consumer/ConsumerRecords;");
         }
 
         #endregion
@@ -260,7 +260,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
         public static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V> Empty()
         {
-            return SExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>(LocalBridgeClazz, "empty");
+            return SExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>(LocalBridgeClazz, "empty", "()Lorg/apache/kafka/clients/consumer/ConsumerRecords;");
         }
 
         #endregion

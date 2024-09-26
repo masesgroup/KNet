@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Tools
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
         public void OnComplete(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
-            IExecute("onComplete", arg0, arg1);
+            IExecuteWithSignature("onComplete", "(Ljava/util/Map;Ljava/lang/Exception;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/VerifiableConsumer.html#onPartitionsAssigned-java.util.Collection-"/>

@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0, Java.Lang.String arg1, Java.Util.List<Javax.Security.Auth.Login.AppConfigurationEntry> arg2)
         {
-            IExecute("configure", arg0, arg1, arg2);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;Ljava/lang/String;Ljava/util/List;)V", arg0, arg1, arg2);
         }
 
         #endregion

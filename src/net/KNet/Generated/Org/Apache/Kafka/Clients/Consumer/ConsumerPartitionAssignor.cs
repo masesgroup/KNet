@@ -360,7 +360,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <remarks>The method invokes the static implementation in the JVM interface</remarks>
         public static Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor> GetAssignorInstances(Java.Util.List<Java.Lang.String> arg0, Java.Util.Map<Java.Lang.String, object> arg1)
         {
-            return SExecute<Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor>>(LocalBridgeClazz, "getAssignorInstances", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor>>(LocalBridgeClazz, "getAssignorInstances", "(Ljava/util/List;Ljava/util/Map;)Ljava/util/List;", arg0, arg1);
         }
 
         #endregion
@@ -541,7 +541,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public void OnAssignmentDefault(Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata arg1)
         {
-            IExecute("onAssignmentDefault", arg0, arg1);
+            IExecuteWithSignature("onAssignmentDefault", "(Lorg/apache/kafka/clients/consumer/ConsumerPartitionAssignor$Assignment;Lorg/apache/kafka/clients/consumer/ConsumerGroupMetadata;)V", arg0, arg1);
         }
 
         /// <summary>
@@ -977,7 +977,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupAssignment"/></returns>
         public override Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupAssignment Assign(Org.Apache.Kafka.Common.Cluster arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupSubscription arg1)
         {
-            return IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupAssignment>("assign", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupAssignment>("assign", "(Lorg/apache/kafka/common/Cluster;Lorg/apache/kafka/clients/consumer/ConsumerPartitionAssignor$GroupSubscription;)Lorg/apache/kafka/clients/consumer/ConsumerPartitionAssignor$GroupAssignment;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData-java.util.Set-"/>
@@ -1011,7 +1011,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata"/></param>
         public override void OnAssignment(Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata arg1)
         {
-            IExecute("onAssignment", arg0, arg1);
+            IExecuteWithSignature("onAssignment", "(Lorg/apache/kafka/clients/consumer/ConsumerPartitionAssignor$Assignment;Lorg/apache/kafka/clients/consumer/ConsumerGroupMetadata;)V", arg0, arg1);
         }
 
         #endregion

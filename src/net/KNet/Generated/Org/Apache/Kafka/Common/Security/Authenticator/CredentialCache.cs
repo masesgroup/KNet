@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache.Cache"/></returns>
         public Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache.Cache<C> CacheMethod<C>(Java.Lang.String arg0, Java.Lang.Class arg1)
         {
-            return IExecute<Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache.Cache<C>>("cache", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache.Cache<C>>("cache", "(Ljava/lang/String;Ljava/lang/Class;)Lorg/apache/kafka/common/security/authenticator/CredentialCache$Cache;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.html#createCache-java.lang.String-java.lang.Class-"/>
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache.Cache"/></returns>
         public Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache.Cache<C> CreateCache<C>(Java.Lang.String arg0, Java.Lang.Class arg1)
         {
-            return IExecute<Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache.Cache<C>>("createCache", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache.Cache<C>>("createCache", "(Ljava/lang/String;Ljava/lang/Class;)Lorg/apache/kafka/common/security/authenticator/CredentialCache$Cache;", arg0, arg1);
         }
 
         #endregion
@@ -252,7 +252,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             /// <returns><see cref="object"/></returns>
             public object Put(Java.Lang.String arg0, object arg1)
             {
-                return IExecute("put", arg0, arg1);
+                return IExecuteWithSignature("put", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#remove-java.lang.String-"/>
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             /// <returns><typeparamref name="C"/></returns>
             public C Put(Java.Lang.String arg0, C arg1)
             {
-                return IExecute<C>("put", arg0, arg1);
+                return IExecuteWithSignature<C>("put", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/CredentialCache.Cache.html#remove-java.lang.String-"/>

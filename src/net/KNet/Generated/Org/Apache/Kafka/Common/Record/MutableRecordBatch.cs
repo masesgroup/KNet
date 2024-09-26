@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg1"><see cref="long"/></param>
         public void SetMaxTimestamp(Org.Apache.Kafka.Common.Record.TimestampType arg0, long arg1)
         {
-            IExecute("setMaxTimestamp", arg0, arg1);
+            IExecuteWithSignature("setMaxTimestamp", "(Lorg/apache/kafka/common/record/TimestampType;J)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MutableRecordBatch.html#setPartitionLeaderEpoch-int-"/>

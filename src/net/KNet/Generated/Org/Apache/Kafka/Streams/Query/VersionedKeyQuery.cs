@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.VersionedKeyQuery"/></returns>
         public static Org.Apache.Kafka.Streams.Query.VersionedKeyQuery WithKey(object arg0)
         {
-            return SExecute<Org.Apache.Kafka.Streams.Query.VersionedKeyQuery>(LocalBridgeClazz, "withKey", arg0);
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.VersionedKeyQuery>(LocalBridgeClazz, "withKey", "(Ljava/lang/Object;)Lorg/apache/kafka/streams/query/VersionedKeyQuery;", arg0);
         }
 
         #endregion
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.VersionedKeyQuery"/></returns>
         public static Org.Apache.Kafka.Streams.Query.VersionedKeyQuery<K, V> WithKey(K arg0)
         {
-            return SExecute<Org.Apache.Kafka.Streams.Query.VersionedKeyQuery<K, V>>(LocalBridgeClazz, "withKey", arg0);
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.VersionedKeyQuery<K, V>>(LocalBridgeClazz, "withKey", "(Ljava/lang/Object;)Lorg/apache/kafka/streams/query/VersionedKeyQuery;", arg0);
         }
 
         #endregion

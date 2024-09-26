@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Common.Header
         /// <exception cref="Java.Lang.IllegalStateException"/>
         public Org.Apache.Kafka.Common.Header.Headers Add(Java.Lang.String arg0, byte[] arg1)
         {
-            return IExecute<Org.Apache.Kafka.Common.Header.Headers>("add", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Header.Headers>("add", "(Ljava/lang/String;[B)Lorg/apache/kafka/common/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/header/Headers.html#add-org.apache.kafka.common.header.Header-"/>

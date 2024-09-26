@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0, Java.Lang.String arg1, Javax.Security.Auth.Login.Configuration arg2, Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler arg3)
         {
-            IExecute("configure", arg0, arg1, arg2, arg3);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;Ljava/lang/String;Ljavax/security/auth/login/Configuration;Lorg/apache/kafka/common/security/auth/AuthenticateCallbackHandler;)V", arg0, arg1, arg2, arg3);
         }
 
         #endregion
@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             /// <param name="arg2"><see cref="Java.Util.List"/></param>
             public void Configure(Java.Util.Map<Java.Lang.String, object> arg0, Java.Lang.String arg1, Java.Util.List<Javax.Security.Auth.Login.AppConfigurationEntry> arg2)
             {
-                IExecute("configure", arg0, arg1, arg2);
+                IExecuteWithSignature("configure", "(Ljava/util/Map;Ljava/lang/String;Ljava/util/List;)V", arg0, arg1, arg2);
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/AbstractLogin.DefaultLoginCallbackHandler.html#handle-javax.security.auth.callback.Callback[]-"/>

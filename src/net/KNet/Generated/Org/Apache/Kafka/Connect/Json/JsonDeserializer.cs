@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <returns><see cref="object"/></returns>
         public object Deserialize(Java.Lang.String arg0, byte[] arg1)
         {
-            return IExecute("deserialize", arg0, arg1);
+            return IExecuteWithSignature("deserialize", "(Ljava/lang/String;[B)Ljava/lang/Object;", arg0, arg1);
         }
 
         #endregion

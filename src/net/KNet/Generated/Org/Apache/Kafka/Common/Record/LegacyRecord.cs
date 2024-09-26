@@ -227,7 +227,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <returns><see cref="byte"/></returns>
         public static byte ComputeAttributes(byte arg0, Org.Apache.Kafka.Common.Record.CompressionType arg1, Org.Apache.Kafka.Common.Record.TimestampType arg2)
         {
-            return SExecute<byte>(LocalBridgeClazz, "computeAttributes", arg0, arg1, arg2);
+            return SExecuteWithSignature<byte>(LocalBridgeClazz, "computeAttributes", "(BLorg/apache/kafka/common/record/CompressionType;Lorg/apache/kafka/common/record/TimestampType;)B", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/LegacyRecord.html#recordSize-byte-int-int-"/>
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <returns><see cref="int"/></returns>
         public static int RecordSize(byte arg0, int arg1, int arg2)
         {
-            return SExecute<int>(LocalBridgeClazz, "recordSize", arg0, arg1, arg2);
+            return SExecuteWithSignature<int>(LocalBridgeClazz, "recordSize", "(BII)I", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/LegacyRecord.html#computeChecksum-byte-byte-long-byte[]-byte[]-"/>
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <returns><see cref="long"/></returns>
         public static long ComputeChecksum(byte arg0, byte arg1, long arg2, byte[] arg3, byte[] arg4)
         {
-            return SExecute<long>(LocalBridgeClazz, "computeChecksum", arg0, arg1, arg2, arg3, arg4);
+            return SExecuteWithSignature<long>(LocalBridgeClazz, "computeChecksum", "(BBJ[B[B)J", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/LegacyRecord.html#write-java.io.DataOutputStream-byte-long-byte[]-byte[]-org.apache.kafka.common.record.CompressionType-org.apache.kafka.common.record.TimestampType-"/>
@@ -267,7 +267,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <exception cref="Java.Io.IOException"/>
         public static long Write(Java.Io.DataOutputStream arg0, byte arg1, long arg2, byte[] arg3, byte[] arg4, Org.Apache.Kafka.Common.Record.CompressionType arg5, Org.Apache.Kafka.Common.Record.TimestampType arg6)
         {
-            return SExecute<long>(LocalBridgeClazz, "write", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+            return SExecuteWithSignature<long>(LocalBridgeClazz, "write", "(Ljava/io/DataOutputStream;BJ[B[BLorg/apache/kafka/common/record/CompressionType;Lorg/apache/kafka/common/record/TimestampType;)J", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/LegacyRecord.html#write-java.io.DataOutputStream-byte-long-java.nio.ByteBuffer-java.nio.ByteBuffer-org.apache.kafka.common.record.CompressionType-org.apache.kafka.common.record.TimestampType-"/>
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <exception cref="Java.Io.IOException"/>
         public static long Write(Java.Io.DataOutputStream arg0, byte arg1, long arg2, Java.Nio.ByteBuffer arg3, Java.Nio.ByteBuffer arg4, Org.Apache.Kafka.Common.Record.CompressionType arg5, Org.Apache.Kafka.Common.Record.TimestampType arg6)
         {
-            return SExecute<long>(LocalBridgeClazz, "write", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+            return SExecuteWithSignature<long>(LocalBridgeClazz, "write", "(Ljava/io/DataOutputStream;BJLjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Lorg/apache/kafka/common/record/CompressionType;Lorg/apache/kafka/common/record/TimestampType;)J", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/LegacyRecord.html#create-byte-long-byte[]-byte[]-org.apache.kafka.common.record.CompressionType-org.apache.kafka.common.record.TimestampType-"/>
@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.LegacyRecord"/></returns>
         public static Org.Apache.Kafka.Common.Record.LegacyRecord Create(byte arg0, long arg1, byte[] arg2, byte[] arg3, Org.Apache.Kafka.Common.Record.CompressionType arg4, Org.Apache.Kafka.Common.Record.TimestampType arg5)
         {
-            return SExecute<Org.Apache.Kafka.Common.Record.LegacyRecord>(LocalBridgeClazz, "create", arg0, arg1, arg2, arg3, arg4, arg5);
+            return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.LegacyRecord>(LocalBridgeClazz, "create", "(BJ[B[BLorg/apache/kafka/common/record/CompressionType;Lorg/apache/kafka/common/record/TimestampType;)Lorg/apache/kafka/common/record/LegacyRecord;", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/LegacyRecord.html#create-byte-long-byte[]-byte[]-"/>
@@ -309,7 +309,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.LegacyRecord"/></returns>
         public static Org.Apache.Kafka.Common.Record.LegacyRecord Create(byte arg0, long arg1, byte[] arg2, byte[] arg3)
         {
-            return SExecute<Org.Apache.Kafka.Common.Record.LegacyRecord>(LocalBridgeClazz, "create", arg0, arg1, arg2, arg3);
+            return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.LegacyRecord>(LocalBridgeClazz, "create", "(BJ[B[B)Lorg/apache/kafka/common/record/LegacyRecord;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/LegacyRecord.html#timestampType-byte-org.apache.kafka.common.record.TimestampType-byte-"/>
@@ -320,7 +320,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
         public static Org.Apache.Kafka.Common.Record.TimestampType TimestampType(byte arg0, Org.Apache.Kafka.Common.Record.TimestampType arg1, byte arg2)
         {
-            return SExecute<Org.Apache.Kafka.Common.Record.TimestampType>(LocalBridgeClazz, "timestampType", arg0, arg1, arg2);
+            return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.TimestampType>(LocalBridgeClazz, "timestampType", "(BLorg/apache/kafka/common/record/TimestampType;B)Lorg/apache/kafka/common/record/TimestampType;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/LegacyRecord.html#write-java.io.DataOutputStream-byte-long-byte-long-byte[]-byte[]-"/>
@@ -335,7 +335,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <exception cref="Java.Io.IOException"/>
         public static void Write(Java.Io.DataOutputStream arg0, byte arg1, long arg2, byte arg3, long arg4, byte[] arg5, byte[] arg6)
         {
-            SExecute(LocalBridgeClazz, "write", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+            SExecuteWithSignature(LocalBridgeClazz, "write", "(Ljava/io/DataOutputStream;BJBJ[B[B)V", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/LegacyRecord.html#writeCompressedRecordHeader-java.nio.ByteBuffer-byte-int-long-org.apache.kafka.common.record.CompressionType-org.apache.kafka.common.record.TimestampType-"/>
@@ -348,7 +348,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
         public static void WriteCompressedRecordHeader(Java.Nio.ByteBuffer arg0, byte arg1, int arg2, long arg3, Org.Apache.Kafka.Common.Record.CompressionType arg4, Org.Apache.Kafka.Common.Record.TimestampType arg5)
         {
-            SExecute(LocalBridgeClazz, "writeCompressedRecordHeader", arg0, arg1, arg2, arg3, arg4, arg5);
+            SExecuteWithSignature(LocalBridgeClazz, "writeCompressedRecordHeader", "(Ljava/nio/ByteBuffer;BIJLorg/apache/kafka/common/record/CompressionType;Lorg/apache/kafka/common/record/TimestampType;)V", arg0, arg1, arg2, arg3, arg4, arg5);
         }
 
         #endregion

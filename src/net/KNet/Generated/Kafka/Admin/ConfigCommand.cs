@@ -278,7 +278,7 @@ namespace Kafka.Admin
         /// <param name="opts"><see cref="Kafka.Admin.ConfigCommand.ConfigCommandOptions"/></param>
         public static void AlterConfig(Org.Apache.Kafka.Clients.Admin.Admin adminClient, Kafka.Admin.ConfigCommand.ConfigCommandOptions opts)
         {
-            SExecute(LocalBridgeClazz, "alterConfig", adminClient, opts);
+            SExecuteWithSignature(LocalBridgeClazz, "alterConfig", "(Lorg/apache/kafka/clients/admin/Admin;Lkafka/admin/ConfigCommand$ConfigCommandOptions;)V", adminClient, opts);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html#describeConfig-org.apache.kafka.clients.admin.Admin-kafka.admin.ConfigCommand.ConfigCommandOptions-"/>
@@ -287,7 +287,7 @@ namespace Kafka.Admin
         /// <param name="opts"><see cref="Kafka.Admin.ConfigCommand.ConfigCommandOptions"/></param>
         public static void DescribeConfig(Org.Apache.Kafka.Clients.Admin.Admin adminClient, Kafka.Admin.ConfigCommand.ConfigCommandOptions opts)
         {
-            SExecute(LocalBridgeClazz, "describeConfig", adminClient, opts);
+            SExecuteWithSignature(LocalBridgeClazz, "describeConfig", "(Lorg/apache/kafka/clients/admin/Admin;Lkafka/admin/ConfigCommand$ConfigCommandOptions;)V", adminClient, opts);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/ConfigCommand.html#main-java.lang.String[]-"/>

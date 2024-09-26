@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Map"/></returns>
         public static Java.Util.Map<K, V> SubtractMap<K, V, Arg0ExtendsK, Arg0ExtendsV, Arg1ExtendsK, Arg1ExtendsV>(Java.Util.Map<Arg0ExtendsK, Arg0ExtendsV> arg0, Java.Util.Map<Arg1ExtendsK, Arg1ExtendsV> arg1) where Arg0ExtendsK : K where Arg0ExtendsV : V where Arg1ExtendsK : K where Arg1ExtendsV : V
         {
-            return SExecute<Java.Util.Map<K, V>>(LocalBridgeClazz, "subtractMap", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.Map<K, V>>(LocalBridgeClazz, "subtractMap", "(Ljava/util/Map;Ljava/util/Map;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/CollectionUtils.html#groupPartitionDataByTopic-java.util.Map-"/>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Map"/></returns>
         public static Java.Util.Map<Java.Lang.String, T> GroupPartitionsByTopic<T>(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0, Java.Util.Function.Function<Java.Lang.String, T> arg1, Java.Util.Function.BiConsumer<T, Java.Lang.Integer> arg2)
         {
-            return SExecute<Java.Util.Map<Java.Lang.String, T>>(LocalBridgeClazz, "groupPartitionsByTopic", arg0, arg1, arg2);
+            return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, T>>(LocalBridgeClazz, "groupPartitionsByTopic", "(Ljava/util/Collection;Ljava/util/function/Function;Ljava/util/function/BiConsumer;)Ljava/util/Map;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/CollectionUtils.html#groupPartitionsByTopic-java.util.Collection-"/>

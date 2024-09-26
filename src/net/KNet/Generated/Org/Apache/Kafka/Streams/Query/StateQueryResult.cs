@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Query.QueryResult"/></param>
         public void AddResult(int arg0, Org.Apache.Kafka.Streams.Query.QueryResult arg1)
         {
-            IExecute("addResult", arg0, arg1);
+            IExecuteWithSignature("addResult", "(ILorg/apache/kafka/streams/query/QueryResult;)V", arg0, arg1);
         }
 
         #endregion
@@ -243,7 +243,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Query.QueryResult"/></param>
         public void AddResult(int arg0, Org.Apache.Kafka.Streams.Query.QueryResult<R> arg1)
         {
-            IExecute("addResult", arg0, arg1);
+            IExecuteWithSignature("addResult", "(ILorg/apache/kafka/streams/query/QueryResult;)V", arg0, arg1);
         }
 
         #endregion

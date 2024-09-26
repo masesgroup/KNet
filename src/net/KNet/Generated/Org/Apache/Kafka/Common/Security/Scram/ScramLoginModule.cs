@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         /// <param name="arg3"><see cref="Java.Util.Map"/></param>
         public void Initialize(Javax.Security.Auth.Subject arg0, Javax.Security.Auth.Callback.CallbackHandler arg1, Java.Util.Map<Java.Lang.String, object> arg2, Java.Util.Map<Java.Lang.String, object> arg3)
         {
-            IExecute("initialize", arg0, arg1, arg2, arg3);
+            IExecuteWithSignature("initialize", "(Ljavax/security/auth/Subject;Ljavax/security/auth/callback/CallbackHandler;Ljava/util/Map;Ljava/util/Map;)V", arg0, arg1, arg2, arg3);
         }
 
         #endregion
