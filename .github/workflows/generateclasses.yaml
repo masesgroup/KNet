@@ -90,6 +90,10 @@ jobs:
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
+      - name: Build JNetReflector
+        if: ${{ inputs.UseLatestJNetReflector == true }}
+        run: dotnet build --no-incremental --configuration Release JNet\src\net\JNetReflector\JNetReflector.csproj
+
       - name: Download latest published version of JNetReflector
         run: dotnet tool update --version 2.5.9 -g MASES.JNetReflector
         if: ${{ inputs.UseLatestJNetReflector == false }}
