@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers Add(Java.Lang.String arg0, object arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("add", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("add", "(Ljava/lang/String;Ljava/lang/Object;Lorg/apache/kafka/connect/data/Schema;)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#add-java.lang.String-org.apache.kafka.connect.data.SchemaAndValue-"/>
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers Add(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Data.SchemaAndValue arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("add", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("add", "(Ljava/lang/String;Lorg/apache/kafka/connect/data/SchemaAndValue;)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#add-org.apache.kafka.connect.header.Header-"/>
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddBoolean(Java.Lang.String arg0, bool arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addBoolean", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addBoolean", "(Ljava/lang/String;Z)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addByte-java.lang.String-byte-"/>
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddByte(Java.Lang.String arg0, byte arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addByte", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addByte", "(Ljava/lang/String;B)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addBytes-java.lang.String-byte[]-"/>
@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddBytes(Java.Lang.String arg0, byte[] arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addBytes", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addBytes", "(Ljava/lang/String;[B)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addDate-java.lang.String-java.util.Date-"/>
@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddDate(Java.Lang.String arg0, Java.Util.Date arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addDate", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addDate", "(Ljava/lang/String;Ljava/util/Date;)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addDecimal-java.lang.String-java.math.BigDecimal-"/>
@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddDecimal(Java.Lang.String arg0, Java.Math.BigDecimal arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addDecimal", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addDecimal", "(Ljava/lang/String;Ljava/math/BigDecimal;)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addDouble-java.lang.String-double-"/>
@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddDouble(Java.Lang.String arg0, double arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addDouble", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addDouble", "(Ljava/lang/String;D)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addFloat-java.lang.String-float-"/>
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddFloat(Java.Lang.String arg0, float arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addFloat", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addFloat", "(Ljava/lang/String;F)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addInt-java.lang.String-int-"/>
@@ -248,7 +248,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddInt(Java.Lang.String arg0, int arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addInt", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addInt", "(Ljava/lang/String;I)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addList-java.lang.String-java.util.List-org.apache.kafka.connect.data.Schema-"/>
@@ -259,7 +259,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddList(Java.Lang.String arg0, Java.Util.List<object> arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addList", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addList", "(Ljava/lang/String;Ljava/util/List;Lorg/apache/kafka/connect/data/Schema;)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addLong-java.lang.String-long-"/>
@@ -269,7 +269,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddLong(Java.Lang.String arg0, long arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addLong", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addLong", "(Ljava/lang/String;J)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addMap-java.lang.String-java.util.Map-org.apache.kafka.connect.data.Schema-"/>
@@ -280,7 +280,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddMap(Java.Lang.String arg0, Java.Util.Map<object, object> arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addMap", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addMap", "(Ljava/lang/String;Ljava/util/Map;Lorg/apache/kafka/connect/data/Schema;)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addShort-java.lang.String-short-"/>
@@ -290,7 +290,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddShort(Java.Lang.String arg0, short arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addShort", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addShort", "(Ljava/lang/String;S)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addString-java.lang.String-java.lang.String-"/>
@@ -300,7 +300,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddString(Java.Lang.String arg0, Java.Lang.String arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addString", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addString", "(Ljava/lang/String;Ljava/lang/String;)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addStruct-java.lang.String-org.apache.kafka.connect.data.Struct-"/>
@@ -310,7 +310,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddStruct(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Data.Struct arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addStruct", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addStruct", "(Ljava/lang/String;Lorg/apache/kafka/connect/data/Struct;)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addTime-java.lang.String-java.util.Date-"/>
@@ -320,7 +320,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddTime(Java.Lang.String arg0, Java.Util.Date arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addTime", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addTime", "(Ljava/lang/String;Ljava/util/Date;)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#addTimestamp-java.lang.String-java.util.Date-"/>
@@ -330,7 +330,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers AddTimestamp(Java.Lang.String arg0, Java.Util.Date arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("addTimestamp", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("addTimestamp", "(Ljava/lang/String;Ljava/util/Date;)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#apply-java.lang.String-org.apache.kafka.connect.header.Headers.HeaderTransform-"/>
@@ -340,7 +340,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers Apply(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Header.Headers.HeaderTransform arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("apply", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("apply", "(Ljava/lang/String;Lorg/apache/kafka/connect/header/Headers$HeaderTransform;)Lorg/apache/kafka/connect/header/Headers;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/header/ConnectHeaders.html#apply-org.apache.kafka.connect.header.Headers.HeaderTransform-"/>

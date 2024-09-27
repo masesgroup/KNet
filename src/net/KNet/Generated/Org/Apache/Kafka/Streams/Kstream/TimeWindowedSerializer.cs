@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="byte"/></returns>
         public byte[] Serialize(Java.Lang.String arg0, object arg1)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html#serialize-java.lang.String-org.apache.kafka.streams.kstream.Windowed-"/>
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="byte"/></returns>
         public byte[] Serialize(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Windowed arg1)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html#serializeBaseKey-java.lang.String-org.apache.kafka.streams.kstream.Windowed-"/>
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="byte"/></returns>
         public byte[] SerializeBaseKey(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Windowed arg1)
         {
-            return IExecuteArray<byte>("serializeBaseKey", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serializeBaseKey", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html#close--"/>
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg1"><see cref="bool"/></param>
         public void Configure(Java.Util.Map arg0, bool arg1)
         {
-            IExecute("configure", arg0, arg1);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
 
         #endregion
@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="byte"/></returns>
         public byte[] Serialize(Java.Lang.String arg0, object arg1)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html#serialize-java.lang.String-org.apache.kafka.streams.kstream.Windowed-"/>
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="byte"/></returns>
         public byte[] Serialize(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Windowed<T> arg1)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html#serializeBaseKey-java.lang.String-org.apache.kafka.streams.kstream.Windowed-"/>
@@ -261,7 +261,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="byte"/></returns>
         public byte[] SerializeBaseKey(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Windowed<T> arg1)
         {
-            return IExecuteArray<byte>("serializeBaseKey", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serializeBaseKey", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html#close--"/>
@@ -277,7 +277,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg1"><see cref="bool"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0, bool arg1)
         {
-            IExecute("configure", arg0, arg1);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
 
         #endregion

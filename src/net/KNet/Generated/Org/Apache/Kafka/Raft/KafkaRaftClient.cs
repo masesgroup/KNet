@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional CreateSnapshot(Org.Apache.Kafka.Raft.OffsetAndEpoch arg0, long arg1)
         {
-            return IExecute<Java.Util.Optional>("createSnapshot", arg0, arg1);
+            return IExecuteWithSignature<Java.Util.Optional>("createSnapshot", "(Lorg/apache/kafka/raft/OffsetAndEpoch;J)Ljava/util/Optional;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClient.html#nodeId--"/>
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="long"/></returns>
         public long ScheduleAppend(int arg0, Java.Util.List arg1)
         {
-            return IExecute<long>("scheduleAppend", arg0, arg1);
+            return IExecuteWithSignature<long>("scheduleAppend", "(ILjava/util/List;)J", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClient.html#scheduleAtomicAppend-int-java.util.OptionalLong-java.util.List-"/>
@@ -240,7 +240,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="long"/></returns>
         public long ScheduleAtomicAppend(int arg0, Java.Util.OptionalLong arg1, Java.Util.List arg2)
         {
-            return IExecute<long>("scheduleAtomicAppend", arg0, arg1, arg2);
+            return IExecuteWithSignature<long>("scheduleAtomicAppend", "(ILjava/util/OptionalLong;Ljava/util/List;)J", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClient.html#leaderAndEpoch--"/>
@@ -273,7 +273,7 @@ namespace Org.Apache.Kafka.Raft
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Metrics.Metrics"/></param>
         public void Initialize(Java.Util.Map arg0, Org.Apache.Kafka.Raft.QuorumStateStore arg1, Org.Apache.Kafka.Common.Metrics.Metrics arg2)
         {
-            IExecute("initialize", arg0, arg1, arg2);
+            IExecuteWithSignature("initialize", "(Ljava/util/Map;Lorg/apache/kafka/raft/QuorumStateStore;Lorg/apache/kafka/common/metrics/Metrics;)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClient.html#poll--"/>
@@ -400,7 +400,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Snapshot.SnapshotWriter<T>> CreateSnapshot(Org.Apache.Kafka.Raft.OffsetAndEpoch arg0, long arg1)
         {
-            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Snapshot.SnapshotWriter<T>>>("createSnapshot", arg0, arg1);
+            return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Snapshot.SnapshotWriter<T>>>("createSnapshot", "(Lorg/apache/kafka/raft/OffsetAndEpoch;J)Ljava/util/Optional;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClient.html#nodeId--"/>
@@ -434,7 +434,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="long"/></returns>
         public long ScheduleAppend(int arg0, Java.Util.List<T> arg1)
         {
-            return IExecute<long>("scheduleAppend", arg0, arg1);
+            return IExecuteWithSignature<long>("scheduleAppend", "(ILjava/util/List;)J", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClient.html#scheduleAtomicAppend-int-java.util.OptionalLong-java.util.List-"/>
@@ -445,7 +445,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="long"/></returns>
         public long ScheduleAtomicAppend(int arg0, Java.Util.OptionalLong arg1, Java.Util.List<T> arg2)
         {
-            return IExecute<long>("scheduleAtomicAppend", arg0, arg1, arg2);
+            return IExecuteWithSignature<long>("scheduleAtomicAppend", "(ILjava/util/OptionalLong;Ljava/util/List;)J", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClient.html#leaderAndEpoch--"/>
@@ -478,7 +478,7 @@ namespace Org.Apache.Kafka.Raft
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Metrics.Metrics"/></param>
         public void Initialize(Java.Util.Map<Java.Lang.Integer, Java.Net.InetSocketAddress> arg0, Org.Apache.Kafka.Raft.QuorumStateStore arg1, Org.Apache.Kafka.Common.Metrics.Metrics arg2)
         {
-            IExecute("initialize", arg0, arg1, arg2);
+            IExecuteWithSignature("initialize", "(Ljava/util/Map;Lorg/apache/kafka/raft/QuorumStateStore;Lorg/apache/kafka/common/metrics/Metrics;)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/KafkaRaftClient.html#poll--"/>

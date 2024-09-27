@@ -252,7 +252,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg1"><see cref="object"/></param>
         public override void Apply(object arg0, object arg1)
         {
-            IExecute("apply", arg0, arg1);
+            IExecuteWithSignature("apply", "(Ljava/lang/Object;Ljava/lang/Object;)V", arg0, arg1);
         }
 
         #endregion
@@ -374,7 +374,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg1"><typeparamref name="V"/></param>
         public override void Apply(K arg0, V arg1)
         {
-            IExecute("apply", arg0, arg1);
+            IExecuteWithSignature("apply", "(Ljava/lang/Object;Ljava/lang/Object;)V", arg0, arg1);
         }
 
         #endregion

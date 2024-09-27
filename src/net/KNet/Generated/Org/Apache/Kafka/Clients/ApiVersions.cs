@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Clients
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.NodeApiVersions"/></param>
         public void Update(Java.Lang.String arg0, Org.Apache.Kafka.Clients.NodeApiVersions arg1)
         {
-            IExecute("update", arg0, arg1);
+            IExecuteWithSignature("update", "(Ljava/lang/String;Lorg/apache/kafka/clients/NodeApiVersions;)V", arg0, arg1);
         }
 
         #endregion

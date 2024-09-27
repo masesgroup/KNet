@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <returns><see cref="bool"/></returns>
         public bool AlterOffsets(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> arg1)
         {
-            return IExecute<bool>("alterOffsets", arg0, arg1);
+            return IExecuteWithSignature<bool>("alterOffsets", "(Ljava/util/Map;Ljava/util/Map;)Z", arg0, arg1);
         }
 
         #endregion

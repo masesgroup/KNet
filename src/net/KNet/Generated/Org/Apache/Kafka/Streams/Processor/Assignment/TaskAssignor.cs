@@ -225,7 +225,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError"/></param>
         public void OnAssignmentComputed(Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupAssignment arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupSubscription arg1, Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError arg2)
         {
-            IExecute("onAssignmentComputed", arg0, arg1, arg2);
+            IExecuteWithSignature("onAssignmentComputed", "(Lorg/apache/kafka/clients/consumer/ConsumerPartitionAssignor$GroupAssignment;Lorg/apache/kafka/clients/consumer/ConsumerPartitionAssignor$GroupSubscription;Lorg/apache/kafka/streams/processor/assignment/TaskAssignor$AssignmentError;)V", arg0, arg1, arg2);
         }
 
         #endregion

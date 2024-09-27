@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
         public override void OnCompletion(Org.Apache.Kafka.Clients.Producer.RecordMetadata arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
-            IExecute("onCompletion", arg0, arg1);
+            IExecuteWithSignature("onCompletion", "(Lorg/apache/kafka/clients/producer/RecordMetadata;Ljava/lang/Exception;)V", arg0, arg1);
         }
 
         #endregion

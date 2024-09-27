@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="Org.Apache.Kafka.Raft.ElectionState"/></returns>
         public static Org.Apache.Kafka.Raft.ElectionState WithElectedLeader(int arg0, int arg1, Java.Util.Set<Java.Lang.Integer> arg2)
         {
-            return SExecute<Org.Apache.Kafka.Raft.ElectionState>(LocalBridgeClazz, "withElectedLeader", arg0, arg1, arg2);
+            return SExecuteWithSignature<Org.Apache.Kafka.Raft.ElectionState>(LocalBridgeClazz, "withElectedLeader", "(IILjava/util/Set;)Lorg/apache/kafka/raft/ElectionState;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/ElectionState.html#withUnknownLeader-int-java.util.Set-"/>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Raft
         /// <returns><see cref="Org.Apache.Kafka.Raft.ElectionState"/></returns>
         public static Org.Apache.Kafka.Raft.ElectionState WithUnknownLeader(int arg0, Java.Util.Set<Java.Lang.Integer> arg1)
         {
-            return SExecute<Org.Apache.Kafka.Raft.ElectionState>(LocalBridgeClazz, "withUnknownLeader", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Raft.ElectionState>(LocalBridgeClazz, "withUnknownLeader", "(ILjava/util/Set;)Lorg/apache/kafka/raft/ElectionState;", arg0, arg1);
         }
 
         #endregion

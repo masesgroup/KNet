@@ -227,7 +227,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public byte[] SerializeDefault(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, object arg2)
         {
-            return IExecuteArray<byte>("serializeDefault", arg0, arg1, arg2);
+            return IExecuteWithSignatureArray<byte>("serializeDefault", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Ljava/lang/Object;)[B", arg0, arg1, arg2);
         }
 
         /// <summary>
@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public void ConfigureDefault(Java.Util.Map arg0, bool arg1)
         {
-            IExecute("configureDefault", arg0, arg1);
+            IExecuteWithSignature("configureDefault", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
 
         /// <summary>
@@ -364,7 +364,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="byte"/></returns>
         public override byte[] Serialize(Java.Lang.String arg0, object arg1)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-org.apache.kafka.common.header.Headers-java.lang.Object-"/>
@@ -375,7 +375,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="byte"/></returns>
         public override byte[] Serialize(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, object arg2)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1, arg2);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Ljava/lang/Object;)[B", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/Serializer.html#close--"/>
@@ -391,7 +391,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="arg1"><see cref="bool"/></param>
         public override void Configure(Java.Util.Map arg0, bool arg1)
         {
-            IExecute("configure", arg0, arg1);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
 
         #endregion
@@ -489,7 +489,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public byte[] SerializeDefault(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, T arg2)
         {
-            return IExecuteArray<byte>("serializeDefault", arg0, arg1, arg2);
+            return IExecuteWithSignatureArray<byte>("serializeDefault", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Ljava/lang/Object;)[B", arg0, arg1, arg2);
         }
 
         /// <summary>
@@ -559,7 +559,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public void ConfigureDefault(Java.Util.Map<Java.Lang.String, object> arg0, bool arg1)
         {
-            IExecute("configureDefault", arg0, arg1);
+            IExecuteWithSignature("configureDefault", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
 
         /// <summary>
@@ -626,7 +626,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="byte"/></returns>
         public override byte[] Serialize(Java.Lang.String arg0, T arg1)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-org.apache.kafka.common.header.Headers-java.lang.Object-"/>
@@ -637,7 +637,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="byte"/></returns>
         public override byte[] Serialize(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, T arg2)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1, arg2);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Ljava/lang/Object;)[B", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/Serializer.html#close--"/>
@@ -653,7 +653,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="arg1"><see cref="bool"/></param>
         public override void Configure(Java.Util.Map<Java.Lang.String, object> arg0, bool arg1)
         {
-            IExecute("configure", arg0, arg1);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
 
         #endregion

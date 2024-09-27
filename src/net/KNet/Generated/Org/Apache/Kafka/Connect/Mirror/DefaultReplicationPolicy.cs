@@ -157,7 +157,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String FormatRemoteTopic(Java.Lang.String arg0, Java.Lang.String arg1)
         {
-            return IExecute<Java.Lang.String>("formatRemoteTopic", arg0, arg1);
+            return IExecuteWithSignature<Java.Lang.String>("formatRemoteTopic", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/org/apache/kafka/connect/mirror/DefaultReplicationPolicy.html#offsetSyncsTopic-java.lang.String-"/>

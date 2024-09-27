@@ -440,7 +440,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public override void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
-            IExecute("configure", arg0);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/MetricsReporter.html#close--"/>

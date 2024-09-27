@@ -186,7 +186,7 @@ namespace Org.Apache.Kafka.Tools
         /// <returns><see cref="bool"/></returns>
         public static bool IsReassignmentInProgress(Org.Apache.Kafka.Common.TopicPartitionInfo arg0, Org.Apache.Kafka.Clients.Admin.PartitionReassignment arg1)
         {
-            return SExecute<bool>(LocalBridgeClazz, "isReassignmentInProgress", arg0, arg1);
+            return SExecuteWithSignature<bool>(LocalBridgeClazz, "isReassignmentInProgress", "(Lorg/apache/kafka/common/TopicPartitionInfo;Lorg/apache/kafka/clients/admin/PartitionReassignment;)Z", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/TopicCommand.html#main-java.lang.String[]-"/>
@@ -474,7 +474,7 @@ namespace Org.Apache.Kafka.Tools
             /// <exception cref="Java.Lang.InterruptedException"/>
             public Java.Util.List<Java.Lang.String> GetTopics(Java.Util.Optional<Java.Lang.String> arg0, bool arg1)
             {
-                return IExecute<Java.Util.List<Java.Lang.String>>("getTopics", arg0, arg1);
+                return IExecuteWithSignature<Java.Util.List<Java.Lang.String>>("getTopics", "(Ljava/util/Optional;Z)Ljava/util/List;", arg0, arg1);
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/TopicCommand.TopicService.html#getTopicIds-org.apache.kafka.common.Uuid-boolean-"/>
@@ -486,7 +486,7 @@ namespace Org.Apache.Kafka.Tools
             /// <exception cref="Java.Lang.InterruptedException"/>
             public Java.Util.List<Org.Apache.Kafka.Common.Uuid> GetTopicIds(Org.Apache.Kafka.Common.Uuid arg0, bool arg1)
             {
-                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Uuid>>("getTopicIds", arg0, arg1);
+                return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Uuid>>("getTopicIds", "(Lorg/apache/kafka/common/Uuid;Z)Ljava/util/List;", arg0, arg1);
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/TopicCommand.TopicService.html#listAllReassignments-java.util.Set-"/>

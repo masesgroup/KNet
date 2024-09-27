@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="byte"/></returns>
         public byte[] Serialize(Java.Lang.String arg0, object arg1)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/ShortSerializer.html#serialize-java.lang.String-java.lang.Short-"/>
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="byte"/></returns>
         public byte[] Serialize(Java.Lang.String arg0, Java.Lang.Short arg1)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Short;)[B", arg0, arg1);
         }
 
         #endregion

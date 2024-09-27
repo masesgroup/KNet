@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError"/></returns>
         public static Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError ValidateTaskAssignment(Org.Apache.Kafka.Streams.Processor.Assignment.ApplicationState arg0, Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.TaskAssignment arg1)
         {
-            return SExecute<Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError>(LocalBridgeClazz, "validateTaskAssignment", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.AssignmentError>(LocalBridgeClazz, "validateTaskAssignment", "(Lorg/apache/kafka/streams/processor/assignment/ApplicationState;Lorg/apache/kafka/streams/processor/assignment/TaskAssignor$TaskAssignment;)Lorg/apache/kafka/streams/processor/assignment/TaskAssignor$AssignmentError;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignmentUtils.html#defaultStandbyTaskAssignment-org.apache.kafka.streams.processor.assignment.ApplicationState-java.util.Map-"/>
@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         public static void DefaultStandbyTaskAssignment(Org.Apache.Kafka.Streams.Processor.Assignment.ApplicationState arg0, Java.Util.Map<Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId, Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment> arg1)
         {
-            SExecute(LocalBridgeClazz, "defaultStandbyTaskAssignment", arg0, arg1);
+            SExecuteWithSignature(LocalBridgeClazz, "defaultStandbyTaskAssignment", "(Lorg/apache/kafka/streams/processor/assignment/ApplicationState;Ljava/util/Map;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignmentUtils.html#optimizeRackAwareActiveTasks-org.apache.kafka.streams.processor.assignment.TaskAssignmentUtils.RackAwareOptimizationParams-java.util.Map-"/>
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         public static void OptimizeRackAwareActiveTasks(Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignmentUtils.RackAwareOptimizationParams arg0, Java.Util.Map<Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId, Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment> arg1)
         {
-            SExecute(LocalBridgeClazz, "optimizeRackAwareActiveTasks", arg0, arg1);
+            SExecuteWithSignature(LocalBridgeClazz, "optimizeRackAwareActiveTasks", "(Lorg/apache/kafka/streams/processor/assignment/TaskAssignmentUtils$RackAwareOptimizationParams;Ljava/util/Map;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/assignment/TaskAssignmentUtils.html#optimizeRackAwareStandbyTasks-org.apache.kafka.streams.processor.assignment.TaskAssignmentUtils.RackAwareOptimizationParams-java.util.Map-"/>
@@ -222,7 +222,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         public static void OptimizeRackAwareStandbyTasks(Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignmentUtils.RackAwareOptimizationParams arg0, Java.Util.Map<Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId, Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment> arg1)
         {
-            SExecute(LocalBridgeClazz, "optimizeRackAwareStandbyTasks", arg0, arg1);
+            SExecuteWithSignature(LocalBridgeClazz, "optimizeRackAwareStandbyTasks", "(Lorg/apache/kafka/streams/processor/assignment/TaskAssignmentUtils$RackAwareOptimizationParams;Ljava/util/Map;)V", arg0, arg1);
         }
 
         #endregion
@@ -262,7 +262,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             /// <returns><see cref="bool"/></returns>
             public bool CanMoveStandbyTask(Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsState arg0, Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsState arg1, Org.Apache.Kafka.Streams.Processor.TaskId arg2, Java.Util.Map<Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId, Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment> arg3)
             {
-                return IExecute<bool>("canMoveStandbyTask", arg0, arg1, arg2, arg3);
+                return IExecuteWithSignature<bool>("canMoveStandbyTask", "(Lorg/apache/kafka/streams/processor/assignment/KafkaStreamsState;Lorg/apache/kafka/streams/processor/assignment/KafkaStreamsState;Lorg/apache/kafka/streams/processor/TaskId;Ljava/util/Map;)Z", arg0, arg1, arg2, arg3);
             }
 
             #endregion

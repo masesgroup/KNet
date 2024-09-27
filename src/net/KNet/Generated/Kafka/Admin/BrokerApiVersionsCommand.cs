@@ -93,7 +93,7 @@ namespace Kafka.Admin
         /// <param name="_out"><see cref="Java.Io.PrintStream"/></param>
         public static void Execute(Java.Lang.String[] args, Java.Io.PrintStream _out)
         {
-            SExecute(LocalBridgeClazz, "execute", args, _out);
+            SExecuteWithSignature(LocalBridgeClazz, "execute", "([Ljava/lang/String;Ljava/io/PrintStream;)V", args, _out);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/kafka/admin/BrokerApiVersionsCommand.html#main-java.lang.String[]-"/>

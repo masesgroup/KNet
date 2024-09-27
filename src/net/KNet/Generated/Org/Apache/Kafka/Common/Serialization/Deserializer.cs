@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public object DeserializeDefault(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, byte[] arg2)
         {
-            return IExecute("deserializeDefault", arg0, arg1, arg2);
+            return IExecuteWithSignature("deserializeDefault", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;[B)Ljava/lang/Object;", arg0, arg1, arg2);
         }
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public object DeserializeDefault(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, Java.Nio.ByteBuffer arg2)
         {
-            return IExecute("deserializeDefault", arg0, arg1, arg2);
+            return IExecuteWithSignature("deserializeDefault", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Ljava/nio/ByteBuffer;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
 
         /// <summary>
@@ -338,7 +338,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public void ConfigureDefault(Java.Util.Map arg0, bool arg1)
         {
-            IExecute("configureDefault", arg0, arg1);
+            IExecuteWithSignature("configureDefault", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
 
         /// <summary>
@@ -405,7 +405,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="object"/></returns>
         public override object Deserialize(Java.Lang.String arg0, byte[] arg1)
         {
-            return IExecute("deserialize", arg0, arg1);
+            return IExecuteWithSignature("deserialize", "(Ljava/lang/String;[B)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-"/>
@@ -416,7 +416,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="object"/></returns>
         public override object Deserialize(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, byte[] arg2)
         {
-            return IExecute("deserialize", arg0, arg1, arg2);
+            return IExecuteWithSignature("deserialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;[B)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-"/>
@@ -427,7 +427,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="object"/></returns>
         public override object Deserialize(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, Java.Nio.ByteBuffer arg2)
         {
-            return IExecute("deserialize", arg0, arg1, arg2);
+            return IExecuteWithSignature("deserialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Ljava/nio/ByteBuffer;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/Deserializer.html#close--"/>
@@ -443,7 +443,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="arg1"><see cref="bool"/></param>
         public override void Configure(Java.Util.Map arg0, bool arg1)
         {
-            IExecute("configure", arg0, arg1);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
 
         #endregion
@@ -542,7 +542,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public T DeserializeDefault(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, byte[] arg2)
         {
-            return IExecute<T>("deserializeDefault", arg0, arg1, arg2);
+            return IExecuteWithSignature<T>("deserializeDefault", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;[B)Ljava/lang/Object;", arg0, arg1, arg2);
         }
 
         /// <summary>
@@ -582,7 +582,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public T DeserializeDefault(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, Java.Nio.ByteBuffer arg2)
         {
-            return IExecute<T>("deserializeDefault", arg0, arg1, arg2);
+            return IExecuteWithSignature<T>("deserializeDefault", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Ljava/nio/ByteBuffer;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
 
         /// <summary>
@@ -652,7 +652,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public void ConfigureDefault(Java.Util.Map<Java.Lang.String, object> arg0, bool arg1)
         {
-            IExecute("configureDefault", arg0, arg1);
+            IExecuteWithSignature("configureDefault", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
 
         /// <summary>
@@ -719,7 +719,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><typeparamref name="T"/></returns>
         public override T Deserialize(Java.Lang.String arg0, byte[] arg1)
         {
-            return IExecute<T>("deserialize", arg0, arg1);
+            return IExecuteWithSignature<T>("deserialize", "(Ljava/lang/String;[B)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-byte[]-"/>
@@ -730,7 +730,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><typeparamref name="T"/></returns>
         public override T Deserialize(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, byte[] arg2)
         {
-            return IExecute<T>("deserialize", arg0, arg1, arg2);
+            return IExecuteWithSignature<T>("deserialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;[B)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/Deserializer.html#deserialize-java.lang.String-org.apache.kafka.common.header.Headers-java.nio.ByteBuffer-"/>
@@ -741,7 +741,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><typeparamref name="T"/></returns>
         public override T Deserialize(Java.Lang.String arg0, Org.Apache.Kafka.Common.Header.Headers arg1, Java.Nio.ByteBuffer arg2)
         {
-            return IExecute<T>("deserialize", arg0, arg1, arg2);
+            return IExecuteWithSignature<T>("deserialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Ljava/nio/ByteBuffer;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/Deserializer.html#close--"/>
@@ -757,7 +757,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="arg1"><see cref="bool"/></param>
         public override void Configure(Java.Util.Map<Java.Lang.String, object> arg0, bool arg1)
         {
-            IExecute("configure", arg0, arg1);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
 
         #endregion

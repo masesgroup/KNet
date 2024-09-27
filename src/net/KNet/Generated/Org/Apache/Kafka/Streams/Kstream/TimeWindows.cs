@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public static Org.Apache.Kafka.Streams.Kstream.TimeWindows OfSizeAndGrace(Java.Time.Duration arg0, Java.Time.Duration arg1)
         {
-            return SExecute<Org.Apache.Kafka.Streams.Kstream.TimeWindows>(LocalBridgeClazz, "ofSizeAndGrace", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.TimeWindows>(LocalBridgeClazz, "ofSizeAndGrace", "(Ljava/time/Duration;Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/TimeWindows;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/TimeWindows.html#ofSizeWithNoGrace-java.time.Duration-"/>

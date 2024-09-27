@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
         public Java.Util.Concurrent.Future<Java.Lang.Void> Report(Org.Apache.Kafka.Connect.Sink.SinkRecord arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
-            return IExecute<Java.Util.Concurrent.Future<Java.Lang.Void>>("report", arg0, arg1);
+            return IExecuteWithSignature<Java.Util.Concurrent.Future<Java.Lang.Void>>("report", "(Lorg/apache/kafka/connect/sink/SinkRecord;Ljava/lang/Throwable;)Ljava/util/concurrent/Future;", arg0, arg1);
         }
 
         #endregion

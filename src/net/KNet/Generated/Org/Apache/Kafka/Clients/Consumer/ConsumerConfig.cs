@@ -501,7 +501,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <returns><see cref="Java.Util.Map"/></returns>
         public static Java.Util.Map<Java.Lang.String, object> AppendDeserializerToConfig(Java.Util.Map<Java.Lang.String, object> arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg2)
         {
-            return SExecute<Java.Util.Map<Java.Lang.String, object>>(LocalBridgeClazz, "appendDeserializerToConfig", arg0, arg1, arg2);
+            return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>(LocalBridgeClazz, "appendDeserializerToConfig", "(Ljava/util/Map;Lorg/apache/kafka/common/serialization/Deserializer;Lorg/apache/kafka/common/serialization/Deserializer;)Ljava/util/Map;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#configNames--"/>

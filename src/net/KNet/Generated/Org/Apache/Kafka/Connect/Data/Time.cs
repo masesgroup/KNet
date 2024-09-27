@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <returns><see cref="int"/></returns>
         public static int FromLogical(Org.Apache.Kafka.Connect.Data.Schema arg0, Java.Util.Date arg1)
         {
-            return SExecute<int>(LocalBridgeClazz, "fromLogical", arg0, arg1);
+            return SExecuteWithSignature<int>(LocalBridgeClazz, "fromLogical", "(Lorg/apache/kafka/connect/data/Schema;Ljava/util/Date;)I", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/Time.html#toLogical-org.apache.kafka.connect.data.Schema-int-"/>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <returns><see cref="Java.Util.Date"/></returns>
         public static Java.Util.Date ToLogical(Org.Apache.Kafka.Connect.Data.Schema arg0, int arg1)
         {
-            return SExecute<Java.Util.Date>(LocalBridgeClazz, "toLogical", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.Date>(LocalBridgeClazz, "toLogical", "(Lorg/apache/kafka/connect/data/Schema;I)Ljava/util/Date;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/data/Time.html#builder--"/>

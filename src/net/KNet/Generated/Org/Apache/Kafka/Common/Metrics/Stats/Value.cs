@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <returns><see cref="double"/></returns>
         public double Measure(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, long arg1)
         {
-            return IExecute<double>("measure", arg0, arg1);
+            return IExecuteWithSignature<double>("measure", "(Lorg/apache/kafka/common/metrics/MetricConfig;J)D", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Value.html#record-org.apache.kafka.common.metrics.MetricConfig-double-long-"/>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <param name="arg2"><see cref="long"/></param>
         public void Record(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, double arg1, long arg2)
         {
-            IExecute("record", arg0, arg1, arg2);
+            IExecuteWithSignature("record", "(Lorg/apache/kafka/common/metrics/MetricConfig;DJ)V", arg0, arg1, arg2);
         }
 
         #endregion

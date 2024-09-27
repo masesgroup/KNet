@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KGroupedTable GroupBy(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper arg0, Org.Apache.Kafka.Streams.Kstream.Grouped arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KGroupedTable>("groupBy", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KGroupedTable>("groupBy", "(Lorg/apache/kafka/streams/kstream/KeyValueMapper;Lorg/apache/kafka/streams/kstream/Grouped;)Lorg/apache/kafka/streams/kstream/KGroupedTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#groupBy-org.apache.kafka.streams.kstream.KeyValueMapper-"/>
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KGroupedTable GroupBy(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper arg0)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KGroupedTable>("groupBy", arg0);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KGroupedTable>("groupBy", "(Lorg/apache/kafka/streams/kstream/KeyValueMapper;)Lorg/apache/kafka/streams/kstream/KGroupedTable;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#toStream-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.Named-"/>
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream ToStream(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream>("toStream", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("toStream", "(Lorg/apache/kafka/streams/kstream/KeyValueMapper;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#toStream-org.apache.kafka.streams.kstream.KeyValueMapper-"/>
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable Join(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1, Org.Apache.Kafka.Streams.Kstream.Materialized arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("join", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable Join(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Org.Apache.Kafka.Streams.Kstream.Materialized arg3)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("join", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-"/>
@@ -211,7 +211,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable Join(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("join", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable Join(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("join", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -232,7 +232,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable LeftJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1, Org.Apache.Kafka.Streams.Kstream.Materialized arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable LeftJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Org.Apache.Kafka.Streams.Kstream.Materialized arg3)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-"/>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable LeftJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -265,7 +265,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable LeftJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -276,7 +276,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable OuterJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1, Org.Apache.Kafka.Streams.Kstream.Materialized arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("outerJoin", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("outerJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -288,7 +288,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable OuterJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Org.Apache.Kafka.Streams.Kstream.Materialized arg3)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("outerJoin", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("outerJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-"/>
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable OuterJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("outerJoin", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("outerJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -309,7 +309,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable OuterJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("outerJoin", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("outerJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -321,7 +321,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable Join(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Java.Util.Function.Function arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg2, Org.Apache.Kafka.Streams.Kstream.Materialized arg3)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("join", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -334,7 +334,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable Join(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Java.Util.Function.Function arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg2, Org.Apache.Kafka.Streams.Kstream.TableJoined arg3, Org.Apache.Kafka.Streams.Kstream.Materialized arg4)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("join", arg0, arg1, arg2, arg3, arg4);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/TableJoined;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-"/>
@@ -346,7 +346,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable Join(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Java.Util.Function.Function arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg2, Org.Apache.Kafka.Streams.Kstream.TableJoined arg3)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("join", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/TableJoined;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -357,7 +357,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable Join(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Java.Util.Function.Function arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("join", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -369,7 +369,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable LeftJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Java.Util.Function.Function arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg2, Org.Apache.Kafka.Streams.Kstream.Materialized arg3)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -382,7 +382,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable LeftJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Java.Util.Function.Function arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg2, Org.Apache.Kafka.Streams.Kstream.TableJoined arg3, Org.Apache.Kafka.Streams.Kstream.Materialized arg4)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", arg0, arg1, arg2, arg3, arg4);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/TableJoined;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-"/>
@@ -394,7 +394,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable LeftJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Java.Util.Function.Function arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg2, Org.Apache.Kafka.Streams.Kstream.TableJoined arg3)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/TableJoined;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -405,7 +405,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable LeftJoin(Org.Apache.Kafka.Streams.Kstream.KTable arg0, Java.Util.Function.Function arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -415,7 +415,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable MapValues(Org.Apache.Kafka.Streams.Kstream.ValueMapper arg0, Org.Apache.Kafka.Streams.Kstream.Materialized arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapper;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -426,7 +426,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable MapValues(Org.Apache.Kafka.Streams.Kstream.ValueMapper arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Org.Apache.Kafka.Streams.Kstream.Materialized arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapper;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-"/>
@@ -436,7 +436,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable MapValues(Org.Apache.Kafka.Streams.Kstream.ValueMapper arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapper;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-"/>
@@ -455,7 +455,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable MapValues(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey arg0, Org.Apache.Kafka.Streams.Kstream.Materialized arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -466,7 +466,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable MapValues(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Org.Apache.Kafka.Streams.Kstream.Materialized arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-"/>
@@ -476,7 +476,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable MapValues(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-"/>
@@ -520,7 +520,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable Filter(Org.Apache.Kafka.Streams.Kstream.Predicate arg0, Org.Apache.Kafka.Streams.Kstream.Materialized arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("filter", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("filter", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -531,7 +531,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable Filter(Org.Apache.Kafka.Streams.Kstream.Predicate arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Org.Apache.Kafka.Streams.Kstream.Materialized arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("filter", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("filter", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-"/>
@@ -541,7 +541,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable Filter(Org.Apache.Kafka.Streams.Kstream.Predicate arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("filter", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("filter", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-"/>
@@ -560,7 +560,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable FilterNot(Org.Apache.Kafka.Streams.Kstream.Predicate arg0, Org.Apache.Kafka.Streams.Kstream.Materialized arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("filterNot", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("filterNot", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -571,7 +571,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable FilterNot(Org.Apache.Kafka.Streams.Kstream.Predicate arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Org.Apache.Kafka.Streams.Kstream.Materialized arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("filterNot", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("filterNot", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-"/>
@@ -581,7 +581,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable FilterNot(Org.Apache.Kafka.Streams.Kstream.Predicate arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("filterNot", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable>("filterNot", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-"/>
@@ -666,7 +666,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KGroupedTable<KR, VR> GroupBy<KR, VR, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Org.Apache.Kafka.Streams.KeyValue<KR, VR>> arg0, Org.Apache.Kafka.Streams.Kstream.Grouped<KR, VR> arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KGroupedTable<KR, VR>>("groupBy", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KGroupedTable<KR, VR>>("groupBy", "(Lorg/apache/kafka/streams/kstream/KeyValueMapper;Lorg/apache/kafka/streams/kstream/Grouped;)Lorg/apache/kafka/streams/kstream/KGroupedTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#groupBy-org.apache.kafka.streams.kstream.KeyValueMapper-"/>
@@ -679,7 +679,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KGroupedTable<KR, VR> GroupBy<KR, VR, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Org.Apache.Kafka.Streams.KeyValue<KR, VR>> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KGroupedTable<KR, VR>>("groupBy", arg0);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KGroupedTable<KR, VR>>("groupBy", "(Lorg/apache/kafka/streams/kstream/KeyValueMapper;)Lorg/apache/kafka/streams/kstream/KGroupedTable;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#toStream-org.apache.kafka.streams.kstream.KeyValueMapper-org.apache.kafka.streams.kstream.Named-"/>
@@ -693,7 +693,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream<KR, V> ToStream<KR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR>(Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsKR : KR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<KR, V>>("toStream", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<KR, V>>("toStream", "(Lorg/apache/kafka/streams/kstream/KeyValueMapper;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#toStream-org.apache.kafka.streams.kstream.KeyValueMapper-"/>
@@ -722,7 +722,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Join<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -739,7 +739,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Join<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-"/>
@@ -755,7 +755,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Join<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -770,7 +770,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Join<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -786,7 +786,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> LeftJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -803,7 +803,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> LeftJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-"/>
@@ -819,7 +819,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> LeftJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -834,7 +834,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> LeftJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -850,7 +850,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> OuterJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("outerJoin", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("outerJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -867,7 +867,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> OuterJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg3) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("outerJoin", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("outerJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Named-"/>
@@ -883,7 +883,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> OuterJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("outerJoin", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("outerJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin-org.apache.kafka.streams.kstream.KTable-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -898,7 +898,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> OuterJoin<VR, VO, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KTable<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1) where Arg1objectSuperV : V where Arg1objectSuperVO : VO where Arg1ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("outerJoin", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("outerJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Lorg/apache/kafka/streams/kstream/ValueJoiner;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -913,7 +913,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Join<VR, KO, VO>(Org.Apache.Kafka.Streams.Kstream.KTable<KO, VO> arg0, Java.Util.Function.Function<V, KO> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<V, VO, VR> arg2, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg3)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -929,7 +929,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Join<VR, KO, VO>(Org.Apache.Kafka.Streams.Kstream.KTable<KO, VO> arg0, Java.Util.Function.Function<V, KO> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<V, VO, VR> arg2, Org.Apache.Kafka.Streams.Kstream.TableJoined<K, KO> arg3, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg4)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", arg0, arg1, arg2, arg3, arg4);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/TableJoined;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-"/>
@@ -944,7 +944,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Join<VR, KO, VO>(Org.Apache.Kafka.Streams.Kstream.KTable<KO, VO> arg0, Java.Util.Function.Function<V, KO> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<V, VO, VR> arg2, Org.Apache.Kafka.Streams.Kstream.TableJoined<K, KO> arg3)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/TableJoined;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -958,7 +958,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> Join<VR, KO, VO>(Org.Apache.Kafka.Streams.Kstream.KTable<KO, VO> arg0, Java.Util.Function.Function<V, KO> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<V, VO, VR> arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("join", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -973,7 +973,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> LeftJoin<VR, KO, VO>(Org.Apache.Kafka.Streams.Kstream.KTable<KO, VO> arg0, Java.Util.Function.Function<V, KO> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<V, VO, VR> arg2, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg3)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -989,7 +989,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> LeftJoin<VR, KO, VO>(Org.Apache.Kafka.Streams.Kstream.KTable<KO, VO> arg0, Java.Util.Function.Function<V, KO> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<V, VO, VR> arg2, Org.Apache.Kafka.Streams.Kstream.TableJoined<K, KO> arg3, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg4)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", arg0, arg1, arg2, arg3, arg4);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/TableJoined;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-"/>
@@ -1004,7 +1004,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> LeftJoin<VR, KO, VO>(Org.Apache.Kafka.Streams.Kstream.KTable<KO, VO> arg0, Java.Util.Function.Function<V, KO> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<V, VO, VR> arg2, Org.Apache.Kafka.Streams.Kstream.TableJoined<K, KO> arg3)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;Lorg/apache/kafka/streams/kstream/TableJoined;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-"/>
@@ -1018,7 +1018,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> LeftJoin<VR, KO, VO>(Org.Apache.Kafka.Streams.Kstream.KTable<KO, VO> arg0, Java.Util.Function.Function<V, KO> arg1, Org.Apache.Kafka.Streams.Kstream.ValueJoiner<V, VO, VR> arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("leftJoin", "(Lorg/apache/kafka/streams/kstream/KTable;Ljava/util/function/Function;Lorg/apache/kafka/streams/kstream/ValueJoiner;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -1031,7 +1031,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> MapValues<VR, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapper<Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg1) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapper;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -1045,7 +1045,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> MapValues<VR, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapper<Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapper;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Named-"/>
@@ -1058,7 +1058,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> MapValues<VR, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapper<Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapper;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-"/>
@@ -1084,7 +1084,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> MapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -1099,7 +1099,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> MapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-org.apache.kafka.streams.kstream.Named-"/>
@@ -1113,7 +1113,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> MapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVR : VR
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", "(Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapperWithKey-"/>
@@ -1163,7 +1163,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> Filter<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filter", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filter", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -1176,7 +1176,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> Filter<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filter", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filter", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-"/>
@@ -1188,7 +1188,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> Filter<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filter", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filter", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filter-org.apache.kafka.streams.kstream.Predicate-"/>
@@ -1211,7 +1211,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filterNot", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filterNot", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
@@ -1224,7 +1224,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filterNot", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filterNot", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Named-"/>
@@ -1236,7 +1236,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, V> FilterNot<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filterNot", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("filterNot", "(Lorg/apache/kafka/streams/kstream/Predicate;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/kstream/KTable;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/KTable.html#filterNot-org.apache.kafka.streams.kstream.Predicate-"/>

@@ -953,7 +953,7 @@ namespace Org.Apache.Kafka.Streams
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, object> GetMainConsumerConfigs(Java.Lang.String arg0, Java.Lang.String arg1, int arg2)
         {
-            return IExecute<Java.Util.Map<Java.Lang.String, object>>("getMainConsumerConfigs", arg0, arg1, arg2);
+            return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("getMainConsumerConfigs", "(Ljava/lang/String;Ljava/lang/String;I)Ljava/util/Map;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/StreamsConfig.html#getProducerConfigs-java.lang.String-"/>
@@ -1120,7 +1120,7 @@ namespace Org.Apache.Kafka.Streams
             /// <returns><see cref="bool"/></returns>
             public static bool GetBoolean(Java.Util.Map<Java.Lang.String, object> arg0, Java.Lang.String arg1, bool arg2)
             {
-                return SExecute<bool>(LocalBridgeClazz, "getBoolean", arg0, arg1, arg2);
+                return SExecuteWithSignature<bool>(LocalBridgeClazz, "getBoolean", "(Ljava/util/Map;Ljava/lang/String;Z)Z", arg0, arg1, arg2);
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getProcessingThreadsEnabled-java.util.Map-"/>
@@ -1149,7 +1149,7 @@ namespace Org.Apache.Kafka.Streams
             /// <returns><see cref="Java.Lang.String"/></returns>
             public static Java.Lang.String GetString(Java.Util.Map<Java.Lang.String, object> arg0, Java.Lang.String arg1, Java.Lang.String arg2)
             {
-                return SExecute<Java.Lang.String>(LocalBridgeClazz, "getString", arg0, arg1, arg2);
+                return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "getString", "(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", arg0, arg1, arg2);
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getLong-java.util.Map-java.lang.String-long-"/>
@@ -1160,7 +1160,7 @@ namespace Org.Apache.Kafka.Streams
             /// <returns><see cref="long"/></returns>
             public static long GetLong(Java.Util.Map<Java.Lang.String, object> arg0, Java.Lang.String arg1, long arg2)
             {
-                return SExecute<long>(LocalBridgeClazz, "getLong", arg0, arg1, arg2);
+                return SExecuteWithSignature<long>(LocalBridgeClazz, "getLong", "(Ljava/util/Map;Ljava/lang/String;J)J", arg0, arg1, arg2);
             }
 
             #endregion

@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="byte"/></returns>
         public byte[] Serialize(Java.Lang.String arg0, object arg1)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/StringSerializer.html#serialize-java.lang.String-java.lang.String-"/>
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <returns><see cref="byte"/></returns>
         public byte[] Serialize(Java.Lang.String arg0, Java.Lang.String arg1)
         {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
+            return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/String;)[B", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/serialization/StringSerializer.html#configure-java.util.Map-boolean-"/>
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="arg1"><see cref="bool"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0, bool arg1)
         {
-            IExecute("configure", arg0, arg1);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
 
         #endregion

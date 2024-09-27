@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
         public Org.Apache.Kafka.Connect.Connector.ConnectRecord NewRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable arg7)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("newRecord", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("newRecord", "(Ljava/lang/String;Ljava/lang/Integer;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Ljava/lang/Long;Ljava/lang/Iterable;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-"/>
@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
         public Org.Apache.Kafka.Connect.Connector.ConnectRecord NewRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("newRecord", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("newRecord", "(Ljava/lang/String;Ljava/lang/Integer;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Ljava/lang/Long;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/connector/ConnectRecord.html#kafkaPartition--"/>
@@ -342,7 +342,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <returns><typeparamref name="R"/></returns>
         public R NewRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg7)
         {
-            return IExecute<R>("newRecord", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+            return IExecuteWithSignature<R>("newRecord", "(Ljava/lang/String;Ljava/lang/Integer;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Ljava/lang/Long;Ljava/lang/Iterable;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-"/>
@@ -357,7 +357,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <returns><typeparamref name="R"/></returns>
         public R NewRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
         {
-            return IExecute<R>("newRecord", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+            return IExecuteWithSignature<R>("newRecord", "(Ljava/lang/String;Ljava/lang/Integer;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Ljava/lang/Long;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/connector/ConnectRecord.html#kafkaPartition--"/>

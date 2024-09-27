@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <param name="arg2"><see cref="int"/></param>
         public void Update(byte[] arg0, int arg1, int arg2)
         {
-            IExecute("update", arg0, arg1, arg2);
+            IExecuteWithSignature("update", "([BII)V", arg0, arg1, arg2);
         }
 
         #endregion

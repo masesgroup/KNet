@@ -339,7 +339,7 @@ namespace Org.Apache.Kafka.Raft
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         public void TransitionToFollower(int arg0, Org.Apache.Kafka.Common.Node arg1)
         {
-            IExecute("transitionToFollower", arg0, arg1);
+            IExecuteWithSignature("transitionToFollower", "(ILorg/apache/kafka/common/Node;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/QuorumState.html#transitionToResigned-java.util.List-"/>

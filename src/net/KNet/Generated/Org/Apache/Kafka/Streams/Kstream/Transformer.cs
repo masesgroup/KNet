@@ -304,7 +304,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="object"/></returns>
         public override object Transform(object arg0, object arg1)
         {
-            return IExecute("transform", arg0, arg1);
+            return IExecuteWithSignature("transform", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/Transformer.html#close--"/>
@@ -492,7 +492,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><typeparamref name="R"/></returns>
         public override R Transform(K arg0, V arg1)
         {
-            return IExecute<R>("transform", arg0, arg1);
+            return IExecuteWithSignature<R>("transform", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/kstream/Transformer.html#close--"/>

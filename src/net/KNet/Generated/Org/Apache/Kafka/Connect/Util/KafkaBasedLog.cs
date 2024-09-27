@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.KafkaBasedLog"/></returns>
         public static Org.Apache.Kafka.Connect.Util.KafkaBasedLog WithExistingClients(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Consumer.Consumer arg1, Org.Apache.Kafka.Clients.Producer.Producer arg2, Org.Apache.Kafka.Connect.Util.TopicAdmin arg3, Org.Apache.Kafka.Connect.Util.Callback arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer arg6, Java.Util.Function.Predicate arg7)
         {
-            return SExecute<Org.Apache.Kafka.Connect.Util.KafkaBasedLog>(LocalBridgeClazz, "withExistingClients", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+            return SExecuteWithSignature<Org.Apache.Kafka.Connect.Util.KafkaBasedLog>(LocalBridgeClazz, "withExistingClients", "(Ljava/lang/String;Lorg/apache/kafka/clients/consumer/Consumer;Lorg/apache/kafka/clients/producer/Producer;Lorg/apache/kafka/connect/util/TopicAdmin;Lorg/apache/kafka/connect/util/Callback;Lorg/apache/kafka/common/utils/Time;Ljava/util/function/Consumer;Ljava/util/function/Predicate;)Lorg/apache/kafka/connect/util/KafkaBasedLog;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
 
         #endregion
@@ -192,7 +192,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
         public Java.Util.Concurrent.Future SendWithReceipt(object arg0, object arg1, Org.Apache.Kafka.Clients.Producer.Callback arg2)
         {
-            return IExecute<Java.Util.Concurrent.Future>("sendWithReceipt", arg0, arg1, arg2);
+            return IExecuteWithSignature<Java.Util.Concurrent.Future>("sendWithReceipt", "(Ljava/lang/Object;Ljava/lang/Object;Lorg/apache/kafka/clients/producer/Callback;)Ljava/util/concurrent/Future;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/KafkaBasedLog.html#sendWithReceipt-java.lang.Object-java.lang.Object-"/>
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
         public Java.Util.Concurrent.Future SendWithReceipt(object arg0, object arg1)
         {
-            return IExecute<Java.Util.Concurrent.Future>("sendWithReceipt", arg0, arg1);
+            return IExecuteWithSignature<Java.Util.Concurrent.Future>("sendWithReceipt", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/concurrent/Future;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/KafkaBasedLog.html#flush--"/>
@@ -227,7 +227,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Clients.Producer.Callback"/></param>
         public void Send(object arg0, object arg1, Org.Apache.Kafka.Clients.Producer.Callback arg2)
         {
-            IExecute("send", arg0, arg1, arg2);
+            IExecuteWithSignature("send", "(Ljava/lang/Object;Ljava/lang/Object;Lorg/apache/kafka/clients/producer/Callback;)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/KafkaBasedLog.html#send-java.lang.Object-java.lang.Object-"/>
@@ -236,7 +236,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg1"><see cref="object"/></param>
         public void Send(object arg0, object arg1)
         {
-            IExecute("send", arg0, arg1);
+            IExecuteWithSignature("send", "(Ljava/lang/Object;Ljava/lang/Object;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/KafkaBasedLog.html#start--"/>
@@ -319,7 +319,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.KafkaBasedLog"/></returns>
         public static Org.Apache.Kafka.Connect.Util.KafkaBasedLog<K, V> WithExistingClients(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Consumer.Consumer<K, V> arg1, Org.Apache.Kafka.Clients.Producer.Producer<K, V> arg2, Org.Apache.Kafka.Connect.Util.TopicAdmin arg3, Org.Apache.Kafka.Connect.Util.Callback<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg6, Java.Util.Function.Predicate<Org.Apache.Kafka.Common.TopicPartition> arg7)
         {
-            return SExecute<Org.Apache.Kafka.Connect.Util.KafkaBasedLog<K, V>>(LocalBridgeClazz, "withExistingClients", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+            return SExecuteWithSignature<Org.Apache.Kafka.Connect.Util.KafkaBasedLog<K, V>>(LocalBridgeClazz, "withExistingClients", "(Ljava/lang/String;Lorg/apache/kafka/clients/consumer/Consumer;Lorg/apache/kafka/clients/producer/Producer;Lorg/apache/kafka/connect/util/TopicAdmin;Lorg/apache/kafka/connect/util/Callback;Lorg/apache/kafka/common/utils/Time;Ljava/util/function/Consumer;Ljava/util/function/Predicate;)Lorg/apache/kafka/connect/util/KafkaBasedLog;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
 
         #endregion
@@ -350,7 +350,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
         public Java.Util.Concurrent.Future<Org.Apache.Kafka.Clients.Producer.RecordMetadata> SendWithReceipt(K arg0, V arg1, Org.Apache.Kafka.Clients.Producer.Callback arg2)
         {
-            return IExecute<Java.Util.Concurrent.Future<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>("sendWithReceipt", arg0, arg1, arg2);
+            return IExecuteWithSignature<Java.Util.Concurrent.Future<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>("sendWithReceipt", "(Ljava/lang/Object;Ljava/lang/Object;Lorg/apache/kafka/clients/producer/Callback;)Ljava/util/concurrent/Future;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/KafkaBasedLog.html#sendWithReceipt-java.lang.Object-java.lang.Object-"/>
@@ -360,7 +360,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
         public Java.Util.Concurrent.Future<Org.Apache.Kafka.Clients.Producer.RecordMetadata> SendWithReceipt(K arg0, V arg1)
         {
-            return IExecute<Java.Util.Concurrent.Future<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>("sendWithReceipt", arg0, arg1);
+            return IExecuteWithSignature<Java.Util.Concurrent.Future<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>("sendWithReceipt", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/concurrent/Future;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/KafkaBasedLog.html#flush--"/>
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Clients.Producer.Callback"/></param>
         public void Send(K arg0, V arg1, Org.Apache.Kafka.Clients.Producer.Callback arg2)
         {
-            IExecute("send", arg0, arg1, arg2);
+            IExecuteWithSignature("send", "(Ljava/lang/Object;Ljava/lang/Object;Lorg/apache/kafka/clients/producer/Callback;)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/KafkaBasedLog.html#send-java.lang.Object-java.lang.Object-"/>
@@ -394,7 +394,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg1"><typeparamref name="V"/></param>
         public void Send(K arg0, V arg1)
         {
-            IExecute("send", arg0, arg1);
+            IExecuteWithSignature("send", "(Ljava/lang/Object;Ljava/lang/Object;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/KafkaBasedLog.html#start--"/>

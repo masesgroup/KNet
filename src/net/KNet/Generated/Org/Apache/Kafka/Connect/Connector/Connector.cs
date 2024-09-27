@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
         public void Initialize(Org.Apache.Kafka.Connect.Connector.ConnectorContext arg0, Java.Util.List<Java.Util.Map<Java.Lang.String, Java.Lang.String>> arg1)
         {
-            IExecute("initialize", arg0, arg1);
+            IExecuteWithSignature("initialize", "(Lorg/apache/kafka/connect/connector/ConnectorContext;Ljava/util/List;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/org/apache/kafka/connect/connector/Connector.html#initialize-org.apache.kafka.connect.connector.ConnectorContext-"/>

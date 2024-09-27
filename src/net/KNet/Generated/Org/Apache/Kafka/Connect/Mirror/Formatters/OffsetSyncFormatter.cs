@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
         /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>
         public void WriteTo(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg0, Java.Io.PrintStream arg1)
         {
-            IExecute("writeTo", arg0, arg1);
+            IExecuteWithSignature("writeTo", "(Lorg/apache/kafka/clients/consumer/ConsumerRecord;Ljava/io/PrintStream;)V", arg0, arg1);
         }
 
         #endregion

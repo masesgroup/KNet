@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Header"/></returns>
         public Org.Apache.Kafka.Connect.Header.Header With(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
         {
-            return IExecute<Org.Apache.Kafka.Connect.Header.Header>("with", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Header>("with", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Lorg/apache/kafka/connect/header/Header;", arg0, arg1);
         }
 
         #endregion

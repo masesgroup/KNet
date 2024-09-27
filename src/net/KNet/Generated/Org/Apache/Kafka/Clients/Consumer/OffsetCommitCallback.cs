@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
         public override void OnComplete(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
-            IExecute("onComplete", arg0, arg1);
+            IExecuteWithSignature("onComplete", "(Ljava/util/Map;Ljava/lang/Exception;)V", arg0, arg1);
         }
 
         #endregion
