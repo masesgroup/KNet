@@ -29,6 +29,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
+      - name: Support
+        uses: actions/checkout@v4
+        with:
+          repository: masesgroup/WebSitesSupport
+          path: WebSitesSupport
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Setup IndexNow # Generate files dynamically to prevent them from being leaked in public repositories.
@@ -38,6 +45,10 @@ jobs:
         with:
           source: ./docs/
           destination: ./_site
+      - name: Sitemap lastmod replacer
+        shell: pwsh
+        run: ./WebSitesSupport/SitemapLastmodReplacer.ps1 -baseUrl https://jnet.masesgroup.com -baseFolder ${{ github.workspace }}/docs/ -inSitemapFile ${{ github.workspace }}/_site/sitemap.xml -outSitemapFile ${{ github.workspace }}/sitemap.xml
+      - run: sudo cp ${{ github.workspace }}/sitemap.xml ${{ github.workspace }}/_site/sitemap.xml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
