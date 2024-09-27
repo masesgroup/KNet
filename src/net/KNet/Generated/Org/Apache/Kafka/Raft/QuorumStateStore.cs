@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Raft
         /// <param name="arg1"><see cref="short"/></param>
         public void WriteElectionState(Org.Apache.Kafka.Raft.ElectionState arg0, short arg1)
         {
-            IExecute("writeElectionState", arg0, arg1);
+            IExecuteWithSignature("writeElectionState", "(Lorg/apache/kafka/raft/ElectionState;S)V", arg0, arg1);
         }
 
         #endregion

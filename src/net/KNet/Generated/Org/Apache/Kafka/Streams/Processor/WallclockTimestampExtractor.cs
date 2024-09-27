@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <returns><see cref="long"/></returns>
         public long Extract(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object> arg0, long arg1)
         {
-            return IExecute<long>("extract", arg0, arg1);
+            return IExecuteWithSignature<long>("extract", "(Lorg/apache/kafka/clients/consumer/ConsumerRecord;J)J", arg0, arg1);
         }
 
         #endregion

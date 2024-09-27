@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Raft
         /// <param name="arg1"><see cref="long"/></param>
         public void OverrideFetchTimeout(long arg0, long arg1)
         {
-            IExecute("overrideFetchTimeout", arg0, arg1);
+            IExecuteWithSignature("overrideFetchTimeout", "(JJ)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/org/apache/kafka/raft/FollowerState.html#resetFetchTimeout-long-"/>

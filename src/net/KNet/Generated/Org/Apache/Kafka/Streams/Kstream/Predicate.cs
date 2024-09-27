@@ -254,7 +254,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="bool"/></returns>
         public override bool Test(object arg0, object arg1)
         {
-            return IExecute<bool>("test", arg0, arg1);
+            return IExecuteWithSignature<bool>("test", "(Ljava/lang/Object;Ljava/lang/Object;)Z", arg0, arg1);
         }
 
         #endregion
@@ -378,7 +378,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="bool"/></returns>
         public override bool Test(K arg0, V arg1)
         {
-            return IExecute<bool>("test", arg0, arg1);
+            return IExecuteWithSignature<bool>("test", "(Ljava/lang/Object;Ljava/lang/Object;)Z", arg0, arg1);
         }
 
         #endregion

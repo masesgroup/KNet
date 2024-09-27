@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Snapshot
         /// <returns><see cref="Org.Apache.Kafka.Snapshot.FileRawSnapshotWriter"/></returns>
         public static Org.Apache.Kafka.Snapshot.FileRawSnapshotWriter Create(Java.Nio.File.Path arg0, Org.Apache.Kafka.Raft.OffsetAndEpoch arg1)
         {
-            return SExecute<Org.Apache.Kafka.Snapshot.FileRawSnapshotWriter>(LocalBridgeClazz, "create", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Snapshot.FileRawSnapshotWriter>(LocalBridgeClazz, "create", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)Lorg/apache/kafka/snapshot/FileRawSnapshotWriter;", arg0, arg1);
         }
 
         #endregion

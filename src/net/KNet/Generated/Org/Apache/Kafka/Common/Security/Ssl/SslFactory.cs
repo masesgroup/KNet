@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// <returns><see cref="Javax.Net.Ssl.SSLEngine"/></returns>
         public Javax.Net.Ssl.SSLEngine CreateSslEngine(Java.Lang.String arg0, int arg1)
         {
-            return IExecute<Javax.Net.Ssl.SSLEngine>("createSslEngine", arg0, arg1);
+            return IExecuteWithSignature<Javax.Net.Ssl.SSLEngine>("createSslEngine", "(Ljava/lang/String;I)Ljavax/net/ssl/SSLEngine;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/ssl/SslFactory.html#createSslEngine-java.net.Socket-"/>

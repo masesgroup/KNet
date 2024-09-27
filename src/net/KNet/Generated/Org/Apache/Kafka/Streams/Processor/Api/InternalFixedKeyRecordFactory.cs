@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></returns>
         public static Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn> Create<KIn, VIn>(Org.Apache.Kafka.Streams.Processor.Api.Record<KIn, VIn> arg0)
         {
-            return SExecute<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>>(LocalBridgeClazz, "create", arg0);
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>>(LocalBridgeClazz, "create", "(Lorg/apache/kafka/streams/processor/api/Record;)Lorg/apache/kafka/streams/processor/api/FixedKeyRecord;", arg0);
         }
 
         #endregion

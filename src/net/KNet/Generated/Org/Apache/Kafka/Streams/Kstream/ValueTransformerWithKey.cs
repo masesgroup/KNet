@@ -319,7 +319,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="object"/></returns>
         public override object Transform(object arg0, object arg1)
         {
-            return IExecute("transform", arg0, arg1);
+            return IExecuteWithSignature("transform", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
 
         #endregion
@@ -507,7 +507,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><typeparamref name="VR"/></returns>
         public override VR Transform(K arg0, V arg1)
         {
-            return IExecute<VR>("transform", arg0, arg1);
+            return IExecuteWithSignature<VR>("transform", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
 
         #endregion

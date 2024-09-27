@@ -833,7 +833,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="object"/></returns>
         public static object ParseType(Java.Lang.String arg0, object arg1, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg2)
         {
-            return SExecute(LocalBridgeClazz, "parseType", arg0, arg1, arg2);
+            return SExecuteWithSignature(LocalBridgeClazz, "parseType", "(Ljava/lang/String;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Type;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#convertToString-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Type-"/>
@@ -843,7 +843,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Java.Lang.String"/></returns>
         public static Java.Lang.String ConvertToString(object arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1)
         {
-            return SExecute<Java.Lang.String>(LocalBridgeClazz, "convertToString", arg0, arg1);
+            return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "convertToString", "(Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Type;)Ljava/lang/String;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#convertToStringMapWithPasswordValues-java.util.Map-"/>
@@ -883,7 +883,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ToHtml(int arg0, Java.Util.Function.Function<Java.Lang.String, Java.Lang.String> arg1, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg2)
         {
-            return IExecute<Java.Lang.String>("toHtml", arg0, arg1, arg2);
+            return IExecuteWithSignature<Java.Lang.String>("toHtml", "(ILjava/util/function/Function;Ljava/util/Map;)Ljava/lang/String;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#toHtml-int-java.util.function.Function-"/>
@@ -893,7 +893,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ToHtml(int arg0, Java.Util.Function.Function<Java.Lang.String, Java.Lang.String> arg1)
         {
-            return IExecute<Java.Lang.String>("toHtml", arg0, arg1);
+            return IExecuteWithSignature<Java.Lang.String>("toHtml", "(ILjava/util/function/Function;)Ljava/lang/String;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#toHtml-java.util.Map-"/>
@@ -1005,7 +1005,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg3, Java.Lang.String arg4, Java.Lang.String arg5, int arg6, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg7, Java.Lang.String arg8, Java.Util.List<Java.Lang.String> arg9, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg10)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;Ljava/util/List;Lorg/apache/kafka/common/config/ConfigDef$Recommender;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-java.util.List-"/>
@@ -1023,7 +1023,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg3, Java.Lang.String arg4, Java.Lang.String arg5, int arg6, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg7, Java.Lang.String arg8, Java.Util.List<Java.Lang.String> arg9)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;Ljava/util/List;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-org.apache.kafka.common.config.ConfigDef.Recommender-"/>
@@ -1041,7 +1041,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg3, Java.Lang.String arg4, Java.Lang.String arg5, int arg6, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg7, Java.Lang.String arg8, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg9)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Recommender;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-"/>
@@ -1058,7 +1058,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg3, Java.Lang.String arg4, Java.Lang.String arg5, int arg6, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg7, Java.Lang.String arg8)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-"/>
@@ -1072,7 +1072,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg3, Java.Lang.String arg4, Java.Lang.String arg5)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-"/>
@@ -1085,7 +1085,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg3, Java.Lang.String arg4)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Validator-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-java.util.List-org.apache.kafka.common.config.ConfigDef.Recommender-java.lang.String-"/>
@@ -1106,7 +1106,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, Java.Lang.String arg5, Java.Lang.String arg6, int arg7, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg8, Java.Lang.String arg9, Java.Util.List<Java.Lang.String> arg10, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg11, Java.Lang.String arg12)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Validator;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;Ljava/util/List;Lorg/apache/kafka/common/config/ConfigDef$Recommender;Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Validator-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-java.util.List-org.apache.kafka.common.config.ConfigDef.Recommender-"/>
@@ -1126,7 +1126,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, Java.Lang.String arg5, Java.Lang.String arg6, int arg7, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg8, Java.Lang.String arg9, Java.Util.List<Java.Lang.String> arg10, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg11)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Validator;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;Ljava/util/List;Lorg/apache/kafka/common/config/ConfigDef$Recommender;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Validator-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-java.util.List-"/>
@@ -1145,7 +1145,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, Java.Lang.String arg5, Java.Lang.String arg6, int arg7, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg8, Java.Lang.String arg9, Java.Util.List<Java.Lang.String> arg10)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Validator;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;Ljava/util/List;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Validator-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-org.apache.kafka.common.config.ConfigDef.Recommender-"/>
@@ -1164,7 +1164,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, Java.Lang.String arg5, Java.Lang.String arg6, int arg7, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg8, Java.Lang.String arg9, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg10)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Validator;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Recommender;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Validator-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-"/>
@@ -1182,7 +1182,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, Java.Lang.String arg5, Java.Lang.String arg6, int arg7, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg8, Java.Lang.String arg9)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Validator;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Validator-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-"/>
@@ -1196,7 +1196,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, Java.Lang.String arg5)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Validator;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-java.util.List-org.apache.kafka.common.config.ConfigDef.Recommender-"/>
@@ -1214,7 +1214,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg2, Java.Lang.String arg3, Java.Lang.String arg4, int arg5, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg6, Java.Lang.String arg7, Java.Util.List<Java.Lang.String> arg8, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg9)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;Ljava/util/List;Lorg/apache/kafka/common/config/ConfigDef$Recommender;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-java.util.List-"/>
@@ -1231,7 +1231,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg2, Java.Lang.String arg3, Java.Lang.String arg4, int arg5, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg6, Java.Lang.String arg7, Java.Util.List<Java.Lang.String> arg8)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;Ljava/util/List;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-org.apache.kafka.common.config.ConfigDef.Recommender-"/>
@@ -1248,7 +1248,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg2, Java.Lang.String arg3, Java.Lang.String arg4, int arg5, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg6, Java.Lang.String arg7, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg8)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Recommender;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-java.lang.String-int-org.apache.kafka.common.config.ConfigDef.Width-java.lang.String-"/>
@@ -1264,7 +1264,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg2, Java.Lang.String arg3, Java.Lang.String arg4, int arg5, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg6, Java.Lang.String arg7)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef$Width;Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-"/>
@@ -1276,7 +1276,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Define(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg2, Java.Lang.String arg3)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("define", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("define", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#define-org.apache.kafka.common.config.ConfigDef.ConfigKey-"/>
@@ -1297,7 +1297,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef DefineInternal(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg3)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("defineInternal", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("defineInternal", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Importance;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#defineInternal-java.lang.String-org.apache.kafka.common.config.ConfigDef.Type-java.lang.Object-org.apache.kafka.common.config.ConfigDef.Validator-org.apache.kafka.common.config.ConfigDef.Importance-java.lang.String-"/>
@@ -1311,7 +1311,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef DefineInternal(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, Java.Lang.String arg5)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("defineInternal", arg0, arg1, arg2, arg3, arg4, arg5);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("defineInternal", "(Ljava/lang/String;Lorg/apache/kafka/common/config/ConfigDef$Type;Ljava/lang/Object;Lorg/apache/kafka/common/config/ConfigDef$Validator;Lorg/apache/kafka/common/config/ConfigDef$Importance;Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef;", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.html#withClientSaslSupport--"/>
@@ -1338,7 +1338,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         public void Embed(Java.Lang.String arg0, Java.Lang.String arg1, int arg2, Org.Apache.Kafka.Common.Config.ConfigDef arg3)
         {
-            IExecute("embed", arg0, arg1, arg2, arg3);
+            IExecuteWithSignature("embed", "(Ljava/lang/String;Ljava/lang/String;ILorg/apache/kafka/common/config/ConfigDef;)V", arg0, arg1, arg2, arg3);
         }
 
         #endregion
@@ -1380,7 +1380,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion
@@ -1429,7 +1429,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion
@@ -1683,7 +1683,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.LambdaValidator"/></returns>
             public static Org.Apache.Kafka.Common.Config.ConfigDef.LambdaValidator With(Java.Util.Function.BiConsumer<Java.Lang.String, object> arg0, Java.Util.Function.Supplier<Java.Lang.String> arg1)
             {
-                return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef.LambdaValidator>(LocalBridgeClazz, "with", arg0, arg1);
+                return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.LambdaValidator>(LocalBridgeClazz, "with", "(Ljava/util/function/BiConsumer;Ljava/util/function/Supplier;)Lorg/apache/kafka/common/config/ConfigDef$LambdaValidator;", arg0, arg1);
             }
 
             #endregion
@@ -1696,7 +1696,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion
@@ -1745,7 +1745,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion
@@ -1785,7 +1785,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion
@@ -1833,7 +1833,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion
@@ -1873,7 +1873,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion
@@ -1919,7 +1919,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.Range"/></returns>
             public static Org.Apache.Kafka.Common.Config.ConfigDef.Range Between(Java.Lang.Number arg0, Java.Lang.Number arg1)
             {
-                return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef.Range>(LocalBridgeClazz, "between", arg0, arg1);
+                return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.Range>(LocalBridgeClazz, "between", "(Ljava/lang/Number;Ljava/lang/Number;)Lorg/apache/kafka/common/config/ConfigDef$Range;", arg0, arg1);
             }
 
             #endregion
@@ -1932,7 +1932,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion
@@ -1973,7 +1973,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <returns><see cref="bool"/></returns>
             public bool Visible(Java.Lang.String arg0, Java.Util.Map<Java.Lang.String, object> arg1)
             {
-                return IExecute<bool>("visible", arg0, arg1);
+                return IExecuteWithSignature<bool>("visible", "(Ljava/lang/String;Ljava/util/Map;)Z", arg0, arg1);
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/ConfigDef.Recommender.html#validValues-java.lang.String-java.util.Map-"/>
@@ -1983,7 +1983,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <returns><see cref="Java.Util.List"/></returns>
             public Java.Util.List<object> ValidValues(Java.Lang.String arg0, Java.Util.Map<Java.Lang.String, object> arg1)
             {
-                return IExecute<Java.Util.List<object>>("validValues", arg0, arg1);
+                return IExecuteWithSignature<Java.Util.List<object>>("validValues", "(Ljava/lang/String;Ljava/util/Map;)Ljava/util/List;", arg0, arg1);
             }
 
             #endregion
@@ -2133,7 +2133,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion
@@ -2182,7 +2182,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion
@@ -2231,7 +2231,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion

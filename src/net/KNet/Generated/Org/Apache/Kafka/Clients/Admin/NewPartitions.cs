@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.NewPartitions"/></returns>
         public static Org.Apache.Kafka.Clients.Admin.NewPartitions IncreaseTo(int arg0, Java.Util.List<Java.Util.List<Java.Lang.Integer>> arg1)
         {
-            return SExecute<Org.Apache.Kafka.Clients.Admin.NewPartitions>(LocalBridgeClazz, "increaseTo", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.NewPartitions>(LocalBridgeClazz, "increaseTo", "(ILjava/util/List;)Lorg/apache/kafka/clients/admin/NewPartitions;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/clients/admin/NewPartitions.html#increaseTo-int-"/>

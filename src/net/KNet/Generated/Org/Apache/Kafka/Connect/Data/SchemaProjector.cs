@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <exception cref="Org.Apache.Kafka.Connect.Errors.SchemaProjectorException"/>
         public static object Project(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
         {
-            return SExecute(LocalBridgeClazz, "project", arg0, arg1, arg2);
+            return SExecuteWithSignature(LocalBridgeClazz, "project", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Lorg/apache/kafka/connect/data/Schema;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
 
         #endregion

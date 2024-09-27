@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         public void Update(Java.Lang.String arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Connect.Mirror.Checkpoint> arg1)
         {
-            IExecute("update", arg0, arg1);
+            IExecuteWithSignature("update", "(Ljava/lang/String;Ljava/util/Map;)V", arg0, arg1);
         }
 
         #endregion

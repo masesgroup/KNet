@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <exception cref="Javax.Security.Auth.Login.LoginException"/>
         public static Org.Apache.Kafka.Common.Security.Authenticator.LoginManager AcquireLoginManager(Org.Apache.Kafka.Common.Security.JaasContext arg0, Java.Lang.String arg1, Java.Lang.Class arg2, Java.Util.Map<Java.Lang.String, object> arg3)
         {
-            return SExecute<Org.Apache.Kafka.Common.Security.Authenticator.LoginManager>(LocalBridgeClazz, "acquireLoginManager", arg0, arg1, arg2, arg3);
+            return SExecuteWithSignature<Org.Apache.Kafka.Common.Security.Authenticator.LoginManager>(LocalBridgeClazz, "acquireLoginManager", "(Lorg/apache/kafka/common/security/JaasContext;Ljava/lang/String;Ljava/lang/Class;Ljava/util/Map;)Lorg/apache/kafka/common/security/authenticator/LoginManager;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/security/authenticator/LoginManager.html#closeAll--"/>

@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Common
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Common.Node> NodeIfOnline(Org.Apache.Kafka.Common.TopicPartition arg0, int arg1)
         {
-            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Node>>("nodeIfOnline", arg0, arg1);
+            return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Common.Node>>("nodeIfOnline", "(Lorg/apache/kafka/common/TopicPartition;I)Ljava/util/Optional;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/Cluster.html#internalTopics--"/>

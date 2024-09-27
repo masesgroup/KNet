@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Tools
         /// <returns><see cref="int"/></returns>
         public static int MainNoExit(Java.Lang.String[] arg0, Java.Io.PrintStream arg1, Java.Io.PrintStream arg2)
         {
-            return SExecute<int>(LocalBridgeClazz, "mainNoExit", arg0, arg1, arg2);
+            return SExecuteWithSignature<int>(LocalBridgeClazz, "mainNoExit", "([Ljava/lang/String;Ljava/io/PrintStream;Ljava/io/PrintStream;)I", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/org/apache/kafka/tools/ConnectPluginPath.html#main-java.lang.String[]-"/>

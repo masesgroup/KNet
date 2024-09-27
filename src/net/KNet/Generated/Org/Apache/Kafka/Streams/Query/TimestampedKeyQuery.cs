@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery"/></returns>
         public static Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery WithKey(object arg0)
         {
-            return SExecute<Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery>(LocalBridgeClazz, "withKey", arg0);
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery>(LocalBridgeClazz, "withKey", "(Ljava/lang/Object;)Lorg/apache/kafka/streams/query/TimestampedKeyQuery;", arg0);
         }
 
         #endregion
@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery"/></returns>
         public static Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery<K, V> WithKey(K arg0)
         {
-            return SExecute<Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery<K, V>>(LocalBridgeClazz, "withKey", arg0);
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery<K, V>>(LocalBridgeClazz, "withKey", "(Ljava/lang/Object;)Lorg/apache/kafka/streams/query/TimestampedKeyQuery;", arg0);
         }
 
         #endregion

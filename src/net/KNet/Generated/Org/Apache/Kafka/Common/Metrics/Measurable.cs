@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><see cref="double"/></returns>
         public double Measure(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, long arg1)
         {
-            return IExecute<double>("measure", arg0, arg1);
+            return IExecuteWithSignature<double>("measure", "(Lorg/apache/kafka/common/metrics/MetricConfig;J)D", arg0, arg1);
         }
 
         #endregion

@@ -262,7 +262,7 @@ namespace Org.Apache.Kafka.Raft
         /// <param name="arg1"><see cref="long"/></param>
         public void StartBackingOff(long arg0, long arg1)
         {
-            IExecute("startBackingOff", arg0, arg1);
+            IExecuteWithSignature("startBackingOff", "(JJ)V", arg0, arg1);
         }
 
         #endregion

@@ -475,7 +475,7 @@ namespace Org.Apache.Kafka.Raft
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion
@@ -515,7 +515,7 @@ namespace Org.Apache.Kafka.Raft
             /// <param name="arg1"><see cref="object"/></param>
             public void EnsureValid(Java.Lang.String arg0, object arg1)
             {
-                IExecute("ensureValid", arg0, arg1);
+                IExecuteWithSignature("ensureValid", "(Ljava/lang/String;Ljava/lang/Object;)V", arg0, arg1);
             }
 
             #endregion

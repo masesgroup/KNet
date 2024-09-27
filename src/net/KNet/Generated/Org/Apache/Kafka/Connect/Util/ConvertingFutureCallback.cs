@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <exception cref="Java.Util.Concurrent.TimeoutException"/>
         public object Get(long arg0, Java.Util.Concurrent.TimeUnit arg1)
         {
-            return IExecute("get", arg0, arg1);
+            return IExecuteWithSignature("get", "(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#onCompletion-java.lang.Throwable-java.lang.Object-"/>
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg1"><see cref="object"/></param>
         public void OnCompletion(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0, object arg1)
         {
-            IExecute("onCompletion", arg0, arg1);
+            IExecuteWithSignature("onCompletion", "(Ljava/lang/Throwable;Ljava/lang/Object;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#recordStage-org.apache.kafka.connect.util.Stage-"/>
@@ -337,7 +337,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <exception cref="Java.Util.Concurrent.TimeoutException"/>
         public T Get(long arg0, Java.Util.Concurrent.TimeUnit arg1)
         {
-            return IExecute<T>("get", arg0, arg1);
+            return IExecuteWithSignature<T>("get", "(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#onCompletion-java.lang.Throwable-java.lang.Object-"/>
@@ -346,7 +346,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg1"><typeparamref name="U"/></param>
         public void OnCompletion(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0, U arg1)
         {
-            IExecute("onCompletion", arg0, arg1);
+            IExecuteWithSignature("onCompletion", "(Ljava/lang/Throwable;Ljava/lang/Object;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#recordStage-org.apache.kafka.connect.util.Stage-"/>

@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <returns><see cref="int"/></returns>
         public static int DecrementSequence(int arg0, int arg1)
         {
-            return SExecute<int>(LocalBridgeClazz, "decrementSequence", arg0, arg1);
+            return SExecuteWithSignature<int>(LocalBridgeClazz, "decrementSequence", "(II)I", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/DefaultRecordBatch.html#incrementSequence-int-int-"/>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <returns><see cref="int"/></returns>
         public static int IncrementSequence(int arg0, int arg1)
         {
-            return SExecute<int>(LocalBridgeClazz, "incrementSequence", arg0, arg1);
+            return SExecuteWithSignature<int>(LocalBridgeClazz, "incrementSequence", "(II)I", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/DefaultRecordBatch.html#sizeInBytes-java.lang.Iterable-"/>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <returns><see cref="int"/></returns>
         public static int SizeInBytes(long arg0, Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record> arg1)
         {
-            return SExecute<int>(LocalBridgeClazz, "sizeInBytes", arg0, arg1);
+            return SExecuteWithSignature<int>(LocalBridgeClazz, "sizeInBytes", "(JLjava/lang/Iterable;)I", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/DefaultRecordBatch.html#writeEmptyHeader-java.nio.ByteBuffer-byte-long-short-int-long-long-int-org.apache.kafka.common.record.TimestampType-long-boolean-boolean-"/>
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg11"><see cref="bool"/></param>
         public static void WriteEmptyHeader(Java.Nio.ByteBuffer arg0, byte arg1, long arg2, short arg3, int arg4, long arg5, long arg6, int arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, long arg9, bool arg10, bool arg11)
         {
-            SExecute(LocalBridgeClazz, "writeEmptyHeader", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
+            SExecuteWithSignature(LocalBridgeClazz, "writeEmptyHeader", "(Ljava/nio/ByteBuffer;BJSIJJILorg/apache/kafka/common/record/TimestampType;JZZ)V", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/DefaultRecordBatch.html#writeHeader-java.nio.ByteBuffer-long-int-int-byte-org.apache.kafka.common.record.CompressionType-org.apache.kafka.common.record.TimestampType-long-long-long-short-int-boolean-boolean-boolean-int-int-"/>
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg16"><see cref="int"/></param>
         public static void WriteHeader(Java.Nio.ByteBuffer arg0, long arg1, int arg2, int arg3, byte arg4, Org.Apache.Kafka.Common.Record.CompressionType arg5, Org.Apache.Kafka.Common.Record.TimestampType arg6, long arg7, long arg8, long arg9, short arg10, int arg11, bool arg12, bool arg13, bool arg14, int arg15, int arg16)
         {
-            SExecute(LocalBridgeClazz, "writeHeader", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
+            SExecuteWithSignature(LocalBridgeClazz, "writeHeader", "(Ljava/nio/ByteBuffer;JIIBLorg/apache/kafka/common/record/CompressionType;Lorg/apache/kafka/common/record/TimestampType;JJJSIZZZII)V", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
         }
 
         #endregion
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg1"><see cref="long"/></param>
         public void SetMaxTimestamp(Org.Apache.Kafka.Common.Record.TimestampType arg0, long arg1)
         {
-            IExecute("setMaxTimestamp", arg0, arg1);
+            IExecuteWithSignature("setMaxTimestamp", "(Lorg/apache/kafka/common/record/TimestampType;J)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/DefaultRecordBatch.html#setPartitionLeaderEpoch-int-"/>

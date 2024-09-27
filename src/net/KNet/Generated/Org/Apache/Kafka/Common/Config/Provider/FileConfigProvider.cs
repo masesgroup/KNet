@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigData Get(Java.Lang.String arg0, Java.Util.Set<Java.Lang.String> arg1)
         {
-            return IExecute<Org.Apache.Kafka.Common.Config.ConfigData>("get", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigData>("get", "(Ljava/lang/String;Ljava/util/Set;)Lorg/apache/kafka/common/config/ConfigData;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#get-java.lang.String-"/>

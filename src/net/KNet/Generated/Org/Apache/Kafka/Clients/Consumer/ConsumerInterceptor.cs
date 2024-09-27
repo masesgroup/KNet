@@ -349,7 +349,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public override void Configure(Java.Util.Map arg0)
         {
-            IExecute("configure", arg0);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;)V", arg0);
         }
 
         #endregion
@@ -568,7 +568,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public override void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
         {
-            IExecute("configure", arg0);
+            IExecuteWithSignature("configure", "(Ljava/util/Map;)V", arg0);
         }
 
         #endregion

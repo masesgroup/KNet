@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <returns><see cref="bool"/></returns>
         public bool HasRoomFor(long arg0, byte[] arg1, byte[] arg2, Org.Apache.Kafka.Common.Header.Header[] arg3)
         {
-            return IExecute<bool>("hasRoomFor", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<bool>("hasRoomFor", "(J[B[B[Lorg/apache/kafka/common/header/Header;)Z", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#hasRoomFor-long-java.nio.ByteBuffer-java.nio.ByteBuffer-org.apache.kafka.common.header.Header[]-"/>
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <returns><see cref="bool"/></returns>
         public bool HasRoomFor(long arg0, Java.Nio.ByteBuffer arg1, Java.Nio.ByteBuffer arg2, Org.Apache.Kafka.Common.Header.Header[] arg3)
         {
-            return IExecute<bool>("hasRoomFor", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<bool>("hasRoomFor", "(JLjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;[Lorg/apache/kafka/common/header/Header;)Z", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#isClosed--"/>
@@ -320,7 +320,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Header.Header"/></param>
         public void Append(long arg0, byte[] arg1, byte[] arg2, Org.Apache.Kafka.Common.Header.Header[] arg3)
         {
-            IExecute("append", arg0, arg1, arg2, arg3);
+            IExecuteWithSignature("append", "(J[B[B[Lorg/apache/kafka/common/header/Header;)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#append-long-byte[]-byte[]-"/>
@@ -330,7 +330,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg2"><see cref="byte"/></param>
         public void Append(long arg0, byte[] arg1, byte[] arg2)
         {
-            IExecute("append", arg0, arg1, arg2);
+            IExecuteWithSignature("append", "(J[B[B)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#append-long-java.nio.ByteBuffer-java.nio.ByteBuffer-org.apache.kafka.common.header.Header[]-"/>
@@ -341,7 +341,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Header.Header"/></param>
         public void Append(long arg0, Java.Nio.ByteBuffer arg1, Java.Nio.ByteBuffer arg2, Org.Apache.Kafka.Common.Header.Header[] arg3)
         {
-            IExecute("append", arg0, arg1, arg2, arg3);
+            IExecuteWithSignature("append", "(JLjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;[Lorg/apache/kafka/common/header/Header;)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#append-long-java.nio.ByteBuffer-java.nio.ByteBuffer-"/>
@@ -351,7 +351,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg2"><see cref="Java.Nio.ByteBuffer"/></param>
         public void Append(long arg0, Java.Nio.ByteBuffer arg1, Java.Nio.ByteBuffer arg2)
         {
-            IExecute("append", arg0, arg1, arg2);
+            IExecuteWithSignature("append", "(JLjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#append-org.apache.kafka.common.record.LegacyRecord-"/>
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg2"><see cref="Java.Nio.ByteBuffer"/></param>
         public void AppendControlRecord(long arg0, Org.Apache.Kafka.Common.Record.ControlRecordType arg1, Java.Nio.ByteBuffer arg2)
         {
-            IExecute("appendControlRecord", arg0, arg1, arg2);
+            IExecuteWithSignature("appendControlRecord", "(JLorg/apache/kafka/common/record/ControlRecordType;Ljava/nio/ByteBuffer;)V", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#appendControlRecordWithOffset-long-org.apache.kafka.common.record.SimpleRecord-"/>
@@ -394,7 +394,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.SimpleRecord"/></param>
         public void AppendControlRecordWithOffset(long arg0, Org.Apache.Kafka.Common.Record.SimpleRecord arg1)
         {
-            IExecute("appendControlRecordWithOffset", arg0, arg1);
+            IExecuteWithSignature("appendControlRecordWithOffset", "(JLorg/apache/kafka/common/record/SimpleRecord;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#appendUncheckedWithOffset-long-org.apache.kafka.common.record.LegacyRecord-"/>
@@ -403,7 +403,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.LegacyRecord"/></param>
         public void AppendUncheckedWithOffset(long arg0, Org.Apache.Kafka.Common.Record.LegacyRecord arg1)
         {
-            IExecute("appendUncheckedWithOffset", arg0, arg1);
+            IExecuteWithSignature("appendUncheckedWithOffset", "(JLorg/apache/kafka/common/record/LegacyRecord;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#appendUncheckedWithOffset-long-org.apache.kafka.common.record.SimpleRecord-"/>
@@ -413,7 +413,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <exception cref="Java.Io.IOException"/>
         public void AppendUncheckedWithOffset(long arg0, Org.Apache.Kafka.Common.Record.SimpleRecord arg1)
         {
-            IExecute("appendUncheckedWithOffset", arg0, arg1);
+            IExecuteWithSignature("appendUncheckedWithOffset", "(JLorg/apache/kafka/common/record/SimpleRecord;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#appendWithOffset-long-long-byte[]-byte[]-org.apache.kafka.common.header.Header[]-"/>
@@ -425,7 +425,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Header.Header"/></param>
         public void AppendWithOffset(long arg0, long arg1, byte[] arg2, byte[] arg3, Org.Apache.Kafka.Common.Header.Header[] arg4)
         {
-            IExecute("appendWithOffset", arg0, arg1, arg2, arg3, arg4);
+            IExecuteWithSignature("appendWithOffset", "(JJ[B[B[Lorg/apache/kafka/common/header/Header;)V", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#appendWithOffset-long-long-byte[]-byte[]-"/>
@@ -436,7 +436,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg3"><see cref="byte"/></param>
         public void AppendWithOffset(long arg0, long arg1, byte[] arg2, byte[] arg3)
         {
-            IExecute("appendWithOffset", arg0, arg1, arg2, arg3);
+            IExecuteWithSignature("appendWithOffset", "(JJ[B[B)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#appendWithOffset-long-long-java.nio.ByteBuffer-java.nio.ByteBuffer-org.apache.kafka.common.header.Header[]-"/>
@@ -448,7 +448,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Header.Header"/></param>
         public void AppendWithOffset(long arg0, long arg1, Java.Nio.ByteBuffer arg2, Java.Nio.ByteBuffer arg3, Org.Apache.Kafka.Common.Header.Header[] arg4)
         {
-            IExecute("appendWithOffset", arg0, arg1, arg2, arg3, arg4);
+            IExecuteWithSignature("appendWithOffset", "(JJLjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;[Lorg/apache/kafka/common/header/Header;)V", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#appendWithOffset-long-long-java.nio.ByteBuffer-java.nio.ByteBuffer-"/>
@@ -459,7 +459,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg3"><see cref="Java.Nio.ByteBuffer"/></param>
         public void AppendWithOffset(long arg0, long arg1, Java.Nio.ByteBuffer arg2, Java.Nio.ByteBuffer arg3)
         {
-            IExecute("appendWithOffset", arg0, arg1, arg2, arg3);
+            IExecuteWithSignature("appendWithOffset", "(JJLjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#appendWithOffset-long-org.apache.kafka.common.record.LegacyRecord-"/>
@@ -468,7 +468,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.LegacyRecord"/></param>
         public void AppendWithOffset(long arg0, Org.Apache.Kafka.Common.Record.LegacyRecord arg1)
         {
-            IExecute("appendWithOffset", arg0, arg1);
+            IExecuteWithSignature("appendWithOffset", "(JLorg/apache/kafka/common/record/LegacyRecord;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#appendWithOffset-long-org.apache.kafka.common.record.Record-"/>
@@ -477,7 +477,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.Record"/></param>
         public void AppendWithOffset(long arg0, Org.Apache.Kafka.Common.Record.Record arg1)
         {
-            IExecute("appendWithOffset", arg0, arg1);
+            IExecuteWithSignature("appendWithOffset", "(JLorg/apache/kafka/common/record/Record;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#appendWithOffset-long-org.apache.kafka.common.record.SimpleRecord-"/>
@@ -486,7 +486,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.SimpleRecord"/></param>
         public void AppendWithOffset(long arg0, Org.Apache.Kafka.Common.Record.SimpleRecord arg1)
         {
-            IExecute("appendWithOffset", arg0, arg1);
+            IExecuteWithSignature("appendWithOffset", "(JLorg/apache/kafka/common/record/SimpleRecord;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#close--"/>
@@ -519,7 +519,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg3"><see cref="bool"/></param>
         public void ReopenAndRewriteProducerState(long arg0, short arg1, int arg2, bool arg3)
         {
-            IExecute("reopenAndRewriteProducerState", arg0, arg1, arg2, arg3);
+            IExecuteWithSignature("reopenAndRewriteProducerState", "(JSIZ)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#setEstimatedCompressionRatio-float-"/>
@@ -538,7 +538,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <param name="arg3"><see cref="bool"/></param>
         public void SetProducerState(long arg0, short arg1, int arg2, bool arg3)
         {
-            IExecute("setProducerState", arg0, arg1, arg2, arg3);
+            IExecuteWithSignature("setProducerState", "(JSIZ)V", arg0, arg1, arg2, arg3);
         }
 
         #endregion

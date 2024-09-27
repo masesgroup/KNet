@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.KafkaThread"/></returns>
         public static Org.Apache.Kafka.Common.Utils.KafkaThread Daemon(Java.Lang.String arg0, Java.Lang.Runnable arg1)
         {
-            return SExecute<Org.Apache.Kafka.Common.Utils.KafkaThread>(LocalBridgeClazz, "daemon", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Common.Utils.KafkaThread>(LocalBridgeClazz, "daemon", "(Ljava/lang/String;Ljava/lang/Runnable;)Lorg/apache/kafka/common/utils/KafkaThread;", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/utils/KafkaThread.html#nonDaemon-java.lang.String-java.lang.Runnable-"/>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.KafkaThread"/></returns>
         public static Org.Apache.Kafka.Common.Utils.KafkaThread NonDaemon(Java.Lang.String arg0, Java.Lang.Runnable arg1)
         {
-            return SExecute<Org.Apache.Kafka.Common.Utils.KafkaThread>(LocalBridgeClazz, "nonDaemon", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Common.Utils.KafkaThread>(LocalBridgeClazz, "nonDaemon", "(Ljava/lang/String;Ljava/lang/Runnable;)Lorg/apache/kafka/common/utils/KafkaThread;", arg0, arg1);
         }
 
         #endregion

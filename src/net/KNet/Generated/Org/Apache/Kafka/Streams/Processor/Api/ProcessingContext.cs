@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Cancellable"/></returns>
         public Org.Apache.Kafka.Streams.Processor.Cancellable Schedule(Java.Time.Duration arg0, Org.Apache.Kafka.Streams.Processor.PunctuationType arg1, Org.Apache.Kafka.Streams.Processor.Punctuator arg2)
         {
-            return IExecute<Org.Apache.Kafka.Streams.Processor.Cancellable>("schedule", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Cancellable>("schedule", "(Ljava/time/Duration;Lorg/apache/kafka/streams/processor/PunctuationType;Lorg/apache/kafka/streams/processor/Punctuator;)Lorg/apache/kafka/streams/processor/Cancellable;", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#taskId--"/>

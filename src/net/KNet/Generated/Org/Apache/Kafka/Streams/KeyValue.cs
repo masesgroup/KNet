@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Streams
         /// <returns><see cref="Org.Apache.Kafka.Streams.KeyValue"/></returns>
         public static Org.Apache.Kafka.Streams.KeyValue Pair(object arg0, object arg1)
         {
-            return SExecute<Org.Apache.Kafka.Streams.KeyValue>(LocalBridgeClazz, "pair", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.KeyValue>(LocalBridgeClazz, "pair", "(Ljava/lang/Object;Ljava/lang/Object;)Lorg/apache/kafka/streams/KeyValue;", arg0, arg1);
         }
 
         #endregion
@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Streams
         /// <returns><see cref="Org.Apache.Kafka.Streams.KeyValue"/></returns>
         public static Org.Apache.Kafka.Streams.KeyValue<K, V> Pair(K arg0, V arg1)
         {
-            return SExecute<Org.Apache.Kafka.Streams.KeyValue<K, V>>(LocalBridgeClazz, "pair", arg0, arg1);
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.KeyValue<K, V>>(LocalBridgeClazz, "pair", "(Ljava/lang/Object;Ljava/lang/Object;)Lorg/apache/kafka/streams/KeyValue;", arg0, arg1);
         }
 
         #endregion

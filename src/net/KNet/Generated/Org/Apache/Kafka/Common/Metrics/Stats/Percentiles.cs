@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <returns><see cref="double"/></returns>
         public double Value(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, long arg1, double arg2)
         {
-            return IExecute<double>("value", arg0, arg1, arg2);
+            return IExecuteWithSignature<double>("value", "(Lorg/apache/kafka/common/metrics/MetricConfig;JD)D", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/org/apache/kafka/common/metrics/stats/Percentiles.html#stats--"/>
