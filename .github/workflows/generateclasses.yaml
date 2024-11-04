@@ -60,14 +60,19 @@ jobs:
       - name: Clear Java generated files
         run: Remove-Item .\src\jvm\knet\src\main\java\org\mases\knet\generated\* -Recurse -Force -Exclude README.md
 
-      - run: dotnet tool update --version 2.5.9 -g MASES.JNetReflector
+      - run: dotnet tool update --version 2.5.10 -g MASES.JNetReflector
 
       - name: Build classes
         shell: cmd
-        run: jnetreflector -TraceLevel 0 -OriginRootPath .\jars -DestinationRootPath .\src\ -ConfigurationFile .\src\configuration.json
+        run: jnetreflector -TraceLevel 1 -TraceTo %GITHUB_WORKSPACE%\JNetReflector.txt -OriginRootPath %GITHUB_WORKSPACE%\jars -DestinationRootPath %GITHUB_WORKSPACE%\src\ -ConfigurationFile %GITHUB_WORKSPACE%\src\configuration.json
         env:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-          
+      
+      - uses: actions/upload-artifact@v4
+        with:
+          name: JNetReflector report
+          path: .\JNetReflector.txt
+      
       - name: Extract commit SHA
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
