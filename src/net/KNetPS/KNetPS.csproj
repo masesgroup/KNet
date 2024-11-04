@@ -42,7 +42,7 @@
 			<!--<IncludeAssets>All</IncludeAssets>-->
 			<!--<PrivateAssets>None</PrivateAssets>-->
 		</ProjectReference>
-		<PackageReference Include="MASES.JNetPSCore" Version="2.5.9" />
+		<PackageReference Include="MASES.JNetPSCore" Version="2.5.10" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
