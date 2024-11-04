@@ -95,7 +95,7 @@ jobs:
         run: dotnet build --no-incremental --configuration Release JNet\src\net\JNetReflector\JNetReflector.csproj
 
       - name: Download latest published version of JNetReflector
-        run: dotnet tool update --version 2.5.9 -g MASES.JNetReflector
+        run: dotnet tool update --version 2.5.10 -g MASES.JNetReflector
         if: ${{ inputs.UseLatestJNetReflector == false }}
 
       - name: Build classes with unpublished JNetReflector
