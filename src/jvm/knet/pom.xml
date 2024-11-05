@@ -43,7 +43,7 @@
 		<kafkaVersion>3.7.1</kafkaVersion>
 		<knetVersion>2.7.9.0</knetVersion>
 		<jcobridgepath>../../../bin/net8.0/JCOBridge.jar</jcobridgepath>
-		<jnetpath>../../../bin/net8.0/jars/jnet-2.5.9.0.jar</jnetpath>
+		<jnetpath>../../../bin/net8.0/jars/jnet-2.5.10.0.jar</jnetpath>
 	</properties>
 	<distributionManagement>
 		<snapshotRepository>
