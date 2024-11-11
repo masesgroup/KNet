@@ -2,8 +2,16 @@
 
 The command used to build the classes is the following:
 
+1. Download the latest version of reflection utility:
+
 ```cmd
-MASES.JNetReflector.exe -TraceLevel 0 -OriginRootPath .\jars -DestinationRootPath .\src\ -ConfigurationFile .\src\configuration.json
+dotnet tool update -g MASES.JNetReflector
+```
+
+2. Run the reflection utility:
+
+```cmd
+jnetreflector -TraceLevel 0 -OriginRootPath .\jars -DestinationRootPath .\src\ -ConfigurationFile .\src\configuration.json
 ```
 
 The configuration is:
@@ -18,67 +26,72 @@ The configuration is:
   "DisableInterfaceMethodGeneration": true,
   "CreateInterfaceInheritance": true,
   "JarList": [
-    "kafka_2.13-3.8.0.jar",
-    "kafka-clients-3.8.0.jar",
-    "kafka-streams-3.8.0.jar",
-    "kafka-tools-3.8.0.jar",
-    "kafka-raft-3.8.0.jar",
-    "connect-api-3.8.0.jar",
-    "connect-basic-auth-extension-3.8.0.jar",
-    "connect-json-3.8.0.jar",
-    "connect-mirror-3.8.0.jar",
-    "connect-mirror-client-3.8.0.jar",
-    "connect-runtime-3.8.0.jar",
-    "connect-transforms-3.8.0.jar"
+    "kafka_2.13-3.9.0.jar",
+    "kafka-clients-3.9.0.jar",
+    "kafka-streams-3.9.0.jar",
+    "kafka-tools-3.9.0.jar",
+    "kafka-raft-3.9.0.jar",
+    "kafka-shell-3.9.0.jar",
+    "connect-api-3.9.0.jar",
+    "connect-basic-auth-extension-3.9.0.jar",
+    "connect-json-3.9.0.jar",
+    "connect-mirror-3.9.0.jar",
+    "connect-mirror-client-3.9.0.jar",
+    "connect-runtime-3.9.0.jar",
+    "connect-transforms-3.9.0.jar"
   ],
   "OriginJavadocJARVersionAndUrls": [
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.9.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.9.0/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.8.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/"
+    },
+    {
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/"
     }
   ],
   "NamespacesToAvoid": [
@@ -136,6 +149,10 @@ The configuration is:
     "org.apache.kafka.raft.internals",
     "org.apache.kafka.server",
     "org.apache.kafka.shaded",
+    "org.apache.kafka.shell.command",
+    "org.apache.kafka.shell.glob",
+    "org.apache.kafka.shell.node",
+    "org.apache.kafka.shell.state",
     "org.apache.kafka.streams.internals",
     "org.apache.kafka.streams.processor.internals",
     "org.apache.kafka.streams.state.internals",
