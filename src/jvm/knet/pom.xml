@@ -40,7 +40,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <classpathfile>${basedir}/classpathfile.classpath</classpathfile>
-        <kafkaVersion>3.6.2</kafkaVersion>
+        <kafkaVersion>3.9.0</kafkaVersion>
         <knetVersion>2.6.7.0</knetVersion>
         <jcobridgepath>../../../bin/net6.0/JCOBridge.jar</jcobridgepath>
         <jnetpath>../../../bin/net6.0/jars/jnet-2.5.10.0.jar</jnetpath>
