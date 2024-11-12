@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>Docker images of .NET suite for Apache Kafka� | MASES Group - KNet </title>
+      <title>Docker images of .NET suite for Apache Kafka™ | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Docker images of .NET suite for Apache Kafka� | MASES Group - KNet ">
-      <meta name="description" content="Describes the Docker images of .NET suite for Apache Kafka�">
+      <meta name="title" content="Docker images of .NET suite for Apache Kafka™ | MASES Group - KNet ">
+      <meta name="description" content="Describes the Docker images of .NET suite for Apache Kafka™">
       
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -92,7 +92,7 @@
 </ul>
 </div>
 <h1 id="knet-docker-images">KNet: Docker images</h1>
-<p>.NET suite for Apache Kafka� comes with a ready made Docker image can work in multiple modes, the image name is <em>knet</em>:</p>
+<p>.NET suite for Apache Kafka™ comes with a ready made Docker image can work in multiple modes, the image name is <em>knet</em>:</p>
 <ul>
 <li>it is avialble in the following registries:
 <ul>
@@ -117,9 +117,9 @@
 <p>dotnet /app/MASES.KNetCLI.dll $@</p>
 </blockquote>
 </li>
-<li><p>The image can run <a href="https://zookeeper.apache.org/">ZooKeeper�</a> node and/or <a href="https://kafka.apache.org/">Apache Kafka�</a> broker node using specific values for <strong>KNET_DOCKER_RUNNING_MODE</strong>:</p>
+<li><p>The image can run <a href="https://zookeeper.apache.org/">ZooKeeper™</a> node and/or <a href="https://kafka.apache.org/">Apache Kafka™</a> broker node using specific values for <strong>KNET_DOCKER_RUNNING_MODE</strong>:</p>
 <ul>
-<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>zookeeper</strong>: starts a <a href="https://zookeeper.apache.org/">ZooKeeper�</a> node, defaults to run a standalone <a href="https://zookeeper.apache.org/">ZooKeeper�</a> exposing on port 2181</p>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>zookeeper</strong>: starts a <a href="https://zookeeper.apache.org/">ZooKeeper™</a> node, defaults to run a standalone <a href="https://zookeeper.apache.org/">ZooKeeper™</a> exposing on port 2181</p>
 <ul>
 <li>the Docker image will issue the command:</li>
 </ul>
@@ -137,7 +137,7 @@
 </li>
 </ul>
 </li>
-<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>broker</strong>: starts an <a href="https://kafka.apache.org/">Apache Kafka�</a> broker node, defaults to run a standalone broker exposing on port 9092</p>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>broker</strong>: starts an <a href="https://kafka.apache.org/">Apache Kafka™</a> broker node, defaults to run a standalone broker exposing on port 9092</p>
 <ul>
 <li>the Docker image will issue the command:</li>
 </ul>
@@ -156,13 +156,13 @@
 </li>
 </ul>
 </li>
-<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>server</strong>: starts, within the container, both a <a href="https://zookeeper.apache.org/">ZooKeeper�</a> node and an <a href="https://kafka.apache.org/">Apache Kafka�</a> broker node, it defaults to run exposing <a href="https://zookeeper.apache.org/">ZooKeeper�</a> on port 2181 and <a href="https://kafka.apache.org/">Apache Kafka�</a> broker on port 9092; the image can add, or update, configuration variables of <a href="https://zookeeper.apache.org/">ZooKeeper�</a> and <a href="https://kafka.apache.org/">Apache Kafka�</a> using the same pattern of previous points.</p>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>server</strong>: starts, within the container, both a <a href="https://zookeeper.apache.org/">ZooKeeper™</a> node and an <a href="https://kafka.apache.org/">Apache Kafka™</a> broker node, it defaults to run exposing <a href="https://zookeeper.apache.org/">ZooKeeper™</a> on port 2181 and <a href="https://kafka.apache.org/">Apache Kafka™</a> broker on port 9092; the image can add, or update, configuration variables of <a href="https://zookeeper.apache.org/">ZooKeeper™</a> and <a href="https://kafka.apache.org/">Apache Kafka™</a> using the same pattern of previous points.</p>
 </li>
 </ul>
 </li>
-<li><p>The image can run <a href="https://kafka.apache.org/">Apache Kafka�</a> in <a href="https://developer.confluent.io/learn/kraft/">KRaft</a> mode using specific values for <strong>KNET_DOCKER_RUNNING_MODE</strong>:</p>
+<li><p>The image can run <a href="https://kafka.apache.org/">Apache Kafka™</a> in <a href="https://developer.confluent.io/learn/kraft/">KRaft</a> mode using specific values for <strong>KNET_DOCKER_RUNNING_MODE</strong>:</p>
 <ul>
-<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>kraft-broker</strong>: starts a <a href="https://kafka.apache.org/">Apache Kafka�</a> as broker node</p>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>kraft-broker</strong>: starts a <a href="https://kafka.apache.org/">Apache Kafka™</a> as broker node</p>
 <ul>
 <li>the Docker image will issue the command:</li>
 </ul>
@@ -180,7 +180,7 @@
 </li>
 </ul>
 </li>
-<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>kraft-controller</strong>: starts a <a href="https://kafka.apache.org/">Apache Kafka�</a> as controller node</p>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>kraft-controller</strong>: starts a <a href="https://kafka.apache.org/">Apache Kafka™</a> as controller node</p>
 <ul>
 <li>the Docker image will issue the command:</li>
 </ul>
@@ -198,7 +198,7 @@
 </li>
 </ul>
 </li>
-<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>kraft-server</strong>: starts a <a href="https://kafka.apache.org/">Apache Kafka�</a> as server node</p>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>kraft-server</strong>: starts a <a href="https://kafka.apache.org/">Apache Kafka™</a> as server node</p>
 <ul>
 <li>the Docker image will issue the command:</li>
 </ul>
@@ -257,12 +257,12 @@
 <li>the image can add, or update, configuration variables of connect-standalone.properties and connect-knet-specific.properties using the same pattern of <strong>knet-connect-standalone</strong>:</li>
 </ul>
 </li>
-<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>knet-connect-standalone-server</strong>: starts, within the container, a <a href="https://zookeeper.apache.org/">ZooKeeper�</a> node and an <a href="https://kafka.apache.org/">Apache Kafka�</a> broker node like in <strong>server</strong>, then starts the same command of <strong>knet-connect-standalone</strong>; this is an autonoumous instance can be used for development or any other possible usage</p>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>knet-connect-standalone-server</strong>: starts, within the container, a <a href="https://zookeeper.apache.org/">ZooKeeper™</a> node and an <a href="https://kafka.apache.org/">Apache Kafka™</a> broker node like in <strong>server</strong>, then starts the same command of <strong>knet-connect-standalone</strong>; this is an autonoumous instance can be used for development or any other possible usage</p>
 <ul>
 <li>the image can add, or update, configuration variables of using the same pattern of <strong>zookeeper</strong>, <strong>broker</strong> and <strong>knet-connect-standalone</strong></li>
 </ul>
 </li>
-<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>connect-standalone-server</strong>: starts, within the container, a <a href="https://zookeeper.apache.org/">ZooKeeper�</a> node and an <a href="https://kafka.apache.org/">Apache Kafka�</a> broker node like in <strong>server</strong>, then starts the same command of <strong>connect-standalone</strong>; this is an autonoumous instance can be used for development or any other possible usage</p>
+<li><p><strong>KNET_DOCKER_RUNNING_MODE</strong>=<strong>connect-standalone-server</strong>: starts, within the container, a <a href="https://zookeeper.apache.org/">ZooKeeper™</a> node and an <a href="https://kafka.apache.org/">Apache Kafka™</a> broker node like in <strong>server</strong>, then starts the same command of <strong>connect-standalone</strong>; this is an autonoumous instance can be used for development or any other possible usage</p>
 <ul>
 <li>the image can add, or update, configuration variables of using the same pattern of <strong>zookeeper</strong>, <strong>broker</strong> and <strong>connect-standalone</strong></li>
 </ul>

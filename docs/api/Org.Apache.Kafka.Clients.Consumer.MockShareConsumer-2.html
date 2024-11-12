@@ -1,0 +1,1419 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class MockShareConsumer&lt;K, V&gt; | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MockShareConsumer&lt;K, V&gt; | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.Consumer.MockShareConsumer%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2">
+
+
+
+  <h1 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2" class="text-break">
+Class MockShareConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Apache.html">Apache</a>.<a class="xref" href="Org.Apache.Kafka.html">Kafka</a>.<a class="xref" href="Org.Apache.Kafka.Clients.html">Clients</a>.<a class="xref" href="Org.Apache.Kafka.Clients.Consumer.html">Consumer</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MockShareConsumer&lt;K, V&gt; : ShareConsumer&lt;K, V&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IShareConsumer&lt;K, V&gt;, ICloseable, IAutoCloseable</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd></dd>
+    <dt><code>V</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><span class="xref">JVMBridgeBase</span></div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.Closeable.html">Closeable</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html">ShareConsumer</a>&lt;K, V&gt;</div>
+      <div><span class="xref">MockShareConsumer&lt;K, V&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
+      <div><span class="xref">IJVMBridgeBase</span></div>
+      <div><span class="xref">IJVMBridgeDefinition</span></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.IShareConsumer-2.html">IShareConsumer</a>&lt;K, V&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html">ICloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_BridgeClassName">ShareConsumer&lt;K, V&gt;.BridgeClassName</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_IsBridgeAbstract">ShareConsumer&lt;K, V&gt;.IsBridgeAbstract</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_IsBridgeCloseable">ShareConsumer&lt;K, V&gt;.IsBridgeCloseable</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_IsBridgeInterface">ShareConsumer&lt;K, V&gt;.IsBridgeInterface</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_IsBridgeStatic">ShareConsumer&lt;K, V&gt;.IsBridgeStatic</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Metrics__1">ShareConsumer&lt;K, V&gt;.Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_CommitSync">ShareConsumer&lt;K, V&gt;.CommitSync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_CommitSync_Java_Time_Duration_">ShareConsumer&lt;K, V&gt;.CommitSync(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Subscription">ShareConsumer&lt;K, V&gt;.Subscription()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Poll_Java_Time_Duration_">ShareConsumer&lt;K, V&gt;.Poll(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_ClientInstanceId_Java_Time_Duration_">ShareConsumer&lt;K, V&gt;.ClientInstanceId(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Acknowledge_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1__Org_Apache_Kafka_Clients_Consumer_AcknowledgeType_">ShareConsumer&lt;K, V&gt;.Acknowledge(ConsumerRecord&lt;K, V&gt;, AcknowledgeType)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Acknowledge_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1__">ShareConsumer&lt;K, V&gt;.Acknowledge(ConsumerRecord&lt;K, V&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Close">ShareConsumer&lt;K, V&gt;.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Close_Java_Time_Duration_">ShareConsumer&lt;K, V&gt;.Close(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_CommitAsync">ShareConsumer&lt;K, V&gt;.CommitAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_SetAcknowledgementCommitCallback_Org_Apache_Kafka_Clients_Consumer_AcknowledgementCommitCallback_">ShareConsumer&lt;K, V&gt;.SetAcknowledgementCommitCallback(AcknowledgementCommitCallback)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Subscribe_Java_Util_Collection_Java_Lang_String__">ShareConsumer&lt;K, V&gt;.Subscribe(Collection&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Unsubscribe">ShareConsumer&lt;K, V&gt;.Unsubscribe()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Wakeup">ShareConsumer&lt;K, V&gt;.Wakeup()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField(IJavaType, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AutoCloseable&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.ToString()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Notify()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.Wait()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2__ctor_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2__ctor" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.#ctor">
+  MockShareConsumer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MockShareConsumer()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2__ctor_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.#ctor(System.Object[])">
+  MockShareConsumer(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MockShareConsumer(params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_BridgeClassName_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.BridgeClassName*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.IsBridgeAbstract*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.IsBridgeCloseable*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.IsBridgeInterface*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.IsBridgeStatic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Acknowledge_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Acknowledge*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Acknowledge_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Acknowledge(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{`0,`1})">
+  Acknowledge(ConsumerRecord&lt;K, V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Acknowledge(ConsumerRecord&lt;K, V&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord-2.html">ConsumerRecord</a>&lt;K, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord.html">ConsumerRecord</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Acknowledge_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Acknowledge*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Acknowledge_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1__Org_Apache_Kafka_Clients_Consumer_AcknowledgeType_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Acknowledge(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{`0,`1},Org.Apache.Kafka.Clients.Consumer.AcknowledgeType)">
+  Acknowledge(ConsumerRecord&lt;K, V&gt;, AcknowledgeType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L368"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-org.apache.kafka.clients.consumer.AcknowledgeType-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-org.apache.kafka.clients.consumer.AcknowledgeType-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Acknowledge(ConsumerRecord&lt;K, V&gt; arg0, AcknowledgeType arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord-2.html">ConsumerRecord</a>&lt;K, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord.html">ConsumerRecord</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.AcknowledgeType.html">AcknowledgeType</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.AcknowledgeType.html">AcknowledgeType</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_AddRecord_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.AddRecord*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_AddRecord_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.AddRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{`0,`1})">
+  AddRecord(ConsumerRecord&lt;K, V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#addRecord-org.apache.kafka.clients.consumer.ConsumerRecord-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#addRecord-org.apache.kafka.clients.consumer.ConsumerRecord-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRecord(ConsumerRecord&lt;K, V&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord-2.html">ConsumerRecord</a>&lt;K, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord.html">ConsumerRecord</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_ClientInstanceId_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.ClientInstanceId*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_ClientInstanceId_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.ClientInstanceId(Java.Time.Duration)">
+  ClientInstanceId(Duration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#clientInstanceId-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#clientInstanceId-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Uuid ClientInstanceId(Duration arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Close_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Close*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Close" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Close">
+  Close()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L391"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Close_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Close*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Close_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Close(Java.Time.Duration)">
+  Close(Duration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L399"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close(Duration arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_CommitAsync_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.CommitAsync*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_CommitAsync" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.CommitAsync">
+  CommitAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitAsync--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitAsync--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CommitAsync()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_CommitSync_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.CommitSync*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_CommitSync" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.CommitSync">
+  CommitSync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L324"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Map&lt;TopicIdPartition, Optional&lt;KafkaException&gt;&gt; CommitSync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicIdPartition.html">TopicIdPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.KafkaException.html">KafkaException</a>&gt;&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_CommitSync_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.CommitSync*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_CommitSync_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.CommitSync(Java.Time.Duration)">
+  CommitSync(Duration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Map&lt;TopicIdPartition, Optional&lt;KafkaException&gt;&gt; CommitSync(Duration arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicIdPartition.html">TopicIdPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.KafkaException.html">KafkaException</a>&gt;&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Metrics_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Metrics*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Metrics__1" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Metrics``1">
+  Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#metrics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Map&lt;MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt; Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;() where ReturnExtendsOrg_Apache_Kafka_Common_Metric : Metric</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ReturnExtendsOrg_Apache_Kafka_Common_Metric</code></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metric.html">Metric</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Poll_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Poll*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Poll_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Poll(Java.Time.Duration)">
+  Poll(Duration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#poll-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#poll-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerRecords&lt;K, V&gt; Poll(Duration arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Time.Duration.html">Duration</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords-2.html">ConsumerRecords</a>&lt;K, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords.html">ConsumerRecords</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_SetAcknowledgementCommitCallback_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.SetAcknowledgementCommitCallback*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_SetAcknowledgementCommitCallback_Org_Apache_Kafka_Clients_Consumer_AcknowledgementCommitCallback_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.SetAcknowledgementCommitCallback(Org.Apache.Kafka.Clients.Consumer.AcknowledgementCommitCallback)">
+  SetAcknowledgementCommitCallback(AcknowledgementCommitCallback)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L444"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setAcknowledgementCommitCallback-org.apache.kafka.clients.consumer.AcknowledgementCommitCallback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setAcknowledgementCommitCallback-org.apache.kafka.clients.consumer.AcknowledgementCommitCallback-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAcknowledgementCommitCallback(AcknowledgementCommitCallback arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.AcknowledgementCommitCallback.html">AcknowledgementCommitCallback</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.AcknowledgementCommitCallback.html">AcknowledgementCommitCallback</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_SetClientInstanceId_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.SetClientInstanceId*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_SetClientInstanceId_Org_Apache_Kafka_Common_Uuid_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.SetClientInstanceId(Org.Apache.Kafka.Common.Uuid)">
+  SetClientInstanceId(Uuid)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setClientInstanceId-org.apache.kafka.common.Uuid-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setClientInstanceId-org.apache.kafka.common.Uuid-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetClientInstanceId(Uuid arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Uuid.html">Uuid</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Subscribe_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Subscribe*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Subscribe_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Subscribe(Java.Util.Collection{Java.Lang.String})">
+  Subscribe(Collection&lt;String&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L422"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscribe-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscribe-java.util.Collection-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Subscribe(Collection&lt;String&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection-1.html">Collection</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Collection.html">Collection</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Subscription_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Subscription*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Subscription" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Subscription">
+  Subscription()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscription--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscription--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Set&lt;String&gt; Subscription()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Set.html">Set</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Unsubscribe_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Unsubscribe*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Unsubscribe" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Unsubscribe">
+  Unsubscribe()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L429"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#unsubscribe--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#unsubscribe--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Unsubscribe()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Wakeup_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Wakeup*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Wakeup" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Wakeup">
+  Wakeup()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L436"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#wakeup--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#wakeup--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Wakeup()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_op_Implicit_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.op_Implicit*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_op_Implicit_Org_Apache_Kafka_Clients_Consumer_MockShareConsumer__0__1___Org_Apache_Kafka_Clients_Consumer_MockShareConsumer" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.op_Implicit(Org.Apache.Kafka.Clients.Consumer.MockShareConsumer{`0,`1})~Org.Apache.Kafka.Clients.Consumer.MockShareConsumer">
+  implicit operator MockShareConsumer(MockShareConsumer&lt;K, V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer-2.html">MockShareConsumer&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer.html">MockShareConsumer</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator MockShareConsumer(MockShareConsumer&lt;K, V&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer-2.html">MockShareConsumer</a>&lt;K, V&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer.html">MockShareConsumer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L288" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
